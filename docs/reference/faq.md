@@ -52,7 +52,21 @@ root of your SD card and boot. Bundled emulator and tool paks update
 automatically either way. See
 [Getting Started](../getting-started.md#updating).
 
+## A game won't launch — where do I start?
+
+The usual suspects, in order:
+
+1. **Missing BIOS** — some systems need BIOS files to run at all; check
+   the [Cores & BIOS Files](../emulators/cores.md) table for yours.
+2. **Arcade games** — wrong romset version or missing BIOS/parent zip; see
+   the [Arcade page](../emulators/arcade.md).
+3. **The logs** — every emulator writes a log to
+   `.userdata/<platform>/logs/<TAG>.txt` on the SD card (e.g.
+   `.userdata/tg5040/logs/GBA.txt`). The last lines usually name the
+   problem.
+
 ## Where do I report bugs or ask questions?
 
 On the [NX Redux GitHub repository](https://github.com/mohammadsyuhada/nx-redux)
-via Issues.
+via Issues. For emulator problems, attach the matching log file from
+`.userdata/<platform>/logs/` — it makes issues much faster to diagnose.

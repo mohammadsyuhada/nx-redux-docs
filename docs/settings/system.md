@@ -49,11 +49,16 @@ Your time zone.
 
 ## Save format
 
-The save-file format to use.
+Format for battery saves in `Saves/<TAG>/`: `MinUI` (`.sav`),
+`Retroarch (compressed)` / `Retroarch (uncompressed)` (`.srm`), or
+`Generic`. Default: **Retroarch (uncompressed)** — directly compatible
+with RetroArch on other devices.
 
 ## Save state format
 
-The save-state format to use.
+Naming/format for save states: `MinUI` (`.st0`…), `Retroarch-ish` or
+`Retroarch` (`.state`, `.state1`…), each compressed or uncompressed.
+Default: **Retroarch (uncompressed)**.
 
 ## Use extracted file name
 

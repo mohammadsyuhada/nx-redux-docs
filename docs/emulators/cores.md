@@ -16,7 +16,7 @@ in parentheses after the system name (e.g. Game Boy Advance (GBA) →
 | --- | --- | --- |
 | Amiga (PUAE) | puae2021 | **Required** — Kickstart ROMs; `Bios/PUAE/readme.txt` lists known-good files |
 | Amstrad CPC (CPC) | cap32 | None |
-| Arcade (FBN) | fbneo | No system BIOS; BIOS-based boards (e.g. Neo Geo) need the BIOS zip (`neogeo.zip`) with the ROM set |
+| Arcade (FBN) | fbneo | No system BIOS; BIOS-based boards (e.g. Neo Geo) need the BIOS zip (`neogeo.zip`) with the ROM set — see the [Arcade page](arcade.md) |
 | Atari 2600 (A2600) | stella2014 | None |
 | Atari 5200 (A5200) | a5200 | **Required** — `5200.rom` |
 | Atari 7800 (A7800) | prosystem | Optional — `7800 BIOS (U).rom` |
