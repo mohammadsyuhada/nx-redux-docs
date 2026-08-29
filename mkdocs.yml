@@ -76,6 +76,7 @@ nav:
       - Xtras Store: apps/xtras.md
   - Emulators:
       - Bundled Emulators: emulators/index.md
+      - Cores & BIOS Files: emulators/cores.md
       - Nintendo 64: emulators/nintendo-64.md
       - Sega Dreamcast: emulators/dreamcast.md
       - Nintendo DS: emulators/nintendo-ds.md
