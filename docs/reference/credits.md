@@ -3,8 +3,10 @@
 NX Redux is a fork of [NextUI](https://github.com/LoveRetro/NextUI) by
 LoveRetro, which itself descends from
 [MinUI](https://github.com/shauninman/MinUI) by Shaun Inman. It is an
-independent fork, not affiliated with the original NextUI project; upstream
-changes may be merged selectively.
+independent fork, not affiliated with the original NextUI project, and
+develops independently — NextUI has since moved to the PolyForm
+Noncommercial license, so NX Redux continues from the GPL-3.0 codebase it
+forked.
 
 ## Thanks to
 
