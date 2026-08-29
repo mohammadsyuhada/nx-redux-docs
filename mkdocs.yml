@@ -1,0 +1,98 @@
+site_name: NX Redux
+site_description: User documentation for NX Redux — custom firmware for TrimUI retro handhelds
+site_url: https://mohammadsyuhada.github.io/nx-redux-docs/
+repo_url: https://github.com/mohammadsyuhada/nx-redux
+repo_name: mohammadsyuhada/nx-redux
+edit_uri: ""
+
+theme:
+  name: material
+  icon:
+    logo: material/gamepad-variant
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - User Guide:
+      - Main Menu & Game Lists: guide/main-menu.md
+      - Game Switcher: guide/game-switcher.md
+      - Game Context Menu: guide/context-menu.md
+      - Five-Game Menu: guide/five-game-menu.md
+      - Playing Games: guide/playing-games.md
+      - Emulator Options: guide/emulator-options.md
+      - On-Screen Display: guide/osd.md
+      - Simple Mode: guide/simple-mode.md
+  - Apps & Tools:
+      - Tools Overview: apps/tools.md
+      - Artwork Manager: apps/artwork-manager.md
+      - Device Sync: apps/device-sync.md
+      - Emulator Settings: apps/emulator-settings.md
+      - Files: apps/files.md
+      - Game Tracker: apps/game-tracker.md
+      - Media Player: apps/media-player.md
+      - Music Player: apps/music-player.md
+      - PortMaster: apps/portmaster.md
+      - RetroAchievements: apps/retroachievements.md
+      - Xtras Store: apps/xtras.md
+  - Emulators:
+      - Bundled Emulators: emulators/index.md
+      - Nintendo 64: emulators/nintendo-64.md
+      - Sega Dreamcast: emulators/dreamcast.md
+      - Nintendo DS: emulators/nintendo-ds.md
+      - Additional Emulators: emulators/additional.md
+  - Netplay: netplay.md
+  - Settings:
+      - Overview: settings/index.md
+      - Display: settings/display.md
+      - Appearance: settings/appearance.md
+      - In-game Notifications: settings/notifications.md
+      - LED Control: settings/led-control.md
+      - Network: settings/network.md
+      - Bluetooth: settings/bluetooth.md
+      - Audio: settings/audio.md
+      - FN Switch: settings/fn-switch.md
+      - Simple Mode: settings/simple-mode.md
+      - System: settings/system.md
+      - Developer: settings/developer.md
+      - Input Tester: settings/input-tester.md
+      - About: settings/about.md
+  - Reference:
+      - FAQ: reference/faq.md
+      - Credits: reference/credits.md
