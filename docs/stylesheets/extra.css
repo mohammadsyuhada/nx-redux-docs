@@ -1,0 +1,6 @@
+/* Screenshots: full width on mobile, half width on larger screens */
+@media screen and (min-width: 60em) {
+  .md-typeset img {
+    max-width: 50%;
+  }
+}
