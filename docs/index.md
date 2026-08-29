@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # NX Redux
 
 Custom firmware for TrimUI retro handheld gaming devices. It keeps the minimal,
