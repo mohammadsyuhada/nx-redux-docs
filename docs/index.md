@@ -11,7 +11,7 @@ extending what sits underneath: standalone emulators, netplay, achievements,
 media tools and more. Those extras stay out of the way until you ask for them,
 tucked into the Tools and pause menus.
 
-![NX Redux main menu](assets/screenshots/main-menu.png)
+![NX Redux main menu](assets/screenshots/main-menu.png){ width="50%" }
 
 NX Redux is a fork of [NextUI](https://github.com/LoveRetro/NextUI) by
 LoveRetro, which itself descends from
