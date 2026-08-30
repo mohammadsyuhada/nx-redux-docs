@@ -8,8 +8,10 @@ Depending on the game, the menu offers:
 
 - **Pin Item / Unpin** — pin the game to the main menu for one-press access.
 - **Delete Rom** — remove the game (with a confirmation dialog).
-- **Rename Rom** — rename a game; its box art, saves and save states are
-  renamed along with it.
+- **Rename Rom** — change a game's display name. The file itself is never
+  touched: the new name is stored as a
+  [`map.txt` alias](main-menu.md#custom-display-names-maptxt), so box art,
+  saves and save states stay matched — and arcade zips keep loading.
 - **Add to Collection** — add the game to an existing collection or create a
   new one on the spot.
 - **Remove from Recently Played** — clear the game from your recent list.

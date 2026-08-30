@@ -125,9 +125,10 @@ Legend of Zelda, The - The Minish Cap (USA).gba	Zelda: Minish Cap
 
 The list re-sorts by the new display names, and the number-prefix trick
 above works inside them too. Since the files themselves are untouched,
-save files, states and box art all stay matched — unlike the context
-menu's **Rename**, which renames the actual files. An alias starting with
-a dot (e.g. `Track01.bin	.hidden`) **hides** the entry from the list
+save files, states and box art all stay matched. The context menu's
+[**Rename Rom**](context-menu.md) writes these aliases for you — renaming
+on the device edits the `map.txt` rather than the file. An alias starting
+with a dot (e.g. `Track01.bin	.hidden`) **hides** the entry from the list
 entirely.
 
 A `map.txt` at the top level (`Roms/map.txt`) does the same for the
