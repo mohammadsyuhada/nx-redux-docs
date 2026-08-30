@@ -8,7 +8,8 @@ TurboGrafx-16, up to the bundled standalone emulators for
 on the SD card (e.g. `Roms/Game Boy Advance (GBA)/`); systems that need BIOS
 files read them from the matching folder under `Bios/` — see
 [Cores & BIOS Files](cores.md) for the full list of included cores and what
-each one needs.
+each one needs, and [ROM File Formats](rom-formats.md) for which file types
+each system accepts (including zipped ROMs).
 
 ## Shared features
 
