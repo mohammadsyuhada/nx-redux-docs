@@ -62,4 +62,7 @@ ships both Snes9x (SFC) and Supafaust (SUPA) — pick per game by which
 [Nintendo 64](nintendo-64.md) (Mupen64Plus) and
 [Nintendo DS](nintendo-ds.md) (Drastic) need no BIOS files.
 [Sega Dreamcast](dreamcast.md) (Flycast) boots without one via HLE; a real
-`dc_boot.bin` in `Bios/DC/` is optional.
+`dc_boot.bin` in `Bios/DC/` is optional. Naomi and Atomiswave arcade games
+on Flycast **do** require their BIOS zips (`naomi.zip` / `awbios.zip`) in
+`Bios/DC/` — see the [Dreamcast page](dreamcast.md#arcade-games-naomi-atomiswave)
+for the details, including which `awbios.zip` set works.
