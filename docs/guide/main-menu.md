@@ -46,6 +46,9 @@ confirm to see matching games from every system.
   [context menu](context-menu.md) for one-press access.
 - Tools can be pinned the same way — press `MENU` on a tool in the Tools
   list and choose **Pin Tool**.
+- On the Brick and Brick Pro, the **F1**/**F2** keys can each launch a tool
+  of your choice from anywhere in the menu — assign them in
+  [Settings → F1 / F2 Keys](../settings/fn-keys.md).
 - Prefer a minimal menu with only hand-picked games? See the
   [Five-Game Menu](five-game-menu.md) guide.
 

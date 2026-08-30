@@ -14,6 +14,7 @@ place — each page of the Settings app is documented on its own page here.
 - [Bluetooth](bluetooth.md) — pairing and audio
 - [Audio](audio.md) — output routing and sample rates
 - [FN Switch](fn-switch.md) — what the FN switch toggles, incl. turbo fire
+- [F1 / F2 Keys](fn-keys.md) — launch a chosen tool straight from the menu
 - [Simple Mode](simple-mode.md) — the PIN-protected simplified menu
 - [System](system.md) — timeouts, clock, saves, power
 - [Developer](developer.md) — SSH, sleep control, cleanup
@@ -21,5 +22,5 @@ place — each page of the Settings app is documented on its own page here.
 - [About](about.md) — versions and the built-in updater
 
 Some pages only appear when the device has the hardware for them (LEDs,
-Wi-Fi, Bluetooth, the FN switch, a fan); the screenshots in this section
-are from a TrimUI Brick.
+Wi-Fi, Bluetooth, the FN switch, the F1/F2 keys, a fan); the screenshots in
+this section are from a TrimUI Brick.
