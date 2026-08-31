@@ -69,6 +69,7 @@ nav:
       - Emulator Settings: apps/emulator-settings.md
       - Files: apps/files.md
       - Game Tracker: apps/game-tracker.md
+      - Image Viewer: apps/image-viewer.md
       - Media Player: apps/media-player.md
       - Music Player: apps/music-player.md
       - PortMaster: apps/portmaster.md

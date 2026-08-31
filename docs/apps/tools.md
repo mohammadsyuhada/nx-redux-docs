@@ -12,6 +12,7 @@ and utility.
 | [Emulator Settings](emulator-settings.md) | Configure each system's emulator options |
 | [Files](files.md) | Dual-pane file manager for the SD card |
 | [Game Tracker](game-tracker.md) | Play-time statistics per game |
+| [Image Viewer](image-viewer.md) | Browse and view screenshots and photos |
 | [Media Player](media-player.md) | Video player with audio/subtitle switching |
 | [Music Player](music-player.md) | Music, internet radio and podcasts |
 | [PortMaster](portmaster.md) | Community game ports (installed via Xtras) |
