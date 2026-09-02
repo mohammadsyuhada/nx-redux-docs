@@ -43,6 +43,7 @@ markdown_extensions:
   - md_in_html
   - tables
   - pymdownx.details
+  - pymdownx.keys
   - pymdownx.superfences
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -53,6 +54,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Desktop App: desktop.md
   - User Guide:
       - Main Menu & Game Lists: guide/main-menu.md
       - Game Switcher: guide/game-switcher.md
