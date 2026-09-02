@@ -26,8 +26,14 @@ Grab the desktop artifact for your OS from the
 | Linux (x86_64) | `NXRedux-<version>-x86_64.AppImage` |
 
 **macOS** — unzip and move `NXRedux.app` wherever you like. The app is not
-code-signed, so the **first** launch must be done by right-clicking the app
-and choosing **Open** (double-clicking shows a Gatekeeper warning instead).
+code-signed, so macOS blocks the **first** launch:
+
+1. Double-click the app. macOS shows a warning that it could not verify the
+   app; close that dialog (do **not** choose *Move to Trash*).
+2. Open **System Settings → Privacy & Security** and scroll down to the
+   **Security** section. There is a notice that `NXRedux` was blocked; click
+   **Open Anyway** and confirm.
+3. Launch the app again. From now on it opens normally with a double-click.
 
 **Linux** — make the AppImage executable (`chmod +x NXRedux-*.AppImage`) and
 run it. If it refuses to start, your distribution may be missing FUSE 2
