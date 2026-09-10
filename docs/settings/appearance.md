@@ -49,6 +49,10 @@ Color of the selected list entry's text.
 
 Show the battery level as a percentage in the status pill.
 
+## Show search hint
+
+Show or hide the START search button hint on the main menu. Hiding it only removes the hint; pressing START at the top level still opens search.
+
 ## Show menu animations
 
 Enable or disable menu animations.
