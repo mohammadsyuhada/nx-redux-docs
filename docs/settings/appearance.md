@@ -9,13 +9,29 @@ entries the main menu shows.
 
 The color used to render main UI elements.
 
+## Main color opacity
+
+Opacity of the main color, `10%`–`100%` in 10% steps. Below `100%` the pills
+and selection capsules become translucent and show the wallpaper (`bg.png` at
+the SD card root, or the per-folder art) through them.
+
 ## Primary accent color
 
 The color used to highlight important things in the UI.
 
+## Primary accent opacity
+
+Opacity of the primary accent color, `10%`–`100%`. Below `100%` accented
+elements become translucent and show the wallpaper through them.
+
 ## Secondary accent color
 
 A secondary highlight color.
+
+## Secondary accent opacity
+
+Opacity of the secondary accent color, `10%`–`100%`. Below `100%` accented
+elements become translucent and show the wallpaper through them.
 
 ## Hint info color
 
