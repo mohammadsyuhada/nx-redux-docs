@@ -44,7 +44,7 @@ LoveRetro, which itself descends from
 | TrimUI Brick | `1.1.1` |
 | TrimUI Brick Hammer | `1.1.1` |
 | TrimUI Brick Pro | `1.1.1` |
-| TrimUI Smart Pro S | `1.0.1` |
+| TrimUI Smart Pro S | `1.0.1` or `1.0.2` |
 | TrimUI Smart Pro | `1.1.1` (should work in theory, but unconfirmed — no test device) |
 
 !!! warning "SD cards are built per device model"

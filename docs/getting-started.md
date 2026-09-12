@@ -16,7 +16,7 @@ hide:
 | Device | Required stock firmware |
 | --- | --- |
 | TrimUI Brick / Brick Hammer / Brick Pro | `1.1.1` |
-| TrimUI Smart Pro S | `1.0.1` |
+| TrimUI Smart Pro S | `1.0.1` or `1.0.2` |
 | TrimUI Smart Pro | `1.1.1` |
 
 You will also need:
