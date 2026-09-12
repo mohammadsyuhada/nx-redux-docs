@@ -12,8 +12,10 @@ The On-Screen Display (OSD) gives quick access to common actions from anywhere
 
 The OSD overlays the screen with a grid of widgets:
 
-- **Volume slider** with mute toggle, **brightness slider**, and **rumble**
-  toggle.
+- **Mute toggle**, **brightness slider**, and the **Motor** toggle — the
+  master vibration switch. Off silences every vibration on the device: game
+  rumble, the sleep and wake pulses and the shutdown tap. It is remembered
+  across reboots and is on by default.
 - **Wi-Fi**, **Bluetooth** and **LED** toggles with live state.
 - **Screenshot** and **Screen Recorder** toggles (see below).
 - System monitors: CPU frequency, memory usage and temperature (plus fan

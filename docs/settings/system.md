@@ -20,6 +20,19 @@ pulse when the device goes to sleep or wakes, and a light tap right before
 the power actually cuts on shutdown, so you know it is safe to put the device
 down. There is no pulse at the start of shutdown. On by default.
 
+These pulses only fire while the **Motor** toggle in the
+[On-Screen Display](../guide/osd.md) is on — that toggle is the master
+vibration switch for the whole device, games included.
+
+## Vibration strength
+
+`Light`, `Normal` (default) or `Strong`. Sets how hard the motor rumbles for
+everything — game rumble, the sleep and wake pulses and the shutdown tap.
+Each time you change it the motor gives one pulse at the new level so you can
+feel it straight away. Game rumble is often brief and partial (cartridge
+rumble emulation), so `Strong` makes those bursts hit nearly as hard as a
+full one, while `Light` tones everything down.
+
 ## Default view
 
 The initial view to show on boot — the content list or the
