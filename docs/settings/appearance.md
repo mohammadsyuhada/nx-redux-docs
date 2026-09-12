@@ -95,6 +95,14 @@ How game art is shown in the game list.
   brightest part. *Game art corner radius* and *Game art width* do not apply
   in this style.
 
+*Thumbnail*
+
+![Thumbnail style](../assets/screenshots/game-art-thumbnail.png)
+
+*Background*
+
+![Background style](../assets/screenshots/game-art-background.png)
+
 In the Background style the screenshot is always used, regardless of *Game
 art type* (see below), and a game with no screenshot shows an empty
 background rather than a different image.
@@ -106,6 +114,18 @@ screenshot with box art and logo floating over it), **Screenshot** or
 **Box art**. The [Artwork Manager](../apps/artwork-manager.md) stores all
 three per game; when the chosen one is missing for a game, the Mix image is
 shown instead.
+
+*Mix*
+
+![Mix](../assets/screenshots/game-art-thumbnail.png)
+
+*Screenshot*
+
+![Screenshot](../assets/screenshots/game-art-type-screenshot.png)
+
+*Box art*
+
+![Box art](../assets/screenshots/game-art-type-boxart.png)
 
 This setting applies to the **Thumbnail** style, where a missing variant
 falls back to the Mix image. The **Background** style always uses the
@@ -142,7 +162,7 @@ Show the "Collections" entry in the main menu.
 Show the emulator (system) folders in the main menu — turn this off for a
 minimal menu of just your pinned games and shortcuts.
 
-## Show game art
+## Game art visible
 
 Show game artwork in the main menu.
 
