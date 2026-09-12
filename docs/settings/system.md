@@ -15,7 +15,10 @@ Time before the device goes to sleep after the screen is off, `5`–`600` s.
 
 ## Haptic feedback
 
-Enable or disable haptic feedback on certain actions in the OS.
+Enable or disable haptic feedback on certain actions in the OS: a short
+pulse when the device goes to sleep or wakes, and a light tap right before
+the power actually cuts on shutdown, so you know it is safe to put the device
+down. There is no pulse at the start of shutdown. On by default.
 
 ## Default view
 
