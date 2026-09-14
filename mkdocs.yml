@@ -105,5 +105,6 @@ nav:
       - Input Tester: settings/input-tester.md
       - About: settings/about.md
   - Reference:
+      - Release Notes: reference/release-notes.md
       - FAQ: reference/faq.md
       - Credits: reference/credits.md
