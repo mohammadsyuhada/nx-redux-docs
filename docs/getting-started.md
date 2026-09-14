@@ -43,6 +43,16 @@ folder skeleton (`Bios`, `Roms`, `Saves`, and so on).
 4. Insert the card and power the device on. The installer runs automatically on
    first boot.
 
+!!! note "First boot also upgrades the Bluetooth stack"
+    The release zip includes a `nextui.upgrade_bluez.*.pakz` file next to
+    `MinUI.zip`. On first boot the installer extracts it and replaces the
+    device's built-in Bluetooth stack (BlueZ, bluez-alsa and the SBC codec)
+    with newer versions — you will see an extra *Extracting* / *Installing*
+    step on the splash screen. This writes to the device's system partition,
+    not the SD card, runs only once, and is skipped on devices that already
+    have it. The only way to undo it is to reflash the stock firmware. See
+    [Bluetooth](settings/bluetooth.md#under-the-hood) for details.
+
 ## Updating
 
 Two ways to update, pick either:

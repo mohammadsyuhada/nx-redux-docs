@@ -52,6 +52,21 @@ root of your SD card and boot. Bundled emulator and tool paks update
 automatically either way. See
 [Getting Started](../getting-started.md#updating).
 
+## Bluetooth is flaky, or I want the stock Bluetooth stack back
+
+A full release zip upgrades the device's Bluetooth stack on first boot (see
+[Bluetooth → Under the hood](../settings/bluetooth.md#under-the-hood)). If
+Bluetooth misbehaves, first confirm that upgrade actually ran: it only
+happens when the `nextui.upgrade_bluez.*.pakz` file from the release zip
+is on the card at boot. Installing by copying only `MinUI.zip` onto an
+existing card, or updating over the air from an install that never had the
+file, skips it. Copy the `.pakz` from the release zip to the root of the SD
+card and reboot to apply it.
+
+The upgrade lives on the device's system partition, not the SD card, so
+swapping cards does not remove it. To return to the stock stack, reflash
+the [official TrimUI firmware](https://github.com/trimui) for your device.
+
 ## A game won't launch — where do I start?
 
 The usual suspects, in order:
