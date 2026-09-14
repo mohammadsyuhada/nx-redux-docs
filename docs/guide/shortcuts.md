@@ -26,10 +26,11 @@ Volume and brightness show an on-screen indicator as you adjust.
     color temperature in [Settings → Display](../settings/display.md)
     instead.
 
-The **FN switch** is a shortcut of its own: one flick applies your
-configured "night mode" (muted volume, dimmed screen, LEDs off — all
-[configurable](../settings/fn-switch.md)) and flipping it back restores
-everything.
+The **FN switch** is a shortcut of its own: one flick applies the set of
+changes you configured for it (volume, screen, LEDs, turbo fire, D-pad mode,
+see [FN switch settings](../settings/fn-switch.md)) and flipping it back
+restores everything. Muting the speaker from the OSD is separate and does not
+depend on the switch.
 
 ## In the menus
 
