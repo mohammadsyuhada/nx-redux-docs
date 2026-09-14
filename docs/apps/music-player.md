@@ -117,6 +117,33 @@ the screen off right away instead of waiting. Press `SELECT` + `A` to wake
 it. Media buttons on a USB or Bluetooth headset keep working even with the
 screen off.
 
+## Background playback
+
+Music, radio and podcasts keep playing when you leave the Music Player —
+back in the menus and inside games. Playback is owned by a small background
+service, so the app is just a remote control for it.
+
+- **Control it from the OSD.** The [OSD](../guide/osd.md)'s **Music** widget
+  shows the current track or station with play/pause, previous and next,
+  from anywhere. Below it sits the **Game / Music balance** slider (press
+  Down to reach it): it sets how loud games are relative to the music, from
+  `50/50` through `Music +5`, on top of the normal volume keys. The same
+  setting is **Balance** in the Music Player's Settings, so you can still
+  reach it with nothing playing.
+- **Sleep stops it, waking resumes it.** Outside the app, background music
+  follows the device's normal sleep timers: when the screen times out the
+  music stops, the device goes to sleep, and waking it picks the track up
+  where it stopped. To keep listening with the screen dark, stay in the
+  Music Player and let its own [auto screen off](#auto-screen-off) handle
+  the display instead.
+- **It never starts by itself.** After a power-off or a restart, the last
+  track, station or episode is restored **paused** at the position you were
+  at — the first sound the device makes is one you asked for. Press play in
+  the widget or in the app to continue.
+- **It gets out of the way.** When nothing has been playing for a few
+  minutes the background service shuts itself down to save battery, keeping
+  its resume point; opening the Music Player brings it straight back.
+
 ## Online Radio
 
 **Online Radio** streams internet stations through the same high-quality
@@ -255,6 +282,8 @@ headset media buttons keep working while the screen is dark.
 
 - **Auto Screen Off** — idle time before the screen turns off during
   playback.
+- **Balance** — the Game / Music mix, the same slider as in the OSD Music
+  widget (see [Background playback](#background-playback)).
 - **Bass Filter** — high-pass filter to reduce speaker distortion.
 - **Soft Limiter** — limits volume peaks to prevent clipping.
 - **Sample Rate** — `Device default`, or `Follow source` for bit-exact
