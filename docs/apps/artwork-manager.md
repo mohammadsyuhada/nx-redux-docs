@@ -10,6 +10,20 @@ for your ROMs in bulk.
 The Library lists every system with its artwork coverage (games with art /
 total games).
 
+A system is any folder directly under `Roms` whose name ends in a tag in
+parentheses, for example `Virtual Boy (VB)`. The tag picks the ScreenScraper
+system; the folder name before it is only a label. Common tags and their
+aliases (`SNES`/`SFC`, `PSX`/`PS1`, `TG16`/`PCE`, `SS`/`SATURN`, …) are
+recognised. A folder whose tag ScreenScraper has no system for still appears,
+marked **Unsupported**, so you can rename it rather than wonder why it is
+missing. Empty folders are skipped.
+
+Inside a system folder the scanner sees exactly what the game list shows: every
+file that is not hidden counts as a game whatever its extension, sub-folders
+are searched too, and a multi-disc folder that holds a `.cue` or `.m3u` named
+after the folder counts as one game. Art for a game in a sub-folder lands in
+that sub-folder's `.media`; a multi-disc folder's art lands next to the folder.
+
 ![Artwork Manager Library](../assets/screenshots/artwork-library.png)
 
 - `A` **Open** — drill into a system to queue individual games.
