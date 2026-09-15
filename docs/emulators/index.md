@@ -36,4 +36,7 @@ Every emulator — built-in cores and standalones alike — supports:
 ## Netplay
 
 Many built-in cores support local wireless [Netplay](../netplay.md), including
-Game Boy link cable (gambatte) and Game Boy Advance link (gpSP) games.
+Game Boy link cable (gambatte) and Game Boy Advance link (gpSP) games. The
+[Netplay page](../netplay.md#supported-systems) lists exactly which cores and
+`Roms` folders are netplay-capable — for Game Boy Advance that is the `GBA`
+(gpSP) folder only, not `MGBA`.

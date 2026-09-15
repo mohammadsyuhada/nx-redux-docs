@@ -53,7 +53,8 @@ in parentheses after the system name (e.g. Game Boy Advance (GBA) →
 | Virtual Boy (VB) | Mednafen VB | None |
 
 Two systems appear twice on purpose: **Game Boy Advance** ships both gpSP
-(GBA — faster) and mGBA (MGBA — more accurate), and **Super Nintendo**
+(GBA — faster, and the only GBA core with [Netplay](../netplay.md#supported-systems))
+and mGBA (MGBA — more accurate, no netplay), and **Super Nintendo**
 ships both Snes9x (SFC) and Supafaust (SUPA) — pick per game by which
 `Roms` folder you use.
 
