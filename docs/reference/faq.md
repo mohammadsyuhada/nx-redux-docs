@@ -52,6 +52,14 @@ root of your SD card and boot. Bundled emulator and tool paks update
 automatically either way. See
 [Getting Started](../getting-started.md#updating).
 
+## Can I use the Xbox button arrangement (confirm at the bottom)?
+
+Yes. **Settings → System → Button layout → Xbox** swaps `A`/`B` and `X`/`Y`
+everywhere — menus, apps, every emulator and PortMaster. Restart once so the
+On-Screen Display follows too. The button hints can show either the letters
+printed on the caps or the buttons' roles; see
+[Button Layout](../guide/button-layout.md).
+
 ## Bluetooth is flaky, or I want the stock Bluetooth stack back
 
 A full release zip upgrades the device's Bluetooth stack on first boot (see

@@ -10,6 +10,12 @@ shown with live position indicators:
 
 ![Input Tester on Smart Pro S](../assets/screenshots/set-input-tester-tsps.png)
 
+The circles are drawn where the buttons sit on the device. Under the Xbox
+[Button Layout](../guide/button-layout.md) the bottom circle is the one that
+lights when you press the bottom button, labelled the way your hints are:
+
+![Input Tester under the Xbox layout](../assets/screenshots/set-input-tester-xbox.png)
+
 ## Joystick calibration
 
 On devices with analog sticks (Smart Pro, Smart Pro S, Brick Pro), press

@@ -7,13 +7,9 @@ core NX Redux install: install it on-device from the
 
 ## Launching
 
-Opening **Tools → PortMaster** shows a small launcher first:
-
-![PortMaster pak menu](../assets/screenshots/portmaster-pak.png)
-
-- **Open PortMaster** — launch the full PortMaster interface.
-- **Button Layout** — `Nintendo` by default; switch it here if you prefer
-  the other layout.
+Opening **Tools → PortMaster** launches the PortMaster interface directly.
+Ports, and PortMaster itself, follow the device-wide
+[Button Layout](../guide/button-layout.md) setting (**Settings → System**).
 
 ## Installing ports
 

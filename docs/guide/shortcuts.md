@@ -34,6 +34,9 @@ depend on the switch.
 
 ## In the menus
 
+`A` confirms and `B` goes back. Prefer confirm at the bottom? See
+[Button Layout](button-layout.md).
+
 - `SELECT` — open the [Game Switcher](game-switcher.md).
 - `START` — at the top level of the main menu, open **Search**.
 - `X` — resume the highlighted game from where you last left off.

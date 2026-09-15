@@ -6,7 +6,10 @@ Nintendo DS games run on a bundled **Drastic** emulator. Put your ROMs in
 ## Controls
 
 The face buttons, D-pad, shoulders, `START` and `SELECT` map to the DS as you
-would expect. On top of that:
+would expect, and follow the device-wide
+[Button Layout](../guide/button-layout.md) setting — under the Xbox layout
+the bottom button is the DS `A`, in games and in the Drastic menu alike. On
+top of that:
 
 | Button | Action |
 |--------|--------|

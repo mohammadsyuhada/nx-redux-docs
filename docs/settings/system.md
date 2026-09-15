@@ -33,6 +33,20 @@ feel it straight away. Game rumble is often brief and partial (cartridge
 rumble emulation), so `Strong` makes those bursts hit nearly as hard as a
 full one, while `Light` tones everything down.
 
+## Button layout
+
+`Nintendo` (default) or `Xbox`. `Xbox` puts `A` at the bottom and `B` on the
+right (and `Y` on top, `X` on the left) everywhere — menus, apps, every
+emulator and PortMaster. Applies as soon as you leave Settings; only the
+On-Screen Display waits for a restart. See [Button Layout](../guide/button-layout.md).
+
+## Hint labels
+
+Shown only while the layout is `Xbox`. `Printed caps` (default) makes the
+button hints show the letter printed on the cap you press; `Layout letters`
+makes them show the button's role instead (`A` for confirm, whichever cap
+that is). Takes effect immediately, including in Settings itself.
+
 ## Default view
 
 The initial view to show on boot — the content list or the
