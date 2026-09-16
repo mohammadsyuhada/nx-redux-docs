@@ -30,6 +30,31 @@ install would. Put your games in `Roms/Sony Playstation Portable (PSP)`
 afterwards. Community-pak [support notes](../emulators/additional.md)
 apply.
 
+## Pokémon Gen1Recomp
+
+**Pokemon Gen1Recomp++** in the **GAMES** tab installs
+[bryanthaboi/gen1recomp](https://github.com/bryanthaboi/gen1recomp), a
+native LÖVE2D recreation of Pokémon Red, Blue, Yellow, Gold, Silver and
+Crystal, together with three bundled mods: Stadium battle effects, Running
+Shoes and Wilds of Kanto. The 3D voxel overworld mods offered in its mod
+browser need far more memory than these 1 GB devices have, so they are
+not bundled and not recommended. You supply your own US
+cartridge ROMs in `Roms/Game Boy` or `Roms/Game Boy Color`; the installer
+copies recognised dumps into the game for you (Crystal 1.0 must be copied
+by hand, only the 1.1 dump is recognised).
+
+The game opens on its own launcher (ROM import, mods, saves). It is built
+for a mouse pointer, so on a handheld it works like this:
+
+| Button | Action |
+|---|---|
+| D-pad, A | Move between controls and select |
+| L1 / R1 | Previous / next tab |
+| L2 / R2 | Scroll lists up / down |
+| Y | Switch between menu navigation and a free pointer cursor |
+| Select | Open the on-screen keyboard (search, names, URLs) |
+| Start | Play the selected version |
+
 ## PortMaster
 
 [PortMaster](https://portmaster.games/) — the community launcher for game
