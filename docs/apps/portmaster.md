@@ -79,6 +79,11 @@ fixed from the start — and if you copied a game over from another device,
 just open PortMaster once (or reinstall the port) and the fix lands too.
 Copying a script from `patchedScripts/` by hand is only ever a fallback.
 
+Found a port that still fails this way? Open an issue on
+[GitHub](https://github.com/mohammadsyuhada/nx-redux/issues) with the port's
+name and the error you see, and a ready-fixed launch script for it can be
+added to the next release.
+
 ### A port doesn't work on this device at all
 
 Some older ports are built **only for 32-bit ARM (armhf)**. The TrimUI
@@ -92,3 +97,7 @@ never start. 64-bit (aarch64) builds of ports work normally.
 - **Sleep works in PortMaster games** — press the power button like
   anywhere else.
 - PortMaster keeps itself up to date (it checks for updates when it starts).
+- **NX Redux updates keep PortMaster installed.** A system update refreshes
+  the PortMaster entry in Tools and the Ports launcher on its own; your
+  installed ports, saves and PortMaster settings stay where they are, and
+  there is nothing to reinstall.
