@@ -24,9 +24,11 @@ store labels the entry accordingly.
 
 **PSP (PPSSPP)** installs
 [ben16w's community PSP.pak](https://github.com/ben16w/minui-psp) directly
-on-device (~31 MB download) — no computer needed. Put your games in
-`Roms/Sony Playstation Portable (PSP)` afterwards. Community-pak
-[support notes](../emulators/additional.md) apply.
+on-device (~31 MB download) — no computer needed. It lands unmodified in
+the pak's own `Emus/<platform>/PSP.pak` location, exactly as a manual
+install would. Put your games in `Roms/Sony Playstation Portable (PSP)`
+afterwards. Community-pak [support notes](../emulators/additional.md)
+apply.
 
 ## PortMaster
 
