@@ -94,6 +94,23 @@ Both devices must run an NX Redux build that includes this prompt. An older
 host still answers *"The host is running a different game."* and the join is
 refused.
 
+## Saves
+
+A netplay session never overwrites your own save file.
+
+For the **Lockstep** cores and **Sega Dreamcast**, the host brings the save.
+At the start the host's save is copied to the joiner, so both devices begin
+from the same progress. The host plays on its real save as usual, while the
+joiner plays on that copy in a scratch area and its own save in `Saves/` is
+left exactly as it was. The copy matters because some of these cores (the Sega
+and PlayStation ones) keep battery saves outside the shared game state, so
+without it the two devices could drift out of sync.
+
+For **GB Link** and **GBA Link**, nothing is copied — each device keeps and
+plays on its own save. Link-cable play needs it that way: two Pokémon games
+with identical saves share a Trainer ID and refuse to trade, so give each
+device its own save file.
+
 ## During a session
 
 Save states, fast-forward and rewind are automatically disabled during a
