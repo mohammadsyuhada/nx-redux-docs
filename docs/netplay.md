@@ -70,6 +70,30 @@ features like trading and versus battles work between two devices.
 Both players must use the same system folder (and therefore the same core)
 for the same game.
 
+## Different versions of one game
+
+The join step checks that both devices run the same game by comparing the
+ROM **file names**, ignoring case, punctuation and anything in brackets, so
+`Pokemon - FireRed (USA).gba` pairs with `pokemon_firered.gba` without any
+renaming. Two *versions* of a game have different names, though: Pokémon
+FireRed and LeafGreen, Ruby and Sapphire, Gold and Silver. Those link fine on
+real hardware, so picking such a host is allowed, but the joiner is asked
+first:
+
+> The host is running *Pokemon - LeafGreen*<br>
+> You are running *Pokemon - FireRed*<br>
+> Join anyway?
+
+Press `A` to join or `B` to go back to the host list. On a **Hotspot** join
+the same question appears while connecting. The wizard cannot tell a sister
+version from a genuinely different game, so only confirm when you know the
+two cartridges link — a real mismatch fails inside the game, not in the
+wizard.
+
+Both devices must run an NX Redux build that includes this prompt. An older
+host still answers *"The host is running a different game."* and the join is
+refused.
+
 ## During a session
 
 Save states, fast-forward and rewind are automatically disabled during a
