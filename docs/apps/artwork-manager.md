@@ -21,13 +21,34 @@ missing. Empty folders are skipped.
 Inside a system folder the scanner sees exactly what the game list shows: every
 file that is not hidden counts as a game whatever its extension, sub-folders
 are searched too, and a multi-disc folder that holds a `.cue` or `.m3u` named
-after the folder counts as one game. Art for a game in a sub-folder lands in
+after the folder counts as one game. A game you have renamed (with **Rename
+Rom** in its [context menu](../guide/context-menu.md)) is listed under its new
+name, just like on the main game list. Art for a game in a sub-folder lands in
 that sub-folder's `.media`; a multi-disc folder's art lands next to the folder.
 
 ![Artwork Manager Library](../assets/screenshots/artwork-library.png)
 
 - `A` **Open** — drill into a system to queue individual games.
 - `Y` **Queue All** — queue every missing artwork in the selected system.
+- `B` **Back**.
+
+Opening a system lists its games with the artwork already on the card for each
+one:
+
+- **Done** — all three images are present.
+- **No screenshot** / **No box art** — the Mix is there but that one variant
+  is missing (ScreenScraper had no such image, or it was fetched before the
+  variants existed).
+- **Mix only** — just the Mix, with neither variant.
+- A game with no art yet shows nothing until you queue it, then its live
+  status (**Queued**, **Downloading…**, **Done**, **Not Found**, …).
+
+In the game list:
+
+- `A` **Queue** — queue just the highlighted game. This re-fetches even if it
+  already has art, so it's the way to fill in a missing **screenshot** or
+  **box art**, or replace a bad match, for one game.
+- `Y` **Queue All** — queue every game in the system that has no Mix yet.
 - `B` **Back**.
 
 ## Progress
@@ -78,6 +99,13 @@ fetched.
   folder under `Roms`, including systems the scraper does not recognise,
   folder games and leftovers from renamed ROMs. The folder backgrounds
   `bg.png` and `bglist.png` are kept. Refused while a queue is still running.
+
+!!! tip "Fixing one game? Don't reset everything"
+    **Reset artwork** wipes the whole library. To redo the art for a single
+    game — one whose status reads **No screenshot** or **No box art**, or that
+    matched the wrong game — open its system from the Library, highlight it and
+    press `A`. That re-fetches just that game and overwrites its images,
+    without touching anything else.
 
 ## Settings — your ScreenScraper account
 
