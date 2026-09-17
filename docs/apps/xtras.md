@@ -61,3 +61,13 @@ for a mouse pointer, so on a handheld it works like this:
 ports — is the flagship entry in the **TOOLS** tab. Once installed it
 appears in the Tools menu; see the dedicated
 [PortMaster page](portmaster.md) for how it works.
+
+## Cheat Database
+
+**Cheat Database** in the **TOOLS** tab installs a small (~1 MB) tool into
+your [Tools](tools.md) menu. Open it once to download the
+[libretro](https://www.libretro.com/) cheat collection (~37 MB, ~185 MB
+unpacked) — a single download covers every supported system. Cheats then
+turn on and off from a game's in-game **Options → Cheats** menu. See the
+dedicated [Cheats page](cheats.md) for downloading, using and updating the
+cheats, and for writing your own.
