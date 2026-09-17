@@ -4,6 +4,78 @@ What changed in each NX Redux release. Download packages for every device
 from the [releases page](https://github.com/mohammadsyuhada/nx-redux/releases),
 or update on the device from [Settings → About](../settings/about.md).
 
+## v1.11.0
+
+*17 September 2026*
+
+This release adds a built-in cheat downloader that pulls per-game codes
+straight from the libretro cheat database, and a Nintendo / Xbox button
+layout setting that swaps what the face buttons mean and relabels every
+on-screen hint across the launcher, emulators, PortMaster and the OSD.
+Netplay now serves the host's save into a session without ever touching the
+client's own, and offers to join a host running a sister version of the same
+game. The Artwork Manager scans your Roms exactly like the game list — any
+file type, nested folders and folder games — and shows how complete each
+game's art is, a Developer debug-logging toggle keeps the card clean, and the
+Xtras Pokémon recreation is rebuilt as Pokémon Gen1Recomp++ with native
+launcher controls and Gen 2 support. A batch of fixes covers Amiga Kickstart
+options, the PSP black screen on Brick, the DraStic stylus toggle, offline
+RetroAchievements and the Brick updater crash on long release notes.
+
+### New features
+
+- **Built-in cheat downloader.** Install the **Cheat Database** tool from the
+  [Xtras Store](../apps/xtras.md#cheat-database), then browse and download
+  per-game cheat codes straight from the libretro cheat database — no PC
+  needed. Downloaded cheats are picked up automatically the next time you
+  open a game's in-game menu. See [Cheats](../apps/cheats.md).
+- **Nintendo / Xbox button layout.** A new setting swaps the meaning of the
+  face buttons and relabels every hint, so an Xbox-style layout reads
+  correctly across the launcher, emulators, PortMaster and the OSD. See
+  [Button Layout](../guide/button-layout.md).
+- **Netplay save handling.** A lockstep session now plays on the host's save
+  and leaves the client's own save completely untouched, so joining a friend
+  never overwrites your progress. See [Netplay → Saves](../netplay.md#saves).
+- **Join a different version of a game.** If a host is running a sister
+  version of the same title — FireRed and LeafGreen, say — the joiner is
+  offered a **Join anyway?** prompt instead of being refused. See
+  [Netplay → Different versions of one game](../netplay.md#different-versions-of-one-game).
+- **Artwork Manager scanning and status.** The Artwork Manager now scans your
+  Roms the same way the game list does — every file type, nested folders and
+  folder games — lists tags it does not recognise, and shows how complete
+  each game's art is. The library drops the sort prefix, shows your
+  `map.txt` rename names, and fits one more game per screen. See
+  [Artwork Manager](../apps/artwork-manager.md).
+- **Pokémon Gen1Recomp++.** The Xtras Pokémon recreation is rebuilt: it
+  adopts the upstream launcher's own controls with an on-screen **Select**
+  keyboard, scans Gen 2 ROMs, and drops the voxel mod bundle and swapfile for
+  a lighter install. See
+  [Xtras → Pokémon Gen1Recomp](../apps/xtras.md#pokemon-gen1recomp).
+- **Developer debug logging.** A **Debug logging** toggle under
+  [Developer settings](../settings/developer.md#debug-logging) turns off all
+  `.userdata` log writes when you do not need them, keeping the card clean.
+
+### Fixes
+
+- **Amiga:** Kickstart and other system-scanned option lists now populate in
+  [Emulator Settings](../guide/emulator-options.md) instead of showing only a
+  placeholder.
+- **PSP:** the Brick black screen with minui-psp 6.x is fixed — the PSP pak
+  now installs unmodified into its platform folder.
+- **Nintendo DS:** the DraStic stylus toggle works on the Brick and Brick
+  Pro, and every device now shows the same pen image. See
+  [Nintendo DS → Stylus mode](../emulators/nintendo-ds.md#stylus-mode).
+- **RetroAchievements:** logging in from the pak now writes the offline login
+  cache and prefetches, so previously earned achievements show up offline.
+- **Brick Pro:** the rumble voltage cap is lowered to 1.7 V so **Normal**
+  vibration feels subtler, and the **Home** button closes the OSD.
+- **Updater:** installing an update with long release notes no longer crashes
+  the Brick's Settings.
+- **Settings:** tag-named release builds show the commit date as their
+  **Release date**, and settings-row labels now fit beside their value.
+- **PortMaster:** it is now a shell launcher and installed paks are migrated
+  automatically, so a system update keeps PortMaster installed.
+
 ## v1.10.0
 
 *14 September 2026*
