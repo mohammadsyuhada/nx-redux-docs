@@ -31,6 +31,27 @@ The hint bar shows what is available for the selected game:
 - `B` **Back** — return to the main menu.
 - `MENU` — open the [game context menu](context-menu.md).
 
+### Duplicate names
+
+When two games in the same list share a name, each row shows what sets it
+apart, in a dimmer colour after the name:
+
+![Game list with duplicate names](../assets/screenshots/game-list-duplicates.png)
+
+- **Same file in two emulator folders** — for example `Advance Wars.gba` in
+  both `Game Boy Advance (GBA)` and `Game Boy Advance (MGBA)`, which the list
+  shows together — adds the emulator tag: `Advance Wars (GBA)` and
+  `Advance Wars (MGBA)`.
+- **Different files in two emulator folders** shows the full filename
+  without its extension, plus the tag, so you can tell both the version and
+  the core apart: `Astro Boy - Omega Factor (USA) (MGBA)`.
+- **Different files in one folder** — `Tetris.gb` next to `Tetris (1).gb` —
+  shows the filenames without extensions: `Tetris` and `Tetris (1)`. The
+  extension is kept only when it is the sole difference, such as `Tetris.gb`
+  next to `Tetris.gbc`.
+
+Names that are unique in their list are unaffected.
+
 ## Search
 
 Press `START` on the main menu to search your entire library.
