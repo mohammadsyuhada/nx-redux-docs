@@ -8,8 +8,9 @@ or update on the device from [Settings → About](../settings/about.md).
 
 *19 September 2026*
 
-A small patch release. Bluetooth on the Smart Pro S comes back after sleep,
-the On-Screen Display gets three fixes and a lighter idle poll, and the
+A small patch release. The Smart Pro S no longer pops from the speaker at
+boot or when a game starts, its Bluetooth comes back after sleep, the
+On-Screen Display gets three fixes and a lighter idle poll, and the
 Developer SSH toggle now shows the full login line with the device's IP.
 
 ### New features
@@ -22,6 +23,11 @@ Developer SSH toggle now shows the full login line with the device's IP.
 
 ### Fixes
 
+- **Smart Pro S:** the speaker pop at boot and at the start of a game,
+  most noticeable with the N64, Nintendo DS and Dreamcast emulators, is
+  gone. The codec powers its output stage up for every new audio stream
+  and that transient reached the speaker amp; the amp is now kept muted
+  until the stream is running and is unmuted with the volume held at zero.
 - **Smart Pro S:** Bluetooth re-attaches after the device wakes from sleep,
   and stays off when you have disabled it.
 - **OSD:** on the Brick Pro the **Home** press that opens the panel no longer
