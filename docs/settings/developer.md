@@ -14,7 +14,13 @@ Keep the screen on and block sleep while connected to a computer over USB.
 
 ## Enable SSH
 
-Start or stop the SSH service.
+Start or stop the SSH service. While it is running the hint shows the login
+line with the device's current IP address. The username is `root`. On Brick
+and Brick Pro the password is `tina`; Smart Pro S needs no password.
+
+```sh
+ssh root@192.168.1.8
+```
 
 ## Start SSH on boot
 
