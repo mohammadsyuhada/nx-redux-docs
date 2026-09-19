@@ -46,6 +46,7 @@ and so on) have no netplay.
 | Sega Genesis | `Sega Genesis (MD)` | PicoDrive | Lockstep |
 | Sega CD | `Sega CD (SEGACD)` | PicoDrive | Lockstep |
 | Sega 32X | `Sega 32X (32X)` | PicoDrive | Lockstep |
+| Sega (Genesis Plus GX) | `Sega … (GPGX)` folders | Genesis Plus GX | Lockstep |
 | Sony PlayStation | `Sony PlayStation (PS)` | PCSX-ReARMed | Lockstep |
 | Arcade | `Arcade (FBN)` | FBNeo | Lockstep |
 | Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus (standalone) | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |

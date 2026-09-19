@@ -53,6 +53,13 @@ game and unlocks are tracked automatically as you play:
   ones, and press `X` to **mute** a specific achievement's notifications
   (handy for spammy progress trackers).
 
+!!! tip "Genesis Plus GX covers every Sega system"
+    The alternate Sega core [Genesis Plus GX](../emulators/cores.md) plays
+    Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD under a
+    single `GPGX` tag, and still identifies each game with the correct console
+    for achievements — it picks the system from the ROM's file extension. Keep
+    your Sega games in `(GPGX)` folders and RetroAchievements just works.
+
 !!! info "Softcore only, by design"
     NX Redux is not an RA-approved hardcore emulator, so hardcore mode is
     intentionally omitted to keep your account safe. Unlocks are submitted

@@ -95,6 +95,7 @@ use [`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
 | Sega Game Gear (GG) | picodrive | `gg` |
 | Sega Master System (SMS) | picodrive | `sms` |
 | Sega SG-1000 (SG1000) | picodrive | `sg` `sc` |
+| Sega — Genesis Plus GX (GPGX) | genesis_plus_gx | `md` `gen` `smd` `bin` `sgd` `sms` `gg` `sg` — one pak for every Sega system, picked by extension |
 | Super Nintendo ES (SFC) | snes9x | `sfc` `smc` `swc` `fig` `bs` `st` |
 | Super Nintendo ES (SUPA) | mednafen_supafaust | `sfc` `smc` `swc` `fig` |
 | TurboGrafx-16 (PCE) | mednafen_pce_fast | `pce` + CD: `cue` `ccd` `chd` `toc` `m3u` |
@@ -106,6 +107,7 @@ use [`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
 | --- | --- | --- |
 | Sony PlayStation (PS) | pcsx_rearmed | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` `exe` |
 | Sega CD (SEGACD) | picodrive | `chd` `cue` `bin` `iso` `m3u` |
+| Sega CD (GPGX) | genesis_plus_gx | `chd` `cue` `bin` `iso` `m3u` (BIOS in `Bios/GPGX/`) |
 
 `.chd` is the recommended format for both — single file per disc,
 compressed, no extraction.

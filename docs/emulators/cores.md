@@ -46,17 +46,36 @@ in parentheses after the system name (e.g. Game Boy Advance (GBA) →
 | Sega Genesis (MD) | PicoDrive | None |
 | Sega Master System (SMS) | PicoDrive | None |
 | Sega SG-1000 (SG1000) | PicoDrive | None |
+| Sega Genesis (GPGX) | Genesis Plus GX | None |
+| Sega Master System (GPGX) | Genesis Plus GX | None |
+| Sega Game Gear (GPGX) | Genesis Plus GX | None |
+| Sega CD (GPGX) | Genesis Plus GX | **Required** — `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` in `Bios/GPGX/` |
 | Sony PlayStation (PS) | PCSX-ReARMed | Recommended — `psxonpsp660.bin` or `scph1001.bin` (an HLE fallback exists; a real BIOS is strongly recommended for compatibility) |
 | Super Nintendo ES (SFC) | Snes9x | None |
 | Super Nintendo ES (SUPA) | Mednafen Supafaust | None |
 | TurboGrafx-16 (PCE) | Mednafen PCE Fast | HuCards: none; CD games: **`syscard3.pce` required** |
 | Virtual Boy (VB) | Mednafen VB | None |
 
-Two systems appear twice on purpose: **Game Boy Advance** ships both gpSP
-(GBA — faster, and the only GBA core with [Netplay](../netplay.md#supported-systems))
-and mGBA (MGBA — more accurate, no netplay), and **Super Nintendo**
-ships both Snes9x (SFC) and Supafaust (SUPA) — pick per game by which
-`Roms` folder you use.
+Some systems appear more than once on purpose — pick per game by which
+`Roms` folder you use:
+
+- **Game Boy Advance** ships both gpSP (GBA — faster, and the only GBA core
+  with [Netplay](../netplay.md#supported-systems)) and mGBA (MGBA — more
+  accurate, no netplay).
+- **Super Nintendo** ships both Snes9x (SFC) and Supafaust (SUPA).
+- **The Sega systems** can also run on **Genesis Plus GX** (GPGX) — a more
+  accurate alternative to PicoDrive (PicoDrive is the lighter, faster core).
+
+Genesis Plus GX is special: a single `GPGX` tag, pak and core plays
+Genesis/Mega Drive, Master System, Game Gear, SG-1000 **and** Sega CD, and
+picks the system from each ROM's file extension. That also lets
+[RetroAchievements](../apps/retroachievements.md) identify every game with
+the correct console, so you can keep all your Sega games under `(GPGX)`
+folders. Because they share one tag, GPGX saves, BIOS, cheats and overlays
+all live under the `GPGX` name (e.g. Sega CD BIOS goes in `Bios/GPGX/`,
+not `Bios/SEGACD/`). To use it, name a `Roms` folder for the system with
+the `(GPGX)` tag — for example `Sega Genesis (GPGX)` — the same way the
+default `Sega Genesis (MD)` folder uses PicoDrive.
 
 ## Standalone emulators
 
