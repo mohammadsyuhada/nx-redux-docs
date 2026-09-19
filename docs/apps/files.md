@@ -7,10 +7,16 @@ card and copy, move, rename or delete files without a computer.
 
 - Two independent panes make copying between folders straightforward — set
   each pane to a location and transfer between them.
+- The D-pad or the left stick moves the cursor; `LEFT` / `RIGHT` switch
+  panes. Hold a direction to scroll through a long folder.
 - `A` opens the selected folder or file, `B` goes up a directory.
 - `X` opens the **file actions** menu for the current selection.
 - `MENU` (or `Y`) opens the system menu: **Select all / Select none**, **New
   directory**, **Disk info**, and **Quit** to leave the app.
+
+The face buttons follow the device-wide
+[Button Layout](../guide/button-layout.md) setting — under the Xbox layout
+the bottom button is `A` here too.
 
 ## File actions
 
