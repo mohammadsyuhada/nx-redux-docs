@@ -4,23 +4,41 @@ What changed in each NX Redux release. Download packages for every device
 from the [releases page](https://github.com/mohammadsyuhada/nx-redux/releases),
 or update on the device from [Settings → About](../settings/about.md).
 
+## v1.11.1
+
+*19 September 2026*
+
+A small patch release. Bluetooth on the Smart Pro S comes back after sleep,
+the On-Screen Display gets three fixes and a lighter idle poll, and the
+Developer SSH toggle now shows the full login line with the device's IP.
+
+### New features
+
+- **SSH login hint.** While SSH is running, the hint under
+  **Settings → Developer → Enable SSH** shows the exact login line with the
+  device's current IP address and password, and the connected network in
+  **Settings → Network** shows the same IP. See
+  [Developer → Enable SSH](../settings/developer.md#enable-ssh).
+
+### Fixes
+
+- **Smart Pro S:** Bluetooth re-attaches after the device wakes from sleep,
+  and stays off when you have disabled it.
+- **OSD:** on the Brick Pro the **Home** press that opens the panel no longer
+  closes it again, the slider widget is centred, and the active widget's
+  focus ring stays white instead of taking the theme accent.
+- **OSD:** the hidden daemon polls input every 20 ms instead of every
+  millisecond, so it uses less CPU while the panel is closed.
+
 ## v1.11.0
 
 *17 September 2026*
 
-This release adds a built-in cheat downloader that pulls per-game codes
-straight from the libretro cheat database, and a Nintendo / Xbox button
-layout setting that swaps what the face buttons mean and relabels every
-on-screen hint across the launcher, emulators, PortMaster and the OSD.
-Netplay now serves the host's save into a session without ever touching the
-client's own, and offers to join a host running a sister version of the same
-game. The Artwork Manager scans your Roms exactly like the game list — any
-file type, nested folders and folder games — and shows how complete each
-game's art is, a Developer debug-logging toggle keeps the card clean, and the
-Xtras Pokémon recreation is rebuilt as Pokémon Gen1Recomp++ with native
-launcher controls and Gen 2 support. A batch of fixes covers Amiga Kickstart
-options, the PSP black screen on Brick, the DraStic stylus toggle, offline
-RetroAchievements and the Brick updater crash on long release notes.
+This release adds a built-in cheat downloader, a Nintendo / Xbox button
+layout setting, and safer Netplay saves that never touch the client's own.
+The Artwork Manager scans Roms like the game list, Pokémon Gen1Recomp++
+replaces the old Xtras recreation, and a batch of fixes covers Amiga, PSP,
+DraStic, offline RetroAchievements and the Brick updater.
 
 ### New features
 
