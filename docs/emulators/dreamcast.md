@@ -40,6 +40,23 @@ Without it, the game exits immediately (the log shows
 As on the real cabinets, arcade games want coins before START works —
 press **SELECT** to insert a coin.
 
+## RetroAchievements
+
+Flycast has its own RetroAchievements support. Sign in once in the
+[RetroAchievements](../apps/retroachievements.md) tool and every Dreamcast,
+Naomi and Atomiswave launch logs in with your account (it needs a network
+connection at launch). Unlocks are submitted straight to the server by
+Flycast, so to see them in the tool run **Download all game data** once (so
+your Dreamcast games are cached) and then **Sync now**, which pulls your
+points and unlock state back from the server.
+
+Whether Flycast tracks achievements follows the tool's **Enable
+achievements** setting, exactly like the built-in cores — there is no
+separate per-game switch. **Hardcore Mode** is the one Flycast-specific
+option: it lives in the game's [Emulator Options](../guide/emulator-options.md)
+(and the in-game overlay's **RetroAchievements** section), is off by default,
+and disables save states while playing.
+
 ## Netplay
 
 Dreamcast supports **GGPO netplay** for up to 2 players — see

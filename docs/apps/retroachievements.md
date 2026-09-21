@@ -60,6 +60,13 @@ game and unlocks are tracked automatically as you play:
     for achievements — it picks the system from the ROM's file extension. Keep
     your Sega games in `(GPGX)` folders and RetroAchievements just works.
 
+!!! tip "Dreamcast (Flycast) is covered too"
+    The standalone [Dreamcast](../emulators/dreamcast.md) emulator has its
+    own RetroAchievements support. NX Redux hands it your login at launch, and
+    Flycast talks to the server directly, so its unlocks skip the offline
+    journal. They still count: press **Sync now** on the home screen to pull
+    them in (see [Syncing](#syncing)).
+
 !!! info "Softcore only, by design"
     NX Redux is not an RA-approved hardcore emulator, so hardcore mode is
     intentionally omitted to keep your account safe. Unlocks are submitted
@@ -77,7 +84,11 @@ Everything is built to work without a connection:
   offline.
 - **Pre-download** — **Download all game data** caches achievement data for
   every game in your library with a live progress bar, so even games you
-  have *never* launched online work offline.
+  have *never* launched online work offline. Dreamcast folders are included:
+  disc images (`.chd`, `.gdi`, `.cdi`, `.cue`) and Naomi/Atomiswave sets
+  (`.zip`) are identified the same way Flycast does it. Multi-disc games
+  (PlayStation, Dreamcast) are covered too: every disc is cached so any disc
+  is recognised offline, and the game shows up once in the browser.
 
 ## Browsing your achievements
 
@@ -101,6 +112,18 @@ points, global unlock rate, and type tags like `[Missable]`,
 
 ## Syncing
 
-Offline unlocks sync automatically when you're back online; **Sync now** on
-the home screen pushes them immediately. The home screen's "unlocks
-waiting" and "Last sync" tell you where you stand.
+Offline unlocks sync automatically when you're back online. **Sync now** on
+the home screen does two things in one go:
+
+1. **Push** — submits any offline unlocks still waiting.
+2. **Pull** — refreshes your cloud status: the points total and the unlock
+   state of every cached game, so achievements earned in Flycast, on another
+   device or on the website show up here too. Games whose progress changed
+   on the server are re-fetched.
+
+Both steps show the same progress bar as **Download all game data**; press
+`B` to cancel — unsent unlocks stay queued for the next sync and games
+already refreshed are kept.
+
+The home screen's points, "unlocks waiting" and "Last sync" tell you where
+you stand.
