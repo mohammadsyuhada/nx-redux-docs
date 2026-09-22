@@ -4,6 +4,77 @@ What changed in each NX Redux release. Download packages for every device
 from the [releases page](https://github.com/mohammadsyuhada/nx-redux/releases),
 or update on the device from [Settings → About](../settings/about.md).
 
+## v1.12.0
+
+*22 September 2026*
+
+Genesis Plus GX joins as a second Sega core, Dreamcast gets full
+RetroAchievements support, and a save-truncation bug from v1.10.0 is fixed.
+Menus and emulators also run cooler with new per-device CPU policies.
+
+### New features
+
+- **Genesis Plus GX.** A more accurate alternative to PicoDrive that plays
+  Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD from a
+  single `(GPGX)` tag, picking the system from each ROM's extension so
+  RetroAchievements identifies every game with the right console. Name a
+  `Roms` folder `Sega Genesis (GPGX)`, say, to use it. See
+  [Cores & BIOS Files](../emulators/cores.md#systems-and-cores).
+- **Dreamcast RetroAchievements.** Flycast now follows the tool's **Enable
+  achievements** setting like the built-in cores, with **Hardcore Mode** as
+  its one per-game option. The RetroAchievements tool caches Dreamcast, Naomi
+  and Atomiswave games (`.chd`, `.gdi`, `.cdi`, `.cue`, `.zip`) and lists
+  multi-disc games once. See
+  [Dreamcast → RetroAchievements](../emulators/dreamcast.md#retroachievements).
+- **Two-phase Sync now.** **Sync now** pushes waiting offline unlocks, then
+  pulls your points and unlock state back from the server, so achievements
+  earned in Flycast, on another device or on the website show up in the tool.
+  Both steps show a progress bar and `B` cancels. See
+  [RetroAchievements → Syncing](../apps/retroachievements.md#syncing).
+- **Search closes with START.** Tapping `START` again while the search
+  keyboard or results list is open returns you to the menu, the same way
+  `SELECT` closes the Game Switcher. See
+  [Main Menu → Search](../guide/main-menu.md#search).
+- **Clearer duplicate names.** When the same game appears in two cores' lists,
+  each row shows the emulator tag (`Advance Wars (GBA)` / `(MGBA)`) instead
+  of the file extension, dimmed after the name. See
+  [Main Menu → Duplicate names](../guide/main-menu.md#duplicate-names).
+- **Files.** The left stick moves through folders and panes, holding a
+  direction scrolls, the cursor bars are gray, and the face buttons follow the
+  device-wide [Button Layout](../guide/button-layout.md). See
+  [Files](../apps/files.md).
+- **Verified HTTPS.** The launcher and tools now check server certificates
+  against a bundled CA store when downloading updates, Xtras and cheats,
+  instead of skipping verification.
+
+### Performance
+
+- **Launcher CPU policy.** The launcher runs at full speed while booting,
+  then caps the CPU while you browse and drops further after three seconds
+  without input. On the Smart Pro S the big core is switched off entirely
+  for the launcher and the tools, so menus run cooler on less battery.
+- **Per-core CPU profiles.** Each emulator ships a measured CPU range that
+  the **Auto** CPU speed applies, instead of every core running the whole
+  frequency range. On the Smart Pro S, PlayStation runs on both big cores
+  with the render and audio helpers moved to the little cores, and the
+  **Auto** ceiling no longer clamps the big core to the little cluster's top
+  speed.
+- **Rumble.** The vibration thread sleeps between rumble events instead of
+  polling settings every 17 ms.
+
+### Fixes
+
+- **Saves:** quitting a game no longer writes a 0 KB save over your existing
+  one. A regression since v1.10.0, most reported on Game Boy Advance and
+  Game Boy Color on the Brick.
+- **Cheats:** on PCSX-ReARMed, enabling a cheat other than the first one now
+  activates it even when the cheats before it are off.
+- **Dreamcast:** RetroAchievements login from Flycast no longer fails with
+  "No response"; Flycast now finds the certificate bundle it needs for HTTPS.
+- **Music Player:** opening the app while its background service is still
+  starting shows a loading screen instead of failing to launch.
+- **Search:** the hint bar repaints cleanly when the shift indicator clears.
+
 ## v1.11.1
 
 *19 September 2026*

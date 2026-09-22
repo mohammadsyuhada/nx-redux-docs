@@ -60,6 +60,8 @@ Press `START` on the main menu to search your entire library.
 
 Type with the on-screen keyboard (`A` select, `X` shift, `Y` delete) and
 confirm to see matching games from every system.
+Tap `START` again from the keyboard or the results list to close the search
+and return to the menu.
 
 ## Shortcuts and pinned games
 
