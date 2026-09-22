@@ -18,6 +18,16 @@ recognised. A folder whose tag ScreenScraper has no system for still appears,
 marked **Unsupported**, so you can rename it rather than wonder why it is
 missing. Empty folders are skipped.
 
+The Sega `MD` and [`GPGX`](../emulators/cores.md#supported-cores) tags cover
+several systems, so each game there is matched by its file extension instead:
+`.sms` as Master System, `.gg` as Game Gear, `.sg` as SG-1000, CD images
+(`.chd`, `.cue`, `.m3u`, `.iso`) as Sega CD and everything else as Mega
+Drive / Genesis. Keeping all your Sega games under `(GPGX)` folders therefore
+scrapes correctly without renaming anything. Likewise the
+[Naomi and Atomiswave](../emulators/dreamcast.md#arcade-games-naomi-atomiswave)
+zips in the `DC` folder are matched as Arcade sets by their short zip name,
+the same way `FBN` games are.
+
 Inside a system folder the scanner sees exactly what the game list shows: every
 file that is not hidden counts as a game whatever its extension, sub-folders
 are searched too, and a multi-disc folder that holds a `.cue` or `.m3u` named
