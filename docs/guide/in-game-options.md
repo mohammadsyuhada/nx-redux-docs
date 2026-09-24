@@ -122,8 +122,9 @@ keeps the shortcut from clashing with the game's own controls.
 ## Achievements
 
 Appears only when [RetroAchievements](../apps/retroachievements.md) is
-enabled. It lists the running game's achievements, sorted by the **Achievement
-sort order** setting in RetroAchievements.
+enabled, with your progress (e.g. *12 / 40 unlocked*) next to it. It lists
+the running game's achievements, sorted by the **Achievement sort order**
+setting in RetroAchievements.
 
 - `A` — open an achievement's details.
 - `Y` — switch between showing all achievements and only locked ones.
