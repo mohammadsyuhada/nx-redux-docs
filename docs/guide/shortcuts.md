@@ -54,5 +54,6 @@ depend on the switch.
   back to the [Game Switcher](game-switcher.md) — the fastest way to hop
   between games.
 - Fast-forward, rewind and turbo get their own configurable shortcuts
-  (optionally `MENU`-modified) in
-  [Emulator Options](emulator-options.md), per emulator or per game.
+  (optionally `MENU`-modified) under the in-game menu's
+  [Options → Shortcuts](in-game-options.md#shortcuts), per emulator or per
+  game.

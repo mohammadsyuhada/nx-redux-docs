@@ -17,8 +17,9 @@ rest of the system.
 - **Continue** — return to the game.
 - **Save** / **Load** — save states, complete with screenshots so you can see
   what you're loading.
-- **Options** — [emulator options](emulator-options.md) for the running
-  game, applied live.
+- **Options** — [in-game options](in-game-options.md) for the running
+  game (Frontend, Core Options, Shaders, Cheats, Controls, Shortcuts,
+  Achievements and Save Changes), applied live.
 - **Quit** — exit back to the menu. Quitting auto-saves to a hidden slot, so
   the [Game Switcher](game-switcher.md) can always resume exactly where you
   left off.
