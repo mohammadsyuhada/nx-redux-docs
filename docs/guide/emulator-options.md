@@ -30,7 +30,9 @@ performance tweak without touching the rest of the library.
 ## In-game: the pause menu
 
 While playing, press `MENU` and choose **Options** to change settings
-live — Frontend (video/UI), Core Options, Shaders, Cheats and Controls:
+live — Frontend (video/UI), Core Options, Shaders, Cheats, Controls,
+Shortcuts and Achievements. Every entry except Core Options is covered in
+[In-game Options](in-game-options.md):
 
 ![In-game menu](../assets/screenshots/in-game-menu.png)
 
@@ -47,5 +49,7 @@ always show everything.
 - **Emulator Settings** writes the system-wide config for that emulator.
 - **Emulator Options** (context menu) writes a per-game config next to it —
   when present, the per-game file wins for that game.
-- **In-game changes** save to whichever config the game is currently
-  running on (per-game if it has one, system-wide otherwise).
+- **In-game changes** apply only to the current session until you use
+  **Options → [Save Changes](in-game-options.md#save-changes)**: **Save for
+  console** writes the system-wide config, **Save for game** writes the
+  per-game one.
