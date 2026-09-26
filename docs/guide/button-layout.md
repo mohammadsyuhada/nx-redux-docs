@@ -25,11 +25,15 @@ restart, so restart once and the whole device agrees.
 !!! note "Where the swap applies"
     The swap is a device-wide setting, not a per-emulator one. It covers the
     menus and every app, the in-game menu, all libretro cores (their button
-    remapping screens included), the standalone Nintendo DS, Nintendo 64 and
-    Dreamcast emulators together with their in-game overlays, PortMaster
-    ports, and the On-Screen Display. If a game's controls feel wrong after a
-    change, quit it and start it again — emulators read the layout when they
-    launch.
+    remapping screens included), the standalone Nintendo DS and Nintendo 64
+    emulators together with their in-game overlays, the Dreamcast in-game
+    overlay, PortMaster ports, and the On-Screen Display. If a game's
+    controls feel wrong after a change, quit it and start it again —
+    emulators read the layout when they launch.
+
+    Dreamcast games are the exception: their face buttons always map by
+    position (bottom is Dreamcast `A`) whichever layout you pick. See
+    [Dreamcast → Controls](../emulators/dreamcast.md#controls).
 
 ## Hint labels
 

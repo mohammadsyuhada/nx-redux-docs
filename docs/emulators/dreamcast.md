@@ -8,6 +8,28 @@ Naomi** and **Sammy Atomiswave** — from the same folder. See
 [Arcade games](#arcade-games-naomi-atomiswave) below: unlike Dreamcast
 itself, those need BIOS files.
 
+## Controls
+
+The face buttons map to the Dreamcast pad **by position**, the way the
+Dreamcast controller is laid out:
+
+| Device button | Dreamcast button |
+| --- | --- |
+| Bottom (`B` on the cap) | A |
+| Right (`A` on the cap) | B |
+| Left (`Y` on the cap) | X |
+| Top (`X` on the cap) | Y |
+
+Games that put the camera or movement on the face buttons (Unreal Tournament,
+for one) play as designed. The trade-off is that a "Press A" prompt means
+the bottom button, not the cap printed `A`. The mapping is the same under
+either [Button Layout](../guide/button-layout.md) — only the in-game menu's
+confirm and back follow that setting.
+
+The D-pad and left stick drive the Dreamcast D-pad and analog stick, and
+`L2`/`R2` are the analog triggers. On Naomi and Atomiswave games the same
+four buttons act as the cabinet's buttons, and **SELECT** inserts a coin.
+
 ## BIOS
 
 Dreamcast runs **out of the box without a BIOS** (HLE boot). If you prefer to
