@@ -160,6 +160,12 @@ entirely.
 A `map.txt` at the top level (`Roms/map.txt`) does the same for the
 **system folders** — an alternative to renaming the folders themselves.
 
+Arcade folders don't need a `map.txt` for readable names: games in an
+[Arcade (FBN)](../emulators/arcade.md#never-rename-the-zips) folder, and
+[Naomi/Atomiswave zips](../emulators/dreamcast.md#arcade-games-naomi-atomiswave)
+in the Dreamcast folder, show their full titles automatically and their
+BIOS zips are hidden. A `map.txt` alias still overrides those titles.
+
 ## Refreshing the ROMs list
 
 The system and ROM lists are **cached** for fast boots. The cache refreshes

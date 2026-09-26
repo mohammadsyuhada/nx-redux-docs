@@ -19,9 +19,14 @@ SD card.
 Naomi and Atomiswave games are MAME-style zips. Put them straight into
 `Roms/DreamCast (DC)/` next to your Dreamcast games and **don't rename
 them** — like [FBNeo arcade zips](arcade.md), the emulator identifies a
-game by its short zip name (`mslug6.zip`, not `Metal Slug 6.zip`). Use a
-[`map.txt`](../guide/main-menu.md#custom-display-names-maptxt) for readable
-names in the game list.
+game by its short zip name (`mslug6.zip`, not `Metal Slug 6.zip`). The game
+list still shows readable names: each zip gets its **full title** from
+Flycast's own game list (`ikaruga.zip` shows as *Ikaruga*, `mvsc2.zip` as
+*Marvel vs. Capcom 2 New Age of Heroes*), while Dreamcast disc images keep
+their filenames. A **Rename Rom** or
+[`map.txt`](../guide/main-menu.md#custom-display-names-maptxt) alias always
+wins over that title. A BIOS zip placed in the game folder by mistake is
+hidden from the list.
 
 Both boards **require their BIOS zip** in `Bios/DC/`:
 
