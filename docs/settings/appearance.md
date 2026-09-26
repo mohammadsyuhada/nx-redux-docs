@@ -156,7 +156,9 @@ Use the emulator's background image behind its game list.
 
 ## Bootlogo
 
-Change the device boot logo.
+Change the device boot logo. Scroll through the images with left/right and
+press `A` to apply one; the device reboots to show it. The NX Redux mark is
+the default logo, and the previous NextUI logo is still in the list.
 
 ## Reset to defaults
 

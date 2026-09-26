@@ -7,8 +7,9 @@ edit_uri: ""
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   icon:
-    logo: material/gamepad-variant
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: dark)"
