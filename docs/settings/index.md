@@ -7,7 +7,7 @@ place — each page of the Settings app is documented on its own page here.
 ![Settings](../assets/screenshots/settings.png)
 
 - [Display](display.md) — brightness and panel tuning
-- [Appearance](appearance.md) — colors, animations and what the menus show
+- [Appearance](appearance.md) — UI scale, colors, animations and what the menus show
 - [In-game Notifications](notifications.md) — save/load/screenshot toasts
 - [LED Control](led-control.md) — per-zone lighting effects
 - [Network](network.md) — Wi-Fi

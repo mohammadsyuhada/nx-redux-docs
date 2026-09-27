@@ -1,9 +1,30 @@
 # Appearance
 
-UI customization — colors (with live swatches), animations, and which
-entries the main menu shows.
+UI customization — UI scale, colors (with live swatches), animations, and
+which entries the main menu shows.
 
 ![Appearance settings](../assets/screenshots/set-appearance.png)
+
+## UI scale
+
+Size of text and menus across the whole UI. Choose **Default**, **1x** or
+**2x**. **2x** is larger and shows fewer rows, **1x** is smaller and shows
+more.
+
+- **Default** follows the device and shows which scale that is: **Default
+  (2x)** on the Brick, **Default (1x)** on the Brick Pro and Smart Pro S.
+- Settings redraws at the new scale straight away. The main menu, the other
+  tools and the in-game menus pick it up the next time they start, which for
+  the main menu is as soon as you leave Settings.
+- The Dreamcast and Nintendo 64 in-game menus use the same scale.
+
+*Default (2x) on the Brick*
+
+![Tools list at Default (2x)](../assets/screenshots/ui-scale-default.png)
+
+*1x on the Brick*
+
+![Tools list at 1x](../assets/screenshots/ui-scale-1x.png)
 
 ## Main color
 
