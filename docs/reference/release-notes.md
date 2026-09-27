@@ -90,7 +90,7 @@ Developer SSH toggle now shows the full login line with the device's IP.
   **Settings → Developer → Enable SSH** shows the exact login line with the
   device's current IP address and password, and the connected network in
   **Settings → Network** shows the same IP. See
-  [Developer → Enable SSH](../settings/developer.md#enable-ssh).
+  [Developer → Enable SSH](../settings/developer.md#enable-ssh-sftp).
 
 ### Fixes
 

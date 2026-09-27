@@ -17,7 +17,7 @@ place — each page of the Settings app is documented on its own page here.
 - [F1 / F2 Keys](fn-keys.md) — launch a chosen tool straight from the menu
 - [Simple Mode](simple-mode.md) — the PIN-protected simplified menu
 - [System](system.md) — timeouts, clock, saves, power
-- [Developer](developer.md) — SSH, sleep control, cleanup
+- [Developer](developer.md) — SSH/SFTP, sleep control, cleanup
 - [Input Tester](input-tester.md) — button test and joystick calibration
 - [About](about.md) — versions and the built-in updater
 

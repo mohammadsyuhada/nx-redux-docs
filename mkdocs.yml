@@ -68,6 +68,7 @@ nav:
       - Emulator Options: guide/emulator-options.md
       - On-Screen Display: guide/osd.md
       - Simple Mode: guide/simple-mode.md
+      - Accessing Your Files: guide/file-access.md
   - Apps & Tools:
       - Tools Overview: apps/tools.md
       - Artwork Manager: apps/artwork-manager.md

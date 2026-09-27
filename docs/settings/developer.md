@@ -12,19 +12,24 @@ Prevent deep sleep mode — useful for ADB debugging.
 
 Keep the screen on and block sleep while connected to a computer over USB.
 
-## Enable SSH
+## Enable SSH / SFTP
 
-Start or stop the SSH service. While it is running the hint shows the login
-line with the device's current IP address. The username is `root`. On Brick
-and Brick Pro the password is `tina`; Smart Pro S needs no password.
+Start or stop the SSH server, which also serves SFTP for file transfer. While
+it is running the hint shows the login with the device's current IP address.
+The username is `root`. On Brick and Brick Pro the password is `tina`; Smart
+Pro S needs no password.
 
 ```sh
 ssh root@192.168.1.8
+sftp root@192.168.1.8
 ```
 
-## Start SSH on boot
+To browse the SD card from a computer with an SFTP client such as FileZilla,
+see [Accessing Your Files](../guide/file-access.md).
 
-Automatically start SSH when the device boots.
+## Start SSH / SFTP on boot
+
+Automatically start SSH and SFTP when the device boots.
 
 ## Debug logging
 

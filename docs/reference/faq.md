@@ -52,9 +52,9 @@ root of your SD card and boot. Bundled emulator and tool paks update
 automatically either way. See
 [Getting Started](../getting-started.md#updating).
 
-## How do I connect to the device over SSH?
+## How do I connect to the device over SSH or SFTP?
 
-Turn on **Settings → Developer → Enable SSH** (or **Start SSH on boot**) with
+Turn on **Settings → Developer → Enable SSH / SFTP** (or **Start SSH / SFTP on boot**) with
 Wi-Fi connected. The hint under the toggle shows the exact login line with
 the device's current IP address; the connected network in
 **Settings → Network** shows the same IP. The username is `root`. On Brick
@@ -64,7 +64,10 @@ and Brick Pro the password is `tina`; Smart Pro S needs no password.
 ssh root@192.168.1.8
 ```
 
-See [Developer](../settings/developer.md#enable-ssh).
+The same login works for SFTP, so you can copy files with a client such as
+FileZilla; the SD card is at `/mnt/SDCARD`. See
+[Accessing Your Files](../guide/file-access.md) and
+[Developer](../settings/developer.md#enable-ssh-sftp).
 
 ## Can I use the Xbox button arrangement (confirm at the bottom)?
 
