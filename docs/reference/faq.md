@@ -4,7 +4,7 @@
 
 No. SD cards are built per device model — resolution, OSD assets and other
 layout differ between models. Use the
-[Device Sync](../apps/device-sync.md) tool to carry saves, save states,
+[Device Sync](../handheld/apps/device-sync.md) tool to carry saves, save states,
 settings and (optionally) ROMs across devices.
 
 ## Something doesn't work after installing
@@ -12,7 +12,7 @@ settings and (optionally) ROMs across devices.
 Check your stock firmware version first. NX Redux relies on system libraries
 the stock firmware ships — install the
 [official TrimUI firmware](https://github.com/trimui) listed in
-[Getting Started](../getting-started.md) for your device, then reinstall.
+[Getting Started](../handheld/getting-started.md) for your device, then reinstall.
 
 ## I forgot my Simple Mode PIN
 
@@ -23,7 +23,7 @@ computer) to turn Simple Mode off.
 
 Screenshots go to `Images/Screenshots`, screen recordings to
 `Videos/Recordings` on the SD card. See
-[On-Screen Display](../guide/osd.md).
+[On-Screen Display](../handheld/guide/osd.md).
 
 ## Where are my saves?
 
@@ -36,21 +36,21 @@ devices for you.
 By design. NX Redux is not an RA-approved hardcore emulator, so hardcore mode
 is intentionally omitted to keep your account safe — softcore unlocks work
 fully, including offline. See
-[RetroAchievements](../apps/retroachievements.md).
+[RetroAchievements](../handheld/apps/retroachievements.md).
 
 ## A community pak (e.g. PPSSPP) misbehaves — where do I report it?
 
 Not to the pak's developer — community paks are built for NextUI, not NX
 Redux, and their developers cannot help with NX Redux-specific behavior. See
-[Additional Emulators](../emulators/additional.md).
+[Additional Emulators](../handheld/emulators/additional.md).
 
 ## How do I update NX Redux?
 
-Use the OTA updater in [Settings → About](../settings/about.md) (needs
+Use the OTA updater in [Settings → About](../handheld/settings/about.md) (needs
 Wi-Fi), or copy the new release's `MinUI.zip` (without unzipping) to the
 root of your SD card and boot. Bundled emulator and tool paks update
 automatically either way. See
-[Getting Started](../getting-started.md#updating).
+[Getting Started](../handheld/getting-started.md#updating).
 
 ## How do I connect to the device over SSH or SFTP?
 
@@ -66,8 +66,8 @@ ssh root@192.168.1.8
 
 The same login works for SFTP, so you can copy files with a client such as
 FileZilla; the SD card is at `/mnt/SDCARD`. See
-[Accessing Your Files](../guide/file-access.md) and
-[Developer](../settings/developer.md#enable-ssh-sftp).
+[Accessing Your Files](../handheld/guide/file-access.md) and
+[Developer](../handheld/settings/developer.md#enable-ssh-sftp).
 
 ## Can I use the Xbox button arrangement (confirm at the bottom)?
 
@@ -75,12 +75,12 @@ Yes. **Settings → System → Button layout → Xbox** swaps `A`/`B` and `X`/`Y
 everywhere — menus, apps, every emulator and PortMaster. Restart once so the
 On-Screen Display follows too. The button hints can show either the letters
 printed on the caps or the buttons' roles; see
-[Button Layout](../guide/button-layout.md).
+[Button Layout](../handheld/guide/button-layout.md).
 
 ## Bluetooth is flaky, or I want the stock Bluetooth stack back
 
 A full release zip upgrades the device's Bluetooth stack on first boot (see
-[Bluetooth → Under the hood](../settings/bluetooth.md#under-the-hood)). If
+[Bluetooth → Under the hood](../handheld/settings/bluetooth.md#under-the-hood)). If
 Bluetooth misbehaves, first confirm that upgrade actually ran: it only
 happens when the `nextui.upgrade_bluez.*.pakz` file from the release zip
 is on the card at boot. Installing by copying only `MinUI.zip` onto an
@@ -97,9 +97,9 @@ the [official TrimUI firmware](https://github.com/trimui) for your device.
 The usual suspects, in order:
 
 1. **Missing BIOS** — some systems need BIOS files to run at all; check
-   the [Cores & BIOS Files](../emulators/cores.md) table for yours.
+   the [Cores & BIOS Files](../handheld/emulators/cores.md) table for yours.
 2. **Arcade games** — wrong romset version or missing BIOS/parent zip; see
-   the [Arcade page](../emulators/arcade.md).
+   the [Arcade page](../handheld/emulators/arcade.md).
 3. **The logs** — every emulator writes a log to
    `.userdata/<platform>/logs/<TAG>.txt` on the SD card (e.g.
    `.userdata/tg5040/logs/GBA.txt`). The last lines usually name the
