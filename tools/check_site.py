@@ -109,8 +109,21 @@ def check_landing():
     check((SITE / "assets" / "fonts" / "misans-semibold.woff2").exists(), "MiSans font file not published")
 
 
+HIGHLIGHT_LINKS = ["handheld/netplay/", "handheld/emulators/", "handheld/guide/game-switcher/",
+                   "handheld/apps/retroachievements/", "handheld/apps/device-sync/",
+                   "handheld/apps/music-player/"]
+
+
+def check_highlights():
+    html = (SITE / "index.html").read_text()
+    check(html.count('class="nx-highlight"') == 6, "landing should have 6 highlights")
+    for href in HIGHLIGHT_LINKS:
+        check(f'href="{href}"' in html, f"highlights lack a link to {href}")
+        check((SITE / href / "index.html").exists(), f"highlight target missing: {href}")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing]
+          check_no_platform_toggle, check_landing, check_highlights]
 
 
 def main():

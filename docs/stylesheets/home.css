@@ -154,32 +154,76 @@
 }
 
 /* Below the screen, the page follows the light or dark theme. */
-.nx-library {
+.nx-highlights {
   max-width: 61rem;
   margin: 0 auto;
-  padding: 1.6rem 1.2rem 2.4rem;
-  font-family: var(--md-text-font-family), sans-serif;
-  font-weight: 400;
+  padding: 2.2rem 1.2rem 2.8rem;
 }
 
-.nx-library p {
-  max-width: 36rem;
+.nx-highlights__title {
+  margin: 0 0 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: var(--md-default-fg-color);
+}
+
+.nx-highlights__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem 2rem;
   margin: 0;
-  font-size: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.nx-highlight {
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.nx-highlight h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.nx-highlight h3 a { color: var(--md-default-fg-color); }
+.nx-highlight h3 a:hover { color: var(--md-accent-fg-color); }
+
+.nx-highlight p {
+  margin: 0;
+  font-family: var(--md-text-font-family), sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
   line-height: 1.6;
   color: var(--md-default-fg-color--light);
 }
 
-.nx-library code {
-  font-family: var(--md-code-font-family), monospace;
-  font-size: 0.9em;
-  color: var(--md-default-fg-color);
+.nx-highlight .nx-highlight__platform {
+  margin-top: 0.5rem;
+  font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  color: var(--md-default-fg-color--lighter);
 }
 
-.nx-library a { color: var(--md-accent-fg-color); }
+.nx-highlight kbd {
+  padding: 0 0.3em;
+  border-radius: 0.2rem;
+  font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
+  font-size: 0.9em;
+  color: var(--md-default-fg-color);
+  background: var(--md-code-bg-color);
+}
 
-/* Material's cyan is too light for body links on white; cyan 800 passes AA. */
-[data-md-color-scheme="default"] .nx-library a { color: #00838f; }
+.nx-highlight h3 a:focus-visible {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.15rem;
+}
+
+@media screen and (max-width: 59.9375em) {
+  .nx-highlights__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
@@ -191,4 +235,5 @@
   .nx-menu a { font-size: 1.3rem; }
   .nx-devices { justify-content: center; }
   .nx-device svg { width: 7.5rem; }
+  .nx-highlights__list { grid-template-columns: 1fr; }
 }
