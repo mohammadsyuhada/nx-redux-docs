@@ -183,9 +183,18 @@ nav:
           - About: handheld/settings/about.md
   - Mobile:
       - Getting Started: mobile/getting-started.md
-      - Library & ROM folders: mobile/library.md
-      - Controls: mobile/controls.md
+      - User Guide:
+          - Library & ROM folders: mobile/library.md
+          - Controls: mobile/controls.md
+          - In-game Menu: mobile/in-game-menu.md
+          - Game Switcher: mobile/game-switcher.md
+      - Apps & Features:
+          - Cheats: mobile/cheats.md
+          - RetroAchievements: mobile/retroachievements.md
+          - Artwork: mobile/artwork.md
       - Emulators: mobile/emulators.md
+      - Settings:
+          - Appearance: mobile/appearance.md
   - Desktop:
       - Desktop App: desktop/index.md
   - Reference:

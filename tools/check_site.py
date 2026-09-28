@@ -85,6 +85,14 @@ def check_mobile_section():
     check(not (SITE / "_shared").exists(), "_shared fragments were published as pages")
 
 
+NEW_MOBILE_PAGES = ["in-game-menu", "game-switcher", "cheats", "retroachievements", "appearance", "artwork"]
+
+
+def check_new_mobile_pages():
+    for p in NEW_MOBILE_PAGES:
+        check((SITE / "mobile" / p / "index.html").exists(), f"mobile page not built: mobile/{p}/")
+
+
 def check_snippets_inlined():
     marker = "Collections/RPG Nights.txt"
     for page in ["handheld/guide/main-menu", "mobile/library"]:
@@ -186,7 +194,7 @@ def check_download_page():
     check('href="reference/download/"' in landing, "landing Download does not open the download page")
 
 
-CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
+CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_new_mobile_pages, check_snippets_inlined,
           check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs, check_download_page]
 
 
