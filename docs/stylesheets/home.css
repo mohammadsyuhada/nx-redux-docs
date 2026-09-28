@@ -96,8 +96,7 @@
   color: var(--nx-grey);
 }
 
-/* Devices: flat outlines so the screens do the talking. Both bodies are
-   73 units wide, so they read at the same physical size. */
+/* Devices: product renders on the black screen. */
 .nx-devices {
   display: flex;
   align-items: flex-end;
@@ -105,16 +104,35 @@
 }
 
 .nx-device { margin: 0; }
-.nx-device svg { display: block; width: 9.5rem; height: auto; }
+/* Product renders. The Brick Pro and the folded Z Fold 8 are about the same
+   size in hand (and their renders share almost the same proportions), so both
+   frames get one width. Each screen box is the screen's position in its
+   render, in percent. */
+.nx-device__frame { position: relative; width: 10.5rem; }
+.nx-device__photo { position: relative; display: block; width: 100%; height: auto; }
 
-.nx-device__body,
-.nx-device__controls {
-  fill: none;
-  stroke: var(--nx-outline);
-  stroke-width: 0.6;
+.nx-device__screen {
+  position: absolute;
+  display: grid;
+  background: #000;
 }
 
-.nx-device__camera { fill: var(--nx-outline); }
+.nx-device__screen .nx-slide {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Brick Pro: the screenshots sit on top of the render's screen. It is a
+   touch taller than 4:3, so screenshots fit its width and the thin bands
+   above and below stay black. */
+.nx-device--handheld .nx-device__screen { left: 2.765%; top: 1.089%; width: 94.355%; height: 50%; }
+.nx-device--handheld .nx-slide { object-fit: contain; }
+
+/* Z Fold 8: the render's screen is cut out, so the capture shows through
+   from behind and the real bezel, corners and camera stay on top. */
+.nx-device--mobile .nx-device__screen { left: 6.383%; top: 3.286%; width: 88.191%; height: 93.5%; }
+.nx-device--mobile .nx-slide { object-fit: cover; }
 
 .nx-device figcaption {
   margin-top: 0.5rem;
@@ -278,7 +296,7 @@
   .nx-screen__body { grid-template-columns: 1fr; gap: 2.2rem; }
   .nx-menu a { font-size: 1.3rem; }
   .nx-devices { justify-content: center; }
-  .nx-device svg { width: 7.5rem; }
+  .nx-device__frame { width: 7.4rem; }
   .nx-features__body { grid-template-columns: 1fr; gap: 1.6rem; }
   .nx-list button { font-size: 1.05rem; }
 }

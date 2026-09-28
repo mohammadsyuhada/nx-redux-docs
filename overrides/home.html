@@ -28,37 +28,27 @@
 
           <div class="nx-devices">
             <figure class="nx-device nx-device--handheld">
-              <svg viewBox="0 0 73 113" role="img" aria-label="NX Redux running on a TrimUI Brick Pro">
-                <defs><clipPath id="nx-brick-screen"><rect x="7" y="7" width="59" height="44.25" rx="1.5"/></clipPath></defs>
-                <rect class="nx-device__body" x="0.75" y="0.75" width="71.5" height="111.5" rx="6"/>
-                <g clip-path="url(#nx-brick-screen)">
-                  <image class="nx-slide is-active" href="{{ 'assets/screenshots/main-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-                  <image class="nx-slide" href="{{ 'assets/screenshots/game-list.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-                  <image class="nx-slide" href="{{ 'assets/screenshots/in-game.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-                  <image class="nx-slide" href="{{ 'assets/screenshots/context-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-                </g>
-                <g class="nx-device__controls">
-                  <path d="M15 69h6v6.5h6.5v6h-6.5v6.5h-6v-6.5h-6.5v-6h6.5z"/>
-                  <circle cx="56" cy="71" r="3.2"/>
-                  <circle cx="63" cy="78.5" r="3.2"/>
-                  <circle cx="56" cy="86" r="3.2"/>
-                  <circle cx="49" cy="78.5" r="3.2"/>
-                  <rect x="26" y="101" width="8" height="2.6" rx="1.3"/>
-                  <rect x="39" y="101" width="8" height="2.6" rx="1.3"/>
-                </g>
-              </svg>
+              <div class="nx-device__frame">
+                <img class="nx-device__photo" src="{{ 'assets/landing/handheld/brick-pro.webp' | url }}"
+                     alt="TrimUI Brick Pro running NX Redux" width="640" height="948">
+                <div class="nx-device__screen" aria-hidden="true">
+                  <img class="nx-slide is-active" src="{{ 'assets/screenshots/main-menu.png' | url }}" alt="">
+                  <img class="nx-slide" src="{{ 'assets/screenshots/game-list.png' | url }}" alt="" loading="lazy">
+                  <img class="nx-slide" src="{{ 'assets/screenshots/in-game.png' | url }}" alt="" loading="lazy">
+                  <img class="nx-slide" src="{{ 'assets/screenshots/context-menu.png' | url }}" alt="" loading="lazy">
+                </div>
+              </div>
               <figcaption>TrimUI Brick Pro</figcaption>
             </figure>
 
             <figure class="nx-device nx-device--mobile">
-              <svg viewBox="0 0 73 158" role="img" aria-label="NX Redux Mobile on a folded Galaxy Z Fold 8 cover screen">
-                <defs><clipPath id="nx-phone-screen"><rect x="3" y="3" width="67" height="152" rx="7"/></clipPath></defs>
-                <rect class="nx-device__body" x="0.75" y="0.75" width="71.5" height="156.5" rx="9"/>
-                <g clip-path="url(#nx-phone-screen)">
-                  <image class="nx-slide is-active" href="{{ 'assets/landing/mobile/placeholder.svg' | url }}" x="3" y="3" width="67" height="152" preserveAspectRatio="xMidYMid slice"/>
-                </g>
-                <circle class="nx-device__camera" cx="36.5" cy="7.5" r="1.5"/>
-              </svg>
+              <div class="nx-device__frame">
+                <div class="nx-device__screen" aria-hidden="true">
+                  <img class="nx-slide is-active" src="{{ 'assets/landing/mobile/main-menu.webp' | url }}" alt="">
+                </div>
+                <img class="nx-device__photo" src="{{ 'assets/landing/mobile/zfold8.webp' | url }}"
+                     alt="Galaxy Z Fold 8, folded, running NX Redux Mobile on its cover screen" width="537" height="800">
+              </div>
               <figcaption>Galaxy Z Fold 8, folded</figcaption>
             </figure>
           </div>
