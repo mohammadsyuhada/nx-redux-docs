@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+
+{#- The 404 page, styled as an NX Redux dialog: black screen, a grey screen
+    title, centred message and button hints that act as the buttons. -#}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="preload" href="{{ 'assets/fonts/misans-semibold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ 'stylesheets/home.css' | url }}">
+{% endblock %}
+
+{% block tabs %}
+  {{ super() }}
+  <div class="nx-home">
+    <section class="nx-screen nx-error" aria-labelledby="nx-error-title">
+      <div class="nx-screen__inner nx-error__inner">
+        <div class="nx-error__message">
+          <p class="nx-error__label">404</p>
+          <h1 id="nx-error-title">No cartridge detected.</h1>
+          <p>This page isn't in the slot. Try blowing on it, or head back home.</p>
+          <nav class="nx-hints nx-error__hints" aria-label="What to do next">
+            <a class="nx-hint" id="nx-error-home" href="{{ 'index.html' | url }}"><span class="nx-hint__button" aria-hidden="true">A</span>Home</a>
+            <a class="nx-hint" id="nx-error-back" href="{{ 'index.html' | url }}"><span class="nx-hint__button" aria-hidden="true">B</span>Back</a>
+            <label class="nx-hint" for="__search" id="nx-error-search"><span class="nx-hint__button" aria-hidden="true">Y</span>Search</label>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    // As on the device: A goes home, B goes back, Y opens search.
+    (function () {
+      var home = document.getElementById("nx-error-home");
+      var back = document.getElementById("nx-error-back");
+      var search = document.getElementById("nx-error-search");
+      function goBack(e) {
+        if (history.length > 1 && document.referrer) {
+          if (e) e.preventDefault();
+          history.back();
+        }
+      }
+      back.addEventListener("click", goBack);
+      document.addEventListener("keydown", function (e) {
+        var t = e.target;
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+        var key = e.key.toLowerCase();
+        if (key === "a") { e.preventDefault(); location.href = home.href; }
+        else if (key === "b") { e.preventDefault(); if (history.length > 1 && document.referrer) history.back(); else location.href = home.href; }
+        else if (key === "y") { e.preventDefault(); search.click(); }
+      });
+    })();
+  </script>
+{% endblock %}

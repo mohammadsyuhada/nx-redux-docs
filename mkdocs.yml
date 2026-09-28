@@ -7,6 +7,7 @@ edit_uri: ""
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   icon:
@@ -15,14 +16,14 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: deep orange
+      accent: cyan
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
-      accent: deep orange
+      accent: cyan
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -38,6 +39,65 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        reference/faq.md: reference/faq/handheld.md
+        reference/release-notes.md: reference/release-notes/handheld.md
+        handheld/index.md: handheld/getting-started.md
+        mobile/index.md: mobile/getting-started.md
+        getting-started.md: handheld/getting-started.md
+        guide/main-menu.md: handheld/guide/main-menu.md
+        guide/game-switcher.md: handheld/guide/game-switcher.md
+        guide/context-menu.md: handheld/guide/context-menu.md
+        guide/five-game-menu.md: handheld/guide/five-game-menu.md
+        guide/playing-games.md: handheld/guide/playing-games.md
+        guide/in-game-options.md: handheld/guide/in-game-options.md
+        guide/shortcuts.md: handheld/guide/shortcuts.md
+        guide/button-layout.md: handheld/guide/button-layout.md
+        guide/emulator-options.md: handheld/guide/emulator-options.md
+        guide/osd.md: handheld/guide/osd.md
+        guide/simple-mode.md: handheld/guide/simple-mode.md
+        guide/file-access.md: handheld/guide/file-access.md
+        apps/tools.md: handheld/apps/tools.md
+        apps/artwork-manager.md: handheld/apps/artwork-manager.md
+        apps/cheats.md: handheld/apps/cheats.md
+        apps/device-sync.md: handheld/apps/device-sync.md
+        apps/emulator-settings.md: handheld/apps/emulator-settings.md
+        apps/files.md: handheld/apps/files.md
+        apps/game-tracker.md: handheld/apps/game-tracker.md
+        apps/image-viewer.md: handheld/apps/image-viewer.md
+        apps/media-player.md: handheld/apps/media-player.md
+        apps/music-player.md: handheld/apps/music-player.md
+        apps/portmaster.md: handheld/apps/portmaster.md
+        apps/retroachievements.md: handheld/apps/retroachievements.md
+        apps/xtras.md: handheld/apps/xtras.md
+        emulators/index.md: handheld/emulators/index.md
+        emulators/cores.md: handheld/emulators/cores.md
+        emulators/rom-formats.md: handheld/emulators/rom-formats.md
+        emulators/arcade.md: handheld/emulators/arcade.md
+        emulators/nintendo-64.md: handheld/emulators/nintendo-64.md
+        emulators/dreamcast.md: handheld/emulators/dreamcast.md
+        emulators/nintendo-ds.md: handheld/emulators/nintendo-ds.md
+        emulators/additional.md: handheld/emulators/additional.md
+        netplay.md: handheld/netplay.md
+        settings/index.md: handheld/settings/index.md
+        settings/display.md: handheld/settings/display.md
+        settings/appearance.md: handheld/settings/appearance.md
+        settings/notifications.md: handheld/settings/notifications.md
+        settings/led-control.md: handheld/settings/led-control.md
+        settings/network.md: handheld/settings/network.md
+        settings/bluetooth.md: handheld/settings/bluetooth.md
+        settings/audio.md: handheld/settings/audio.md
+        settings/fn-switch.md: handheld/settings/fn-switch.md
+        settings/fn-keys.md: handheld/settings/fn-keys.md
+        settings/simple-mode.md: handheld/settings/simple-mode.md
+        settings/system.md: handheld/settings/system.md
+        settings/developer.md: handheld/settings/developer.md
+        settings/input-tester.md: handheld/settings/input-tester.md
+        settings/about.md: handheld/settings/about.md
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -49,68 +109,101 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: [docs/_shared]
+      check_paths: true
   - toc:
       permalink: true
 
+not_in_nav: |
+  /index.md
+
+exclude_docs: |
+  _shared/
+
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Desktop App: desktop.md
-  - User Guide:
-      - Main Menu & Game Lists: guide/main-menu.md
-      - Game Switcher: guide/game-switcher.md
-      - Game Context Menu: guide/context-menu.md
-      - Five-Game Menu: guide/five-game-menu.md
-      - Playing Games: guide/playing-games.md
-      - In-game Options: guide/in-game-options.md
-      - Buttons & Shortcuts: guide/shortcuts.md
-      - Button Layout: guide/button-layout.md
-      - Emulator Options: guide/emulator-options.md
-      - On-Screen Display: guide/osd.md
-      - Simple Mode: guide/simple-mode.md
-      - Accessing Your Files: guide/file-access.md
-  - Apps & Tools:
-      - Tools Overview: apps/tools.md
-      - Artwork Manager: apps/artwork-manager.md
-      - Cheats: apps/cheats.md
-      - Device Sync: apps/device-sync.md
-      - Emulator Settings: apps/emulator-settings.md
-      - Files: apps/files.md
-      - Game Tracker: apps/game-tracker.md
-      - Image Viewer: apps/image-viewer.md
-      - Media Player: apps/media-player.md
-      - Music Player: apps/music-player.md
-      - PortMaster: apps/portmaster.md
-      - RetroAchievements: apps/retroachievements.md
-      - Xtras Store: apps/xtras.md
-  - Emulators:
-      - Bundled Emulators: emulators/index.md
-      - Cores & BIOS Files: emulators/cores.md
-      - ROM File Formats: emulators/rom-formats.md
-      - Arcade (FBNeo): emulators/arcade.md
-      - Nintendo 64: emulators/nintendo-64.md
-      - Sega Dreamcast: emulators/dreamcast.md
-      - Nintendo DS: emulators/nintendo-ds.md
-      - Additional Emulators: emulators/additional.md
-  - Netplay: netplay.md
-  - Settings:
-      - Overview: settings/index.md
-      - Display: settings/display.md
-      - Appearance: settings/appearance.md
-      - In-game Notifications: settings/notifications.md
-      - LED Control: settings/led-control.md
-      - Network: settings/network.md
-      - Bluetooth: settings/bluetooth.md
-      - Audio: settings/audio.md
-      - FN Switch: settings/fn-switch.md
-      - F1 / F2 Keys: settings/fn-keys.md
-      - Simple Mode: settings/simple-mode.md
-      - System: settings/system.md
-      - Developer: settings/developer.md
-      - Input Tester: settings/input-tester.md
-      - About: settings/about.md
+  - Overview:
+      - About NX Redux: about.md
+  - Handheld:
+      - Getting Started: handheld/getting-started.md
+      - User Guide:
+          - Main Menu & Game Lists: handheld/guide/main-menu.md
+          - Game Switcher: handheld/guide/game-switcher.md
+          - Game Context Menu: handheld/guide/context-menu.md
+          - Five-Game Menu: handheld/guide/five-game-menu.md
+          - Playing Games: handheld/guide/playing-games.md
+          - In-game Options: handheld/guide/in-game-options.md
+          - Buttons & Shortcuts: handheld/guide/shortcuts.md
+          - Button Layout: handheld/guide/button-layout.md
+          - Emulator Options: handheld/guide/emulator-options.md
+          - On-Screen Display: handheld/guide/osd.md
+          - Simple Mode: handheld/guide/simple-mode.md
+          - Accessing Your Files: handheld/guide/file-access.md
+      - Apps & Tools:
+          - Tools Overview: handheld/apps/tools.md
+          - Artwork Manager: handheld/apps/artwork-manager.md
+          - Cheats: handheld/apps/cheats.md
+          - Device Sync: handheld/apps/device-sync.md
+          - Emulator Settings: handheld/apps/emulator-settings.md
+          - Files: handheld/apps/files.md
+          - Game Tracker: handheld/apps/game-tracker.md
+          - Image Viewer: handheld/apps/image-viewer.md
+          - Media Player: handheld/apps/media-player.md
+          - Music Player: handheld/apps/music-player.md
+          - PortMaster: handheld/apps/portmaster.md
+          - RetroAchievements: handheld/apps/retroachievements.md
+          - Xtras Store: handheld/apps/xtras.md
+      - Emulators:
+          - Bundled Emulators: handheld/emulators/index.md
+          - Cores & BIOS Files: handheld/emulators/cores.md
+          - ROM File Formats: handheld/emulators/rom-formats.md
+          - Arcade (FBNeo): handheld/emulators/arcade.md
+          - Game Boy Advance: handheld/emulators/game-boy-advance.md
+          - Nintendo 64: handheld/emulators/nintendo-64.md
+          - Sega Dreamcast: handheld/emulators/dreamcast.md
+          - Nintendo DS: handheld/emulators/nintendo-ds.md
+          - Super Nintendo: handheld/emulators/super-nintendo.md
+          - Additional Emulators: handheld/emulators/additional.md
+      - Netplay: handheld/netplay.md
+      - Settings:
+          - Overview: handheld/settings/index.md
+          - Display: handheld/settings/display.md
+          - Appearance: handheld/settings/appearance.md
+          - In-game Notifications: handheld/settings/notifications.md
+          - LED Control: handheld/settings/led-control.md
+          - Network: handheld/settings/network.md
+          - Bluetooth: handheld/settings/bluetooth.md
+          - Audio: handheld/settings/audio.md
+          - FN Switch: handheld/settings/fn-switch.md
+          - F1 / F2 Keys: handheld/settings/fn-keys.md
+          - Simple Mode: handheld/settings/simple-mode.md
+          - System: handheld/settings/system.md
+          - Developer: handheld/settings/developer.md
+          - Input Tester: handheld/settings/input-tester.md
+          - About: handheld/settings/about.md
+  - Mobile:
+      - Getting Started: mobile/getting-started.md
+      - User Guide:
+          - Library & ROM folders: mobile/library.md
+          - Controls: mobile/controls.md
+          - In-game Menu: mobile/in-game-menu.md
+          - Game Switcher: mobile/game-switcher.md
+      - Apps & Features:
+          - Cheats: mobile/cheats.md
+          - RetroAchievements: mobile/retroachievements.md
+          - Artwork: mobile/artwork.md
+      - Emulators: mobile/emulators.md
+      - Settings:
+          - Appearance: mobile/appearance.md
+  - Desktop:
+      - Desktop App: desktop/index.md
   - Reference:
-      - Release Notes: reference/release-notes.md
-      - FAQ: reference/faq.md
+      - Download: reference/download.md
+      - Release Notes:
+          - Handheld: reference/release-notes/handheld.md
+          - Mobile: reference/release-notes/mobile.md
+      - FAQ:
+          - Handheld: reference/faq/handheld.md
+          - Mobile: reference/faq/mobile.md
       - Credits: reference/credits.md
       - Disclaimer: reference/disclaimer.md
