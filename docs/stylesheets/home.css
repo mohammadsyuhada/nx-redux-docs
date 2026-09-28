@@ -346,8 +346,8 @@
   min-height: calc(100vh - 6rem);
 }
 
-.nx-error__label {
-  margin: 0;
+.nx-error__message .nx-error__label {
+  margin: 0 0 0.5rem;
   font-size: 0.9rem;
   color: var(--nx-grey);
 }
