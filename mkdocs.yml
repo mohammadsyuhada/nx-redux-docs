@@ -189,6 +189,7 @@ nav:
   - Desktop:
       - Desktop App: desktop/index.md
   - Reference:
+      - Download: reference/download.md
       - Release Notes:
           - Handheld: reference/release-notes/handheld.md
           - Mobile: reference/release-notes/mobile.md

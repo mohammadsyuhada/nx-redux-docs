@@ -178,8 +178,16 @@ def check_faqs():
     check("handheld/" in old and "location.hash" in old, "old FAQ URL does not redirect with its anchor")
 
 
+def check_download_page():
+    html = (SITE / "reference" / "download" / "index.html").read_text()
+    check(html.count("https://github.com/mohammadsyuhada/nx-redux/releases") >= 2, "download page lacks the GitHub links")
+    check('aria-disabled="true"' in html and "Google Play" in html, "Google Play badge is not shown as disabled")
+    landing = (SITE / "index.html").read_text()
+    check('href="reference/download/"' in landing, "landing Download does not open the download page")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs, check_download_page]
 
 
 def main():
