@@ -72,40 +72,58 @@
       </div>
     </section>
 
-    <section class="nx-highlights" aria-labelledby="nx-highlights-title">
-      <h2 id="nx-highlights-title" class="nx-highlights__title">What you get</h2>
-      <ul class="nx-highlights__list">
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/netplay/' | url }}">Netplay with one button</a></h3>
-          <p>Press <kbd>Y</kbd> on a supported game to host or join over Wi-Fi or a hotspot. No IP addresses, and saves sync before the match.</p>
-          <p class="nx-highlight__platform">Handheld now, Mobile later</p>
-        </li>
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/emulators/' | url }}">Emulators included</a></h3>
-          <p>Nintendo 64, Nintendo DS and Dreamcast run on bundled standalone emulators, so there is nothing extra to download. The mobile app bundles every core.</p>
-          <p class="nx-highlight__platform">Handheld and Mobile</p>
-        </li>
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/guide/game-switcher/' | url }}">Resume any game</a></h3>
-          <p>Quitting saves to a hidden slot. Press <kbd>SELECT</kbd> for the Game Switcher and carry on exactly where you left off.</p>
-          <p class="nx-highlight__platform">Handheld</p>
-        </li>
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/apps/retroachievements/' | url }}">Achievements, even offline</a></h3>
-          <p>Earn RetroAchievements without a connection and sync them later.</p>
-          <p class="nx-highlight__platform">Handheld and Mobile</p>
-        </li>
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/apps/device-sync/' | url }}">Sync your devices</a></h3>
-          <p>Add games on one device, then sync over Wi-Fi. Saves, states and, if you like, ROMs arrive on the other.</p>
-          <p class="nx-highlight__platform">Handheld now, Mobile later</p>
-        </li>
-        <li class="nx-highlight">
-          <h3><a href="{{ 'handheld/apps/music-player/' | url }}">Music and videos</a></h3>
-          <p>Built-in music and media players, with sound through the speaker, Bluetooth or a USB-C DAC.</p>
-          <p class="nx-highlight__platform">Handheld</p>
-        </li>
-      </ul>
+    {% set features = [
+      {"title": "Netplay with one button", "href": "handheld/netplay/", "shot": "assets/screenshots/netplay.png",
+       "text": "Press <kbd>Y</kbd> on a supported game to host or join over Wi-Fi or a hotspot. No IP addresses, and saves sync before the match.",
+       "platform": "Handheld now, Mobile later"},
+      {"title": "Emulators included", "href": "handheld/emulators/", "shot": "assets/screenshots/in-game.png",
+       "text": "Nintendo 64, Nintendo DS and Dreamcast run on bundled standalone emulators, so there is nothing extra to download. The mobile app bundles every core.",
+       "platform": "Handheld and Mobile"},
+      {"title": "Resume any game", "href": "handheld/guide/game-switcher/", "shot": "assets/screenshots/game-switcher.png",
+       "text": "Quitting saves to a hidden slot. Press <kbd>SELECT</kbd> for the Game Switcher and carry on exactly where you left off.",
+       "platform": "Handheld"},
+      {"title": "Achievements, even offline", "href": "handheld/apps/retroachievements/", "shot": "assets/screenshots/retroachievements.png",
+       "text": "Earn RetroAchievements without a connection and sync them later.",
+       "platform": "Handheld and Mobile"},
+      {"title": "Sync your devices", "href": "handheld/apps/device-sync/", "shot": "assets/screenshots/device-sync.png",
+       "text": "Add games on one device, then sync over Wi-Fi. Saves, states and, if you like, ROMs arrive on the other.",
+       "platform": "Handheld now, Mobile later"},
+      {"title": "Music and videos", "href": "handheld/apps/music-player/", "shot": "assets/screenshots/music-player.png",
+       "text": "Built-in music and media players, with sound through the speaker, Bluetooth or a USB-C DAC.",
+       "platform": "Handheld"},
+    ] %}
+    <section class="nx-screen nx-features" aria-labelledby="nx-features-title">
+      <div class="nx-screen__inner">
+        <h2 id="nx-features-title" class="nx-features__title">What you get</h2>
+
+        <div class="nx-features__body">
+          <ul class="nx-list">
+            {% for f in features %}
+            <li class="nx-feature">
+              <a href="{{ f.href | url }}"{% if loop.first %} class="is-selected"{% endif %}>{{ f.title }}</a>
+              <div class="nx-feature__detail">
+                <p>{{ f.text }}</p>
+                <p class="nx-feature__platform">{{ f.platform }}</p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <div class="nx-features__preview" aria-hidden="true">
+            {% for f in features %}
+            <div class="nx-features__pane{% if loop.first %} is-active{% endif %}">
+              <img class="nx-features__shot" src="{{ f.shot | url }}" alt="" width="1024" height="768" loading="lazy">
+              <p>{{ f.text }}</p>
+              <p class="nx-feature__platform">{{ f.platform }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <nav class="nx-hints nx-features__hints" aria-label="Selected feature">
+          <a class="nx-hint" id="nx-feature-more" href="{{ features[0].href | url }}"><span class="nx-hint__button" aria-hidden="true">A</span>Read more</a>
+        </nav>
+      </div>
     </section>
   </div>
 {% endblock %}
@@ -126,6 +144,32 @@
           i = (i + 1) % slides.length;
           slides[i].classList.add("is-active");
         }, 3500);
+      });
+    })();
+
+    // Features: the pill follows hover and focus, the preview shows the
+    // selected feature, and READ MORE opens its page. UP/DOWN move the
+    // selection as on the device.
+    (function () {
+      var list = document.querySelector(".nx-list");
+      if (!list) return;
+      var rows = Array.prototype.slice.call(list.querySelectorAll("a"));
+      var panes = document.querySelectorAll(".nx-features__pane");
+      var more = document.getElementById("nx-feature-more");
+      function select(i) {
+        rows.forEach(function (r, j) { r.classList.toggle("is-selected", j === i); });
+        Array.prototype.forEach.call(panes, function (p, j) { p.classList.toggle("is-active", j === i); });
+        more.href = rows[i].href;
+      }
+      rows.forEach(function (row, i) {
+        row.addEventListener("mouseenter", function () { select(i); });
+        row.addEventListener("focus", function () { select(i); });
+        row.addEventListener("keydown", function (e) {
+          var next = e.key === "ArrowDown" ? i + 1 : e.key === "ArrowUp" ? i - 1 : -1;
+          if (next < 0 || next >= rows.length) return;
+          e.preventDefault();
+          rows[next].focus();
+        });
       });
     })();
   </script>

@@ -116,10 +116,14 @@ HIGHLIGHT_LINKS = ["handheld/netplay/", "handheld/emulators/", "handheld/guide/g
 
 def check_highlights():
     html = (SITE / "index.html").read_text()
-    check(html.count('class="nx-highlight"') == 6, "landing should have 6 highlights")
+    check(html.count('class="nx-feature"') == 6, "landing should list 6 features")
+    check(html.count('class="nx-features__pane') == 6, "each feature needs a preview pane")
     for href in HIGHLIGHT_LINKS:
-        check(f'href="{href}"' in html, f"highlights lack a link to {href}")
-        check((SITE / href / "index.html").exists(), f"highlight target missing: {href}")
+        check(f'href="{href}"' in html, f"features lack a link to {href}")
+        check((SITE / href / "index.html").exists(), f"feature target missing: {href}")
+    for src in re.findall(r'class="nx-features__shot"[^>]*src="([^"]+)"', html):
+        check((SITE / src).exists(), f"feature screenshot missing: {src}")
+    check('id="nx-feature-more"' in html, "features lack the READ MORE hint")
 
 
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,

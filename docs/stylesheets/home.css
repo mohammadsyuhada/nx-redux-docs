@@ -15,6 +15,7 @@
   --nx-black: #000;
   --nx-white: #fff;
   --nx-grey: #8c8c8c;
+  --nx-soft: #c8c8c8;
   --nx-outline: #3a3a3a;
   font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
   font-weight: 600;
@@ -153,81 +154,122 @@
   font-size: 0.85em;
 }
 
-/* Below the screen, the page follows the light or dark theme. */
-.nx-highlights {
-  max-width: 61rem;
-  margin: 0 auto;
-  padding: 2.2rem 1.2rem 2.8rem;
-}
+/* Features: a second screen laid out like the NX Redux game list. The list
+   sits on the left; the selected row's screenshot and text show on the right,
+   the way a game's artwork does on the device. */
+.nx-features { border-top: 1px solid var(--nx-outline); }
 
-.nx-highlights__title {
-  margin: 0 0 1.2rem;
-  font-size: 1.2rem;
+.nx-features__title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
   line-height: 1.3;
-  color: var(--md-default-fg-color);
+  color: var(--nx-grey);
 }
 
-.nx-highlights__list {
+.nx-features__body {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+  align-items: start;
+  gap: 2.4rem;
+  padding: 1.2rem 0 2rem;
+}
+
+.nx-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nx-highlight {
-  padding-top: 0.8rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
+.nx-feature { margin: 0; }
+
+.nx-list a {
+  display: inline-block;
+  margin-left: -0.55em;
+  padding: 0.18em 0.55em;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--nx-white);
+  transition: background-color 120ms ease, color 120ms ease;
 }
 
-.nx-highlight h3 {
-  margin: 0 0 0.4rem;
-  font-size: 0.9rem;
-  line-height: 1.3;
+.nx-list:not(:hover) a.is-selected,
+.nx-list a:hover {
+  background: var(--nx-white);
+  color: var(--nx-black);
 }
 
-.nx-highlight h3 a { color: var(--md-default-fg-color); }
-.nx-highlight h3 a:hover { color: var(--md-accent-fg-color); }
-
-.nx-highlight p {
-  margin: 0;
-  font-family: var(--md-text-font-family), sans-serif;
-  font-weight: 400;
-  font-size: 0.7rem;
-  line-height: 1.6;
-  color: var(--md-default-fg-color--light);
-}
-
-.nx-highlight .nx-highlight__platform {
-  margin-top: 0.5rem;
-  font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
-  font-weight: 600;
-  font-size: 0.6rem;
-  color: var(--md-default-fg-color--lighter);
-}
-
-.nx-highlight kbd {
-  padding: 0 0.3em;
-  border-radius: 0.2rem;
-  font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
-  font-size: 0.9em;
-  color: var(--md-default-fg-color);
-  background: var(--md-code-bg-color);
-}
-
-.nx-highlight h3 a:focus-visible {
+.nx-list a:focus-visible {
   outline: 0.1rem solid var(--md-accent-fg-color);
   outline-offset: 0.15rem;
 }
 
-@media screen and (max-width: 59.9375em) {
-  .nx-highlights__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* On wide screens the preview carries the text; the per-row copy stays for
+   screen readers only. */
+.nx-feature__detail {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.nx-features__preview { display: grid; }
+
+/* Panes swap at once; only the incoming screenshot fades in, so two
+   descriptions never overlap mid-transition. */
+.nx-features__pane { grid-area: 1 / 1; visibility: hidden; }
+.nx-features__pane.is-active { visibility: visible; }
+.nx-features__pane.is-active .nx-features__shot { animation: nx-shot-in 180ms ease; }
+
+@keyframes nx-shot-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nx-features__shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+  outline: 1px solid var(--nx-outline);
+}
+
+.nx-features__pane p,
+.nx-feature__detail p {
+  max-width: 26rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: var(--nx-soft);
+}
+
+.nx-features__pane .nx-feature__platform,
+.nx-feature__detail .nx-feature__platform {
+  margin-top: 0.4rem;
+  font-size: 0.6rem;
+  color: var(--nx-grey);
+}
+
+.nx-features kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.4em;
+  padding: 0 0.35em;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.85em;
+  background: var(--nx-white);
+  color: var(--nx-black);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
-  .nx-menu a { transition: none; }
+  .nx-menu a,
+  .nx-list a { transition: none; }
+  .nx-features__pane.is-active .nx-features__shot { animation: none; }
 }
 
 @media screen and (max-width: 44.9375em) {
@@ -235,5 +277,19 @@
   .nx-menu a { font-size: 1.3rem; }
   .nx-devices { justify-content: center; }
   .nx-device svg { width: 7.5rem; }
-  .nx-highlights__list { grid-template-columns: 1fr; }
+  .nx-features__body { grid-template-columns: 1fr; gap: 0; }
+  .nx-features__preview,
+  .nx-features__hints { display: none; }
+  .nx-feature + .nx-feature { margin-top: 1rem; }
+  .nx-list a { font-size: 1.05rem; }
+  .nx-list:not(:hover) a.is-selected { background: none; color: var(--nx-white); }
+  .nx-feature__detail {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  .nx-feature__detail p { margin-top: 0.3rem; }
 }
