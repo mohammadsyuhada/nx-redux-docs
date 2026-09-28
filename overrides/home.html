@@ -1,5 +1,9 @@
 {% extends "main.html" %}
 
+{% block htmltitle %}
+  <title>{{ config.site_name }}</title>
+{% endblock %}
+
 {% block styles %}
   {{ super() }}
   <link rel="preload" href="{{ 'assets/fonts/misans-semibold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
