@@ -338,6 +338,50 @@
   color: var(--nx-black);
 }
 
+/* 404: an NX Redux dialog. The screen fills the window below the header,
+   with the message and its button hints centred. */
+.nx-error__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6rem);
+}
+
+.nx-error__label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--nx-grey);
+}
+
+.nx-error__message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.nx-error__message h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--nx-white);
+}
+
+.nx-error__message p {
+  max-width: 30rem;
+  text-wrap: balance;
+  margin: 0.8rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--nx-soft);
+}
+
+.nx-error__hints { justify-content: center; margin-top: 1.8rem; }
+.nx-error__hints label { cursor: pointer; }
+
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
   .nx-slide.is-active,

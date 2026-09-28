@@ -132,8 +132,16 @@ def check_highlights():
     check(html.count('class="nx-features__link"') == len(HIGHLIGHT_LINKS), "each feature description needs its docs link")
 
 
+def check_not_found():
+    html = (SITE / "404.html").read_text()
+    check('class="nx-screen nx-error"' in html, "404 page is not the NX Redux error screen")
+    check("No cartridge detected." in html, "404 page lacks its message")
+    check('id="nx-error-home"' in html and 'id="nx-error-back"' in html, "404 page lacks Home and Back")
+    check('for="__search"' in html, "404 page lacks the search hint")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found]
 
 
 def main():
