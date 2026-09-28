@@ -2,6 +2,7 @@
 
 Run after `mkdocs build --strict` from the repo root: python tools/check_site.py
 """
+import json
 import re
 import subprocess
 import sys
@@ -80,7 +81,22 @@ def check_snippets_inlined():
         check("--8&lt;--" not in html and "--8<--" not in html, f"{page}: raw snippet marker left")
 
 
-CHECKS = [check_redirects, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined]
+def check_platform_pages():
+    pages = json.loads((SITE / "platform-pages.json").read_text())
+    for url in ["handheld/", "handheld/guide/osd/", "mobile/", "mobile/library/"]:
+        check(url in pages, f"platform-pages.json lacks {url}")
+    check(not any(u.startswith("_shared") for u in pages), "platform-pages.json lists _shared")
+
+
+def check_toggle_wired():
+    for page in ["handheld/guide/osd", "mobile/library", "reference/faq"]:
+        html = (SITE / page / "index.html").read_text()
+        check("platform-switch.js" in html, f"{page}: toggle script not loaded")
+        check("NX_PAGE_URL" in html, f"{page}: page URL not exposed")
+
+
+CHECKS = [check_redirects, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
+          check_platform_pages, check_toggle_wired]
 
 
 def main():

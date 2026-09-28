@@ -4,3 +4,32 @@
     max-width: 50%;
   }
 }
+
+/* Handheld / Mobile platform toggle in the header */
+.nx-platform {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.1rem;
+  margin: 0 0.4rem;
+  padding: 0.1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nx-platform__option {
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--md-primary-bg-color);
+  opacity: 0.7;
+}
+
+.nx-platform__option:hover,
+.nx-platform__option[aria-current] {
+  opacity: 1;
+}
+
+.nx-platform__option[aria-current] {
+  background: var(--md-accent-fg-color);
+}
