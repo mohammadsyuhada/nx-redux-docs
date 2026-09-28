@@ -63,7 +63,9 @@ Some systems appear more than once on purpose — pick per game by which
   with [Netplay](../netplay.md#supported-systems)) and mGBA (MGBA — more
   accurate and better for ROM hacks, no netplay). See [Game Boy Advance](game-boy-advance.md) for
   which to use.
-- **Super Nintendo** ships both Snes9x (SFC) and Supafaust (SUPA).
+- **Super Nintendo** ships both Snes9x (SFC — the default, lighter) and
+  Supafaust (SUPA — more accurate, but heavier). See
+  [Super Nintendo](super-nintendo.md) for which to use.
 - **The Sega systems** can also run on **Genesis Plus GX** (GPGX) — a more
   accurate alternative to PicoDrive (PicoDrive is the lighter, faster core).
 
