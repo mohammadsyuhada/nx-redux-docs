@@ -1,3 +1,7 @@
+---
+title: Mobile Release Notes
+---
+
 # Mobile Release Notes
 
 NX Redux Mobile has not been released yet. Its release notes will appear here

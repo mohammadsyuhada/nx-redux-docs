@@ -1,3 +1,7 @@
+---
+title: Mobile FAQ
+---
+
 # Mobile FAQ
 
 Common questions about NX Redux Mobile, the Android app. It is not released

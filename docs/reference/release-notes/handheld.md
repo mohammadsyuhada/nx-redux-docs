@@ -1,3 +1,7 @@
+---
+title: Handheld Release Notes
+---
+
 # Handheld Release Notes
 
 What changed in each NX Redux release for TrimUI handhelds. Download packages

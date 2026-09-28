@@ -1,3 +1,7 @@
+---
+title: Getting Started on a Handheld
+---
+
 # Getting Started
 
 NX Redux for TrimUI handhelds is custom firmware that replaces the stock

@@ -1,3 +1,7 @@
+---
+title: Handheld FAQ
+---
+
 # Handheld FAQ
 
 Common questions about NX Redux on TrimUI handhelds. Using the Android app?

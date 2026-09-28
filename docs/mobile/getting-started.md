@@ -1,3 +1,7 @@
+---
+title: Getting Started with NX Redux Mobile
+---
+
 # Getting Started with NX Redux Mobile
 
 !!! info "Coming soon"
