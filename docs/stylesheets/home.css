@@ -6,11 +6,21 @@
   margin: 0 auto;
   padding: 0 1rem 3rem;
   color: var(--md-default-fg-color);
+  /* Explicit base size: .md-typeset also sets this, but home.css should not
+     depend on that cascade to keep card/strip text at normal reading size. */
+  font-size: 0.8rem;
 }
 
 .nx-hero { text-align: center; padding-top: 2.5rem; }
 .nx-hero__logo { width: 3.5rem; height: 3.5rem; }
-.nx-hero__title { margin: 0.4rem 0 0; font-size: 2.2rem; font-weight: 800; }
+/* Scoped under .nx-hero (two classes) so this beats .md-typeset h1's
+   class+element specificity instead of losing to its size/weight/colour. */
+.nx-hero .nx-hero__title {
+  margin: 0.4rem 0 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--md-default-fg-color);
+}
 .nx-hero__tagline { margin: 0.4rem auto 0; max-width: 32rem; font-size: 1rem; color: var(--md-default-fg-color--light); }
 
 .nx-devices {
@@ -21,7 +31,9 @@
   margin-top: 2.5rem;
 }
 
-.nx-device { margin: 0; }
+/* Scoped under .nx-devices (two classes) so this beats .md-typeset figure's
+   class+element specificity, which would otherwise add margin: 1em auto. */
+.nx-devices .nx-device { margin: 0; }
 .nx-device svg { display: block; height: auto; }
 .nx-device--handheld svg { width: 13rem; }
 .nx-device--mobile svg { width: 13rem; }
@@ -49,7 +61,9 @@
   background: var(--md-default-bg-color);
 }
 
-.nx-card h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+/* Scoped under .nx-cards (two classes) so this beats .md-typeset h2's
+   class+element specificity instead of losing its size/weight/margin. */
+.nx-cards .nx-card h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
 .nx-card p { margin: 0.4rem 0 1rem; color: var(--md-default-fg-color--light); }
 .nx-card__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
@@ -66,7 +80,9 @@
 }
 
 .nx-strip { margin-top: 3rem; text-align: center; }
-.nx-strip h2 { font-size: 1.1rem; font-weight: 700; }
+/* Scoped under .nx-home (two classes) so this beats .md-typeset h2's
+   class+element specificity instead of losing its size/weight/margin. */
+.nx-home .nx-strip h2 { margin: 0.83em 0; font-size: 1.1rem; font-weight: 700; }
 .nx-strip p { max-width: 36rem; margin: 0.4rem auto; color: var(--md-default-fg-color--light); }
 .nx-strip a { color: var(--md-accent-fg-color); }
 
@@ -77,5 +93,5 @@
 @media screen and (max-width: 44.9375em) {
   .nx-devices { flex-direction: column; align-items: center; gap: 2rem; }
   .nx-cards { grid-template-columns: 1fr; }
-  .nx-hero__title { font-size: 1.8rem; }
+  .nx-hero .nx-hero__title { font-size: 1.8rem; }
 }
