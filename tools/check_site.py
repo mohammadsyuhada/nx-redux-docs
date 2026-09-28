@@ -123,7 +123,8 @@ def check_highlights():
         check((SITE / href / "index.html").exists(), f"feature target missing: {href}")
     for src in re.findall(r'class="nx-features__shot"[^>]*src="([^"]+)"', html):
         check((SITE / src).exists(), f"feature screenshot missing: {src}")
-    check('id="nx-feature-more"' in html, "features lack the READ MORE hint")
+    check(html.count('role="tab" id="nx-tab-') == 6, "feature rows should be tabs that select, not links")
+    check(html.count('class="nx-features__link"') == 6, "each feature description needs its docs link")
 
 
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,

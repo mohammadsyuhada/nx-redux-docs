@@ -73,22 +73,22 @@
     </section>
 
     {% set features = [
-      {"title": "Netplay with one button", "href": "handheld/netplay/", "shot": "assets/screenshots/netplay.png",
+      {"title": "Netplay with one button", "href": "handheld/netplay/", "more": "How netplay works", "shot": "assets/screenshots/netplay.png",
        "text": "Press <kbd>Y</kbd> on a supported game to host or join over Wi-Fi or a hotspot. No IP addresses, and saves sync before the match.",
        "platform": "Handheld now, Mobile later"},
-      {"title": "Emulators included", "href": "handheld/emulators/", "shot": "assets/screenshots/in-game.png",
+      {"title": "Emulators included", "href": "handheld/emulators/", "more": "See the bundled emulators", "shot": "assets/screenshots/in-game.png",
        "text": "Nintendo 64, Nintendo DS and Dreamcast run on bundled standalone emulators, so there is nothing extra to download. The mobile app bundles every core.",
        "platform": "Handheld and Mobile"},
-      {"title": "Resume any game", "href": "handheld/guide/game-switcher/", "shot": "assets/screenshots/game-switcher.png",
+      {"title": "Resume any game", "href": "handheld/guide/game-switcher/", "more": "About the Game Switcher", "shot": "assets/screenshots/game-switcher.png",
        "text": "Quitting saves to a hidden slot. Press <kbd>SELECT</kbd> for the Game Switcher and carry on exactly where you left off.",
        "platform": "Handheld"},
-      {"title": "Achievements, even offline", "href": "handheld/apps/retroachievements/", "shot": "assets/screenshots/retroachievements.png",
+      {"title": "Achievements, even offline", "href": "handheld/apps/retroachievements/", "more": "Set up RetroAchievements", "shot": "assets/screenshots/retroachievements.png",
        "text": "Earn RetroAchievements without a connection and sync them later.",
        "platform": "Handheld and Mobile"},
-      {"title": "Sync your devices", "href": "handheld/apps/device-sync/", "shot": "assets/screenshots/device-sync.png",
+      {"title": "Sync your devices", "href": "handheld/apps/device-sync/", "more": "How Device Sync works", "shot": "assets/screenshots/device-sync.png",
        "text": "Add games on one device, then sync over Wi-Fi. Saves, states and, if you like, ROMs arrive on the other.",
        "platform": "Handheld now, Mobile later"},
-      {"title": "Music and videos", "href": "handheld/apps/music-player/", "shot": "assets/screenshots/music-player.png",
+      {"title": "Music and videos", "href": "handheld/apps/music-player/", "more": "Explore the Music Player", "shot": "assets/screenshots/music-player.png",
        "text": "Built-in music and media players, with sound through the speaker, Bluetooth or a USB-C DAC.",
        "platform": "Handheld"},
     ] %}
@@ -97,32 +97,26 @@
         <h2 id="nx-features-title" class="nx-features__title">What you get</h2>
 
         <div class="nx-features__body">
-          <ul class="nx-list">
+          <ul class="nx-list" role="tablist" aria-orientation="vertical" aria-labelledby="nx-features-title">
             {% for f in features %}
-            <li class="nx-feature">
-              <a href="{{ f.href | url }}"{% if loop.first %} class="is-selected"{% endif %}>{{ f.title }}</a>
-              <div class="nx-feature__detail">
-                <p>{{ f.text }}</p>
-                <p class="nx-feature__platform">{{ f.platform }}</p>
-              </div>
+            <li class="nx-feature" role="presentation">
+              <button type="button" role="tab" id="nx-tab-{{ loop.index }}" aria-controls="nx-panel-{{ loop.index }}"
+                      aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}">{{ f.title }}</button>
             </li>
             {% endfor %}
           </ul>
 
-          <div class="nx-features__preview" aria-hidden="true">
+          <div class="nx-features__preview">
             {% for f in features %}
-            <div class="nx-features__pane{% if loop.first %} is-active{% endif %}">
+            <div class="nx-features__pane{% if loop.first %} is-active{% endif %}" role="tabpanel"
+                 id="nx-panel-{{ loop.index }}" aria-labelledby="nx-tab-{{ loop.index }}">
               <img class="nx-features__shot" src="{{ f.shot | url }}" alt="" width="1024" height="768" loading="lazy">
-              <p>{{ f.text }}</p>
+              <p>{{ f.text }} <a class="nx-features__link" href="{{ f.href | url }}">{{ f.more }}</a></p>
               <p class="nx-feature__platform">{{ f.platform }}</p>
             </div>
             {% endfor %}
           </div>
         </div>
-
-        <nav class="nx-hints nx-features__hints" aria-label="Selected feature">
-          <a class="nx-hint" id="nx-feature-more" href="{{ features[0].href | url }}"><span class="nx-hint__button" aria-hidden="true">A</span>Read more</a>
-        </nav>
       </div>
     </section>
   </div>
@@ -147,28 +141,31 @@
       });
     })();
 
-    // Features: the pill follows hover and focus, the preview shows the
-    // selected feature, and READ MORE opens its page. UP/DOWN move the
-    // selection as on the device.
+    // Features: tabs laid out like the NX Redux game list. Clicking a row
+    // selects it and shows its screenshot and description; UP/DOWN move the
+    // selection as on the device. Without this script every panel shows.
     (function () {
-      var list = document.querySelector(".nx-list");
-      if (!list) return;
-      var rows = Array.prototype.slice.call(list.querySelectorAll("a"));
-      var panes = document.querySelectorAll(".nx-features__pane");
-      var more = document.getElementById("nx-feature-more");
-      function select(i) {
-        rows.forEach(function (r, j) { r.classList.toggle("is-selected", j === i); });
+      var section = document.querySelector(".nx-features");
+      if (!section) return;
+      var tabs = Array.prototype.slice.call(section.querySelectorAll('[role="tab"]'));
+      var panes = section.querySelectorAll('[role="tabpanel"]');
+      section.classList.add("is-enhanced");
+      function select(i, focus) {
+        tabs.forEach(function (t, j) {
+          var on = j === i;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          t.tabIndex = on ? 0 : -1;
+        });
         Array.prototype.forEach.call(panes, function (p, j) { p.classList.toggle("is-active", j === i); });
-        more.href = rows[i].href;
+        if (focus) tabs[i].focus();
       }
-      rows.forEach(function (row, i) {
-        row.addEventListener("mouseenter", function () { select(i); });
-        row.addEventListener("focus", function () { select(i); });
-        row.addEventListener("keydown", function (e) {
-          var next = e.key === "ArrowDown" ? i + 1 : e.key === "ArrowUp" ? i - 1 : -1;
-          if (next < 0 || next >= rows.length) return;
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener("click", function () { select(i, false); });
+        tab.addEventListener("keydown", function (e) {
+          var next = { ArrowDown: i + 1, ArrowUp: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+          if (next === undefined) return;
           e.preventDefault();
-          rows[next].focus();
+          select((next + tabs.length) % tabs.length, true);
         });
       });
     })();

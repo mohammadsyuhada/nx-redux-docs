@@ -154,9 +154,9 @@
   font-size: 0.85em;
 }
 
-/* Features: a second screen laid out like the NX Redux game list. The list
-   sits on the left; the selected row's screenshot and text show on the right,
-   the way a game's artwork does on the device. */
+/* Features: a second screen laid out like the NX Redux game list. Rows are
+   tabs: clicking one moves the pill to it and shows its screenshot and text
+   on the right, the way a game's artwork does on the device. */
 .nx-features { border-top: 1px solid var(--nx-outline); }
 
 .nx-features__title {
@@ -183,46 +183,43 @@
 
 .nx-feature { margin: 0; }
 
-.nx-list a {
-  display: inline-block;
-  margin-left: -0.55em;
+.nx-list button {
+  margin: 0 0 0 -0.55em;
   padding: 0.18em 0.55em;
+  border: 0;
   border-radius: 999px;
+  background: none;
+  font: inherit;
   font-size: 1.15rem;
   line-height: 1.35;
+  text-align: left;
   color: var(--nx-white);
+  cursor: pointer;
   transition: background-color 120ms ease, color 120ms ease;
 }
 
-.nx-list:not(:hover) a.is-selected,
-.nx-list a:hover {
+.nx-list button:hover { background: rgba(255, 255, 255, 0.12); }
+
+.nx-list button[aria-selected="true"] {
   background: var(--nx-white);
   color: var(--nx-black);
 }
 
-.nx-list a:focus-visible {
+.nx-list button:focus-visible,
+.nx-features__link:focus-visible {
   outline: 0.1rem solid var(--md-accent-fg-color);
   outline-offset: 0.15rem;
 }
 
-/* On wide screens the preview carries the text; the per-row copy stays for
-   screen readers only. */
-.nx-feature__detail {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
+/* With the script, panes share one cell and only the selected one shows;
+   without it they stack so every description stays readable. */
+.nx-features__preview { display: grid; gap: 2rem; }
 
-.nx-features__preview { display: grid; }
+.nx-features.is-enhanced .nx-features__pane { grid-area: 1 / 1; visibility: hidden; }
+.nx-features.is-enhanced .nx-features__pane.is-active { visibility: visible; }
 
-/* Panes swap at once; only the incoming screenshot fades in, so two
-   descriptions never overlap mid-transition. */
-.nx-features__pane { grid-area: 1 / 1; visibility: hidden; }
-.nx-features__pane.is-active { visibility: visible; }
-.nx-features__pane.is-active .nx-features__shot { animation: nx-shot-in 180ms ease; }
+/* Only the incoming screenshot fades in, so two descriptions never overlap. */
+.nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot { animation: nx-shot-in 180ms ease; }
 
 @keyframes nx-shot-in {
   from { opacity: 0; }
@@ -237,8 +234,7 @@
   outline: 1px solid var(--nx-outline);
 }
 
-.nx-features__pane p,
-.nx-feature__detail p {
+.nx-features__pane p {
   max-width: 26rem;
   margin: 0.9rem 0 0;
   font-size: 0.75rem;
@@ -246,12 +242,18 @@
   color: var(--nx-soft);
 }
 
-.nx-features__pane .nx-feature__platform,
-.nx-feature__detail .nx-feature__platform {
+.nx-features__pane .nx-feature__platform {
   margin-top: 0.4rem;
   font-size: 0.6rem;
   color: var(--nx-grey);
 }
+
+.nx-features__link {
+  color: var(--md-accent-fg-color);
+  white-space: nowrap;
+}
+
+.nx-features__link:hover { text-decoration: underline; }
 
 .nx-features kbd {
   display: inline-grid;
@@ -268,8 +270,8 @@
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
   .nx-menu a,
-  .nx-list a { transition: none; }
-  .nx-features__pane.is-active .nx-features__shot { animation: none; }
+  .nx-list button { transition: none; }
+  .nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot { animation: none; }
 }
 
 @media screen and (max-width: 44.9375em) {
@@ -277,19 +279,6 @@
   .nx-menu a { font-size: 1.3rem; }
   .nx-devices { justify-content: center; }
   .nx-device svg { width: 7.5rem; }
-  .nx-features__body { grid-template-columns: 1fr; gap: 0; }
-  .nx-features__preview,
-  .nx-features__hints { display: none; }
-  .nx-feature + .nx-feature { margin-top: 1rem; }
-  .nx-list a { font-size: 1.05rem; }
-  .nx-list:not(:hover) a.is-selected { background: none; color: var(--nx-white); }
-  .nx-feature__detail {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-  .nx-feature__detail p { margin-top: 0.3rem; }
+  .nx-features__body { grid-template-columns: 1fr; gap: 1.6rem; }
+  .nx-list button { font-size: 1.05rem; }
 }
