@@ -159,8 +159,17 @@ def check_sidebars():
         check("navigation" not in head, f"{rel} hides the sidebar")
 
 
+def check_release_notes():
+    handheld = (SITE / "reference" / "release-notes" / "handheld" / "index.html").read_text()
+    mobile = (SITE / "reference" / "release-notes" / "mobile" / "index.html").read_text()
+    check('id="v1130"' in handheld, "handheld release notes lack v1.13.0")
+    check('id="v1130"' not in mobile, "mobile release notes carry handheld versions")
+    old = (SITE / "reference" / "release-notes" / "index.html").read_text()
+    check("handheld/" in old and "location.hash" in old, "old release notes URL does not redirect with its anchor")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes]
 
 
 def main():

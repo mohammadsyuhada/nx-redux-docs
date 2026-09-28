@@ -43,6 +43,7 @@ plugins:
   - search
   - redirects:
       redirect_maps:
+        reference/release-notes.md: reference/release-notes/handheld.md
         handheld/index.md: handheld/getting-started.md
         mobile/index.md: mobile/getting-started.md
         getting-started.md: handheld/getting-started.md
@@ -187,7 +188,9 @@ nav:
   - Desktop:
       - Desktop App: desktop/index.md
   - Reference:
-      - Release Notes: reference/release-notes.md
+      - Release Notes:
+          - Handheld: reference/release-notes/handheld.md
+          - Mobile: reference/release-notes/mobile.md
       - FAQ: reference/faq.md
       - Credits: reference/credits.md
       - Disclaimer: reference/disclaimer.md
