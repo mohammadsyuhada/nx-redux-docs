@@ -13,6 +13,3 @@ The list re-sorts by the new display names. Since the files themselves are
 untouched, save files, states and box art all stay matched. An alias starting
 with a dot (e.g. `Track01.bin	.hidden`) **hides** the entry from the list
 entirely.
-
-A `map.txt` at the top level (`Roms/map.txt`) does the same for the
-**system folders** — an alternative to renaming the folders themselves.

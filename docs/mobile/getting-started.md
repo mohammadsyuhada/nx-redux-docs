@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started with NX Redux Mobile
 
 ## Install
 

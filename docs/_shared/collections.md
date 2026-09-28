@@ -9,6 +9,4 @@ Collections/RPG Nights.txt:
 /Roms/Sony PlayStation (PS)/Final Fantasy VII/Final Fantasy VII.m3u
 ```
 
-Entries whose file is missing are silently skipped, and a
-`Collections/map.txt` can alias the displayed names, in the same format as a
-system folder's `map.txt`.
+Entries whose file is missing are silently skipped.

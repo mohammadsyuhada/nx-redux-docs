@@ -140,6 +140,9 @@ game instead of exposing the file pair.
 
 --8<-- "map-txt.md"
 
+A `map.txt` at the top level (`Roms/map.txt`) does the same for the
+**system folders** — an alternative to renaming the folders themselves.
+
 The number-prefix trick above works inside aliases too. The context menu's
 [**Rename Rom**](context-menu.md) writes these aliases for you — renaming
 on the device edits the `map.txt` rather than the file.
@@ -171,3 +174,6 @@ one on the spot. Collections appear as a **Collections** entry on the main
 menu (hide it via [Appearance](../settings/appearance.md) if unused).
 
 --8<-- "collections.md"
+
+A `Collections/map.txt` can alias the displayed names, in the same format as
+a system folder's `map.txt`.

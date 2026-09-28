@@ -27,10 +27,12 @@ The scanned library is kept in an index, so the app starts without walking
 your folders. After adding or removing games outside the app, use
 **Rescan library** in **Tools → Settings → Library**.
 
-A folder on an SD card that is taken out keeps its place: its games are left
-out until the card is back, and **Settings → Library** marks it
-**Not available**. A folder that was deleted, or whose access was revoked, is
-removed with a notice.
+An extra folder that was deleted, or whose access was revoked, is dropped
+with a notice. A home folder that is lost returns you to the folder picker.
+
+For an SD card taken out: an extra folder's games are left out until the
+card is back. A home on that card keeps the last index on screen, and
+**Settings → Library** shows **"<name> · not available"**.
 
 ## Game names
 
