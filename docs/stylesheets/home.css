@@ -216,7 +216,7 @@
 /* Features: a second screen laid out like the NX Redux game list. Rows are
    tabs: clicking one moves the pill to it and shows its screenshot and text
    on the right, the way a game's artwork does on the device. */
-.nx-features { border-top: 1px solid var(--nx-outline); }
+
 
 .nx-features__title {
   margin: 0;
