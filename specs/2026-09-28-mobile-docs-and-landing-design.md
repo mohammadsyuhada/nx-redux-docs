@@ -60,10 +60,13 @@ docs/
   Handheld / Mobile control to the header.
 - `docs/javascripts/platform-switch.js`:
   - Switching swaps the `handheld/` ↔ `mobile/` path prefix. If that page
-    does not exist (the page list is inlined into the page at build time),
-    it goes to the other section's `index`.
+    does not exist, it goes to the other section's `index`.
+  - Existence check: a MkDocs hook (`hooks/platform_pages.py`, registered
+    under `hooks:`) writes `platform-pages.json`, a list of every page URL,
+    at build time. The script fetches it once and caches it for the session.
   - The last platform is saved in `localStorage` (every access wrapped in
-    try/catch). The landing page's "Docs" links use it only as a hint.
+    try/catch) and only sets the toggle's state. The landing page cards
+    always link to their own platform explicitly.
   - On `reference/` pages and the landing page, the toggle is hidden.
 - Works with Material's `navigation.instant` if that is turned on later.
 
