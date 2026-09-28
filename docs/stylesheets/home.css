@@ -181,8 +181,10 @@
 .nx-device--mobile .nx-device__screen { left: 6.383%; top: 3.286%; width: 88.191%; height: 93.5%; }
 .nx-device--mobile .nx-slide { object-fit: cover; }
 
-.nx-slide { opacity: 0; transition: opacity 0.8s ease; }
-.nx-slide.is-active { opacity: 1; }
+/* Crossfade without a dip: the incoming image fades in on top while the
+   outgoing one stays fully opaque underneath, and only drops once covered. */
+.nx-slide { opacity: 0; transition: opacity 0s linear 0.7s; }
+.nx-slide.is-active { opacity: 1; z-index: 1; transition: opacity 0.7s ease; }
 
 /* Button hints, as along the bottom of every NX Redux screen. */
 .nx-hints {
@@ -281,12 +283,14 @@
 .nx-features.is-enhanced .nx-features__pane.is-active { visibility: visible; }
 
 /* Only the incoming screenshot fades in, so two descriptions never overlap. */
-.nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot.is-active { animation: nx-shot-in 180ms ease; }
+/* Switching features fades the new pane's screenshot in once; cycling
+   within a pane uses the crossfade below instead. */
+.nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shots { animation: nx-shot-in 180ms ease; }
 
 /* Several screenshots share one cell and crossfade; single ones just show. */
 .nx-features__shots { display: grid; }
-.nx-features__shots .nx-features__shot { grid-area: 1 / 1; opacity: 0; transition: opacity 0.8s ease; }
-.nx-features__shots .nx-features__shot.is-active { opacity: 1; }
+.nx-features__shots .nx-features__shot { grid-area: 1 / 1; opacity: 0; transition: opacity 0s linear 0.7s; }
+.nx-features__shots .nx-features__shot.is-active { opacity: 1; z-index: 1; transition: opacity 0.7s ease; }
 
 @keyframes nx-shot-in {
   from { opacity: 0; }
@@ -336,11 +340,13 @@
 
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
+  .nx-slide.is-active,
   .nx-menu a,
   .nx-list button { transition: none; }
   .nx-device { animation: none; }
-  .nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot.is-active { animation: none; }
-  .nx-features__shots .nx-features__shot { transition: none; }
+  .nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shots { animation: none; }
+  .nx-features__shots .nx-features__shot,
+  .nx-features__shots .nx-features__shot.is-active { transition: none; }
 }
 
 @media screen and (max-width: 44.9375em) {

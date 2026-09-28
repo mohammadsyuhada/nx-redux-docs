@@ -154,6 +154,11 @@
       var tabs = Array.prototype.slice.call(section.querySelectorAll('[role="tab"]'));
       var panes = section.querySelectorAll('[role="tabpanel"]');
       section.classList.add("is-enhanced");
+      // Once the page has loaded, fetch every lazy screenshot so none arrives
+      // late (and flashes blank) the first time it is shown.
+      window.addEventListener("load", function () {
+        document.querySelectorAll('.nx-home img[loading="lazy"]').forEach(function (img) { img.loading = "eager"; });
+      });
       // A feature with several screenshots cycles them while it is selected.
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         setInterval(function () {
