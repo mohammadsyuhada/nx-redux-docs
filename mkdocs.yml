@@ -39,12 +39,6 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-hooks:
-  - hooks/platform_pages.py
-
-extra_javascript:
-  - javascripts/platform-switch.js
-
 plugins:
   - search
   - redirects:

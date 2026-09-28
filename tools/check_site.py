@@ -2,7 +2,6 @@
 
 Run after `mkdocs build --strict` from the repo root: python tools/check_site.py
 """
-import json
 import os
 import re
 import subprocess
@@ -89,18 +88,10 @@ def check_snippets_inlined():
         check("--8&lt;--" not in html and "--8<--" not in html, f"{page}: raw snippet marker left")
 
 
-def check_platform_pages():
-    pages = json.loads((SITE / "platform-pages.json").read_text())
-    for url in ["handheld/", "handheld/guide/osd/", "mobile/", "mobile/library/"]:
-        check(url in pages, f"platform-pages.json lacks {url}")
-    check(not any(u.startswith("_shared") for u in pages), "platform-pages.json lists _shared")
-
-
-def check_toggle_wired():
-    for page in ["handheld/guide/osd", "mobile/library", "reference/faq"]:
-        html = (SITE / page / "index.html").read_text()
-        check("platform-switch.js" in html, f"{page}: toggle script not loaded")
-        check("NX_PAGE_URL" in html, f"{page}: page URL not exposed")
+def check_no_platform_toggle():
+    check(not (SITE / "platform-pages.json").exists(), "platform-pages.json is still published")
+    html = (SITE / "handheld" / "index.html").read_text()
+    check("nx-platform" not in html and "platform-switch.js" not in html, "header platform toggle is still wired")
 
 
 def check_landing():
@@ -115,7 +106,7 @@ def check_landing():
 
 
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
-          check_platform_pages, check_toggle_wired, check_landing]
+          check_no_platform_toggle, check_landing]
 
 
 def main():

@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-
-{% block scripts %}
-  <script>
-    window.NX_BASE_URL = "{{ base_url }}";
-    window.NX_PAGE_URL = "{{ page.url if page else '' }}";
-  </script>
-  {{ super() }}
-{% endblock %}

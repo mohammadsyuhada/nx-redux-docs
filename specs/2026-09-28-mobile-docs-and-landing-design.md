@@ -11,6 +11,11 @@ existing handheld docs, and put a showcase landing page in front of both.
 Readers mostly use one platform, so each platform gets its own docs section,
 and a header toggle switches between them. Shared conventions are written once.
 
+## Later changes (2026-09-28)
+
+- The header platform toggle was removed at the user's request after preview. The Handheld / Mobile / Desktop / Reference nav tabs are the only way to switch sections, so the "Platform toggle" section below is no longer implemented.
+- The Desktop App has its own `desktop/` section and nav tab, and keeps its original `/desktop/` URL.
+
 ## Decisions
 
 - One MkDocs Material site, one build, one repo. The domain stays nxredux.com.
