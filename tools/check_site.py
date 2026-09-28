@@ -126,6 +126,8 @@ def check_highlights():
         check((SITE / href / "index.html").exists(), f"feature target missing: {href}")
     for src in re.findall(r'class="nx-features__shot"[^>]*src="([^"]+)"', html):
         check((SITE / src).exists(), f"feature screenshot missing: {src}")
+    for name in ["join", "connection", "select-host", "connected", "playing"]:
+        check(f"assets/landing/features/netplay-{name}.webp" in html, f"netplay slideshow lacks the {name} screen")
     check(html.count('role="tab" id="nx-tab-') == len(HIGHLIGHT_LINKS), "feature rows should be tabs that select, not links")
     check(html.count('class="nx-features__link"') == len(HIGHLIGHT_LINKS), "each feature description needs its docs link")
 
