@@ -180,7 +180,7 @@
 
 /* Z Fold 8: the render's screen is cut out, so the capture shows through
    from behind and the real bezel, corners and camera stay on top. */
-.nx-device--mobile .nx-device__screen { left: 5.933%; top: 3.286%; width: 88.191%; height: 93.5%; }  /* nudged ~1px left by eye */
+.nx-device--mobile .nx-device__screen { left: 6.231%; top: 3.183%; width: 88.468%; height: 93.634%; }  /* measured hole + a hairline overlap under the bezel */
 .nx-device--mobile .nx-slide { object-fit: cover; }
 
 /* Crossfade without a dip: the incoming image fades in on top while the
