@@ -235,7 +235,7 @@
 }
 
 /* Clear space for the devices hanging down from the first screen. */
-.nx-features .nx-screen__inner { padding-top: 3.8rem; }
+.nx-features .nx-screen__inner { padding-top: 6.4rem; }
 
 .nx-list {
   margin: 0;
@@ -342,7 +342,7 @@
   .nx-menu a { font-size: 1.3rem; }
   .nx-showcase { justify-self: center; }
   .nx-devices { font-size: 0.72rem; margin-bottom: 0; }
-  .nx-features .nx-screen__inner { padding-top: 1.6rem; }
+  .nx-features .nx-screen__inner { padding-top: 3.2rem; }
   .nx-features__body { grid-template-columns: 1fr; gap: 1.6rem; }
   .nx-list button { font-size: 1.05rem; }
 }
