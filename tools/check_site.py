@@ -168,8 +168,18 @@ def check_release_notes():
     check("handheld/" in old and "location.hash" in old, "old release notes URL does not redirect with its anchor")
 
 
+def check_faqs():
+    handheld = (SITE / "reference" / "faq" / "handheld" / "index.html").read_text()
+    mobile = (SITE / "reference" / "faq" / "mobile" / "index.html").read_text()
+    check('id="i-forgot-my-simple-mode-pin"' in handheld, "handheld FAQ lost its questions")
+    check('id="i-forgot-my-simple-mode-pin"' not in mobile, "mobile FAQ carries handheld questions")
+    check("same games folder" in mobile, "mobile FAQ lacks its questions")
+    old = (SITE / "reference" / "faq" / "index.html").read_text()
+    check("handheld/" in old and "location.hash" in old, "old FAQ URL does not redirect with its anchor")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs]
 
 
 def main():

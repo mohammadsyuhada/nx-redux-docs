@@ -33,4 +33,4 @@ the system menu to operate on a whole folder at once.
 
 The whole card is visible, including the hidden dot-folders (`.system`,
 `.userdata`, and friends) — handy for the occasional maintenance task the
-[FAQ](../../reference/faq.md) mentions, like removing the Simple Mode PIN file.
+[FAQ](../../reference/faq/handheld.md) mentions, like removing the Simple Mode PIN file.
