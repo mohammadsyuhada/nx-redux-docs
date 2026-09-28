@@ -138,27 +138,11 @@ game instead of exposing the file pair.
 
 ## Custom display names (map.txt)
 
-To rename games without touching the files, drop a `map.txt` inside the
-system folder. Each line maps a **filename** to a display name, separated
-by a single **tab**:
+--8<-- "map-txt.md"
 
-```
-Roms/Game Boy Advance (GBA)/map.txt:
-
-Advance Wars 2 - Black Hole Rising (USA).gba	Advance Wars 2
-Legend of Zelda, The - The Minish Cap (USA).gba	Zelda: Minish Cap
-```
-
-The list re-sorts by the new display names, and the number-prefix trick
-above works inside them too. Since the files themselves are untouched,
-save files, states and box art all stay matched. The context menu's
+The number-prefix trick above works inside aliases too. The context menu's
 [**Rename Rom**](context-menu.md) writes these aliases for you — renaming
-on the device edits the `map.txt` rather than the file. An alias starting
-with a dot (e.g. `Track01.bin	.hidden`) **hides** the entry from the list
-entirely.
-
-A `map.txt` at the top level (`Roms/map.txt`) does the same for the
-**system folders** — an alternative to renaming the folders themselves.
+on the device edits the `map.txt` rather than the file.
 
 Arcade folders don't need a `map.txt` for readable names: games in an
 [Arcade (FBN)](../emulators/arcade.md#never-rename-the-zips) folder, and
@@ -186,17 +170,4 @@ choose **Add to Collection** — add it to an existing collection or create a ne
 one on the spot. Collections appear as a **Collections** entry on the main
 menu (hide it via [Appearance](../settings/appearance.md) if unused).
 
-Under the hood each collection is a plain text file at
-`Collections/<Name>.txt` — one SD-relative path per line — so you can also
-build them on a computer:
-
-```
-Collections/RPG Nights.txt:
-
-/Roms/Game Boy Advance (GBA)/Golden Sun.gba
-/Roms/Sony PlayStation (PS)/Final Fantasy VII/Final Fantasy VII.m3u
-```
-
-Entries whose file is missing are silently skipped, and a
-`Collections/map.txt` can alias the displayed names, same
-[format as above](#custom-display-names-maptxt).
+--8<-- "collections.md"

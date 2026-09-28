@@ -4,7 +4,13 @@ What changed in each NX Redux release. Download packages for every device
 from the [releases page](https://github.com/mohammadsyuhada/nx-redux/releases),
 or update on the device from [Settings → About](../handheld/settings/about.md).
 
-## v1.13.0
+## Mobile
+
+NX Redux Mobile has not been released yet.
+
+## Handheld
+
+### v1.13.0
 
 *28 September 2026*
 
@@ -12,7 +18,7 @@ A selectable UI scale, a new NX Redux look, and readable arcade game names
 lead this release, alongside fixes for Dreamcast controls, long IPTV channel
 lists, search and netplay over a hotspot.
 
-### New features
+#### New features
 
 - **UI scale.** **Settings → Appearance → UI scale** sets the size of text
   and menus across the whole UI: **Default**, **1x** (smaller, more rows) or
@@ -41,7 +47,7 @@ lists, search and netplay over a hotspot.
   such as FileZilla. A new guide page walks through it. See
   [Accessing Your Files](../handheld/guide/file-access.md).
 
-### Fixes
+#### Fixes
 
 - **Dreamcast:** the face buttons map to the Dreamcast pad by position
   (bottom is Dreamcast `A`, right is `B`), so games that use the face buttons
@@ -65,7 +71,7 @@ lists, search and netplay over a hotspot.
 - **Desktop app:** card and app paths containing spaces work in Clean dot
   files, Device Sync and the netplay wizard.
 
-## v1.12.0
+### v1.12.0
 
 *22 September 2026*
 
@@ -73,7 +79,7 @@ Genesis Plus GX joins as a second Sega core, Dreamcast gets full
 RetroAchievements support, and a save-truncation bug from v1.10.0 is fixed.
 Menus and emulators also run cooler with new per-device CPU policies.
 
-### New features
+#### New features
 
 - **Genesis Plus GX.** A more accurate alternative to PicoDrive that plays
   Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD from a
@@ -108,7 +114,7 @@ Menus and emulators also run cooler with new per-device CPU policies.
   against a bundled CA store when downloading updates, Xtras and cheats,
   instead of skipping verification.
 
-### Performance
+#### Performance
 
 - **Launcher CPU policy.** The launcher runs at full speed while booting,
   then caps the CPU while you browse and drops further after three seconds
@@ -123,7 +129,7 @@ Menus and emulators also run cooler with new per-device CPU policies.
 - **Rumble.** The vibration thread sleeps between rumble events instead of
   polling settings every 17 ms.
 
-### Fixes
+#### Fixes
 
 - **Saves:** quitting a game no longer writes a 0 KB save over your existing
   one. A regression since v1.10.0, most reported on Game Boy Advance and
@@ -136,7 +142,7 @@ Menus and emulators also run cooler with new per-device CPU policies.
   starting shows a loading screen instead of failing to launch.
 - **Search:** the hint bar repaints cleanly when the shift indicator clears.
 
-## v1.11.1
+### v1.11.1
 
 *19 September 2026*
 
@@ -145,7 +151,7 @@ boot or when a game starts, its Bluetooth comes back after sleep, the
 On-Screen Display gets three fixes and a lighter idle poll, and the
 Developer SSH toggle now shows the full login line with the device's IP.
 
-### New features
+#### New features
 
 - **SSH login hint.** While SSH is running, the hint under
   **Settings → Developer → Enable SSH** shows the exact login line with the
@@ -153,7 +159,7 @@ Developer SSH toggle now shows the full login line with the device's IP.
   **Settings → Network** shows the same IP. See
   [Developer → Enable SSH](../handheld/settings/developer.md#enable-ssh-sftp).
 
-### Fixes
+#### Fixes
 
 - **Smart Pro S:** the speaker pop at boot and at the start of a game,
   most noticeable with the N64, Nintendo DS and Dreamcast emulators, is
@@ -168,7 +174,7 @@ Developer SSH toggle now shows the full login line with the device's IP.
 - **OSD:** the hidden daemon polls input every 20 ms instead of every
   millisecond, so it uses less CPU while the panel is closed.
 
-## v1.11.0
+### v1.11.0
 
 *17 September 2026*
 
@@ -178,7 +184,7 @@ The Artwork Manager scans Roms like the game list, Pokémon Gen1Recomp++
 replaces the old Xtras recreation, and a batch of fixes covers Amiga, PSP,
 DraStic, offline RetroAchievements and the Brick updater.
 
-### New features
+#### New features
 
 - **Built-in cheat downloader.** Install the **Cheat Database** tool from the
   [Xtras Store](../handheld/apps/xtras.md#cheat-database), then browse and download
@@ -211,7 +217,7 @@ DraStic, offline RetroAchievements and the Brick updater.
   [Developer settings](../handheld/settings/developer.md#debug-logging) turns off all
   `.userdata` log writes when you do not need them, keeping the card clean.
 
-### Fixes
+#### Fixes
 
 - **Amiga:** Kickstart and other system-scanned option lists now populate in
   [Emulator Settings](../handheld/guide/emulator-options.md) instead of showing only a
@@ -232,7 +238,7 @@ DraStic, offline RetroAchievements and the Brick updater.
 - **PortMaster:** it is now a shell launcher and installed paks are migrated
   automatically, so a system update keeps PortMaster installed.
 
-## v1.10.0
+### v1.10.0
 
 *14 September 2026*
 
@@ -250,7 +256,7 @@ supported on firmware 1.0.2, app transitions are noticeably quicker, and a
 batch of fixes covers Brick Pro deep sleep, turbo fire, the save-slot picker,
 Wi-Fi connection errors and Device Sync on FAT32 cards.
 
-### New features
+#### New features
 
 - **Background music playback.** Music, online radio and podcasts keep
   playing when you leave the Music Player — in the menus and inside games.
@@ -294,7 +300,7 @@ Wi-Fi connection errors and Device Sync on FAT32 cards.
   hand-off, quicker screen clears and mixer setup make moving between the
   launcher, Tools and games noticeably snappier.
 
-### Fixes
+#### Fixes
 
 - **Music:** the background service was hardened after review. Powering on
   restores the last track paused instead of auto-playing, the app stays
@@ -330,7 +336,7 @@ Wi-Fi connection errors and Device Sync on FAT32 cards.
     Settings → Reset artwork**, then queue your systems again. See
     [Appearance → Game art type](../handheld/settings/appearance.md#game-art-type).
 
-## Earlier releases
+### Earlier releases
 
 Notes for v1.9.0 and older are on the
 [GitHub releases page](https://github.com/mohammadsyuhada/nx-redux/releases).

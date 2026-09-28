@@ -63,7 +63,24 @@ def check_handheld_overview():
     check('id="why-nx-redux"' in html, "handheld overview lacks the Why NX Redux section")
 
 
-CHECKS = [check_redirects, check_images, check_handheld_overview]
+MOBILE_PAGES = ["", "getting-started/", "library/", "controls/", "emulators/"]
+
+
+def check_mobile_section():
+    for p in MOBILE_PAGES:
+        check((SITE / "mobile" / p / "index.html").exists(), f"mobile page missing: mobile/{p}")
+    check(not (SITE / "_shared").exists(), "_shared fragments were published as pages")
+
+
+def check_snippets_inlined():
+    marker = "Collections/RPG Nights.txt"
+    for page in ["handheld/guide/main-menu", "mobile/library"]:
+        html = (SITE / page / "index.html").read_text()
+        check(marker in html, f"{page}: collections fragment not inlined")
+        check("--8&lt;--" not in html and "--8<--" not in html, f"{page}: raw snippet marker left")
+
+
+CHECKS = [check_redirects, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined]
 
 
 def main():

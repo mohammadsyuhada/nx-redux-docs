@@ -105,11 +105,17 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: [docs/_shared]
+      check_paths: true
   - toc:
       permalink: true
 
 not_in_nav: |
   /index.md
+
+exclude_docs: |
+  _shared/
 
 nav:
   - Handheld:
@@ -169,6 +175,12 @@ nav:
           - Developer: handheld/settings/developer.md
           - Input Tester: handheld/settings/input-tester.md
           - About: handheld/settings/about.md
+  - Mobile:
+      - Overview: mobile/index.md
+      - Getting Started: mobile/getting-started.md
+      - Library & ROM folders: mobile/library.md
+      - Controls: mobile/controls.md
+      - Emulators: mobile/emulators.md
   - Reference:
       - Release Notes: reference/release-notes.md
       - FAQ: reference/faq.md
