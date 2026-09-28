@@ -61,7 +61,8 @@ Some systems appear more than once on purpose — pick per game by which
 
 - **Game Boy Advance** ships both gpSP (GBA — faster, and the only GBA core
   with [Netplay](../netplay.md#supported-systems)) and mGBA (MGBA — more
-  accurate, no netplay).
+  accurate and better for ROM hacks, no netplay). See [Game Boy Advance](game-boy-advance.md) for
+  which to use.
 - **Super Nintendo** ships both Snes9x (SFC) and Supafaust (SUPA).
 - **The Sega systems** can also run on **Genesis Plus GX** (GPGX) — a more
   accurate alternative to PicoDrive (PicoDrive is the lighter, faster core).
