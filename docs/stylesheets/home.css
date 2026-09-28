@@ -13,6 +13,10 @@
 
 .nx-hero { text-align: center; padding-top: 2.5rem; }
 .nx-hero__logo { width: 3.5rem; height: 3.5rem; }
+/* The logo's strokes are white, so it disappears on the light scheme's
+   light background — invert it there. The dark scheme already has a dark
+   background, so it stays untouched. */
+[data-md-color-scheme="default"] .nx-hero__logo { filter: invert(1); }
 /* Scoped under .nx-hero (two classes) so this beats .md-typeset h1's
    class+element specificity instead of losing to its size/weight/colour. */
 .nx-hero .nx-hero__title {
@@ -66,6 +70,18 @@
 .nx-cards .nx-card h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
 .nx-card p { margin: 0.4rem 0 1rem; color: var(--md-default-fg-color--light); }
 .nx-card__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+/* Material's `primary: black` palette quirk otherwise renders these buttons
+   in indigo. Use the site's accent colour instead, on the site's own
+   variables only. */
+.nx-home .md-button {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+.nx-home .md-button--primary {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
 
 .nx-badge {
   display: inline-block;

@@ -3,12 +3,13 @@
 Run after `mkdocs build --strict` from the repo root: python tools/check_site.py
 """
 import json
+import os
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-SITE = Path("site")
+SITE = Path(os.environ.get("SITE_DIR", "site"))
 BASE_COMMIT = "c384838"  # main before the handheld/mobile split
 failures = []
 

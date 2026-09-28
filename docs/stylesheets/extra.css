@@ -33,3 +33,19 @@
 .nx-platform__option[aria-current] {
   background: var(--md-accent-fg-color);
 }
+
+/* At phone widths the toggle otherwise squeezes the header title down to a
+   single letter ("N…"). Shrink the toggle itself so the title keeps a few
+   readable characters. */
+@media screen and (max-width: 25em) {
+  .nx-platform {
+    gap: 0.05rem;
+    margin: 0 0.2rem;
+    padding: 0.05rem;
+  }
+
+  .nx-platform__option {
+    padding: 0.15rem 0.35rem;
+    font-size: 0.55rem;
+  }
+}
