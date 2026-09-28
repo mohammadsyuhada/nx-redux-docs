@@ -1,9 +1,7 @@
 ---
+template: home.html
+title: NX Redux
 hide:
   - navigation
   - toc
 ---
-
-# NX Redux
-
-- [Handheld documentation](handheld/index.md)

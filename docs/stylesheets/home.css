@@ -1,0 +1,81 @@
+/* Landing page. Loaded only by overrides/home.html. */
+.md-main { display: none; }
+
+.nx-home {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  color: var(--md-default-fg-color);
+}
+
+.nx-hero { text-align: center; padding-top: 2.5rem; }
+.nx-hero__logo { width: 3.5rem; height: 3.5rem; }
+.nx-hero__title { margin: 0.4rem 0 0; font-size: 2.2rem; font-weight: 800; }
+.nx-hero__tagline { margin: 0.4rem auto 0; max-width: 32rem; font-size: 1rem; color: var(--md-default-fg-color--light); }
+
+.nx-devices {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+.nx-device { margin: 0; }
+.nx-device svg { display: block; height: auto; }
+.nx-device--handheld svg { width: 13rem; }
+.nx-device--mobile svg { width: 13rem; }
+.nx-device figcaption { margin-top: 0.6rem; font-size: 0.7rem; color: var(--md-default-fg-color--light); }
+
+.nx-device__body { fill: #2a2a2e; stroke: var(--md-default-fg-color--lightest); stroke-width: 0.6; }
+.nx-device__bezel { fill: #0c0c0c; }
+.nx-device__controls { fill: #45454b; }
+.nx-device__camera { fill: #050505; }
+
+.nx-slide { opacity: 0; transition: opacity 0.8s ease; }
+.nx-slide.is-active { opacity: 1; }
+
+.nx-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.nx-card {
+  padding: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background: var(--md-default-bg-color);
+}
+
+.nx-card h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.nx-card p { margin: 0.4rem 0 1rem; color: var(--md-default-fg-color--light); }
+.nx-card__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.nx-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: var(--md-accent-fg-color);
+  border: 1px solid var(--md-accent-fg-color);
+}
+
+.nx-strip { margin-top: 3rem; text-align: center; }
+.nx-strip h2 { font-size: 1.1rem; font-weight: 700; }
+.nx-strip p { max-width: 36rem; margin: 0.4rem auto; color: var(--md-default-fg-color--light); }
+.nx-strip a { color: var(--md-accent-fg-color); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nx-slide { transition: none; }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .nx-devices { flex-direction: column; align-items: center; gap: 2rem; }
+  .nx-cards { grid-template-columns: 1fr; }
+  .nx-hero__title { font-size: 1.8rem; }
+}

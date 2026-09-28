@@ -95,8 +95,19 @@ def check_toggle_wired():
         check("NX_PAGE_URL" in html, f"{page}: page URL not exposed")
 
 
+def check_landing():
+    html = (SITE / "index.html").read_text()
+    for needle in ['nx-device--handheld', 'nx-device--mobile', 'Coming soon',
+                   'href="handheld/"', 'href="mobile/"', 'prefers-reduced-motion',
+                   'home.css']:
+        check(needle in html, f"landing lacks {needle!r}")
+    check("Why &quot;NX Redux&quot;" not in html and 'id="why-nx-redux"' not in html,
+          "Why NX Redux blurb should live on the handheld overview, not the landing page")
+    check(html.count('class="nx-slide') >= 5, "landing should have 4 handheld slides + 1 mobile slide")
+
+
 CHECKS = [check_redirects, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
-          check_platform_pages, check_toggle_wired]
+          check_platform_pages, check_toggle_wired, check_landing]
 
 
 def main():
