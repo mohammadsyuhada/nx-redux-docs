@@ -3,6 +3,40 @@
 Nintendo 64 games run on a bundled standalone **Mupen64Plus** emulator. Put
 your ROMs in `Roms/Nintendo 64 (N64)/`.
 
+## Controls
+
+| Device button | N64 button (Nintendo layout) | N64 button (Xbox layout) |
+| --- | --- | --- |
+| Right (`A` on the cap) | A | B |
+| Bottom (`B` on the cap) | B | A |
+| Top (`X` on the cap) | C-Left | C-Down |
+| Left (`Y` on the cap) | C-Down | C-Left |
+| Right stick | C-Up / C-Down / C-Left / C-Right | same |
+| Left stick | Analog stick | same |
+| D-pad | D-pad | same |
+| `L1` / `R1` | L / R | same |
+| `L2` | Z | same |
+| `START` | Start | same |
+
+Unlike Dreamcast, the N64 face buttons follow the
+[Button Layout](../guide/button-layout.md) setting: N64 A and B stay on
+whichever buttons act as `A` and `B`, and the two C buttons on the face
+follow `X` and `Y`.
+
+All four C buttons are on the right stick. C-Left and C-Down are also on the
+face, so the two C buttons most games use for items or actions can be
+pressed without letting go of the stick. C-Up and C-Right exist only on the
+right stick, and a stick push counts as a press once it is most of the way
+over.
+
+!!! note "Brick: no analog sticks"
+    The **Brick** has no sticks, so its D-pad drives the N64 D-pad, not the
+    analog stick, and most games (Mario Kart 64, Super Mario 64) won't
+    move. Set the
+    [FN switch's Dpad mode](../settings/fn-switch.md#dpad-mode-when-fn-is-on)
+    to `Joystick` or `Both` and flip the switch on to steer with the D-pad.
+    C-Up and C-Right have no button on the Brick.
+
 ## Video plugin
 
 Two video plugins are bundled, and each game can use whichever one you pick:
