@@ -50,7 +50,6 @@ plugins:
   - redirects:
       redirect_maps:
         getting-started.md: handheld/getting-started.md
-        desktop.md: handheld/desktop.md
         guide/main-menu.md: handheld/guide/main-menu.md
         guide/game-switcher.md: handheld/guide/game-switcher.md
         guide/context-menu.md: handheld/guide/context-menu.md
@@ -128,7 +127,6 @@ nav:
   - Handheld:
       - Overview: handheld/index.md
       - Getting Started: handheld/getting-started.md
-      - Desktop App: handheld/desktop.md
       - User Guide:
           - Main Menu & Game Lists: handheld/guide/main-menu.md
           - Game Switcher: handheld/guide/game-switcher.md
@@ -188,6 +186,8 @@ nav:
       - Library & ROM folders: mobile/library.md
       - Controls: mobile/controls.md
       - Emulators: mobile/emulators.md
+  - Desktop:
+      - Desktop App: desktop/index.md
   - Reference:
       - Release Notes: reference/release-notes.md
       - FAQ: reference/faq.md

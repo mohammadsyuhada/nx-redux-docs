@@ -106,7 +106,7 @@ a D-pad in menus; the right stick is passed through to cores as analog only.
 
 Netplay works in the desktop build. When a game supports it, the game list
 shows the `Y NETPLAY` hint; press `Y` to **Host** or **Join** a session. The
-flow is the same as on the handhelds — see the [Netplay](netplay.md) page.
+flow is the same as on the handhelds — see the [Netplay](../handheld/netplay.md) page.
 
 Two things are specific to desktop:
 

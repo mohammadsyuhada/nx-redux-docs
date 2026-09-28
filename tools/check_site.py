@@ -35,7 +35,14 @@ def old_handheld_pages():
         capture_output=True, text=True, check=True,
     ).stdout
     pages = re.findall(r"([a-z0-9/-]+\.md)", nav)
-    return [p for p in pages if p != "index.md" and not p.startswith("reference/")]
+    moved_elsewhere = {"index.md", "desktop.md"}  # landing page; Desktop has its own section
+    return [p for p in pages if p not in moved_elsewhere and not p.startswith("reference/")]
+
+
+def check_desktop_section():
+    html = (SITE / "desktop" / "index.html").read_text()
+    check('id="desktop-app"' in html, "desktop/ is not the Desktop App page")
+    check(not (SITE / "handheld" / "desktop").exists(), "Desktop App still published under handheld/")
 
 
 def check_redirects():
@@ -107,7 +114,7 @@ def check_landing():
     check(html.count('class="nx-slide') >= 5, "landing should have 4 handheld slides + 1 mobile slide")
 
 
-CHECKS = [check_redirects, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
+CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
           check_platform_pages, check_toggle_wired, check_landing]
 
 
