@@ -6,11 +6,11 @@ interface with the NX Redux launcher. New to NX Redux? See
 
 ## Supported devices
 
-| Device | Required stock firmware |
+| Device | Minimum stock firmware |
 | --- | --- |
 | TrimUI Brick | `1.1.1` |
 | TrimUI Brick Hammer | `1.1.1` |
-| TrimUI Brick Pro | `1.1.1` |
+| TrimUI Brick Pro | `1.1.1` or `1.1.2` |
 | TrimUI Smart Pro S | `1.0.1` or `1.0.2` |
 | TrimUI Smart Pro | `1.1.1` (should work in theory, but unconfirmed — no test device) |
 
@@ -25,10 +25,9 @@ interface with the NX Redux launcher. New to NX Redux? See
 
 !!! warning "Update the stock firmware first"
     NX Redux relies on system libraries the stock firmware ships, so older
-    firmware breaks some features. Install the
-    [official TrimUI firmware](https://github.com/trimui) version listed below
-    for your device **before** installing NX Redux: the versions are in
-    [Supported devices](#supported-devices) above.
+    firmware breaks some features. Update your device to at least the
+    [official TrimUI firmware](https://github.com/trimui) version listed in
+    [Supported devices](#supported-devices) **before** installing NX Redux.
 
 You will also need:
 
