@@ -46,19 +46,154 @@ launch. PlayStation has a BIOS built in and uses a real one when present.
 ## Zip and 7z files
 
 An archive holding one game plays on every core. The app unpacks it on first
-launch, and saves use the archive's name, as on the handheld. Archives with
-several games or a password are refused with a message. Arcade (`FBN`) zips
-are the game itself and are never unpacked; parent and BIOS sets such as
-`neogeo.zip` are found in the same folder or in `Bios/FBN/`.
+launch, and saves use the archive's name, as on the handheld. An archive with
+one game beside extras such as a readme plays too. Archives with several
+games, a password, or a game the chosen core can't run are refused with a
+message. The unpacked copies are trimmed automatically; see
+[Unpacked games cache](library.md#unpacked-games-cache).
+
+## Multi-disc games
+
+A multi-file disc (`.cue`) or a disc list (`.m3u`) loads as one game. For a
+game with more than one disc, the [in-game menu](in-game-menu.md#the-first-page)
+shows a **Disc** row under **Continue**, with the disc in the drive, such as
+`1/2`. `LEFT` / `RIGHT` change the disc, as opening the lid and swapping it
+would. The disc choice is not saved.
+
+## Arcade (FBNeo)
+
+- An arcade set's zip or 7z *is* the game and is never unpacked.
+- Parent and BIOS sets, such as `neogeo.zip`, are read from the same folder or
+  from `Bios/FBN/`. BIOS sets are not listed as games.
+- A missing BIOS set stops the launch with a message. A missing parent set
+  does not: the game is tried without it.
+- Games show their arcade titles, with bracketed text dropped as on the
+  handheld.
+- Arcade has no cheats.
 
 ## Nintendo DS
 
-The two screens can be stacked, side by side, picture in picture or single
-screen, set separately for portrait and landscape in
-**Options → Console Settings**. With a controller, `R2` swaps the big screen,
-`SELECT` + `LEFT` / `RIGHT` cycles the layout, and `L2` toggles stylus mode.
-3D runs on the GPU at 2× internal resolution by default (1×–8× in
-**Core Options → Video**).
+Nintendo DS runs **melonDS DS**. The core draws both screens and the app lays
+them out. The layout options are in the in-game menu under **Options →
+Console Settings**, which only DS games have. Like the other options, they are
+kept per game or console with [Save Changes](in-game-menu.md#save-changes).
+Screen Scaling and the screen offsets don't apply to the DS screens.
+
+### Portrait layouts
+
+**Layout (portrait)** sets how the two screens share a portrait screen:
+
+| Layout | What you see |
+| --- | --- |
+| **Auto** (default) | **Stacked** when both screens fit the width, else **Picture in picture**. |
+| **Picture in picture** | One screen big, the other small in a corner. |
+| **Stacked** | One screen above the other. |
+| **Single screen** | Only the big screen. |
+
+<!-- SCREENSHOT: ds-portrait-stacked — DS game, portrait, Stacked layout -->
+
+<!-- SCREENSHOT: ds-portrait-pip — DS game, portrait, Picture in picture layout -->
+
+<!-- SCREENSHOT: ds-portrait-single — DS game, portrait, Single screen layout -->
+
+When a controller is connected in portrait, the on-screen pad band goes away
+so the screens get the full height, and **Layout (portrait, controller)** is
+used instead. Its choices are the same, and its default is **Stacked**. A
+clip-on controller that holds the phone, such as the GameSir Pocket Taco or
+the 8BitDo FlipPad, keeps the pad band and the normal portrait layout.
+
+### Landscape layouts
+
+**Layout (landscape)** sets how the two screens share a landscape screen:
+
+| Layout | What you see |
+| --- | --- |
+| **Side by side** (default) | Each screen takes half the width. |
+| **Single screen** | The big screen only, centred. |
+| **Picture in picture** | The big screen centred, the other small in a corner. |
+
+<!-- SCREENSHOT: ds-landscape-side-by-side — DS game, landscape, Side by side layout -->
+
+<!-- SCREENSHOT: ds-landscape-single — DS game, landscape, Single screen layout -->
+
+<!-- SCREENSHOT: ds-landscape-pip — DS game, landscape, Picture in picture layout -->
+
+Without a controller, the on-screen buttons sit over the game in landscape.
+**Pad Opacity (landscape)** in **Options → Frontend** sets how opaque they
+are: 100%, 60%, 40% or 25%, 40% by default.
+
+<!-- SCREENSHOT: ds-landscape-pad-opacity — DS game, landscape, on-screen pad shown over the game -->
+
+### Big screen and inset
+
+These apply in both orientations:
+
+| Option | Values | Default | What it does |
+| --- | --- | --- | --- |
+| **Big Screen** | Top screen, Bottom screen | Top screen | The screen shown big in picture in picture and single screen, and first in stacked and side by side. |
+| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Bottom right | Where the small screen sits in picture in picture. |
+| **Inset Size** | Small, Medium, Large | Medium | The small screen's width: 25%, 33% or 40% of the big screen's width. |
+| **Inset Opacity** | 100%, 75%, 50% | 100% | How opaque the small screen is. Below 100%, the big screen shows through it. |
+
+The small screen in picture in picture never takes touches. Overlays are off
+while the DS screens are drawn apart, and the **Overlay** row shows
+**Unavailable**. Shader presets apply to the big screen, and to both screens
+in stacked and side by side.
+
+### Hotkeys
+
+With a controller or the on-screen pad:
+
+| Buttons | What they do |
+| --- | --- |
+| `R2` | Swap the big screen. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked and Single screen. |
+| `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
+| `L2` | Turn stylus mode on or off, or start touch mode (see below). |
+
+A short label shows the new setting. Hotkey changes are saved to the game's
+settings straight away, without Save Changes.
+
+### Stylus mode
+
+In stylus mode, the d-pad or left stick moves a pen on the bottom screen,
+faster the longer you hold it, and `A` touches. Stylus mode is off each time a
+game starts.
+
+### Touch
+
+You can touch the bottom screen when it is shown full size: in portrait, and
+in landscape with a controller or in touch mode. While the on-screen buttons
+sit over the game in landscape, the DS screens take no touches.
+
+**Touch mode:** in landscape with the on-screen buttons shown and stylus mode
+off, `L2` hides the buttons and shows the bottom screen big, so you can touch
+it. In single screen and picture in picture the bottom screen becomes the big
+one; side by side already shows it full size. A **Controls** button in a free
+corner brings the on-screen buttons back. Rotating the phone, or connecting or
+disconnecting a controller, also ends touch mode. `R2` does nothing in touch
+mode, and touch mode is not saved. With stylus mode on, `L2` turns stylus mode
+off first.
+
+<!-- SCREENSHOT: ds-touch-mode — DS game, landscape, L2 touch mode with the bottom screen big -->
+
+### 3D rendering
+
+- 3D renders on the GPU on devices with OpenGL ES 3.2, else in software.
+- **Internal Resolution** in **Core Options → Video** upscales 3D: 1× to 8×,
+  2× by default, GPU renderer only. The 2D layers stay at native resolution.
+  Some games slow down at 4× or higher.
+- A **Render Mode** change in Core Options applies the next time the game
+  starts.
+- If the GPU renderer can't start, the game runs in software and the app shows
+  **GPU renderer unavailable — using software** once. The next launch tries
+  the GPU again.
+
+### Saves from other DS emulators
+
+Battery saves from the older melonDS core (`.sav`) and from DraStic (`.dsv`)
+are converted to `.srm` on a game's first launch. Save states from the older
+melonDS core don't load.
 
 ## Not available yet
 

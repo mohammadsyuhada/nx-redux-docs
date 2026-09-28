@@ -23,6 +23,10 @@ first.
   place. See [Library & ROM folders](library.md).
 - **Controls:** an on-screen pad, or any Android controller. See
   [Controls](controls.md).
+- **Artwork:** the app shows art you already have, but does not download it
+  yet. See [Artwork](artwork.md).
+- **RetroAchievements:** softcore only for now. See
+  [RetroAchievements](retroachievements.md).
 - **Coming later:** Netplay and Device Sync are planned for a later release.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
   the music player, PortMaster and firmware updates are not part of the app.
@@ -50,8 +54,22 @@ computer. The home folder can sit on an SD card.
 If your games already follow the NX Redux layout from a handheld, the same
 folder names and `Bios/<TAG>/` files work unchanged.
 
-## Add more folders
+The picker can't use the storage root, the SD card root or the Download
+folder. Pick or create a folder inside one of them, such as `NXRedux`.
 
-Games elsewhere on the phone can stay where they are: add their folders as
-**extra folders** in **Tools → Settings → Library**. See
-[Library & ROM folders](library.md).
+## Add a ROMs folder
+
+Right after you pick the home folder, the app asks **Add a ROMs folder?** If
+you already keep games somewhere else on the phone, press `A` **Add folder**
+and pick that folder. It is scanned in place and nothing is moved. Press `B`
+**Skip** to go straight to your library.
+
+You can add more folders later as **extra folders** in **Tools → Settings →
+Library**. See [Library & ROM folders](library.md).
+
+## Next steps
+
+- [Controls](controls.md): the on-screen pad, controllers and the buttons in
+  the menus.
+- [In-game Menu](in-game-menu.md): save states, options and Save Changes.
+- [Game Switcher](game-switcher.md): resume recent games.

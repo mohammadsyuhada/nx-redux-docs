@@ -37,6 +37,27 @@ DraStic is closed-source and no longer available, so Nintendo DS runs on
 
 Not yet. Both are planned for a later release.
 
+## Can I remap controller buttons?
+
+No. Controller buttons map to the NX Redux buttons by their Android names,
+and the app has no remapping. On a controller without a mode button, hold
+`SELECT` + `START` to open the in-game menu. See
+[Controls](../../mobile/controls.md#controller-buttons).
+
+## Is there a RetroAchievements hardcore mode?
+
+Not for now. RetroAchievements on mobile is softcore only, so cheats and save
+states are never blocked. See
+[RetroAchievements](../../mobile/retroachievements.md).
+
+## Where does the game artwork come from?
+
+For now, bring your own: the app shows box art, screenshots and mix images
+from each game folder's `.media` folder, the same layout the handheld's
+Artwork Manager uses. Downloading art automatically while you browse, and an
+art downloader for your whole library, are planned. See
+[Artwork](../../mobile/artwork.md).
+
 ## I removed my SD card and some games disappeared
 
 Games from a folder on a card that is not mounted are left out until the card
