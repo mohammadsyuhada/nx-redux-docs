@@ -29,7 +29,7 @@
 }
 
 /* The first screen sits above the second so the devices can hang over the
-   boundary into "What you get". */
+   boundary into the features. */
 .nx-screen:not(.nx-features) { position: relative; z-index: 2; }
 .nx-features { position: relative; z-index: 1; }
 
