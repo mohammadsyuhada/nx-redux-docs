@@ -39,7 +39,7 @@ a game where you left it.
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
 | [Cheats](#cheats) | When the core takes cheats | Turn the game's cheats on and off. |
-| [Achievements](#achievements) | When RetroAchievements is on and you are signed in | The game's achievements, with your progress next to the row. |
+| [Achievements](#achievements) | When RetroAchievements is on, you are signed in and the session started | The game's achievements. Your progress, such as `12 / 40 unlocked`, shows in the description lines when the row is highlighted. |
 | [Save Changes](#save-changes) | Always | Keep your changes for this console or this game, or restore defaults. |
 
 The line under the list says which settings the game uses right now:
@@ -49,6 +49,10 @@ The line under the list says which settings the game uses right now:
     Changes in Options apply straight away but last only for this session.
     To keep them, use [Save Changes](#save-changes) before you quit. To undo
     a change, quit without saving.
+
+    Two things are saved straight away instead: the Nintendo DS layout
+    hotkeys (see [Nintendo DS](emulators.md#hotkeys)) and achievement mutes
+    (`X` on the Achievements page).
 
 ## Frontend
 
@@ -109,7 +113,8 @@ description.
 ## Core Options
 
 The running core's own settings, grouped into the categories the core
-defines. Only options that can change while the game runs are listed; if
+defines. Only options that can change while the game runs are listed
+(except the DS **Render Mode**; see [Nintendo DS](emulators.md#3d-rendering)); if
 there are none, the menu says **This core has no options that can be changed
 while running.** `LEFT` / `RIGHT` change a value.
 
@@ -150,9 +155,9 @@ Options.
 
 | Choice | What it does |
 | --- | --- |
-| **Save for console** | Save as the settings for every game on this console. If this game had its own settings, they are removed, so it follows the console again. |
+| **Save for console** | Save as the settings for every game on this console. If this game had its own settings, they are removed, so it follows the console again. That also removes the cheats kept with **Save for game** and any changes made with the DS layout hotkeys. |
 | **Save for game** | Save for this game only. This also keeps the cheats you turned on. |
 | **Restore defaults** | Delete the saved settings the game is using now and go back one level: from game to console, or from console to the defaults. |
 
-A game's own settings win over its console's, and the console's win over the
-defaults.
+When a game has its own settings, it uses only those; the console's settings
+apply only to games without their own.

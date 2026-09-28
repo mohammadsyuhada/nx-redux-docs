@@ -58,10 +58,11 @@ names the file it looked for, such as `Looked for Cheats/GBA/...`.
 !!! tip "Variants are merged"
     Some games have several cheat files from different sources, such as
     GameShark or Action Replay. The app loads every file for the game's name
-    and region into one list, and starts each description with its source,
-    such as `(GameShark)`, so you can tell them apart.
+    and region into one list. When a merged cheat is highlighted, the
+    description under the list starts with its source, such as
+    `(GameShark)`, so you can tell them apart.
 
-<!-- SCREENSHOT: in-game-cheats-merged — in-game Cheats page with merged (GameShark) entries -->
+<!-- SCREENSHOT: in-game-cheats-merged — in-game Cheats page with a merged cheat highlighted, so the description under the list starts with (GameShark) -->
 
 ## Cheats and RetroAchievements
 

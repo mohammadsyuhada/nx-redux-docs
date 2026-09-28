@@ -39,7 +39,7 @@ A controller's buttons map to the NX Redux buttons by their Android names:
 | `START`, `SELECT` | `START`, `SELECT` |
 | Mode button (Android's `BUTTON_MODE`) | `MENU` |
 | D-pad | `UP`, `DOWN`, `LEFT`, `RIGHT` |
-| Left and right sticks | The core's analog sticks |
+| Left and right sticks | The core's analog sticks (on Nintendo DS the left stick works as the d-pad, or moves the pen in stylus mode) |
 
 The mapping is fixed: there is no button remapping in the app. On a
 controller without a mode button, hold `SELECT` and `START` together to open
@@ -61,7 +61,10 @@ present, and real buttons in landscape without one.
 ## Game-list context menu
 
 Press `MENU`, or long-press a game, for the same context menu as on the
-handheld:
+handheld. The items depend on the list you're in: Recently Played offers only
+**Remove from Recently Played**, **Remove from Collection** appears only in a
+collection, and **Emulator** appears only for Game Boy Advance, Super Nintendo
+and Sega Genesis.
 
 - **Pin Item / Unpin Item**
 - **Hide Game**

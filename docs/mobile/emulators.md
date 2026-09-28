@@ -99,8 +99,9 @@ Screen Scaling and the screen offsets don't apply to the DS screens.
 When a controller is connected in portrait, the on-screen pad band goes away
 so the screens get the full height, and **Layout (portrait, controller)** is
 used instead. Its choices are the same, and its default is **Stacked**. A
-clip-on controller that holds the phone, such as the GameSir Pocket Taco or
-the 8BitDo FlipPad, keeps the pad band and the normal portrait layout.
+clip-on controller that holds the phone keeps the pad band and the normal
+portrait layout. The GameSir Pocket Taco is recognised as one; the 8BitDo
+FlipPad is expected to be recognised too.
 
 ### Landscape layouts
 
@@ -151,8 +152,12 @@ With a controller or the on-screen pad:
 | `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
 | `L2` | Turn stylus mode on or off, or start touch mode (see below). |
 
-A short label shows the new setting. Hotkey changes are saved to the game's
-settings straight away, without Save Changes.
+A short label shows the new setting. The layout hotkeys (`R2` and `SELECT` +
+a direction) are saved straight away, without Save Changes. Saving one gives
+the game its own settings, copied from the console's if it had none. From then
+on the game uses only its own settings, so later **Save for console** changes
+don't reach it until you use **Restore defaults** in that game. Stylus mode and
+touch mode are not saved.
 
 ### Stylus mode
 
@@ -162,8 +167,9 @@ game starts.
 
 ### Touch
 
-You can touch the bottom screen when it is shown full size: in portrait, and
-in landscape with a controller or in touch mode. While the on-screen buttons
+You can touch the bottom screen whenever it is drawn full size, not when it
+is the small inset in picture in picture. That works in portrait, and in
+landscape with a controller or in touch mode. While the on-screen buttons
 sit over the game in landscape, the DS screens take no touches.
 
 **Touch mode:** in landscape with the on-screen buttons shown and stylus mode
@@ -184,7 +190,7 @@ off first.
   2× by default, GPU renderer only. The 2D layers stay at native resolution.
   Some games slow down at 4× or higher.
 - A **Render Mode** change in Core Options applies the next time the game
-  starts.
+  starts, once you keep it with Save Changes.
 - If the GPU renderer can't start, the game runs in software and the app shows
   **GPU renderer unavailable — using software** once. The next launch tries
   the GPU again.

@@ -124,7 +124,9 @@ again from **Tools → Settings → Library**. Nothing in the app deletes a ROM.
 Zip and 7z games are unpacked into the app's cache on their first launch, and
 some cores get a copy of the game file there too. The app trims this cache
 when it starts and after **Download all game data** in
-[RetroAchievements](retroachievements.md): anything not played for 30 days
-goes first, then the least recently used, until the cache holds at most
-256 MiB. The game that is running is never removed. Clearing the app's cache
+[RetroAchievements](retroachievements.md): anything not used (played or checked for
+achievements) in 30 days goes first, then the least recently used, until the
+cache holds at most 256 MiB. The game that is running is never removed; a file
+bigger than the cap on its own stays while its game runs and goes at the next
+trim. Clearing the app's cache
 in Android's settings is safe too: games are unpacked again when needed.

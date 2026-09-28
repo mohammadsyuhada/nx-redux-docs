@@ -38,14 +38,15 @@ The settings page also has:
 | **Enable achievements** | On, Off | On after you sign in | Track achievements in games. Needs a sign-in. |
 | **Download all game data** | — | — | Cache achievement data for your whole library. See [Offline play](#offline-play). Needs a sign-in. |
 | **Show notifications** | On, Off | On | Show unlock and progress notices in games. |
-| **Notification duration** | 1–5 s | 3 s | How long an unlock notice stays. |
+| **Notification duration** | 1–5 s | 3 s | How long achievement notices stay. |
 | **Progress duration** | Off, 1–5 s | 1 s | How long a progress notice stays. |
 | **Achievement sort order** | See [below](#sort-orders) | Unlocked first | How achievements are sorted, here and in the in-game menu. |
 | **Reset account data** | — | — | Sign out and forget sessions and unsynced unlocks. Game data and badges stay. |
 | **Erase all achievement data** | — | — | Delete every cached game, badge and unsynced unlock, and sign out. |
 | **Reset settings to defaults** | — | — | Put the notification and sort settings back to their defaults and turn **Enable achievements** off. You stay signed in. |
 
-`A` changes a value, and `LEFT` / `RIGHT` work too. **Sign out**, **Reset
+`A` changes a value. On **Notification duration**, **Progress duration** and
+**Achievement sort order**, `LEFT` / `RIGHT` work too. **Sign out**, **Reset
 account data** and **Erase all achievement data** ask to confirm first.
 Signing out turns achievements off, and signing in again needs your
 password. Your unsynced unlocks, game data and badges stay.
@@ -63,9 +64,10 @@ Start a recognised game and unlocks are tracked as you play.
   **Achievements** row. Browse the game's achievements there, press `Y` to
   show only locked ones, and `X` to mute one achievement's notices.
 
-With **Show notifications** off, unlock and progress notices are hidden, but
-notices about the session (the game loading, sign-in problems, going offline,
-syncing) still show.
+With **Show notifications** off, unlock and progress notices, **Game
+Mastered!**, server errors and the connection lost and reconnected notices are
+hidden. These still show: the game loading, no achievements for this game,
+sign-in failed, offline at the start, first-time setup and synced unlocks.
 
 ## Offline play
 

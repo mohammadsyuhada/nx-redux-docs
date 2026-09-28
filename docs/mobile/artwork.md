@@ -32,8 +32,8 @@ This works in extra folders too: the `.media` folder goes next to the games
 in that folder. For a multi-disc game kept in its own folder, the art goes in
 the `.media` of the folder above it, named after the game's folder.
 
-A `.media/bg.png` in a system folder of your home folder is that console's
-background on the main menu.
+A `.media/bg.png` in a system folder of your home folder replaces that
+console's built-in background on the main menu.
 
 After adding or changing art, use **Rescan library** in **Tools → Settings →
 Library** so the app picks it up.

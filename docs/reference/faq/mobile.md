@@ -46,8 +46,8 @@ and the app has no remapping. On a controller without a mode button, hold
 
 ## Is there a RetroAchievements hardcore mode?
 
-Not for now. RetroAchievements on mobile is softcore only, so cheats and save
-states are never blocked. See
+Not for now. RetroAchievements on mobile is softcore only for now, so cheats
+and save states are not blocked. See
 [RetroAchievements](../../mobile/retroachievements.md).
 
 ## Where does the game artwork come from?
