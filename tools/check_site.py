@@ -113,20 +113,21 @@ def check_landing():
 
 HIGHLIGHT_LINKS = ["handheld/netplay/", "handheld/emulators/", "handheld/guide/game-switcher/",
                    "handheld/apps/retroachievements/", "handheld/apps/device-sync/",
-                   "handheld/apps/music-player/"]
+                   "handheld/apps/music-player/", "handheld/guide/osd/", "handheld/apps/artwork-manager/",
+                   "handheld/apps/game-tracker/", "handheld/apps/portmaster/"]
 
 
 def check_highlights():
     html = (SITE / "index.html").read_text()
-    check(html.count('class="nx-feature"') == 6, "landing should list 6 features")
-    check(html.count('class="nx-features__pane') == 6, "each feature needs a preview pane")
+    check(html.count('class="nx-feature"') == len(HIGHLIGHT_LINKS), "every feature needs a row")
+    check(html.count('class="nx-features__pane') == len(HIGHLIGHT_LINKS), "each feature needs a preview pane")
     for href in HIGHLIGHT_LINKS:
         check(f'href="{href}"' in html, f"features lack a link to {href}")
         check((SITE / href / "index.html").exists(), f"feature target missing: {href}")
     for src in re.findall(r'class="nx-features__shot"[^>]*src="([^"]+)"', html):
         check((SITE / src).exists(), f"feature screenshot missing: {src}")
-    check(html.count('role="tab" id="nx-tab-') == 6, "feature rows should be tabs that select, not links")
-    check(html.count('class="nx-features__link"') == 6, "each feature description needs its docs link")
+    check(html.count('role="tab" id="nx-tab-') == len(HIGHLIGHT_LINKS), "feature rows should be tabs that select, not links")
+    check(html.count('class="nx-features__link"') == len(HIGHLIGHT_LINKS), "each feature description needs its docs link")
 
 
 CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
