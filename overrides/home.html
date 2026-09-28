@@ -78,7 +78,7 @@
       {"title": "Cheats, no computer needed", "href": "handheld/apps/cheats/", "more": "Set up cheats", "shots": ["assets/landing/features/cheats-tools.webp", "assets/landing/features/cheats-ingame.webp"],
        "text": "Stuck on that one boss? We won't tell. Grab the cheat database right on the device, then flip cheats on and off from the in-game menu.",
        "platform": "Handheld and Mobile"},
-      {"title": "Controls made for each console", "href": "mobile/controls/", "more": "See the controls", "shots": ["assets/landing/controls/pad-n64.webp", "assets/landing/controls/pad-dc.webp"],
+      {"title": "Controls made for each console", "href": "mobile/controls/", "more": "See the controls", "shots": ["assets/landing/controls/pad-n64.webp", "assets/landing/controls/pad-dc.webp"], "portrait": true,
        "text": "The on-screen pad changes with the console you play, down to the original controller's colours: C-buttons and Z for the Nintendo 64, and the Dreamcast's own coloured face buttons.",
        "platform": "Mobile"},
       {"title": "Sync your devices", "href": "handheld/apps/device-sync/", "more": "How Device Sync works", "shot": "assets/screenshots/device-sync.png",
@@ -120,7 +120,7 @@
                  id="nx-panel-{{ loop.index }}" aria-labelledby="nx-tab-{{ loop.index }}">
               <div class="nx-features__shots">
                 {% for shot in (f.shots or [f.shot]) %}
-                <img class="nx-features__shot{% if loop.first %} is-active{% endif %}" src="{{ shot | url }}" alt="" width="1024" height="768" loading="lazy">
+                <img class="nx-features__shot{% if f.portrait %} nx-features__shot--portrait{% endif %}{% if loop.first %} is-active{% endif %}" src="{{ shot | url }}" alt=""{% if f.portrait %} width="624" height="986"{% else %} width="1024" height="768"{% endif %} loading="lazy">
                 {% endfor %}
               </div>
               <p>{{ f.text }} <a class="nx-features__link" href="{{ f.href | url }}">{{ f.more }}</a></p>
