@@ -147,8 +147,20 @@ def check_not_found():
     check('for="__search"' in html, "404 page lacks the search hint")
 
 
+def check_sidebars():
+    # Pages inside a multi-page section keep the sidebar; only the landing,
+    # About and Desktop (one page in their tab) hide it.
+    allowed = {"index.md", "about.md", "desktop/index.md"}
+    for md in Path("docs").rglob("*.md"):
+        rel = md.relative_to("docs").as_posix()
+        if rel.startswith("_shared/") or rel in allowed:
+            continue
+        head = md.read_text().split("\n---", 1)[0] if md.read_text().startswith("---") else ""
+        check("navigation" not in head, f"{rel} hides the sidebar")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights, check_not_found]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars]
 
 
 def main():

@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
----
-
 # Netplay
 
 NX Redux includes [Netplay](https://github.com/mohammadsyuhada/nextui-netplay)
