@@ -2,83 +2,78 @@
 
 {% block styles %}
   {{ super() }}
+  <link rel="preload" href="{{ 'assets/fonts/misans-semibold.woff2' | url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ 'stylesheets/home.css' | url }}">
 {% endblock %}
 
 {% block tabs %}
   {{ super() }}
-  <div class="nx-home md-typeset">
-    <section class="nx-hero">
-      <img class="nx-hero__logo" src="{{ 'assets/logo.svg' | url }}" alt="">
-      <h1 class="nx-hero__title">NX Redux</h1>
-      <p class="nx-hero__tagline">Pick up, pick a game, play — on TrimUI handhelds and on your phone.</p>
+  <div class="nx-home">
+    <section class="nx-screen">
+      <div class="nx-screen__inner">
+        <div class="nx-screen__body">
+          <nav class="nx-screen__menu" aria-label="Documentation">
+            <ul class="nx-menu">
+              <li><a href="{{ 'handheld/' | url }}">Handheld</a></li>
+              <li><a href="{{ 'mobile/' | url }}">Mobile <span class="nx-menu__tag">Coming soon</span></a></li>
+              <li><a href="{{ 'reference/release-notes/' | url }}">Release Notes</a></li>
+              <li><a href="{{ 'reference/faq/' | url }}">FAQ</a></li>
+            </ul>
+            <p class="nx-screen__tagline">Minimal retro gaming for TrimUI handhelds, and soon for Android phones.</p>
+          </nav>
 
-      <div class="nx-devices">
-        <figure class="nx-device nx-device--handheld">
-          <svg viewBox="0 0 73 113" role="img" aria-label="NX Redux running on a TrimUI Brick Pro">
-            <defs><clipPath id="nx-brick-screen"><rect x="7" y="7" width="59" height="44.25" rx="1"/></clipPath></defs>
-            <rect class="nx-device__body" x="0.5" y="0.5" width="72" height="112" rx="6"/>
-            <rect class="nx-device__bezel" x="4.5" y="4.5" width="64" height="49.25" rx="2.5"/>
-            <g clip-path="url(#nx-brick-screen)">
-              <image class="nx-slide is-active" href="{{ 'assets/screenshots/main-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-              <image class="nx-slide" href="{{ 'assets/screenshots/game-list.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-              <image class="nx-slide" href="{{ 'assets/screenshots/in-game.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-              <image class="nx-slide" href="{{ 'assets/screenshots/context-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
-            </g>
-            <g class="nx-device__controls">
-              <rect x="14" y="68" width="8" height="22" rx="1.5"/>
-              <rect x="7" y="75" width="22" height="8" rx="1.5"/>
-              <circle cx="56" cy="71" r="3.4"/>
-              <circle cx="63" cy="79" r="3.4"/>
-              <circle cx="56" cy="87" r="3.4"/>
-              <circle cx="49" cy="79" r="3.4"/>
-              <rect x="25" y="101" width="9" height="3" rx="1.5"/>
-              <rect x="39" y="101" width="9" height="3" rx="1.5"/>
-            </g>
-          </svg>
-          <figcaption>TrimUI Brick Pro</figcaption>
-        </figure>
+          <div class="nx-devices">
+            <figure class="nx-device nx-device--handheld">
+              <svg viewBox="0 0 73 113" role="img" aria-label="NX Redux running on a TrimUI Brick Pro">
+                <defs><clipPath id="nx-brick-screen"><rect x="7" y="7" width="59" height="44.25" rx="1.5"/></clipPath></defs>
+                <rect class="nx-device__body" x="0.75" y="0.75" width="71.5" height="111.5" rx="6"/>
+                <g clip-path="url(#nx-brick-screen)">
+                  <image class="nx-slide is-active" href="{{ 'assets/screenshots/main-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
+                  <image class="nx-slide" href="{{ 'assets/screenshots/game-list.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
+                  <image class="nx-slide" href="{{ 'assets/screenshots/in-game.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
+                  <image class="nx-slide" href="{{ 'assets/screenshots/context-menu.png' | url }}" x="7" y="7" width="59" height="44.25" preserveAspectRatio="xMidYMid slice"/>
+                </g>
+                <g class="nx-device__controls">
+                  <path d="M15 69h6v6.5h6.5v6h-6.5v6.5h-6v-6.5h-6.5v-6h6.5z"/>
+                  <circle cx="56" cy="71" r="3.2"/>
+                  <circle cx="63" cy="78.5" r="3.2"/>
+                  <circle cx="56" cy="86" r="3.2"/>
+                  <circle cx="49" cy="78.5" r="3.2"/>
+                  <rect x="26" y="101" width="8" height="2.6" rx="1.3"/>
+                  <rect x="39" y="101" width="8" height="2.6" rx="1.3"/>
+                </g>
+              </svg>
+              <figcaption>TrimUI Brick Pro</figcaption>
+            </figure>
 
-        <figure class="nx-device nx-device--mobile">
-          <svg viewBox="0 0 73 158" role="img" aria-label="NX Redux Mobile on a folded Galaxy Z Fold 8 cover screen">
-            <defs><clipPath id="nx-phone-screen"><rect x="2.5" y="2.5" width="68" height="153" rx="7"/></clipPath></defs>
-            <rect class="nx-device__body" x="0.5" y="0.5" width="72" height="157" rx="9"/>
-            <g clip-path="url(#nx-phone-screen)">
-              <image class="nx-slide is-active" href="{{ 'assets/landing/mobile/placeholder.svg' | url }}" x="2.5" y="2.5" width="68" height="153" preserveAspectRatio="xMidYMid slice"/>
-            </g>
-            <circle class="nx-device__camera" cx="36.5" cy="7" r="1.6"/>
-          </svg>
-          <figcaption>Galaxy Z Fold 8 · cover screen</figcaption>
-        </figure>
+            <figure class="nx-device nx-device--mobile">
+              <svg viewBox="0 0 73 158" role="img" aria-label="NX Redux Mobile on a folded Galaxy Z Fold 8 cover screen">
+                <defs><clipPath id="nx-phone-screen"><rect x="3" y="3" width="67" height="152" rx="7"/></clipPath></defs>
+                <rect class="nx-device__body" x="0.75" y="0.75" width="71.5" height="156.5" rx="9"/>
+                <g clip-path="url(#nx-phone-screen)">
+                  <image class="nx-slide is-active" href="{{ 'assets/landing/mobile/placeholder.svg' | url }}" x="3" y="3" width="67" height="152" preserveAspectRatio="xMidYMid slice"/>
+                </g>
+                <circle class="nx-device__camera" cx="36.5" cy="7.5" r="1.5"/>
+              </svg>
+              <figcaption>Galaxy Z Fold 8, folded</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <nav class="nx-hints" aria-label="Quick links">
+          <a class="nx-hint" href="{{ 'handheld/getting-started/' | url }}"><span class="nx-hint__button" aria-hidden="true">A</span>Install</a>
+          <a class="nx-hint" href="https://github.com/mohammadsyuhada/nx-redux/releases"><span class="nx-hint__button" aria-hidden="true">B</span>Download</a>
+          <a class="nx-hint" href="https://www.youtube.com/watch?v=l4iJBRgUe4U"><span class="nx-hint__button" aria-hidden="true">Y</span>Watch demo</a>
+        </nav>
       </div>
     </section>
 
-    <section class="nx-cards">
-      <article class="nx-card">
-        <h2>Handheld</h2>
-        <p>Custom firmware for TrimUI handhelds.</p>
-        <div class="nx-card__actions">
-          <a class="md-button md-button--primary" href="{{ 'handheld/' | url }}">Read the docs</a>
-          <a class="md-button" href="https://github.com/mohammadsyuhada/nx-redux/releases">Download</a>
-        </div>
-      </article>
-      <article class="nx-card">
-        <h2>Mobile <span class="nx-badge">Coming soon</span></h2>
-        <p>The Android app for phones, tablets and Android handhelds.</p>
-        <div class="nx-card__actions">
-          <a class="md-button" href="{{ 'mobile/' | url }}">Preview the docs</a>
-        </div>
-      </article>
-    </section>
-
-    <section class="nx-strip">
-      <h2>One library, two devices</h2>
-      <p>Both use the same <code>Roms/</code>, <code>Bios/</code>, <code>Saves/</code> and
-        <code>Collections/</code> layout, so your games are organised the same way on either.</p>
+    <section class="nx-library">
       <p>
-        <a href="{{ 'handheld/guide/file-access/#whats-where' | url }}">Handheld folders</a> ·
-        <a href="{{ 'mobile/library/' | url }}">Mobile library</a> ·
-        <a href="https://www.youtube.com/watch?v=l4iJBRgUe4U">Watch the demo</a>
+        Both use the same <code>Roms/</code>, <code>Bios/</code>, <code>Saves/</code> and <code>Collections/</code>
+        folders, so one library works on either.
+        See the <a href="{{ 'handheld/guide/file-access/#whats-where' | url }}">handheld folders</a>
+        or the <a href="{{ 'mobile/library/' | url }}">mobile library</a>.
       </p>
     </section>
   </div>

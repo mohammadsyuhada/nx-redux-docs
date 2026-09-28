@@ -1,113 +1,194 @@
-/* Landing page. Loaded only by overrides/home.html. */
+/* Landing page. Loaded only by overrides/home.html.
+   Styled after the NX Redux UI: a black screen, MiSans Semibold, a white pill
+   on the selected row, and round button hints along the bottom. */
+
+@font-face {
+  font-family: "MiSans NX";
+  src: url("../assets/fonts/misans-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
 .md-main { display: none; }
 
 .nx-home {
+  --nx-black: #000;
+  --nx-white: #fff;
+  --nx-grey: #8c8c8c;
+  --nx-outline: #3a3a3a;
+  font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
+  font-weight: 600;
+}
+
+/* The screen: always black, like the device, in both colour schemes. */
+.nx-screen {
+  background: var(--nx-black);
+  color: var(--nx-white);
+}
+
+.nx-screen__inner {
   max-width: 61rem;
   margin: 0 auto;
-  padding: 0 1rem 3rem;
-  color: var(--md-default-fg-color);
-  /* Explicit base size: .md-typeset also sets this, but home.css should not
-     depend on that cascade to keep card/strip text at normal reading size. */
+  padding: 1.6rem 1.2rem 1.4rem;
+}
+
+.nx-screen__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.2rem 0 2.2rem;
+}
+
+/* Menu rows. The first row carries the pill until the pointer or keyboard
+   focus moves into the menu; then the pill follows it. */
+.nx-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nx-menu li { margin: 0; }
+
+.nx-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: -0.55em;
+  padding: 0.18em 0.55em;
+  border-radius: 999px;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  color: var(--nx-white);
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.nx-menu:not(:hover):not(:focus-within) li:first-child a,
+.nx-menu a:hover,
+.nx-menu a:focus-visible {
+  background: var(--nx-white);
+  color: var(--nx-black);
+}
+
+.nx-menu a:focus-visible,
+.nx-hint:focus-visible {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.15rem;
+}
+
+.nx-menu__tag {
+  font-size: 0.4em;
+  color: var(--md-accent-fg-color);
+}
+
+.nx-menu:not(:hover):not(:focus-within) li:first-child .nx-menu__tag,
+.nx-menu a:hover .nx-menu__tag,
+.nx-menu a:focus-visible .nx-menu__tag {
+  color: var(--nx-grey);
+}
+
+.nx-screen__tagline {
+  max-width: 24rem;
+  margin: 1.4rem 0 0;
   font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--nx-grey);
 }
 
-.nx-hero { text-align: center; padding-top: 2.5rem; }
-.nx-hero__logo { width: 3.5rem; height: 3.5rem; }
-/* The logo's strokes are white, so it disappears on the light scheme's
-   light background — invert it there. The dark scheme already has a dark
-   background, so it stays untouched. */
-[data-md-color-scheme="default"] .nx-hero__logo { filter: invert(1); }
-/* Scoped under .nx-hero (two classes) so this beats .md-typeset h1's
-   class+element specificity instead of losing to its size/weight/colour. */
-.nx-hero .nx-hero__title {
-  margin: 0.4rem 0 0;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--md-default-fg-color);
-}
-.nx-hero__tagline { margin: 0.4rem auto 0; max-width: 32rem; font-size: 1rem; color: var(--md-default-fg-color--light); }
-
+/* Devices: flat outlines so the screens do the talking. Both bodies are
+   73 units wide, so they read at the same physical size. */
 .nx-devices {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
-  gap: 3rem;
-  margin-top: 2.5rem;
+  gap: 1.6rem;
 }
 
-/* Scoped under .nx-devices (two classes) so this beats .md-typeset figure's
-   class+element specificity, which would otherwise add margin: 1em auto. */
-.nx-devices .nx-device { margin: 0; }
-.nx-device svg { display: block; height: auto; }
-.nx-device--handheld svg { width: 13rem; }
-.nx-device--mobile svg { width: 13rem; }
-.nx-device figcaption { margin-top: 0.6rem; font-size: 0.7rem; color: var(--md-default-fg-color--light); }
+.nx-device { margin: 0; }
+.nx-device svg { display: block; width: 9.5rem; height: auto; }
 
-.nx-device__body { fill: #2a2a2e; stroke: var(--md-default-fg-color--lightest); stroke-width: 0.6; }
-.nx-device__bezel { fill: #0c0c0c; }
-.nx-device__controls { fill: #45454b; }
-.nx-device__camera { fill: #050505; }
+.nx-device__body,
+.nx-device__controls {
+  fill: none;
+  stroke: var(--nx-outline);
+  stroke-width: 0.6;
+}
+
+.nx-device__camera { fill: var(--nx-outline); }
+
+.nx-device figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  color: var(--nx-grey);
+}
 
 .nx-slide { opacity: 0; transition: opacity 0.8s ease; }
 .nx-slide.is-active { opacity: 1; }
 
-.nx-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 3rem;
+/* Button hints, as along the bottom of every NX Redux screen. */
+.nx-hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
 }
 
-.nx-card {
-  padding: 1.2rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.6rem;
-  background: var(--md-default-bg-color);
+.nx-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: 0.8rem;
+  color: var(--nx-white);
+  text-transform: uppercase;
 }
 
-/* Scoped under .nx-cards (two classes) so this beats .md-typeset h2's
-   class+element specificity instead of losing its size/weight/margin. */
-.nx-cards .nx-card h2 { margin: 0; font-size: 1.1rem; font-weight: 700; }
-.nx-card p { margin: 0.4rem 0 1rem; color: var(--md-default-fg-color--light); }
-.nx-card__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.nx-hint:hover { color: var(--md-accent-fg-color); }
 
-/* Material's `primary: black` palette quirk otherwise renders these buttons
-   in indigo. Use the site's accent colour instead, on the site's own
-   variables only. */
-.nx-home .md-button {
-  color: var(--md-accent-fg-color);
-  border-color: var(--md-accent-fg-color);
-}
-.nx-home .md-button--primary {
-  background-color: var(--md-accent-fg-color);
-  color: var(--md-accent-bg-color);
+.nx-hint__button {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: var(--nx-white);
+  color: var(--nx-black);
+  font-size: 0.85em;
 }
 
-.nx-badge {
-  display: inline-block;
-  margin-left: 0.4rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: 1rem;
-  font-size: 0.6rem;
-  font-weight: 700;
-  vertical-align: middle;
-  color: var(--md-accent-fg-color);
-  border: 1px solid var(--md-accent-fg-color);
+/* Below the screen, the page follows the light or dark theme. */
+.nx-library {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.2rem 2.4rem;
+  font-family: var(--md-text-font-family), sans-serif;
+  font-weight: 400;
 }
 
-.nx-strip { margin-top: 3rem; text-align: center; }
-/* Scoped under .nx-home (two classes) so this beats .md-typeset h2's
-   class+element specificity instead of losing its size/weight/margin. */
-.nx-home .nx-strip h2 { margin: 0.83em 0; font-size: 1.1rem; font-weight: 700; }
-.nx-strip p { max-width: 36rem; margin: 0.4rem auto; color: var(--md-default-fg-color--light); }
-.nx-strip a { color: var(--md-accent-fg-color); }
+.nx-library p {
+  max-width: 36rem;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+.nx-library code {
+  font-family: var(--md-code-font-family), monospace;
+  font-size: 0.9em;
+  color: var(--md-default-fg-color);
+}
+
+.nx-library a { color: var(--md-accent-fg-color); }
+
+/* Material's cyan is too light for body links on white; cyan 800 passes AA. */
+[data-md-color-scheme="default"] .nx-library a { color: #00838f; }
 
 @media (prefers-reduced-motion: reduce) {
-  .nx-slide { transition: none; }
+  .nx-slide,
+  .nx-menu a { transition: none; }
 }
 
 @media screen and (max-width: 44.9375em) {
-  .nx-devices { flex-direction: column; align-items: center; gap: 2rem; }
-  .nx-cards { grid-template-columns: 1fr; }
-  .nx-hero .nx-hero__title { font-size: 1.8rem; }
+  .nx-screen__body { grid-template-columns: 1fr; gap: 2.2rem; }
+  .nx-menu a { font-size: 1.3rem; }
+  .nx-devices { justify-content: center; }
+  .nx-device svg { width: 7.5rem; }
 }
