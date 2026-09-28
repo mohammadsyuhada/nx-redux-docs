@@ -120,7 +120,7 @@ exclude_docs: |
   _shared/
 
 nav:
-  - Getting Started:
+  - Overview:
       - About NX Redux: about.md
   - Handheld:
       - Getting Started: handheld/getting-started.md
