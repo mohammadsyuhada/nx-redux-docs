@@ -76,7 +76,7 @@
       {"title": "Sync your devices", "href": "handheld/apps/device-sync/", "more": "How Device Sync works", "shot": "assets/screenshots/device-sync.png",
        "text": "Add games on one device, then sync over Wi-Fi. Saves, states and, if you like, ROMs arrive on the other.",
        "platform": "Handheld now, Mobile later"},
-      {"title": "Music and videos", "href": "handheld/apps/music-player/", "more": "Explore the Music Player", "shot": "assets/screenshots/music-player.png",
+      {"title": "Music and videos", "href": "handheld/apps/music-player/", "more": "Explore the Music Player", "shots": ["assets/screenshots/music-now-playing.png", "assets/screenshots/music-player.png", "assets/screenshots/media-player.png"],
        "text": "Built-in music and media players, with sound through the speaker, Bluetooth or a USB-C DAC.",
        "platform": "Handheld"},
     ] %}
@@ -98,7 +98,11 @@
             {% for f in features %}
             <div class="nx-features__pane{% if loop.first %} is-active{% endif %}" role="tabpanel"
                  id="nx-panel-{{ loop.index }}" aria-labelledby="nx-tab-{{ loop.index }}">
-              <img class="nx-features__shot" src="{{ f.shot | url }}" alt="" width="1024" height="768" loading="lazy">
+              <div class="nx-features__shots">
+                {% for shot in (f.shots or [f.shot]) %}
+                <img class="nx-features__shot{% if loop.first %} is-active{% endif %}" src="{{ shot | url }}" alt="" width="1024" height="768" loading="lazy">
+                {% endfor %}
+              </div>
               <p>{{ f.text }} <a class="nx-features__link" href="{{ f.href | url }}">{{ f.more }}</a></p>
               <p class="nx-feature__platform">{{ f.platform }}</p>
             </div>
@@ -138,6 +142,16 @@
       var tabs = Array.prototype.slice.call(section.querySelectorAll('[role="tab"]'));
       var panes = section.querySelectorAll('[role="tabpanel"]');
       section.classList.add("is-enhanced");
+      // A feature with several screenshots cycles them while it is selected.
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setInterval(function () {
+          var shots = section.querySelectorAll(".nx-features__pane.is-active .nx-features__shot");
+          if (shots.length < 2) return;
+          var i = Array.prototype.findIndex.call(shots, function (s) { return s.classList.contains("is-active"); });
+          shots[i].classList.remove("is-active");
+          shots[(i + 1) % shots.length].classList.add("is-active");
+        }, 3500);
+      }
       function select(i, focus) {
         tabs.forEach(function (t, j) {
           var on = j === i;

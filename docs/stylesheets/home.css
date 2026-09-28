@@ -281,7 +281,12 @@
 .nx-features.is-enhanced .nx-features__pane.is-active { visibility: visible; }
 
 /* Only the incoming screenshot fades in, so two descriptions never overlap. */
-.nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot { animation: nx-shot-in 180ms ease; }
+.nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot.is-active { animation: nx-shot-in 180ms ease; }
+
+/* Several screenshots share one cell and crossfade; single ones just show. */
+.nx-features__shots { display: grid; }
+.nx-features__shots .nx-features__shot { grid-area: 1 / 1; opacity: 0; transition: opacity 0.8s ease; }
+.nx-features__shots .nx-features__shot.is-active { opacity: 1; }
 
 @keyframes nx-shot-in {
   from { opacity: 0; }
@@ -334,7 +339,8 @@
   .nx-menu a,
   .nx-list button { transition: none; }
   .nx-device { animation: none; }
-  .nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot { animation: none; }
+  .nx-features.is-enhanced .nx-features__pane.is-active .nx-features__shot.is-active { animation: none; }
+  .nx-features__shots .nx-features__shot { transition: none; }
 }
 
 @media screen and (max-width: 44.9375em) {
