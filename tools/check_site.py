@@ -119,7 +119,7 @@ def check_landing():
 HIGHLIGHT_LINKS = ["handheld/netplay/", "handheld/emulators/", "handheld/guide/game-switcher/",
                    "handheld/apps/retroachievements/", "handheld/apps/device-sync/",
                    "handheld/apps/music-player/", "handheld/guide/osd/", "handheld/apps/artwork-manager/",
-                   "handheld/apps/game-tracker/", "handheld/apps/portmaster/"]
+                   "handheld/apps/game-tracker/", "handheld/apps/portmaster/", "handheld/apps/cheats/"]
 
 
 def check_highlights():
