@@ -1,9 +1,25 @@
----
-hide:
-  - navigation
----
-
 # Getting Started
+
+NX Redux for TrimUI handhelds is custom firmware that replaces the stock
+interface with the NX Redux launcher. New to NX Redux? See
+[About NX Redux](../about.md) first.
+
+## Supported devices
+
+| Device | Required stock firmware |
+| --- | --- |
+| TrimUI Brick | `1.1.1` |
+| TrimUI Brick Hammer | `1.1.1` |
+| TrimUI Brick Pro | `1.1.1` |
+| TrimUI Smart Pro S | `1.0.1` or `1.0.2` |
+| TrimUI Smart Pro | `1.1.1` (should work in theory, but unconfirmed — no test device) |
+
+!!! warning "SD cards are built per device model"
+    Each release is packaged for a specific device — resolution, OSD assets and
+    other layout differ between models — so a card set up for one device (e.g.
+    the Brick) must **not** be moved into another (e.g. the Smart Pro S). To
+    carry saves, save states, settings and (optionally) ROMs across devices, use
+    the built-in [Device Sync](apps/device-sync.md) tool instead of swapping cards.
 
 ## Before you install
 
@@ -11,13 +27,8 @@ hide:
     NX Redux relies on system libraries the stock firmware ships, so older
     firmware breaks some features. Install the
     [official TrimUI firmware](https://github.com/trimui) version listed below
-    for your device **before** installing NX Redux.
-
-| Device | Required stock firmware |
-| --- | --- |
-| TrimUI Brick / Brick Hammer / Brick Pro | `1.1.1` |
-| TrimUI Smart Pro S | `1.0.1` or `1.0.2` |
-| TrimUI Smart Pro | `1.1.1` |
+    for your device **before** installing NX Redux: the versions are in
+    [Supported devices](#supported-devices) above.
 
 You will also need:
 

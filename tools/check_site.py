@@ -66,9 +66,14 @@ def check_images():
             check(target.exists(), f"{html_file.relative_to(SITE)}: broken image {src}")
 
 
-def check_handheld_overview():
-    html = (SITE / "handheld" / "index.html").read_text()
-    check('id="why-nx-redux"' in html, "handheld overview lacks the Why NX Redux section")
+def check_about():
+    html = (SITE / "about" / "index.html").read_text()
+    check('id="why-nx-redux"' in html, "About page lacks the Why NX Redux section")
+    for href in ["../handheld/getting-started/", "../mobile/getting-started/", "../desktop/"]:
+        check(f'href="{href}"' in html, f"About page lacks a link to {href}")
+    for old, new in [("handheld", "handheld/getting-started/"), ("mobile", "mobile/getting-started/")]:
+        page = (SITE / old / "index.html").read_text()
+        check(new.split("/", 1)[1] in page and "location" in page, f"/{old}/ does not redirect to {new}")
 
 
 MOBILE_PAGES = ["", "getting-started/", "library/", "controls/", "emulators/"]
@@ -97,7 +102,7 @@ def check_no_platform_toggle():
 def check_landing():
     html = (SITE / "index.html").read_text()
     for needle in ['class="nx-menu"', 'nx-device--handheld', 'nx-device--mobile', 'Coming soon',
-                   'href="handheld/"', 'href="mobile/"', 'class="nx-hints"',
+                   'href="handheld/getting-started/"', 'href="mobile/getting-started/"', 'class="nx-hints"',
                    'prefers-reduced-motion', 'home.css']:
         check(needle in html, f"landing lacks {needle!r}")
     check("nx-card" not in html, "landing still has the old platform cards")
@@ -142,7 +147,7 @@ def check_not_found():
     check('for="__search"' in html, "404 page lacks the search hint")
 
 
-CHECKS = [check_redirects, check_desktop_section, check_images, check_handheld_overview, check_mobile_section, check_snippets_inlined,
+CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_snippets_inlined,
           check_no_platform_toggle, check_landing, check_highlights, check_not_found]
 
 

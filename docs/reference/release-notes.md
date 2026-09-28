@@ -28,7 +28,7 @@ lists, search and netplay over a hotspot.
 - **New NX Redux look.** The new NX Redux mark is the install splash, the
   default boot logo, the default background and the desktop app icon. The
   previous NextUI boot logo is still in the boot logo list. See
-  [Why "NX Redux"?](../handheld/index.md#why-nx-redux).
+  [Why "NX Redux"?](../about.md#why-nx-redux).
 - **Arcade game titles.** FBNeo, Naomi and Atomiswave zips show their full
   game title instead of the short zip name (`mslug.zip` shows as
   *Metal Slug - Super Vehicle-001*), and BIOS zips such as `neogeo.zip` are

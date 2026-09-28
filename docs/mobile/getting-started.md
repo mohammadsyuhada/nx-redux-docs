@@ -1,5 +1,28 @@
 # Getting Started with NX Redux Mobile
 
+!!! info "Coming soon"
+    NX Redux Mobile is not released yet. These pages grow as its features
+    ship.
+
+NX Redux Mobile brings the NX Redux look, folder layout and in-game features
+to Android phones, tablets and Android handhelds. It runs retro systems
+through bundled libretro cores, with no downloads needed. An iOS version is
+planned after Android. New to NX Redux? See [About NX Redux](../about.md)
+first.
+
+## What's different from the handheld
+
+- **Emulators:** Nintendo DS runs melonDS DS (DraStic is not available), and
+  Sega Dreamcast is not included in the first release. See
+  [Emulators](emulators.md).
+- **Library:** besides the home folder, the app can scan extra folders in
+  place. See [Library & ROM folders](library.md).
+- **Controls:** an on-screen pad, or any Android controller. See
+  [Controls](controls.md).
+- **Coming later:** Netplay and Device Sync are planned for a later release.
+- **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
+  the music player, PortMaster and firmware updates are not part of the app.
+
 ## Install
 
 NX Redux Mobile is not released yet. This section will list where to get it

@@ -43,6 +43,8 @@ plugins:
   - search
   - redirects:
       redirect_maps:
+        handheld/index.md: handheld/getting-started.md
+        mobile/index.md: mobile/getting-started.md
         getting-started.md: handheld/getting-started.md
         guide/main-menu.md: handheld/guide/main-menu.md
         guide/game-switcher.md: handheld/guide/game-switcher.md
@@ -118,8 +120,9 @@ exclude_docs: |
   _shared/
 
 nav:
+  - Getting Started:
+      - About NX Redux: about.md
   - Handheld:
-      - Overview: handheld/index.md
       - Getting Started: handheld/getting-started.md
       - User Guide:
           - Main Menu & Game Lists: handheld/guide/main-menu.md
@@ -175,7 +178,6 @@ nav:
           - Input Tester: handheld/settings/input-tester.md
           - About: handheld/settings/about.md
   - Mobile:
-      - Overview: mobile/index.md
       - Getting Started: mobile/getting-started.md
       - Library & ROM folders: mobile/library.md
       - Controls: mobile/controls.md
