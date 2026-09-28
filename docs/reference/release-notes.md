@@ -4,6 +4,67 @@ What changed in each NX Redux release. Download packages for every device
 from the [releases page](https://github.com/mohammadsyuhada/nx-redux/releases),
 or update on the device from [Settings → About](../settings/about.md).
 
+## v1.13.0
+
+*28 September 2026*
+
+A selectable UI scale, a new NX Redux look, and readable arcade game names
+lead this release, alongside fixes for Dreamcast controls, long IPTV channel
+lists, search and netplay over a hotspot.
+
+### New features
+
+- **UI scale.** **Settings → Appearance → UI scale** sets the size of text
+  and menus across the whole UI: **Default**, **1x** (smaller, more rows) or
+  **2x** (larger, fewer rows). Default follows the device, 2x on the Brick and
+  1x on the Brick Pro and Smart Pro S. The Dreamcast and Nintendo 64 in-game
+  menus follow it too. See [Appearance → UI scale](../settings/appearance.md#ui-scale).
+- **New NX Redux look.** The new NX Redux mark is the install splash, the
+  default boot logo, the default background and the desktop app icon. The
+  previous NextUI boot logo is still in the boot logo list. See
+  [Why "NX Redux"?](../index.md#why-nx-redux).
+- **Arcade game titles.** FBNeo, Naomi and Atomiswave zips show their full
+  game title instead of the short zip name (`mslug.zip` shows as
+  *Metal Slug - Super Vehicle-001*), and BIOS zips such as `neogeo.zip` are
+  hidden from the game list automatically. **Rename Rom** and `map.txt`
+  names still win. See [Arcade (FBNeo)](../emulators/arcade.md) and
+  [Dreamcast → Arcade games](../emulators/dreamcast.md#arcade-games-naomi-atomiswave).
+- **Scraping Sega and arcade games.** The Artwork Manager recognises the
+  `(GPGX)` tag and matches each Sega game by its file extension (Master
+  System, Game Gear, SG-1000, Sega CD or Genesis), so all your Sega games can
+  live under `(GPGX)` folders and still get the right art. Naomi and
+  Atomiswave zips in the `DC` folder are scraped as arcade sets. See
+  [Artwork Manager](../apps/artwork-manager.md).
+- **SFTP file access.** The Developer toggles are now **Enable SSH / SFTP**
+  and **Start SSH / SFTP on boot**, making clear that the same switch lets
+  you browse and copy files on the SD card over Wi-Fi with an SFTP client
+  such as FileZilla. A new guide page walks through it. See
+  [Accessing Your Files](../guide/file-access.md).
+
+### Fixes
+
+- **Dreamcast:** the face buttons map to the Dreamcast pad by position
+  (bottom is Dreamcast `A`, right is `B`), so games that use the face buttons
+  for the camera, like Unreal Tournament, play as designed. This holds under
+  either button layout. See [Dreamcast → Controls](../emulators/dreamcast.md#controls).
+- **Media Player:** Online TV no longer cuts long country lists short. The
+  whole list is shown (the United States alone has over 1,400 channels), and
+  the channel list gains `L1`/`R1` to jump between letters and `LEFT`/`RIGHT`
+  to jump a page.
+- **Search:** results use your `map.txt` names, show the dimmed emulator tag
+  for duplicates like the game lists do, and include games from every console
+  folder.
+- **In-game menu:** the "X / Y unlocked" count now shows on the Achievements
+  entry.
+- **Netplay:** a host running its own hotspot is now found by the joining
+  device, and the joiner's prompt for a different game title appears.
+- **Launching games:** ROMs whose path contains two spaces in a row launch
+  correctly.
+- **Game Tracker:** play time for games with an apostrophe in the title is
+  recorded under the right game.
+- **Desktop app:** card and app paths containing spaces work in Clean dot
+  files, Device Sync and the netplay wizard.
+
 ## v1.12.0
 
 *22 September 2026*
