@@ -121,6 +121,16 @@ disc images keep their filenames. A **Rename Rom** or
 wins over that title. A BIOS zip placed in the game folder by mistake is
 hidden from the list.
 
+Several versions of one game can sit side by side, and each row gets the
+detail that tells it apart, the same way as on
+[Arcade](arcade.md#keeping-several-versions-of-a-game): the region
+(*Mazan: Flash of the Blade (World)* / *(Japan)* / *(US)*), else Flycast's
+version detail (*Dead or Alive 2 (Rev A)*), while the parent set keeps the
+plain title (*The King of Fighters Neowave* next to *… (Japan)*). Versions
+with nothing else to tell them apart show the zip name in brackets.
+
+![Dreamcast game list mixing disc images with Naomi versions of the same game](../../assets/screenshots/dc-arcade-clone-names.png)
+
 Both boards **require their BIOS zip** in `Bios/DC/`:
 
 | Board | BIOS file |

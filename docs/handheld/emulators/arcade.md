@@ -42,11 +42,29 @@ sf2.zip	Street Fighter II
 
 (Filename, then a single **tab**, then the display name.)
 
-!!! note "Clones can share a title"
-    Versions of the same game (for example `sf2` and `sf2ua`) have the
-    same plain title. When two of them sit in the same folder, both rows
-    show their filenames instead so you can tell them apart; rename one
-    to fix it.
+### Keeping several versions of a game
+
+Versions of the same game share one plain title: `avsp.zip` (Europe) and
+`avspj.zip` (Japan) are both *Alien vs. Predator*. You can keep both in the
+folder, for example the English set for RetroAchievements and the Japanese
+one for gameplay. The game list tells them apart with the detail the
+title leaves out, shown dimmed after it:
+
+- **Region** when each version is from a different one: *Alien vs.
+  Predator (Europe)* and *Alien vs. Predator (Japan)*.
+- The **full version detail** from FBNeo's database when regions repeat or
+  are missing: *Street Fighter II': Champion Edition (Japan 920322)* and
+  *(Japan 920513)*, *1942 (Revision B)* and *(Revision A)*.
+- A version with no detail at all (usually the parent set) keeps the plain
+  title, and the others get theirs.
+- If nothing else tells them apart, the **zip name** goes in brackets:
+  *Virtua Tennis 2 (vtennis2)* and *Virtua Tennis 2 (vtenis2c)*.
+
+Versions with different titles, like *Cadillacs and Dinosaurs* (`dino`) and
+*Cadillacs: Kyouryuu Shin Seiki* (`dinoj`), simply show those titles. A
+**Rename Rom** or `map.txt` name still wins over all of this.
+
+![Arcade game list with two versions of Alien vs. Predator and of 1942](../../assets/screenshots/arcade-clone-names.png)
 
 ## Romset version matters
 
