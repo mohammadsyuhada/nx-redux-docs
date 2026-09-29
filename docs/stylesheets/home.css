@@ -2,13 +2,6 @@
    Styled after the NX Redux UI: a black screen, MiSans Semibold, a white pill
    on the selected row, and round button hints along the bottom. */
 
-@font-face {
-  font-family: "MiSans NX";
-  src: url("../assets/fonts/misans-semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-display: swap;
-}
-
 .md-main { display: none; }
 
 .nx-home {

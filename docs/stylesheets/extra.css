@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "MiSans NX";
+  src: url("../assets/fonts/misans-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
 /* Screenshots: full width on mobile, half width on larger screens */
 @media screen and (min-width: 60em) {
   .md-typeset img {
@@ -62,4 +69,76 @@
   font-size: 0.75em;
   font-weight: 600;
   border: 1px solid currentColor;
+}
+
+/* Sidebar categories as NX Redux pills: a quiet grey capsule in the device
+   font, so a category reads apart from its pages. White pills stay reserved
+   for "selected" as on the device; the current page keeps its cyan colour.
+   Only the categories inside a tab get the pill; the tab's own title at the
+   top of the sidebar ("Handheld", "Mobile") stays as Material draws it. */
+@media screen and (min-width: 76.25em) {
+  /* The sidebar scrolls up and down only. */
+  .md-sidebar--primary .md-sidebar__scrollwrap { overflow-x: hidden; }
+
+  /* The tab title ("Handheld", "Mobile") stays above the categories, so one
+     sliding out as the next takes over passes under it, not over it. */
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link {
+    z-index: 2;
+    /* A solid band instead of Material's soft glow underneath. */
+    box-shadow: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  /* Material clips the lists for its expand animation; on desktop sections
+     are always open, so let them overflow and the categories can pin to the
+     sidebar instead of to the clipped list. */
+  .md-nav--primary .md-nav__item--section > .md-nav > .md-nav__list { overflow: visible; }
+
+  .md-nav--primary .md-nav__item--section .md-nav__item--section { margin: 2em 0; }
+  .md-nav--primary .md-nav__item--section .md-nav__item--section:first-child { margin-top: 0.6em; }
+
+  .md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link {
+    display: inline-flex;
+    width: auto;
+    margin: 0 0 0.5em -0.1rem;
+    padding: 0.2em 0.75em;
+    border-radius: 999px;
+    background: var(--md-default-fg-color--lightest);
+    font-family: "MiSans NX", var(--md-text-font-family), sans-serif;
+    font-weight: 600;
+    font-size: 0.68rem;
+    letter-spacing: 0.01em;
+    /* Pins just below the tab title; the script sets the exact offset.
+       (Material pins only the tab title itself, not the categories in it.) */
+    position: sticky;
+    top: var(--nx-pin-top, 1.6rem);
+    z-index: 1;
+    transition: border-radius 150ms ease, background-color 150ms ease, padding 150ms ease;
+  }
+
+  .md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link,
+  .md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link[for] {
+    color: var(--md-default-fg-color);
+  }
+
+  /* Pinned while its pages scroll underneath (marked by
+     javascripts/sidebar-sections.js, which also measures the sidebar): the
+     pill opens into a solid grey bar exactly as wide as the sidebar, with a
+     little extra height, so the pages slide under it. */
+  .md-nav--primary .md-nav__item--section .md-nav__item--section > .md-nav__link.is-stuck {
+    display: flex;
+    width: var(--nx-bar-width, 100%);
+    margin-left: var(--nx-bar-shift, 0);
+    padding-left: 0.6rem;  /* the bar starts at the sidebar edge; this lines its text up with the page names */
+    border-radius: 0;
+    /* The pill's grey made solid, so the pages sliding under it stay hidden. */
+    background: #2a2c34;
+    padding-top: 0.55em;
+    padding-bottom: 0.55em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-nav--primary .md-nav__item--section > .md-nav__link { transition: none; }
 }

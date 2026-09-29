@@ -119,8 +119,8 @@ def check_landing():
     check(html.count('class="nx-slide') >= 5, "the Brick should cycle 2 screens and the Fold at least 3")
     for asset in ["handheld/brick-pro.webp", "handheld/main-menu.webp", "handheld/game-list.webp", "mobile/zfold8.webp", "mobile/main-menu.webp", "mobile/game-list.webp", "controls/pad-n64.webp"]:
         check((SITE / "assets" / "landing" / asset).exists(), f"landing image not published: {asset}")
-    css = (SITE / "stylesheets" / "home.css").read_text()
-    check("misans-semibold.woff2" in css, "landing does not load the NX Redux UI font")
+    css = (SITE / "stylesheets" / "extra.css").read_text()
+    check("misans-semibold.woff2" in css, "the NX Redux UI font is not declared for the site")
     check((SITE / "assets" / "fonts" / "misans-semibold.woff2").exists(), "MiSans font file not published")
 
 
