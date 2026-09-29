@@ -25,8 +25,8 @@ shows the running core's version.
 !!! important "Changes aren't saved until you use Save Changes"
     Everything you change in Options takes effect immediately but only lasts
     for the current session. To keep it, open [Save Changes](#save-changes)
-    before you quit. This makes it easy to experiment — to undo a change,
-    just quit without saving.
+    before you quit. This makes it easy to experiment: to undo a change,
+    quit without saving.
 
 ## Frontend
 
@@ -135,9 +135,10 @@ If the game isn't recognized or has no achievements, a message tells you so.
 
 ## Save Changes
 
-Keeps what you've changed in Options — Frontend, Core Options, Shaders,
-Controls and Shortcuts. The entry's description tells you which settings the game is using
-right now: *Using defaults*, *Using console config* or *Using game config*.
+Keeps what you've changed in Options: Frontend, Core Options, Shaders,
+Controls and Shortcuts. The entry's description tells you which settings the
+game is using right now: *Using defaults*, *Using console config* or *Using
+game config*.
 
 | Choice | What it does |
 | --- | --- |

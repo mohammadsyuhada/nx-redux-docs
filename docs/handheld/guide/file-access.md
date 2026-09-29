@@ -1,22 +1,22 @@
 # Accessing Your Files
 
-Everything NX Redux uses — ROMs, saves, BIOS files, artwork, music and
-videos — lives on the SD card. You can reach it two ways:
+Everything NX Redux uses (ROMs, saves, BIOS files, artwork, music and videos)
+lives on the SD card. You can reach it two ways:
 
-- **Over Wi-Fi with SFTP** — browse and copy files from your computer while
-  the SD card stays in the device.
-- **With a card reader** — power the device off, take the SD card out and
-  open it on your computer.
+| Way | How it works |
+| --- | --- |
+| [**Over Wi-Fi with SFTP**](#over-wi-fi-sftp) | Browse and copy files from your computer while the SD card stays in the device |
+| [**With a card reader**](#with-a-card-reader) | Power the device off, take the SD card out and open it on your computer |
 
 ## Over Wi-Fi (SFTP)
-
-SFTP is file transfer over SSH, so it comes with the SSH server: when SSH is
-on, SFTP is on.
 
 1. Connect the device to Wi-Fi (**Settings → Network**).
 2. Turn on **Settings → Developer → Enable SSH / SFTP**. The hint under the
    toggle shows the device's IP address and login, e.g.
    `root@192.168.1.8  Password: tina`.
+
+    ![Settings → Developer with Enable SSH / SFTP](../../assets/screenshots/set-developer.png)
+
 3. Connect from your computer with an SFTP client using:
 
     | Field    | Value                                                  |
@@ -27,28 +27,35 @@ on, SFTP is on.
     | Username | `root`                                                 |
     | Password | `tina` on Brick and Brick Pro; leave empty on Smart Pro S |
 
-4. Go to `/mnt/SDCARD` — that is the root of the SD card.
+4. Go to `/mnt/SDCARD`. That is the root of the SD card.
 
 To have SFTP available every time the device starts, also turn on
 **Start SSH / SFTP on boot**.
 
+??? info "More detail"
+    SFTP is file transfer over SSH, so it comes with the SSH server: when SSH
+    is on, SFTP is on.
+
 ### SFTP clients
 
-Any SFTP client works. Some free ones:
+Any SFTP client works. [FileZilla](https://filezilla-project.org/) is free and
+runs on Windows, macOS and Linux:
 
-- **[FileZilla](https://filezilla-project.org/)** (Windows, macOS, Linux) —
-  open **File → Site Manager → New site**, set **Protocol** to
-  **SFTP - SSH File Transfer Protocol**, fill in the host, port, user and
-  password above, and connect. Accept the host key the first time. Drag files
-  between the left (your computer) and right (the device) panes.
-- **[WinSCP](https://winscp.net/)** (Windows) — choose **SFTP** as the file
-  protocol.
-- **[Cyberduck](https://cyberduck.io/)** (macOS, Windows) — choose
-  **SFTP (SSH File Transfer Protocol)**.
-- **Linux file managers** — type `sftp://root@192.168.1.8/mnt/SDCARD` into
-  the address bar of Files (GNOME) or Dolphin (KDE).
-- **Command line** — `sftp root@192.168.1.8` or
-  `scp game.zip root@192.168.1.8:/mnt/SDCARD/Roms/...`.
+1. Open **File → Site Manager → New site**.
+2. Set **Protocol** to **SFTP - SSH File Transfer Protocol**.
+3. Fill in the host, port, user and password above, and connect.
+4. Accept the host key the first time.
+5. Drag files between the left (your computer) and right (the device) panes.
+
+??? info "More detail: other free SFTP clients"
+    - **[WinSCP](https://winscp.net/)** (Windows): choose **SFTP** as the file
+      protocol.
+    - **[Cyberduck](https://cyberduck.io/)** (macOS, Windows): choose
+      **SFTP (SSH File Transfer Protocol)**.
+    - **Linux file managers**: type `sftp://root@192.168.1.8/mnt/SDCARD` into
+      the address bar of Files (GNOME) or Dolphin (KDE).
+    - **Command line**: `sftp root@192.168.1.8` or
+      `scp game.zip root@192.168.1.8:/mnt/SDCARD/Roms/...`.
 
 !!! tip "Keep the device awake during big transfers"
     Wi-Fi drops when the device sleeps, which stops a transfer. For long

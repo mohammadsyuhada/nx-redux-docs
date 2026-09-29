@@ -1,13 +1,12 @@
 # Buttons & Shortcuts
 
-A quick reference for the hardware shortcuts built into NX Redux — the
-combos that work from anywhere, plus the buttons worth knowing in the
-menus and in-game.
+A quick reference for the hardware shortcuts built into NX Redux: the combos
+that work from anywhere, plus the buttons worth knowing in the menus and
+in-game.
 
 ## Anywhere — menus or in-game
 
-These are handled by a background service, so they work on any screen,
-including mid-game:
+These work on any screen, including mid-game:
 
 | Shortcut | Action |
 | --- | --- |
@@ -22,38 +21,41 @@ including mid-game:
 Volume and brightness show an on-screen indicator as you adjust.
 
 !!! note
-    The color-temperature combo isn't available on the Smart Pro S — set
+    The color-temperature combo isn't available on the Smart Pro S. Set
     color temperature in [Settings → Display](../settings/display.md)
     instead.
 
-The **FN switch** is a shortcut of its own: one flick applies the set of
-changes you configured for it (volume, screen, LEDs, turbo fire, D-pad mode,
-see [FN switch settings](../settings/fn-switch.md)) and flipping it back
-restores everything. Muting the speaker from the OSD is separate and does not
-depend on the switch.
+The **FN switch** is a shortcut of its own. One flick applies the set of
+changes you configured for it (volume, screen, LEDs, turbo fire, D-pad mode;
+see [FN switch settings](../settings/fn-switch.md)). Flipping it back restores
+everything. Muting the speaker from the OSD is separate and does not depend on
+the switch.
+
+??? info "More detail"
+    The combos above are handled by a background service, which is why they
+    work on any screen.
 
 ## In the menus
 
 `A` confirms and `B` goes back. Prefer confirm at the bottom? See
 [Button Layout](button-layout.md).
 
-- `SELECT` — open the [Game Switcher](game-switcher.md).
-- `START` — at the top level of the main menu, open **Search**.
-- `X` — resume the highlighted game from where you last left off.
-- `Y` — launch a netplay-capable game straight into [Netplay](../netplay.md).
-- `MENU` — open the [context menu](context-menu.md) for the highlighted
-  game or tool.
-- `F1` / `F2` — launch your assigned tools (Brick and Brick Pro — see
-  [Settings → F1 / F2 Keys](../settings/fn-keys.md)).
+| Button | Action |
+| --- | --- |
+| `SELECT` | Open the [Game Switcher](game-switcher.md) |
+| `START` | At the top level of the main menu, open **Search** |
+| `X` | Resume the highlighted game from where you last left off |
+| `Y` | Launch a netplay-capable game straight into [Netplay](../netplay.md) |
+| `MENU` | Open the [context menu](context-menu.md) for the highlighted game or tool |
+| `F1` / `F2` | Launch your assigned tools (Brick and Brick Pro; see [Settings → F1 / F2 Keys](../settings/fn-keys.md)) |
 
 ## In-game
 
-- `MENU` — pause the game and open the
-  [in-game menu](playing-games.md#the-in-game-menu).
-- `MENU` + `SELECT` — save, grab a fresh screenshot, and quit straight
-  back to the [Game Switcher](game-switcher.md) — the fastest way to hop
-  between games.
-- Fast-forward, rewind and turbo get their own configurable shortcuts
-  (optionally `MENU`-modified) under the in-game menu's
-  [Options → Shortcuts](in-game-options.md#shortcuts), per emulator or per
-  game.
+| Button | Action |
+| --- | --- |
+| `MENU` | Pause the game and open the [in-game menu](playing-games.md#the-in-game-menu) |
+| `MENU` + `SELECT` | Save, grab a fresh screenshot, and quit straight back to the [Game Switcher](game-switcher.md). The fastest way to hop between games. |
+
+Fast-forward, rewind and turbo get their own configurable shortcuts
+(optionally `MENU`-modified). Set them under the in-game menu's
+[Options → Shortcuts](in-game-options.md#shortcuts), per emulator or per game.

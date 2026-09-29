@@ -6,25 +6,35 @@ the game list shows `Y NETPLAY`:
 
 ![Y NETPLAY hint in the game list](../assets/screenshots/game-list.png)
 
-Press `Y` on a supported game to host or join over Wi-Fi or a device-hosted
-hotspot — no manual IP entry, no persistent toggle to remember to turn back
-off, and save data is synced automatically before the match starts.
-
-![Netplay host/join](../assets/screenshots/netplay.png)
+Press `Y` to host or join over Wi-Fi or a hotspot hosted by one device. There
+is no IP to type and no persistent toggle to remember to turn off. Save data
+syncs automatically before the match starts.
 
 ## Starting a session
 
 1. Both players pick the same game in their game list and press `Y`.
 2. One player chooses **Host Game**, the other **Join Game**.
-3. Devices discover each other automatically over the local network (or a
-   hotspot hosted by one device); save data syncs before the match starts.
+
+    ![Netplay host/join](../assets/screenshots/netplay.png)
+
+3. Both players choose how to connect: **Hotspot** (hosted by one device) or **WiFi** (the
+   local network).
+
+    ![The Connection screen with Hotspot and WiFi](../assets/landing/features/netplay-connection.webp)
+
+4. The joiner picks the host from the **Select Host** list. Devices find each
+   other automatically.
+
+    ![The Select Host list showing one host](../assets/landing/features/netplay-select-host.webp)
+
+5. Save data syncs, then the match starts.
 
 ## Supported systems
 
-Netplay is only available on the cores listed below — the `Y NETPLAY` hint
-appears only for games in these `Roms` folders. Systems not in the table
-(Nintendo DS, Virtual Boy, Neo Geo Pocket, the Atari and Commodore machines,
-and so on) have no netplay.
+Netplay works only on the cores below. The `Y NETPLAY` hint appears only for
+games in these `Roms` folders. Systems not in the table (Nintendo DS, Virtual
+Boy, Neo Geo Pocket, the Atari and Commodore machines, and so on) have no
+netplay.
 
 | System | `Roms` folder | Core | Netplay type |
 | --- | --- | --- | --- |
@@ -47,83 +57,105 @@ and so on) have no netplay.
 | Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus (standalone) | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |
 | Sega Dreamcast | `DreamCast (DC)` | Flycast | GGPO rollback, 2 players ([details](emulators/dreamcast.md#netplay)) |
 
-**Lockstep** is classic frame-synchronised netplay: both devices run the same
-game and exchange controller input every frame, so it suits games with a
-built-in multiplayer mode. **GGPO** (Dreamcast) is rollback netplay: each
-device runs ahead on its own input and quietly corrects when the other
-player's input arrives, which keeps it responsive over Wi-Fi. **GB Link** and **GBA Link** instead emulate the
-link cable (and, for GBA, the wireless adapter), so single-player-cartridge
-features like trading and versus battles work between two devices.
+Both players must use the same system folder (and so the same core) for the
+same game.
+
+| Netplay type | What it means |
+| --- | --- |
+| **Lockstep** | Both devices run the same game and swap controller input every frame. Suits games with a built-in multiplayer mode. |
+| **GGPO** (Dreamcast) | Rollback netplay. Stays responsive over Wi-Fi. |
+| **GB Link** / **GBA Link** | Emulates the link cable (and, for GBA, the wireless adapter). Trading and versus battles in single-player cartridges work between two devices. |
 
 !!! warning "Game Boy Advance: use the `GBA` folder, not `MGBA`"
-    NX Redux ships two Game Boy Advance cores in two `Roms` folders:
-    **gpSP** in `Game Boy Advance (GBA)` and **mGBA** in
-    `Game Boy Advance (MGBA)`. Only **gpSP** supports netplay. A GBA game
-    placed in the `MGBA` folder shows no `Y NETPLAY` hint and cannot host or
-    join — move it to `Game Boy Advance (GBA)` to play over link.
-    The same applies to `Super Game Boy (SGB)`, which also runs on mGBA:
-    put Game Boy games in `Game Boy (GB)` / `Game Boy Color (GBC)` for link
-    play.
+    Only **gpSP** in `Game Boy Advance (GBA)` supports netplay. A GBA game in
+    `Game Boy Advance (MGBA)` (the **mGBA** core) shows no `Y NETPLAY` hint and
+    cannot host or join. Move it to `Game Boy Advance (GBA)` to play over link.
 
-Both players must use the same system folder (and therefore the same core)
-for the same game.
+    The same applies to `Super Game Boy (SGB)`, which also runs on mGBA. Put
+    Game Boy games in `Game Boy (GB)` / `Game Boy Color (GBC)` for link play.
+
+??? info "More detail"
+    - **Lockstep** is classic frame-synchronised netplay.
+    - **GGPO** keeps things responsive because each device runs ahead on its
+      own input and quietly corrects when the other player's input arrives.
+    - NX Redux ships two Game Boy Advance cores in two `Roms` folders: **gpSP**
+      in `Game Boy Advance (GBA)` and **mGBA** in `Game Boy Advance (MGBA)`.
 
 ## Different versions of one game
 
-The join step checks that both devices run the same game by comparing the
-ROM **file names**, ignoring case, punctuation and anything in brackets, so
-`Pokemon - FireRed (USA).gba` pairs with `pokemon_firered.gba` without any
-renaming. Two *versions* of a game have different names, though: Pokémon
-FireRed and LeafGreen, Ruby and Sapphire, Gold and Silver. Those link fine on
-real hardware, so picking such a host is allowed, but the joiner is asked
-first:
+You can join a host running a sister version of your game, such as Pokémon
+FireRed and LeafGreen. The joiner is asked first:
 
 > The host is running *Pokemon - LeafGreen*<br>
 > You are running *Pokemon - FireRed*<br>
 > Join anyway?
 
-Press `A` to join or `B` to go back to the host list. On a **Hotspot** join
-the same question appears while connecting. The wizard cannot tell a sister
-version from a genuinely different game, so only confirm when you know the
-two cartridges link — a real mismatch fails inside the game, not in the
-wizard.
+<!-- SCREENSHOT: handheld-netplay-join-anyway — the "Join anyway?" prompt when the host runs a sister version (Brick) -->
 
-Both devices must run an NX Redux build that includes this prompt. An older
-host still answers *"The host is running a different game."* and the join is
-refused.
+Press `A` to join or `B` to go back to the host list. On a **Hotspot** join
+the same question appears while connecting.
+
+!!! warning "Only confirm when you know the two games link"
+    The wizard cannot tell a sister version from a genuinely different game. A
+    real mismatch fails inside the game, not in the wizard.
+
+??? info "More detail"
+    - The join step checks that both devices run the same game by comparing
+      the ROM **file names**. It ignores case, punctuation and anything in
+      brackets, so `Pokemon - FireRed (USA).gba` pairs with
+      `pokemon_firered.gba` without any renaming.
+    - Two *versions* of a game have different names: Pokémon FireRed and
+      LeafGreen, Ruby and Sapphire, Gold and Silver. Those link fine on real
+      hardware, so picking such a host is allowed.
+    - Both devices must run an NX Redux build that includes this prompt. An
+      older host still answers *"The host is running a different game."* and
+      the join is refused.
 
 ## Saves
 
 A netplay session never overwrites your own save file.
 
-For the **Lockstep** cores and **Sega Dreamcast**, the host brings the save
-(on Dreamcast that includes the memory card and console settings, and both
-devices agree on a BIOS; see [Dreamcast → Netplay](emulators/dreamcast.md#netplay)).
-At the start the host's save is copied to the joiner, so both devices begin
-from the same progress. The host plays on its real save as usual, while the
-joiner plays on that copy in a scratch area and its own save in `Saves/` is
-left exactly as it was. The copy matters because some of these cores (the Sega
-and PlayStation ones) keep battery saves outside the shared game state, so
-without it the two devices could drift out of sync.
+| Netplay type | Whose save is used |
+| --- | --- |
+| **Lockstep** cores and **Sega Dreamcast** | The host brings the save. Both devices start from the host's progress. |
+| **GB Link** and **GBA Link** | Nothing is copied. Each device keeps and plays on its own save. |
 
-For **GB Link** and **GBA Link**, nothing is copied — each device keeps and
-plays on its own save. Link-cable play needs it that way: two Pokémon games
-with identical saves share a Trainer ID and refuse to trade, so give each
-device its own save file.
+!!! tip "Give each device its own save"
+    Two Pokémon games with identical saves share a Trainer ID and refuse to
+    trade.
+
+??? info "More detail"
+    - **Lockstep and Dreamcast:** at the start the host's save is copied to the
+      joiner. The host plays on its real save as usual. The joiner plays on
+      that copy in a scratch area, and its own save in `Saves/` is left exactly
+      as it was.
+    - The copy matters because some of these cores (the Sega and PlayStation
+      ones) keep battery saves outside the shared game state. Without it the
+      two devices could drift out of sync.
+    - On Dreamcast the host's save includes the memory card and console
+      settings, and both devices agree on a BIOS. See
+      [Dreamcast → Netplay](emulators/dreamcast.md#netplay).
+    - **GB Link and GBA Link:** link-cable play needs each device to keep its
+      own save.
 
 ## During a session
 
-Save states, fast-forward, rewind and reset are automatically disabled during
-a session to protect the connection.
+Save states, fast-forward, rewind and reset are turned off during a session to
+protect the connection.
 
-Pressing `MENU` during a session doesn't open the full in-game menu. It asks
-**Leave netplay?**:
+Pressing `MENU` doesn't open the full in-game menu. It asks **Leave netplay?**:
 
-- `B` **Continue** goes back to the game.
-- `A` **Leave** ends the session and returns you to the game list.
+<!-- SCREENSHOT: handheld-netplay-leave — the "Leave netplay?" prompt with Continue and Leave (Brick) -->
 
-On most systems both players pause while the question is open, with no time
-limit. After one player leaves a Lockstep game, the other can keep playing on
-their own. On **Dreamcast** the other player's game waits for you, so the
-question counts down and you leave automatically after 20 seconds; the other
-player sees **Netplay ended** right away.
+| Button | What it does |
+| --- | --- |
+| `B` **Continue** | Goes back to the game |
+| `A` **Leave** | Ends the session and returns you to the game list |
+
+- On most systems both players pause while the question is open, with no time
+  limit.
+- After one player leaves a Lockstep game, the other can keep playing on their
+  own.
+- On **Dreamcast** the other player's game waits for you. The question counts
+  down and you leave automatically after 20 seconds. The other player sees
+  **Netplay ended** right away.
