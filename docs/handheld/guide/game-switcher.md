@@ -12,8 +12,8 @@ carousel of your recent games that resumes any of them instantly.
 
 ## Always resumable
 
-Quitting a game auto-saves to a hidden save slot (minarch cores, Nintendo 64
-and Dreamcast), so the Game Switcher always resumes exactly where you left off
+Quitting a game auto-saves to a hidden save slot (the built-in cores,
+Dreamcast included, and Nintendo 64), so the Game Switcher always resumes exactly where you left off
 — no manual save states needed.
 
 Games without a save state show their box art as a fallback, so the switcher

@@ -19,10 +19,12 @@ archive:
   pays the extraction delay.
 
 This does **not** apply to the standalone emulators —
-[Nintendo 64](nintendo-64.md), [Nintendo DS](nintendo-ds.md) and
-[Sega Dreamcast](dreamcast.md) get their files directly, so give them
-uncompressed images (Dreamcast's `.chd` is compressed internally and is
-the recommended format there anyway).
+[Nintendo 64](nintendo-64.md) and [Nintendo DS](nintendo-ds.md) get their
+files directly, so give them uncompressed ROMs.
+
+[Sega Dreamcast](dreamcast.md) is the other exception: there a `.zip` is a
+Naomi/Atomiswave **arcade set**, so don't zip disc images. Use `.chd`, which
+is compressed internally anyway.
 
 ### Uncompressed vs .zip vs .7z
 
@@ -108,8 +110,9 @@ use [`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
 | Sony PlayStation (PS) | pcsx_rearmed | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` `exe` |
 | Sega CD (SEGACD) | picodrive | `chd` `cue` `bin` `iso` `m3u` |
 | Sega CD (GPGX) | genesis_plus_gx | `chd` `cue` `bin` `iso` `m3u` (BIOS in `Bios/GPGX/`) |
+| Sega Dreamcast (DC) | flycast | `chd` `gdi` `cdi` `cue` `m3u` + Naomi/Atomiswave `zip` `7z` — see [Dreamcast](dreamcast.md) |
 
-`.chd` is the recommended format for both — single file per disc,
+`.chd` is the recommended format for all of them — single file per disc,
 compressed, no extraction.
 
 ### Computers & other
@@ -129,7 +132,6 @@ compressed, no extraction.
 | --- | --- | --- |
 | Nintendo 64 (N64) | mupen64plus | `z64` `n64` `v64` |
 | Nintendo DS (NDS) | DraStic | `nds` |
-| DreamCast (DC) | Flycast | `chd` `gdi` `cdi` `cue` + Naomi/Atomiswave `zip` — see [Dreamcast](dreamcast.md) |
 
 [Additional emulators](additional.md) installed from the
 [Xtras store](../apps/xtras.md) or as community paks follow their own

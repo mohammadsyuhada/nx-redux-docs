@@ -60,12 +60,10 @@ game and unlocks are tracked automatically as you play:
     for achievements — it picks the system from the ROM's file extension. Keep
     your Sega games in `(GPGX)` folders and RetroAchievements just works.
 
-!!! tip "Dreamcast (Flycast) is covered too"
-    The standalone [Dreamcast](../emulators/dreamcast.md) emulator has its
-    own RetroAchievements support. NX Redux hands it your login at launch, and
-    Flycast talks to the server directly, so its unlocks skip the offline
-    journal. They still count: press **Sync now** on the home screen to pull
-    them in (see [Syncing](#syncing)).
+!!! tip "Dreamcast is covered too"
+    [Dreamcast](../emulators/dreamcast.md), Naomi and Atomiswave games run on a
+    built-in core, so their achievements work like every other system,
+    offline journal included.
 
 !!! info "Softcore only, by design"
     NX Redux is not an RA-approved hardcore emulator, so hardcore mode is
@@ -86,7 +84,7 @@ Everything is built to work without a connection:
   every game in your library with a live progress bar, so even games you
   have *never* launched online work offline. Dreamcast folders are included:
   disc images (`.chd`, `.gdi`, `.cdi`, `.cue`) and Naomi/Atomiswave sets
-  (`.zip`) are identified the same way Flycast does it. Multi-disc games
+  (`.zip`) are identified the same way the Dreamcast core does it. Multi-disc games
   (PlayStation, Dreamcast) are covered too: every disc is cached so any disc
   is recognised offline, and the game shows up once in the browser.
 
@@ -117,8 +115,8 @@ the home screen does two things in one go:
 
 1. **Push** — submits any offline unlocks still waiting.
 2. **Pull** — refreshes your cloud status: the points total and the unlock
-   state of every cached game, so achievements earned in Flycast, on another
-   device or on the website show up here too. Games whose progress changed
+   state of every cached game, so achievements earned on another device or
+   on the website show up here too. Games whose progress changed
    on the server are re-fetched.
 
 Both steps show the same progress bar as **Download all game data**; press

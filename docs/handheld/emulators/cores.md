@@ -42,6 +42,7 @@ in parentheses after the system name (e.g. Game Boy Advance (GBA) →
 | Pokémon mini (PKM) | PokeMini | Optional — `bios.min` (FreeBIOS built in) |
 | Sega 32X (32X) | PicoDrive | None |
 | Sega CD (SEGACD) | PicoDrive | **Required** — `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` |
+| Sega Dreamcast (DC) | Flycast | Optional — `dc_boot.bin` (a built-in HLE BIOS is used without it). Naomi / Atomiswave arcade games **require** `naomi.zip` / `awbios.zip` — see the [Dreamcast page](dreamcast.md#arcade-games-naomi-atomiswave) |
 | Sega Game Gear (GG) | PicoDrive | None |
 | Sega Genesis (MD) | PicoDrive | None |
 | Sega Master System (SMS) | PicoDrive | None |
@@ -83,9 +84,5 @@ default `Sega Genesis (MD)` folder uses PicoDrive.
 ## Standalone emulators
 
 [Nintendo 64](nintendo-64.md) (Mupen64Plus) and
-[Nintendo DS](nintendo-ds.md) (Drastic) need no BIOS files.
-[Sega Dreamcast](dreamcast.md) (Flycast) boots without one via HLE; a real
-`dc_boot.bin` in `Bios/DC/` is optional. Naomi and Atomiswave arcade games
-on Flycast **do** require their BIOS zips (`naomi.zip` / `awbios.zip`) in
-`Bios/DC/` — see the [Dreamcast page](dreamcast.md#arcade-games-naomi-atomiswave)
-for the details, including which `awbios.zip` set works.
+[Nintendo DS](nintendo-ds.md) (Drastic) run on standalone emulators and need
+no BIOS files.

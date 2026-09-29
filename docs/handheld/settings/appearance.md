@@ -16,7 +16,7 @@ more.
 - Settings redraws at the new scale straight away. The main menu, the other
   tools and the in-game menus pick it up the next time they start, which for
   the main menu is as soon as you leave Settings.
-- The Dreamcast and Nintendo 64 in-game menus use the same scale.
+- The Nintendo 64 in-game menu uses the same scale.
 
 *Default (2x) on the Brick*
 

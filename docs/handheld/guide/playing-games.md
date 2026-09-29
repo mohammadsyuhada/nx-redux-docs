@@ -8,8 +8,8 @@ Launch a game with `A` from any game list, or resume your last session with
 ## The in-game menu
 
 Press `MENU` while playing to pause the game and open the in-game menu. All
-emulators — the built-in cores and the standalone Nintendo 64, Nintendo DS and
-Dreamcast emulators — share the same menu with UI styling consistent with the
+emulators — the built-in cores (Dreamcast included) and the standalone
+Nintendo 64 and Nintendo DS emulators — share the same menu with UI styling consistent with the
 rest of the system.
 
 ![In-game menu](../../assets/screenshots/in-game-menu.png)

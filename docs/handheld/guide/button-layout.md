@@ -26,8 +26,8 @@ restart, so restart once and the whole device agrees.
     The swap is a device-wide setting, not a per-emulator one. It covers the
     menus and every app, the in-game menu, all libretro cores (their button
     remapping screens included), the standalone Nintendo DS and Nintendo 64
-    emulators together with their in-game overlays, the Dreamcast in-game
-    overlay, PortMaster ports, and the On-Screen Display. If a game's
+    emulators together with their in-game overlays, PortMaster ports, and the
+    On-Screen Display. If a game's
     controls feel wrong after a change, quit it and start it again —
     emulators read the layout when they launch.
 

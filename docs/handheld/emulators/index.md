@@ -1,10 +1,9 @@
 # Bundled Emulators
 
 NX Redux ships with emulators for a wide range of systems — from Atari and
-Commodore through the Game Boy line, NES/SNES, Genesis, PlayStation and
-TurboGrafx-16, up to the bundled standalone emulators for
-[Nintendo 64](nintendo-64.md), [Nintendo DS](nintendo-ds.md) and
-[Sega Dreamcast](dreamcast.md). Each system has its own folder under `Roms/`
+Commodore through the Game Boy line, NES/SNES, Genesis, PlayStation,
+TurboGrafx-16 and [Sega Dreamcast](dreamcast.md), up to the bundled standalone
+emulators for [Nintendo 64](nintendo-64.md) and [Nintendo DS](nintendo-ds.md). Each system has its own folder under `Roms/`
 on the SD card (e.g. `Roms/Game Boy Advance (GBA)/`); systems that need BIOS
 files read them from the matching folder under `Bios/` — see
 [Cores & BIOS Files](cores.md) for the full list of included cores and what

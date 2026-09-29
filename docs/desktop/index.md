@@ -116,18 +116,19 @@ Two things are specific to desktop:
   computer's Wi-Fi hotspot cleanly across both macOS and Linux is more trouble
   than it's worth. Both players simply need to be on the **same network** —
   Wi-Fi or Ethernet, either works.
-- **Dreamcast and Nintendo 64 netplay are not available**, because those
-  systems run on standalone emulators the desktop build doesn't include yet
+- **Dreamcast and Nintendo 64 netplay are not available**, because the
+  desktop build doesn't include those systems yet
   (see [Limitations](#limitations)). Netplay for the bundled libretro cores —
   including Game Boy and Game Boy Advance link — works normally.
 
 ## Limitations
 
-- Systems that use standalone emulators on the handhelds — **Dreamcast,
-  Nintendo 64, and Nintendo DS** — are not included in the desktop build yet.
-  Everything running on a bundled libretro core is. Bringing these standalone
-  emulators (and their netplay) to the desktop is something we plan to explore
-  in the future.
+- **Dreamcast, Nintendo 64 and Nintendo DS** are not included in the desktop
+  build yet: Nintendo 64 and Nintendo DS run on standalone emulators on the
+  handhelds, and the Dreamcast core isn't built for desktop yet. Every other
+  system on a bundled libretro core is included. Bringing these systems (and
+  their netplay) to the desktop is something we plan to explore in the
+  future.
 - Device-specific settings (display hardware, audio routing, Bluetooth,
   LED control, boot logo) are hidden — the host OS owns those.
 - Sleep/power management is intentionally disabled; quit from the window
