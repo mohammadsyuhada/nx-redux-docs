@@ -6,8 +6,10 @@ While a game is running, open the in-game menu in any of these ways:
 - hold `SELECT` and `START` together,
 - use Android's Back gesture or button.
 
-The game pauses while the menu is open. `B` goes back one page, and `B` on
-the first page, or `MENU` on any page, returns to the game.
+The game pauses while the menu is open.
+
+- `B` goes back one page.
+- `B` on the first page, or `MENU` on any page, returns to the game.
 
 <!-- SCREENSHOT: in-game-menu-root — in-game menu root page with the save slot preview -->
 
@@ -22,9 +24,11 @@ the first page, or `MENU` on any page, returns to the game.
 | **Options** | Open the options pages below. |
 | **Quit** | Leave the game. |
 
-There are 8 save state slots. On **Save** and **Load**, `LEFT` / `RIGHT`
-choose the slot, and the preview shows its screenshot and date, or
-**Empty Slot**. `A` saves or loads.
+There are 8 save state slots. On **Save** and **Load**:
+
+- `LEFT` / `RIGHT` choose the slot.
+- The preview shows the slot's screenshot and date, or **Empty Slot**.
+- `A` saves or loads.
 
 Quitting also saves a hidden resume state, and so does leaving the app with
 the game open. That is what lets the [Game Switcher](game-switcher.md) resume
@@ -50,6 +54,7 @@ The line under the list says which settings the game uses right now:
     To keep them, use [Save Changes](#save-changes) before you quit. To undo
     a change, quit without saving.
 
+??? info "More detail"
     Two things are saved straight away instead: the Nintendo DS layout
     hotkeys (see [Nintendo DS](emulators.md#hotkeys)) and achievement mutes
     (`X` on the Achievements page).
@@ -89,34 +94,41 @@ own shaders.
 
 ## Adjust mode
 
-On a row that changes the picture, `A` enters adjust mode: the menu shrinks
-to a strip over the paused game, so you can see each change as you make it.
-
-- `LEFT` / `RIGHT` change the value.
-- `UP` / `DOWN` move to the previous or next picture setting on the same
-  page.
-- `B` returns to the page, and `MENU` returns to the game.
-
-These rows open adjust mode: **Screen Scaling**, **Screen Sharpness**,
-**Overlay**, **Offset screen X** and **Y**, **Shader**, each shader
-parameter, and every Nintendo DS row in **Console Settings**.
+On a row that changes the picture, press `A` to see each change on the game
+as you make it.
 
 <!-- SCREENSHOT: in-game-menu-adjust — adjust mode strip over a paused game -->
 
+??? info "More detail"
+    In adjust mode the menu shrinks to a strip over the paused game.
+
+    - `LEFT` / `RIGHT` change the value.
+    - `UP` / `DOWN` move to the previous or next picture setting on the same
+      page.
+    - `B` returns to the page, and `MENU` returns to the game.
+
+    These rows open adjust mode: **Screen Scaling**, **Screen Sharpness**,
+    **Overlay**, **Offset screen X** and **Y**, **Shader**, each shader
+    parameter, and every Nintendo DS row in **Console Settings**.
+
 ## Descriptions
 
-The three lines under the list describe the highlighted row. When a
-description is cut off, `X` opens it in full, and `UP` / `DOWN` scroll a long
-one. On a row that doesn't change the picture, `A` also opens its
-description.
+The three lines under the list describe the highlighted row.
+
+- When a description is cut off, `X` opens it in full.
+- `UP` / `DOWN` scroll a long one.
+- On a row that doesn't change the picture, `A` also opens its
+  description.
 
 ## Core Options
 
 The running core's own settings, grouped into the categories the core
-defines. Only options that can change while the game runs are listed
-(except the DS **Render Mode**; see [Nintendo DS](emulators.md#3d-rendering)); if
-there are none, the menu says **This core has no options that can be changed
-while running.** `LEFT` / `RIGHT` change a value.
+defines. `LEFT` / `RIGHT` change a value.
+
+Only options that can change while the game runs are listed (except the DS
+**Render Mode**; see [Nintendo DS](emulators.md#3d-rendering)). If there are
+none, the menu says **This core has no options that can be changed while
+running.**
 
 ## Cheats
 
@@ -124,11 +136,13 @@ Lists the cheats found for the game. `LEFT` or `RIGHT` turns the highlighted
 cheat **On** or **Off**, and it applies straight away. `A` shows a cheat's full
 description.
 
-With no cheats for the game, the page says **No cheats for this game.** and
-names the file it looked for. The row is hidden for Arcade (`FBN`) and
-ColecoVision, whose cores don't take cheats. To keep the cheats you turned on,
-use **Save Changes → Save for game**. See [Cheats](cheats.md) for where the
-cheat files come from.
+To keep the cheats you turned on, use **Save Changes → Save for game**. See
+[Cheats](cheats.md) for where the cheat files come from.
+
+- With no cheats for the game, the page says **No cheats for this game.** and
+  names the file it looked for.
+- The row is hidden for Arcade (`FBN`) and ColecoVision, whose cores don't
+  take cheats.
 
 <!-- SCREENSHOT: in-game-cheats — in-game Cheats page with a few cheats, one On -->
 
@@ -155,9 +169,14 @@ Options.
 
 | Choice | What it does |
 | --- | --- |
-| **Save for console** | Save as the settings for every game on this console. If this game had its own settings, they are removed, so it follows the console again. That also removes the cheats kept with **Save for game** and any changes made with the DS layout hotkeys. |
+| **Save for console** | Save as the settings for every game on this console. If this game had its own settings, they are removed, so it follows the console again. That also removes the cheats kept with **Save for game** and any DS layout hotkey changes. |
 | **Save for game** | Save for this game only. This also keeps the cheats you turned on. |
 | **Restore defaults** | Delete the saved settings the game is using now and go back one level: from game to console, or from console to the defaults. |
 
-When a game has its own settings, it uses only those; the console's settings
+When a game has its own settings, it uses only those. The console's settings
 apply only to games without their own.
+
+??? info "More detail"
+    When **Save for console** removes this game's own settings, that also
+    removes the cheats kept with **Save for game** and any changes made with
+    the DS layout hotkeys.

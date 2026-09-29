@@ -45,11 +45,12 @@ The settings page also has:
 | **Erase all achievement data** | — | — | Delete every cached game, badge and unsynced unlock, and sign out. |
 | **Reset settings to defaults** | — | — | Put the notification and sort settings back to their defaults and turn **Enable achievements** off. You stay signed in. |
 
-`A` changes a value. On **Notification duration**, **Progress duration** and
-**Achievement sort order**, `LEFT` / `RIGHT` work too. **Sign out**, **Reset
-account data** and **Erase all achievement data** ask to confirm first.
-Signing out turns achievements off, and signing in again needs your
-password. Your unsynced unlocks, game data and badges stay.
+- `A` changes a value. On **Notification duration**, **Progress duration**
+  and **Achievement sort order**, `LEFT` / `RIGHT` work too.
+- **Sign out**, **Reset account data** and **Erase all achievement data** ask
+  to confirm first.
+- Signing out turns achievements off, and signing in again needs your
+  password. Your unsynced unlocks, game data and badges stay.
 
 ## Earning achievements
 
@@ -64,10 +65,12 @@ Start a recognised game and unlocks are tracked as you play.
   **Achievements** row. Browse the game's achievements there, press `Y` to
   show only locked ones, and `X` to mute one achievement's notices.
 
-With **Show notifications** off, unlock and progress notices, **Game
-Mastered!**, server errors and the connection lost and reconnected notices are
-hidden. These still show: the game loading, no achievements for this game,
-sign-in failed, offline at the start, first-time setup and synced unlocks.
+??? info "More detail"
+    With **Show notifications** off, unlock and progress notices, **Game
+    Mastered!**, server errors and the connection lost and reconnected notices
+    are hidden. These still show: the game loading, no achievements for this
+    game, sign-in failed, offline at the start, first-time setup and synced
+    unlocks.
 
 ## Offline play
 
@@ -110,9 +113,10 @@ or **Locked**, with its points, in green, amber or grey. `Y` switches between
 
 `A` opens an achievement's details: its badge, description, points, when it
 was unlocked or its progress, its unlock rate, its type (`[Missable]`,
-`[Progression]` or `[Win Condition]`) and whether it is muted. On a wide
-screen, such as an unfolded phone or a tablet, the details show beside the
-list instead.
+`[Progression]` or `[Win Condition]`) and whether it is muted.
+
+On a wide screen, such as an unfolded phone or a tablet, the details show
+beside the list instead.
 
 <!-- SCREENSHOT: ra-game — one game's achievements, with details beside the list on a wide screen -->
 

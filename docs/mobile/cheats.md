@@ -3,6 +3,7 @@
 NX Redux Mobile uses [libretro](https://www.libretro.com/)'s cheat
 collection. Download it once from **Tools → Cheat Database**, then turn
 cheats on and off from a game's [in-game menu](in-game-menu.md#cheats).
+
 Unlike the handheld, there is no separate tool to install first: Cheat
 Database is part of the app.
 
@@ -36,12 +37,16 @@ With the cheats installed, the page offers **Check for updates** and
 
 ## Where the files go
 
-The cheats are libretro `.cht` files, kept in one `Cheats/<TAG>/` folder per
-system inside the app's own storage. Unlike the handheld, they are not on your
-card or in your home folder, and the app reads cheats only from there.
+The cheats live inside the app's own storage. Unlike the handheld, they are
+not on your card or in your home folder. Arcade (`FBN`) and ColecoVision have
+no cheats.
 
-The download installs folders only for systems whose core takes cheats, so
-Arcade (`FBN`) and ColecoVision have none.
+??? info "More detail"
+    - The cheats are libretro `.cht` files, kept in one `Cheats/<TAG>/` folder
+      per system inside the app's own storage. The app reads cheats only from
+      there.
+    - The download installs folders only for systems whose core takes cheats,
+      so Arcade (`FBN`) and ColecoVision have none.
 
 ## Using cheats in a game
 

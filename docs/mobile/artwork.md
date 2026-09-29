@@ -2,11 +2,12 @@
 
 ## What the app does today
 
-NX Redux Mobile shows game art that is already in your folders. It uses the
-same `.media` layout as the handheld's
-[Artwork Manager](../handheld/apps/artwork-manager.md), so art fetched on a
-handheld shows up when you copy its folders over. The app does not download
-art yet.
+NX Redux Mobile shows game art that is already in your folders. The app does
+not download art yet.
+
+It uses the same `.media` layout as the handheld's
+[Artwork Manager](../handheld/apps/artwork-manager.md). So art fetched on a
+handheld shows up when you copy its folders over.
 
 Each game can have up to three images, as PNG files named after the game's
 file without its extension:
@@ -28,9 +29,10 @@ Roms/Game Boy Advance (GBA)/.media/screenshot/Golden Sun.png
 Roms/Game Boy Advance (GBA)/.media/boxart/Golden Sun.png
 ```
 
-This works in extra folders too: the `.media` folder goes next to the games
-in that folder. For a multi-disc game kept in its own folder, the art goes in
-the `.media` of the folder above it, named after the game's folder.
+- **Extra folders:** the `.media` folder goes next to the games in that
+  folder.
+- **Multi-disc games** kept in their own folder: the art goes in the `.media`
+  of the folder above it, named after the game's folder.
 
 A `.media/bg.png` in a system folder of your home folder replaces that
 console's built-in background on the main menu.

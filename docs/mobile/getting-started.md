@@ -10,9 +10,10 @@ title: Getting Started with NX Redux Mobile
 
 NX Redux Mobile brings the NX Redux look, folder layout and in-game features
 to Android phones, tablets and Android handhelds. It runs retro systems
-through bundled libretro cores, with no downloads needed. An iOS version is
-planned after Android. New to NX Redux? See [About NX Redux](../about.md)
-first.
+through bundled libretro cores, with no downloads needed.
+
+An iOS version is planned after Android. New to NX Redux? See
+[About NX Redux](../about.md) first.
 
 ## What's different from the handheld
 
@@ -54,15 +55,19 @@ computer. The home folder can sit on an SD card.
 If your games already follow the NX Redux layout from a handheld, the same
 folder names and `Bios/<TAG>/` files work unchanged.
 
-The picker can't use the storage root, the SD card root or the Download
-folder. Pick or create a folder inside one of them, such as `NXRedux`.
+!!! note "Pick a folder, not a root"
+    The picker can't use the storage root, the SD card root or the Download
+    folder. Pick or create a folder inside one of them, such as `NXRedux`.
 
 ## Add a ROMs folder
 
-Right after you pick the home folder, the app asks **Add a ROMs folder?** If
-you already keep games somewhere else on the phone, press `A` **Add folder**
-and pick that folder. It is scanned in place and nothing is moved. Press `B`
-**Skip** to go straight to your library.
+Right after you pick the home folder, the app asks **Add a ROMs folder?**
+
+<!-- SCREENSHOT: mobile-add-roms-folder — "Add a ROMs folder?" prompt (Fold) -->
+
+- If you already keep games somewhere else on the phone, press `A` **Add
+  folder** and pick that folder. It is scanned in place and nothing is moved.
+- Press `B` **Skip** to go straight to your library.
 
 You can add more folders later as **extra folders** in **Tools → Settings →
 Library**. See [Library & ROM folders](library.md).

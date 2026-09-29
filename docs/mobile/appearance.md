@@ -29,8 +29,9 @@ art comes from.
 ## Game art width
 
 How much of the screen's width the art takes in the **Thumbnail** style: 35%,
-45% or 55%. The default is 40%; the first press moves it to 45%. It has no
-effect on the **Background** style.
+45% or 55%. It has no effect on the **Background** style.
+
+The default is 40%. The first press moves it to 45%.
 
 ## Pad theme
 

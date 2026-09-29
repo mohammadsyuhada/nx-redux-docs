@@ -9,17 +9,21 @@ The library comes from two kinds of folder:
 - **Extra folders**, any number of them, scanned in place and never written
   to.
 
-Files in an extra folder are matched to a console:
+The app matches the files in an extra folder to a console by the folder's
+name or the file's extension. Anything left over lands in **Unassigned** until
+you pick its console.
 
-1. by a `(TAG)` or an alias in the folder name (a short alias such as `GBA`
-   may be followed only by roms, games or isos, singular or plural),
-2. then by an extension only one console uses (a zip by its first entry, a 7z
-   only by its folder).
+??? info "More detail"
+    Files in an extra folder are matched to a console:
 
-Anything left over lands in **Unassigned** until you pick its console. The
-choice is saved in a `systems.txt` (`<file><TAB><TAG>`). For extra folders
-this file lives in the home folder under `Roms/.sources/`, so the extra folder
-itself is never changed.
+    1. by a `(TAG)` or an alias in the folder name (a short alias such as
+       `GBA` may be followed only by roms, games or isos, singular or plural),
+    2. then by an extension only one console uses (a zip by its first entry, a
+       7z only by its folder).
+
+    The console you pick for an Unassigned game is saved in a `systems.txt`
+    (`<file><TAB><TAG>`). For extra folders this file lives in the home folder
+    under `Roms/.sources/`, so the extra folder itself is never changed.
 
 ## Unassigned games
 
@@ -40,6 +44,8 @@ Rom** and **Console**.
 
 **Tools → Settings → Library** has these rows:
 
+<!-- SCREENSHOT: mobile-settings-library — Tools → Settings → Library (Fold) -->
+
 | Row | What it does |
 | --- | --- |
 | **Home folder** | Shows the home folder. `A` picks a different one. |
@@ -50,7 +56,7 @@ Rom** and **Console**.
 | **Game Boy Advance emulator**, **Super Nintendo ES emulator**, **Sega Genesis emulator** | The [default emulator](#default-emulator-per-console) for each console that has more than one. |
 
 Removing an extra folder asks **Stop scanning this folder? Its ROMs stay where
-they are.** Choose **Remove** to stop scanning it; nothing in the folder is
+they are.** Choose **Remove** to stop scanning it. Nothing in the folder is
 deleted.
 
 ## Default emulator per console
@@ -64,10 +70,12 @@ Three consoles have two emulators, each with its own tag:
 | Sega Genesis | `GPGX`, `MD` (both Genesis Plus GX) | `GPGX` |
 
 The console's row in **Tools → Settings → Library** sets which tag games get
-when the app matches them to that console: games in extra folders, and
-Unassigned games you give a console. `A` switches to the next tag, and the
-library is scanned again with the new choice when you leave the page. Games in
-the home folder follow the tag of their `Roms/<Name (TAG)>/` folder.
+when the app matches them to that console. That covers games in extra folders,
+and Unassigned games you give a console. Games in the home folder follow the
+tag of their `Roms/<Name (TAG)>/` folder.
+
+`A` switches to the next tag. The library is scanned again with the new choice
+when you leave the page.
 
 To run one game on the other emulator, use **Emulator** in its context menu.
 For consoles whose saves work on both emulators, the app then offers to copy
@@ -75,16 +83,19 @@ the newer save across, keeping a timestamped `.bak` of the save it replaces.
 
 ## Rescanning
 
-The scanned library is kept in an index, so the app starts without walking
-your folders. After adding or removing games outside the app, use
-**Rescan library** in **Tools → Settings → Library**.
+After adding or removing games outside the app, use **Rescan library** in
+**Tools → Settings → Library**. The app keeps the scanned library in an index,
+so it starts without walking your folders.
 
-An extra folder that was deleted, or whose access was revoked, is dropped
-with a notice. A home folder that is lost returns you to the folder picker.
+- An extra folder that was deleted, or whose access was revoked, is dropped
+  with a notice.
+- A home folder that is lost returns you to the folder picker.
 
-For an SD card taken out: an extra folder's games are left out until the
-card is back. A home on that card keeps the last index on screen, and
-**Settings → Library** shows **"<name> · not available"**.
+If you take out an SD card:
+
+- An extra folder's games are left out until the card is back.
+- A home on that card keeps the last index on screen, and **Settings →
+  Library** shows **"<name> · not available"**.
 
 ## Game names
 
@@ -96,10 +107,12 @@ same name, both show their file names.
 
 --8<-- "map-txt.md"
 
-**Rename Rom** in the game-list context menu writes these aliases for you. For
-games in an extra folder the alias goes into a `map.txt` under
-`Roms/.sources/` in the home folder, and it overrides the extra folder's own
-`map.txt`.
+**Rename Rom** in the game-list context menu writes these aliases for you.
+
+??? info "More detail"
+    For games in an extra folder, the alias goes into a `map.txt` under
+    `Roms/.sources/` in the home folder. It overrides the extra folder's own
+    `map.txt`.
 
 ## Collections
 
@@ -109,24 +122,33 @@ Use **Add to Collection** in the game-list context menu.
 
 ## Saves
 
-Cores play from a private working copy of each battery save, mirrored to
-`Saves/<TAG>/` in the home folder. The mirror is updated after each save
-write and when you quit. Replace files in `Saves/<TAG>/` only while that game
-is not running, because the working copy wins on the next write.
+Battery saves are mirrored to `Saves/<TAG>/` in the home folder.
 
-BIOS files are read from `Bios/<TAG>/` before each launch.
+!!! warning "Replace saves only while the game is closed"
+    Replace files in `Saves/<TAG>/` only while that game is not running. The
+    app's working copy wins on the next write.
 
-Pinned and hidden games are stored inside the app. Hidden games can be shown
-again from **Tools → Settings → Library**. Nothing in the app deletes a ROM.
+- BIOS files are read from `Bios/<TAG>/` before each launch.
+- Pinned and hidden games are stored inside the app. Hidden games can be shown
+  again from **Tools → Settings → Library**.
+- Nothing in the app deletes a ROM.
+
+??? info "More detail"
+    Cores play from a private working copy of each battery save. The mirror in
+    `Saves/<TAG>/` is updated after each save write and when you quit.
 
 ## Unpacked games cache
 
-Zip and 7z games are unpacked into the app's cache on their first launch, and
-some cores get a copy of the game file there too. The app trims this cache
-when it starts and after **Download all game data** in
-[RetroAchievements](retroachievements.md): anything not used (played or checked for
-achievements) in 30 days goes first, then the least recently used, until the
-cache holds at most 256 MiB. The game that is running is never removed; a file
-bigger than the cap on its own stays while its game runs and goes at the next
-trim. Clearing the app's cache
-in Android's settings is safe too: games are unpacked again when needed.
+Zip and 7z games are unpacked into the app's cache on their first launch. The
+app trims this cache on its own. Clearing the app's cache in Android's
+settings is safe too: games are unpacked again when needed.
+
+??? info "More detail"
+    - Some cores get a copy of the game file in the cache too.
+    - The app trims the cache when it starts and after **Download all game
+      data** in [RetroAchievements](retroachievements.md).
+    - Anything not used (played or checked for achievements) in 30 days goes
+      first. Then the least recently used goes, until the cache holds at most
+      256 MiB.
+    - The game that is running is never removed. A file bigger than the cap on
+      its own stays while its game runs, and goes at the next trim.

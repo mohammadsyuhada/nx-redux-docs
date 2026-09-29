@@ -11,8 +11,10 @@ controller to play with real buttons instead.
 - **Landscape:** the buttons sit in two clusters over the game. **Pad Opacity
   (landscape)** sets how opaque they are: 100, 60, 40 or 25 % (40 % by
   default). It is in the in-game menu under **Options →
-  [Frontend](in-game-menu.md#frontend)**, not in Settings, and it is saved per
+  [Frontend](in-game-menu.md#frontend)**, not in Settings. It is saved per
   game or console with Save Changes.
+
+![The on-screen pad in portrait, in a band below a Nintendo 64 game](../assets/landing/controls/pad-n64.webp){ width="300" }
 
 ### Pad themes
 
@@ -61,10 +63,14 @@ present, and real buttons in landscape without one.
 ## Game-list context menu
 
 Press `MENU`, or long-press a game, for the same context menu as on the
-handheld. The items depend on the list you're in: Recently Played offers only
-**Remove from Recently Played**, **Remove from Collection** appears only in a
-collection, and **Emulator** appears only for Game Boy Advance, Super Nintendo
-and Sega Genesis.
+handheld. The items depend on the list you're in:
+
+- Recently Played offers only **Remove from Recently Played**.
+- **Remove from Collection** appears only in a collection.
+- **Emulator** appears only for Game Boy Advance, Super Nintendo and Sega
+  Genesis.
+
+The items are:
 
 - **Pin Item / Unpin Item**
 - **Hide Game**
