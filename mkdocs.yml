@@ -47,6 +47,7 @@ plugins:
         guide/playing-games.md: handheld/guide/playing-games.md
         guide/in-game-options.md: handheld/guide/in-game-options.md
         guide/shortcuts.md: handheld/guide/shortcuts.md
+        guide/keyboard.md: handheld/guide/keyboard.md
         guide/button-layout.md: handheld/guide/button-layout.md
         guide/emulator-options.md: handheld/guide/emulator-options.md
         guide/osd.md: handheld/guide/osd.md
@@ -126,6 +127,7 @@ nav:
           - Playing Games: handheld/guide/playing-games.md
           - In-game Options: handheld/guide/in-game-options.md
           - Buttons & Shortcuts: handheld/guide/shortcuts.md
+          - On-Screen Keyboard: handheld/guide/keyboard.md
           - Button Layout: handheld/guide/button-layout.md
           - Emulator Options: handheld/guide/emulator-options.md
           - On-Screen Display: handheld/guide/osd.md

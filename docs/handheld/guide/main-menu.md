@@ -58,7 +58,7 @@ Press `START` on the main menu to search your entire library.
 
 ![Search keyboard](../../assets/screenshots/search.png)
 
-1. Type with the on-screen keyboard: `A` select, `X` shift, `Y` delete.
+1. Type your search with the [on-screen keyboard](keyboard.md).
 2. Confirm to see matching games from every system.
 3. Tap `START` again, from the keyboard or the results list, to close the
    search and return to the menu.
