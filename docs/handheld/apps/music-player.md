@@ -1,13 +1,18 @@
 # Music Player
 
-A full music player built into the firmware — local library with playlists,
+A full music player built into the firmware: your own music with playlists,
 internet radio, podcasts, synced lyrics and audiophile-grade output. Open it
 from **Tools → Music Player**.
 
 ![Music Player home](../../assets/screenshots/music-player.png)
 
-The home screen offers **Resume** (pick up the last track where you left
-off), **Library**, **Online Radio**, **Podcasts** and **Settings**.
+The home screen offers:
+
+- **Resume**: pick up the last track where you left off.
+- **Library**
+- **Online Radio**
+- **Podcasts**
+- **Settings**
 
 ## Library
 
@@ -17,13 +22,14 @@ views: **Files** (browse your folders directly) and **Playlists**.
 ![Library Files view](../../assets/screenshots/music-library.png)
 
 The Files view mirrors your folder structure, so **organizing with folders
-works naturally**: drop loose tracks straight into `Music`, or group songs
-in folders — in the screenshot above, a `Lucky Tapes` folder collects that
-artist's songs while the other tracks sit at the top level. Each file shows
-its format icon, and every folder gets a **Play All** entry that plays its
-contents in one go. Folders are the quick way to organize; for hand-picked
-track sequences across folders, use [Playlists](#playlists) instead — both
-work side by side.
+works naturally**. Drop loose tracks straight into `Music`, or group songs in
+folders. In the screenshot above, a `Lucky Tapes` folder collects that
+artist's songs while the other tracks sit at the top level.
+
+- Each file shows its format icon.
+- Every folder gets a **Play All** entry that plays its contents in one go.
+- For hand-picked track sequences across folders, use
+  [Playlists](#playlists). Folders and playlists work side by side.
 
 Supported formats: `mp3`, `flac`, `wav`, `ogg`, `opus`, `m4a`, `aac` and
 `mod` tracker modules.
@@ -34,13 +40,11 @@ Press `MENU` on any track or folder in the Files view for its context menu:
 
 ![Library context menu](../../assets/screenshots/music-library-context.png)
 
-- **Rename File** / **Delete File** — manage your music right on the device;
-  renames use the on-screen keyboard, deletes ask for confirmation.
-- **Add to Playlist** — add the track to an existing playlist or create a
-  new one on the spot.
-
-On a folder the same menu adapts: **Rename Folder**, **Delete Folder**, and
-**Add Folder to Playlist**, which adds all of the folder's tracks in one go.
+| On a track | On a folder | What it does |
+| --- | --- | --- |
+| **Rename File** | **Rename Folder** | Rename with the on-screen keyboard |
+| **Delete File** | **Delete Folder** | Delete, after a confirmation |
+| **Add to Playlist** | **Add Folder to Playlist** | Add the track (or all of the folder's tracks in one go) to an existing playlist, or create a new one on the spot |
 
 ### Playlists
 
@@ -48,20 +52,20 @@ The **Playlists** view lists your playlists with their track counts:
 
 ![Playlists](../../assets/screenshots/music-playlists.png)
 
-- `A` opens a playlist; from inside, pick a track to start playing.
-- `Y` creates a **new playlist**, named with the on-screen keyboard (with no
-  playlists yet, `A` on the empty page does the same).
-- Tracks get in via the Files view's context menu — **Add to Playlist** for
+- `A` opens a playlist. From inside, pick a track to start playing.
+- `Y` creates a **new playlist**, named with the on-screen keyboard. With no
+  playlists yet, `A` on the empty page does the same.
+- To add tracks, use the Files view's context menu: **Add to Playlist** for
   a single track, **Add Folder to Playlist** for a whole folder.
 
 Press `MENU` on a playlist to manage it:
 
 ![Playlist context menu](../../assets/screenshots/music-playlists-context.png)
 
-- **Rename Playlist** — via the on-screen keyboard.
-- **Delete Playlist** — with a confirmation dialog.
+- **Rename Playlist**: via the on-screen keyboard.
+- **Delete Playlist**: with a confirmation dialog.
 
-Open a playlist to see its tracks — `A` starts playing from the selected
+Open a playlist to see its tracks. `A` starts playing from the selected
 track:
 
 ![Inside a playlist](../../assets/screenshots/music-playlist-detail.png)
@@ -71,9 +75,10 @@ before removing):
 
 ![In-playlist context menu](../../assets/screenshots/music-playlist-detail-context.png)
 
-Under the hood playlists are standard `.m3u` files stored in
-`.userdata/shared/music-player/playlists`, so you can also create or edit
-them from a computer.
+??? info "More detail"
+    Playlists are standard `.m3u` files stored in
+    `.userdata/shared/music-player/playlists`, so you can also create or edit
+    them from a computer.
 
 ## Now playing
 
@@ -81,12 +86,16 @@ them from a computer.
 
 The now-playing screen shows cover art, a spectrum visualizer, shuffle and
 repeat state, the format badge (`M4A`, `FLAC`…) and the **live sample-rate
-badge** — e.g. `96kHz` when playing natively on a capable output, or
-`44.1→48kHz` when resampling.
+badge**.
 
-**Synced lyrics** are fetched automatically from
-[LRCLIB](https://lrclib.net/) when online, cached on the SD card, and scroll
-in time with the song.
+**Synced lyrics** are fetched automatically when online and scroll in time
+with the song.
+
+??? info "More detail"
+    - The sample-rate badge reads, for example, `96kHz` when playing natively
+      on a capable output, or `44.1→48kHz` when resampling.
+    - Lyrics come from [LRCLIB](https://lrclib.net/) and are cached on the SD
+      card.
 
 ### Controls
 
@@ -110,55 +119,71 @@ order.
 
 ### Auto screen off
 
-While music plays, the screen switches itself off after a configurable idle
-time (default 60 s) — saving battery and preventing accidental button
-presses; while it's off, ordinary buttons are ignored. Tap `SELECT` to turn
-the screen off right away instead of waiting. Press `SELECT` + `A` to wake
-it. Media buttons on a USB or Bluetooth headset keep working even with the
-screen off.
+While music plays, the screen switches itself off after an idle time you can
+set (default 60 s). This saves battery and prevents accidental button presses.
+
+- While the screen is off, ordinary buttons are ignored.
+- Tap `SELECT` to turn the screen off right away instead of waiting.
+- Press `SELECT` + `A` to wake it.
+- Media buttons on a USB or Bluetooth headset keep working even with the
+  screen off.
 
 ## Background playback
 
-Music, radio and podcasts keep playing when you leave the Music Player —
-back in the menus and inside games. Playback is owned by a small background
-service, so the app is just a remote control for it.
+Music, radio and podcasts keep playing when you leave the Music Player, both
+in the menus and inside games.
 
-- **Control it from the OSD.** The [OSD](../guide/osd.md)'s **Music** widget
-  shows the current track or station with play/pause, previous and next,
-  from anywhere. Below it sits the **Game / Music balance** slider (press
-  Down to reach it): it sets how loud games are relative to the music, from
-  `50/50` through `Music +5`, on top of the normal volume keys. The same
-  setting is **Balance** in the Music Player's Settings, so you can still
-  reach it with nothing playing.
-- **Sleep stops it, waking resumes it.** Outside the app, background music
-  follows the device's normal sleep timers: when the screen times out the
-  music stops, the device goes to sleep, and waking it picks the track up
-  where it stopped. To keep listening with the screen dark, stay in the
-  Music Player and let its own [auto screen off](#auto-screen-off) handle
-  the display instead.
-- **It never starts by itself.** After a power-off or a restart, the last
-  track, station or episode is restored **paused** at the position you were
-  at — the first sound the device makes is one you asked for. Press play in
-  the widget or in the app to continue.
-- **It gets out of the way.** When nothing has been playing for a few
-  minutes the background service shuts itself down to save battery, keeping
-  its resume point; opening the Music Player brings it straight back.
+### Control it from the OSD
+
+The [OSD](../guide/osd.md)'s **Music** widget shows the current track or
+station with play/pause, previous and next, from anywhere.
+
+![OSD with the Music widget and Game / Music balance slider](../../assets/screenshots/osd.png)
+
+Below it sits the **Game / Music balance** slider (press Down to reach it). It
+sets how loud games are relative to the music, from `50/50` through
+`Music +5`, on top of the normal volume keys. The same setting is **Balance**
+in the Music Player's Settings, so you can still reach it with nothing
+playing.
+
+### What happens when the device sleeps or restarts
+
+| Situation | What happens |
+| --- | --- |
+| **Sleep** | Outside the app, background music follows the device's normal sleep timers. When the screen times out the music stops and the device goes to sleep. Waking it picks the track up where it stopped |
+| **Power-off or restart** | Playback **never starts by itself**. The last track, station or episode is restored **paused** at the position you were at, so the first sound the device makes is one you asked for. Press play in the widget or in the app to continue |
+| **Nothing playing for a few minutes** | Playback gets out of the way to save battery, keeping its resume point. Opening the Music Player brings it straight back |
+
+!!! tip
+    To keep listening with the screen dark, stay in the Music Player and let
+    its own [auto screen off](#auto-screen-off) handle the display.
+
+??? info "More detail"
+    Playback is owned by a small background service, so the app is just a
+    remote control for it. It is this service that shuts itself down when
+    nothing has been playing for a few minutes.
 
 ## Online Radio
 
-**Online Radio** streams internet stations through the same high-quality
-resampler as local playback, with cover art fetched for the currently
-playing song.
+**Online Radio** streams internet stations, with cover art fetched for the
+currently playing song.
 
 ![Online Radio](../../assets/screenshots/music-radio.png)
 
-The page lists *your* stations — `A` plays one. Press `MENU` for the
-context menu: **Manage Stations** (browse the online catalog), **Delete
-Station**, and **Playback Controls**.
+The page lists *your* stations. `A` plays one. Press `MENU` for the context
+menu: **Manage Stations** (browse the online catalog), **Delete Station**, and
+**Playback Controls**.
 
-While a station plays, the screen shows the station name, the current song
-from the stream's metadata — with **cover art fetched automatically for the
-playing song** — and the live stream bitrate:
+While a station plays, the screen shows:
+
+- the station name
+- the current song from the stream's metadata, with **cover art fetched
+  automatically for the playing song**
+- the live stream bitrate
+
+??? info "More detail"
+    Radio goes through the same high-quality resampler as local playback.
+
 
 ![Radio playing](../../assets/screenshots/music-radio-playing.png)
 
@@ -174,49 +199,54 @@ playing song** — and the live stream bitrate:
 | `SELECT` | Turn the screen off now |
 | `SELECT` + `A` | Wake the screen when it is off |
 
-[Auto screen off](#auto-screen-off) works here exactly like local playback —
+[Auto screen off](#auto-screen-off) works here exactly like local playback,
 including the idle timeout and headset media buttons staying live while the
 screen is dark.
 
 ### Adding stations
 
-The station catalog comes from the community-run
-[radio-browser.info](https://www.radio-browser.info/) index — browse by
-country, add what you like (availability varies, as the one-time notice
-says). Inside the catalog, `MENU` offers **Refresh List** and **Manual
-Setup Help**.
+Choose **Manage Stations** to browse the station catalog by country, and add
+what you like. Availability varies, as the one-time notice says. Inside the
+catalog, `MENU` offers **Refresh List** and **Manual Setup Help**.
 
-You can also add stations by hand, exactly as the built-in help describes —
-edit:
+You can also add stations by hand, as the built-in help describes. Edit this
+file:
 
 ```
 .userdata/shared/music-player/radio/stations.txt
 ```
 
-one station per line:
+MP3, AAC and M3U8 streams are supported, up to 32 stations.
 
-```
-Name|URL|Genre|Slogan
-```
+??? info "More detail"
+    - The catalog comes from the community-run
+      [radio-browser.info](https://www.radio-browser.info/) index.
+    - In `stations.txt`, put one station per line:
 
-MP3, AAC and M3U8 streams are supported, up to 32 stations; the slogan is
-optional (shown when the stream carries no song info). A good directory for
-stream URLs is [fmstream.org](https://fmstream.org/).
+        ```
+        Name|URL|Genre|Slogan
+        ```
+
+        The slogan is optional (shown when the stream carries no song info).
+
+    - A good directory for stream URLs is [fmstream.org](https://fmstream.org/).
 
 ## Podcasts
 
 ![Podcasts](../../assets/screenshots/music-podcasts.png)
 
-The Podcasts page shows **Continue Listening** (episodes you're partway
-through — playback position is remembered per episode) and your
-**Subscriptions**, each with its episode count and a *New* badge.
+The Podcasts page shows:
+
+- **Continue Listening**: episodes you're partway through. Playback position is
+  remembered per episode.
+- your **Subscriptions**, each with its episode count and a *New* badge.
 
 Press `MENU` on a subscription for its context menu:
 
 ![Podcast context menu](../../assets/screenshots/music-podcasts-context.png)
 
-- **Unsubscribe** — remove the podcast, with a confirmation.
-- **Manage Podcasts** — subscribe to new shows (below).
+- **Unsubscribe**: remove the podcast, with a confirmation.
+- **Manage Podcasts**: subscribe to new shows (below).
 - **Refresh List** appears when you need to re-fetch feeds.
 
 ### Subscribing
@@ -226,34 +256,35 @@ directory:
 
 ![Manage Podcasts](../../assets/screenshots/music-podcasts-manage.png)
 
-- **Search** — find a show by name with the on-screen keyboard.
-- **Top Shows** — browse the podcast charts for your country:
+- **Search**: find a show by name with the on-screen keyboard.
+- **Top Shows**: browse the podcast charts for your country.
 
 ![Top Shows](../../assets/screenshots/music-podcasts-topshows.png)
 
-`A` subscribes to the selected show — or unsubscribes if you already follow
-it (the hint bar tells you which).
+`A` subscribes to the selected show, or unsubscribes if you already follow it.
+The hint bar tells you which.
 
 ### Episodes
 
-Opening a show lists its episodes under the show's artwork and description
-— each with its duration, age, a **New** badge for fresh episodes, and a
+Opening a show lists its episodes under the show's artwork and description.
+Each shows its duration, age, a **New** badge for fresh episodes, and a
 download indicator:
 
 ![Episodes](../../assets/screenshots/music-podcasts-episodes.png)
 
-Episodes are **downloaded to the SD card** for offline listening — on a new
-episode `A` starts the download (the hint bar shows it), and once
-downloaded, `A` plays.
+Episodes are **downloaded to the SD card** for offline listening:
+
+1. On a new episode, press `A` to start the download (the hint bar shows it).
+2. Once downloaded, press `A` to play.
 
 Press `MENU` on an episode for its context menu:
 
 ![Episode context menu](../../assets/screenshots/music-podcasts-episode-context.png)
 
-- **Refresh Episodes** — re-fetch the show's feed.
-- **Mark Played/Unplayed** — toggle the episode's played state.
-- The menu adapts to the episode: a downloaded episode adds **Remove
-  Download**, and one mid-download offers cancelling it.
+- **Refresh Episodes**: re-fetch the show's feed.
+- **Mark Played/Unplayed**: toggle the episode's played state.
+- **Remove Download**: added for a downloaded episode.
+- An episode mid-download offers cancelling it.
 
 ### Podcast player
 
@@ -273,25 +304,23 @@ progress bar and position. Playback position is saved as you listen, so
 | `SELECT` | Turn the screen off now |
 | `SELECT` + `A` | Wake the screen when it is off |
 
-[Auto screen off](#auto-screen-off) applies here too — idle timeout, and
+[Auto screen off](#auto-screen-off) applies here too: idle timeout, and
 headset media buttons keep working while the screen is dark.
 
 ## Settings
 
 ![Music Player settings](../../assets/screenshots/music-settings.png)
 
-- **Auto Screen Off** — idle time before the screen turns off during
-  playback.
-- **Balance** — the Game / Music mix, the same slider as in the OSD Music
-  widget (see [Background playback](#background-playback)).
-- **Bass Filter** — high-pass filter to reduce speaker distortion.
-- **Soft Limiter** — limits volume peaks to prevent clipping.
-- **Sample Rate** — `Device default`, or `Follow source` for bit-exact
-  hi-res playback on USB DACs (no resampling); applies on the next track.
-- **Resampler Quality** — higher quality costs more CPU.
-- **Audio Buffer** — larger buffers prevent dropouts.
-- **Clear Album Art / Clear Lyrics** — empty the on-SD caches.
+| Setting | What it does |
+| --- | --- |
+| **Auto Screen Off** | Idle time before the screen turns off during playback |
+| **Balance** | The Game / Music mix, the same slider as in the OSD Music widget (see [Background playback](#background-playback)) |
+| **Bass Filter** | High-pass filter to reduce speaker distortion |
+| **Soft Limiter** | Limits volume peaks to prevent clipping |
+| **Sample Rate** | `Device default`, or `Follow source` for bit-exact hi-res playback on USB DACs (no resampling). Applies on the next track |
+| **Resampler Quality** | Higher quality costs more CPU |
+| **Audio Buffer** | Larger buffers prevent dropouts |
+| **Clear Album Art / Clear Lyrics** | Empty the on-SD caches |
 
 Output routing is system-wide: speaker, Bluetooth or USB-C DAC, switched
-automatically as devices connect — see
-[Settings → Audio](../settings/audio.md).
+automatically as devices connect. See [Settings → Audio](../settings/audio.md).

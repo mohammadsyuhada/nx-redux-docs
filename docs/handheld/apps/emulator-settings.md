@@ -6,12 +6,13 @@ launching a game first. Every system is listed with the core it runs on
 
 ![Emulator Settings](../../assets/screenshots/emulator-settings.png)
 
-Select a system with `A` to edit its emulator options — the same options you
-reach in-game via the [pause menu](../guide/playing-games.md#the-in-game-menu)'s
-**Options** entry, edited here as the system-wide defaults.
+Select a system with `A` to edit its emulator options. These are the same
+options as **Options** in the in-game
+[pause menu](../guide/playing-games.md#the-in-game-menu). Here you set them as
+the system-wide defaults.
 
 For a **single game**, use **Emulator Options** in the game's
-[context menu](../guide/context-menu.md) instead — per-game options override
+[context menu](../guide/context-menu.md) instead. Per-game options override
 the system-wide settings made here. See
 [Emulator Options](../guide/emulator-options.md) for how the three
 configuration places fit together.

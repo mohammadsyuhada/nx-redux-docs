@@ -1,9 +1,9 @@
 # Device Sync
 
 **Tools → Device Sync** moves your data between two NX Redux devices over
-Wi-Fi. Since SD cards are built per device model and must not be swapped
-between them, this is the supported way to carry your progress from one
-device to another.
+Wi-Fi. It is the supported way to carry your progress to another device.
+
+SD cards are built for one device model, so don't swap them between devices.
 
 ![Device Sync](../../assets/screenshots/device-sync.png)
 
@@ -20,6 +20,6 @@ device to another.
 3. Press `A` **Start** on both — the devices find each other and sync.
 
 !!! note
-    Device Sync requires an active Wi-Fi connection; if Wi-Fi is off or not
-    connected, the tool asks you to enable it first (quickest way: the Wi-Fi
-    toggle in the [OSD](../guide/osd.md)).
+    Device Sync needs an active Wi-Fi connection. If Wi-Fi is off or not
+    connected, the tool asks you to turn it on first. The quickest way is the
+    Wi-Fi toggle in the [OSD](../guide/osd.md).

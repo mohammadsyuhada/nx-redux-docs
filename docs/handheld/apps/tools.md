@@ -1,7 +1,7 @@
 # Tools Overview
 
-The **Tools** entry at the bottom of the main menu collects every built-in app
-and utility.
+**Tools**, at the bottom of the main menu, holds every built-in app and
+utility.
 
 ![Tools menu](../../assets/screenshots/tools.png)
 
@@ -20,32 +20,39 @@ and utility.
 | [Settings](../settings/index.md) | Display, audio, network, input, Simple Mode and more — see the [Settings](../settings/index.md) page |
 | [Xtras](xtras.md) | On-device add-on store |
 
-Tools installed from the [Xtras store](xtras.md) — such as PortMaster — appear
+Tools you install from the [Xtras store](xtras.md), such as PortMaster, appear
 in this menu too.
 
 ## Installing community paks
 
-Community paks built for **NextUI** still work: copy the `<Name>.pak` folder
-into `/Tools` on the SD card (or `/Emus` for an emulator pak) and it appears
-in this menu — follow each pak's own installation steps.
+Community paks built for **NextUI** still work here.
 
-Some paks' instructions say to place them inside a **platform folder** (e.g.
-`Tools/tg5040/<Name>.pak`) — that layout works too, and for paks whose
-scripts reference the platform path internally it is **required**, so when a
-pak's README says to use it, do. The platform folder name depends on your
-device:
+1. Copy the `<Name>.pak` folder to the SD card: into `/Tools` for a tool, or
+   `/Emus` for an emulator pak.
+2. Follow the pak's own installation steps.
+3. The pak appears in this menu.
 
-| Device | Platform folder |
-| --- | --- |
-| Brick / Brick Hammer / Brick Pro / Smart Pro | `tg5040` |
-| Smart Pro S | `tg5050` |
-
-If the same pak exists in both places, the flat copy (`Tools/<Name>.pak`)
-wins.
+Some paks say to use a **platform folder**, for example
+`Tools/tg5040/<Name>.pak`. If the pak's README says so, do it.
 
 !!! warning
     Don't give your pak the same name as a tool or emulator shipped with NX
-    Redux — same-named paks in `/Tools` and `/Emus` are treated as NX Redux
-    leftovers and removed on every update. And remember these paks target
-    NextUI, not NX Redux — see the support notes in
-    [Additional Emulators](../emulators/additional.md).
+    Redux. Same-named paks in `/Tools` and `/Emus` count as NX Redux leftovers
+    and are removed on every update.
+
+These paks target NextUI, not NX Redux. See the support notes in
+[Additional Emulators](../emulators/additional.md).
+
+??? info "More detail"
+    The platform-folder layout also works. For paks whose scripts reference
+    the platform path internally, it is **required**.
+
+    The platform folder name depends on your device:
+
+    | Device | Platform folder |
+    | --- | --- |
+    | Brick / Brick Hammer / Brick Pro / Smart Pro | `tg5040` |
+    | Smart Pro S | `tg5050` |
+
+    If the same pak exists in both places, the flat copy (`Tools/<Name>.pak`)
+    wins.
