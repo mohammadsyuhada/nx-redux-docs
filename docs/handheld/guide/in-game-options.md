@@ -42,7 +42,7 @@ same list appears for every system. Use `LEFT` / `RIGHT` to change a value.
 | **Overlay** | None, or any overlay for this system | A border/bezel image drawn around the game — see [Overlays](playing-games.md#overlays). |
 | **Offset screen X** / **Offset screen Y** | −64 to +64 | Shift the game image horizontally/vertically by this many pixels. Default: 0. |
 | **Screen Sharpness** | NEAREST, LINEAR | **NEAREST** keeps pixels crisp; **LINEAR** smooths lines, and works best when the final image is high resolution (a high-res core, or upscaling with shaders). Default: LINEAR. |
-| **Core Sync** | Auto, Screen, Native | What drives the frame rate: **Native** follows the emulator's frame rate, **Screen** follows the display's refresh rate. **Auto** picks for you. |
+| **Core Sync** | Auto, Screen, Native, Emulated | What drives the frame rate: **Native** follows the emulator's frame rate, **Screen** follows the display's refresh rate. **Emulated** follows the game's own timing, for GPU-rendered systems such as [Dreamcast](../emulators/dreamcast.md#settings) (its default); for other systems it behaves like Native. **Auto** picks for you. |
 | **CPU Speed** | Powersave, Normal, Performance, Auto | Underclock to save battery or overclock for demanding games. **Auto** (default) scales within a range tuned for each emulator. |
 | **Debug HUD** | Off, On | Show frames per second, CPU load, resolution and scaler information on screen. |
 | **Max FF Speed** | None, 2x – 8x | Cap for fast-forward (it may run slower depending on the game and emulator). Default: 4x. |
