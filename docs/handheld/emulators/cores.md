@@ -1,13 +1,15 @@
 # Cores & BIOS Files
 
-Every system below runs on a bundled libretro core. BIOS files go in the
-matching folder under `Bios/` on the SD card — the folder name is the tag
-in parentheses after the system name (e.g. Game Boy Advance (GBA) →
-`Bios/GBA/`), and file names must match exactly.
+This page lists the core each system runs on and the BIOS files it needs.
+Every system below runs on a bundled libretro core.
+
+To add a BIOS file, put it in the matching folder under `Bios/` on the SD
+card. The folder name is the tag in parentheses after the system name (e.g.
+Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 
 !!! warning "No BIOS files are included"
-    BIOS files are copyrighted and do **not** ship with NX Redux — the
-    `Bios` folders are created empty. Dump the files you need from your own
+    BIOS files are copyrighted and do **not** ship with NX Redux. The `Bios`
+    folders are created empty. Dump the files you need from your own
     hardware.
 
 ## Systems and cores
@@ -57,29 +59,36 @@ in parentheses after the system name (e.g. Game Boy Advance (GBA) →
 | TurboGrafx-16 (PCE) | Mednafen PCE Fast | HuCards: none; CD games: **`syscard3.pce` required** |
 | Virtual Boy (VB) | Mednafen VB | None |
 
-Some systems appear more than once on purpose — pick per game by which
-`Roms` folder you use:
+## Systems with a choice of core
 
-- **Game Boy Advance** ships both gpSP (GBA — faster, and the only GBA core
-  with [Netplay](../netplay.md#supported-systems)) and mGBA (MGBA — more
-  accurate and better for ROM hacks, no netplay). See [Game Boy Advance](game-boy-advance.md) for
-  which to use.
-- **Super Nintendo** ships both Snes9x (SFC — the default, lighter) and
-  Supafaust (SUPA — more accurate, but heavier). See
-  [Super Nintendo](super-nintendo.md) for which to use.
-- **The Sega systems** can also run on **Genesis Plus GX** (GPGX) — a more
-  accurate alternative to PicoDrive (PicoDrive is the lighter, faster core).
+Some systems appear more than once on purpose. Pick per game by which `Roms`
+folder you use:
 
-Genesis Plus GX is special: a single `GPGX` tag, pak and core plays
-Genesis/Mega Drive, Master System, Game Gear, SG-1000 **and** Sega CD, and
-picks the system from each ROM's file extension. That also lets
-[RetroAchievements](../apps/retroachievements.md) identify every game with
-the correct console, so you can keep all your Sega games under `(GPGX)`
-folders. Because they share one tag, GPGX saves, BIOS, cheats and overlays
-all live under the `GPGX` name (e.g. Sega CD BIOS goes in `Bios/GPGX/`,
-not `Bios/SEGACD/`). To use it, name a `Roms` folder for the system with
-the `(GPGX)` tag — for example `Sega Genesis (GPGX)` — the same way the
+| System | Faster, lighter | More accurate |
+| --- | --- | --- |
+| **Game Boy Advance** | gpSP (`GBA`), the only GBA core with [Netplay](../netplay.md#supported-systems) | mGBA (`MGBA`), better for ROM hacks, no netplay |
+| **Super Nintendo** | Snes9x (`SFC`), the default | Supafaust (`SUPA`), but heavier |
+| **The Sega systems** | PicoDrive | Genesis Plus GX (`GPGX`) |
+
+See [Game Boy Advance](game-boy-advance.md) and
+[Super Nintendo](super-nintendo.md) for which to use.
+
+To use Genesis Plus GX, name a `Roms` folder for the system with the
+`(GPGX)` tag, for example `Sega Genesis (GPGX)`. It works the same way the
 default `Sega Genesis (MD)` folder uses PicoDrive.
+
+??? info "More detail: Genesis Plus GX"
+    Genesis Plus GX is special: a single `GPGX` tag, pak and core plays
+    Genesis/Mega Drive, Master System, Game Gear, SG-1000 **and** Sega CD. It
+    picks the system from each ROM's file extension.
+
+    That also lets [RetroAchievements](../apps/retroachievements.md) identify
+    every game with the correct console, so you can keep all your Sega games
+    under `(GPGX)` folders.
+
+    Because they share one tag, GPGX saves, BIOS, cheats and overlays all
+    live under the `GPGX` name (e.g. Sega CD BIOS goes in `Bios/GPGX/`, not
+    `Bios/SEGACD/`).
 
 ## Standalone emulators
 

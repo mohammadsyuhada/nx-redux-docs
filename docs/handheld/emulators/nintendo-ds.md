@@ -6,10 +6,11 @@ Nintendo DS games run on a bundled **Drastic** emulator. Put your ROMs in
 ## Controls
 
 The face buttons, D-pad, shoulders, `START` and `SELECT` map to the DS as you
-would expect, and follow the device-wide
-[Button Layout](../guide/button-layout.md) setting — under the Xbox layout
-the bottom button is the DS `A`, in games and in the Drastic menu alike. On
-top of that:
+would expect. They follow the device-wide
+[Button Layout](../guide/button-layout.md) setting. Under the Xbox layout the
+bottom button is the DS `A`, in games and in the Drastic menu alike.
+
+On top of that:
 
 | Button | Action |
 |--------|--------|
@@ -21,8 +22,10 @@ top of that:
 
 ## Stylus mode
 
-Many DS games need the touch screen. Press `L2` to turn stylus mode on: a pen
+Many DS games need the touch screen. Press `L2` to turn stylus mode on. A pen
 appears over the touch screen, and the D-pad drives it instead of the game.
+
+<!-- SCREENSHOT: nds-stylus-mode — DS game in stylus mode, pen visible on the touch screen (Brick) -->
 
 | Button | Action |
 |--------|--------|
@@ -37,6 +40,9 @@ The other buttons keep going to the game, so you can play with the pen out.
     While stylus mode is on, `MENU` does nothing. Press `L2` first to leave
     stylus mode, then `MENU` to open the Drastic menu.
 
-The pen is only drawn when it moves and hides itself after a moment of
-stillness; nudge the D-pad to see where it is. The pen image is the same on
-every device and is remembered across launches.
+!!! tip "Can't see the pen?"
+    Nudge the D-pad. The pen hides itself after a moment of stillness.
+
+??? info "More detail"
+    The pen is only drawn when it moves. The pen image is the same on every
+    device and is remembered across launches.

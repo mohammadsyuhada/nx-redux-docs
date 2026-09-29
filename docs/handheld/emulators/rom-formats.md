@@ -1,45 +1,38 @@
 # ROM File Formats
 
-Every system folder under `Roms/` accepts the formats its emulator reads
-natively — the tables below list them per system. On top of that, the
-built-in cores all accept **zipped ROMs**, and most users only need one
-rule of thumb: **uncompressed is best, CD games should be CHD, and
-arcade zips must stay exactly as they are.**
+This page lists the file types each system accepts. Every system folder under
+`Roms/` accepts the formats its emulator reads natively. On top of that, the
+built-in cores all accept **zipped ROMs**.
+
+Most users only need one rule of thumb:
+
+- **Uncompressed is best.**
+- **CD games should be CHD.**
+- **Arcade zips must stay exactly as they are.**
 
 ## Compressed ROMs (.zip and .7z)
 
-Any game launched through a built-in core can be a `.zip` or `.7z`
-archive:
+Any game launched through a built-in core can be a `.zip` or `.7z` archive.
+There are two exceptions:
 
-- Cores that read archives themselves (FBNeo, the Commodore cores, Amiga)
-  get the file untouched.
-- For every other core, NX Redux extracts the ROM out of the archive at
-  launch and hands the core the extracted file. The copy is kept in RAM
-  until the device powers off, so only the **first** launch of a session
-  pays the extraction delay.
+| System | What to use |
+| --- | --- |
+| [Nintendo 64](nintendo-64.md) and [Nintendo DS](nintendo-ds.md) | Uncompressed ROMs. These standalone emulators get their files directly. |
+| [Sega Dreamcast](dreamcast.md) | `.chd` for disc images, which is compressed internally anyway. Don't zip disc images: there a `.zip` is a Naomi/Atomiswave **arcade set**. |
 
-This does **not** apply to the standalone emulators —
-[Nintendo 64](nintendo-64.md) and [Nintendo DS](nintendo-ds.md) get their
-files directly, so give them uncompressed ROMs.
-
-[Sega Dreamcast](dreamcast.md) is the other exception: there a `.zip` is a
-Naomi/Atomiswave **arcade set**, so don't zip disc images. Use `.chd`, which
-is compressed internally anyway.
+??? info "More detail"
+    - Cores that read archives themselves (FBNeo, the Commodore cores, Amiga)
+      get the file untouched.
+    - For every other core, NX Redux extracts the ROM out of the archive at
+      launch and hands the core the extracted file. The copy is kept in RAM
+      until the device powers off, so only the **first** launch of a session
+      pays the extraction delay.
+    - This does **not** apply to the standalone emulators.
 
 ### Uncompressed vs .zip vs .7z
 
-**Prefer uncompressed ROMs** (`.gb`, `.sfc`, `.md`, …). The only thing
-compression buys is SD card space, and cartridge ROMs are tiny next to
-any modern card. Uncompressed files win everything else:
-
-- **Fastest launch** — the core reads the file directly, with no
-  extraction step, every time.
-- **No RAM overhead** — extracted copies of compressed ROMs live in
-  RAM until the device powers off, and the Trimui devices only have
-  **1 GB** shared with the emulator itself. An uncompressed ROM costs
-  nothing.
-- **Works everywhere** — including the standalone emulators, which do
-  not get the automatic extraction.
+**Prefer uncompressed ROMs** (`.gb`, `.sfc`, `.md`, …). Compression only saves
+SD card space, and cartridge ROMs are tiny next to any modern card.
 
 | Format | Pros | Cons |
 | --- | --- | --- |
@@ -47,32 +40,42 @@ any modern card. Uncompressed files win everything else:
 | `.zip` | Smaller files, standard romset convention | Extraction delay on first launch; extracted copy sits in RAM all session |
 | `.7z` | Smallest files | Slowest extraction of the three; same RAM cost as `.zip` |
 
-Compressed cartridge ROMs still work fine if that is the form your
-library is already in — for typical carts (up to a few dozen MB) the
-extraction delay is under a second and the RAM cost is small. Just
-don't bother compressing yourself, and if you keep archives, prefer
-`.zip` over `.7z`: the extra space `.7z` saves is small and its
-extraction is noticeably slower on these devices.
+!!! tip "Already have compressed ROMs?"
+    Compressed cartridge ROMs still work fine. Don't bother compressing
+    yourself. If you keep archives, prefer `.zip` over `.7z`.
+
+??? info "More detail"
+    Uncompressed files win everything except SD card space:
+
+    - **Fastest launch:** the core reads the file directly, with no
+      extraction step, every time.
+    - **No RAM overhead:** extracted copies of compressed ROMs live in RAM
+      until the device powers off, and the Trimui devices only have **1 GB**
+      shared with the emulator itself. An uncompressed ROM costs nothing.
+    - **Works everywhere:** including the standalone emulators, which do not
+      get the automatic extraction.
+
+    For typical carts (up to a few dozen MB) the extraction delay is under a
+    second and the RAM cost is small. The extra space `.7z` saves is small,
+    and its extraction is noticeably slower on these devices.
 
 !!! warning "Never zip CD images"
     Do **not** compress CD-based games (PlayStation, Sega CD,
-    TurboGrafx-CD) into `.zip`/`.7z`. A `.cue` + `.bin` pair stops
-    working when archived (only one file gets extracted), and a large
-    image can exhaust the device's RAM during extraction. Use **`.chd`**
-    instead — it is heavily compressed *and* read directly, with no
-    extraction step and no RAM cost.
+    TurboGrafx-CD) into `.zip`/`.7z`. A `.cue` + `.bin` pair stops working
+    when archived (only one file gets extracted). A large image can exhaust
+    the device's RAM during extraction. Use **`.chd`** instead: it is heavily
+    compressed *and* read directly, with no extraction step and no RAM cost.
 
 !!! note "Arcade zips are not compressed ROMs"
-    `Roms/Arcade (FBN)/` zips are **romsets** — the zip itself is the
-    game's identity and FBNeo reads it directly. Never extract or
-    re-compress them, and see the [Arcade page](arcade.md) for naming
-    rules.
+    `Roms/Arcade (FBN)/` zips are **romsets**. The zip itself is the game's
+    identity, and FBNeo reads it directly. Never extract or re-compress them.
+    See the [Arcade page](arcade.md) for naming rules.
 
 ## Formats per system
 
-Native formats verified against each bundled core. Remember `.zip` and
-`.7z` work for all of these on top of what is listed; multi-disc games
-use [`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
+Native formats verified against each bundled core. `.zip` and `.7z` work for
+all of these on top of what is listed. Multi-disc games use
+[`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
 
 ### Cartridge & handheld systems
 
@@ -112,7 +115,7 @@ use [`.m3u` playlists](../guide/main-menu.md#multi-disc-games).
 | Sega CD (GPGX) | genesis_plus_gx | `chd` `cue` `bin` `iso` `m3u` (BIOS in `Bios/GPGX/`) |
 | Sega Dreamcast (DC) | flycast | `chd` `gdi` `cdi` `cue` `m3u` + Naomi/Atomiswave `zip` `7z` — see [Dreamcast](dreamcast.md) |
 
-`.chd` is the recommended format for all of them — single file per disc,
+`.chd` is the recommended format for all of them: a single file per disc,
 compressed, no extraction.
 
 ### Computers & other
