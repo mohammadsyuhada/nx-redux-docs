@@ -6,8 +6,10 @@ hide:
 # Desktop App
 
 NX Redux also runs as a desktop app on **macOS (Apple Silicon)** and
-**Linux (x86_64)** — the same launcher, tools, and bundled libretro cores as
-the handheld build, in a window on your computer.
+**Linux (x86_64)**. It's the same launcher, tools, and bundled libretro
+cores as the handheld build, just in a window on your computer.
+
+<!-- SCREENSHOT: desktop-main-menu — the app window -->
 
 !!! warning "Experimental"
     The desktop build is **experimental**. It is packaged alongside every
@@ -26,25 +28,33 @@ Grab the desktop artifact for your OS from the
 | Linux (x86_64) | `NXRedux-<version>-x86_64.AppImage` |
 
 **macOS** — unzip and move `NXRedux.app` wherever you like. The app is not
-code-signed, so macOS blocks the **first** launch:
+code-signed, so macOS blocks the first launch; see below to unlock it.
 
-1. Double-click the app. macOS shows a warning that it could not verify the
-   app; close that dialog (do **not** choose *Move to Trash*).
-2. Open **System Settings → Privacy & Security** and scroll down to the
-   **Security** section. There is a notice that `NXRedux` was blocked; click
-   **Open Anyway** and confirm.
-3. Launch the app again. From now on it opens normally with a double-click.
+??? info "More detail"
+    1. Double-click the app. macOS shows a warning that it could not verify the
+       app; close that dialog (do **not** choose *Move to Trash*).
+    2. Open **System Settings → Privacy & Security** and scroll down to the
+       **Security** section. There is a notice that `NXRedux` was blocked; click
+       **Open Anyway** and confirm.
+    3. Launch the app again. From now on it opens normally with a double-click.
+
+    <!-- SCREENSHOT: desktop-macos-gatekeeper — the macOS warning dialog -->
+    <!-- SCREENSHOT: desktop-macos-open-anyway — Privacy & Security, Open Anyway -->
 
 **Linux** — make the AppImage executable (`chmod +x NXRedux-*.AppImage`) and
-run it. If it refuses to start, your distribution may be missing FUSE 2
-(`libfuse2`); either install it or run the AppImage with
-`--appimage-extract-and-run`.
+run it.
 
-On first launch the app creates its data folder at `~/NXRedux` with the same
-layout as an SD card — put your games in `Roms/` and BIOS files in `Bios/`
-using the usual per-system subfolders (e.g. `Roms/Game Boy Advance (GBA)/`),
-then restart the app or refresh the list. Saves, states, and settings all
-live under this folder too, so it is the only thing you need to back up.
+??? info "More detail"
+    If it refuses to start, your distribution may be missing FUSE 2
+    (`libfuse2`); either install it, or run the AppImage with
+    `--appimage-extract-and-run`.
+
+On first launch, the app creates its data folder at `~/NXRedux`, laid out
+the same way as an SD card. Put your games in `Roms/` and BIOS files in
+`Bios/`, using the usual per-system subfolders (e.g.
+`Roms/Game Boy Advance (GBA)/`), then restart the app or refresh the list.
+Saves, states, and settings all live under this folder too, so it's the
+only thing you need to back up.
 
 ## Keyboard controls
 
@@ -66,8 +76,9 @@ The default keyboard layout mirrors RetroArch's, so it should feel familiar:
 | ++space++ | Menu (in-game menu / shortcuts) |
 | ++backspace++ | Power |
 
-Volume, display brightness, wifi networking and bluetooth are handled by your computer, not by the app —
-the device volume/brightness shortcuts do not apply here.
+Volume, display brightness, wifi networking and bluetooth are handled by
+your computer, not by the app. The device's volume/brightness shortcuts do
+not apply here.
 
 ## External controllers
 
@@ -108,14 +119,16 @@ Netplay works in the desktop build. When a game supports it, the game list
 shows the `Y NETPLAY` hint; press `Y` to **Host** or **Join** a session. The
 flow is the same as on the handhelds — see the [Netplay](../handheld/netplay.md) page.
 
+<!-- SCREENSHOT: desktop-netplay — netplay in a window -->
+
 Two things are specific to desktop:
 
 - **It connects over your existing network only — there is no hotspot
-  option.** On the handhelds one device can host a Wi-Fi hotspot for the
-  other; on the desktop that is intentionally left out, because managing a
-  computer's Wi-Fi hotspot cleanly across both macOS and Linux is more trouble
-  than it's worth. Both players simply need to be on the **same network** —
-  Wi-Fi or Ethernet, either works.
+  option.** On the handhelds, one device can host a Wi-Fi hotspot for the
+  other. On the desktop that's intentionally left out — managing a
+  computer's Wi-Fi hotspot cleanly across both macOS and Linux is more
+  trouble than it's worth. Both players simply need to be on the
+  **same network** — Wi-Fi or Ethernet, either works.
 - **Dreamcast and Nintendo 64 netplay are not available**, because the
   desktop build doesn't include those systems yet
   (see [Limitations](#limitations)). Netplay for the bundled libretro cores —

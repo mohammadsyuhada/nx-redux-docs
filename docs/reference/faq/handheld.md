@@ -41,8 +41,8 @@ devices for you.
 ## Why is there no RetroAchievements hardcore mode?
 
 By design. NX Redux is not an RA-approved hardcore emulator, so hardcore mode
-is intentionally omitted to keep your account safe — softcore unlocks work
-fully, including offline. See
+is intentionally omitted to keep your account safe. Softcore unlocks still
+work fully, including offline. See
 [RetroAchievements](../../handheld/apps/retroachievements.md).
 
 ## A community pak (e.g. PPSSPP) misbehaves — where do I report it?
@@ -53,9 +53,9 @@ Redux, and their developers cannot help with NX Redux-specific behavior. See
 
 ## How do I update NX Redux?
 
-Use the OTA updater in [Settings → About](../../handheld/settings/about.md) (needs
-Wi-Fi), or copy the new release's `MinUI.zip` (without unzipping) to the
-root of your SD card and boot. Bundled emulator and tool paks update
+Use the OTA updater in [Settings → About](../../handheld/settings/about.md)
+(needs Wi-Fi). Or copy the new release's `MinUI.zip` (without unzipping) to
+the root of your SD card, then boot. Bundled emulator and tool paks update
 automatically either way. See
 [Getting Started](../../handheld/getting-started.md#updating).
 
@@ -63,7 +63,7 @@ automatically either way. See
 
 Turn on **Settings → Developer → Enable SSH / SFTP** (or **Start SSH / SFTP on boot**) with
 Wi-Fi connected. The hint under the toggle shows the exact login line with
-the device's current IP address; the connected network in
+the device's current IP address. The connected network in
 **Settings → Network** shows the same IP. The username is `root`. On Brick
 and Brick Pro the password is `tina`; Smart Pro S needs no password.
 
@@ -72,7 +72,7 @@ ssh root@192.168.1.8
 ```
 
 The same login works for SFTP, so you can copy files with a client such as
-FileZilla; the SD card is at `/mnt/SDCARD`. See
+FileZilla. The SD card is at `/mnt/SDCARD`. See
 [Accessing Your Files](../../handheld/guide/file-access.md) and
 [Developer](../../handheld/settings/developer.md#enable-ssh-sftp).
 
@@ -81,14 +81,14 @@ FileZilla; the SD card is at `/mnt/SDCARD`. See
 Yes. **Settings → System → Button layout → Xbox** swaps `A`/`B` and `X`/`Y`
 everywhere — menus, apps, every emulator and PortMaster. Restart once so the
 On-Screen Display follows too. The button hints can show either the letters
-printed on the caps or the buttons' roles; see
+printed on the caps or the buttons' roles. See
 [Button Layout](../../handheld/guide/button-layout.md).
 
 ## Bluetooth is flaky, or I want the stock Bluetooth stack back
 
 A full release zip upgrades the device's Bluetooth stack on first boot (see
 [Bluetooth → Under the hood](../../handheld/settings/bluetooth.md#under-the-hood)). If
-Bluetooth misbehaves, first confirm that upgrade actually ran: it only
+Bluetooth misbehaves, first confirm that upgrade actually ran. It only
 happens when the `nextui.upgrade_bluez.*.pakz` file from the release zip
 is on the card at boot. Installing by copying only `MinUI.zip` onto an
 existing card, or updating over the air from an install that never had the

@@ -20,8 +20,8 @@ NX Redux grew out of [NextUI](https://github.com/LoveRetro/NextUI) by
 LoveRetro, and its name says so. **NX** is short for NextUI, a nod to the
 project it comes from. **Redux** means "brought back" or "revisited", the word
 used for a new take on an existing work. NX Redux is our reimagining of
-NextUI. It keeps the minimal, pick-up-and-play design NextUI is known for, and
-takes it in its own direction with standalone emulators, netplay,
+NextUI. It keeps the minimal, pick-up-and-play design NextUI is known for.
+From there it takes its own direction, with standalone emulators, netplay,
 achievements and media tools that stay out of the way until you need them.
 The logo tells the same story: two mirrored **N** shapes whose diagonals cross
 to form an **X**.
