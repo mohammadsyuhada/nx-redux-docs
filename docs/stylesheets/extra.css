@@ -142,3 +142,31 @@
 @media (prefers-reduced-motion: reduce) {
   .md-nav--primary .md-nav__item--section > .md-nav__link { transition: none; }
 }
+
+/* "More detail" blocks: quiet, so they read as optional extras rather than
+   callouts. A faint outline, no tinted title bar, a muted title and icon. */
+.md-typeset details.info {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.72rem;
+}
+
+.md-typeset details.info > summary {
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font-weight: 500;
+}
+
+.md-typeset details.info > summary::before {
+  background-color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset details.info > summary::after {
+  color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset details.info > summary:hover {
+  color: var(--md-default-fg-color);
+}
