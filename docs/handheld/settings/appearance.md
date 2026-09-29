@@ -1,21 +1,23 @@
 # Appearance
 
-UI customization — UI scale, colors (with live swatches), animations, and
-which entries the main menu shows.
+Change how the interface looks: UI scale, colors (with live swatches),
+animations, and which entries the main menu shows.
 
 ![Appearance settings](../../assets/screenshots/set-appearance.png)
 
 ## UI scale
 
-Size of text and menus across the whole UI. Choose **Default**, **1x** or
-**2x**. **2x** is larger and shows fewer rows, **1x** is smaller and shows
-more.
+Size of text and menus across the whole UI.
 
-- **Default** follows the device and shows which scale that is: **Default
-  (2x)** on the Brick, **Default (1x)** on the Brick Pro and Smart Pro S.
-- Settings redraws at the new scale straight away. The main menu, the other
-  tools and the in-game menus pick it up the next time they start, which for
-  the main menu is as soon as you leave Settings.
+| Choice | What it does |
+| --- | --- |
+| **Default** | Follows the device and shows which scale that is: **Default (2x)** on the Brick, **Default (1x)** on the Brick Pro and Smart Pro S. |
+| **1x** | Smaller, shows more rows. |
+| **2x** | Larger, shows fewer rows. |
+
+- Settings redraws at the new scale straight away.
+- The main menu, the other tools and the in-game menus pick it up the next
+  time they start. For the main menu, that is as soon as you leave Settings.
 - The Nintendo 64 in-game menu uses the same scale.
 
 *Default (2x) on the Brick*
@@ -32,9 +34,9 @@ The color used to render main UI elements.
 
 ## Main color opacity
 
-Opacity of the main color, `10%`–`100%` in 10% steps. Below `100%` the pills
-and selection capsules become translucent and show the wallpaper (`bg.png` at
-the SD card root, or the per-folder art) through them.
+Opacity of the main color, `10%`–`100%` in 10% steps. Below `100%`, the pills
+and selection capsules turn translucent and show the wallpaper through them.
+The wallpaper is `bg.png` at the SD card root, or the per-folder art.
 
 ## Primary accent color
 
@@ -72,7 +74,8 @@ Show the battery level as a percentage in the status pill.
 
 ## Show search hint
 
-Show or hide the START search button hint on the main menu. Hiding it only removes the hint; pressing START at the top level still opens search.
+Show or hide the `START` search button hint on the main menu. Hiding it only
+removes the hint: pressing `START` at the top level still opens search.
 
 ## Show menu animations
 
@@ -92,27 +95,28 @@ Radius of the rounded corners on game art.
 
 ## Game art width
 
-Percentage of the screen width used for game art: the size of the image on
-the right, and the width left over for game titles. This applies to the
-**Thumbnail** style only. The **Background** style has fixed geometry and
-caps titles at 85% of the screen width.
+Percentage of the screen width used for game art. It sets the size of the
+image on the right, and so the width left over for game titles.
+
+This applies to the **Thumbnail** style only. The **Background** style has
+fixed geometry and caps titles at 85% of the screen width.
 
 ## Game art style
 
 How game art is shown in the game list.
 
-- **Thumbnail** (default) — the art sits on the right side of the screen at
-  the size set by *Game art width*, with rounded corners.
+- **Thumbnail** (default): the art sits on the right of the screen, with
+  rounded corners, at the size set by *Game art width*.
 
     *Thumbnail*
 
     ![Thumbnail style](../../assets/screenshots/game-art-thumbnail.png)
 
-- **Background** — the art fills the screen height and fades diagonally into
-  the list, with the titles over it. This style always uses the screenshot,
-  whatever *Game art type* is set to, and shows an empty background for a game
-  whose screenshot has not been fetched. *Game art corner radius* and *Game
-  art width* have no effect here.
+- **Background**: the art fills the screen height and fades diagonally into
+  the list, with the titles over it.
+    - It always uses the screenshot, whatever *Game art type* is set to.
+    - A game whose screenshot has not been fetched gets an empty background.
+    - *Game art corner radius* and *Game art width* have no effect here.
 
     *Background*
 
@@ -121,22 +125,22 @@ How game art is shown in the game list.
 ## Game art type
 
 Which of the fetched images the game list shows in the **Thumbnail** style.
-The [Artwork Manager](../apps/artwork-manager.md) stores all three per game;
-when the chosen one is missing for a game, the Mix image is shown instead.
+The [Artwork Manager](../apps/artwork-manager.md) stores all three per game.
+When the chosen one is missing for a game, the Mix image is shown instead.
 
-- **Mix** (default) — the screenshot with the box art and logo over it.
+- **Mix** (default): the screenshot with the box art and logo over it.
 
     *Mix*
 
     ![Mix](../../assets/screenshots/game-art-thumbnail.png)
 
-- **Screenshot** — the in-game screenshot on its own.
+- **Screenshot**: the in-game screenshot on its own.
 
     *Screenshot*
 
     ![Screenshot](../../assets/screenshots/game-art-type-screenshot.png)
 
-- **Box art** — the box art on its own.
+- **Box art**: the box art on its own.
 
     *Box art*
 
@@ -144,8 +148,9 @@ when the chosen one is missing for a game, the Mix image is shown instead.
 
 !!! note "Upgrading from v1.9.0 or older"
     Releases up to v1.9.0 saved only the Mix image. **Screenshot** and
-    **Box art** therefore fall back to it, and the **Background** style,
-    which never falls back, shows nothing at all for art fetched back then.
+    **Box art** fall back to it. The **Background** style never falls back,
+    so it shows nothing at all for art fetched back then.
+
     To get the extra images for an existing library, open **Artwork Manager
     → Settings → Reset artwork**, then queue your systems again from the
     Library page.
@@ -168,7 +173,7 @@ Show the "Collections" entry in the main menu.
 
 ## Show Emulators
 
-Show the emulator (system) folders in the main menu — turn this off for a
+Show the emulator (system) folders in the main menu. Turn this off for a
 minimal menu of just your pinned games and shortcuts.
 
 ## Use folder background for ROMs
@@ -177,9 +182,13 @@ Use the emulator's background image behind its game list.
 
 ## Bootlogo
 
-Change the device boot logo. Scroll through the images with left/right and
-press `A` to apply one; the device reboots to show it. The NX Redux mark is
-the default logo, and the previous NextUI logo is still in the list.
+Change the device boot logo.
+
+1. Scroll through the images with left/right.
+2. Press `A` to apply one. The device reboots to show it.
+
+The NX Redux mark is the default logo. The previous NextUI logo is still in
+the list.
 
 ## Reset to defaults
 

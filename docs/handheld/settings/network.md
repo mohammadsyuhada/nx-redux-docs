@@ -15,7 +15,9 @@ Extra Wi-Fi logging for troubleshooting.
 
 ## Network list
 
-With Wi-Fi on, nearby networks are listed with signal strength and lock
-icons — the connected network shows a check mark, and its hint shows the
-current IP address. Select one to connect, entering the password with the
-on-screen keyboard; a known network offers **Forget**.
+With Wi-Fi on, nearby networks are listed with signal strength and lock icons.
+The connected network shows a check mark, and its hint shows the current IP
+address.
+
+Select a network to connect, entering the password with the on-screen
+keyboard. A known network offers **Forget**.

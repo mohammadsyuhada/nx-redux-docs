@@ -18,7 +18,7 @@ The device model NX Redux is running on.
 
 ## Firmware version
 
-The stock TrimUI firmware version — compare against the
+The stock TrimUI firmware version. Compare it against the
 [requirements](../getting-started.md#before-you-install).
 
 ## Busybox version

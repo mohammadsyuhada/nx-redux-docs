@@ -1,8 +1,8 @@
 # Settings
 
-Open **Tools → Settings** to configure the device. NX Redux consolidates
-what used to be separate apps (LED Control, Input, Clock, Updater) into one
-place — each page of the Settings app is documented on its own page here.
+Open **Tools → Settings** to configure the device. NX Redux brings what used
+to be separate apps (LED Control, Input, Clock, Updater) into one place. Each
+page of the Settings app has its own page here.
 
 ![Settings](../../assets/screenshots/settings.png)
 
@@ -22,5 +22,5 @@ place — each page of the Settings app is documented on its own page here.
 - [About](about.md) — versions and the built-in updater
 
 Some pages only appear when the device has the hardware for them (LEDs,
-Wi-Fi, Bluetooth, the FN switch, the F1/F2 keys, a fan); the screenshots in
+Wi-Fi, Bluetooth, the FN switch, the F1/F2 keys, a fan). The screenshots in
 this section are from a TrimUI Brick.

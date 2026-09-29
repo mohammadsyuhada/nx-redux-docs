@@ -6,7 +6,7 @@ Developer and debugging tools.
 
 ## Disable sleep
 
-Prevent deep sleep mode — useful for ADB debugging.
+Prevent deep sleep mode. Useful for ADB debugging.
 
 ## Keep awake over USB
 
@@ -34,10 +34,12 @@ Automatically start SSH and SFTP when the device boots.
 ## Debug logging
 
 Save app and game logs to the SD card under `.userdata/<platform>/logs/`.
-Off by default: logs then live only in RAM (`/tmp/nx-logs`), are cleared on
-every launch, and never touch the SD card. Turn this on when you need to
-capture a log for a bug report. Takes effect on the next launch, no reboot
-needed. Also enables the shutdown trace written by the power-off sequence.
+Turn this on when you need to capture a log for a bug report. It takes effect
+on the next launch, no reboot needed.
+
+Off by default. Logs then live only in RAM (`/tmp/nx-logs`), are cleared on
+every launch, and never touch the SD card. Turning it on also enables the
+shutdown trace written by the power-off sequence.
 
 ## Clean dot files
 

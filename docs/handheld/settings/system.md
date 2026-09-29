@@ -15,46 +15,55 @@ Time before the device goes to sleep after the screen is off, `5`–`600` s.
 
 ## Haptic feedback
 
-Enable or disable haptic feedback on certain actions in the OS: a short
-pulse when the device goes to sleep or wakes, and a light tap right before
-the power actually cuts on shutdown, so you know it is safe to put the device
-down. There is no pulse at the start of shutdown. On by default.
+Vibration feedback for some system actions. On by default.
+
+- A short pulse when the device goes to sleep or wakes.
+- A light tap just before the power cuts on shutdown, so you know it is safe
+  to put the device down. There is no pulse at the start of shutdown.
 
 These pulses only fire while the **Motor** toggle in the
-[On-Screen Display](../guide/osd.md) is on — that toggle is the master
+[On-Screen Display](../guide/osd.md) is on. That toggle is the master
 vibration switch for the whole device, games included.
 
 ## Vibration strength
 
 `Light`, `Normal` (default) or `Strong`. Sets how hard the motor rumbles for
-everything — game rumble, the sleep and wake pulses and the shutdown tap.
-Each time you change it the motor gives one pulse at the new level so you can
-feel it straight away. Game rumble is often brief and partial (cartridge
-rumble emulation), so `Strong` makes those bursts hit nearly as hard as a
-full one, while `Light` tones everything down.
+everything: game rumble, the sleep and wake pulses and the shutdown tap.
+Each time you change it, the motor pulses once at the new level so you can
+feel it straight away.
+
+??? info "More detail"
+    Game rumble is often brief and partial (cartridge rumble emulation), so
+    `Strong` makes those bursts hit nearly as hard as a full one, while
+    `Light` tones everything down.
 
 ## Button layout
 
 `Nintendo` (default) or `Xbox`. `Xbox` puts `A` at the bottom and `B` on the
-right (and `Y` on top, `X` on the left) everywhere — menus, apps, every
-emulator and PortMaster. Applies as soon as you leave Settings; only the
-On-Screen Display waits for a restart. See [Button Layout](../guide/button-layout.md).
+right (and `Y` on top, `X` on the left) everywhere: menus, apps, every
+emulator and PortMaster.
+
+It applies as soon as you leave Settings. Only the On-Screen Display waits for
+a restart. See [Button Layout](../guide/button-layout.md).
 
 ## Hint labels
 
-Shown only while the layout is `Xbox`. `Printed caps` (default) makes the
-button hints show the letter printed on the cap you press; `Layout letters`
-makes them show the button's role instead (`A` for confirm, whichever cap
-that is). Takes effect immediately, including in Settings itself.
+Shown only while the layout is `Xbox`. Takes effect immediately, including in
+Settings itself.
+
+- `Printed caps` (default): button hints show the letter printed on the cap
+  you press.
+- `Layout letters`: hints show the button's role instead (`A` for confirm,
+  whichever cap that is).
 
 ## Default view
 
-The initial view to show on boot — the content list or the
+The first view shown on boot: the content list or the
 [Game Switcher](../guide/game-switcher.md).
 
 ## Game Switcher games
 
-Which recently played games appear in the Game Switcher — `Resumable only`
+Which recently played games appear in the Game Switcher: `Resumable only`
 (the default) or all recent games.
 
 ## Show 24h time format
@@ -81,7 +90,7 @@ Your time zone.
 
 Format for battery saves in `Saves/<TAG>/`: `MinUI` (`.sav`),
 `Retroarch (compressed)` / `Retroarch (uncompressed)` (`.srm`), or
-`Generic`. Default: **Retroarch (uncompressed)** — directly compatible
+`Generic`. Default: **Retroarch (uncompressed)**, directly compatible
 with RetroArch on other devices.
 
 ## Save state format
@@ -103,11 +112,11 @@ Bypasses the stock shutdown procedure to avoid the "limbo bug".
 ## Restore stock files
 
 Restores the console's factory OSD files and reverts NX boot patches, if
-any — the NX OSD is unaffected. *(Device-dependent.)*
+any. The NX OSD is unaffected. *(Device-dependent.)*
 
 ## Fan Speed
 
-Fan speed: Quiet / Normal / Performance or a percentage. *(Devices with
+Quiet, Normal, Performance or a percentage. *(Devices with
 active cooling — Smart Pro S.)*
 
 ## Refresh emulator/roms list

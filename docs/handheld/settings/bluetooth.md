@@ -1,8 +1,8 @@
 # Bluetooth
 
-Bluetooth pairing. A connected audio device takes over sound output
-automatically — see [Audio](audio.md). The [OSD](../guide/osd.md) has a
-quick Bluetooth toggle too.
+Pair Bluetooth devices here. A connected audio device takes over sound output
+automatically; see [Audio](audio.md). The [OSD](../guide/osd.md) has a quick
+Bluetooth toggle too.
 
 ![Bluetooth settings](../../assets/screenshots/set-bluetooth.png)
 
@@ -21,20 +21,24 @@ and connect.
 
 ## Under the hood
 
-The stock TrimUI firmware ships an old Bluetooth stack. When NX Redux is
-installed from a full release zip, the first boot replaces it with newer
-builds on the device's system partition (see
-[Getting Started](../getting-started.md#installing)):
+After installing from a full release zip, NX Redux replaces the stock
+firmware's old Bluetooth stack with newer builds. This is what makes pairing and audio routing reliable.
 
-| Component | Version |
-| --- | --- |
-| BlueZ (`bluetoothd`, `bluetoothctl`, `btmon`, …) | 5.78 |
-| bluez-alsa (`bluealsa`, ALSA plugins) | 4.1.0 |
-| SBC codec (`libsbc`) | 2.1 |
+??? info "More detail"
+    The stock TrimUI firmware ships an old Bluetooth stack. When NX Redux is
+    installed from a full release zip, the first boot replaces it with newer
+    builds on the device's system partition (see
+    [Getting Started](../getting-started.md#installing)):
 
-This is what makes the audio routing and pairing described above reliable.
-The upgrade applies once per device and survives later updates, whether
-over the air or by copying `MinUI.zip`. To check it is present, look for
-`/usr/lib/libsbc.so.1.3.1` on the device (for example with the
-[Files](../apps/files.md) app) — the installer uses that file as its
-"already upgraded" marker.
+    | Component | Version |
+    | --- | --- |
+    | BlueZ (`bluetoothd`, `bluetoothctl`, `btmon`, …) | 5.78 |
+    | bluez-alsa (`bluealsa`, ALSA plugins) | 4.1.0 |
+    | SBC codec (`libsbc`) | 2.1 |
+
+    The upgrade applies once per device and survives later updates, whether
+    over the air or by copying `MinUI.zip`.
+
+    To check it is present, look for `/usr/lib/libsbc.so.1.3.1` on the device
+    (for example with the [Files](../apps/files.md) app). The installer uses
+    that file as its "already upgraded" marker.
