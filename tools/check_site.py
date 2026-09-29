@@ -194,8 +194,15 @@ def check_download_page():
     check('href="reference/download/"' in landing, "landing Download does not open the download page")
 
 
+def check_dark_only():
+    for page in ["index.html", "about/index.html", "handheld/getting-started/index.html", "404.html"]:
+        html = (SITE / page).read_text()
+        check('data-md-color-scheme="slate"' in html, f"{page} is not dark")
+        check('data-md-component="palette"' not in html, f"{page} still has the light/dark toggle")
+
+
 CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_new_mobile_pages, check_snippets_inlined,
-          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs, check_download_page]
+          check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs, check_download_page, check_dark_only]
 
 
 def main():

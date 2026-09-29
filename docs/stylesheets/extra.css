@@ -7,14 +7,9 @@
 
 
 /* Links and buttons in cyan, to match the landing page. Material ties them
-   to the primary colour, which is black here and would make them indigo.
-   Light mode uses cyan 800: the accent itself is too light to read on white. */
+   to the primary colour, which is black here and would make them indigo. */
 [data-md-color-scheme="slate"][data-md-color-primary="black"] {
   --md-typeset-a-color: var(--md-accent-fg-color);
-}
-
-[data-md-color-scheme="default"][data-md-color-primary="black"] {
-  --md-typeset-a-color: #00838f;
 }
 
 /* White text is too faint on bright cyan, so filled buttons get black text in

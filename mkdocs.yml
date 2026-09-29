@@ -13,20 +13,9 @@ theme:
   icon:
     repo: fontawesome/brands/github
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: black
-      accent: cyan
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+    scheme: slate
+    primary: black
+    accent: cyan
   features:
     - navigation.tabs
     - navigation.sections
