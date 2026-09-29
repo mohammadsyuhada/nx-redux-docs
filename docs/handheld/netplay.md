@@ -45,11 +45,13 @@ and so on) have no netplay.
 | Sony PlayStation | `Sony PlayStation (PS)` | PCSX-ReARMed | Lockstep |
 | Arcade | `Arcade (FBN)` | FBNeo | Lockstep |
 | Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus (standalone) | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |
-| Sega Dreamcast | `DreamCast (DC)` | Flycast (standalone) | GGPO, up to 2 players ([details](emulators/dreamcast.md#netplay)) |
+| Sega Dreamcast | `DreamCast (DC)` | Flycast | GGPO rollback, 2 players ([details](emulators/dreamcast.md#netplay)) |
 
 **Lockstep** is classic frame-synchronised netplay: both devices run the same
 game and exchange controller input every frame, so it suits games with a
-built-in multiplayer mode. **GB Link** and **GBA Link** instead emulate the
+built-in multiplayer mode. **GGPO** (Dreamcast) is rollback netplay: each
+device runs ahead on its own input and quietly corrects when the other
+player's input arrives, which keeps it responsive over Wi-Fi. **GB Link** and **GBA Link** instead emulate the
 link cable (and, for GBA, the wireless adapter), so single-player-cartridge
 features like trading and versus battles work between two devices.
 
@@ -94,7 +96,9 @@ refused.
 
 A netplay session never overwrites your own save file.
 
-For the **Lockstep** cores and **Sega Dreamcast**, the host brings the save.
+For the **Lockstep** cores and **Sega Dreamcast**, the host brings the save
+(on Dreamcast that includes the memory card and console settings, and both
+devices agree on a BIOS; see [Dreamcast → Netplay](emulators/dreamcast.md#netplay)).
 At the start the host's save is copied to the joiner, so both devices begin
 from the same progress. The host plays on its real save as usual, while the
 joiner plays on that copy in a scratch area and its own save in `Saves/` is
@@ -109,5 +113,17 @@ device its own save file.
 
 ## During a session
 
-Save states, fast-forward and rewind are automatically disabled during a
-session to protect the connection.
+Save states, fast-forward, rewind and reset are automatically disabled during
+a session to protect the connection.
+
+Pressing `MENU` during a session doesn't open the full in-game menu. It asks
+**Leave netplay?**:
+
+- `B` **Continue** goes back to the game.
+- `A` **Leave** ends the session and returns you to the game list.
+
+On most systems both players pause while the question is open, with no time
+limit. After one player leaves a Lockstep game, the other can keep playing on
+their own. On **Dreamcast** the other player's game waits for you, so the
+question counts down and you leave automatically after 20 seconds; the other
+player sees **Netplay ended** right away.
