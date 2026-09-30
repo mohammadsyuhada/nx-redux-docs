@@ -72,6 +72,7 @@ plugins:
         emulators/arcade.md: handheld/emulators/arcade.md
         emulators/nintendo-64.md: handheld/emulators/nintendo-64.md
         emulators/dreamcast.md: handheld/emulators/dreamcast.md
+        emulators/psp.md: handheld/emulators/psp.md
         emulators/nintendo-ds.md: handheld/emulators/nintendo-ds.md
         emulators/additional.md: handheld/emulators/additional.md
         netplay.md: handheld/netplay.md
@@ -155,6 +156,7 @@ nav:
           - Game Boy Advance: handheld/emulators/game-boy-advance.md
           - Nintendo 64: handheld/emulators/nintendo-64.md
           - Sega Dreamcast: handheld/emulators/dreamcast.md
+          - PlayStation Portable: handheld/emulators/psp.md
           - Nintendo DS: handheld/emulators/nintendo-ds.md
           - Super Nintendo: handheld/emulators/super-nintendo.md
           - Additional Emulators: handheld/emulators/additional.md

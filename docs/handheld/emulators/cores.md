@@ -54,6 +54,7 @@ Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 | Sega Game Gear (GPGX) | Genesis Plus GX | None |
 | Sega CD (GPGX) | Genesis Plus GX | **Required** — `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` in `Bios/GPGX/` |
 | Sony PlayStation (PS) | PCSX-ReARMed | Recommended — `psxonpsp660.bin` or `scph1001.bin` (an HLE fallback exists; a real BIOS is strongly recommended for compatibility) |
+| Sony PlayStation Portable (PSP) | PPSSPP | None — see the [PSP page](psp.md) |
 | Super Nintendo ES (SFC) | Snes9x | None |
 | Super Nintendo ES (SUPA) | Mednafen Supafaust | None |
 | TurboGrafx-16 (PCE) | Mednafen PCE Fast | HuCards: none; CD games: **`syscard3.pce` required** |

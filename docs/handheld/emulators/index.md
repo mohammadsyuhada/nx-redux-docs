@@ -2,7 +2,8 @@
 
 NX Redux ships with emulators for a wide range of systems. They run from
 Atari and Commodore through the Game Boy line, NES/SNES, Genesis,
-PlayStation, TurboGrafx-16 and [Sega Dreamcast](dreamcast.md), up to the
+PlayStation, TurboGrafx-16, [Sega Dreamcast](dreamcast.md) and
+[PlayStation Portable](psp.md), up to the
 bundled standalone emulators for [Nintendo 64](nintendo-64.md) and
 [Nintendo DS](nintendo-ds.md).
 

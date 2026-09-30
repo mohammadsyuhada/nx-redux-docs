@@ -1,17 +1,11 @@
 # Additional Emulators
 
-Some emulators are not bundled with NX Redux but can be added.
-
-- **PPSSPP** (PlayStation Portable): easiest via the
-  [Xtras store](../apps/xtras.md#psp-emulator)'s **PSP (PPSSPP)** entry,
-  which installs [ben16w/minui-psp](https://github.com/ben16w/minui-psp)
-  directly on-device.
-
-For any other system, install a community pak by hand:
+Some emulators are not bundled with NX Redux but can be added as community
+paks. Install one by hand:
 
 - Copy the pak into the `Emus` folder on your SD card, following the pak's
   own installation steps. If they say to place it inside a platform subfolder
-  (e.g. `Emus/tg5040/PSP.pak`), do that.
+  (e.g. `Emus/tg5040/MyEmu.pak`), do that.
 
 See [Installing community paks](../apps/tools.md#installing-community-paks)
 for the platform folder name per device.

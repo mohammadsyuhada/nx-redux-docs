@@ -23,18 +23,6 @@ store labels the entry accordingly.
     More standalone games and tools will be added to Xtras over time. Check
     back after updating NX Redux.
 
-## PSP emulator
-
-**PSP (PPSSPP)** installs
-[ben16w's community PSP.pak](https://github.com/ben16w/minui-psp) directly
-on the device (~31 MB download), no computer needed. Afterwards, put your games
-in `Roms/Sony Playstation Portable (PSP)`. Community-pak
-[support notes](../emulators/additional.md) apply.
-
-??? info "More detail"
-    The pak lands unmodified in its own `Emus/<platform>/PSP.pak` location,
-    exactly as a manual install would.
-
 ## Pokémon Gen1Recomp
 
 **Pokemon Gen1Recomp++** in the **GAMES** tab installs

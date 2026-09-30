@@ -90,7 +90,7 @@ nothing to copy by hand.
 
 !!! note "Your own paks"
     The `/Emus` and `/Tools` folders on the SD card are for your **own**
-    community paks (e.g. a PSP.pak). Do not give a pak there the same name as
+    community paks (e.g. `MyEmu.pak`). Do not give a pak there the same name as
     a shipped one. Same-named paks are treated as NX Redux leftovers and are
     removed on every update.
 

@@ -114,6 +114,7 @@ all of these on top of what is listed. Multi-disc games use
 | Sega CD (SEGACD) | picodrive | `chd` `cue` `bin` `iso` `m3u` |
 | Sega CD (GPGX) | genesis_plus_gx | `chd` `cue` `bin` `iso` `m3u` (BIOS in `Bios/GPGX/`) |
 | Sega Dreamcast (DC) | flycast | `chd` `gdi` `cdi` `cue` `m3u` + Naomi/Atomiswave `zip` `7z` — see [Dreamcast](dreamcast.md) |
+| Sony PlayStation Portable (PSP) | ppsspp | `iso` `cso` `chd` `pbp` `elf` `prx` — see [PSP](psp.md) |
 
 `.chd` is the recommended format for all of them: a single file per disc,
 compressed, no extraction.

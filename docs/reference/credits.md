@@ -30,7 +30,7 @@ forked.
   the Artbook artwork.
 - [ben16w](https://github.com/ben16w/minui-portmaster) for
   Minui-Portmaster (and [minui-psp](https://github.com/ben16w/minui-psp),
-  installable from the Xtras store).
+  the standalone PSP emulator earlier versions offered in the Xtras store).
 - [RetroAchievements](https://retroachievements.org/) and
   [rcheevos](https://github.com/RetroAchievements/rcheevos) for the
   achievements ecosystem.

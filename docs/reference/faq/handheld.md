@@ -45,7 +45,7 @@ is intentionally omitted to keep your account safe. Softcore unlocks still
 work fully, including offline. See
 [RetroAchievements](../../handheld/apps/retroachievements.md).
 
-## A community pak (e.g. PPSSPP) misbehaves — where do I report it?
+## A community pak misbehaves — where do I report it?
 
 Not to the pak's developer — community paks are built for NextUI, not NX
 Redux, and their developers cannot help with NX Redux-specific behavior. See
