@@ -17,6 +17,19 @@ bundled standalone emulators for [Nintendo 64](nintendo-64.md) and
 - [ROM File Formats](rom-formats.md) lists which file types each system
   accepts (including zipped ROMs).
 
+## Which device plays it best
+
+Every device runs the older systems (Atari to Genesis, the Game Boy line,
+PlayStation) at full speed. The differences show in the heaviest systems,
+where the **Smart Pro S** has a faster chip and more headroom. The Brick,
+Brick Hammer, Brick Pro and Smart Pro share one slower chip.
+
+| System | Smart Pro S | Brick, Brick Hammer, Brick Pro, Smart Pro |
+| --- | --- | --- |
+| [PlayStation Portable](psp.md#performance) | **Recommended.** Full speed even in heavy 3D games, also at 2× resolution | Most games at full speed; the heaviest 3D games (Tekken 6) run slower |
+| [Dreamcast](dreamcast.md) | More headroom: 960×720 in lighter games | Keep the native 640×480; little to spare |
+| [Nintendo 64](nintendo-64.md) | GLideN64 plugin; 3–4-player netplay | Rice plugin for speed; netplay up to 2 players |
+
 ## Shared features
 
 Every emulator, built-in cores and standalones alike, supports:

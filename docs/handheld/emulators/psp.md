@@ -69,8 +69,22 @@ copy saves to and from a PSP or another emulator.
 
 ## Performance
 
-Lighter PSP games run at full speed on every device. Heavy 3D games (Tekken 6,
-for one) run at about 96% speed on the Smart Pro S and about 72% on the Brick.
+!!! tip "Best on the Smart Pro S"
+    The **Smart Pro S** runs even the heavy Tekken 6 at full speed, including
+    at 2× Rendering Resolution. The **Brick, Brick Hammer, Brick Pro and Smart
+    Pro** share a slower chip: most games still run at full speed there, but
+    the heaviest 3D games don't.
+
+Measured on the Brick at the default resolution:
+
+| Game | Speed on the Brick |
+| --- | --- |
+| Metal Slug XX | Full speed |
+| Ace Combat X: Skies of Deception | Full speed (first mission) |
+| Grand Theft Auto: Vice City Stories | About 88% on foot |
+| Tekken 6 | About 78% in fights; menus at full speed |
+
+On the Smart Pro S, Tekken 6 runs at full speed at both 1× and 2×.
 
 To get a heavy game to full speed on the Brick, set **Frameskip** to `1` for
 that game in [Emulator Options](../guide/emulator-options.md). It then shows
