@@ -105,6 +105,7 @@ all of these on top of what is listed. Multi-disc games use
 | Super Nintendo ES (SUPA) | mednafen_supafaust | `sfc` `smc` `swc` `fig` |
 | TurboGrafx-16 (PCE) | mednafen_pce_fast | `pce` + CD: `cue` `ccd` `chd` `toc` `m3u` |
 | Virtual Boy (VB) | mednafen_vb | `vb` `vboy` `bin` |
+| Wonderswan Color (WSC) | mednafen_wswan | `ws` `wsc` `pc2` — WonderSwan and WonderSwan Color games share one folder |
 
 ### CD-based systems
 

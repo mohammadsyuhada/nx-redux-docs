@@ -67,6 +67,12 @@ game and unlocks are tracked automatically as you play:
     built-in core, so their achievements work like every other system,
     offline journal included.
 
+!!! tip "WonderSwan is built in"
+    WonderSwan and WonderSwan Color games in the `Wonderswan Color (WSC)` folder
+    earn achievements too. If you installed the WonderSwan pak from the Pak
+    Store before, it keeps working and keeps priority over the built-in one;
+    delete it from `Emus/` to switch. Your saves stay where they are.
+
 !!! info "Softcore only, by design"
     NX Redux is not an RA-approved hardcore emulator, so hardcore mode is
     intentionally omitted to keep your account safe. Unlocks are submitted

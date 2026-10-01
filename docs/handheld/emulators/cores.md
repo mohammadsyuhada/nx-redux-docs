@@ -59,6 +59,7 @@ Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 | Super Nintendo ES (SUPA) | Mednafen Supafaust | None |
 | TurboGrafx-16 (PCE) | Mednafen PCE Fast | HuCards: none; CD games: **`syscard3.pce` required** |
 | Virtual Boy (VB) | Mednafen VB | None |
+| Wonderswan Color (WSC) | Mednafen WonderSwan | None (plays WonderSwan and WonderSwan Color games) |
 
 ## Systems with a choice of core
 
