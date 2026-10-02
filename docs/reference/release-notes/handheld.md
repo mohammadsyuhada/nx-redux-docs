@@ -25,8 +25,7 @@ lists, search and netplay over a hotspot.
   1x on the Brick Pro and Smart Pro S. The Dreamcast and Nintendo 64 in-game
   menus follow it too. See [Appearance → UI scale](../../handheld/settings/appearance.md#ui-scale).
 - **New NX Redux look.** The new NX Redux mark is the install splash, the
-  default boot logo, the default background and the desktop app icon. The
-  previous NextUI boot logo is still in the boot logo list. See
+  default boot logo and the default background. The previous NextUI boot logo is still in the boot logo list. See
   [Why "NX Redux"?](../../about.md#why-nx-redux).
 - **Arcade game titles.** FBNeo, Naomi and Atomiswave zips show their full
   game title instead of the short zip name (`mslug.zip` shows as
@@ -67,8 +66,6 @@ lists, search and netplay over a hotspot.
   correctly.
 - **Game Tracker:** play time for games with an apostrophe in the title is
   recorded under the right game.
-- **Desktop app:** card and app paths containing spaces work in Clean dot
-  files, Device Sync and the netplay wizard.
 
 ## v1.12.0
 
@@ -322,8 +319,6 @@ Wi-Fi connection errors and Device Sync on FAT32 cards.
   honours **Show menu animations**.
 - **Video:** an SDL initialisation failure is logged and falls back to
   software rendering instead of crashing.
-- **Desktop:** the Linux AppImage no longer bundles the host's graphics
-  driver libraries and ships its own libsqlite3.
 - **Bluetooth:** the stock-stack backup archive is no longer kept, and
   leftovers are removed on update.
 

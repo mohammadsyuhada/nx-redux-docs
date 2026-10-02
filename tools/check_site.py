@@ -34,14 +34,15 @@ def old_handheld_pages():
         capture_output=True, text=True, check=True,
     ).stdout
     pages = re.findall(r"([a-z0-9/-]+\.md)", nav)
-    moved_elsewhere = {"index.md", "desktop.md"}  # landing page; Desktop has its own section
+    moved_elsewhere = {"index.md", "desktop.md"}  # landing page; desktop.md was a page for the dropped desktop build
     return [p for p in pages if p not in moved_elsewhere and not p.startswith("reference/")]
 
 
-def check_desktop_section():
-    html = (SITE / "desktop" / "index.html").read_text()
-    check('id="desktop-app"' in html, "desktop/ is not the Desktop App page")
-    check(not (SITE / "handheld" / "desktop").exists(), "Desktop App still published under handheld/")
+def check_no_desktop():
+    check(not (SITE / "desktop").exists(), "the dropped Desktop build still has a page")
+    for html_file in SITE.rglob("*.html"):
+        text = re.sub(r"<[^>]+>", " ", html_file.read_text())
+        check(not re.search(r"\bdesktop\b", text, re.I), f"{html_file.relative_to(SITE)} mentions desktop")
 
 
 def check_redirects():
@@ -69,7 +70,7 @@ def check_images():
 def check_about():
     html = (SITE / "about" / "index.html").read_text()
     check('id="why-nx-redux"' in html, "About page lacks the Why NX Redux section")
-    for href in ["../handheld/getting-started/", "../mobile/getting-started/", "../desktop/"]:
+    for href in ["../handheld/getting-started/", "../mobile/getting-started/"]:
         check(f'href="{href}"' in html, f"About page lacks a link to {href}")
     for old, new in [("handheld", "handheld/getting-started/"), ("mobile", "mobile/getting-started/")]:
         page = (SITE / old / "index.html").read_text()
@@ -157,8 +158,8 @@ def check_not_found():
 
 def check_sidebars():
     # Pages inside a multi-page section keep the sidebar; only the landing,
-    # About and Desktop (one page in their tab) hide it.
-    allowed = {"index.md", "about.md", "desktop/index.md"}
+    # About (one page in its tab) hide it.
+    allowed = {"index.md", "about.md"}
     for md in Path("docs").rglob("*.md"):
         rel = md.relative_to("docs").as_posix()
         if rel.startswith("_shared/") or rel in allowed:
@@ -188,7 +189,7 @@ def check_faqs():
 
 def check_download_page():
     html = (SITE / "reference" / "download" / "index.html").read_text()
-    check(html.count("https://github.com/mohammadsyuhada/nx-redux/releases") >= 2, "download page lacks the GitHub links")
+    check(html.count("https://github.com/mohammadsyuhada/nx-redux/releases") >= 1, "download page lacks the GitHub link")
     check(html.count('aria-disabled="true"') == 2 and "Google Play" in html, "mobile GitHub and Google Play badges are not shown as disabled")
     landing = (SITE / "index.html").read_text()
     check('href="reference/download/"' in landing, "landing Download does not open the download page")
@@ -201,7 +202,7 @@ def check_dark_only():
         check('data-md-component="palette"' not in html, f"{page} still has the light/dark toggle")
 
 
-CHECKS = [check_redirects, check_desktop_section, check_images, check_about, check_mobile_section, check_new_mobile_pages, check_snippets_inlined,
+CHECKS = [check_redirects, check_no_desktop, check_images, check_about, check_mobile_section, check_new_mobile_pages, check_snippets_inlined,
           check_no_platform_toggle, check_landing, check_highlights, check_not_found, check_sidebars, check_release_notes, check_faqs, check_download_page, check_dark_only]
 
 

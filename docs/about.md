@@ -40,14 +40,11 @@ line. See [Credits](reference/credits.md) for everyone whose work it builds on.
   Brick Pro, Smart Pro S and Smart Pro).
 - **Mobile:** an Android app for phones, tablets and Android handhelds.
   Coming soon.
-- **Desktop:** the same launcher and cores in a window on macOS and Linux.
-  Experimental.
 
-All three use the same `Roms/`, `Bios/`, `Saves/` and `Collections/`
+Both use the same `Roms/`, `Bios/`, `Saves/` and `Collections/`
 folders, so one library can move between them.
 
 ## Get started
 
 - [Get started on a TrimUI handheld](handheld/getting-started.md)
 - [Get started on mobile](mobile/getting-started.md)
-- [Get started on desktop](desktop/index.md)

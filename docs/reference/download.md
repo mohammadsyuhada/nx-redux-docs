@@ -20,17 +20,6 @@ and Smart Pro. Releases are packaged per device, so download the zip for
 [:fontawesome-brands-github: Download on GitHub](https://github.com/mohammadsyuhada/nx-redux/releases){ .nx-badge-link }
 </div>
 
-## Desktop
-
-An experimental build of the same launcher and cores, for macOS (Apple
-Silicon, `NXRedux-<version>-macos-arm64.zip`) and Linux (x86_64,
-`NXRedux-<version>-x86_64.AppImage`). It is on the same releases page; see
-[Desktop App](../desktop/index.md) for setup.
-
-<div class="nx-badges" markdown>
-[:fontawesome-brands-github: Download on GitHub](https://github.com/mohammadsyuhada/nx-redux/releases){ .nx-badge-link }
-</div>
-
 ## Mobile
 
 NX Redux Mobile for Android phones, tablets and Android handhelds is

@@ -191,8 +191,6 @@ nav:
       - Emulators: mobile/emulators.md
       - Settings:
           - Appearance: mobile/appearance.md
-  - Desktop:
-      - Desktop App: desktop/index.md
   - Reference:
       - Download: reference/download.md
       - Release Notes:

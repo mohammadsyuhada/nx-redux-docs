@@ -90,7 +90,7 @@
     padding-bottom: 0.5em;
   }
 
-  /* Material clips the lists for its expand animation; on desktop sections
+  /* Material clips the lists for its expand animation; on wide screens the sections
      are always open, so let them overflow and the categories can pin to the
      sidebar instead of to the clipped list. */
   .md-nav--primary .md-nav__item--section > .md-nav > .md-nav__list { overflow: visible; }
