@@ -14,7 +14,7 @@ failures = []
 STALE = [
     r"does not download", r"doesn't download", r"not included in the first release",
     r"Nintendo DS only", r"Aspect - LCD Grid", r"Game art style", r"Game art width",
-    r"not released", r"[Cc]oming soon", r"(?m)^(?!.*legacy).*\bGPGX\b",  # GPGX only on a line that says legacy
+    r"not released", r"[Cc]oming soon", r"(?m)^(?!.*[Ll]egacy).*\bGPGX\b",  # GPGX only on a line that says legacy
 ]
 
 referenced = set()

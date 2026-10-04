@@ -23,8 +23,10 @@ See [Controls](controls.md).
 
 - **Switch tabs** with `L1` / `R1`, or tap a tab. The tab order wraps around.
 - `Left` / `Right` also switch tabs:
-    - in List style, always;
-    - in Grid and Carousel, when you push past the first or last item.
+    - in List style and in a Vertical Carousel, always;
+    - in Grid and a Horizontal Carousel, when you push past the first or last
+      item;
+    - on Home, when you push past the left or right edge.
 - Home and Tools always show. A Consoles or Collections tab with nothing in
   it, such as Collections before you make one, is left out.
 
@@ -99,9 +101,9 @@ and Tools is a grid.
 
 ![Consoles tab](../assets/screenshots/mobile/tab-consoles.webp)
 
-- **Consoles** show their logo and how many games they hold. Behind the
-  selected console you see its controller, unless you turn **Controller** off
-  in [Layouts](layouts.md).
+- **Consoles** show their logo and how many games they hold. In the List and
+  Carousel styles the selected console's controller shows too, unless you set
+  **Controller** to **Hide** in [Layouts](layouts.md#controller-art).
 - **Collections** show their name and game count.
 
 ![Collections tab](../assets/screenshots/mobile/tab-collections.webp)
@@ -142,6 +144,7 @@ and version text in brackets.
 | `A` **Open** | Launch the game |
 | `X` **Resume** | Jump straight back into your auto-saved session (shown when the game has one) |
 | `B` **Back** | Return to the tab |
+| `SELECT` | Open the [Game Switcher](game-switcher.md) |
 | `MENU` **Options** | Open the game's context menu |
 
 A long press on a game opens the context menu too.
@@ -171,7 +174,7 @@ Not every item shows everywhere:
 | A console | **Pin Item**, **Hide Game**, **Rename Rom**, **Add to Collection**, **Game Settings**, **Fetch art**, and **Emulator** on systems with more than one emulator |
 | A collection | The same, with **Remove from Collection** at the end |
 | Unassigned games | **Hide Game**, **Rename Rom**, **Console** |
-| The Android console | **Pin** / **Unpin** only |
+| The Android console | **Pin Item** / **Unpin Item** only |
 
 - **Fetch art** shows only for systems the art sources know.
 - **Unassigned games** are files in an extra ROM folder that the app could

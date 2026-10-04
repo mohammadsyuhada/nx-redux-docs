@@ -23,6 +23,9 @@ the app uses the same core as the handheld, save states carry over too.
 The Sega systems are the exception. The handheld runs PicoDrive for Sega
 Genesis, Master System, Game Gear, SG-1000 and Sega CD, and the app runs
 Genesis Plus GX. Cartridge saves usually carry over, but save states don't.
+Games you ran from a legacy `Sega Genesis (GPGX)` folder on the handheld
+already used Genesis Plus GX: kept in that folder, their saves and states
+carry over (see below).
 
 Dreamcast memory cards carry over: both name them
 `Saves/DC/<game>.A1.bin`. See [Sega Dreamcast](../../mobile/dreamcast.md#memory-cards-vmu).
@@ -136,9 +139,10 @@ they don't show in recents or on the Continue card. See
 ## Does the app work on foldables?
 
 Yes. On a half-folded phone with a horizontal hinge, the game moves above the
-fold and the controls go below it. This is automatic. Unfolded, Settings, the
-in-game menu and RetroAchievements split into two panes. See
-[Foldables & Large Screens](../../mobile/foldables.md).
+fold and the controls go below it. This is automatic, except that Nintendo DS
+games keep their usual layout. In landscape on a wide screen, such as an
+unfolded Fold held sideways, Settings, the in-game menu and RetroAchievements
+split into two panes. See [Foldables & Large Screens](../../mobile/foldables.md).
 
 ## I removed my SD card and some games disappeared
 

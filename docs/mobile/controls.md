@@ -11,7 +11,8 @@ controller to play with real buttons instead.
   [Nintendo DS](emulators.md#nintendo-ds)).
 - **Landscape:** the buttons sit in two clusters over the game. See
   [Landscape](#landscape).
-- **`STICK`** switches the on-screen d-pad to an analog stick and back.
+- **`STICK`** switches the on-screen d-pad to an analog stick and back. While
+  the stick is on, the button reads **D-PAD**.
 
 ### Landscape
 
@@ -24,8 +25,8 @@ In landscape the pad splits into two clusters over the game:
 
 ![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp)
 
-**Pad Opacity (landscape)** sets how opaque the clusters are: 100, 60, 40 or
-25 % (40 % by default). It is in the in-game menu under **Options →
+**Pad Opacity (landscape)** sets how opaque the clusters are: 100%, 60%, 40% or
+25% (40% by default). It is in the in-game menu under **Options →
 [Frontend](in-game-menu.md#frontend)**, not in Settings. It is saved per game
 or console with Save Changes.
 
@@ -36,7 +37,7 @@ doesn't have:
 
 | Console | What the pad shows |
 | --- | --- |
-| Sega Genesis, Sega CD, 32X | The Sega pad: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a 6-button pad |
+| Sega Genesis, Sega CD, 32X | The Sega pad: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a 6-button pad (`Y` and `Z` are on the shoulder buttons, and `Mode` is in place of `SELECT`) |
 | Master System, Game Gear, SG-1000 | `1` and `2` |
 | TurboGrafx-16 | `I` to `VI`, `Run` and `Mode` |
 | PlayStation, PSP | `○` `×` `△` `□` |
@@ -167,24 +168,10 @@ present, and real buttons in landscape without one.
 
 ## Game-list context menu
 
-Press `MENU`, or long-press a game, for the same context menu as on the
-handheld. In a console or collection list the items are:
-
-- **Pin Item / Unpin Item**
-- **Hide Game**
-- **Rename Rom** (writes a `map.txt` alias; the file is never renamed)
-- **Add to Collection**
-- **Game Settings**, the game's own emulator settings (see
-  [Emulator Settings](emulator-settings.md))
-- **Fetch art**, only when the console can be scraped (see
-  [Artwork](artwork.md))
-- **Emulator**, only for Game Boy Advance and Super Nintendo ES, to run the
-  game on the console's other emulator
-- **Remove from Collection**, only in a collection
-
-The Android console offers only **Pin Item** or **Unpin Item**. An Unassigned
-game offers **Hide Game**, **Rename Rom** and **Console** (see
-[Library & ROM folders](library.md#unassigned-games)).
+Press `MENU`, or long-press a game, for its context menu: Pin Item, Hide
+Game, Rename Rom, Add to Collection, Game Settings, Fetch art and Emulator.
+See [Context menus](main-menu.md#context-menus) for what each does and where
+it shows.
 
 ## In-game menu
 

@@ -128,8 +128,9 @@ was unlocked or its progress, its unlock rate, its type (`[Missable]`,
 
 ![Streets of Rage 2's achievements on a phone: each with its badge, status and points](../assets/screenshots/mobile/ra-game.webp)
 
-On a wide screen, such as an unfolded phone or a tablet, the details show
-beside the list instead. See [Foldables & Large Screens](foldables.md).
+On a wide landscape screen, such as an unfolded Fold held sideways, the
+details show beside the list instead. See
+[Foldables & Large Screens](foldables.md#two-pane-screens).
 
 ## Sort orders
 

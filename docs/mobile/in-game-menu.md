@@ -17,8 +17,8 @@ The menu uses your **Accent** and **Secondary accent** from
 [Appearance](appearance.md): the highlighted row sits on the accent, and the
 value bar on the secondary accent.
 
-On a wide screen, such as an unfolded foldable or a phone in landscape, the
-menu shows two pages side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
+On a wide landscape screen, such as an unfolded foldable held sideways or a
+phone in landscape, the menu shows two pages side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
 
 ## The first page
 
@@ -52,7 +52,7 @@ a game where you left it.
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
 | [Cheats](#cheats) | When the core takes cheats | Turn the game's cheats on and off. |
-| [Achievements](#achievements) | When RetroAchievements is on, you are signed in and the session started | The game's achievements. Your progress, such as `12 / 40 unlocked`, shows in the description lines when the row is highlighted. |
+| [Achievements](#achievements) | When the game's RetroAchievements session has started | The game's achievements. Your progress, such as `12 / 40 unlocked`, shows in the description lines when the row is highlighted. |
 | [Save Changes](#save-changes) | Always | Keep your changes for this console or this game, or restore defaults. |
 
 The line under the list says which settings the game uses right now:
@@ -175,13 +175,14 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
 
 - With no cheats for the game, the page says **No cheats for this game.** and
   names the file it looked for.
-- The row is hidden for Arcade (`FBN`) and ColecoVision, whose cores don't
-  take cheats.
+- The row is hidden for Arcade (`FBN`), ColecoVision and Dreamcast (with
+  NAOMI and Atomiswave), whose cores don't take cheats.
 
 ## Achievements
 
-The row shows only while [RetroAchievements](retroachievements.md) is on and
-you are signed in. It shows the game's achievements, in the order set by
+The row shows once the game's [RetroAchievements](retroachievements.md)
+session has started: RetroAchievements is on, you are signed in, and the game
+is on a system RetroAchievements covers. It shows the game's achievements, in the order set by
 **Achievement sort order**. Each row shows **Unlocked**, **Pending sync** or
 **Locked · N pts**.
 
@@ -208,11 +209,6 @@ Options.
 
 When a game has its own settings, it uses only those. The console's settings
 apply only to games without their own.
-
-??? info "More detail"
-    When **Save for console** removes this game's own settings, that also
-    removes the cheats kept with **Save for game** and any changes made with
-    the DS layout hotkeys.
 
 ## Notifications
 

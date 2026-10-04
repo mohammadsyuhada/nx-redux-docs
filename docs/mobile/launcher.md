@@ -1,4 +1,4 @@
-# Home Screen & Android Apps
+# Launcher Mode & Android Games
 
 NX Redux Mobile can be your phone's home screen, show your Android apps in
 Tools, and list your Android games as a console. All three are in **Tools →

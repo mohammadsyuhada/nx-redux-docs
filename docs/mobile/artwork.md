@@ -66,7 +66,7 @@ the time left, such as **1 / 2 · ~1 min left**. Each game shows its status:
 | --- | --- |
 | **Waiting** | Queued |
 | **Searching** / **Downloading** | Being fetched now |
-| **Done** | Box art and a screenshot were found, followed by the sources used |
+| **Done** | Box art and a screenshot were found, followed by the sources used. It adds **no screenshot** when a SteamGridDB hero stands in for the screenshot |
 | **Partial** | Only one was found, followed by **no box** or **no screenshot** |
 | **Not found** | No source had art for it |
 | **Skipped** | It already has art, or no source covers its console |
@@ -200,7 +200,8 @@ Roms/Game Boy Advance (GBA)/.media/screenshot/Golden Sun.png
 | --- | --- |
 | **Grid and Carousel tiles**, Home's pinned games | The screenshot. Without one, the SteamGridDB hero on a wide tile or the grid on a tall one. |
 | **Game list backgrounds** (List and Backdrop) | The screenshot. Without one, the hero in landscape or the grid in portrait. |
-| **The box** in Backdrop, and in the [Game Switcher](game-switcher.md) when a game has no preview | The 3D box art. Without it, the 2D cover, then the grid, drawn in a case. Without any, an empty case. |
+| **The box** in Backdrop | The 3D box art. Without it, the 2D cover, then the grid, drawn in a case. Without any, an empty case. |
+| **The [Game Switcher](game-switcher.md)**, when a game has no resume screenshot | The 3D box art, then the 2D cover or the grid in a case. Without any, **No Preview**. |
 | **Home's Continue card** | The game's last frame, then the screenshot, the hero, then the grid |
 | **[RetroAchievements](retroachievements.md)** game list | The screenshot, then the 3D box art, then the 2D cover |
 | **[Game Tracker](game-tracker.md)** | The 3D box art, then the 2D cover, then the screenshot |

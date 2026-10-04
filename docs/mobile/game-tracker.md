@@ -43,8 +43,8 @@ The page is read-only. `B` goes back to the list, on the same game.
   renamed ROM. When the two names differ, the app asks for the **Name to
   keep**.
 - **Delete** asks **Delete play time?** with **Delete play time for *game*?**
-  On a merged game, it names the games merged into it too, which are deleted
-  with it. The record starts fresh the next time you play.
+  On a merged game, it also says how many games are merged into it, and they
+  are deleted with it. The record starts fresh the next time you play.
 
 ## What is recorded
 

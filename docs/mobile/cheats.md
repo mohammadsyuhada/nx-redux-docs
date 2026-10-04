@@ -38,15 +38,15 @@ With the cheats installed, the page offers **Check for updates** and
 ## Where the files go
 
 The cheats live inside the app's own storage. Unlike the handheld, they are
-not on your card or in your home folder. Arcade (`FBN`) and ColecoVision have
-no cheats.
+not on your card or in your home folder. Arcade (`FBN`), ColecoVision and
+Dreamcast (with NAOMI and Atomiswave) have no cheats.
 
 ??? info "More detail"
     - The cheats are libretro `.cht` files, kept in one `Cheats/<TAG>/` folder
       per system inside the app's own storage. The app reads cheats only from
       there.
     - The download installs folders only for systems whose core takes cheats,
-      so Arcade (`FBN`) and ColecoVision have none.
+      so Arcade (`FBN`), ColecoVision and Dreamcast have none.
 
 ## Using cheats in a game
 

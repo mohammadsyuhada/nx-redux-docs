@@ -19,7 +19,8 @@ Tools uses **Grid**.
 
 ![Layouts page](../assets/screenshots/mobile/settings-layouts.webp)
 
-`Left`, `Right` and `A` step the highlighted row to its next value. Some rows
+`Right` and `A` step the highlighted row to its next value, and `Left` to
+the previous one. Some rows
 only show when they apply.
 
 | Row | Values | Default | Shows |

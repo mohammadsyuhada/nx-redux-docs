@@ -17,7 +17,7 @@ tag names match NX Redux on the handheld.
 | Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | Genesis Plus GX |
 | Sega 32X | `32X` | PicoDrive |
 | Dreamcast, NAOMI, Atomiswave | `DC` | Flycast (see [Sega Dreamcast](dreamcast.md)) |
-| PlayStation | `PS` | PCSX ReARMed |
+| PlayStation | `PS` | PCSX-ReARMed |
 | Neo Geo Pocket / Color | `NGP`, `NGPC` | RACE |
 | PC Engine / TurboGrafx-16 | `PCE` | Beetle PCE Fast |
 | Virtual Boy | `VB` | Beetle VB |
@@ -44,7 +44,7 @@ Two consoles have a second emulator, each with its own tag:
 | Console | Tags |
 | --- | --- |
 | Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) |
-| Super Nintendo | `SFC` (Snes9x), `SUPA` (Supafaust) |
+| Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
 
 - A folder named with a tag, such as `Game Boy Advance (MGBA)`, uses that
   tag.
@@ -83,7 +83,8 @@ menu's **Options → Console Settings**:
 
 Some older games misbehave with a 6-button pad. The on-screen pad changes to
 match: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a
-6-button pad. See [Controls](controls.md#controller-type-sega).
+6-button pad (`Y` and `Z` are on the shoulder buttons, and `Mode` is in
+place of `SELECT`). See [Controls](controls.md#controller-type-sega).
 
 ## Nintendo 64
 

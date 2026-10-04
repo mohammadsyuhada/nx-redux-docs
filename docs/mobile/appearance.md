@@ -1,8 +1,8 @@
 # Appearance
 
 **Tools → Settings → Appearance** sets the look of the app: the on-screen
-pad, the text size, the colours and the menu layouts. `Left`, `Right` and
-`A` step the highlighted row to its next value.
+pad, the text size, the colours and the menu layouts. `Right` and `A`
+step the highlighted row to its next value, and `Left` to the previous one.
 
 ![Appearance settings](../assets/screenshots/mobile/settings-appearance.webp)
 

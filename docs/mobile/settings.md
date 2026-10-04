@@ -15,7 +15,8 @@ sections.
 
 - Press `A` **Open** to open a section, and `B` **Back** to leave it.
 - On a page, `A` **Select** runs the highlighted row or steps it to its next
-  value. `Left` and `Right` step a value too.
-- On a wide screen, such as an unfolded phone, Settings shows the sections
-  and the open page side by side. See
-  [Foldables & Large Screens](foldables.md).
+  value; `Left` and `Right` step a value too. The rows on [About](about.md)
+  only show information.
+- In landscape on a wide screen, such as an unfolded Fold held sideways or
+  most phones turned sideways, Settings shows the sections and the open page
+  side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).

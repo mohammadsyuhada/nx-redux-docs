@@ -63,12 +63,13 @@ shelf shows only when it has games, and a game is never on two shelves.
 | **Not started** | Games you have never played. Three wide tiles, picked again each day. |
 | **Pick up again** | Games you last played more than 14 days ago, most played first. Up to 6. |
 
-The game on the Continue card is left off the shelves.
+The game on the Continue card, your pinned games, Unassigned games and
+Android games are left off the shelves.
 
 ## Two-pane screens
 
-On a wide window, at least 600 dp wide and about a third wider than it is
-tall, some pages show two panes side by side. An unfolded Fold in landscape
+On a wide window, at least 600 dp wide and at least 1.3 times as wide as it
+is tall, some pages show two panes side by side. An unfolded Fold in landscape
 and most phones in landscape qualify. Portrait screens keep one page at a
 time.
 

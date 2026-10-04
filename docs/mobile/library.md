@@ -105,10 +105,11 @@ Two consoles have two emulators, each with its own tag:
 
 Sega Genesis has one tag, `MD`, on Genesis Plus GX. An older `Sega Genesis (GPGX)` folder uses a legacy tag and still lists under Sega Genesis.
 
-Which tag a matched game gets is set in **Tools → Settings → Emulators →
-Default emulators**. That covers games in extra folders, and Unassigned games
-you give a console. Games in the home folder follow the tag of their
-`Roms/<Name (TAG)>/` folder. See [Emulator Settings](emulator-settings.md).
+**Tools → Settings → Emulators → Default emulators** sets the tag for games in
+a folder without a `(TAG)`, such as an extra folder named `My Game Boy
+Advance`, and for Unassigned games you give a console. A folder with a tag, in
+the home folder or an extra one, always uses that tag. See
+[Emulator Settings](emulator-settings.md#default-emulators).
 
 To run one game on the other emulator, use **Emulator** in its context menu.
 For consoles whose saves work on both emulators, the app then offers to copy
@@ -138,7 +139,7 @@ game would share them. Rename the sheet after its folder. See
 
 Android games you add show as an **Android** console on the Consoles tab.
 Add them on first setup, or later in **Tools → Settings → Launcher →
-Android games**. See [Home Screen & Android Apps](launcher.md).
+Android games**. See [Launcher Mode & Android Games](launcher.md).
 
 ## Rescanning
 

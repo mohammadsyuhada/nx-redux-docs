@@ -33,7 +33,8 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 - **Foldables:** on a half-folded phone, Flex mode puts the game above the
   hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
 - **Not in the app:** RetroAchievements hardcore mode, Netplay, Device Sync,
-  button remapping and home computer systems (Amiga, C64 and so on).
+  button remapping, two-player games, Nintendo 3DS and home computer systems
+  (Amiga, C64 and so on).
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
   the music player, PortMaster and firmware updates are not part of the app.
 

@@ -30,6 +30,9 @@ The page is titled with the emulator, the console and the tag, such as
 
 ![Genesis Plus GX for Sega Genesis: Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp)
 
+The shot shows a legacy `Sega Genesis (GPGX)` folder. A `Sega Genesis (MD)`
+folder looks the same, with `(MD)` in the title.
+
 - `LEFT` and `RIGHT` change a value. `A` steps it forward too.
 - Each change is saved straight away. There is no **Save** row.
 - The page also offers options that only take effect when a game starts,
