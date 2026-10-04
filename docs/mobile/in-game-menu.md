@@ -11,7 +11,14 @@ The game pauses while the menu is open.
 - `B` goes back one page.
 - `B` on the first page, or `MENU` on any page, returns to the game.
 
-<!-- SCREENSHOT: in-game-menu-root — in-game menu root page with the save slot preview -->
+![The in-game menu's first page, with the save slot preview](../assets/screenshots/mobile/in-game-menu-root.webp)
+
+The menu uses your **Accent** and **Secondary accent** from
+[Appearance](appearance.md): the highlighted row sits on the accent, and the
+value bar on the secondary accent.
+
+On a wide screen, such as an unfolded foldable or a phone in landscape, the
+menu shows two pages side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
 
 ## The first page
 
@@ -36,9 +43,11 @@ a game where you left it.
 
 ## Options
 
+![The Options page of a Sega Genesis game](../assets/screenshots/mobile/in-game-options.webp)
+
 | Row | When it shows | What it's for |
 | --- | --- | --- |
-| **Console Settings** | Nintendo DS only | The DS screen layouts. See [Nintendo DS](emulators.md#nintendo-ds). |
+| [Console Settings](#console-settings) | Every console except Nintendo 64 | The controller rows, and the Nintendo DS screen layouts. |
 | [Frontend](#frontend) | Always | Scaling, sharpness, overlay, screen offset, pad opacity and the debug HUD. |
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
@@ -59,23 +68,46 @@ The line under the list says which settings the game uses right now:
     hotkeys (see [Nintendo DS](emulators.md#hotkeys)) and achievement mutes
     (`X` on the Achievements page).
 
+To set these before a game starts, for a whole emulator or one game, use
+[Emulator Settings](emulator-settings.md).
+
+## Console Settings
+
+The console's own rows. `LEFT` / `RIGHT` change a value.
+
+![Console Settings of a Sega Genesis game](../assets/screenshots/mobile/in-game-console-settings.webp)
+
+| Row | Consoles | Values | Default |
+| --- | --- | --- | --- |
+| **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
+| **Controller Layout** | Every console except Nintendo 64 | Auto-detect, Xbox (A at the bottom), Nintendo (B at the bottom) | Auto-detect |
+| **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators.md#nintendo-ds) | |
+
+**Controller Type** is the Sega pad the game sees. **Auto** uses 6 buttons
+only for games made for them. **Controller Layout** tells the app which way
+round your controller's face buttons are. See
+[Controls](controls.md#controller-buttons) for both.
+
 ## Frontend
 
 Settings handled by NX Redux Mobile rather than the core. The list is the
 same for every console. `LEFT` / `RIGHT` change a value.
 
+![The Frontend page](../assets/screenshots/mobile/in-game-frontend.webp)
+
 | Option | Values | Default | What it does |
 | --- | --- | --- | --- |
 | **Screen Scaling** | Native, Aspect, Fullscreen | Aspect | **Native** uses integer scaling. **Aspect** uses the aspect ratio the core reports. **Fullscreen** fills the screen, with non-square pixels. |
 | **Screen Sharpness** | NEAREST, LINEAR | NEAREST | **LINEAR** smooths lines. It works best when the final image is high resolution: a core that outputs a high resolution, or upscaling with shaders. |
-| **Overlay** | None, or an overlay bundled for this console | `Aspect - LCD Grid.png` if the console has it, else `Aspect.png`, else None | A frame image drawn around the game. |
+| **Overlay** | None, or an overlay bundled for this console | None | A frame image drawn around the game. |
 | **Offset screen X** / **Offset screen Y** | −64 to 64 | 0 | Move the game image by this many pixels. |
 | **Pad Opacity (landscape)** | 100%, 60%, 40%, 25% | 40% | How opaque the on-screen buttons are in landscape, where they sit over the game. The portrait pad has its own band and is not affected. |
 | **Debug HUD** | Off, On | Off | Show frames per second, the core, the resolution and scaler information. |
 
 Overlays are bundled for Game Boy, Game Boy Color, Game Boy Advance (`GBA`
 and `MGBA`), NES, Super Nintendo (`SFC` and `SUPA`), Mega Drive (`MD`),
-Game Gear, Atari Lynx and Neo Geo Pocket Color.
+Game Gear, Atari Lynx and Neo Geo Pocket Color. None is shown until you pick
+one.
 
 ## Shaders
 
@@ -97,7 +129,7 @@ own shaders.
 On a row that changes the picture, press `A` to see each change on the game
 as you make it.
 
-<!-- SCREENSHOT: in-game-menu-adjust — adjust mode strip over a paused game -->
+![Adjust mode: Screen Scaling in a strip over the paused game](../assets/screenshots/mobile/in-game-menu-adjust.webp)
 
 ??? info "More detail"
     In adjust mode the menu shrinks to a strip over the paused game.
@@ -109,7 +141,7 @@ as you make it.
 
     These rows open adjust mode: **Screen Scaling**, **Screen Sharpness**,
     **Overlay**, **Offset screen X** and **Y**, **Shader**, each shader
-    parameter, and every Nintendo DS row in **Console Settings**.
+    parameter, and the Nintendo DS screen rows in **Console Settings**.
 
 ## Descriptions
 
@@ -136,6 +168,8 @@ Lists the cheats found for the game. `LEFT` or `RIGHT` turns the highlighted
 cheat **On** or **Off**, and it applies straight away. `A` shows a cheat's full
 description.
 
+![The in-game Cheats page with one cheat On](../assets/screenshots/mobile/in-game-cheats.webp)
+
 To keep the cheats you turned on, use **Save Changes → Save for game**. See
 [Cheats](cheats.md) for where the cheat files come from.
 
@@ -144,13 +178,12 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
 - The row is hidden for Arcade (`FBN`) and ColecoVision, whose cores don't
   take cheats.
 
-<!-- SCREENSHOT: in-game-cheats — in-game Cheats page with a few cheats, one On -->
-
 ## Achievements
 
-Shows the game's achievements, in the order set by **Achievement sort
-order** in [RetroAchievements](retroachievements.md). Each row shows
-**Unlocked**, **Pending sync** or **Locked · N pts**.
+The row shows only while [RetroAchievements](retroachievements.md) is on and
+you are signed in. It shows the game's achievements, in the order set by
+**Achievement sort order**. Each row shows **Unlocked**, **Pending sync** or
+**Locked · N pts**.
 
 - `A` opens an achievement's details. `LEFT` / `RIGHT` step to the previous
   or next one.
@@ -160,12 +193,12 @@ order** in [RetroAchievements](retroachievements.md). Each row shows
 
 If the game isn't recognised or has no achievements, a message says so.
 
-<!-- SCREENSHOT: in-game-achievements — in-game Achievements page -->
-
 ## Save Changes
 
 Keeps what you changed in Console Settings, Frontend, Shaders and Core
 Options.
+
+![The Save Changes page](../assets/screenshots/mobile/in-game-save-changes.webp)
 
 | Choice | What it does |
 | --- | --- |
@@ -180,3 +213,10 @@ apply only to games without their own.
     When **Save for console** removes this game's own settings, that also
     removes the cheats kept with **Save for game** and any changes made with
     the DS layout hotkeys.
+
+## Notifications
+
+In-game notifications, such as achievement unlocks, show in the top-left and
+bottom-left corners of the game. While the landscape pad is over the game,
+they move to the top centre, between the pad's system buttons, so they don't
+cover the controls.
