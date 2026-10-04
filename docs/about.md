@@ -5,10 +5,12 @@ hide:
 
 # About NX Redux
 
-NX Redux is a minimal, distraction-free way to play retro games: pick up,
-pick a game, play. Underneath that quiet front it adds standalone emulators,
-netplay, achievements, media tools and more, which stay out of the way until
-you ask for them, tucked into the Tools and pause menus.
+NX Redux is a clean, pick-up-and-play way to play retro games: pick up,
+pick a game, play. Home keeps your last game, this month's play and your
+pinned favourites one press away, and you can switch any of it off, down to a
+[five-game screen](handheld/guide/five-game-menu.md). Underneath, standalone
+emulators, netplay, achievements, media tools and more wait in the Tools tab
+and pause menus until you ask for them.
 
 ![NX Redux main menu](assets/screenshots/main-menu.png)
 
