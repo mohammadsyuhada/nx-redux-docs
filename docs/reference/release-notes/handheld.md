@@ -9,6 +9,102 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.0.0
+
+*4 October 2026*
+
+A redesigned main menu leads NX Redux 2.0: a Home dashboard, tabs, and four
+layouts for consoles and game lists. Dreamcast and PSP now run inside NX
+Redux's own emulator with the in-game menu, save states and
+RetroAchievements, WonderSwan is built in, and the Music Player reads the
+tags, cover art and lyrics inside your files.
+
+!!! warning "Before you update"
+    - **Dreamcast and PSP save states** made with the old standalone
+      emulators can't be loaded. Save in-game first if you rely on one.
+      In-game saves and memory cards come across automatically.
+    - The PSP emulator from Xtras is removed on update; PSP is now built in.
+
+### New features
+
+- **New main menu.** The menu opens on **Home** with **Consoles**,
+  **Collections** and **Tools** tabs beside it. Switch tabs with `L1`/`R1`,
+  or press `Up` from the top of a tab to reach the tab row. See
+  [Main Menu & Game Lists](../../handheld/guide/main-menu.md).
+- **Home.** A **Continue** card for your last game (with its save-state
+  picture), this month's play time, achievements and most played game, and
+  your pinned games and tools. On a fresh install a **Pick a game** card
+  opens the Consoles tab. Launching from Home brings you back to Continue.
+  See [Home](../../handheld/guide/main-menu.md#home).
+- **Pinning.** Pin games with **Pin Item** and tools with **Pin Tool** from
+  `MENU`. Up to 12 pins, of which up to 9 can be tools, and Home always shows
+  every one. See
+  [Pinning games and tools](../../handheld/guide/main-menu.md#pinning-games-and-tools).
+- **Four layouts.** Each tab and the game lists can be drawn as a **List**,
+  **Grid**, **Carousel** or **Backdrop** (box art over the game's
+  screenshot), across or down the screen. Choose them in
+  **Settings → Appearance → Layouts**. See
+  [Menu Layouts](../../handheld/guide/layouts.md).
+- **Collections.** Rename or delete a collection from `MENU`, and console
+  and collection entries show how many games they hold. See
+  [Collections](../../handheld/guide/main-menu.md#collections).
+- **A refreshed look across the apps.** Page titles show where you are
+  (*Settings | Appearance*), lists and option pages share a cleaner layout,
+  and the Game Switcher and progress screens match the new menu.
+- **Dreamcast on NX Redux's emulator.** Dreamcast, Naomi and Atomiswave run
+  on Flycast 2.7 inside NX Redux's own emulator: the in-game menu, save-state
+  slots with previews, auto-resume, the Game Switcher, fast-forward, shaders
+  and RetroAchievements. Each game gets its own memory card (your old card is
+  copied in on first launch), 30 fps games run at their real speed, and
+  Dreamcast netplay uses the same wizard as the other systems. See
+  [Sega Dreamcast](../../handheld/emulators/dreamcast.md).
+- **PSP built in.** PSP runs on PPSSPP inside NX Redux's emulator, with the
+  in-game menu, save states, auto-resume, shaders, RetroAchievements and
+  cheats. There is nothing to install from Xtras, and updating moves your PSP
+  saves, DLC, texture packs and plugins across. See
+  [PlayStation Portable](../../handheld/emulators/psp.md).
+- **WonderSwan built in.** WonderSwan and WonderSwan Color games play from
+  the `Wonderswan Color (WSC)` folder with no pak to install, and earn
+  RetroAchievements. See
+  [Cores & BIOS Files](../../handheld/emulators/cores.md#systems-and-cores).
+- **Music Player tags, cover art and lyrics.** Titles, artists, albums and
+  cover art are read from MP3, M4A, FLAC, Ogg and Opus files, and lyrics
+  embedded in a file are shown before any online lookup. See
+  [Music Player → Now playing](../../handheld/apps/music-player.md#now-playing).
+- **Rename Rom keeps the name.** **Rename Rom** opens with the game's current
+  name typed in, and the keyboard has a movable text cursor (`L1`/`R1`, or
+  `Up` to the text line). See
+  [On-Screen Keyboard](../../handheld/guide/keyboard.md#editing-an-existing-name).
+- **Arcade versions told apart.** Arcade games that share a title are
+  labelled by region or version (*Alien vs. Predator (Europe)* /
+  *(Japan)*) instead of the zip name, in the game list and in Search. See
+  [Keeping several versions of a game](../../handheld/emulators/arcade.md#keeping-several-versions-of-a-game).
+- **PortMaster community catalogs.** **NextOS Ports** and **RHH Ports** are
+  one-tap installs in Xtras; PortMaster then lists their ports alongside the
+  official ones. See
+  [PortMaster → Community catalogs](../../handheld/apps/portmaster.md#community-catalogs).
+- **Leaving netplay.** During any netplay session, `MENU` now opens a single
+  **Leave netplay?** prompt.
+
+### Fixes
+
+- **PortMaster:** ports such as Perfect Dark and Celeste find their data
+  again, ports that need the Weston display (The Binding of Isaac: Rebirth)
+  start instead of showing a black screen, the PortMaster app follows your
+  [Button Layout](../../handheld/guide/button-layout.md) and is larger and
+  easier to read on the Brick, and the Brick Pro's two analog sticks are
+  reported to ports again. Ports that change their home folder keep
+  Bluetooth and USB audio routing.
+- **RetroAchievements:** games with large achievement sets (Pokémon
+  FireRed, for one) no longer freeze for several seconds at launch.
+- **Music Player:** a USB DAC or headset plugged in or removed while nothing
+  is playing is used straight away, and playback no longer drops short
+  moments of silence under load.
+- **Volume:** the lowest volume steps are quieter on the speaker and
+  headphones.
+- **Secure downloads:** updates, Xtras installs, the Cheat Database and the
+  Music and Media Players now check server certificates properly.
+
 ## v1.13.0
 
 *28 September 2026*
