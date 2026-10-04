@@ -5,49 +5,58 @@ title: Getting Started with NX Redux Mobile
 # Getting Started with NX Redux Mobile
 
 !!! info "Coming soon"
-    NX Redux Mobile is not released yet. These pages grow as its features
-    ship.
+    NX Redux Mobile is not released yet. These pages describe the app as it
+    is today.
 
 NX Redux Mobile brings the NX Redux look, folder layout and in-game features
-to Android phones, tablets and Android handhelds. It runs retro systems
-through bundled libretro cores, with no downloads needed.
+to Android phones, tablets, foldables and Android handhelds. It runs retro
+systems through emulators bundled in the app, with nothing extra to download.
+On your phone, the app's icon and title read **NX Redux**.
 
-An iOS version is planned after Android. New to NX Redux? See
-[About NX Redux](../about.md) first.
+![NX Redux Mobile on the Home tab](../assets/screenshots/mobile/home-full.webp)
+
+New to NX Redux? See [About NX Redux](../about.md) first.
 
 ## What's different from the handheld
 
-- **Emulators:** Nintendo DS runs melonDS DS (DraStic is not available), and
-  Sega Dreamcast is not included in the first release. See
-  [Emulators](emulators.md).
+- **Emulators:** Sega Dreamcast, NAOMI and Atomiswave are included. Nintendo
+  DS runs melonDS DS (DraStic is not available). See
+  [Emulators](emulators.md) and [Sega Dreamcast](dreamcast.md).
 - **Library:** besides the home folder, the app can scan extra folders in
   place. See [Library & ROM folders](library.md).
 - **Controls:** an on-screen pad, or any Android controller. See
   [Controls](controls.md).
-- **Artwork:** the app shows art you already have, but does not download it
-  yet. See [Artwork](artwork.md).
-- **RetroAchievements:** softcore only for now. See
-  [RetroAchievements](retroachievements.md).
-- **Coming later:** Netplay and Device Sync are planned for a later release.
+- **Artwork:** the app downloads box art and screenshots for your games. See
+  [Artwork](artwork.md).
+- **Home screen:** the app can be your phone's home screen, and list your
+  Android games and apps. See [Launcher Mode & Android Games](launcher.md).
+- **Foldables:** on a half-folded phone, Flex mode puts the game above the
+  hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
+- **Not in the app:** RetroAchievements hardcore mode, Netplay, Device Sync,
+  button remapping and home computer systems (Amiga, C64 and so on).
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
   the music player, PortMaster and firmware updates are not part of the app.
 
 ## Install
 
-NX Redux Mobile is not released yet. This section will list where to get it
-once it is out.
+At release, the APK will be on the
+[GitHub releases page](https://github.com/mohammadsyuhada/nx-mobile/releases).
 
 ## Choose a home folder
 
-On first start the app asks for a **home folder** through Android's folder
-picker. It creates the NX Redux layout inside it:
+On first start the app asks you to **Pick a home folder**. Press `A`
+**Pick folder** to open Android's folder picker.
+
+![Pick a home folder](../assets/screenshots/mobile/first-run-home-folder.webp)
+
+The app creates the NX Redux layout inside the folder you pick:
 
 | Folder | What goes there |
 | --- | --- |
 | `Roms/<Display Name (TAG)>/` | Games, one folder per system |
 | `Bios/<TAG>/` | BIOS files for systems that need them |
 | `Saves/<TAG>/` | Battery saves, mirrored from the app |
-| `Collections/` | Your game collections |
+| `Collections/` | Your game collections, once you make one |
 
 The folders are visible to file managers, so you can copy games in from a
 computer. The home folder can sit on an SD card.
@@ -63,17 +72,35 @@ folder names and `Bios/<TAG>/` files work unchanged.
 
 Right after you pick the home folder, the app asks **Add a ROMs folder?**
 
-<!-- SCREENSHOT: mobile-add-roms-folder — "Add a ROMs folder?" prompt (Fold) -->
+![Add a ROMs folder?](../assets/screenshots/mobile/first-run-add-roms.webp)
 
-- If you already keep games somewhere else on the phone, press `A` **Add
-  folder** and pick that folder. It is scanned in place and nothing is moved.
-- Press `B` **Skip** to go straight to your library.
+- If you already keep games somewhere else on the phone, press `A`
+  **Add folder** and pick that folder. It is scanned in place and nothing is
+  moved.
+- Press `B` **Skip** to go on without one.
 
-You can add more folders later as **extra folders** in **Tools → Settings →
-Library**. See [Library & ROM folders](library.md).
+You can add more folders later in **Tools → Settings → Library → ROM folders
+→ Add ROM folder**. See [Library & ROM folders](library.md).
+
+## Android games
+
+When the app finds games installed on your phone, the last step asks
+**Add N Android games to Consoles?** and lists them.
+
+![The Android games question](../assets/screenshots/mobile/first-run-android-games.webp)
+
+- Press `A` **Yes** to add them. They show up as an **Android** console on
+  the Consoles tab.
+- Press `B` **Not now** to leave them out.
+
+The question is asked once. On an install that already has a library, it can
+show once as a dialog over the main menu instead. Change the list any time in
+**Tools → Settings → Launcher → Android games**. See
+[Launcher Mode & Android Games](launcher.md).
 
 ## Next steps
 
+- [Main Menu & Home](main-menu.md): the tabs, Home and the game lists.
 - [Controls](controls.md): the on-screen pad, controllers and the buttons in
   the menus.
 - [In-game Menu](in-game-menu.md): save states, options and Save Changes.
