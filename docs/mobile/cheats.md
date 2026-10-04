@@ -13,8 +13,6 @@ Open **Tools → Cheat Database**. Before the first download the page shows
 **Not installed**, the download size and how many systems it covers, with one
 row: **Download (about 37 MB)**.
 
-<!-- SCREENSHOT: cheat-database — Tools → Cheat Database, installed -->
-
 - The download needs about 400 MB of free space. With less, it stops with
   **Not enough space (needs about 400 MB free)**.
 - A progress bar follows the download, then the install, system by system
@@ -28,6 +26,8 @@ One download covers every supported system.
 
 With the cheats installed, the page offers **Check for updates** and
 **Remove**.
+
+![Tools → Cheat Database, installed: 28 systems, the file count and the last update](../assets/screenshots/mobile/cheat-database.webp)
 
 - **Check for updates** compares your copy with libretro's latest one and
   downloads it again only when it has changed. Otherwise it reports **Cheat
@@ -56,6 +56,8 @@ no cheats.
    away. `A` shows its full description.
 4. To keep your cheats for next time, use **Save Changes → Save for game**.
 
+![The in-game Cheats page on Mega Man X4, with Infinite Lives turned On](../assets/screenshots/mobile/in-game-cheats.webp)
+
 The app finds the game's cheat file by the ROM's file name first, then by the
 game's name. If nothing matches, the page says **No cheats for this game.** and
 names the file it looked for, such as `Looked for Cheats/GBA/...`.
@@ -67,10 +69,10 @@ names the file it looked for, such as `Looked for Cheats/GBA/...`.
     description under the list starts with its source, such as
     `(GameShark)`, so you can tell them apart.
 
-<!-- SCREENSHOT: in-game-cheats-merged — in-game Cheats page with a merged cheat highlighted, so the description under the list starts with (GameShark) -->
+![A merged cheat highlighted: the line under the list reads (GameShark) Joker Command](../assets/screenshots/mobile/in-game-cheats-merged.webp)
 
 ## Cheats and RetroAchievements
 
-[RetroAchievements](retroachievements.md) on mobile is **softcore only for
-now**, so there is no hardcore mode to block cheats. You can turn cheats on
+[RetroAchievements](retroachievements.md) on mobile is **softcore only**,
+so there is no hardcore mode to block cheats. You can turn cheats on
 with achievements enabled.
