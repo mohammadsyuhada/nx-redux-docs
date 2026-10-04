@@ -43,7 +43,8 @@ the switch.
 | Button | Action |
 | --- | --- |
 | `SELECT` | Open the [Game Switcher](game-switcher.md) |
-| `START` | At the top level of the main menu, open **Search** |
+| `L1` / `R1` | Switch [main menu tabs](main-menu.md#tabs); in a game list, jump to the previous / next letter |
+| `START` | On a main menu tab, open **Search** |
 | `X` | Resume the highlighted game from where you last left off |
 | `Y` | Launch a netplay-capable game straight into [Netplay](../netplay.md) |
 | `MENU` | Open the [context menu](context-menu.md) for the highlighted game or tool |

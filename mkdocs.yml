@@ -122,6 +122,7 @@ nav:
       - Getting Started: handheld/getting-started.md
       - User Guide:
           - Main Menu & Game Lists: handheld/guide/main-menu.md
+          - Menu Layouts: handheld/guide/layouts.md
           - Game Switcher: handheld/guide/game-switcher.md
           - Game Context Menu: handheld/guide/context-menu.md
           - Five-Game Menu: handheld/guide/five-game-menu.md
@@ -166,6 +167,7 @@ nav:
           - Overview: handheld/settings/index.md
           - Display: handheld/settings/display.md
           - Appearance: handheld/settings/appearance.md
+          - Layouts: handheld/settings/layouts.md
           - In-game Notifications: handheld/settings/notifications.md
           - LED Control: handheld/settings/led-control.md
           - Network: handheld/settings/network.md

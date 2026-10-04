@@ -5,6 +5,11 @@ carousel of your recent games that resumes any of them instantly.
 
 ![Game Switcher](../../assets/screenshots/game-switcher.png)
 
+The top shows the game's name, its system and its place in the list
+("Game Boy Advance 1 / 12"). The line at the bottom shows when you last played
+it, your total play time and your achievement progress. With nothing played
+yet, the switcher says **Nothing played yet**.
+
 | Button | What it does |
 | --- | --- |
 | `Left` / `Right` | Flip through games |

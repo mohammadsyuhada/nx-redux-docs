@@ -4,7 +4,7 @@ NX Redux includes [Netplay](https://github.com/mohammadsyuhada/nextui-netplay)
 for **local wireless multiplayer**. When a game supports it, the hint bar in
 the game list shows `Y NETPLAY`:
 
-![Y NETPLAY hint in the game list](../assets/screenshots/game-list.png)
+![Y NETPLAY hint in the game list](../assets/screenshots/netplay-hint.png)
 
 Press `Y` to host or join over Wi-Fi or a hotspot hosted by one device. There
 is no IP to type and no persistent toggle to remember to turn off. Save data

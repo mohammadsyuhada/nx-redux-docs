@@ -100,13 +100,14 @@ nothing to copy by hand.
 
 ## First boot
 
-After installation you land on the main menu. Your systems are listed with
-**Recently Played** at the top and **Tools** at the bottom.
+After installation you land on **Home**, the first of the main menu's four
+tabs: Home, Consoles, Collections and Tools. Switch tabs with `L1` / `R1`.
 
-![The main menu, with Recently Played at the top](../assets/screenshots/main-menu.png)
+![The main menu's Home tab](../assets/screenshots/main-menu.png)
 
 | Button | What it does |
 | --- | --- |
+| `L1` / `R1` | Switch tabs |
 | `A` | Open a system or game |
 | `START` | Search your whole library |
 | `SELECT` (tap) | Open the [Game Switcher](guide/game-switcher.md) |

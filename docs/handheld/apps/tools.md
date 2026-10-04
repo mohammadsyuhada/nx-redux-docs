@@ -1,13 +1,14 @@
 # Tools Overview
 
-**Tools**, at the bottom of the main menu, holds every built-in app and
-utility.
+The **Tools** tab of the main menu holds every built-in app and utility.
+Pin the ones you use most to [Home](../guide/main-menu.md#pinning-games-and-tools)
+with `MENU` → **Pin Tool**.
 
-![Tools menu](../../assets/screenshots/tools.png)
+![Tools tab](../../assets/screenshots/tools-grid.png)
 
 | Tool | What it does |
 | --- | --- |
-| [Artwork Manager](artwork-manager.md) | Fetch custom mix box art for your ROMs |
+| [Artwork Manager](artwork-manager.md) | Fetch screenshots and box art for your ROMs |
 | [Device Sync](device-sync.md) | Sync saves, states, settings and ROMs across devices |
 | [Emulator Settings](emulator-settings.md) | Configure each system's emulator options |
 | [Files](files.md) | Dual-pane file manager for the SD card |
