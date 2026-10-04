@@ -63,6 +63,36 @@ ports, is the flagship entry in the **TOOLS** tab. Once installed it appears
 in the Tools menu. See the dedicated [PortMaster page](portmaster.md) for how
 it works.
 
+## Community port catalogs
+
+Two more entries in the **TOOLS** tab add community-run catalogs to
+PortMaster. Their games show up in PortMaster next to its own, and install
+the same way. Install [PortMaster](#portmaster) first: both entries need it.
+
+| Entry | Adds | Examples |
+| --- | --- | --- |
+| **NextOS Ports** | [NextOS Universal Ports](https://nextos-ports.github.io/nextos-universal-ports/) | Android and iOS games wrapped to run on handhelds |
+| **RHH Ports** | [Jeod's Retro Handheld Ports](https://jeodc.github.io/RHH-Ports/) | GameMaker, RPG Maker and Solarus games, many of them fan games |
+
+- **New games appear by themselves.** PortMaster checks each catalog for new
+  ports when you open it, so there is nothing to update in Xtras when a
+  catalog adds games.
+- **You supply the game files.** Most of these ports need your own copy of
+  the game (an APK, a Steam download, a ROM). Each port's details page in
+  PortMaster says what to add and where.
+- **RHH Ports also installs gmtoolkit,** which RHH's GameMaker ports use to
+  prepare their game files on first launch.
+- **Same game in two catalogs?** PortMaster offers its own build.
+- **Uninstalling** the entry takes the catalog out of PortMaster. Games you
+  already installed from it stay, with their saves; remove them from
+  PortMaster.
+
+!!! warning "No guarantee these ports run"
+    These catalogs make the games easy to install, but they aren't made for
+    NX Redux devices and nobody tests them there. Some won't run. See
+    [Community catalogs](portmaster.md#community-catalogs) on the PortMaster
+    page for why.
+
 ## Cheat Database
 
 **Cheat Database** in the **TOOLS** tab installs a small (~1 MB) tool into
