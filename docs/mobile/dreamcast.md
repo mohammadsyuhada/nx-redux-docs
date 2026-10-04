@@ -33,9 +33,10 @@ The arcade games need their own BIOS instead (see
 | `naomi.zip` | NAOMI games |
 | `awbios.zip` | Atomiswave games |
 
-??? info "More detail"
-    The handheld keeps its Dreamcast BIOS in the same `Bios/DC/` folder, so a
-    copy of its card works as it is.
+!!! warning "Coming from the handheld"
+    The handheld can run Dreamcast discs without a BIOS. The app can't: put
+    `dc_boot.bin` in `Bios/DC/` even if your handheld played the games
+    without it.
 
 ## Adding games
 
@@ -86,6 +87,7 @@ Dreamcast controller is laid out:
 | Left stick | Analog stick |
 | `L2` / `R2` | Analog triggers |
 | `START` | `START` |
+| `SELECT` | Insert a coin (NAOMI and Atomiswave) |
 
 - The on-screen pad draws `A` `B` `X` `Y` in the Dreamcast's colours, in the
   positions above.
@@ -147,7 +149,7 @@ NAOMI and Atomiswave games are MAME-style zips (or 7z). To play them:
    discs.
 2. Put the board's BIOS zip in `Bios/DC/`: `naomi.zip` for NAOMI,
    `awbios.zip` for Atomiswave.
-3. Launch the game.
+3. Launch the game and press `SELECT` to insert a coin, then `START`.
 
 A few sets need another BIOS zip, such as `naomi2.zip` for NAOMI 2 games. The
 message names the one that's missing.

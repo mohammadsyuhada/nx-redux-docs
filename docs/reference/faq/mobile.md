@@ -39,8 +39,21 @@ carry over.
 - **A legacy GPGX folder** (`Sega Genesis (GPGX)`, from the handheld) still
   plays. Move its games to `Roms/Sega Genesis (MD)/` when you're ready to
   leave its states behind.
-- **Battery saves** don't move by themselves. Copy each game's `.srm` from
-  the legacy `Saves/GPGX/` folder to `Saves/MD/`.
+- **Battery saves** don't move by themselves. This applies to games you
+  move into the `MD` folder, and to games in a folder without a tag. Copy
+  each game's `.srm` from the legacy `Saves/GPGX/` folder to `Saves/MD/`.
+  The original stays in the legacy `Saves/GPGX/` folder.
+
+!!! warning "Copy the save before you play"
+    The app takes a save from `Saves/MD/` when the game starts, and only if
+    the file is newer than its own copy. When you quit, its own copy
+    replaces the file in `Saves/MD/`. So:
+
+    - Copy the `.srm` with the game closed. A game waiting in the Game
+      Switcher counts as open.
+    - Copy it before you first play the game as `MD`. If you already have,
+      the copied file must be newer than the game's last `MD` save. A copy
+      that keeps its old date loses.
 
 See [Emulators](../../mobile/emulators.md#sega-genesis).
 
@@ -99,8 +112,9 @@ works without an account at a small daily quota.
 
 - **Signing in to ScreenScraper** raises that quota, so a large library
   fetches faster.
-- **SteamGridDB** and **TheGamesDB** only answer requests that carry an API
-  key. Add a key to use them as extra sources.
+- **TheGamesDB** works with the key built into the app. Your own free key
+  is optional and gives you your own monthly allowance.
+- **SteamGridDB** is only used with your own free API key.
 
 Set them in **Tools → Artwork → Account**. See
 [Artwork](../../mobile/artwork.md).
