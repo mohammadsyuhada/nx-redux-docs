@@ -21,7 +21,7 @@ the console first.
 ## An emulator's settings
 
 The page is titled with the emulator, the console and the tag, such as
-**Genesis Plus GX — Sega Genesis (GPGX)**. It has two groups:
+**Genesis Plus GX — Sega Genesis (MD)**. It has two groups:
 
 | Group | What it holds |
 | --- | --- |

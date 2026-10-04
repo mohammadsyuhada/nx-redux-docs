@@ -118,7 +118,7 @@ def check_landing():
     check('id="why-nx-redux"' not in html,
           "Why NX Redux blurb should live on the handheld overview, not the landing page")
     check(html.count('class="nx-slide') >= 5, "the Brick should cycle 2 screens and the Fold at least 3")
-    for asset in ["handheld/brick-pro.webp", "handheld/main-menu.webp", "handheld/game-list.webp", "mobile/zfold8.webp", "mobile/main-menu.webp", "mobile/game-list.webp", "controls/pad-n64.webp"]:
+    for asset in ["handheld/brick-pro.webp", "handheld/main-menu.webp", "handheld/game-list.webp", "mobile/zfold8.webp", "mobile/home.webp", "mobile/game-list-carousel.webp", "controls/pad-n64.webp"]:
         check((SITE / "assets" / "landing" / asset).exists(), f"landing image not published: {asset}")
     css = (SITE / "stylesheets" / "extra.css").read_text()
     check("misans-semibold.woff2" in css, "the NX Redux UI font is not declared for the site")
