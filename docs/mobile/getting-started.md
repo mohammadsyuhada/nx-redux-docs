@@ -39,8 +39,8 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 
 ## Install
 
-At release, the APK will be on the
-[GitHub releases page](https://github.com/mohammadsyuhada/nx-mobile/releases).
+When it's released, the APK is listed on the
+[Download](../reference/download.md) page.
 
 ## Choose a home folder
 
