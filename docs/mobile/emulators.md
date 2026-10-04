@@ -1,46 +1,121 @@
 # Emulators
 
-Every core is bundled in the app. Folder and tag names match NX Redux on the
-handheld.
+Every core is bundled in the app. There is nothing to download. Folder and
+tag names match NX Redux on the handheld.
 
 | System | Tag(s) | Core |
 | --- | --- | --- |
 | Nintendo DS | `NDS` | melonDS DS |
-| Nintendo 64 | `N64` | mupen64plus-next |
+| Nintendo 64 | `N64` | Mupen64Plus-Next |
 | PlayStation Portable | `PSP` | PPSSPP |
 | Game Boy / Game Boy Color | `GB`, `GBC` | Gambatte |
 | Game Boy Advance | `GBA` | gpSP |
 | Game Boy Advance, Super Game Boy | `MGBA`, `SGB` | mGBA |
 | NES / Famicom Disk System | `FC`, `FDS` | FCEUmm |
 | Super Nintendo | `SFC` | Snes9x |
-| Super Nintendo | `SUPA` | Mednafen Supafaust |
-| Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `GPGX`, `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | Genesis Plus GX |
-| PlayStation | `PS` | PCSX ReARMed |
+| Super Nintendo | `SUPA` | Supafaust |
+| Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | Genesis Plus GX |
+| Sega 32X | `32X` | PicoDrive |
+| Dreamcast, NAOMI, Atomiswave | `DC` | Flycast (see [Sega Dreamcast](dreamcast.md)) |
+| PlayStation | `PS` | PCSX-ReARMed |
 | Neo Geo Pocket / Color | `NGP`, `NGPC` | RACE |
-| PC Engine | `PCE` | Mednafen PCE Fast |
-| Virtual Boy | `VB` | Mednafen VB |
+| PC Engine / TurboGrafx-16 | `PCE` | Beetle PCE Fast |
+| Virtual Boy | `VB` | Beetle VB |
 | Atari Lynx | `LYNX` | Handy |
 | Atari 2600 | `A2600` | Stella 2014 |
 | Atari 5200 | `A5200` | a5200 |
 | Atari 7800 | `A7800` | ProSystem |
 | Pokémon Mini | `PKM` | PokeMini |
-| WonderSwan Color | `WSC` | Mednafen WonderSwan |
+| WonderSwan Color | `WSC` | Beetle WonderSwan |
 | PICO-8 | `P8` | fake-08 |
 | Doom | `PRBOOM` | PrBoom |
-| Sega 32X | `32X` | PicoDrive |
 | ColecoVision | `COLECO` | Gearcoleco |
 | Arcade | `FBN` | FinalBurn Neo |
+| Android | none | The game's own app (see [Launcher Mode & Android Games](launcher.md)) |
 
-Sega Genesis uses `GPGX` by default, like the handheld. `MD` is a second tag
-on the same core.
+**Android** shows as a console once you add Android games. They are apps
+installed on your phone, and the app starts them for you. They have no core
+and no folder.
+
+## Choosing an emulator
+
+Two consoles have a second emulator, each with its own tag:
+
+| Console | Tags |
+| --- | --- |
+| Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) |
+| Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
+
+- A folder named with a tag, such as `Game Boy Advance (MGBA)`, uses that
+  tag.
+- For folders without a tag, pick the emulator in **Tools → Settings →
+  Emulators → Default emulators**.
+- For one game, press `MENU` on it in a game list and pick **Emulator**. This
+  choice wins over both.
+
+The tag is where saves and settings are kept. To set a core's options outside
+a game, for a whole console or for one game, see
+[Emulator Settings](emulator-settings.md).
+
+## Sega Genesis
+
+Sega Genesis uses the `MD` tag, and the app creates
+`Roms/Sega Genesis (MD)/`. Genesis, Master System, Game Gear, SG-1000 and
+Sega CD all run Genesis Plus GX. Only 32X runs PicoDrive.
+
+??? info "Coming from a legacy GPGX folder"
+    A legacy `Sega Genesis (GPGX)` folder from the handheld still lists under
+    Sega Genesis and plays, with its saves in the legacy `Saves/GPGX/`.
+    The app never offers the legacy GPGX tag as an emulator. Read
+    [the FAQ](../reference/faq/mobile.md#my-sega-genesis-save-states-are-gone)
+    before you move those games to the `MD` folder.
+
+### Controller Type
+
+Sega Genesis, Sega CD and 32X games have **Controller Type** in the in-game
+menu's **Options → Console Settings**:
+
+| Value | What the game sees |
+| --- | --- |
+| **Auto** (default) | A 6-button pad only for games made for one, else a 3-button pad |
+| **3 buttons** | A 3-button pad |
+| **6 buttons** | A 6-button pad |
+
+Some older games misbehave with a 6-button pad. The on-screen pad changes to
+match: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a
+6-button pad (`Y` and `Z` are on the shoulder buttons, and `Mode` is in
+place of `SELECT`). See [Controls](controls.md#controller-type-sega).
+
+## Nintendo 64
+
+The Nintendo 64 maps a controller **by name**: the button printed `A` is the
+N64's `A` on every controller.
+
+| Controller | Nintendo 64 |
+| --- | --- |
+| `A`, `B` | `A`, `B` |
+| `X` | C-Left |
+| `Y` | C-Down |
+| `L1`, `R1` | `L`, `R` |
+| `L2` | `Z` |
+| `START` | `START` |
+| Right stick | The C buttons |
+
+- The on-screen pad draws a C-button diamond, with `Z` on `L2`.
+- `R2` and `SELECT` do nothing on the N64.
+- N64 has no **Controller Layout** setting. Every other console maps face
+  buttons by position; see [Controls](controls.md#nintendo-64).
 
 ## BIOS files
 
 Put BIOS files in `Bios/<TAG>/`.
 
-- These systems need their BIOS: Famicom Disk System, Sega CD, PC Engine CD
-  and ColecoVision (`Bios/COLECO/colecovision.rom`). The app checks for it
-  before launch.
+- These systems need their BIOS: Famicom Disk System, Sega CD, PC Engine CD,
+  ColecoVision (`Bios/COLECO/colecovision.rom`) and Dreamcast
+  ([Sega Dreamcast](dreamcast.md#bios)).
+- The app checks for it before launch and names the missing file, such as
+  **Sega CD needs a BIOS: put bios_CD_U.bin (or bios_CD_E.bin,
+  bios_CD_J.bin) in Bios/SEGACD/**.
 - PlayStation has a BIOS built in, and uses a real one when present.
 
 ??? info "More detail"
@@ -61,9 +136,12 @@ are refused with a message.
     as on the handheld. The unpacked copies are trimmed automatically; see
     [Unpacked games cache](library.md#unpacked-games-cache).
 
+    Arcade sets are the exception. For FinalBurn Neo, NAOMI and Atomiswave the
+    zip *is* the game, and it is never unpacked.
+
 ## Multi-disc games
 
-A multi-file disc (`.cue`) or a disc list (`.m3u`) loads as one game.
+A multi-file disc (`.cue`, `.gdi`) or a disc list (`.m3u`) loads as one game.
 
 To change disc, open the [in-game menu](in-game-menu.md#the-first-page). For a
 game with more than one disc it shows a **Disc** row under **Continue**, with
@@ -81,15 +159,18 @@ opening the lid and swapping it would. The disc choice is not saved.
   handheld.
 - Arcade has no cheats.
 
+NAOMI and Atomiswave games run on Flycast instead, from the Dreamcast folder.
+See [Sega Dreamcast](dreamcast.md#naomi-and-atomiswave).
+
 ## Nintendo DS
 
 Nintendo DS runs **melonDS DS**. The core draws both screens and the app lays
 them out.
 
 The layout options are in the in-game menu under **Options → Console
-Settings**, which only DS games have. Like the other options, they are kept
-per game or console with [Save Changes](in-game-menu.md#save-changes). Screen
-Scaling and the screen offsets don't apply to the DS screens.
+Settings**. Like the other options, they are kept per game or console with
+[Save Changes](in-game-menu.md#save-changes). Screen Scaling and the screen
+offsets don't apply to the DS screens.
 
 ### Portrait layouts
 
@@ -102,11 +183,15 @@ Scaling and the screen offsets don't apply to the DS screens.
 | **Stacked** | One screen above the other. |
 | **Single screen** | Only the big screen. |
 
-<!-- SCREENSHOT: ds-portrait-stacked — DS game, portrait, Stacked layout -->
+<div class="grid" markdown>
 
-<!-- SCREENSHOT: ds-portrait-pip — DS game, portrait, Picture in picture layout -->
+![A DS game in portrait, Stacked: the top screen above the bottom screen](../assets/screenshots/mobile/ds-portrait-stacked.webp)
 
-<!-- SCREENSHOT: ds-portrait-single — DS game, portrait, Single screen layout -->
+![A DS game in portrait, Picture in picture: the bottom screen small in the bottom-right corner](../assets/screenshots/mobile/ds-portrait-pip.webp)
+
+![A DS game in portrait, Single screen: only the top screen](../assets/screenshots/mobile/ds-portrait-single.webp)
+
+</div>
 
 With a controller connected in portrait, the on-screen pad band goes away, so
 the screens get the full height. **Layout (portrait, controller)** is used
@@ -126,17 +211,17 @@ FlipPad is expected to be recognised too.
 | **Single screen** | The big screen only, centred. |
 | **Picture in picture** | The big screen centred, the other small in a corner. |
 
-<!-- SCREENSHOT: ds-landscape-side-by-side — DS game, landscape, Side by side layout -->
+![A DS game in landscape, Side by side: the two screens next to each other, with the on-screen pad over them](../assets/screenshots/mobile/ds-landscape-side-by-side.webp)
 
-<!-- SCREENSHOT: ds-landscape-single — DS game, landscape, Single screen layout -->
+![A DS game in landscape, Single screen: the top screen centred](../assets/screenshots/mobile/ds-landscape-single.webp)
 
-<!-- SCREENSHOT: ds-landscape-pip — DS game, landscape, Picture in picture layout -->
+![A DS game in landscape, Picture in picture: the bottom screen small in the bottom-right corner](../assets/screenshots/mobile/ds-landscape-pip.webp)
 
 Without a controller, the on-screen buttons sit over the game in landscape.
 **Pad Opacity (landscape)** in **Options → Frontend** sets how opaque they
 are: 100%, 60%, 40% or 25%, 40% by default.
 
-<!-- SCREENSHOT: ds-landscape-pad-opacity — DS game, landscape, on-screen pad shown over the game -->
+![A DS title screen in landscape with the on-screen pad at 40% opacity over it](../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
 
 ### Big screen and inset
 
@@ -203,7 +288,7 @@ it. A **Controls** button in a free corner brings the on-screen buttons back.
 - `R2` does nothing in touch mode, and touch mode is not saved.
 - With stylus mode on, `L2` turns stylus mode off first.
 
-<!-- SCREENSHOT: ds-touch-mode — DS game, landscape, L2 touch mode with the bottom screen big -->
+![Touch mode in landscape: the bottom screen big, the pad hidden and a Controls button in the top-right corner](../assets/screenshots/mobile/ds-touch-mode.webp)
 
 ### 3D rendering
 
@@ -230,8 +315,7 @@ states from the older melonDS core don't load.
     Battery saves from the older melonDS core (`.sav`) and from DraStic
     (`.dsv`) are converted to `.srm` on a game's first launch.
 
-## Not available yet
+## Limits
 
-- **Sega Dreamcast** is not in the first release.
-- **PlayStation `.exe` homebrew** does not load yet.
-- **PICO-8** save states and auto-resume do not work yet.
+- **PlayStation `.exe` homebrew** doesn't load.
+- **PICO-8** games have no save states, and don't resume where you left off.

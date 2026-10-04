@@ -170,3 +170,32 @@
 .md-typeset details.info > summary:hover {
   color: var(--md-default-fg-color);
 }
+
+/* A screenshot inside the folded Z Fold 8 frame. The screen box is the cover
+   screen's position in the render, in percent, the same as the landing hero. */
+.md-typeset .nx-phone {
+  position: relative;
+  width: 15rem;
+  max-width: 70%;
+  margin: 1.5em auto;
+}
+.md-typeset .nx-phone p { margin: 0; }
+.md-typeset .nx-phone img { max-width: none; }
+.md-typeset .nx-phone .nx-phone__frame {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 1em 1.2em rgba(0, 0, 0, 0.6));
+}
+.md-typeset .nx-phone .nx-phone__screen {
+  position: absolute;
+  z-index: 0;
+  left: 6.231%;
+  top: 3.183%;
+  width: 88.468%;
+  height: 93.634%;
+  object-fit: cover;
+  background: #000;
+}

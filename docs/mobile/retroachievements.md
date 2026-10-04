@@ -4,15 +4,16 @@ NX Redux Mobile supports [RetroAchievements](https://retroachievements.org/),
 with offline play. **Tools → RetroAchievements** is the home for the feature:
 sign in, browse your achievements and change its settings there.
 
-<!-- SCREENSHOT: ra-home — Tools → RetroAchievements home screen -->
+![Tools → RetroAchievements, signed out: Not signed in, Sign in under Settings, then the three rows](../assets/screenshots/mobile/ra-home.webp)
 
 The home screen shows your username, your points, how many unlocks are
 waiting to be synced and when you last synced, above three rows:
-**Achievements**, **Sync now** and **Settings**.
+**Achievements**, **Sync now** and **Settings**. Signed out, it reads **Not
+signed in** and **Sign in under Settings** instead.
 
-!!! info "Softcore only for now"
+!!! info "Softcore only"
     NX Redux Mobile is not an RA-approved hardcore client, so there is no
-    hardcore mode for now. Unlocks count as softcore, and nothing is blocked
+    hardcore mode. Unlocks count as softcore, and nothing is blocked
     while achievements are on: cheats and save states work as usual.
 
 ## Setting up
@@ -29,7 +30,9 @@ account.
 The app keeps only the sign-in token RetroAchievements returns, not your
 password.
 
-<!-- SCREENSHOT: ra-settings — RetroAchievements settings page, signed in -->
+![RetroAchievements → Settings, signed out: Sign in at the top, Status Not signed in, and Enable achievements and Download all game data dimmed](../assets/screenshots/mobile/ra-settings.webp)
+
+Signed out, **Enable achievements** and **Download all game data** are dimmed.
 
 The settings page also has:
 
@@ -72,6 +75,14 @@ Start a recognised game and unlocks are tracked as you play.
     game, sign-in failed, offline at the start, first-time setup and synced
     unlocks.
 
+## On the Home tab
+
+Home's stats strip counts your achievements for the month: **This month**,
+your play time, then the number of achievements you unlocked this calendar
+month, such as **12 achievements**. Unlocks still waiting to be synced count
+too. Signed out, it reads **Sign in** instead of a number. See
+[Home](main-menu.md#home).
+
 ## Offline play
 
 - **Earn offline.** With no connection, unlocks are saved on the phone and
@@ -105,7 +116,7 @@ progress, such as `12/40 unlocked`, plus how many unlocks are pending sync.
 It works offline. With nothing cached yet it shows **No cached games** and
 **Play online once or download game data in Settings**.
 
-<!-- SCREENSHOT: ra-games — Achievements browser listing cached games -->
+![RetroAchievements → Achievements, listing cached games with their progress, shown here signed out](../assets/screenshots/mobile/ra-games.webp)
 
 Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
 or **Locked**, with its points, in green, amber or grey. `Y` switches between
@@ -115,10 +126,11 @@ or **Locked**, with its points, in green, amber or grey. `Y` switches between
 was unlocked or its progress, its unlock rate, its type (`[Missable]`,
 `[Progression]` or `[Win Condition]`) and whether it is muted.
 
-On a wide screen, such as an unfolded phone or a tablet, the details show
-beside the list instead.
+![Streets of Rage 2's achievements on a phone: each with its badge, status and points](../assets/screenshots/mobile/ra-game.webp)
 
-<!-- SCREENSHOT: ra-game — one game's achievements, with details beside the list on a wide screen -->
+On a wide landscape screen, such as an unfolded Fold held sideways, the
+details show beside the list instead. See
+[Foldables & Large Screens](foldables.md#two-pane-screens).
 
 ## Sort orders
 
