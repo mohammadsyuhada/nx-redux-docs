@@ -63,12 +63,16 @@ and everything you pinned.
   save-state picture, else the game's artwork), its name and when you last
   played it. Press `A` to jump back in. On a fresh install it is replaced by
   a **Pick a game** card that opens the Consoles tab.
-- **Pinned tools** sit in the column on the right as icon tiles. The Brick and
-  Brick Pro show three; the Smart Pro S shows up to six. When you have
-  more than fit, the last tile reads **+N** and opens the Tools tab.
+- **Pinned tools** sit beside the Continue card as square icon tiles, in
+  columns of three. Every pinned tool is shown.
 - **Pinned games** fill the rows below, two per row on the Brick and Brick Pro
   and four on the Smart Pro S. Home scrolls when there are more. The selected pin shows
   its name and play time.
+- **No pinned games?** The top section fills the screen and the tool tiles
+  grow, in columns of four. On the Smart Pro S, one or two pinned games stand
+  in a column beside the Continue card instead of a row.
+- Home keeps the same size whatever the
+  [UI scale](../settings/appearance.md#ui-scale) is set to.
 
 | Button | What it does |
 | --- | --- |
@@ -85,8 +89,10 @@ and everything you pinned.
 - **Pin a tool:** press `MENU` on it in the Tools tab and choose
   **Pin Tool**.
 - Pins appear on Home in the order you pinned them.
-- You can pin up to **12** items in total, games and tools together. Past
-  that, unpin something first.
+- You can pin up to **12** items in total, games and tools together. Up to
+  **9** of them can be tools (**8** while no game is pinned), so Home always
+  has room for every pin. At the limit, **Pin Item** / **Pin Tool** is not
+  offered: unpin something first.
 - Multi-disc game folders can be pinned like single games.
 - **F1**/**F2** keys (Brick and Brick Pro) can each launch a tool of your
   choice from anywhere in the menu. Assign them in
