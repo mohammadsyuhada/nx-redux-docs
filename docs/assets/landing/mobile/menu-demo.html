@@ -225,6 +225,8 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
   background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) calc(100% - 12px), transparent calc(100% - 12px)); }
 /* the band reaches 12 dp into the hint bar's empty top (its hints are centred lower), so the list gets one more row;
    below the hint bar's edge it paints nothing, the bar's own 80% shows */   /* solid 80% under the 2 dp strip only, then linear to 0 at the top, 12 dp above the text */
+#screen.nohints .band { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) 100%); }   /* no hint bar to carry the 80% below the strip: the band holds it to the bottom edge */
+.band.plain, #screen.nohints .band.plain { background: none; }   /* Style > Extra info: Hide on a game list: no info line, so no shade for it (the arrows stay) */
 .portrait .band { padding: 0 16px; }   /* arrows start where the row text does (the pill's 24 / 16 dp inset) */
 .band .arrows { flex: none; width: 21px; height: 18px; margin-right: 12px; display: flex; gap: 1px; align-items: center; }   /* fixed room: two arrows + 1 dp, then 12 dp */
 .band .arrows svg { width: 10px; height: 10px; fill: var(--ink); opacity: .2; }
@@ -400,11 +402,6 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .tile.always .hinfo, .tile.always .info, .tile.always .gshade { opacity: 1; }
 .hinfo .t { font-size: 13px; line-height: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .hinfo .il { font-size: 11px; line-height: 14px; margin-top: 2px; }
-/* Style > Extra info: Hide takes the shading made for the info line with it (Continue's fade, a pin's fade, the game-list Grid shade);
-   the name left on the art keeps the captions' text shadow instead */
-#screen.noinfo :is(.hcfade, .gshade) { display: none; }
-#screen.noinfo .hinfo { background: none; }
-#screen.noinfo :is(.hctext .t, .hinfo .t, .info .t) { text-shadow: 0 1px 6px rgba(0,0,0,.9); }
 .hcard .ga.shot { object-position: center 40%; }
 /* Continue zooms its picture 15% (about the 40% framing line) so the black borders many games draw around the screen fall outside the card */
 .hcard .ga { transform: scale(1.15); transform-origin: center 40%; }
@@ -1158,7 +1155,7 @@ function buildList() {
     ${S.inConsole ? headHTML() : tabsHTML()}
     <div class="lview ${games ? "games" : "full"}${S.inConsole ? "" : " tabbed"}"><div class="plist" id="plist">${items().map((r, i) =>
       `<div class="prow" data-i="${i}"><span>${r.n}</span></div>`).join("")}</div>${games ? "" : `<div class="lbg" id="lbg"></div>`}</div>
-    <div class="band"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
+    <div class="band${games && !S.info ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
     <div class="hints" id="hints"></div>`;
   if (games) drawFade(document.getElementById("gfade"));
   screen.querySelectorAll(".prow").forEach(el => el.onclick = () => tapTile(+el.dataset.i));
@@ -1295,7 +1292,6 @@ S.info = (() => { try { return localStorage.getItem("nx-info") !== "off"; } catc
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Extra info"><span class="lbl">Extra info</span>${[["on", "Show"], ["off", "Hide"]]
   .map(([v, t]) => `<button data-info="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Home and game lists</span></div>`);
 const syncInfo = () => {
-  screen.classList.toggle("noinfo", !S.info);
   document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.info === "on") === S.info));
   document.getElementById("hs-statrow").hidden = !tabOn(CATS.indexOf(HOME_CAT)) || S.hs === "fresh" || !S.info;   /* no strip to pick a state for */
 };
