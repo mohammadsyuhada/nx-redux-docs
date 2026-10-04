@@ -131,6 +131,15 @@
         </div>
       </div>
     </section>
+
+    <section class="nx-screen nx-demo" aria-labelledby="nx-demo-title">
+      <div class="nx-screen__inner">
+        <h2 id="nx-demo-title" class="nx-features__title">Try the mobile main menu</h2>
+        <p class="nx-demo__text">Pick a layout for each tab, switch between landscape and portrait, and move around with the pad or your keyboard.</p>
+        <iframe class="nx-demo__frame" src="{{ 'assets/landing/mobile/menu-demo.html' | url }}"
+                title="NX Redux Mobile main menu demo" loading="lazy"></iframe>
+      </div>
+    </section>
   </div>
 {% endblock %}
 
@@ -194,6 +203,20 @@
           e.preventDefault();
           select((next + tabs.length) % tabs.length, true);
         });
+      });
+    })();
+
+    // Mobile main menu demo: the frame grows to its page, which changes height
+    // with the orientation and the window width.
+    (function () {
+      var frame = document.querySelector(".nx-demo__frame");
+      if (!frame) return;
+      frame.addEventListener("load", function () {
+        var doc = frame.contentDocument;
+        if (!doc) return;
+        var fit = function () { frame.style.height = Math.ceil(doc.body.getBoundingClientRect().height) + "px"; };
+        new ResizeObserver(fit).observe(doc.body);
+        fit();
       });
     })();
   </script>
