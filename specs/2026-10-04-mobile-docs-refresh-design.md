@@ -28,6 +28,8 @@ default, "colors and UI scale are not in the app yet").
   on the handheld. This replaces the "only shipped behaviour, not promised"
   rule for these items.
 - Getting Started shows the Home screenshot inside the Z Fold 8 frame.
+- Portrait menu shots stop above the on-screen pad too (raw y 110–995), not
+  only in-game shots. Only the pad shots and the framed Home shot keep the pad.
 
 ## Decisions
 
