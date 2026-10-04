@@ -127,7 +127,8 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 
 /* category tabs across the top, like the reference: plain words, the current one white */
 .tabs { position: absolute; left: 0; right: 0; top: 0; height: 44px; display: flex; align-items: center; padding: 0 24px; }
-.tabs.one { visibility: hidden; }   /* only one tab on: no tab row (its space stays, as a game list's header) */   /* no L1/R1 glyphs: the first word starts on the gutter */
+.tabs.one { visibility: hidden; }
+#screen.notitle :is(.tabs, .head) { visibility: hidden; }   /* Style > Page title: Hide, on the main menu (the tab row) and game lists (the header); the row's room stays, the status group in it */   /* only one tab on: no tab row (its space stays, as a game list's header) */   /* no L1/R1 glyphs: the first word starts on the gutter */
 .tab-row { display: flex; gap: 20px; min-width: 0; overflow: hidden; }
 .tab { font-size: 16px; color: rgba(var(--ink-rgb),.38); white-space: nowrap; cursor: pointer; transition: color .18s; }
 .tab.on { color: var(--ink); }
@@ -696,7 +697,7 @@ const scaleK = () => fit.clientWidth / DIM[S.orient].w;
 const dur = h => { const s = Math.round(+h * 3600), H = Math.floor(s / 3600), M = Math.floor(s % 3600 / 60); return H ? `${H}h ${M}m` : `${M}m ${s % 60}s`; };
 /* Style > Extra info: Hide drops these segments on Home and in game lists (every info line and caption row built from them);
    the Game Switcher keeps them */
-const infoOn = () => S.info !== false || S.switcher;
+const infoOn = () => S.switcher || (S.info !== false && !(S.inConsole && sty() === "list" && S.hints !== false));   /* a game list on List shows them only with Button hints: Hide (its band line sits on the bar) */
 const timeSeg = it => !infoOn() ? "" : [it.last, it.h ? dur(it.h) : ""].filter(Boolean).join(" - ");   /* ASCII hyphen inside the time segment */
 const achSeg = it => !infoOn() ? "" : it.ra ? `<i class="rai"></i>${it.ra[0]} of ${it.ra[1]}` : "";
 const nextSeg = it => !infoOn() ? "" : it.ra && it.ra[2] ? `<span class="next">Next: ${it.ra[2]}</span>` : "";
@@ -829,7 +830,7 @@ const hintsFor = it => S.inConsole ? (it && it.game ? hint("nav_button_menu", "O
   : it && it.game ? hint("nav_button_menu", "Options") + hint("nav_button_a", "Play")
   : hint("nav_button_a", "Open");
 /* UP from the top of a tab's content focuses the tab row (main menu only; a game list has a header, not tabs) */
-const toTabs = () => { if (oneTab()) return; S.tabFocus = true; update(); };   /* no tab row to focus with one tab */
+const toTabs = () => { if (oneTab() || S.title === false) return; S.tabFocus = true; update(); };   /* no tab row to focus with one tab */
 /* UP on the tab row wraps to the bottom of the content: Grid's last row in the same column (else the last item), List's last row,
    Home's last pin row (from Continue its first pin, from the large game or a tool square its last), Carousel/Backdrop stay */
 function tabsToBottom() {
@@ -1171,7 +1172,7 @@ function buildList() {
     ${S.inConsole ? headHTML() : tabsHTML()}
     <div class="lview ${games ? "games" : "full"}${S.inConsole ? "" : " tabbed"}"><div class="plist" id="plist">${items().map((r, i) =>
       `<div class="prow" data-i="${i}"><span>${r.n}</span></div>`).join("")}</div>${games ? "" : `<div class="lbg" id="lbg"></div>`}</div>
-    <div class="band${games && !S.info ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
+    <div class="band${games && !infoOn() ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
     <div class="hints" id="hints"></div>`;
   if (games) drawFade(document.getElementById("gfade"));
   screen.querySelectorAll(".prow").forEach(el => el.onclick = () => tapTile(+el.dataset.i));
@@ -1306,7 +1307,7 @@ syncHints();
 /* Style > Extra info: Show / Hide the info line (play time, achievements, Next) on Home and in game lists, and Home's stats strip; kept in localStorage */
 S.info = (() => { try { return localStorage.getItem("nx-info") !== "off"; } catch (e) { return true; } })();
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Extra info"><span class="lbl">Extra info</span>${[["on", "Show"], ["off", "Hide"]]
-  .map(([v, t]) => `<button data-info="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Home and game lists</span></div>`);
+  .map(([v, t]) => `<button data-info="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Home and game lists; a game list on List only with Button hints hidden</span></div>`);
 const syncInfo = () => {
   document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.info === "on") === S.info));
   document.getElementById("hs-statrow").hidden = !tabOn(CATS.indexOf(HOME_CAT)) || S.hs === "fresh" || !S.info;   /* no strip to pick a state for */
@@ -1317,6 +1318,20 @@ document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.onclic
   build(); update();
 });
 syncInfo();
+/* Style > Page title: Show / Hide the tab row (main menu) and the header (game lists); L1/R1 still switch tabs; kept in localStorage */
+S.title = (() => { try { return localStorage.getItem("nx-title") !== "off"; } catch (e) { return true; } })();
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Page title"><span class="lbl">Page title</span>${[["on", "Show"], ["off", "Hide"]]
+  .map(([v, t]) => `<button data-title="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Main menu and game lists</span></div>`);
+const syncTitle = () => {
+  screen.classList.toggle("notitle", !S.title);
+  document.querySelectorAll("#style-opts button[data-title]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.title === "on") === S.title));
+};
+document.querySelectorAll("#style-opts button[data-title]").forEach(b => b.onclick = () => {
+  S.title = b.dataset.title === "on"; syncTitle();
+  try { localStorage.setItem("nx-title", S.title ? "on" : "off"); } catch (e) {}
+  S.tabFocus = false; build(); update();
+});
+syncTitle();
 const showLayout = k => {   /* picking a layout or orientation shows the screen it applies to: that tab on the main menu, or the Mega Drive game list */
   if (k === "games") { if (!S.inConsole || S.switcher) return setScreen(true); }
   else { S.switcher = false; S.tabFocus = false; S.inConsole = false; S.sub = null; S.cat = (LAYOUTS.find(l => l[0] === k))[2]; }
