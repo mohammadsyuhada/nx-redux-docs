@@ -199,3 +199,15 @@
   object-fit: cover;
   background: #000;
 }
+
+/* The same, on the unfolded Z Fold 8 held sideways (its main screen). */
+.md-typeset .nx-phone--open {
+  width: 34rem;
+  max-width: 100%;
+}
+.md-typeset .nx-phone--open .nx-phone__screen {
+  left: 2.174%;
+  top: 2.842%;
+  width: 95.445%;
+  height: 94.317%;
+}
