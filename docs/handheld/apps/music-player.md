@@ -34,6 +34,10 @@ artist's songs while the other tracks sit at the top level.
 Supported formats: `mp3`, `flac`, `wav`, `ogg`, `opus`, `m4a`, `aac` and
 `mod` tracker modules.
 
+Titles, artists, albums and cover art come from the tags inside your files
+(MP3, M4A, FLAC, Ogg and Opus), so tagged music shows its real names and
+album art without being online. Untagged files show their file name.
+
 ### Managing files
 
 Press `MENU` on any track or folder in the Files view for its context menu:
@@ -88,14 +92,16 @@ The now-playing screen shows cover art, a spectrum visualizer, shuffle and
 repeat state, the format badge (`M4A`, `FLAC`…) and the **live sample-rate
 badge**.
 
-**Synced lyrics** are fetched automatically when online and scroll in time
-with the song.
+**Synced lyrics** scroll in time with the song. Lyrics embedded in the file
+are used first; otherwise they are fetched automatically when online.
 
 ??? info "More detail"
     - The sample-rate badge reads, for example, `96kHz` when playing natively
       on a capable output, or `44.1→48kHz` when resampling.
-    - Lyrics come from [LRCLIB](https://lrclib.net/) and are cached on the SD
-      card.
+    - Lyrics are looked up in this order: timed lyrics embedded in the file,
+      the on-SD cache, [LRCLIB](https://lrclib.net/) (cached on the SD card
+      once fetched), then plain embedded lyrics, which scroll evenly over the
+      song.
 
 ### Controls
 
