@@ -400,6 +400,11 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .tile.always .hinfo, .tile.always .info, .tile.always .gshade { opacity: 1; }
 .hinfo .t { font-size: 13px; line-height: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .hinfo .il { font-size: 11px; line-height: 14px; margin-top: 2px; }
+/* Style > Extra info: Hide takes the shading made for the info line with it (Continue's fade, a pin's fade, the game-list Grid shade);
+   the name left on the art keeps the captions' text shadow instead */
+#screen.noinfo :is(.hcfade, .gshade) { display: none; }
+#screen.noinfo .hinfo { background: none; }
+#screen.noinfo :is(.hctext .t, .hinfo .t, .info .t) { text-shadow: 0 1px 6px rgba(0,0,0,.9); }
 .hcard .ga.shot { object-position: center 40%; }
 /* Continue zooms its picture 15% (about the 40% framing line) so the black borders many games draw around the screen fall outside the card */
 .hcard .ga { transform: scale(1.15); transform-origin: center 40%; }
@@ -1290,6 +1295,7 @@ S.info = (() => { try { return localStorage.getItem("nx-info") !== "off"; } catc
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Extra info"><span class="lbl">Extra info</span>${[["on", "Show"], ["off", "Hide"]]
   .map(([v, t]) => `<button data-info="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Home and game lists</span></div>`);
 const syncInfo = () => {
+  screen.classList.toggle("noinfo", !S.info);
   document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.info === "on") === S.info));
   document.getElementById("hs-statrow").hidden = !tabOn(CATS.indexOf(HOME_CAT)) || S.hs === "fresh" || !S.info;   /* no strip to pick a state for */
 };
