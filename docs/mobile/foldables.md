@@ -83,11 +83,12 @@ section's page on the right. Moving through the sections previews each page.
 
 Below the [RetroAchievements](retroachievements.md) page, each level opens
 beside the one it came from. The page you came from stays on the left,
-dimmed, with the row that opened it highlighted. A game's achievements show
-beside the games list, and an achievement's details beside its list. The
+dimmed, with the row that opened it highlighted. An achievement's details
+show beside the game's achievements list, and a game's achievements beside
+the games list. The
 [Game Tracker](game-tracker.md) shows a game's sessions the same way.
 
-![A game's achievements beside the RetroAchievements games list](../assets/screenshots/mobile/ra-game-two-pane.webp)
+![An achievement's details beside the game's achievements list](../assets/screenshots/mobile/ra-game-two-pane.webp)
 
 ### In-game menu
 
