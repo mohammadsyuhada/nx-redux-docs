@@ -48,13 +48,25 @@ The Sega pad follows the game's [Controller Type](#controller-type-sega).
 
 <div class="grid" markdown>
 
-![The PlayStation pad with × ○ △ □](../assets/screenshots/mobile/pad-ps.webp)
+<figure class="nx-phone" markdown>
+![The PlayStation pad with × ○ △ □](../assets/screenshots/mobile/pad-ps.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
-![The Nintendo 64 pad with the C-button diamond and Z](../assets/landing/controls/pad-n64.webp)
+<figure class="nx-phone" markdown>
+![The Nintendo 64 pad with the C-button diamond and Z](../assets/landing/controls/pad-n64.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
-![The Dreamcast pad with coloured face buttons](../assets/landing/controls/pad-dc.webp)
+<figure class="nx-phone" markdown>
+![The Dreamcast pad with coloured face buttons](../assets/landing/controls/pad-dc.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
-![The Sega 6-button pad](../assets/landing/controls/pad-md6.webp)
+<figure class="nx-phone" markdown>
+![The Sega 6-button pad](../assets/landing/controls/pad-md6.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
 </div>
 
@@ -72,9 +84,15 @@ The landscape clusters always stay Charcoal.
 
 <div class="grid" markdown>
 
-![The portrait pad in Charcoal](../assets/screenshots/mobile/pad-charcoal.webp)
+<figure class="nx-phone" markdown>
+![The portrait pad in Charcoal](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
-![The portrait pad in Retro](../assets/screenshots/mobile/pad-retro.webp)
+<figure class="nx-phone" markdown>
+![The portrait pad in Retro](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
 </div>
 

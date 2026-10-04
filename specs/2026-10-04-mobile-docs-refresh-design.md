@@ -30,6 +30,8 @@ default, "colors and UI scale are not in the app yet").
 - Getting Started shows the Home screenshot inside the Z Fold 8 frame.
 - Portrait menu shots stop above the on-screen pad too (raw y 110–995), not
   only in-game shots. Only the pad shots and the framed Home shot keep the pad.
+- The Controls page's portrait pad shots are full screen inside the Z Fold
+  frame. The landscape pad shot stays unframed.
 
 ## Decisions
 
