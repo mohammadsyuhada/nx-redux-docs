@@ -36,6 +36,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .switch { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .switch button { font: inherit; font-size: 14px; color: var(--chrome-ink); background: transparent; border: 1px solid var(--rule); padding: 8px 16px; border-radius: 999px; cursor: pointer; }
 .switch[hidden] { display: none; }   /* the Stats strip row hides in Fresh install */
+.switch button:disabled { opacity: .4; cursor: default; }   /* Tabs: the last tab on can't be switched off */
 .switch button[aria-pressed="true"] { background: var(--chrome-ink); color: var(--ink-on-pill); border-color: var(--chrome-ink); }
 .switch button:focus-visible, .pad button:focus-visible { outline: 2px solid var(--chrome-ink); outline-offset: 2px; }
 .keys { color: var(--dim); font-size: 13px; text-align: center; margin: 8px 0 0; }
@@ -51,7 +52,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .device.tport { max-width: 420px; margin: 0 auto; width: 100%; box-sizing: border-box; }
 .device.tport .fit { aspect-ratio: 360 / 511; }
 .device.wland .fit { aspect-ratio: 840 / 336; }
-#screen { position: absolute; left: 0; top: 0; width: 960px; height: 432px; --tile-w: 140px; --tile-h: 154px; transform-origin: 0 0; background: var(--ground); color: var(--ink); overflow: hidden; font-family: var(--ui); }
+#screen { --hb: 44px; position: absolute; left: 0; top: 0; width: 960px; height: 432px; --tile-w: 140px; --tile-h: 154px; transform-origin: 0 0; background: var(--ground); color: var(--ink); overflow: hidden; font-family: var(--ui); }
 /* the mockup's own pad, outside the device: a tinted panel so it doesn't read as part of the screen */
 .pad { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; width: fit-content; max-width: 100%; box-sizing: border-box; margin: 14px auto 0; padding: 10px 14px; background: #121a26; border: 1px solid #24344a; border-radius: 16px; }
 .pad .padlabel { color: #7f9cc4; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-right: 6px; }
@@ -66,8 +67,20 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 
 /* hint bar (NxHintBar) */
 .hints { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; display: flex; align-items: center; justify-content: flex-start; padding: 0 24px; gap: 18px; font-size: 14px; background: rgba(0,0,0,.8); z-index: 3; }   /* NX_HINT_BAR_ALPHA = 0.8, art runs underneath */
-.hints.sw90 { background: rgba(0,0,0,.9); }   /* NX_SWITCHER_BAR_ALPHA: the resume frame is often bright */
+.hints.sw90 { background: rgba(0,0,0,.9); }
+.nohints .hints { display: none; }   /* Style > Button hints: Hide (every screen, the Game Switcher too) */
+#screen.nohints { --hb: 0px; }   /* and its room goes to the content: every body, band and fade below sits on --hb */   /* NX_SWITCHER_BAR_ALPHA: the resume frame is often bright */
 .hint { display: flex; align-items: center; gap: 7px; }
+/* the status group (NX Redux's GFX_blitHardwareGroup): Wi-Fi then battery, right-aligned on the gutter, centred in the 44 dp top row.
+   NX Redux's own glyphs (assets@4x: ASSET_WIFI, ASSET_BATTERY, ASSET_BATTERY_FILL) at 22 / 16 of their 1x size, as the hint glyphs
+   (BUTTON_SIZE 16 → 22): battery 17 × 10, fill 12 × 6 at 3, 2 (right-aligned to the charge, as the clip there), Wi-Fi 12, 6 apart (BUTTON_MARGIN) */
+.status { position: absolute; top: 0; right: 24px; height: 44px; display: flex; align-items: center; gap: 8.25px; z-index: 5; pointer-events: none; filter: drop-shadow(0 1px 3px rgba(0,0,0,.6)); }
+.portrait .status { right: 16px; }
+.status i { display: block; background: var(--ink); -webkit-mask: var(--m) center / 100% 100% no-repeat; mask: var(--m) center / 100% 100% no-repeat; }
+.status .wifi { width: 16.5px; height: 16.5px; }
+.status .bat { position: relative; width: 23.375px; height: 13.75px; }
+.status .bat i { position: absolute; inset: 0; }
+.status .bat i.fill { inset: auto; left: calc(4.125px + 16.5px * (1 - var(--pct))); top: 2.75px; width: calc(16.5px * var(--pct)); height: 8.25px; -webkit-mask-size: 16.5px 8.25px; mask-size: 16.5px 8.25px; -webkit-mask-position: right center; mask-position: right center; }
 .hint img { width: 22px; height: 22px; filter: url(#inkf); }   /* the white PNG glyphs in the --ink #D8D8D8: #inkf multiplies each channel by it */
 /* the pad icons carry 1/8 transparent margin: pull the first one back so its circle sits on the text edge above */
 .hints .hint:first-of-type img { margin-left: -2.75px; }
@@ -76,7 +89,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 
 
 /* ---------- the grid ---------- */
-.view { position: absolute; left: 0; right: 0; top: 44px; bottom: 44px; overflow: hidden; }
+.view { position: absolute; left: 0; right: 0; top: 44px; bottom: var(--hb); overflow: hidden; }
 /* two rows that slide sideways, like the reference: the selected column sits near the left, one column peeks in behind it */
 .grid { position: absolute; left: 0; top: var(--grid-top, 4px); display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, var(--tile-h)); grid-auto-columns: var(--tile-w); gap: 14px; transition: transform .26s cubic-bezier(.2,.8,.2,1); }
 /* columns behind the selection and past the clear window are shaded, as in the reference */
@@ -113,7 +126,9 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 
 
 /* category tabs across the top, like the reference: plain words, the current one white */
-.tabs { position: absolute; left: 0; right: 0; top: 0; height: 44px; display: flex; align-items: center; padding: 0 24px; }   /* no L1/R1 glyphs: the first word starts on the gutter */
+.tabs { position: absolute; left: 0; right: 0; top: 0; height: 44px; display: flex; align-items: center; padding: 0 24px; }
+.tabs.one { visibility: hidden; }
+#screen.notitle :is(.tabs, .head) { visibility: hidden; }   /* Style > Page title: Hide, on the main menu (the tab row) and game lists (the header); the row's room stays, the status group in it */   /* only one tab on: no tab row (its space stays, as a game list's header) */   /* no L1/R1 glyphs: the first word starts on the gutter */
 .tab-row { display: flex; gap: 20px; min-width: 0; overflow: hidden; }
 .tab { font-size: 16px; color: rgba(var(--ink-rgb),.38); white-space: nowrap; cursor: pointer; transition: color .18s; }
 .tab.on { color: var(--ink); }
@@ -154,7 +169,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .view, .lview, .band, .brow, .vrow { transition: opacity .18s; }   /* the content below the tab row, as one layer each: Grid, List and its band, the Carousel row with its caption */
 .tabfocus .view, .tabfocus .lview, .tabfocus .band, .tabfocus .brow, .tabfocus .vrow, .tabfocus .cvrow, .tabfocus .hpage { opacity: .4; }   /* tabs, hints and the page background stay lit */
 .bdshade ~ .head { color: rgba(var(--ink-rgb),.7); text-shadow: 0 1px 6px rgba(0,0,0,.95); }
-.brow { position: absolute; left: 0; right: 0; top: 44px; bottom: 44px; overflow: hidden; }
+.brow { position: absolute; left: 0; right: 0; top: 44px; bottom: var(--hb); overflow: hidden; }
 .btile { position: absolute; left: 50%; top: var(--b-top); width: var(--b-w); height: var(--b-h); margin-left: calc(var(--b-w) / -2); cursor: pointer; }
 .btile img { width: 100%; height: 100%; object-fit: contain; max-width: none; filter: drop-shadow(0 4px 8px rgba(0,0,0,.5)); -webkit-user-drag: none; }   /* black copy at 50%, 4 dp down, 8 dp blur */
 .btile .logo { inset: 0; opacity: 1; }
@@ -183,7 +198,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .bcap.cnt { transition: top .3s cubic-bezier(.2,.8,.2,1); }
 /* consoles and collections: "N games" takes the logo's / name's colour (2026-10-02, no accent); on a Fill tile that is the tile's text colour */
 /* ---------- Carousel tile row: game lists only (a main-menu Carousel tab draws the Backdrop row on black) ---------- */
-.car { position: absolute; left: 0; right: 0; top: 44px; bottom: 44px; overflow: hidden; }
+.car { position: absolute; left: 0; right: 0; top: 44px; bottom: var(--hb); overflow: hidden; }
 .ctile { position: absolute; left: 50%; top: var(--car-top); width: var(--car-w); height: var(--car-h); margin-left: calc(var(--car-w) / -2); transform-origin: 50% 50%; cursor: pointer; }   /* moved per frame from one continuous pos (8b.2) */
 .ctile .art-box { height: 100%; }
 .ctile .art-box::after { opacity: var(--shade, 0); transition: none; }
@@ -193,7 +208,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .portrait .ccap .t { font-size: 16px; line-height: 20px; }
 .car, .brow { touch-action: pan-y; user-select: none; }
 /* ---------- Vertical style: the Carousel / Backdrop row stood on end; the selection in the body's vertical centre ---------- */
-.vrow { position: absolute; left: 0; right: 0; top: 44px; bottom: 44px; overflow: hidden; touch-action: pan-x; user-select: none; }
+.vrow { position: absolute; left: 0; right: 0; top: 44px; bottom: var(--hb); overflow: hidden; touch-action: pan-x; user-select: none; }
 /* the slot is centred on (--v-x, --v-y); the stack moves on Y only (rowLayout, axis y) */
 /* main menu: a 20 dp fade at the body's top and bottom, so a cut-off neighbour doesn't end on a hard line (game lists: none, their peeks are short) */
 .vrow.edge { -webkit-mask: linear-gradient(180deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); mask: linear-gradient(180deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); }
@@ -211,16 +226,18 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .ctile img, .grid img { -webkit-user-drag: none; }
 /* ---------- List style: the original pill list, on plain black ---------- */
 /* landscape: rows end at the top of the band's text line (hint bar 44 + 2 dp + 18 dp line); portrait: at the band's top edge, fade included */
-.lview { position: absolute; left: 0; right: 0; top: 44px; bottom: 58px; overflow: hidden; }   /* room for the band: 18 dp line + 4 dp above and below at least, 12 of it in the hint bar */
-.portrait .lview { bottom: 58px; }
+.lview { position: absolute; left: 0; right: 0; top: 44px; bottom: calc(max(0px, var(--hb) - 12px) + 26px); overflow: hidden; }   /* room for the band: 18 dp line + 4 dp above and below at least, 12 of it in the hint bar */
+.portrait .lview { bottom: calc(max(0px, var(--hb) - 12px) + 26px); }
 .lview.tabbed { top: 56px; }   /* main menu: 12 dp between the tab row and the first row (a game list's header keeps 44) */
 .portrait .lview.tabbed { top: 54px; }
 /* the info band: one line on the hint bar, arrows packed on the left at the list inset, info right-aligned */
-.band { position: absolute; left: 0; right: 0; bottom: 32px; height: 26px;   /* fixed just above the hints, whatever the list length: 18 dp line, 4 dp each side, 12 dp of it inside the bar */
+.band { position: absolute; left: 0; right: 0; bottom: max(0px, var(--hb) - 12px); height: 26px;   /* fixed just above the hints, whatever the list length: 18 dp line, 4 dp each side, 12 dp of it inside the bar */
   box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; z-index: 4; pointer-events: none;
   background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) calc(100% - 12px), transparent calc(100% - 12px)); }
 /* the band reaches 12 dp into the hint bar's empty top (its hints are centred lower), so the list gets one more row;
    below the hint bar's edge it paints nothing, the bar's own 80% shows */   /* solid 80% under the 2 dp strip only, then linear to 0 at the top, 12 dp above the text */
+#screen.nohints .band { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) 100%); }   /* no hint bar to carry the 80% below the strip: the band holds it to the bottom edge */
+.band.plain, #screen.nohints .band.plain { background: none; }   /* Style > Extra info: Hide on a game list: no info line, so no shade for it (the arrows stay) */
 .portrait .band { padding: 0 16px; }   /* arrows start where the row text does (the pill's 24 / 16 dp inset) */
 .band .arrows { flex: none; width: 21px; height: 18px; margin-right: 12px; display: flex; gap: 1px; align-items: center; }   /* fixed room: two arrows + 1 dp, then 12 dp */
 .band .arrows svg { width: 10px; height: 10px; fill: var(--ink); opacity: .2; }
@@ -312,18 +329,33 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .sw { position: absolute; inset: 0; background-size: cover; background-position: center; }
 /* eased fades (set in JS): top 90% power 3.5 to 64 dp below the subtitle; bottom 90% power 2 from the bar to 64 dp above the info */
 .swtopfade { position: absolute; left: 0; right: 0; top: 0; height: 119px; pointer-events: none; }   /* subtitle bottom ≈ 55 + 64 */
-.swbotfade { position: absolute; left: 0; right: 0; bottom: 44px; height: 88px; pointer-events: none; }  /* info text top at 68 above the screen bottom: 24 + 64 */
+.swbotfade { position: absolute; left: 0; right: 0; bottom: var(--hb); height: 88px; pointer-events: none; }  /* info text top at 68 above the screen bottom: 24 + 64 */
 .swtop { position: absolute; left: 24px; right: 24px; top: 12px; display: grid; gap: 2px; }
 .swtop .t { font-size: 20px; line-height: 25px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .swtop .n { font-size: 13px; line-height: 16px; color: var(--dim); white-space: pre; }
-.swinfo { position: absolute; left: 24px; right: 24px; bottom: 50px; }
+.swinfo { position: absolute; left: 24px; right: 24px; bottom: calc(var(--hb) + 6px); }
 .swinfo .il { font-size: 14px; line-height: 18px; }
 .portrait .swtop, .portrait .swinfo { left: 16px; right: 16px; }
+/* the Game Switcher's title keeps clear of it, as NX Redux's menu bar title (the group's ~48 dp plus 2 × PADDING 10 at 22 / 16) */
+.swtop { right: calc(24px + 48px + 27.5px); } .portrait .swtop { right: calc(16px + 48px + 27.5px); }
 .switch .lbl { color: var(--dim); font-size: 13px; }
 /* Layouts: one style switch per main-menu tab plus one for game lists, labels in one column */
 .layouts { display: grid; gap: 8px; }
 .layouts .hd { color: var(--dim); font-size: 13px; }
 .layouts .switch .lbl { min-width: 84px; }
+/* the options: one panel at a time behind a strip of panel tabs; the panels share one grid cell, so the device below stays put */
+.opts { display: grid; gap: 16px; }
+.opt-tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--rule); overflow-x: auto; scrollbar-width: none; }
+.opt-tabs button { font: inherit; font-size: 15px; color: var(--dim); background: none; border: 0; border-bottom: 2px solid transparent; padding: 0 0 10px; margin-bottom: -1px; cursor: pointer; white-space: nowrap; transition: color .18s; }
+.opt-tabs button:hover { color: var(--chrome-ink); }
+.opt-tabs button[aria-pressed="true"] { color: var(--chrome-ink); border-bottom-color: var(--chrome-ink); }
+.opt-tabs button:focus-visible { outline: 2px solid var(--chrome-ink); outline-offset: 2px; }
+.opt-tabs button[hidden] { display: none; }
+.opt-panels { display: grid; }
+.opt-panel { grid-area: 1 / 1; display: grid; gap: 8px; align-content: start; }
+.opt-panel:not(.on) { visibility: hidden; }
+.opt-panel .switch > .lbl { min-width: 84px; }
+.opt-panel .hd { color: var(--dim); font-size: 13px; }
 /* the orientation pair, after a rule, only while the row is on Carousel (or Backdrop) */
 .layouts .osw { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-left: 8px; padding-left: 16px; border-left: 1px solid var(--rule); }
 .layouts .osw[hidden] { display: none; }
@@ -340,7 +372,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
    the pinned tools as icon squares, then rows of pinned games ---------- */
 .home { position: absolute; inset: 0; overflow: hidden; --gut: 24px; }
 .portrait .home { --gut: 16px; }
-.hpage { position: absolute; left: 0; right: 0; top: 0; padding: var(--h-pt, 52px) 0 52px; transition: transform .32s cubic-bezier(.2,.8,.2,1), opacity .18s; }   /* top: 44 tab row + 8, or 46 when the strip (and its 8 under it) leads; 44 hint bar + 8 */
+.hpage { position: absolute; left: 0; right: 0; top: 0; padding: var(--h-pt, 52px) 0 calc(var(--hb) + 8px); transition: transform .32s cubic-bezier(.2,.8,.2,1), opacity .18s; }   /* top: 44 tab row + 8, or 46 when the strip (and its 8 under it) leads; 44 hint bar + 8 */
 .hsec + .hsec { margin-top: var(--h-sgap); }
 /* the stats strip: 14 sp on an 18 dp line (portrait 13 / 17; was 12 / 16 and 11 / 14, the sizes of the old card's header), 2 dp between lines, gutter to gutter.
    The label and the words in the hint grey, the values in the ink, a dim middle dot; on line 2 only the title gives way ("…") */
@@ -420,7 +452,7 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 /* Home: the tab row's top band shows only while the page is scrolled, so it never greys a white-filled card at rest */
 .home ~ .tabfade { transition: opacity .32s cubic-bezier(.2,.8,.2,1); }
 /* an empty Game Switcher */
-.hempty { position: absolute; left: 0; right: 0; top: 0; bottom: 44px; display: grid; place-items: center; padding: 0 24px; text-align: center; font-size: 16px; color: var(--dim); }
+.hempty { position: absolute; left: 0; right: 0; top: 0; bottom: var(--hb); display: grid; place-items: center; padding: 0 24px; text-align: center; font-size: 16px; color: var(--dim); }
 
 /* ---------- notes ---------- */
 .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
@@ -440,36 +472,60 @@ body { margin: 0; padding: 0 0 4px; }
 </style>
 
 <div class="wrap">
-  <div class="layouts" id="layouts" role="group" aria-label="Layouts">
-    <span class="hd">Layouts (Home is the same dashboard in every layout)</span>
-  </div>
-  <div class="switch" role="group" aria-label="Screen">
-    <span class="lbl">Screen</span>
-    <button id="scr-main" aria-pressed="true">Main menu</button>
-    <button id="scr-games" aria-pressed="false">Game list (Mega Drive)</button>
-  </div>
-  <div class="switch" role="group" aria-label="Orientation">
-    <span class="lbl">Orientation</span>
-    <button id="or-land" aria-pressed="true">Landscape</button>
-    <button id="or-port" aria-pressed="false">Portrait</button>
-  </div>
-  <div class="switch" role="group" aria-label="Home state">
-    <span class="lbl">Home state</span>
-    <button id="hs-normal" aria-pressed="true">Normal</button>
-    <button id="hs-nora" aria-pressed="false">Not signed in to RA</button>
-    <button id="hs-noart" aria-pressed="false">No artwork</button>
-    <button id="hs-fresh" aria-pressed="false">Fresh install</button>
-  </div>
-  <div class="switch" role="group" aria-label="Stats" id="hs-statrow">
-    <span class="lbl">Stats strip</span>
-    <button id="hs-st-ok" aria-pressed="true">Played this month</button>
-    <button id="hs-st-none" aria-pressed="false">Nothing played this month</button>
-    <button id="hs-st-wait" aria-pressed="false">Not computed yet</button>
-  </div>
-  <div class="switch" role="group" aria-label="Accent" id="accent">
-    <span class="lbl">Accent</span>
-    <span id="acc-swatches" style="display:contents"></span>
-    <label class="acc-pick" title="Any colour"><input type="color" id="acc-input" value="#e4e4e7" aria-label="Custom accent colour"><span class="acc-hex" id="acc-hex">#E4E4E7</span></label>
+  <div class="opts">
+    <div class="opt-tabs" role="group" aria-label="Options">
+      <button data-p="view" aria-pressed="true">View</button>
+      <button data-p="tabs" aria-pressed="false">Tabs</button>
+      <button data-p="layouts" aria-pressed="false">Layouts</button>
+      <button data-p="home" aria-pressed="false">Home</button>
+      <button data-p="style" aria-pressed="false">Style</button>
+    </div>
+    <div class="opt-panels">
+      <div class="opt-panel on" data-p="view">
+        <div class="switch" role="group" aria-label="Screen">
+          <span class="lbl">Screen</span>
+          <button id="scr-main" aria-pressed="true">Main menu</button>
+          <button id="scr-games" aria-pressed="false">Game list (Mega Drive)</button>
+        </div>
+        <div class="switch" role="group" aria-label="Orientation">
+          <span class="lbl">Orientation</span>
+          <button id="or-land" aria-pressed="true">Landscape</button>
+          <button id="or-port" aria-pressed="false">Portrait</button>
+        </div>
+      </div>
+      <div class="opt-panel" data-p="tabs">
+        <div class="switch" role="group" aria-label="Tabs" id="tabs-on">
+          <span class="lbl">Show</span>
+        </div>
+        <span class="hd">The tab row hides when only one tab is on</span>
+      </div>
+      <div class="opt-panel" data-p="layouts">
+        <div class="layouts" id="layouts" role="group" aria-label="Layouts"></div>
+        <span class="hd">Home is the same dashboard in every layout</span>
+      </div>
+      <div class="opt-panel" data-p="home">
+        <div class="switch" role="group" aria-label="Home state">
+          <span class="lbl">Home state</span>
+          <button id="hs-normal" aria-pressed="true">Normal</button>
+          <button id="hs-nora" aria-pressed="false">Not signed in to RA</button>
+          <button id="hs-noart" aria-pressed="false">No artwork</button>
+          <button id="hs-fresh" aria-pressed="false">Fresh install</button>
+        </div>
+        <div class="switch" role="group" aria-label="Stats" id="hs-statrow">
+          <span class="lbl">Stats strip</span>
+          <button id="hs-st-ok" aria-pressed="true">Played this month</button>
+          <button id="hs-st-none" aria-pressed="false">Nothing played this month</button>
+          <button id="hs-st-wait" aria-pressed="false">Not computed yet</button>
+        </div>
+      </div>
+      <div class="opt-panel" data-p="style" id="style-opts">
+        <div class="switch" role="group" aria-label="Accent" id="accent">
+          <span class="lbl">Accent</span>
+          <span id="acc-swatches" style="display:contents"></span>
+          <label class="acc-pick" title="Any colour"><input type="color" id="acc-input" value="#e4e4e7" aria-label="Custom accent colour"><span class="acc-hex" id="acc-hex">#E4E4E7</span></label>
+        </div>
+      </div>
+    </div>
   </div>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="inkf" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.8471 0 0 0 0 0 0.8471 0 0 0 0 0 0.8471 0 0 0 0 0 1 0"/></filter></svg>
 
@@ -483,6 +539,9 @@ body { margin: 0; padding: 0 0 4px; }
 </div>
 
 <script>
+/* the status group's glyphs, cut from NX Redux's assets@4x.png (white on clear, used as masks in the ink) */
+const STATUS_ICON = { wifi: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAADI0lEQVRoBe2XO2gUURSGd6MiSkIUjA+CkMIUVr4KU/koJRFLBRNBxEelQgRLxyIiaK1gGrEWq2hrCIIK2mghPgolxhcWvkgkEtfvDzNhsnN35s7OzLrRe+BjZu8997/nHOaemS2VnLkKuAq4CrgK/M8VKBeVfKVSWYb2cl9/slwuTxWxV+YECHQjge2AbbABuqETqrUrjE3AS3gFj2GMxJ5xbZwRcAvshmH4CFlNGtdAmi2FZYJ4O5yFcSjK3iKsPdpzSwSxNrgAX6FRpr2GoDVTIgjshTfwt+wdGx+C6vM0l5dxggWr8LgOvXOedjffcdMhfQ2fIeg86kgd0AU66G2QxkZwPsyBl2a8EfxO0LNoY1M43YTjoG5kZfKFE3ALpGFjikndrrbhMADTFmpP8TkCmQ+bNHwtaSaZYus3ZsDEIPxOUHjCfC8YHz2jsOWgNKEPkhJRjIOBbLjv6rmsFZie7ZOwlefwNuillKtJE/Ssb4HToD1NphjNZ4jM1IOr7REDers21NizC+5XB8Pvc+FAIhXHwcMhcLrB/VEqMx1eZLpnnb57emA7qNOsB3UfmbrROOgT4iE8QHOSa6yhuRSHYRjwHc+zzvPva1+UBFyCSILhVczrs2IfqJv8BFuTr9ZobfgxDsvP3jOvs3EZvMhkvQO+aD/XF5DVniNwEGKLVW+skXVs1A33IG+TZrFnjQ0OwLe8Iw/pSXt/pGp5DCB8BpLeE6FYKjP8eO+je1ub1+eTYl+c5BCa15dh3HP6hfk7oF4+Bh/oGDNcS0S+iMs60KdAH+yBFWAy7WHu8ybvNGMEYnpP/GD8ItQKKLIFvq2+lukTPWjhkXW5DLCxWmxgd7lZU68wa9fCKATm1auVah27KYkrsCTVQoOzNOAqeIbpf38o7lDWnT3VXM3iXdDpi0xwHeVQf/J/N+eFwDfDCJjapsY0t6kpoyewY2DzZ+gXfqfySiL2QyrlJivxtznUevdYt9yUMWRzp7Km9wTD86zYPp8thdm3blwSzR18kDz1NiWxMIKvkcTCCj6UhN7YXvDbXV0FXAVcBVwFXAXyrsAfPvyOx/WCje8AAAAASUVORK5CYII=", bat: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAoCAYAAABHJVyTAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAARKADAAQAAAABAAAAKAAAAACcG1nzAAABc0lEQVRoBe2aP0oDQRjFnUSwEPHPGSwVRBRsrfZAXkBBsPEWabyCTSQpBK0sbA14ALFRMGBcfxOE3X2ZYD/zBh7Mm29SvF++zZLdCSuJUdf1LsuXqEJbiS25LP0Q5BUN0FUI4StoMmDsszZC21rL3I/JV6WADCmcZh5+WbyLFJAPdq8v+0Tm65NOPi6XTdQeb50NmRmChnZY5t89ydgXX5rtK5DSACzkNRBBYiAGIgTEukMMRAiInXcI998DdEvtRerF2VVAHJL6Hq0Vlz4ROHbItWE0ZCKQo8Z6FoFsGENDYP6j2ljPDER6wEAMRAiIdYcYiBAQ6w5JAIkPlT3+CMQOeTSNhkAEcoamzVLZsx6v755AcILu0GfZOCQ9jwJ2UHuU9l6m9l1GmsJADEQIiHWHGIgQEOsO+QfITOql2ZkPzHS/8knqknno7inKDVIdsgeCMSrt0N2IzNVCh/Df5pnCMbpB7yjnEY9lxnNl56gi+/QX5y6IWgKVNwIAAAAASUVORK5CYII=", fill: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAYCAYAAAC8/X7cAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAGAAAAAAqhgjJAAAAvElEQVRYCe1XMQ6DMAwk7Ej9RRkZ+QX/7FBYOzDDF9hZkdr0AeFuQ2K8IRjZ0imWJSfnuywuCkRKqQYGIAJXD3LsgSe5ByQ1zgl4sGAovuDacoABSWeI+JHqmwNEVKpj1VAeOUAyRPhEtTxVjBV8gNyGuQPugKiAfyFRQLndHZAlFC9wB0QB5XZ3QJZQvOAWDvxFEXK2/+jAmJOB+PaHGxm3+xmwttRv4NyUIYQFSQv0APfjqwc5voAG3NcdthPVnS3R6cMAAAAASUVORK5CYII=" };
+const statusHTML = () => `<div class="status" aria-hidden="true"><i class="wifi" style="--m:url(${STATUS_ICON.wifi})"></i><span class="bat"><i style="--m:url(${STATUS_ICON.bat})"></i><i class="fill" style="--m:url(${STATUS_ICON.fill});--pct:.8"></i></span></div>`;   /* full signal, 80% */
 const IMG = {"nav_button_a": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMA7x9vP79/nw/fT18vr4/Puk7BFgAAAsxJREFUeNrtWsmW4yAMDGYRi+3w/187OUy6k05iS6gIF+rq5yeBShvS5TIxMTExMTEx0YTobCD/AwrWxa8JXwOZ+gaGwtpfuqNUD5DI9ZS+hEPp/3UISy/xW2ViW4aK76JC3E0VwexQr8ipipEy7vhUm0CgS1iutRFXCBNKVaDo5YeqQtDKp6oEDZav1KBUAMpg+QoNcgWhMSStBqWAaaoTIkz+TYOWmOgrEP7rAUgdkNYKhpQGV7QC16EGEBsB6QFNnkC1AwRJYaldsIy9AMEVcC8g3X9I4CvguoC9/2DBjsB1gR9aR64jYLMwyUmToRR86IMdlIZGSEEBDVk2cFIKSmjogD7wFFkj0A98kzmZxOEUJm2XyTUcrBK5U3BZZDQ8r0uKjIL7LqNhQXHwTkFjZDQ8Z+EmomD5PROPhhvICdyvupuIhudukEQUfEyySRw/273QPhImiGiIUSA+HjqJaAhRgJ4Td5bQEKKAe/YYEQ0RCrzceRTQEKGA/cs6K6AhQoGXA0toCFCAXk3u+DQEREKnqaa8XoGkiqNeXxPbo78t136KdHzYZZ/S8DwdZ90Rzi4wq0sypyvqV21RmpTpXF2W27PfrbosD7IoKIuGnMbECRLxO3qRtjU7bE7d59KVk5R5DwTErAU/PcAkbXueGe3Iu4+MFoU5ODDn7cjR/UbtE81nG9Bx+1a4/zc/07njUOHPaMh+qRRN6vnYuPLxwwLxyMD3kC8Z23R5rRaN0ne8/F02s0to+Uk4uctoBcTT032kAfBGSA2j0xU5um0aHueBBAAPD5sXSUDDK8USBw2WD7GCcpFHvUaiXmUqg+XfNFBEpASQf4uJ7ctsqJ1CGkD/P+1ay0IjdL82ipPjjl50XmVLrT1WnB27VPW9tpsdi41dl6ujPfHJq+2+5L4U+lCqGCrL5TtYc/BPjPA+5PUyMTExMTExMdGCf17DmYB1iKZgAAAAAElFTkSuQmCC", "nav_button_b": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMAL08f7z8Pn79/31+vz49vgbq1WwAAAotJREFUeNrtmtu2WyEIRaNuxcu+8P9f24zRNu3pONkqLGMfnM9JWFFEEB6PxWKxWCwWCxHBX4niC0qXDx8zbhJt/A0bJTPeuqfMN2TyI627dGv9l4bkRpnfuZHdTTU/REI4N+5iO6GnwmbuJlvc3ycWQaBFcAcLOSCeUFhB0dtPrCJp7RMrocn2lQoKAyiT7SsUWAYhDElmQwnYRHlCgNl/KpDExMhA4scDkDogGQbT6wYHWsAxdQO6NwF5AkQngXgAHZeC4yG4uQvQsQSVBfi2YPI2HbAlSP0CfqqIoIOwCQVUpW+YW1ixeBbigoovE2IH7gWErN4DzxoBlQ30iGtAc40lRCLy+4NfEo795V+XNjFhiYC/8j6vWb6mTOSN0r3pH9TzkiIVwE0CCiAVUQmoe+EuFXA0CdgB2fgbJ7RNTlg/Blkm4M9jyHX/cqQ/hapA1HAOtQI8TxYQJwvQ3iRqATRbQMizfaDMFlALJIMiYSTX5oZxXCg2oFBM0ssoNm0i/f/XsR0rwI5LySIoJZMmpa+UX5uUytJyPnBpufY6idrCRFmaGXVppitO7xeg7YFAVZ4nQHmueaAokMaB/ImGIE80tZ9573+1oqb1nc5JBARbr6maXyq7OvXt7K328c2C7pZBHGG/p20z5LW6q5V+4u2ffT27jLafOzt3Fi2gu3t6ztwA/CZkQevUIFu3ouaxnegA4OaheJAE1LxSDHHQZPuQXVAO8qjHSNSjTGWy/acCRUTKAPvPmCgfZkPNFNIE9/+nXJMMNELna0P35XiiB51N31DriBFn35yqxlHTzb7JG4cOV4erciaPa/iQuyv0JlXZqLjHZzA2xS8eEWOy5rFYLBaLxWIh4Qd8yYoGtI9/1QAAAABJRU5ErkJggg==", "nav_button_menu": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMAL1/f7w8fn79/Tz+vz49vcX+WcQAAAghJREFUeNrtmllywzAIhq3FwpK8cP/TJg+dzrTTpEKAyQPfAcIfswgklsVxHMdxHGeKtV8Vtm+gXn29zXiokPEPMtSgb71Dwjck6JrWS31r/UtDLVrmdxxkL6bmVSSsZ0YS+RTNipaQTGpyfx9wChD6COXASQ6RSIjIIPLtV2RRufYBmYCxfaaCiAJEY/sMBQ2FmCxJIUsJyFN9wipm/6lgpiZuKMh2ewFiF6SAwlDD4JAWcJg6gOwEyQyYygRABQiHQkEViu0HIHyCFx+AEkS8T1C1BIwmQtYSkHmnMF/A4LkMegKA4wEJAUM+6KgnADvnGJAQUO9uRGYaE1TFoBOh9iVRV0C0aEVoUbjrCthtk2AkDZKugMTIQolCNPArLsAFuABzAeaV0FwA6AqAzz+Om66A9vktmXlTat+Wmw8m5qOZ+XBqP56bX1CYX9G88gFfwOg9nfk1ndZ4tg/rD2bngGo5pjzbqNxWk57ST3n7J+3NTnxITsSXO/HGiPx6elo6QN4JaeLpNEg+3U49HjfDABAeEaYXSYSmJMYSBxjbF/ECc5GHfXXMXmWKxvafChgVKQnYf9bE+WU2qZ1CMAj/X+PazEKj6H7tSj4cT+lF50BbatVYce7Dreqmtd3ch6JRdbl6vf7JyeNSX3IvEV60KhliWe4htLr9iIhtqy0sjuM4juM4MzwAa2iEWm2vIEgAAAAASUVORK5CYII=", "nav_button_select": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMAr79/b88/798PLx+Pn09ficnd1AAAAa1JREFUeNrtmOtygyAQRjcoLhdNef+nrVQJ0khaXGYy7XznRyabFTkqCxEiAAAAAAAAAACghh2VCiu3iWi6hZ0tip+JMkfkZ7UynOZa8JzaaiIdQhnpfGCZo2n/zu4513T9ua0hyudJUT6yzNmHN1siU+SaGB4teTx2kqIzgZhbcrgQjXzMNRHd1f3YSdllLYo9LtMUPfgs/2tiM0ftAjFa773NvwoE/EWB/Q4akUB8BLO9LuDH0YsEtkGo1GjLgRbruTYIn3MCgUc5sS9LTb8oQ91RgFyqYW1b5oF+AmTn/bRDyzzQUSByV7Vr/jFyrocAua15u8DyNRPKBfxVAZbOhIdxYFqn4mGrYplAXsnLQZhqvRbdDqFIIK/GbM9qvRa5HDnxVLzVtqPv6/qriD6S9z2fyVwQSCv5th6U6/qraB038SnwfDhT838BAAAAoLZT0Ep6q5CSdwraYd/h+nUQoOX3YAgiBrGAkQkYsUAQAgEIQAACEIAABCAAAQhAAAIQgMDfF3j76/nbNygsS/rnDttUTvAQjOuyTTdf7X/usk0HAAAAAAAAAOCf8wl6u9Bf6+VJKQAAAABJRU5ErkJggg==", "nav_button_x": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMAz38fL79f758P3z9Pj69v92rBzwAAAwZJREFUeNrtWklipDAMxAveDf7/ayfJZKabZrFkyXBxXTtBAqvk0jJNAwMDAwMDAwNN8HGVbv4PJ9fobzOupbPlANZJ3d96dKFcILjY07qSl9Z/fZCql/mlALGoR813ccFnW1CwmZUVKRQ0QuJ7fVea4Jg+ghKlEYIlEkwhwNDty0KCpNp3hQj3sH2iB6YwwDxsn+BBKkxoTEnacjlgm3SCZ7P/5UFLTpwLI+bbExA5IenCDGwYCG4HxKMHgD4ETgY0McGVDkBcCqp0gXr2AyA+garlVX/IEeFr2VtxUOBH5x0Z+kn41/oRSoSr1xD+5KL6vXD8lQeWfgu7U6lgIAGUyCH4+qt1+8P6+oUchhbkwNbP9ydTzyBC1dVbtbpAdVykcuBd27ziTXiojpJkIWLV/sZ4z/LKkoVJ7Vrdve3xV6kHUasSmT8ZmzA6rq5LDCqlm21c1i8RwyFF3jg/5Tyd5oa2KIS0gkx7IbWwqPHjQgNUyNRpAOoG2YOLVYFkXKCy8ICMQAJCedha6kALKS4HPi82sIpjc2BDRggB2R1wbTKWzYFtGHpxtwPhgwY+3OvAPhVB+ylMfYmIVFKITAhywDT31OoOQOI5H/9rZinPJO4hBicHANdxQhFQW5Qgg5QmGkPA79DfeFAloyaL0v0bw0U5SJTWaBD3nSwBJyNElkswAd2JTCUWJhFKQHn83EwtzaDFqTn7MOQGAaw8j6evRi7PEyQEPsP9RQ5DHxzYehDsCf8vPWR6i+Y6o7qzlPc3HbhCPoFam+7b0HJS9FRyMbhTiZrUw7FA7fMPC9Ajg7mHfczYpku3GjVKz/z2M25mF7jtB+TkLnE7gJ6e5icPgP8QQsPoVHOObpuGx+nBAGAeHjYvkjANrwhLHO5h+yynQFzkIa+RkFeZzMP2vzwgZKTAYB/TgKr3U+8lg5vYEFsWGln3az36cszci84at9TaY8U5gqXq3Gu7OYKisetytV8rnBRr9yV3ZdyJVLHOqOke6CTnTUTMs0x6GhgYGBgYGBhowR+eqJUikS2E0AAAAABJRU5ErkJggg==", "nav_button_y": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAM1BMVEVHcEz////////////////////////////////////////////////////////////////P0YphAAAAEHRSTlMAX88fL79/n+8PT98/r49vNcBHugAAArlJREFUeNrtWtuWpCAMFBECiMr/f+3OmZ3d1j7dkpCkmQfqtS8pJZcKyTQNDAwMDAwMDDQh5sOD+w/wR44fM754COUFAvhF33qGtdxghaxp3fpb6z8cvNUyvxUkNtvVvAqFuIdCQthFoyKthYw1yT0+lCaA0Euwc2nELOIJpjBg+PZ9YcFz7UNhAjrbZzIwRQCms30Gg1SE0JiSliBFIDTphChm/4tBS050RRDu4wmInZCWIgyqG8zSBOauB0A+BMkIaIoEKAogFAVbVGD7vgDCK7C1vBpfxsgca9nbSoTAt857Zeg74d/rR2wg3D3GHN8Uqp+CE+8YBH4VhrdSwWAcKLFd8PGt4/rB8fiE7YYBReDK8/zP3DPIWHV16lY3rI7L7DJwKmoPf5sjtox6thA5q6t/FeOc5SuZACNMCDXlr7VXnDBO1KpEzu87PcVWrMqIui6p9wLz9duGJGOMhBQ5x9y+04pY3Qu39rKGKaKbjBo3zY1cPQxwt0GmtZFcuVH41puxOl6KwHO7h24kpQg8iVy8jBYjcElIEd/HyBE4JyRCHyVI4JEOKCpakkDh/Ob3EnC6BNzvJwC6BECiHHMI1Mtx0iWQ+JKMR2CZJOOQ8ROZMKATwMhyr0kA05hkTQKowW7QI4C7IAA9Arj2POkRQA4OghYB5BUN/gyoBLD3dFaLAPqmkjSpx2PD2pcfFpBHBk7DPmVso3JbTRql7/L2d9rMbpW2vxInd0maAHl6uvc8APlDWBtGp4vk6LZpeJw6OoDw8LB5kURoeMVY4oDO9kVOgbnIw14jYa8ymc72vxgwMtIqYJ90B3dzk9djnwomMeSWhUbR/dpILo679KLzQltq1Vhxzmip6rS2mzPKG1WXq+NRicn5UF9ytwbeSJUAxk6fwZK8u3iEcz4t08DAwMDAwMBAC/4Ao+yjwpSXlhcAAAAASUVORK5CYII=", "nav_dpad_horizontal": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAdVBMVEVHcEz////////////////////////////////////mMkb////////nMUXmMkbnMkX////////nMUXmMUL////oMEXnMUbnMkb////nMkb3vsXoPlH98vPrWGj5y9D85eftZXTqS130pa7ucn/62Nz2srnzmKLFFSilAAAAGHRSTlMAvy9PD48fP6/fj89/v6+fn+8/H29v338UXieMAAACMklEQVR42u3aeX+CIBgHcK8EU7sPUDNdx/t/idtaOl05BH1gx/P7L/goXylBA8vCYDAYDAaDkY2/obbNnsS26caHbz9i3yaCbn/CBJnAtk+YMAQUsBADFqCAQAwIQAGsR/4VIIgIiQJzgMB7L/MCYwD3o9A1BaBVKTUDWHpVqbc0AiAdA6QuwKRritAECLxmefNO0AQgnbOUJkD/mr8KcNoVjnYAbVdQ/bchbfSBQ//rdIwABCAACLDezuKYP00fwPMj43i2Xfdrf8+7ow64Zd+n/SmHA/CpuP0VhwTwlRAwhwXMhYAdLGAnBHBYAEfArwOk1yRPDmqAw9uh13QY4JTdzlmqAMrbp+w0AJAm93MmKoD64FQVcL/85kllAHVBqxP6A+rLHwxodUJvQHlm4wHYuZQGXNiYAHaRBmTjAjJpABsXwKQBybiARP5HmI0JyOR/hPxwHA9wPKgMROnLWICXVHEoLqpOyFUAeXX5hfpkVHVCoQIoHi9fYTou8qz5DcpNx0eW5QU+ESFAFhDDAuJh76bDAeK30zUsYP3zX8+/fz8eCJhbvbKawQBmK2tw8G86BCAAAc1FK7dePHVcA4tWxteO3XaFi2vH2gFfNu752gF2u8LWfxtumuUbA+PAsvEl+EsTI2H4WRyaGYrr7ZuRqbnAedg9oRkQfmxmC83NhiF5S4jPAzoBtrh9GxQwEQNgdzb7YgDw9nLTW7uFe6sXFngI7W6eEguDwWAwGAxGNq9AEe+b7LkJXwAAAABJRU5ErkJggg=="};
 const G = (t, c1, c2, font, size) => ({ t, c1, c2, font, size });
 const art = g => `<div class="art" style="background:linear-gradient(150deg,${g.c1},${g.c2})"><span style="font-family:'${g.font}',var(--ui);font-size:${g.size}px">${g.t}</span></div>`;
@@ -567,6 +626,13 @@ const CATS = [
 const MD = [{"n": "Outrun", "g": "md-outrun"}, {"n": "Outrun 2019", "g": "md-outrun-2019"}, {"n": "Sonic & Knuckles", "g": "md-sonic-knuckles"}, {"n": "Sonic & Knuckles and Sonic I", "g": "md-sonic-knuckles-and-sonic-i"}, {"n": "Sonic & Knuckles and Sonic II", "g": "md-sonic-knuckles-and-sonic-ii"}, {"n": "Sonic & Knuckles and Sonic III", "g": "md-sonic-knuckles-and-sonic-iii"}, {"n": "Sonic 3D Blast", "g": "md-sonic-3d-blast"}, {"n": "Sonic Spinball", "g": "md-sonic-spinball"}, {"n": "Sonic The Hedgehog I", "g": "md-sonic-the-hedgehog-i"}, {"n": "Sonic The Hedgehog II", "g": "md-sonic-the-hedgehog-ii"}, {"n": "Sonic The Hedgehog III", "g": "md-sonic-the-hedgehog-iii"}, {"n": "Streets of Rage", "g": "md-streets-of-rage"}, {"n": "Streets of Rage 2", "g": "md-streets-of-rage-2"}, {"n": "Streets of Rage 3", "g": "md-streets-of-rage-3"}, {"n": "Gunstar Heroes", "g": "md-gunstar-heroes", noArt: true, file: "Gunstar Heroes (USA).md"}, {"n": "Ristar", "g": "md-ristar", noArt: true, file: "Ristar (USA, Europe).md"}, {"n": "Vectorman", "g": "md-vectorman", noArt: true, file: "Vectorman (USA, Europe).md"}].map(m => ({ ...m, sys: "Mega Drive", h: HOURS[m.g], game: true, ...(META[m.g] || {}) }));
 
 CONSOLES[0].count = MD.length;   /* matches what opening it lists */
+/* Tabs (page control): any tab, Home too, can be switched off; at least one stays on. Kept in localStorage ("nx-tabs", the names of the tabs off) */
+const TAB_OFF = new Set();
+try { JSON.parse(localStorage.getItem("nx-tabs") || "[]").forEach(n => { const i = CATS.findIndex(c => c.n === n); if (i >= 0) TAB_OFF.add(i); }); } catch (e) {}
+if (TAB_OFF.size >= CATS.length) TAB_OFF.clear();
+const tabOn = i => !TAB_OFF.has(i), oneTab = () => TAB_OFF.size === CATS.length - 1;
+/* a tab that is off hands over to the next one on (Home off: the menu opens on Consoles) */
+const onCat = c => { for (let j = 0; j < CATS.length; j++) if (tabOn((c + j) % CATS.length)) return (c + j) % CATS.length; return c; };
 const S = { switcher: false, sw: 0, li: 0, cat: 0, sel: [0, 0, 0, 0, 0], game: 0, inConsole: false, art: "shot", pos: 0, row: null, raf: 0, snap: false, settleTo: null, dragging: false, justDragged: false, gridTx: 0, gridMin: 0, gridMax: 0 };
 const screen = document.getElementById("screen");
 const icon = n => `<img src="${IMG[n]}" alt="">`;
@@ -582,9 +648,10 @@ const DIM = {
 };
 /* the portrait family (small type, 16 dp gutter; Grid 3 columns, or 2 × 3 rows on the tall portrait): the Fold cover and the Flip's tall portrait */
 const PORT = o => o === "port" || o === "tport";
+const HB = () => S.hints === false ? 0 : 44;   /* the hint bar's height: 0 with Button hints: Hide */
 /* Grid tile (8.1): height = min(cap, (body - 2·4 ring room - gap) / 2); landscape width keeps the 140 × 154 shape, portrait fills 3 columns */
-Object.entries(DIM).forEach(([o, d]) => {
-  const body = d.h - 88, cap = PORT(o) ? 128 : 154;
+const sizeDims = () => Object.entries(DIM).forEach(([o, d]) => {   /* again when the hint bar shows or hides */
+  const body = d.h - 44 - HB(), cap = PORT(o) ? 128 : 154;
   d.tile = Math.min(cap, (body - 2 * 4 - 14) / 2);
   d.tileW = PORT(o) ? (d.w - 2 * 16 - 2 * 14) / 3 : 140 * d.tile / 154;
   /* Grid rows: 2 on phones; on a tablet-class screen (shortest side 600 dp or more) as many rows of the same tile as fit the body
@@ -596,6 +663,7 @@ Object.entries(DIM).forEach(([o, d]) => {
   /* the selected column sits in the centre, a third of a tile peeking in on each side: w = tile + 2 × (14 + tile / 3) */
   if (tall) { d.rows = 3; d.tile = Math.min(cap * .55 / .6, (body - 2 * 4 - 2 * 14) / 3); d.tileW = (d.w - 2 * 14) * .55; d.centred = true; }   /* 2026-10-02: ~183 × 117, neighbours show ~41% */
 });
+sizeDims();
 const items = () => S.inConsole ? (S.sub ? S.sub.items : MD) : CATS[S.cat].items;
 /* the game list's title names the tab it came from: "Consoles | Mega Drive", or "Collections | <name>" for a collection list */
 const headHTML = () => `<div class="head"><span class="ttl">${S.sub ? `Collections | ${S.sub.name}` : "Consoles | Mega Drive"}</span></div>`;
@@ -627,9 +695,12 @@ const scaleK = () => fit.clientWidth / DIM[S.orient].w;
 
 /* ---------- the info line (ui/GameInfo.kt): "Today - 1m 31s · [trophy] 0 of 35 · Next: …" ---------- */
 const dur = h => { const s = Math.round(+h * 3600), H = Math.floor(s / 3600), M = Math.floor(s % 3600 / 60); return H ? `${H}h ${M}m` : `${M}m ${s % 60}s`; };
-const timeSeg = it => [it.last, it.h ? dur(it.h) : ""].filter(Boolean).join(" - ");   /* ASCII hyphen inside the time segment */
-const achSeg = it => it.ra ? `<i class="rai"></i>${it.ra[0]} of ${it.ra[1]}` : "";
-const nextSeg = it => it.ra && it.ra[2] ? `<span class="next">Next: ${it.ra[2]}</span>` : "";
+/* Style > Extra info: Hide drops these segments on Home and in game lists (every info line and caption row built from them);
+   the Game Switcher keeps them */
+const infoOn = () => S.switcher || (S.info !== false && !(S.inConsole && sty() === "list" && S.hints !== false));   /* a game list on List shows them only with Button hints: Hide (its band line sits on the bar) */
+const timeSeg = it => !infoOn() ? "" : [it.last, it.h ? dur(it.h) : ""].filter(Boolean).join(" - ");   /* ASCII hyphen inside the time segment */
+const achSeg = it => !infoOn() ? "" : it.ra ? `<i class="rai"></i>${it.ra[0]} of ${it.ra[1]}` : "";
+const nextSeg = it => !infoOn() ? "" : it.ra && it.ra[2] ? `<span class="next">Next: ${it.ra[2]}</span>` : "";
 /* segments with no data drop out with their dot; next = false gives the Grid's count-only line */
 /* a caption row that ends in Next (GameInfoBlock.kt CaptionInfoRows): "head · Next: …" on one line; splitNext() splits it when it doesn't fit */
 const nxRow = (head, it) => { const nx = nextSeg(it);
@@ -759,7 +830,7 @@ const hintsFor = it => S.inConsole ? (it && it.game ? hint("nav_button_menu", "O
   : it && it.game ? hint("nav_button_menu", "Options") + hint("nav_button_a", "Play")
   : hint("nav_button_a", "Open");
 /* UP from the top of a tab's content focuses the tab row (main menu only; a game list has a header, not tabs) */
-const toTabs = () => { S.tabFocus = true; update(); };
+const toTabs = () => { if (oneTab() || S.title === false) return; S.tabFocus = true; update(); };   /* no tab row to focus with one tab */
 /* UP on the tab row wraps to the bottom of the content: Grid's last row in the same column (else the last item), List's last row,
    Home's last pin row (from Continue its first pin, from the large game or a tool square its last), Carousel/Backdrop stay */
 function tabsToBottom() {
@@ -780,13 +851,14 @@ function pressTabs(k) {
   if (k === "down" || k === "A" || k === "B") { S.tabFocus = false; return update(); }
   if (k === "up") { S.tabFocus = false; tabsToBottom(); return update(); }
 }
-const switchTab = dir => { S.cat = (S.cat + (dir > 0 ? 1 : CATS.length - 1)) % CATS.length; build(); update(); };
+const switchTab = dir => { let c = S.cat; do c = (c + (dir > 0 ? 1 : CATS.length - 1)) % CATS.length; while (!tabOn(c)); S.cat = c; build(); update(); };   /* skips the tabs that are off */
 /* Grid/Carousel/Backdrop: past an end, only a fresh press switches tab; a held key stops at the edge; game lists stop */
 const edgeSwitch = (dir, repeat) => { if (!S.inConsole && !repeat) switchTab(dir); };
 const tapTile = i => { if (S.justDragged) return; if (selKey() === i) press("A"); else { setSel(i); update(); } };
 
 function buildStyle() {
   S.row = null;
+  if (!S.inConsole) S.cat = onCat(S.cat);   /* the tab asked for is off (Home off, B back to Consoles off, a layout row's tab): the next one on */
   if (isHome()) return buildHome();
   const st = sty();
   if (st === "list") return buildList();
@@ -796,10 +868,10 @@ function buildStyle() {
   if (st === "cvert") return buildCVert();
   const top = S.inConsole
     ? headHTML()
-    : `<div class="tabs" id="tabs"><div class="tab-row">${CATS.map((c, i) => `<span class="tab" data-c="${i}">${c.n}</span>`).join("")}</div></div>`;
+    : `<div class="tabs${oneTab() ? " one" : ""}" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
   /* the rows in use centred between header and hint bar, 4 dp ring room at least: a still grid that fills only one
      row (or fewer than R) centres those rows, not the empty R-row block */
-  const d = DIM[S.orient], body = d.h - 88, R = d.rows, used = rowMajor() ? Math.min(R, Math.max(1, Math.ceil(items().length / fitCols()))) : R;
+  const d = DIM[S.orient], body = d.h - 44 - HB(), R = d.rows, used = rowMajor() ? Math.min(R, Math.max(1, Math.ceil(items().length / fitCols()))) : R;
   const gridTop = Math.max(4, (body - (used * d.tile + (used - 1) * 14)) / 2);
   screen.innerHTML = `${top}
     <div class="view"><div class="grid" id="grid" style="--grid-top:${gridTop}px;--tile-w:${tileW()}px${R !== 2 ? `;grid-template-rows:repeat(${R}, var(--tile-h))` : ""}">${items().map((r, i) =>
@@ -838,7 +910,7 @@ function updateStyle() {
   const idx = selKey(), list = items(), it = list[idx];
   const tiles = screen.querySelectorAll(".tile");
   tiles.forEach((t, j) => t.classList.toggle("focus", j === idx));
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   /* the selected column is anchored just past a half-visible peek column; everything slides to keep it there */
   const d = DIM[S.orient], tw = tileW(), col = Math.floor(idx / d.rows), pitch = tw + 14, anchor = d.gutter + tw * .55 + 14;
   if (rowMajor()) {
@@ -1004,6 +1076,7 @@ function build() {
   const old = !S.switcher && screen.querySelector(".bd:not(.ghost)") ? document.getElementById("bd" + S.bdLayer) : null;
   const ghost = old && old.style.backgroundImage && old.style.backgroundImage !== "none" ? { bg: old.style.backgroundImage, cls: old.className } : null;
   if (S.switcher) buildSwitcher(); else { S.snap = true; buildStyle(); S.tpFresh = true; }
+  screen.insertAdjacentHTML("beforeend", statusHTML());   /* every screen, the Game Switcher too, as NX Redux draws it over each */
   if (ghost && !screen.querySelector(".bd")) {
     const g = document.createElement("div"); g.className = ghost.cls + " ghost"; g.style.backgroundImage = ghost.bg;
     screen.prepend(g); void g.offsetWidth; g.style.opacity = 0; g.addEventListener("transitionend", () => g.remove(), { once: true });
@@ -1080,7 +1153,7 @@ document.getElementById("scr-games").onclick = () => setScreen(true);
 
 
 /* ---------- List style: the same categories, each listed as pills instead of tiles ---------- */
-const tabsHTML = () => `<div class="tabs" id="tabs"><div class="tab-row">${CATS.map((c, i) => `<span class="tab" data-c="${i}">${c.n}</span>`).join("")}</div></div>`;
+const tabsHTML = () => `<div class="tabs${oneTab() ? " one" : ""}" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
 const hasGames = () => items().some(r => r.g);
 /* NxScreenBackground's fade, ported: a long diagonal ramp, black at the list side to clear at the right */
 function drawFade(c) {
@@ -1099,7 +1172,7 @@ function buildList() {
     ${S.inConsole ? headHTML() : tabsHTML()}
     <div class="lview ${games ? "games" : "full"}${S.inConsole ? "" : " tabbed"}"><div class="plist" id="plist">${items().map((r, i) =>
       `<div class="prow" data-i="${i}"><span>${r.n}</span></div>`).join("")}</div>${games ? "" : `<div class="lbg" id="lbg"></div>`}</div>
-    <div class="band"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
+    <div class="band${games && !infoOn() ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
     <div class="hints" id="hints"></div>`;
   if (games) drawFade(document.getElementById("gfade"));
   screen.querySelectorAll(".prow").forEach(el => el.onclick = () => tapTile(+el.dataset.i));
@@ -1108,7 +1181,7 @@ function buildList() {
 function updateList() {
   const idx = selKey(), list = items(), it = list[idx], rows = screen.querySelectorAll(".prow");
   rows.forEach((r, j) => r.classList.toggle("focus", j === idx));
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   const view = screen.querySelector(".lview"), rowH = rows[0].offsetHeight + 4, fits = Math.max(1, Math.floor((view.clientHeight + 4) / rowH));
   const first = Math.max(0, Math.min(idx - Math.floor(fits / 2), list.length - fits));
   const plist = document.getElementById("plist"), shown = Math.min(fits, list.length - first);
@@ -1152,7 +1225,7 @@ const CAR = {   /* the centre tile's size; neighbours are the same tile scaled d
 };
 CAR.large = CAR.lport = CAR.wland = CAR.land; CAR.tport = CAR.port;   /* the large screen keeps the landscape Carousel sizes */
 function buildCar() {
-  const c = CAR[S.orient], body = DIM[S.orient].h - 88;
+  const c = CAR[S.orient], body = DIM[S.orient].h - 44 - HB();
   /* the block is ring room (3) + tile + caption room (16 + name 2 lines + 4 + info line 18), centred */
   const capRoom = 16 + 2 * c.nameLh + 4 + 18, top = Math.max(3, (body - (3 + c.h + capRoom)) / 2 + 3);
   screen.innerHTML = `${headHTML()}
@@ -1167,7 +1240,7 @@ function buildCar() {
 }
 function updateCar() {
   const idx = selKey(), it = items()[idx];
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   screen.querySelectorAll(".ctile").forEach((el, j) => el.classList.toggle("focus", j === idx));
   moveRow(idx);
   /* games: name (2 lines) then the full info line */
@@ -1208,15 +1281,57 @@ document.getElementById("layouts").insertAdjacentHTML("beforeend", LAYOUTS.map((
     if (v === "vert") { S.lay[k] = k === "games" ? "bd" : "car"; S.ori[k] = "v"; }
     else if (ok.includes(v)) S.lay[k] = k !== "games" && v === "bd" ? "car" : v; });
   if (saved && Object.values(saved).includes("vert")) try { localStorage.setItem("nx-layouts", JSON.stringify(S.lay)); localStorage.setItem("nx-orient", JSON.stringify(S.ori)); } catch (e) {} }
-document.getElementById("layouts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Controller art"><span class="lbl">Controller</span>${[["on", "Show"], ["off", "Hide"]]
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Controller art"><span class="lbl">Controller</span>${[["on", "Show"], ["off", "Hide"]]
   .map(([v, t]) => `<button data-padart="${v}" aria-pressed="false">${t}</button>`).join("")}</div>`);
-const syncPadArt = () => document.querySelectorAll("#layouts button[data-padart]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.padart === "on") === S.padArt));
-document.querySelectorAll("#layouts button[data-padart]").forEach(b => b.onclick = () => {
+const syncPadArt = () => document.querySelectorAll("#style-opts button[data-padart]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.padart === "on") === S.padArt));
+document.querySelectorAll("#style-opts button[data-padart]").forEach(b => b.onclick = () => {
   S.padArt = b.dataset.padart === "on"; syncPadArt();
   try { localStorage.setItem("nx-padart", S.padArt ? "on" : "off"); } catch (e) {}
   showLayout("consoles");   /* the art is on the Consoles tab */
 });
 syncPadArt();
+/* Layouts > Button hints: Show / Hide the hint bar along the bottom; kept in localStorage */
+S.hints = (() => { try { return localStorage.getItem("nx-hints") !== "off"; } catch (e) { return true; } })();
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Button hints"><span class="lbl">Button hints</span>${[["on", "Show"], ["off", "Hide"]]
+  .map(([v, t]) => `<button data-hints="${v}" aria-pressed="false">${t}</button>`).join("")}</div>`);
+const syncHints = () => {
+  screen.classList.toggle("nohints", !S.hints); sizeDims();
+  document.querySelectorAll("#style-opts button[data-hints]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.hints === "on") === S.hints));
+};
+document.querySelectorAll("#style-opts button[data-hints]").forEach(b => b.onclick = () => {
+  S.hints = b.dataset.hints === "on"; syncHints();
+  try { localStorage.setItem("nx-hints", S.hints ? "on" : "off"); } catch (e) {}
+  setOrient(S.orient);   /* the body grew or shrank: tile sizes and every layout redraw */
+});
+syncHints();
+/* Style > Extra info: Show / Hide the info line (play time, achievements, Next) on Home and in game lists, and Home's stats strip; kept in localStorage */
+S.info = (() => { try { return localStorage.getItem("nx-info") !== "off"; } catch (e) { return true; } })();
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Extra info"><span class="lbl">Extra info</span>${[["on", "Show"], ["off", "Hide"]]
+  .map(([v, t]) => `<button data-info="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Home and game lists; a game list on List only with Button hints hidden</span></div>`);
+const syncInfo = () => {
+  document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.info === "on") === S.info));
+  document.getElementById("hs-statrow").hidden = !tabOn(CATS.indexOf(HOME_CAT)) || S.hs === "fresh" || !S.info;   /* no strip to pick a state for */
+};
+document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.onclick = () => {
+  S.info = b.dataset.info === "on"; syncInfo();
+  try { localStorage.setItem("nx-info", S.info ? "on" : "off"); } catch (e) {}
+  build(); update();
+});
+syncInfo();
+/* Style > Page title: Show / Hide the tab row (main menu) and the header (game lists); L1/R1 still switch tabs; kept in localStorage */
+S.title = (() => { try { return localStorage.getItem("nx-title") !== "off"; } catch (e) { return true; } })();
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Page title"><span class="lbl">Page title</span>${[["on", "Show"], ["off", "Hide"]]
+  .map(([v, t]) => `<button data-title="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Main menu and game lists</span></div>`);
+const syncTitle = () => {
+  screen.classList.toggle("notitle", !S.title);
+  document.querySelectorAll("#style-opts button[data-title]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.title === "on") === S.title));
+};
+document.querySelectorAll("#style-opts button[data-title]").forEach(b => b.onclick = () => {
+  S.title = b.dataset.title === "on"; syncTitle();
+  try { localStorage.setItem("nx-title", S.title ? "on" : "off"); } catch (e) {}
+  S.tabFocus = false; build(); update();
+});
+syncTitle();
 const showLayout = k => {   /* picking a layout or orientation shows the screen it applies to: that tab on the main menu, or the Mega Drive game list */
   if (k === "games") { if (!S.inConsole || S.switcher) return setScreen(true); }
   else { S.switcher = false; S.tabFocus = false; S.inConsole = false; S.sub = null; S.cat = (LAYOUTS.find(l => l[0] === k))[2]; }
@@ -1237,6 +1352,26 @@ document.querySelectorAll("#layouts button[data-s]").forEach(b => b.onclick = ()
   try { localStorage.setItem("nx-layouts", JSON.stringify(S.lay)); } catch (e) {}
   showLayout(k);
 });
+const HOME_I = CATS.indexOf(HOME_CAT), tabRow = document.getElementById("tabs-on");
+tabRow.insertAdjacentHTML("beforeend", CATS.map((c, i) => `<button data-tab="${i}" aria-pressed="true">${c.n}</button>`).join(""));
+const syncTabs = () => {
+  tabRow.querySelectorAll("button").forEach(b => { const i = +b.dataset.tab; b.setAttribute("aria-pressed", tabOn(i)); b.disabled = tabOn(i) && TAB_OFF.size === CATS.length - 1; });
+  LAYOUTS.forEach(([k, , c]) => { if (c != null) document.querySelector(`#layouts button[data-l="${k}"]`).closest(".switch").hidden = !tabOn(c); });
+  document.getElementById("hs-normal").closest(".switch").hidden = !tabOn(HOME_I);
+  document.getElementById("hs-statrow").hidden = !tabOn(HOME_I) || S.hs === "fresh" || S.info === false;
+  document.querySelector('.opt-tabs [data-p="home"]').hidden = !tabOn(HOME_I);
+  if (!tabOn(HOME_I) && document.querySelector('.opt-panel.on[data-p="home"]')) openPanel("view");
+};
+tabRow.querySelectorAll("button").forEach(b => b.onclick = () => {
+  const i = +b.dataset.tab;
+  if (tabOn(i)) { if (TAB_OFF.size === CATS.length - 1) return; TAB_OFF.add(i); } else TAB_OFF.delete(i);
+  try { localStorage.setItem("nx-tabs", JSON.stringify([...TAB_OFF].map(j => CATS[j].n))); } catch (e) {}
+  syncTabs();
+  S.switcher = false; S.tabFocus = false;
+  if (tabOn(i)) { S.inConsole = false; S.sub = null; S.cat = i; }   /* switched on: show it */
+  build(); update();
+});
+syncTabs();
 /* ---------- Backdrop style ---------- */
 const BD = {
   land: { w: 170, h: 150, scale: .62, gap: 28, wLogo: 330, hLogo: 130, wTool: 150, hTool: 160, gapTool: 14, wColl: 240 },
@@ -1252,7 +1387,7 @@ const BD_CAP = 22 + 3 + 18 + 3 + 18;   /* caption room: name (one line) + time r
 /* games: the box-art slot fills the body less 16 dp top and bottom (with the caption), shape kept, 1.3x cap; the block is centred.
    Consoles: the logo slot at the games row's y, caption in the same place. Collections and Tools: the row centred on its own. */
 function bdGeom() {
-  const c = BD[S.orient], body = DIM[S.orient].h - 88, list = items();
+  const c = BD[S.orient], body = DIM[S.orient].h - 44 - HB(), list = items();
   const hs = Math.min(c.h * 1.3, Math.max(c.h, body - 2 * 16 - 18 - BD_CAP)), ws = c.w * hs / c.h;
   const blockTop = Math.max(0, (body - (hs + 18 + BD_CAP)) / 2);
   if (list.some(r => r.g)) return { w: ws, h: hs, top: blockTop, capTop: blockTop + hs + 18 };
@@ -1317,7 +1452,7 @@ const bdGameCap = it => { const tm = timeSeg(it);
   return `<div class="t">${it.n}</div>${tm ? `<div class="h">${tm}</div>` : ""}${nxRow(achSeg(it), it)}`; };
 function updateBd() {
   const idx = selKey(), it = items()[idx];
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   screen.querySelectorAll(".btile").forEach((el, j) => el.classList.toggle("focus", j === idx));   /* only for the dim while the tab row has focus */
   moveRow(idx);
   bdCross(it);
@@ -1349,7 +1484,7 @@ const sideGeom = (want, ar, right = false) => {
   return right ? { ...g, x: w - g.x, capX: g.capR, capR: g.capX } : g;   /* --cap-r is a right margin: Left's caption start (capX) becomes Right's right margin, so the caption ends the same gap before the stack (2026-10-04) */
 };
 const sideGeomL = (want, ar) => {
-  const d = DIM[S.orient], body = d.h - 88, land = !PORT(S.orient) && d.w > d.h;
+  const d = DIM[S.orient], body = d.h - 44 - HB(), land = !PORT(S.orient) && d.w > d.h;
   /* landscape family (2026-10-02): left margin L = max(gutter, round(0.10 · width)); the caption's right margin = L, so stack + caption read as centred */
   if (land) { const h = Math.round(want), w = Math.round(h * ar), L = Math.max(d.gutter, Math.round(d.w * .10)), x = L + w / 2; return { w, h, x, cy: body / 2, capX: x + w / 2 + 32, capR: L }; }
   const capR = d.gutter, gap = d.gutter, area = d.w - capR - Math.ceil(d.w * .45) - gap;
@@ -1359,7 +1494,7 @@ const sideGeomL = (want, ar) => {
   return { w, h, x, cy: body / 2, capX: Math.round(x + w / 2 + gap), capR };
 };
 function vertGeom() {
-  const d = DIM[S.orient], body = d.h - 88, list = items(), port = PORT(S.orient);
+  const d = DIM[S.orient], body = d.h - 44 - HB(), list = items(), port = PORT(S.orient);
   if (list.some(r => r.g)) {
     /* games: a portrait case's shape (0.75; the placeholder box is 0.72); height 0.58 of the body (landscape family), 0.62 (portrait family), 110 to 320 */
     const land = !port && d.w > d.h, want = Math.min(320, Math.max(110, body * (land ? .58 : .62))), right = S.vAlign === "right", g = sideGeom(want, .75, right);
@@ -1402,7 +1537,7 @@ function buildVert() {
 }
 function updateVert() {
   const idx = selKey(), it = items()[idx], g = vertGeom();
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   screen.querySelectorAll(".vtile").forEach((el, j) => el.classList.toggle("focus", j === idx));   /* the collection count shows on the selected only */
   moveRow(idx);
   bdCross(it);
@@ -1416,7 +1551,7 @@ function updateVert() {
    the vertical Backdrop (rowLayout axis y, cap, rowDrag on Y). Every screen: the side arrangement of sideGeom (stack left, caption right,
    left-aligned, centred on the selected tile); the caption is Backdrop's three lines (bdGameCap) */
 function cvertGeom() {
-  const c = CAR[S.orient], d = DIM[S.orient], body = d.h - 88;
+  const c = CAR[S.orient], d = DIM[S.orient], body = d.h - 44 - HB();
   const g = sideGeom(Math.min(c.h, Math.max(100, body * .55)), c.w / c.h, S.vAlign === "right");   /* 0.55 of the body, 100 to the Carousel tile's height; portrait: the width cap may go under 100 */
   return { side: true, ...g, cap: 0, scale: c.scale, gap: c.gap, capTop: g.cy };
 }
@@ -1500,7 +1635,7 @@ const contItem = () => fresh() ? PICK : RECENT[0];
 /* the strip's lines: 2 (This month, Most played) on the portrait faces, where it is centred under the centred tabs; 1 on every
    other face (landscape, large, large portrait), which has the width: the two lines run on as one. 1 when nothing was played
    this month. Fresh install: no strip */
-const stripLines = () => fresh() ? 0 : S.hst === "none" || !PORT(S.orient) ? 1 : 2;
+const stripLines = () => fresh() || S.info === false ? 0 : S.hst === "none" || !PORT(S.orient) ? 1 : 2;
 /* Home's geometry for this screen and these pins, in dp. The page top is 52 (44 tab row + 8) with no strip, else 46 + lines × 18 (17
    portrait) + 2 between + 8. The top section takes what the first pins row leaves, so both fit the first screen:
    page top + top + 11 + 3 ring + row + 3 ring + 52 hint bar = screen height; with no pin rows it takes the whole body.
@@ -1523,7 +1658,7 @@ function homeGeom() {
   const big = sps && games.length ? games[0] : null, rows = games.slice(big ? 1 : 0);
   const tm = tools.length ? h.tm : "none", slots = SLOTS[h.tm];
   const list = tools.length > slots ? [...tools.slice(0, slots - 1), { n: "More tools", more: tools.length - slots + 1 }] : tools;
-  const fill = d.h - pt - h.sgap - 6 - 52, body = d.h - pt - 52;   /* the top with the first row (+ its height) and without rows */
+  const fill = d.h - pt - h.sgap - 6 - 8 - HB(), body = d.h - pt - 8 - HB();   /* the top with the first row (+ its height) and without rows */
   const avail = rows.length ? fill - h.th : body, us = (W - 4 * g) / 5;
   let top = h.psplit ? Math.max(h.minTop, Math.min(avail, h.cap + (tm === "under" ? g + us : 0))) : avail;
   const T = [{ kind: "cont", r: contItem(), x: 0, y: 0, w: W, h: top }], cw = 3 * h.tw + 2 * g;   /* sps: Continue is 3 of the 6 columns */
@@ -1614,13 +1749,13 @@ function updateHome() {
   const H = S.home, G = S.hg, d = DIM[S.orient];
   H.idx[0] = Math.max(0, Math.min(H.idx[0], G.T.length - 1)); H.idx[1] = Math.max(0, Math.min(H.idx[1], G.rows.length - 1));   /* a face with fewer tiles keeps focus on one that exists */
   if (!G.rows.length) H.sec = 0;   /* no pinned games below: focus stays in the top section */
-  screen.querySelectorAll(".tab").forEach((t, j) => t.classList.toggle("on", j === S.cat));
+  screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
   screen.querySelectorAll(".home .tile").forEach(t => t.classList.toggle("focus", +t.dataset.s === H.sec && +t.dataset.i === H.idx[H.sec]));
   const page = document.getElementById("hpage"), fresh = H.fresh; H.fresh = false;
   if (fresh) page.style.transition = "none";
   /* the page eases, 0.32 s, as little as it can to keep the selected pin fully in view, ring room included, between the tab row
      and the hint bar; with the top section selected it sits at the top */
-  const k = scaleK(), vTop = 52 - 3, vBot = d.h - 52 + 3, maxY = Math.max(0, page.offsetHeight - d.h);
+  const k = scaleK(), vTop = 52 - 3, vBot = d.h - 8 - HB() + 3, maxY = Math.max(0, page.offsetHeight - d.h);
   let y = H.y;
   if (H.sec === 0) y = 0;
   else { const t = screen.querySelector(`.home .tile[data-s="1"][data-i="${H.idx[1]}"]`), mr = page.getBoundingClientRect(), tr = t.getBoundingClientRect();
@@ -1702,7 +1837,7 @@ S.home = { sec: 0, idx: [0, 0], y: 0 };   /* sec 0 = the top section (Continue, 
 function setHomeState(hs, save = S.hsSave, st = S.hst) {
   S.hs = hs; S.hsSave = save; S.hst = st;
   ["ok", "none", "wait"].forEach(k => document.getElementById("hs-st-" + k).setAttribute("aria-pressed", k === st));
-  document.getElementById("hs-statrow").hidden = hs === "fresh";   /* no strip */
+  document.getElementById("hs-statrow").hidden = hs === "fresh" || !tabOn(HOME_I) || S.info === false;   /* no strip; no Home */
   ["normal", "nora", "noart", "fresh"].forEach(k => document.getElementById("hs-" + k).setAttribute("aria-pressed", k === hs));
   S.switcher = false; S.inConsole = false; S.sub = null; S.sw = 0; S.tabFocus = false;
   S.cat = CATS.findIndex(c => c.home);
@@ -1764,6 +1899,15 @@ document.querySelectorAll("#acc-swatches .acc-sw").forEach(b => b.onclick = () =
 document.getElementById("acc-input").addEventListener("input", ev => setAccent(ev.target.value));
 { let saved = null; try { saved = localStorage.getItem("nx-accent"); } catch (e) {} setAccent(saved || "#e4e4e7", false); }
 try { localStorage.removeItem("nx-gsel"); } catch (e) {}   /* the old Grid selection trial's stored choice */
+/* the option panels (View, Tabs, Layouts, Home, Style): the open one kept in localStorage */
+function openPanel(p) {
+  document.querySelectorAll(".opt-tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.p === p));
+  document.querySelectorAll(".opt-panel").forEach(el => el.classList.toggle("on", el.dataset.p === p));
+  try { localStorage.setItem("nx-panel", p); } catch (e) {}
+}
+document.querySelectorAll(".opt-tabs button").forEach(b => b.onclick = () => openPanel(b.dataset.p));
+{ let p = null; try { p = localStorage.getItem("nx-panel"); } catch (e) {}
+  const b = document.querySelector(`.opt-tabs button[data-p="${p}"]`); openPanel(b && !b.hidden ? p : "view"); }
 setOrient("land");
 document.fonts && document.fonts.ready.then(update);
 </script>
