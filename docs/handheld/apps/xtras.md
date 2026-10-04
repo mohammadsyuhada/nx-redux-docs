@@ -10,8 +10,10 @@ device.
 2. Press `A` on an entry for its details.
 3. Install or update it from there.
 
-The **TOOLS** tab holds installable tools and emulators. Already-installed
-entries are grouped under an *Installed* header:
+The **TOOLS** tab holds installable tools and emulators, including
+PortMaster and its two [community catalogs](portmaster.md#community-catalogs),
+**NextOS Ports** and **RHH Ports**. Already-installed entries are grouped under
+an *Installed* header:
 
 ![Xtras TOOLS tab](../../assets/screenshots/xtras-tools.png)
 
