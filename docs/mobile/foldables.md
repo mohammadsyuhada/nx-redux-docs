@@ -50,7 +50,10 @@ unfolded Galaxy Z Fold or a tablet.
   to a row.
 - Under them come the shelves.
 
-![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp)
+<figure class="nx-phone nx-phone--open" markdown>
+![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
+</figure>
 
 ### Shelves
 
@@ -78,7 +81,10 @@ time.
 **Tools → Settings** shows its sections on the left and the selected
 section's page on the right. Moving through the sections previews each page.
 
-![Settings in two panes on an unfolded Fold](../assets/screenshots/mobile/settings-two-pane.webp)
+<figure class="nx-phone nx-phone--open" markdown>
+![Settings in two panes on an unfolded Fold](../assets/screenshots/mobile/settings-two-pane.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
+</figure>
 
 ### RetroAchievements
 
@@ -89,7 +95,10 @@ show beside the game's achievements list, and a game's achievements beside
 the games list. The
 [Game Tracker](game-tracker.md) shows a game's sessions the same way.
 
-![An achievement's details beside the game's achievements list](../assets/screenshots/mobile/ra-game-two-pane.webp)
+<figure class="nx-phone nx-phone--open" markdown>
+![An achievement's details beside the game's achievements list](../assets/screenshots/mobile/ra-game-two-pane.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
+</figure>
 
 ### In-game menu
 
@@ -103,4 +112,7 @@ The [in-game menu](in-game-menu.md) splits too:
   change with `LEFT` / `RIGHT`.
 - Tap a row in the dimmed pane to go back to it.
 
-![The in-game menu in two panes on an unfolded Fold](../assets/screenshots/mobile/in-game-menu-two-pane.webp)
+<figure class="nx-phone nx-phone--open" markdown>
+![The in-game menu in two panes on an unfolded Fold](../assets/screenshots/mobile/in-game-menu-two-pane.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
+</figure>
