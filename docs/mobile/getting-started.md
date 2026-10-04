@@ -13,7 +13,10 @@ to Android phones, tablets, foldables and Android handhelds. It runs retro
 systems through emulators bundled in the app, with nothing extra to download.
 On your phone, the app's icon and title read **NX Redux**.
 
-![NX Redux Mobile on the Home tab](../assets/screenshots/mobile/home-full.webp)
+<figure class="nx-phone" markdown>
+![NX Redux Mobile on the Home tab, on the cover screen of a folded Galaxy Z Fold](../assets/screenshots/mobile/home-full.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
 New to NX Redux? See [About NX Redux](../about.md) first.
 
