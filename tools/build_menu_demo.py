@@ -26,7 +26,7 @@ def cut(html, pattern, what):
 html = SRC.read_text(encoding="utf-8")
 html = cut(html, r'\n  <header class="top">.*?</header>\n', "the heading")
 html = cut(html, r'\n  <div class="notes">.*?\n  </div>\n(?=</div>)', "the notes")
-html = html.replace("<title>NX Showcase Menu</title>", "<title>NX Redux Mobile main menu</title>", 1)
+html = html.replace("<title>NX Showcase Menu</title>", "<title>NX Redux main menu</title>", 1)
 # a first visit opens game lists on Backdrop, Vertical, so their Orientation and Vertical alignment
 # options show (they only appear under Carousel / Backdrop, alignment only when Vertical)
 for old, new in (('games: "grid" };', 'games: "bd" };'),
