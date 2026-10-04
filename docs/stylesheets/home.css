@@ -377,6 +377,12 @@
 .nx-error__hints { justify-content: center; margin-top: 1.8rem; }
 .nx-error__hints label { cursor: pointer; }
 
+/* Mobile main menu demo: the nx-mobile mockup in a frame (tools/build_menu_demo.py),
+   its options above the phone screen and the pad below. */
+.nx-demo .nx-screen__inner { padding-top: 2.4rem; padding-bottom: 3rem; }
+.nx-demo__text { margin: 0.4rem 0 1.4rem; color: var(--nx-soft); font-size: 0.8rem; line-height: 1.5; max-width: 40rem; }
+.nx-demo__frame { display: block; width: 100%; height: 70rem; border: 0; background: var(--nx-black); color-scheme: dark; }
+
 @media (prefers-reduced-motion: reduce) {
   .nx-slide,
   .nx-slide.is-active,
