@@ -328,7 +328,7 @@ Wi-Fi connection errors and Device Sync on FAT32 cards.
     **Background** style shows nothing for art fetched back then. To get
     the extra images for an existing library, open **Artwork Manager →
     Settings → Reset artwork**, then queue your systems again. See
-    [Appearance → Game art type](../../handheld/settings/appearance.md#game-art-type).
+    [Artwork Manager → What gets saved](../../handheld/apps/artwork-manager.md#what-gets-saved).
 
 ## Earlier releases
 
