@@ -19,6 +19,16 @@ screens. Several pages now say wrong things (no artwork download, no
 Dreamcast, Genesis on `GPGX`, Console Settings DS-only, the old Overlay
 default, "colors and UI scale are not in the app yet").
 
+## Later changes (2026-10-05)
+
+- At the user's request, Netplay, Device Sync, local multiplayer (2 to 4
+  players on their own controllers), more systems (Nintendo 3DS, home
+  computers) and iOS are described as coming in a later release. Only
+  RetroAchievements hardcore mode is stated as not available, the same as
+  on the handheld. This replaces the "only shipped behaviour, not promised"
+  rule for these items.
+- Getting Started shows the Home screenshot inside the Z Fold 8 frame.
+
 ## Decisions
 
 - Refresh existing pages in place; add new pages named after their handheld

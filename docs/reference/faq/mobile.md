@@ -75,7 +75,12 @@ Dreamcast is included, with the NAOMI and Atomiswave arcade games. See
 
 ## Can I play netplay or use Device Sync with the app?
 
-No. The app has neither.
+Not yet. Netplay and Device Sync come in a later release.
+
+## Can two people play on one phone?
+
+Not yet. Local multiplayer, for 2 to 4 players each on their own controller,
+comes in a later release.
 
 ## Can I remap controller buttons?
 
@@ -94,8 +99,8 @@ in-game menu. See [Controls](../../mobile/controls.md).
 
 ## Is there a RetroAchievements hardcore mode?
 
-No. RetroAchievements in the app is softcore only, so cheats and save states
-are not blocked. See
+No, the same as on the handheld. RetroAchievements in the app is softcore
+only, so cheats and save states are not blocked. See
 [RetroAchievements](../../mobile/retroachievements.md).
 
 ## Where does the game artwork come from?
@@ -153,4 +158,5 @@ is back. **Tools → Settings → Library → ROM folders** marks the folder
 
 ## Is there an iOS version?
 
-No. NX Redux Mobile runs on Android only.
+Not yet. NX Redux Mobile runs on Android only for now. An iOS version follows
+the Android one.
