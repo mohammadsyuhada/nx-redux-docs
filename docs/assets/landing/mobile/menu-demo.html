@@ -69,6 +69,9 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .hints { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; display: flex; align-items: center; justify-content: flex-start; padding: 0 24px; gap: 18px; font-size: 14px; background: rgba(0,0,0,.8); z-index: 3; }   /* NX_HINT_BAR_ALPHA = 0.8, art runs underneath */
 .hints.sw90 { background: rgba(0,0,0,.9); }
 .nohints .hints { display: none; }   /* Style > Button hints: Hide (every screen, the Game Switcher too) */
+#screen.nohints .hints.scrim { display: flex; } #screen.nohints .hints.scrim > :not(.binfo) { display: none; }
+.hints .binfo { display: none; margin-left: auto; min-width: 0; font-size: 14px; line-height: 18px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#screen.nohints .hints .binfo { display: block; } #screen.nohints .band .btext { display: none; }   /* hints hidden: a game's info line moves from the band down to the bar's empty row, right-aligned; the band keeps the arrows */   /* except under a game list's List: the bar's 80% stays (no hints; the game's info line sits in it), the main menu has none, so the band's fade runs into it as with the bar (2026-10-06) */
 #screen.nohints { --hb: 0px; }   /* and its room goes to the content: every body, band and fade below sits on --hb */   /* NX_SWITCHER_BAR_ALPHA: the resume frame is often bright */
 .hint { display: flex; align-items: center; gap: 7px; }
 /* the status group (NX Redux's GFX_blitHardwareGroup): Wi-Fi then battery, right-aligned on the gutter, centred in the 44 dp top row.
@@ -213,6 +216,11 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 /* main menu: a 20 dp fade at the body's top and bottom, so a cut-off neighbour doesn't end on a hard line (game lists: none, their peeks are short) */
 .vrow.edge { -webkit-mask: linear-gradient(180deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); mask: linear-gradient(180deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); }
 .vrow .vtile { left: var(--v-x); top: var(--v-y); width: var(--v-w); height: var(--v-h); margin-left: calc(var(--v-w) / -2); margin-top: calc(var(--v-h) / -2); }
+/* Page title: Hide: the stack runs up into the empty title row (its items unclipped there, the edge fade at the screen's top), laid out as before (2026-10-06) */
+#screen.notitle .vrow { top: 0; }
+#screen.notitle :is(.brow, .car) { overflow: visible; clip-path: inset(-44px -2000px 0 -2000px); }   /* the horizontal rows too: unclipped into the empty title row, still cut at their bottom */
+#screen.notitle .vrow .vtile { top: calc(var(--v-y) + 44px); }
+#screen.notitle .vrow .bcap, #screen.notitle .cvrow .ccap { top: calc(var(--cap-top) + 44px); }
 /* game caption: right of the stack on every screen, left-aligned, centred on the selected box, ending --cap-r (24 landscape family / the gutter in portrait) from the edge */
 .vcap.side { left: var(--cap-x); right: var(--cap-r); transform: translateY(-50%); text-align: left; }
 .vcap.side .t { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-wrap: balance; }   /* the side name may take 2 lines */
@@ -226,21 +234,23 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .ctile img, .grid img { -webkit-user-drag: none; }
 /* ---------- List style: the original pill list, on plain black ---------- */
 /* landscape: rows end at the top of the band's text line (hint bar 44 + 2 dp + 18 dp line); portrait: at the band's top edge, fade included */
-.lview { position: absolute; left: 0; right: 0; top: 44px; bottom: calc(max(0px, var(--hb) - 12px) + 26px); overflow: hidden; }   /* room for the band: 18 dp line + 4 dp above and below at least, 12 of it in the hint bar */
-.portrait .lview { bottom: calc(max(0px, var(--hb) - 12px) + 26px); }
+.lview { position: absolute; left: 0; right: 0; top: 44px; bottom: calc(44px - 12px + 26px); overflow: hidden; }   /* room for the band: 18 dp line + 4 dp above and below at least, 12 of it in the hint bar */
+.portrait .lview { bottom: calc(44px - 12px + 26px); }   /* List keeps the hint bar's room with Button hints: Hide (only its shade and hints go), 2026-10-06 */
 .lview.tabbed { top: 56px; }   /* main menu: 12 dp between the tab row and the first row (a game list's header keeps 44) */
 .portrait .lview.tabbed { top: 54px; }
 /* the info band: one line on the hint bar, arrows packed on the left at the list inset, info right-aligned */
-.band { position: absolute; left: 0; right: 0; bottom: max(0px, var(--hb) - 12px); height: 26px;   /* fixed just above the hints, whatever the list length: 18 dp line, 4 dp each side, 12 dp of it inside the bar */
+.band { position: absolute; left: 0; right: 0; bottom: 32px; height: 26px;   /* fixed just above the hints, whatever the list length: 18 dp line, 4 dp each side, 12 dp of it inside the bar */
   box-sizing: border-box; padding: 0 24px; display: flex; align-items: center; z-index: 4; pointer-events: none;
   background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) calc(100% - 12px), transparent calc(100% - 12px)); }
 /* the band reaches 12 dp into the hint bar's empty top (its hints are centred lower), so the list gets one more row;
    below the hint bar's edge it paints nothing, the bar's own 80% shows */   /* solid 80% under the 2 dp strip only, then linear to 0 at the top, 12 dp above the text */
-#screen.nohints .band { background: linear-gradient(180deg, transparent 0, rgba(0,0,0,.8) calc(100% - 14px), rgba(0,0,0,.8) 100%); }   /* no hint bar to carry the 80% below the strip: the band holds it to the bottom edge */
-.band.plain, #screen.nohints .band.plain { background: none; }   /* Style > Extra info: Hide on a game list: no info line, so no shade for it (the arrows stay) */
+.band.plain, #screen .band { background: none; }   /* List (2026-10-06): no band fade at all, only the arrows (and text); the hint bar keeps its 80% */   /* Style > Extra info: Hide on a game list: no info line, so no shade for it (the arrows stay) */
 .portrait .band { padding: 0 16px; }   /* arrows start where the row text does (the pill's 24 / 16 dp inset) */
 .band .arrows { flex: none; width: 21px; height: 18px; margin-right: 12px; display: flex; gap: 1px; align-items: center; }   /* fixed room: two arrows + 1 dp, then 12 dp */
-.band .arrows svg { width: 10px; height: 10px; fill: var(--ink); opacity: .2; }
+.band .arrows svg, .uparrow svg { width: 10px; height: 10px; fill: var(--ink); opacity: .2; }
+/* Page title: Hide on List: the up arrow leaves the band for the empty title row, as far above the first row as the down arrow sits below the last */
+.uparrow { position: absolute; left: 24px; width: 10px; height: 10px; z-index: 4; pointer-events: none; display: flex; }
+.portrait .uparrow { left: 16px; }
 .band .btext { flex: 1; min-width: 0; text-align: right; font-size: 14px; line-height: 18px; height: 18px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-shadow: 0 0 6px rgba(0,0,0,.95); }
 /* the info line: time · n of m · Next, grey with Next in white, trophy inline */
 .il .next, .band .next { color: var(--ink); }
@@ -497,7 +507,7 @@ body { margin: 0; padding: 0 0 4px; }
         <div class="switch" role="group" aria-label="Tabs" id="tabs-on">
           <span class="lbl">Show</span>
         </div>
-        <span class="hd">The tab row hides when only one tab is on</span>
+        <span class="hd">With only one tab on, the bar shows NX Redux instead of the tab row</span>
       </div>
       <div class="opt-panel" data-p="layouts">
         <div class="layouts" id="layouts" role="group" aria-label="Layouts"></div>
@@ -628,7 +638,8 @@ const MD = [{"n": "Outrun", "g": "md-outrun"}, {"n": "Outrun 2019", "g": "md-out
 CONSOLES[0].count = MD.length;   /* matches what opening it lists */
 /* Tabs (page control): any tab, Home too, can be switched off; at least one stays on. Kept in localStorage ("nx-tabs", the names of the tabs off) */
 const TAB_OFF = new Set();
-try { JSON.parse(localStorage.getItem("nx-tabs") || "[]").forEach(n => { const i = CATS.findIndex(c => c.n === n); if (i >= 0) TAB_OFF.add(i); }); } catch (e) {}
+/* nothing saved yet: Home starts off (Layouts > Home tab defaults to Hide, 2026-10-06) */
+try { const saved = localStorage.getItem("nx-tabs"); if (saved == null) TAB_OFF.add(CATS.indexOf(HOME_CAT)); else JSON.parse(saved).forEach(n => { const i = CATS.findIndex(c => c.n === n); if (i >= 0) TAB_OFF.add(i); }); } catch (e) { TAB_OFF.add(CATS.indexOf(HOME_CAT)); }
 if (TAB_OFF.size >= CATS.length) TAB_OFF.clear();
 const tabOn = i => !TAB_OFF.has(i), oneTab = () => TAB_OFF.size === CATS.length - 1;
 /* a tab that is off hands over to the next one on (Home off: the menu opens on Consoles) */
@@ -717,7 +728,7 @@ const infoLine = (it, next = true) => it.game ? [timeSeg(it), achSeg(it), next ?
 /* a Grid collection tile: the name as the Carousel draws it (full white, not the dimmed word), "N games" under it */
 const collTile = r => `<div class="word coll"><span class="t">${r.n}</span>${r.count != null ? `<span class="h">${countText(r)}</span>` : ""}</div>`;
 const countText = it => it.count == null ? "" : `${it.count} ${it.count === 1 ? "game" : "games"}`;
-const bandText = it => it.game ? infoLine(it) : countText(it);   /* tools: no text, only the arrows */
+const bandText = it => it.game ? infoLine(it) : CONSOLES.includes(it) ? "" : countText(it);   /* consoles (2026-10-06) and tools: no text, only the arrows */
 /* the Grid caption on a game tile: the name, then the count-only info line (every game tile has a picture, so the caption names it) */
 const info = r => { const l = infoLine(r, false); return `<div class="info"><div class="t">${r.n}</div>${l ? `<div class="il">${l}</div>` : ""}</div>`; };   /* every game tile has a picture now, so the caption always names it */
 
@@ -854,6 +865,8 @@ function pressTabs(k) {
 const switchTab = dir => { let c = S.cat; do c = (c + (dir > 0 ? 1 : CATS.length - 1)) % CATS.length; while (!tabOn(c)); S.cat = c; build(); update(); };   /* skips the tabs that are off */
 /* Grid/Carousel/Backdrop: past an end, only a fresh press switches tab; a held key stops at the edge; game lists stop */
 const edgeSwitch = (dir, repeat) => { if (!S.inConsole && !repeat) switchTab(dir); };
+/* Grid on the main menu with no other tab to switch to: a fresh press past an end wraps around the content (2026-10-06) */
+const gridWraps = repeat => !S.inConsole && !repeat && oneTab();
 const tapTile = i => { if (S.justDragged) return; if (selKey() === i) press("A"); else { setSel(i); update(); } };
 
 function buildStyle() {
@@ -866,9 +879,7 @@ function buildStyle() {
   if (st === "bd") return buildBd();
   if (st === "vert") return buildVert();
   if (st === "cvert") return buildCVert();
-  const top = S.inConsole
-    ? headHTML()
-    : `<div class="tabs${oneTab() ? " one" : ""}" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
+  const top = S.inConsole ? headHTML() : tabsHTML();
   /* the rows in use centred between header and hint bar, 4 dp ring room at least: a still grid that fills only one
      row (or fewer than R) centres those rows, not the empty R-row block */
   const d = DIM[S.orient], body = d.h - 44 - HB(), R = d.rows, used = rowMajor() ? Math.min(R, Math.max(1, Math.ceil(items().length / fitCols()))) : R;
@@ -941,8 +952,8 @@ function pressStyle(k, repeat) {
   const n = items().length, cur = selKey();
   if (rowMajor()) {   /* a still grid: left/right step one in row order, up/down wrap top row <-> bottom row */
     const c = fitCols();
-    if (k === "left") { if (cur > 0) { setSel(cur - 1); return update(); } return edgeSwitch(-1, repeat); }
-    if (k === "right") { if (cur < n - 1) { setSel(cur + 1); return update(); } return edgeSwitch(1, repeat); }
+    if (k === "left") { if (cur > 0) { setSel(cur - 1); return update(); } if (gridWraps(repeat)) { setSel(n - 1); return update(); } return edgeSwitch(-1, repeat); }
+    if (k === "right") { if (cur < n - 1) { setSel(cur + 1); return update(); } if (gridWraps(repeat)) { setSel(0); return update(); } return edgeSwitch(1, repeat); }
     if (k === "up" && cur < c && !S.inConsole) return toTabs();   /* the top row: UP to the tab row */
     if ((k === "up" || k === "down") && gridRows() === 2) {
       const to = cur < c ? (cur + c < n ? cur + c : n - 1) : cur - c;   /* an empty spot goes to the last tile */
@@ -955,8 +966,8 @@ function pressStyle(k, repeat) {
   } else {
     /* column-major: left/right step a column (two items), up/down swap to the column's other row */
     const R = gridRows();   /* R rows: LEFT/RIGHT step a column (R items), UP/DOWN move within the column and wrap */
-    if (k === "left") { if (cur >= R) { setSel(cur - R); return update(); } return edgeSwitch(-1, repeat); }
-    if (k === "right") { if (Math.floor(cur / R) < Math.floor((n - 1) / R)) { setSel(Math.min(cur + R, n - 1)); return update(); } return edgeSwitch(1, repeat); }
+    if (k === "left") { if (cur >= R) { setSel(cur - R); return update(); } if (gridWraps(repeat)) { setSel(Math.min(Math.floor((n - 1) / R) * R + cur % R, n - 1)); return update(); } return edgeSwitch(-1, repeat); }
+    if (k === "right") { if (Math.floor(cur / R) < Math.floor((n - 1) / R)) { setSel(Math.min(cur + R, n - 1)); return update(); } if (gridWraps(repeat)) { setSel(cur % R); return update(); } return edgeSwitch(1, repeat); }
     if (k === "up" && cur % R === 0 && !S.inConsole) return toTabs();   /* the top row: UP to the tab row */
     if (k === "up" || k === "down") { const st = cur - cur % R, size = Math.min(R, n - st), o = st + ((cur - st + (k === "down" ? 1 : size - 1)) % size); if (o !== cur) { setSel(o); return update(); } }
   }
@@ -1086,7 +1097,7 @@ function update() {
   if (S.switcher) { screen.classList.remove("tabfocus"); return updateSwitcher(); }
   updateStyle();
   const hints = document.getElementById("hints");
-  if (hints && !S.inConsole) hints.innerHTML = hint("nav_button_select", "Recent") + hints.innerHTML;   /* SELECT sits first in pad order */
+  if (hints && !S.inConsole && S.recent !== false) hints.innerHTML = hint("nav_button_select", "Recent") + hints.innerHTML;   /* Appearance > Show recent hint */   /* SELECT sits first in pad order */
   const tf = !!S.tabFocus && !S.inConsole, tabs = document.getElementById("tabs");
   screen.classList.toggle("tabfocus", tf); if (tabs) tabs.classList.toggle("tf", tf);
   placeTabPill();
@@ -1153,7 +1164,10 @@ document.getElementById("scr-games").onclick = () => setScreen(true);
 
 
 /* ---------- List style: the same categories, each listed as pills instead of tiles ---------- */
-const tabsHTML = () => `<div class="tabs${oneTab() ? " one" : ""}" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
+/* only one tab on: no tab row; the bar shows "NX Redux" as a page title instead (NX Redux, 2026-10-06) */
+const tabsHTML = () => oneTab()
+  ? `<div class="head" id="tabs"><span class="ttl">NX Redux</span></div>`
+  : `<div class="tabs" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
 const hasGames = () => items().some(r => r.g);
 /* NxScreenBackground's fade, ported: a long diagonal ramp, black at the list side to clear at the right */
 function drawFade(c) {
@@ -1173,7 +1187,8 @@ function buildList() {
     <div class="lview ${games ? "games" : "full"}${S.inConsole ? "" : " tabbed"}"><div class="plist" id="plist">${items().map((r, i) =>
       `<div class="prow" data-i="${i}"><span>${r.n}</span></div>`).join("")}</div>${games ? "" : `<div class="lbg" id="lbg"></div>`}</div>
     <div class="band${games && !infoOn() ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
-    <div class="hints" id="hints"></div>`;
+    <span class="uparrow" id="uparrow" hidden></span>
+    <div class="hints${S.inConsole ? " scrim" : ""}" id="hints"></div>`;
   if (games) drawFade(document.getElementById("gfade"));
   screen.querySelectorAll(".prow").forEach(el => el.onclick = () => tapTile(+el.dataset.i));
   screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
@@ -1189,7 +1204,14 @@ function updateList() {
   /* only whole rows show: no part row peeks into the gap above the arrows */
   plist.style.clipPath = `inset(${first * rowH}px -40px ${Math.max(0, plist.offsetHeight - (first + shown) * rowH + 4)}px -40px)`;
   /* the band: packed arrows (only those that apply) at the list inset, then the one-line info, right-aligned */
-  document.getElementById("arrows").innerHTML = (first > 0 ? ARROW_UP : "") + (first + fits < list.length ? ARROW_DOWN : "");
+  const upTop = first > 0 && !S.title, up = document.getElementById("uparrow");
+  document.getElementById("arrows").innerHTML = (first > 0 && !upTop ? ARROW_UP : "") + (first + fits < list.length ? ARROW_DOWN : "");
+  up.hidden = !upTop; up.innerHTML = upTop ? ARROW_UP : "";
+  if (upTop) {   /* mirror the band's arrow line: its centre's gap under the last row, above the first */
+    const band = screen.querySelector(".band"), rowTop = j => view.offsetTop + plist.offsetTop + rows[j].offsetTop - first * rowH;
+    const below = band.offsetTop + band.offsetHeight / 2 - (rowTop(first + shown - 1) + rows[0].offsetHeight);
+    up.style.top = `${rowTop(first) - below - 5}px`;
+  }
   document.getElementById("btext").innerHTML = bandText(it);
   const lbg = document.getElementById("lbg");
   if (lbg) { lbg.hidden = !it.logo || !S.padArt; if (it.logo) lbg.style.setProperty("--m", `url(${it.m})`); }
@@ -1205,13 +1227,14 @@ function updateList() {
     gbg.hidden = !src;   /* no screenshot: the list sits on black */
     if (src) gbg.src = src; else gbg.removeAttribute("src");
   }
-  document.getElementById("hints").innerHTML = hintsFor(it);
+  document.getElementById("hints").innerHTML = hintsFor(it) + `<span class="binfo">${bandText(it)}</span>`;
 }
 function pressList(k) {
   /* main menu: LEFT/RIGHT switch tabs like L1/R1 (a list has no sideways move); game lists stop at the ends */
   if ((k === "L1" || k === "R1" || k === "left" || k === "right") && !S.inConsole) return switchTab(k === "R1" || k === "right" ? 1 : -1);
   const n = items().length, cur = selKey();
-  if (k === "up" && cur === 0 && !S.inConsole) return toTabs();   /* the first row: UP to the tab row (no wrap to the bottom) */
+  /* 2026-10-06: UP on the first row wraps to the bottom (no longer the tab row); only an empty list's UP reaches it */
+  if (k === "up" && !n && !S.inConsole) return toTabs();
   if (k === "up") setSel((cur + n - 1) % n);   /* UP/DOWN wrap within the tab; a game list still wraps UP */
   if (k === "down") setSel((cur + 1) % n);
   if (k === "A" && !S.inConsole && items()[cur].open) { S.inConsole = true; S.sub = null; S.game = 0; build(); }
@@ -1318,6 +1341,17 @@ document.querySelectorAll("#style-opts button[data-info]").forEach(b => b.onclic
   build(); update();
 });
 syncInfo();
+/* Appearance > Show recent hint: Show / Hide the SELECT Recent hint on the main menu (SELECT still opens it); kept in localStorage */
+S.recent = (() => { try { return localStorage.getItem("nx-recent") !== "off"; } catch (e) { return true; } })();
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Recent hint"><span class="lbl">Recent hint</span>${[["on", "Show"], ["off", "Hide"]]
+  .map(([v, t]) => `<button data-recent="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">SELECT Recent on the main menu</span></div>`);
+const syncRecent = () => document.querySelectorAll("#style-opts button[data-recent]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.recent === "on") === S.recent));
+document.querySelectorAll("#style-opts button[data-recent]").forEach(b => b.onclick = () => {
+  S.recent = b.dataset.recent === "on"; syncRecent();
+  try { localStorage.setItem("nx-recent", S.recent ? "on" : "off"); } catch (e) {}
+  build(); update();
+});
+syncRecent();
 /* Style > Page title: Show / Hide the tab row (main menu) and the header (game lists); L1/R1 still switch tabs; kept in localStorage */
 S.title = (() => { try { return localStorage.getItem("nx-title") !== "off"; } catch (e) { return true; } })();
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Page title"><span class="lbl">Page title</span>${[["on", "Show"], ["off", "Hide"]]
@@ -1574,14 +1608,14 @@ function updateCVert() {
   splitNext(S.inConsole && (PORT(S.orient) || DIM[S.orient].h > DIM[S.orient].w));   /* portrait-family vertical game lists: Next always on its own line */
   document.getElementById("hints").innerHTML = hintsFor(it);
 }
-/* UP/DOWN move and stop at the ends; UP on the first item goes to the tab row (main menu). LEFT/RIGHT have no move of their own:
+/* UP/DOWN move; past an end a fresh press wraps (UP on the first item to the last, never the tab row, 2026-10-06), a held key stops. LEFT/RIGHT have no move of their own:
    on the main menu a fresh press switches tab (as at a Carousel's ends), L1/R1 too; in a game list they do nothing */
-function pressVert(k, repeat) {
+function pressVert(k, repeat) {   /* repeat: a held key */
   if ((k === "L1" || k === "R1") && !S.inConsole) return switchTab(k === "R1" ? 1 : -1);
   if (k === "left" || k === "right") return edgeSwitch(k === "right" ? 1 : -1, repeat);
   const n = items().length, cur = selKey();
-  if (k === "up") { if (cur > 0) setSel(cur - 1); else if (!S.inConsole) return toTabs(); else return; }
-  if (k === "down") { if (cur < n - 1) setSel(cur + 1); else return; }
+  if (k === "up") { if (cur > 0) setSel(cur - 1); else if (!n && !S.inConsole) return toTabs(); else if (n > 1 && !repeat) setSel(n - 1); else return; }
+  if (k === "down") { if (cur < n - 1) setSel(cur + 1); else if (n > 1 && !repeat) setSel(0); else return; }
   if (k === "A" && !S.inConsole && items()[cur].open) { S.inConsole = true; S.sub = null; S.game = 0; build(); }
   if (k === "B" && S.inConsole) { S.inConsole = false; build(); }
   update();
@@ -1604,7 +1638,7 @@ const clean = s => s.replace(/\s*[\(\[][^\)\]]*[\)\]]/g, "").replace(/\s+/g, " "
    row   Continue | one row of 3 squares as tall as the top: the Flip's wide landscape, 106.7 (a 2 × 2 block would be 46, a column 26)
    under Continue over one row of 5 squares filling the width, (W − 4 gap) / 5: the Flip's tall portrait, 56 (a column beside it 40.3)
    More tools than slots: the first (slots − 1) and a "+N" square. No tools: Continue takes the full width (sps: Continue | the first game) */
-const HOME = { land: { pins: 5, gap: 14, tm: "sq4" }, port: { pins: 3, gap: 12, tm: "col" }, large: { pins: 5, gap: 14, tm: "sps3" },
+const HOME = { land: { pins: 5, gap: 14, tm: "sq4" }, port: { pins: 3, gap: 12, tm: "col" }, large: { pins: 5, gap: 14, tm: "sps3", below: true },
   lport: { pins: 3, gap: 14, tm: "col" }, tport: { pins: 3, gap: 12, tm: "under" }, wland: { pins: 5, gap: 14, tm: "row" } };
 const SLOTS = { col: 3, sps3: 3, row: 3, sps4: 4, sq4: 4, under: 5 };
 Object.entries(HOME).forEach(([o, h]) => {
@@ -1655,11 +1689,13 @@ function homeGeom() {
   const o = S.orient, h = HOME[o], d = DIM[o], g = h.gap, W = h.W, pins = homePins();
   const tools = pins.filter(r => !r.g), games = pins.filter(r => r.g), sps = h.tm === "sps4" || h.tm === "sps3";
   const n = stripLines(), lh = PORT(o) ? 17 : 18, pt = n ? 46 + n * lh + (n - 1) * 2 + 8 : 52;
-  const big = sps && games.length ? games[0] : null, rows = games.slice(big ? 1 : 0);
+  /* below (the 4:3 large face, as the Brick and Brick Pro, 2026-10-06): Continue and the tools always fill the body, the pinned games
+     all in the rows under it, past the screen's end (the page scrolls to them) */
+  const big = sps && games.length && !h.below ? games[0] : null, rows = games.slice(big ? 1 : 0);
   const tm = tools.length ? h.tm : "none", slots = SLOTS[h.tm];
   const list = tools.length > slots ? [...tools.slice(0, slots - 1), { n: "More tools", more: tools.length - slots + 1 }] : tools;
   const fill = d.h - pt - h.sgap - 6 - 8 - HB(), body = d.h - pt - 8 - HB();   /* the top with the first row (+ its height) and without rows */
-  const avail = rows.length ? fill - h.th : body, us = (W - 4 * g) / 5;
+  const avail = rows.length && !h.below ? fill - h.th : body, us = (W - 4 * g) / 5;
   let top = h.psplit ? Math.max(h.minTop, Math.min(avail, h.cap + (tm === "under" ? g + us : 0))) : avail;
   const T = [{ kind: "cont", r: contItem(), x: 0, y: 0, w: W, h: top }], cw = 3 * h.tw + 2 * g;   /* sps: Continue is 3 of the 6 columns */
   const sq = (r, x, y, s) => T.push({ kind: r.more ? "more" : "tool", r, x, y, w: s, h: s });
@@ -1667,7 +1703,7 @@ function homeGeom() {
   /* 2026-10-04: col, sps3 and sps4 stack their squares half a gap apart (6 portrait, 7 otherwise; the columns keep the full gap). The side
      comes from the full top as before; the top then ends with the block and the pins row takes what that saves, (rows − 1) · gap / 2 */
   let saved = 0;
-  if (tm === "col" || tm === "sps3") { s = (top - 2 * g) / 3; right = W - s; list.forEach((r, i) => sq(r, right, i * (s + g / 2), s)); saved = top - Math.min(top, 3 * s + g); }
+  if (tm === "col" || tm === "sps3") { s = (top - 2 * g) / 3; right = W - s; list.forEach((r, i) => sq(r, right, i * (s + (h.below ? g : g / 2)), s)); saved = h.below ? 0 : top - Math.min(top, 3 * s + g); }   /* below: the column spans the full top */
   else if (tm === "sps4" || tm === "sq4") { s = (top - g) / 2; right = W - 2 * s - g; list.forEach((r, i) => sq(r, right + (i % 2) * (s + g), Math.floor(i / 2) * (s + g / 2), s)); saved = top - Math.min(top, 2 * s + g / 2); }
   else if (tm === "row") { s = top; right = W - list.length * (s + g) + g; list.forEach((r, i) => sq(r, right + i * (s + g), 0, s)); }
   else if (tm === "under") { s = us; T[0].h = top - g - s; list.forEach((r, i) => sq(r, i * (s + g), top - s, s)); }
@@ -1704,13 +1740,13 @@ function contHTML(g) {
           <div class="hctext"><div class="t">${g.n}</div>${rows}</div>`;
 }
 /* the strip. Line 1: "This month  12h 38m · 2 achievements"; line 2: "Most played  <cleaned title>  3h 55m", only the title cut with "…".
-   Not signed in: the achievements part is a grey "Sign in". Nothing played this month: one line, a grey "No play yet" and 0 achievements.
+   Not signed in: no achievements part, line 1 ends with the time (2026-10-06; was a grey "Sign in"). Nothing played this month: one line, a grey "No play yet" and 0 achievements.
    Not computed yet: every value "…", both lines kept so nothing moves when the values arrive */
 function stripHTML(n) {
   if (!n) return "";
   const w = S.hst === "wait", none = S.hst === "none";
-  const ach = raOn() ? `<b>${w ? "…" : none ? 0 : MONTH.ach}</b> achievements` : "Sign in";
-  const l1 = `<span>This month&ensp;${w ? "<b>…</b>" : none ? "No play yet" : `<b>${MONTH.t}</b>`}<i>·</i>${ach}</span>`;
+  const ach = raOn() ? `<i>·</i><b>${w ? "…" : none ? 0 : MONTH.ach}</b> achievements` : "";
+  const l1 = `<span>This month&ensp;${w ? "<b>…</b>" : none ? "No play yet" : `<b>${MONTH.t}</b>`}${ach}</span>`;
   const mp = `<span>Most played</span><b class="mp">${w ? "…" : clean(MONTH.mp.raw)}</b>${w ? "" : `<span>${MONTH.mp.t}</span>`}`;
   return `<div class="hss">${none ? `<div class="ln">${l1}</div>` : n === 1 ? `<div class="ln">${l1}<i class="sep">·</i>${mp}</div>`
     : `<div class="ln">${l1}</div><div class="ln">${mp}</div>`}</div>`;
