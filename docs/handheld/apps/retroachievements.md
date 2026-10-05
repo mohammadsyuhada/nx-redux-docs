@@ -84,7 +84,9 @@ Everything is built to work without a connection:
 
 | Feature | What it does |
 | --- | --- |
-| **Earn offline** | Unlocks are journaled to the SD card and submitted automatically the next time you play online (the home screen counts "unlocks waiting") |
+| **Earn offline** | Unlocks are journaled to the SD card and submitted automatically once you're back online (the home screen counts "unlocks waiting") |
+| **Connection drops** | An unlock earned while the connection is down, for example right after waking from sleep, is journaled too, so it isn't lost if you quit before WiFi comes back. The popup reads *RetroAchievements: offline, unlocks will sync later* |
+| **Slow WiFi at launch** | If WiFi isn't ready when a game starts (such as a game resumed after the device powered off in sleep), the login keeps retrying for a few seconds, then the game continues offline from the cache |
 | **Cached game data** | Achievement definitions, unlock state and badges are cached as you play, so a game you've launched once keeps working offline |
 | **Pre-download** | **Download all game data** caches achievement data for every game in your library, with a live progress bar. Even games you have *never* launched online then work offline |
 
@@ -118,8 +120,20 @@ points, global unlock rate, and type tags like `[Missable]`,
 
 ## Syncing
 
-Offline unlocks sync automatically when you're back online. **Sync now** on
-the home screen does two things in one go:
+Offline unlocks sync automatically, in the background, when WiFi is
+connected:
+
+- when a game logs in online,
+- when you open the in-game menu during an offline session,
+- when you quit a game.
+
+Nothing checks the connection while you play. A *N offline achievements
+synced* popup confirms it. If none of these get through, the unlocks wait
+for the next launch or for **Sync now**. An unlock for an achievement that
+has since been removed from RetroAchievements is dropped instead of retried
+forever.
+
+**Sync now** on the home screen does two things in one go:
 
 1. **Push**: submits any offline unlocks still waiting.
 2. **Pull**: refreshes your cloud status, meaning the points total and the
