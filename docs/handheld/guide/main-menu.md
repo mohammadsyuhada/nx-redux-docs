@@ -1,7 +1,9 @@
 # Main Menu & Game Lists
 
 The main menu is split into four tabs: **Home**, **Consoles**,
-**Collections** and **Tools**. The device always powers on to Home.
+**Collections** and **Tools**. Home is hidden until you turn it on in
+[Layouts](../settings/layouts.md#home-tab); the device powers on to the first
+tab that shows.
 
 ![Home tab](../../assets/screenshots/main-menu.png)
 
@@ -21,15 +23,18 @@ lists have a fourth style, Backdrop. [Menu Layouts](layouts.md) shows them all.
 - `Left` / `Right` also switch tabs:
     - in List style, always;
     - in Grid and Carousel, when you push past the first or last item.
-- **Hide a tab** you don't use in
-  [Settings → Appearance → Layouts](../settings/layouts.md). Home can't be
-  hidden. A tab with nothing in it, such as Collections before you make one,
-  is left out automatically.
+- **Show or hide tabs** in [Settings → Layouts](../settings/layouts.md). A tab
+  with nothing in it, such as Collections before you make one, is left out
+  automatically. With a single tab left, the tab row shows an **NX Redux**
+  title instead.
 
 ### The tab row
 
-Press `Up` from the top of a tab to move the highlight onto the tab row. The
-content dims while the row is focused.
+In the Grid and horizontal Carousel styles, press `Up` from the top of a tab to
+move the highlight onto the tab row (List and vertical carousels wrap to their
+last item instead). The content dims while the row is focused. With
+[Page title](../settings/layouts.md#page-title) hidden there is no tab row to
+focus.
 
 ![The tab row focused](../../assets/screenshots/tabs-focus.png)
 
@@ -46,7 +51,7 @@ content dims while the row is focused.
       list. A game launched from Search or the Game Switcher returns you
       to the tab that lists it.
     - The last tab is remembered until the device powers off. A cold boot
-      always opens Home.
+      opens the first tab that shows (Home when it is on).
 
 ## Home
 
@@ -56,21 +61,25 @@ and everything you pinned.
 ![Home with pinned games](../../assets/screenshots/home-pins.png)
 
 - **Stats line.** The top lines show **This month**'s total play time, your
-  RetroAchievements unlocked this month (or **Sign in** when you are signed
-  out), and the month's **Most played** game. A month without play shows
+  RetroAchievements unlocked this month (left out when you are signed out),
+  and the month's **Most played** game. A month without play shows
   **No play yet**.
 - **Continue card.** Your most recent game, showing where you left off (the
   save-state picture, else the game's artwork), its name and when you last
   played it. Press `A` to jump back in. On a fresh install it is replaced by
   a **Pick a game** card that opens the Consoles tab.
-- **Pinned tools** sit beside the Continue card as square icon tiles, in
-  columns of three. Every pinned tool is shown.
+- **Pinned tools** sit beside the Continue card as square icon tiles. Every
+  pinned tool is shown.
 - **Pinned games** fill the rows below, two per row on the Brick and Brick Pro
-  and four on the Smart Pro S. Home scrolls when there are more. The selected pin shows
-  its name and play time.
-- **No pinned games?** The top section fills the screen and the tool tiles
-  grow, in columns of four. On the Smart Pro S, one or two pinned games stand
-  in a column beside the Continue card instead of a row.
+  and four on the Smart Pro S. The selected pin shows its name and play time.
+- **On the Brick and Brick Pro** the Continue card and the tool tiles (in
+  columns of four) always fill the screen, and the pinned games sit below it:
+  press `Down` to scroll to them.
+- **On the Smart Pro S** the tools stand in columns of three and a row of
+  pinned games shares the screen; Home scrolls when there are more. With no
+  pinned games the top section fills the screen and the tool tiles grow, in
+  columns of four, and one or two pinned games stand in a column beside the
+  Continue card instead of a row.
 - Home keeps the same size whatever the
   [UI scale](../settings/appearance.md#ui-scale) is set to.
 
@@ -292,7 +301,7 @@ Build your own game collections from the game list:
 
 Your collections live on the **Collections** tab, each with its game count.
 The tab appears once you have a collection. Hide it in
-[Settings → Appearance → Layouts](../settings/layouts.md) if unused.
+[Settings → Layouts](../settings/layouts.md) if unused.
 
 ![Collections tab](../../assets/screenshots/collections-carousel.png)
 

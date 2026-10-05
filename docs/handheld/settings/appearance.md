@@ -30,11 +30,6 @@ Size of text and menus across the whole UI.
 
 ![Appearance at Small](../../assets/screenshots/ui-scale-small.png)
 
-## Layouts
-
-Opens the [Layouts](layouts.md) page: the style of each main menu tab and of
-the game lists, and which tabs show.
-
 ## Main color
 
 The color used to render main UI elements.
@@ -83,6 +78,12 @@ Show the battery level as a percentage in the status pill.
 
 Show or hide the `START` search button hint on the main menu tabs. Hiding it
 only removes the hint: pressing `START` on a tab still opens search.
+
+## Show recent hint
+
+Show or hide the `SELECT` recent games button hint on the main menu. Hiding it
+only removes the hint: pressing `SELECT` still opens the
+[Game Switcher](../guide/game-switcher.md).
 
 ## Show menu animations
 

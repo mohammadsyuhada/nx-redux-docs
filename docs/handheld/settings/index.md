@@ -8,7 +8,7 @@ page of the Settings app has its own page here.
 
 - [Display](display.md) — brightness and panel tuning
 - [Appearance](appearance.md) — UI scale, colors and animations
-    - [Layouts](layouts.md) — main menu tab and game list styles, and which tabs show
+- [Layouts](layouts.md) — main menu tab and game list styles, which tabs show, the page title and button hints
 - [In-game Notifications](notifications.md) — save/load/screenshot toasts
 - [LED Control](led-control.md) — per-zone lighting effects
 - [Network](network.md) — Wi-Fi

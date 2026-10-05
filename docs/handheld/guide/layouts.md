@@ -2,8 +2,8 @@
 
 The Consoles, Collections and Tools tabs, and every game list, can each be
 drawn in their own style. Pick them in
-[Settings → Appearance → Layouts](../settings/layouts.md). The menu picks up
-the change as soon as you leave Settings, with no restart.
+[Settings → Layouts](../settings/layouts.md). The menu picks up the change as
+soon as you leave Settings, with no restart.
 
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
@@ -29,9 +29,17 @@ background.
 
 ![Game list in List style](../../assets/screenshots/game-list-list.png)
 
-- The line at the bottom shows the game count on a tab, and the selected
-  game's last-played time, achievements and next achievement in a game list.
-- In game lists `Left` / `Right` page up and down.
+- The line at the bottom holds the scroll arrows. On the Collections tab it
+  also shows each collection's game count.
+- With [Button hints](../settings/layouts.md#button-hints) hidden, a game
+  list shows the selected game's last-played time, achievements and next
+  achievement in the bottom row, where the hints were.
+- With [Page title](../settings/layouts.md#page-title) hidden, the up arrow
+  moves above the first row, so the list has one arrow at each end.
+- `Up` on the first row wraps to the last, and `Down` on the last wraps to the
+  first (hold the button to stop at the end instead).
+- On the main menu `Left` / `Right` switch tabs. In game lists they page up
+  and down.
 
 ## Grid
 
@@ -46,6 +54,10 @@ name, last-played time and achievement count.
 *Game list*
 
 ![Game list in Grid style](../../assets/screenshots/game-list-grid.png)
+
+With no other tab to switch to (a single tab left, or a hidden tab opened from
+the `MENU` options), `Left` / `Right` past the first or last tile wrap around
+to the other end.
 
 *Tools tab (the default for Tools)*
 
@@ -78,8 +90,9 @@ gets a placeholder box.
 
 Carousel and Backdrop can also run **down** the screen instead of across:
 set the **orientation** row under the style to **Vertical**. `Up` / `Down`
-then move through the items, and `Left` / `Right` switch tabs (on a tab) or
-do nothing (in a game list).
+then move through the items and wrap around at the ends (hold to stop
+instead), and `Left` / `Right` switch tabs (on a tab) or do nothing (in a game
+list).
 
 *Consoles tab, vertical Carousel*
 
@@ -95,6 +108,10 @@ do nothing (in a game list).
 
 In a vertical game list the stack sits on the left and the details on the
 right. Set **Vertical alignment** to **Right** to swap the sides.
+
+With the page title or the button hints hidden, carousels and Backdrop are no
+longer cut off at the top and bottom rows: the neighbouring items run on into
+the freed space to the screen's edge.
 
 ??? info "More detail"
     - **Controller art.** The Consoles tab shows each console's controller
