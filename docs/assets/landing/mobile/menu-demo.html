@@ -1365,7 +1365,7 @@ document.querySelectorAll("#style-opts button[data-recent]").forEach(b => b.oncl
 syncRecent();
 /* Style > Page title: Show / Hide the tab row (main menu) and the header (game lists); L1/R1 still switch tabs; kept in localStorage */
 S.title = (() => { try { return localStorage.getItem("nx-title") !== "off"; } catch (e) { return true; } })();
-document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Page title"><span class="lbl">Page title</span>${[["on", "Show"], ["off", "Hide"]]
+document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Page title"><span class="lbl">Page title (Tabs)</span>${[["on", "Show"], ["off", "Hide"]]
   .map(([v, t]) => `<button data-title="${v}" aria-pressed="false">${t}</button>`).join("")}<span class="hd">Main menu and game lists</span></div>`);
 const syncTitle = () => {
   screen.classList.toggle("notitle", !S.title);
