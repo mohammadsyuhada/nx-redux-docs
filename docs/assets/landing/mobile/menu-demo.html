@@ -1179,10 +1179,10 @@ const tabsHTML = () => oneTab()
   ? `<div class="head" id="tabs"><span class="ttl">NX Redux</span></div>`
   : `<div class="tabs" id="tabs"><div class="tab-row">${CATS.map((c, i) => tabOn(i) ? `<span class="tab" data-c="${i}">${c.n}</span>` : "").join("")}</div></div>`;
 const hasGames = () => items().some(r => r.g);
-/* NxScreenBackground's fade, ported: a long diagonal ramp, black at the list side to clear at the right */
+/* NxScreenBackground's fade, ported: a long diagonal ramp, black at the list side to clear at the right; landscape centres it further right, as its screenshot sits flush */
 function drawFade(c) {
   const w = c.width = DIM[S.orient].w, h = c.height = DIM[S.orient].h, ctx = c.getContext("2d");
-  const gx = h, gy = .15 * w, len = Math.hypot(gx, gy), ux = gx / len, uy = gy / len, half = w * .72, cx = w * .625, cy = h * .5;
+  const gx = h, gy = .15 * w, len = Math.hypot(gx, gy), ux = gx / len, uy = gy / len, half = w * .72, cx = w * (w > h ? .7 : .625), cy = h * .5;
   const g = ctx.createLinearGradient(cx - ux * half, cy - uy * half, cx + ux * half, cy + uy * half);
   g.addColorStop(0, "rgb(0,0,0)"); g.addColorStop(.35, "rgb(0,0,0)"); g.addColorStop(.7, "rgba(0,0,0,.35)"); g.addColorStop(1, "rgba(0,0,0,0)");
   ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
@@ -1229,9 +1229,9 @@ function updateList() {
   if (lpad) { const on = !!it.pad && S.padArt; lpad.hidden = !on; lbg.classList.toggle("withpad", on); if (on) { lpad.style.setProperty("--pad", `url(${it.pad})`); lpad.style.setProperty("--padk", it.padk); } }   /* only consoles carry a logo behind the list */
   const gbg = document.getElementById("gbg");
   if (gbg) {
-    gbg.onload = () => {   /* NxScreenBackground: full height, right-aligned, pushed right 20% if it covers the width, else 7% */
+    gbg.onload = () => {   /* NxScreenBackground: full height, right-aligned; portrait pushes it right 20% if it covers the width, else 7%; landscape keeps it flush so the wide screen shows it whole */
       const d = DIM[S.orient], covers = d.h * gbg.naturalWidth / gbg.naturalHeight >= d.w;
-      gbg.style.transform = `translateX(${(covers ? .20 : .07) * d.w}px)`;
+      gbg.style.transform = d.w > d.h ? "none" : `translateX(${(covers ? .20 : .07) * d.w}px)`;
     };
     const src = shotOf(it);   /* the screenshot, else the generated abstract art */
     gbg.hidden = !src;   /* no screenshot: the list sits on black */
