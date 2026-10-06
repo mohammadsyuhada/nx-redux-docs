@@ -37,7 +37,9 @@ vertically.
 
 ## Home tab
 
-`Show` or `Hide` (default) the [Home](../guide/main-menu.md#home) tab. Home
+![Layouts settings, the tab, page title and button hint rows](../../assets/screenshots/set-layouts-2.png)
+
+`Show` (default) or `Hide` the [Home](../guide/main-menu.md#home) tab. Home
 still shows when every other tab is hidden.
 
 ## Consoles tab / Collections tab / Tools tab

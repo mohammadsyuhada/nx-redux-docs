@@ -1,9 +1,9 @@
 # Main Menu & Game Lists
 
 The main menu is split into four tabs: **Home**, **Consoles**,
-**Collections** and **Tools**. Home is hidden until you turn it on in
-[Layouts](../settings/layouts.md#home-tab); the device powers on to the first
-tab that shows.
+**Collections** and **Tools**. The device powers on to Home, or to the first
+tab that shows when Home is turned off in
+[Layouts](../settings/layouts.md#home-tab).
 
 ![Home tab](../../assets/screenshots/main-menu.png)
 
@@ -51,7 +51,7 @@ focus.
       list. A game launched from Search or the Game Switcher returns you
       to the tab that lists it.
     - The last tab is remembered until the device powers off. A cold boot
-      opens the first tab that shows (Home when it is on).
+      opens Home (the first tab that shows when Home is off).
 
 ## Home
 

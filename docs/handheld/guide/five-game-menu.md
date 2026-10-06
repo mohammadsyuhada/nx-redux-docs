@@ -20,8 +20,7 @@ games and tools can be pinned.
 
 ## 2. Hide the other tabs
 
-In **Settings → Appearance →** [Layouts](../settings/layouts.md), set these to
-`Hide`:
+In **Settings →** [Layouts](../settings/layouts.md), set these to `Hide`:
 
 | Setting | What it hides |
 | --- | --- |
@@ -29,7 +28,8 @@ In **Settings → Appearance →** [Layouts](../settings/layouts.md), set these 
 | **Collections tab** | Your collections |
 | **Tools tab** | The Tools tab |
 
-That leaves only Home.
+That leaves only Home. (Home shows whenever no other tab does, even with its
+own **Home tab** setting at `Hide`.)
 
 ## Getting back to Tools
 

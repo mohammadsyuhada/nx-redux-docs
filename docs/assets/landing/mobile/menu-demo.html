@@ -649,8 +649,7 @@ const MD = [{"n": "Outrun", "g": "md-outrun"}, {"n": "Outrun 2019", "g": "md-out
 CONSOLES[0].count = MD.length;   /* matches what opening it lists */
 /* Tabs (page control): any tab, Home too, can be switched off; at least one stays on. Kept in localStorage ("nx-tabs", the names of the tabs off) */
 const TAB_OFF = new Set();
-/* nothing saved yet: Home starts off (Layouts > Home tab defaults to Hide, 2026-10-06) */
-try { const saved = localStorage.getItem("nx-tabs"); if (saved == null) TAB_OFF.add(CATS.indexOf(HOME_CAT)); else JSON.parse(saved).forEach(n => { const i = CATS.findIndex(c => c.n === n); if (i >= 0) TAB_OFF.add(i); }); } catch (e) { TAB_OFF.add(CATS.indexOf(HOME_CAT)); }
+try { JSON.parse(localStorage.getItem("nx-tabs") || "[]").forEach(n => { const i = CATS.findIndex(c => c.n === n); if (i >= 0) TAB_OFF.add(i); }); } catch (e) {}   /* every tab on by default, Home too */
 if (TAB_OFF.size >= CATS.length) TAB_OFF.clear();
 const tabOn = i => !TAB_OFF.has(i), oneTab = () => TAB_OFF.size === CATS.length - 1;
 /* a tab that is off hands over to the next one on (Home off: the menu opens on Consoles) */

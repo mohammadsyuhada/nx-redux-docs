@@ -105,8 +105,8 @@ the list.
 
 ## Reset to defaults
 
-Resets all options on this page, and on the Layouts page, to their default
-values.
+Resets all options on this page to their default values. The
+[Layouts](layouts.md) page has its own reset.
 
 ??? info "Options that moved or were removed"
     The main menu redesign replaced several older options:

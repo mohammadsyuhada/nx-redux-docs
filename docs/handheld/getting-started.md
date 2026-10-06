@@ -101,7 +101,9 @@ nothing to copy by hand.
 ## First boot
 
 After installation you land on **Home**, the first of the main menu's four
-tabs: Home, Consoles, Collections and Tools. Switch tabs with `L1` / `R1`.
+tabs: Home, Consoles, Collections and Tools. Switch tabs with `L1` / `R1`. Any
+tab, Home included, can be turned off in
+[Settings → Layouts](settings/layouts.md#home-tab).
 
 ![The main menu's Home tab](../assets/screenshots/main-menu.png)
 
