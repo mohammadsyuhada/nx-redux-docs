@@ -25,8 +25,7 @@ forked.
 - [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
   overlays.
 - [ben16w](https://github.com/ben16w/minui-portmaster) for
-  Minui-Portmaster (and [minui-psp](https://github.com/ben16w/minui-psp),
-  the standalone PSP emulator earlier versions offered in the Xtras store).
+  Minui-Portmaster.
 - [RetroAchievements](https://retroachievements.org/) and
   [rcheevos](https://github.com/RetroAchievements/rcheevos) for the
   achievements ecosystem.
