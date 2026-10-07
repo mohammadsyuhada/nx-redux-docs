@@ -58,6 +58,9 @@ the tab row is replaced by an **NX Redux** title.
 `Show` (default) or `Hide` each console's controller behind it on the
 Consoles tab.
 
+Hide it to show your own picture behind each console in the List style
+instead: see [Your own console backgrounds](../guide/layouts.md#your-own-console-backgrounds).
+
 ## Page title
 
 `Show` (default) or `Hide` the tab row on the main menu and the title above a

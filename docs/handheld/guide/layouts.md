@@ -46,6 +46,37 @@ background.
 - On the main menu `Left` / `Right` switch tabs. In game lists they page up
   and down.
 
+### Your own console backgrounds
+
+The Consoles tab in List can show a picture of your choosing behind each
+console instead of its controller, much like the list's look before 2.0.
+
+1. Make the image and name it `bg.png`.
+2. Put it in that console's `.media` folder:
+   `Roms/<console> (<tag>)/.media/bg.png`, for example
+   `Roms/Game Boy (GB)/.media/bg.png`.
+3. In [Settings → Layouts](../settings/layouts.md), set **Controller** to
+   **Hide**.
+
+The selected console's `bg.png` then fills the screen behind the list. A
+console without one shows the plain list on black.
+
+*Consoles tab in List with a custom background, Page title and Button hints
+hidden*
+
+![Consoles tab in List style with a custom Game Boy background](../../assets/screenshots/consoles-list-custom-bg.png)
+
+??? info "More detail"
+    - Size the image to the screen: 1024×768 on the Brick, 1280×720 on the
+      Brick Pro and Smart Pro S.
+    - With **Controller** on, the controller is shown and `bg.png` is
+      ignored.
+    - The Collections tab in List takes a background too, with no setting to
+      change: `Collections/.media/<collection name>.png` for one collection,
+      or `Collections/.media/bg.png` for all of them.
+    - The [Artwork Manager](../apps/artwork-manager.md) never touches `bg.png`:
+      neither **Reset artwork** nor **Optimize images** changes it.
+
 ## Grid
 
 Two rows of tiles that slide sideways as you move. Consoles show their logo
