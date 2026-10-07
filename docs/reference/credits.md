@@ -37,11 +37,11 @@ forked.
 - [PortMaster](https://portmaster.games/) for the community game-port
   launcher and catalog.
 
-## NX Redux Mobile
+## Mobile
 
 - [Filippo Scognamiglio](https://github.com/Swordfish90) for
-  [LibretroDroid](https://github.com/Swordfish90/LibretroDroid), which NX Redux
-  Mobile's emulator runner is forked from.
+  [LibretroDroid](https://github.com/Swordfish90/LibretroDroid), which the
+  mobile emulator runner is forked from.
 - The authors of every emulator core the app runs; see
   [Licenses](licenses.md#emulators).
 - [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
@@ -57,4 +57,4 @@ original project. All original copyrights are retained; modifications are
 also distributed under GPL-3.0. See the
 [LICENSE](https://github.com/mohammadsyuhada/nx-redux/blob/main/LICENSE)
 file for details. The licenses of the emulators, libraries, fonts and art
-both apps include are on [Licenses](licenses.md).
+NX Redux includes are on [Licenses](licenses.md).
