@@ -80,8 +80,7 @@ and everything you pinned.
   pinned games the top section fills the screen and the tool tiles grow, in
   columns of four, and one or two pinned games stand in a column beside the
   Continue card instead of a row.
-- Home keeps the same size whatever the
-  [UI scale](../settings/appearance.md#ui-scale) is set to.
+- Home looks the same size on every device.
 
 | Button | What it does |
 | --- | --- |

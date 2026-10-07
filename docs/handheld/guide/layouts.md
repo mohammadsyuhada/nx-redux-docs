@@ -29,8 +29,7 @@ background.
 
 ![Game list in List style](../../assets/screenshots/game-list-list.png)
 
-- The line at the bottom holds the scroll arrows. On the Collections tab it
-  also shows each collection's game count.
+- The line at the bottom holds the scroll arrows.
 - With [Button hints](../settings/layouts.md#button-hints) hidden, a game
   list shows the selected game's last-played time, achievements and next
   achievement in the bottom row, where the hints were.

@@ -1,34 +1,13 @@
 # Appearance
 
-Change how the interface looks: UI scale, menu layouts, colors (with live
-swatches) and animations.
+Change how the interface looks: menu layouts, colors (with live swatches) and
+animations.
+
+Text and menus are sized for each device's screen, so the interface looks the
+same size on the Brick, Brick Pro and Smart Pro S. There is no UI scale
+setting.
 
 ![Appearance settings](../../assets/screenshots/set-appearance.png)
-
-## UI scale
-
-Size of text and menus across the whole UI.
-
-| Choice | What it does |
-| --- | --- |
-| **Default** | Follows the device and shows which scale that is: **Default (Large)** on the Brick, **Default (Small)** on the Brick Pro and Smart Pro S. |
-| **Small** | Smaller, shows more rows. |
-| **Large** | Larger, shows fewer rows. |
-
-- Settings redraws at the new scale straight away.
-- The main menu, the other tools and the in-game menus pick it up the next
-  time they start. For the main menu, that is as soon as you leave Settings.
-- The main menu's tab row, page titles and hint bar keep their size at every
-  scale.
-- The Nintendo 64 in-game menu uses the same scale.
-
-*Default (Large) on the Brick*
-
-![Appearance at Default (Large)](../../assets/screenshots/ui-scale-default.png)
-
-*Small on the Brick*
-
-![Appearance at Small](../../assets/screenshots/ui-scale-small.png)
 
 ## Main color
 
