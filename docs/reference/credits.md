@@ -36,6 +36,7 @@ forked.
   achievements ecosystem.
 - [PortMaster](https://portmaster.games/) for the community game-port
   launcher and catalog.
+- Xiaomi for the [MiSans](https://hyperos.mi.com/font/en/download/) font.
 
 ## Mobile
 
