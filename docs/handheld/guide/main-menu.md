@@ -71,10 +71,11 @@ and everything you pinned.
 - **Pinned tools** sit beside the Continue card as square icon tiles. Every
   pinned tool is shown.
 - **Pinned games** fill the rows below, two per row on the Brick and Brick Pro
-  and four on the Smart Pro S. The selected pin shows its name and play time.
+  and three on the Smart Pro S. The selected pin shows its name (on up to two
+  lines) and play time.
 - **On the Brick and Brick Pro** the Continue card and the tool tiles (in
-  columns of four) always fill the screen, and the pinned games sit below it:
-  press `Down` to scroll to them.
+  columns of four on the Brick, five on the Brick Pro) always fill the screen,
+  and the pinned games sit below it: press `Down` to scroll to them.
 - **On the Smart Pro S** the tools stand in columns of three and a row of
   pinned games shares the screen; Home scrolls when there are more. With no
   pinned games the top section fills the screen and the tool tiles grow, in

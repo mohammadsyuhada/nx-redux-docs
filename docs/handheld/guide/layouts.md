@@ -103,7 +103,13 @@ to the other end.
 A single row with the selected item large in the middle and its neighbours
 fading out to the sides. Consoles show their logo over their controller,
 collections their name, tools their icon. In a game list the caption under
-the selected game gives its name, play time and achievements.
+the selected game gives its name, play time and achievements; on the Brick and
+Brick Pro the next achievement gets a line of its own. The selected game sits
+centred with its caption, so a game without stats sits a little lower.
+
+In the horizontal Carousel, collections and tools take the width their name
+needs, with the same gap between each. A collection name starts a new line
+before any long word.
 
 *Consoles tab*
 
