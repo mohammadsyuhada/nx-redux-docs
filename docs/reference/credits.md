@@ -1,12 +1,18 @@
 # Credits
 
-NX Redux is a fork of [NextUI](https://github.com/LoveRetro/NextUI) by
-LoveRetro, which itself descends from
+On TrimUI handhelds, NX Redux is a fork of
+[NextUI](https://github.com/LoveRetro/NextUI) by LoveRetro, which itself
+descends from
 [MinUI](https://github.com/shauninman/MinUI) by Shaun Inman. It is an
 independent fork, not affiliated with the original NextUI project, and
 develops independently — NextUI has since moved to the PolyForm
 Noncommercial license, so NX Redux continues from the GPL-3.0 codebase it
 forked.
+
+On Android, NX Redux is built on
+[LibretroDroid](https://github.com/Swordfish90/LibretroDroid) by Filippo
+Scognamiglio: its emulator runner is a fork of LibretroDroid, also GPL-3.0,
+and the rest of the app is written for NX Redux.
 
 ## Thanks to
 
