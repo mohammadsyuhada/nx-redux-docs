@@ -24,10 +24,6 @@ forked.
   [LoveRetro/NextUI#796](https://github.com/LoveRetro/NextUI/pull/796).
 - [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
   overlays.
-- [timbueno](https://github.com/timbueno/ArtBookNextUI.theme) for the
-  Artbook theme.
-- [anthonycaccese](https://github.com/anthonycaccese/art-book-next-es) for
-  the Artbook artwork.
 - [ben16w](https://github.com/ben16w/minui-portmaster) for
   Minui-Portmaster (and [minui-psp](https://github.com/ben16w/minui-psp),
   the standalone PSP emulator earlier versions offered in the Xtras store).
