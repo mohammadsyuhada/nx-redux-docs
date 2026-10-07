@@ -19,35 +19,29 @@ forked.
 - [carroarmato0](https://github.com/carroarmato0) for the
   [minarch modularization](https://github.com/LoveRetro/NextUI/pull/721)
   that the modular emulator core split is based on.
+- [Filippo Scognamiglio](https://github.com/Swordfish90) for
+  [LibretroDroid](https://github.com/Swordfish90/LibretroDroid), which the
+  mobile emulator runner is forked from.
+- The authors of every emulator core NX Redux runs; see
+  [Licenses](licenses.md#emulators).
+- [RetroAchievements](https://retroachievements.org/) and
+  [rcheevos](https://github.com/RetroAchievements/rcheevos) for the
+  achievements ecosystem.
 - [sinedied](https://github.com/sinedied/perfect-retroshaders) for the
   shaders, originally proposed for NextUI in
   [LoveRetro/NextUI#796](https://github.com/LoveRetro/NextUI/pull/796).
 - [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
   overlays.
 - [ben16w](https://github.com/ben16w/minui-portmaster) for
-  Minui-Portmaster.
-- [RetroAchievements](https://retroachievements.org/) and
-  [rcheevos](https://github.com/RetroAchievements/rcheevos) for the
-  achievements ecosystem.
-- [PortMaster](https://portmaster.games/) for the community game-port
-  launcher and catalog.
+  Minui-Portmaster, and [PortMaster](https://portmaster.games/) for the
+  community game-port launcher and catalog (handheld).
+- Dan Patrick for the [redrawn console logos](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions)
+  and [Kenney](https://kenney.nl) for the
+  [input prompts](https://kenney.nl/assets/input-prompts) (mobile).
 - Xiaomi for the [MiSans](https://hyperos.mi.com/font/en/download/) font.
 - The [M+ FONTS Project](https://mplusfonts.github.io/) and Jikasei Font
-  Koubou for the [Rounded M+ 1c](http://jikasei.me/font/rounded-mplus/) font.
-
-## Mobile
-
-- [Filippo Scognamiglio](https://github.com/Swordfish90) for
-  [LibretroDroid](https://github.com/Swordfish90/LibretroDroid), which the
-  mobile emulator runner is forked from.
-- The authors of every emulator core the app runs; see
-  [Licenses](licenses.md#emulators).
-- [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
-  overlays, shared with the handheld.
-- Dan Patrick for the [redrawn console logos](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions), and
-  [Kenney](https://kenney.nl) for the
-  [input prompts](https://kenney.nl/assets/input-prompts).
-- Xiaomi for the [MiSans](https://hyperos.mi.com/font/en/download/) font.
+  Koubou for the [Rounded M+ 1c](http://jikasei.me/font/rounded-mplus/) font
+  (handheld).
 
 ## License
 
