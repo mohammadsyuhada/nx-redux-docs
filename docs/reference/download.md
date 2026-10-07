@@ -22,9 +22,9 @@ and Smart Pro. Releases are packaged per device, so download the zip for
 
 ## Mobile
 
-NX Redux Mobile for Android phones, tablets and Android handhelds is
+NX Redux for Android phones, tablets and Android handhelds is
 **coming soon**. See
-[Getting Started with NX Redux Mobile](../mobile/getting-started.md) for what
+[Getting Started on Mobile](../mobile/getting-started.md) for what
 is coming.
 
 It will be available from two places: the **GitHub releases** page as an

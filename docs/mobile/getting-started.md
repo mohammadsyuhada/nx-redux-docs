@@ -1,20 +1,19 @@
 ---
-title: Getting Started with NX Redux Mobile
+title: Getting Started on Mobile
 ---
 
-# Getting Started with NX Redux Mobile
+# Getting Started
 
 !!! info "Coming soon"
-    NX Redux Mobile is not released yet. These pages describe the app as it
+    NX Redux for Android is not released yet. These pages describe the app as it
     is today.
 
-NX Redux Mobile brings the NX Redux look, folder layout and in-game features
-to Android phones, tablets, foldables and Android handhelds. It runs retro
+NX Redux for Android brings the NX Redux look, folder layout and in-game
+features to Android phones, tablets, foldables and Android handhelds. It runs retro
 systems through emulators bundled in the app, with nothing extra to download.
-On your phone, the app's icon and title read **NX Redux**.
 
 <figure class="nx-phone" markdown>
-![NX Redux Mobile on the Home tab, on the cover screen of a folded Galaxy Z Fold](../assets/screenshots/mobile/home-full.webp){ .nx-phone__screen }
+![NX Redux on the Home tab, on the cover screen of a folded Galaxy Z Fold](../assets/screenshots/mobile/home-full.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 

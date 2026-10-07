@@ -4,7 +4,7 @@ title: Mobile FAQ
 
 # Mobile FAQ
 
-Common questions about NX Redux Mobile, the Android app. Using a TrimUI
+Common questions about NX Redux for Android. Using a TrimUI
 handheld? See the [Handheld FAQ](handheld.md).
 
 ## Can I use the same games folder as my handheld?
@@ -158,5 +158,5 @@ is back. **Tools → Settings → Library → ROM folders** marks the folder
 
 ## Is there an iOS version?
 
-Not yet. NX Redux Mobile runs on Android only for now. An iOS version follows
+Not yet. NX Redux runs on Android only for now. An iOS version follows
 the Android one.

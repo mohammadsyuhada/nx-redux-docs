@@ -90,7 +90,7 @@ round your controller's face buttons are. See
 
 ## Frontend
 
-Settings handled by NX Redux Mobile rather than the core. The list is the
+Settings handled by NX Redux rather than the core. The list is the
 same for every console. `LEFT` / `RIGHT` change a value.
 
 ![The Frontend page](../assets/screenshots/mobile/in-game-frontend.webp)

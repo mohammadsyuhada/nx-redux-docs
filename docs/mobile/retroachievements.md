@@ -1,6 +1,6 @@
 # RetroAchievements
 
-NX Redux Mobile supports [RetroAchievements](https://retroachievements.org/),
+NX Redux for Android supports [RetroAchievements](https://retroachievements.org/),
 with offline play. **Tools → RetroAchievements** is the home for the feature:
 sign in, browse your achievements and change its settings there.
 
@@ -12,7 +12,7 @@ waiting to be synced and when you last synced, above three rows:
 signed in** and **Sign in under Settings** instead.
 
 !!! info "Softcore only"
-    NX Redux Mobile is not an RA-approved hardcore client, so there is no
+    NX Redux for Android is not an RA-approved hardcore client, so there is no
     hardcore mode. Unlocks count as softcore, and nothing is blocked
     while achievements are on: cheats and save states work as usual.
 

@@ -86,7 +86,7 @@ To give a game a **fresh, empty card**:
 
     - **Multi-disc games:** a `(Disc 1)` / `(Disc 2 of 3)` tag in the file
       name is ignored, which is how the discs share one card.
-    - **The names match [NX Redux Mobile](../../mobile/getting-started.md):**
+    - **The names match [NX Redux for Android](../../mobile/getting-started.md):**
       copy a card between your phone and handheld and it just works.
     - **Card writes are saved immediately,** so a crash or a forced quit
       can't leave a half-written card.

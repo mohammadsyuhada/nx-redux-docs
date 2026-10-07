@@ -1,6 +1,6 @@
 # Foldables & Large Screens
 
-NX Redux Mobile fits itself to the screen it's on. A half-folded foldable
+NX Redux fits itself to the screen it's on. A half-folded foldable
 gets Flex mode, a wide or large screen gets a fuller Home, and Settings and
 the in-game menu split into two panes when there is room.
 

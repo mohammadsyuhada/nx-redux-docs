@@ -1,6 +1,6 @@
 # Cheats
 
-NX Redux Mobile uses [libretro](https://www.libretro.com/)'s cheat
+NX Redux uses [libretro](https://www.libretro.com/)'s cheat
 collection. Download it once from **Tools → Cheat Database**, then turn
 cheats on and off from a game's [in-game menu](in-game-menu.md#cheats).
 
