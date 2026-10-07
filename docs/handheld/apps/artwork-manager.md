@@ -111,12 +111,48 @@ the screenshot for List, Grid and Carousel, and both for Backdrop.
     An image is skipped when ScreenScraper has none for the game. A game with
     no art at all gets a generated placeholder picture in the menus instead.
 
+    Both are saved as 256-colour PNGs at their full size: they look the same
+    on the handheld's screen and take about a third of the space. Art fetched
+    by older releases can be shrunk the same way with
+    [Optimize images](#optimize-images).
+
 !!! note "Art fetched by older releases"
     Releases up to v1.13.0 also made a **Mix** image (the screenshot with
     the box art and logo over it) at `.media/<game>.png`, and releases up to
     v1.9.0 made only the Mix. The menus no longer use it, and a game with only
     a Mix counts as having no art: queue it again to fetch the screenshot and
     box art.
+
+## Optimize images
+
+**Optimize images** shrinks the art already on your SD card. Each screenshot
+and box art is rewritten as a 256-colour PNG at the same size, so it looks the
+same in the menus but takes far less space, typically a third of the
+original. It is most useful for art fetched by older releases, which saved
+full-colour files.
+
+![Optimize images confirmation](../../assets/screenshots/artwork-optimize.png)
+
+After you confirm, a progress page shows the system being worked on and how
+many files are done. Press `B` to stop: the file in progress is finished first,
+so nothing is left half-written. When it ends, a summary shows how many files
+were optimized and how much space was saved.
+
+!!! warning "This can't be undone"
+    The original full-colour files are replaced. If you want to keep them,
+    copy the `.media` folders off the card first.
+
+??? info "More detail"
+    - It covers every `.media` folder under `Roms`, including art inside game
+      sub-folders: the `screenshot` and `boxart` images and any older art
+      directly in `.media`.
+    - The folder backgrounds (`bg.png`, `bglist.png`) are left alone.
+    - A file that is already optimized, or that would not get smaller, is
+      skipped, so running it again is quick and safe.
+    - The device stays awake while it runs. A large library can take a few
+      minutes: about 400 images took 6 minutes on a Smart Pro S and saved
+      over half the space.
+    - It can't start while a fetch queue is running.
 
 ## Settings — reset
 
