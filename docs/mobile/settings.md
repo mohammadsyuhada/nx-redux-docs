@@ -11,7 +11,7 @@ sections.
 | [**Emulators**](emulator-settings.md) | **Default emulators**, and **Settings** for each emulator's options |
 | [**Appearance**](appearance.md) | Pad theme, UI Scale, Accent and Secondary accent |
 | [**Layouts**](layouts.md) | The style of each main menu tab and of the game lists |
-| [**Controls**](controls.md#vibration) | Pad vibration and Game rumble |
+| [**Controls**](controls-settings.md) | Pad vibration and Game rumble |
 | [**Launcher**](launcher.md) | Use the app as your home screen, and pick Android apps and games |
 | [**About**](about.md) | The app's version and your device's details |
 

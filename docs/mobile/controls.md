@@ -165,18 +165,9 @@ match.
 
 ## Vibration
 
-**Tools → Settings → Controls** sets the two kinds of vibration. `Right`
-and `A` step the highlighted row to its next value, and `Left` to the
-previous one.
-
-| Setting | Values | Default |
-| --- | --- | --- |
-| [**Pad vibration**](#pad-vibration) | Off, Light, Medium, Strong | Light |
-| [**Game rumble**](#game-rumble) | Off, Light, Medium, Strong | Medium |
-| **Reset to defaults** | | |
-
-**Reset to defaults** puts both back to their defaults. It does not ask
-first.
+The app vibrates in two ways: a tick under your thumb on the on-screen pad,
+and the game's own rumble. Set how strong each one is, or turn it off, in
+[**Tools → Settings → Controls**](controls-settings.md).
 
 ### Pad vibration
 
