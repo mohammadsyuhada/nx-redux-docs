@@ -32,7 +32,11 @@ See [Controls](controls.md).
 
 ### The tab row
 
-Press `Up` from the top of a tab to move the highlight onto the tab row.
+Press `Up` from the top of Home, from the top row of a Grid or from a
+Horizontal Carousel to move the highlight onto the tab row. In List style and
+a Vertical Carousel, `Up` on the first item wraps to the last instead. With
+**Page title** hidden in [Layouts](layouts.md#page-title-and-button-hints)
+there is no tab row, and `L1` / `R1` switch tabs.
 
 | Button | What it does |
 | --- | --- |
@@ -129,8 +133,8 @@ The tools have their own pages: [RetroAchievements](retroachievements.md),
 
 ## Game lists
 
-Opening a console or a collection shows its games. The page title says where
-you are, e.g. **Consoles | Sega Genesis**.
+Opening a console or a collection shows its games. The page title names the
+console or collection, e.g. **Sega Genesis**.
 
 ![Game list in the default Carousel style](../assets/screenshots/mobile/game-list.webp)
 

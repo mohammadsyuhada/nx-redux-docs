@@ -163,6 +163,82 @@ Sega Genesis, Sega CD and 32X games have **Controller Type** in **Options →
 Some older games misbehave with a 6-button pad. The on-screen pad changes to
 match.
 
+## Vibration
+
+**Tools → Settings → Controls** sets the two kinds of vibration. `Right`
+and `A` step the highlighted row to its next value, and `Left` to the
+previous one.
+
+| Setting | Values | Default |
+| --- | --- | --- |
+| [**Pad vibration**](#pad-vibration) | Off, Light, Medium, Strong | Light |
+| [**Game rumble**](#game-rumble) | Off, Light, Medium, Strong | Medium |
+| **Reset to defaults** | | |
+
+**Reset to defaults** puts both back to their defaults. It does not ask
+first.
+
+### Pad vibration
+
+A short tick when you use the on-screen pad. It ticks:
+
+- When you press a button, not when you let go.
+- When the d-pad moves to a new direction, diagonals included. Holding a
+  direction, or letting go back to the centre, does not tick.
+- When your thumb slides onto another button.
+- When the on-screen stick moves to a new direction (up, down, left or
+  right), in the main menu only. In games the stick never ticks.
+
+A controller never makes the phone tick.
+
+Pad vibration follows the phone's own touch feedback setting: with touch
+feedback off in Android's settings, the pad stays silent too. On Android 13
+and later, Android's touch vibration strength also scales it.
+
+### Game rumble
+
+The game's own rumble, for the games and consoles that have it. It goes to
+the controller you are playing with when it has a rumble motor, and to the
+phone (or the handheld's motor) when it doesn't. Pressing the on-screen pad
+moves it back to the phone.
+
+- Changing the level plays a short pulse at that strength, so you can feel
+  it. **Off** plays none.
+- The rumble stops while the [in-game menu](in-game-menu.md) is open and
+  picks up again when you close it. It also stops when you leave the app or
+  quit the game.
+- Game rumble plays as media vibration, so turning touch feedback off in
+  Android's settings does not silence it. Set it to **Off** here instead.
+
+These consoles rumble:
+
+| Console | Which games |
+| --- | --- |
+| Game Boy, Game Boy Color | Games on a rumble cartridge, such as Pokémon Pinball |
+| Game Boy Advance | Games with rumble |
+| PlayStation | Games with DualShock rumble |
+| Dreamcast | Games that use the Vibration Pack. It is in each controller's second slot out of the box |
+| Pokémon mini | Games with rumble |
+| Doom (PrBoom) | Rumble is on out of the box |
+| Nintendo 64 | Only with the Rumble Pak inserted (see below) |
+
+Other consoles have no rumble.
+
+**Nintendo 64:** the controller holds the Controller Pak (for saves) out of
+the box. To feel a game's rumble, open
+[Emulator Settings](emulator-settings.md) for the console, or **Game
+Settings** for one game, and under **Core settings → Pak/Controller
+Options** set **Player 1 Pak** to **rumble**. The Rumble Pak takes the
+Controller Pak's place, so a game can't save to the Controller Pak while it
+is in. Start the game again for the change to take effect.
+
+??? info "More detail"
+    - The emulators' own rumble options are in **Core settings** too, such
+      as **Rumble Effects** for PlayStation and Doom, **Device in Expansion
+      Slot A2** for Dreamcast, and **Controller Rumble Strength** for Game
+      Boy. Leave them as they are; **Game rumble** sets how strong it feels.
+    - Only player 1's rumble is played.
+
 ## In the menus
 
 | Button | What it does |

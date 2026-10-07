@@ -1,9 +1,9 @@
 # Menu Layouts
 
 The Consoles, Collections and Tools tabs, and every game list, can each be
-drawn in their own style. Pick them in
-**Tools → Settings → Appearance → Layouts**. Home has no layout setting: it
-looks the same whatever you pick here.
+drawn in their own style. Pick them in **Tools → Settings → Layouts**, which
+also lets you hide the page title and the button hints. Home has no layout
+setting: it looks the same whatever you pick here.
 
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
@@ -35,7 +35,9 @@ only show when they apply.
 | **Game lists orientation** | Horizontal, Vertical | Horizontal | When Game lists is Carousel or Backdrop |
 | **Vertical alignment** | Left, Right | Left | When Game lists orientation is Vertical |
 | **Controller** | Show, Hide | Show | Always |
-| **Reset to defaults** | | | Always |
+| [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
+| [**Button hints**](#page-title-and-button-hints) | Show, Hide | Show | Always |
+| [**Reset to defaults**](#reset-to-defaults) | | | Always |
 
 ## List
 
@@ -51,8 +53,13 @@ background.
 
 ![Game list in List style](../assets/screenshots/mobile/game-list-list.webp)
 
-The line at the bottom shows the game count on a tab, and the selected
-game's last-played time, achievements and next achievement in a game list.
+The line at the bottom shows the selected game's last-played time,
+achievements and next achievement in a game list, and the game count on the
+Collections tab. On the Consoles tab it holds only the scroll arrows, with no
+shade behind them.
+
+`Up` on the first row wraps to the last, and `Down` on the last row wraps to
+the first. Only a fresh press wraps: holding the button stops at the end.
 
 ## Grid
 
@@ -94,8 +101,9 @@ screenshot, with its neighbours' boxes to the sides.
 
 Carousel and Backdrop can also run **down** the screen instead of across:
 set the **orientation** row under the style to **Vertical**. `Up` / `Down`
-then move through the items. `Left` / `Right` switch tabs on a tab, and do
-nothing in a game list.
+then move through the items, wrapping as a List does: `Up` on the first item
+goes to the last and `Down` on the last to the first, on a fresh press only.
+`Left` / `Right` switch tabs on a tab, and do nothing in a game list.
 
 <div class="grid" markdown>
 
@@ -166,11 +174,31 @@ These are the Carousel and Backdrop game lists, both Horizontal.
 The Consoles tab shows each console's controller behind it in the List and
 Carousel styles. Set **Controller** to **Hide** for plain logos.
 
+## Page title and button hints
+
+**Page title** set to **Hide** removes the main menu's tab row and a game
+list's title. `L1` / `R1` still switch tabs. **Button hints** set to **Hide**
+removes the hint bar along the bottom of the main menu and the game lists.
+Other screens, such as Settings and the in-game menu, keep both.
+
+- They only take effect while a controller is connected or the portrait pad
+  shows. With touch alone in landscape, the hints stay and the main menu
+  keeps its tab row (a tap on a tab is the only touch way to switch tabs),
+  while a game list's title still hides.
+- With the title hidden, its space goes to the page. A List shows more rows.
+  Home moves its stats strip to the top of the screen and gains a row of tool
+  squares. Grid, Carousel and Backdrop keep their size and centre in the full
+  height.
+- With the hints hidden, their space stays empty, Home included. In a List
+  game list, the selected game's play time and achievements move down into
+  that row.
+
 ## Reset to defaults
 
-**Reset to defaults** on the Layouts page puts every row on this page back
-to its default. It does not ask first. **Reset to defaults** on the
-[Appearance](appearance.md) page resets the layouts too.
+**Reset to defaults** puts every row on the Layouts page back to its
+default: each tab's style and orientation, the game lists' style,
+orientation and alignment, **Controller**, **Page title** and
+**Button hints**. It does not ask first.
 
 ??? info "Games without artwork"
     A game with no screenshot or box art gets a generated abstract picture,

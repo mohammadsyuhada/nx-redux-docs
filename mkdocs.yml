@@ -184,7 +184,6 @@ nav:
       - Getting Started: mobile/getting-started.md
       - User Guide:
           - Main Menu & Home: mobile/main-menu.md
-          - Menu Layouts: mobile/layouts.md
           - Library & ROM folders: mobile/library.md
           - Controls: mobile/controls.md
           - In-game Menu: mobile/in-game-menu.md
@@ -203,6 +202,8 @@ nav:
       - Settings:
           - Overview: mobile/settings.md
           - Appearance: mobile/appearance.md
+          - Layouts: mobile/layouts.md
+          - Controls: mobile/controls.md
           - About: mobile/about.md
   - Reference:
       - Download: reference/download.md

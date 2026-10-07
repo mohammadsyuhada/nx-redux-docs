@@ -1,8 +1,9 @@
 # Appearance
 
 **Tools → Settings → Appearance** sets the look of the app: the on-screen
-pad, the text size, the colours and the menu layouts. `Right` and `A`
-step the highlighted row to its next value, and `Left` to the previous one.
+pad, the text size and the colours. `Right` and `A` step the highlighted row
+to its next value, and `Left` to the previous one. The menu styles have their
+own category, [Layouts](layouts.md).
 
 ![Appearance settings](../assets/screenshots/mobile/settings-appearance.webp)
 
@@ -12,7 +13,6 @@ step the highlighted row to its next value, and `Left` to the previous one.
 | [**UI Scale**](#ui-scale) | Large, Small | Large |
 | [**Accent**](#accent) | White, Red, Orange, Amber, Lime, Teal, Sky, Violet, Pink | White |
 | [**Secondary accent**](#secondary-accent) | Auto, then the same nine colours | Teal |
-| [**Layouts**](#layouts) | Opens the Layouts page | |
 | [**Reset to defaults**](#reset-to-defaults) | | |
 
 ## Pad theme
@@ -62,12 +62,8 @@ The colour of the bar behind a selected setting's value, as in
   gives Teal.
 - The nine Accent colours can be picked here too.
 
-## Layouts
-
-Opens the [Layouts](layouts.md) page: the style of each main menu tab and of
-the game lists.
-
 ## Reset to defaults
 
-Puts every option on this page back to its default, and resets the
-[Layouts](layouts.md) page too. It does not ask first.
+Puts **Pad theme**, **UI Scale**, **Accent** and **Secondary accent** back to
+their defaults. It does not ask first. It leaves the [Layouts](layouts.md)
+page alone: that page has its own **Reset to defaults**.
