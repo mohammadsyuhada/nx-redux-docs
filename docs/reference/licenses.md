@@ -4,7 +4,7 @@ The license NX Redux is distributed under, and the licenses of the emulators,
 libraries, fonts and art it includes, on the handheld and on mobile.
 
 <!-- Publish with the mobile release that ships the licences branch (licence
-     texts in the APK, MiSans fetched at build time, the About Font row), and
+     texts in the APK, the About Font row), and
      once nx-redux ships each core's licence text in its pak. Until then the
      "Where to find the full texts" section is ahead of both platforms. -->
 
@@ -94,9 +94,7 @@ On the handheld, NX Redux inherits its libraries from NextUI and MinUI; see
   [Xiaomi's MiSans terms](https://hyperos.mi.com/font/en/download/). Software
   may embed the font as long as it notes that MiSans is used
   ([MiSans FAQ](https://hyperos.mi.com/font/en/faq/)), which NX Redux does in
-  **Settings → About**. The font files may not be distributed on their own, so
-  the mobile build downloads MiSans from Xiaomi rather than keeping it in the
-  repository.
+  **Settings → About**.
 - **Rounded Mplus 1c** and **BPreplay** (handheld): SIL Open Font License 1.1.
 
 ## Art
