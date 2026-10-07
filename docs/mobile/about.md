@@ -15,6 +15,7 @@ details. The rows are read-only.
 | **Chip** | The phone's processor |
 | **GPU** | The graphics chip. It reads **…** for a moment while the app asks for it |
 | **Page size** | The memory page size, e.g. 4 KB |
+| **Font** | The font the app uses, MiSans by Xiaomi, credited as its license asks. See [Licenses](../reference/licenses.md#fonts) |
 
 A row the app can't read shows **Unknown**.
 
