@@ -47,7 +47,8 @@ forked.
 - [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays) for the
   overlays, shared with the handheld.
 - Dan Patrick for the [redrawn console logos](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions), and
-  [Kenney](https://kenney.nl) for the input prompts.
+  [Kenney](https://kenney.nl) for the
+  [input prompts](https://kenney.nl/assets/input-prompts).
 - Xiaomi for the [MiSans](https://hyperos.mi.com/font/en/download/) font.
 
 ## License

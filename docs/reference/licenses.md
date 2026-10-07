@@ -108,7 +108,8 @@ On the handheld, NX Redux inherits its libraries from NextUI and MinUI; see
   not under the GPL.
 - **Controller art** (mobile main menu): from ScreenScraper and manufacturers'
   product images.
-- **Input prompts** (mobile): Kenney's Input Prompts, CC0.
+- **Input prompts** (mobile): Kenney's
+  [Input Prompts](https://kenney.nl/assets/input-prompts), CC0.
 - **Shaders**: from libretro's glsl-shaders and sinedied's
   perfect-retroshaders; each file keeps its own license header.
 
