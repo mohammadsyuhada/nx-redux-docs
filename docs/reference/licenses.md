@@ -103,8 +103,8 @@ On the handheld, NX Redux inherits its libraries from NextUI and MinUI; see
 
 - **Console overlays** (handheld and mobile): by
   [KrutzOtrem](https://github.com/KrutzOtrem/Trimui-Brick-Overlays), MIT.
-- **Console logos** (mobile main menu): converted from Dan Patrick's redrawn
-  console logo set. His terms: never to be sold; credit appreciated. They are
+- **Console logos** (mobile main menu): converted from Dan Patrick's
+  [redrawn console logo set](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions). His terms: never to be sold; credit appreciated. They are
   not under the GPL.
 - **Controller art** (mobile main menu): from ScreenScraper and manufacturers'
   product images.
