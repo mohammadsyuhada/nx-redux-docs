@@ -97,7 +97,8 @@ On the handheld, NX Redux inherits its libraries from NextUI and MinUI; see
   **Settings → About**. The font files may not be distributed on their own, so
   the mobile build downloads MiSans from Xiaomi rather than keeping it in the
   repository.
-- **Rounded Mplus 1c** and **BPreplay** (handheld): SIL Open Font License 1.1.
+- **Rounded M+ 1c** (handheld), by the M+ FONTS Project and Jikasei Font
+  Koubou: SIL Open Font License 1.1.
 
 ## Art
 
