@@ -36,6 +36,9 @@ background.
 
 ![Game list in List style](../../assets/screenshots/game-list-list.png)
 
+- [List art](../settings/layouts.md#list-art) can show the game's mix, 3D
+  box art, 2D box art or wheel in a box on the right instead of the
+  screenshot.
 - The line at the bottom holds the scroll arrows.
 - With [Button hints](../settings/layouts.md#button-hints) hidden, a game
   list shows the selected game's last-played time, achievements and next
@@ -127,7 +130,8 @@ before any long word.
 
 Game lists only. The selected game's box art stands over its dimmed
 screenshot, with its neighbours' boxes to the sides. A game with no box art
-gets a placeholder box.
+gets a placeholder box. [Backdrop art](../settings/layouts.md#backdrop-art)
+can swap the boxes for the 2D box art or the game's logo (wheel).
 
 ![Game list in Backdrop style](../../assets/screenshots/game-list-backdrop.png)
 

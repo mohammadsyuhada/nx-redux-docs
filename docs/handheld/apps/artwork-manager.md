@@ -72,7 +72,11 @@ one:
 | --- | --- |
 | **Done** | Both the screenshot and the box art are present |
 | **No screenshot** / **No box art** | Only one of the two is there (ScreenScraper had no such image) |
-| *(nothing)* | No art yet. Once queued, it shows its live status (**Queued**, **Downloading…**, **Done**, **Not Found**, …) |
+| *(nothing)* | No art yet. Once queued, it shows its live status (**Queued**, **Downloading…**, **Building mix…**, **Done**, **Not Found**, …) |
+
+With [Generate mix](#settings-extra-art) on, a game that has no mix yet counts
+as having no art: its status is blank and **Queue All** queues it, so one run
+fills in the mixes. The 2D box art and wheel never change a game's status.
 
 In the game list:
 
@@ -95,38 +99,52 @@ lists immediately.
 
 ## What gets saved
 
-Each fetch stores up to two images per game: the in-game **screenshot** and
-the **box art**. Each [menu layout](../guide/layouts.md) uses what it needs:
-the screenshot for List, Grid and Carousel, and both for Backdrop.
+Each fetch stores the in-game **screenshot** and the **box art** for every
+game. Each [menu layout](../guide/layouts.md) uses what it needs: the
+screenshot for List, Grid and Carousel, and both for Backdrop. The
+[extra art](#settings-extra-art) you turn on in Settings (2D box art, wheel,
+mix) is saved too, for the [List art](../settings/layouts.md#list-art) and
+[Backdrop art](../settings/layouts.md#backdrop-art) options.
 
 ??? info "More detail"
-    Both images come from a single set of ScreenScraper downloads and go
+    Every image comes from a single set of ScreenScraper downloads and goes
     inside the system's `.media` folder:
 
-    | File | Content |
-    |---|---|
-    | `.media/screenshot/<game>.png` | the in-game screenshot |
-    | `.media/boxart/<game>.png` | the box art |
+    | File | Content | Saved as |
+    |---|---|---|
+    | `.media/screenshot/<game>.png` | the in-game screenshot | 256 colours |
+    | `.media/boxart/<game>.png` | the 3D box art (the 2D one when there is no 3D) | 256 colours |
+    | `.media/boxart2d/<game>.png` | the flat 2D box art, with **2D box art** on | full colour, at most 480×576 |
+    | `.media/wheel/<game>.png` | the game's logo, with **Wheel** on | full colour, at most 480×576 |
+    | `.media/mix/<game>.png` | the mix, with **Generate mix** on | full colour, 384×288 |
 
     An image is skipped when ScreenScraper has none for the game. A game with
     no art at all gets a generated placeholder picture in the menus instead.
 
-    Both are saved as 256-colour PNGs at their full size: they look the same
-    on the handheld's screen and take about a third of the space. Art fetched
-    by older releases can be shrunk the same way with
-    [Optimize images](#optimize-images).
+    The 256-colour PNGs look the same on the handheld's screen and take about
+    a third of the space. [Optimize images](#optimize-images) shrinks the 2D
+    box art the same way, and art fetched by older releases too. The wheel and
+    mix stay full colour, since their gradients would band.
+
+    The scraper never writes `.media/<game>.png` directly in `.media`. That
+    spot is yours: a picture you put there (a Port's art, a hand-made
+    picture) is used when a game has no screenshot, and no Artwork Manager
+    action changes it.
 
 !!! note "Art fetched by older releases"
     Releases up to v1.13.0 also made a **Mix** image (the screenshot with
     the box art and logo over it) at `.media/<game>.png`, and releases up to
-    v1.9.0 made only the Mix. The menus no longer use it, and a game with only
-    a Mix counts as having no art: queue it again to fetch the screenshot and
-    box art.
+    v1.9.0 made only the Mix. That file is now treated as your own picture:
+    it is shown when a game has no screenshot, and for
+    [List art](../settings/layouts.md#list-art) `Mix` when the game has no
+    new mix. **Reset artwork** and **Optimize images** leave it alone. A
+    game with only that old Mix still counts as having no art: queue it again
+    to fetch the screenshot and box art.
 
 ## Optimize images
 
-**Optimize images** shrinks the art already on your SD card. Each screenshot
-and box art is rewritten as a 256-colour PNG at the same size, so it looks the
+**Optimize images** shrinks the art already on your SD card. Each screenshot,
+box art and 2D box art is rewritten as a 256-colour PNG at the same size, so it looks the
 same in the menus but takes far less space, typically a third of the
 original. It is most useful for art fetched by older releases, which saved
 full-colour files.
@@ -144,9 +162,10 @@ were optimized and how much space was saved.
 
 ??? info "More detail"
     - It covers every `.media` folder under `Roms`, including art inside game
-      sub-folders: the `screenshot` and `boxart` images and any older art
-      directly in `.media`.
-    - The folder backgrounds (`bg.png`, `bglist.png`) are left alone.
+      sub-folders: the `screenshot`, `boxart` and `boxart2d` folders.
+    - The `wheel` and `mix` folders stay full colour, and the pictures
+      directly in `.media` (your own art, old Mix files, `bg.png`,
+      `bglist.png`) are left alone.
     - A file that is already optimized, or that would not get smaller, is
       skipped, so running it again is quick and safe.
     - The device stays awake while it runs. A large library can take a few
@@ -154,18 +173,39 @@ were optimized and how much space was saved.
       over half the space.
     - It can't start while a fetch queue is running.
 
-## Settings — reset
+## Settings — extra art
 
 ![Artwork Manager Settings](../../assets/screenshots/artwork-settings.png)
 
-**Reset artwork** deletes every fetched image (screenshot, box art and any old Mix)
-after a confirmation. The folder backgrounds `bg.png` and `bglist.png` are
-kept. It is refused while a queue is still running.
+The first rows of **Settings** pick what each fetch downloads besides the
+screenshot. Toggle a row with `Left` / `Right` or `A`. It is saved at once and
+applies to the next fetch.
+
+| Row | Default | What it does |
+| --- | --- | --- |
+| **3D box art** | `Always` | Always downloaded |
+| **2D box art** | `Off` | Also download the flat 2D box art |
+| **Wheel** | `Off` | Also download the game's logo (wheel). Locked `On` while **Generate mix** is on, which needs it |
+| **Generate mix** | `Off` | Build a picture of the screenshot, 3D box art and wheel on the device. Fetching takes longer and uses more storage |
+
+Show them with [List art](../settings/layouts.md#list-art) and
+[Backdrop art](../settings/layouts.md#backdrop-art) in Settings → Layouts. To
+add them to games that already have art, open a system and press `A` on a
+game. With **Generate mix** on, **Queue All** also picks up every game
+without a mix.
+
+## Settings — reset
+
+**Reset artwork** deletes every image the scraper downloaded (screenshot, box
+art, 2D box art, wheel and mix) after a confirmation. Your own pictures
+directly in `.media`, old Mix files and the folder backgrounds `bg.png` and
+`bglist.png` are kept. It is refused while a queue is still running.
 
 ??? info "More detail"
-    Reset covers the `.media` folder of every system folder under `Roms`. That
-    includes systems the scraper does not recognise, folder games and
-    leftovers from renamed ROMs.
+    Reset empties the `screenshot`, `boxart`, `boxart2d`, `wheel` and `mix`
+    folders of every `.media` under `Roms`, including those in game
+    sub-folders. That includes systems the scraper does not recognise, folder
+    games and leftovers from renamed ROMs.
 
 !!! tip "Fixing one game? Don't reset everything"
     **Reset artwork** wipes the whole library. To redo the art for a single

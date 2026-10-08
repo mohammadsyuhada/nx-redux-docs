@@ -86,6 +86,30 @@ Which side a vertical game list's stack sits on: `Left` (default) or `Right`.
 The game's details take the other side. Shows only while game lists are drawn
 vertically.
 
+### List art
+
+The picture beside a game list in the List style. Shows only while game lists
+are `List`.
+
+- `Screenshot` (default): the game's screenshot fills the background.
+- `Mix`, `3D box art`, `2D box art` or `Wheel`: the whole picture in a box on
+  the right, and the game names stop short of it.
+
+A game without that picture falls back to the screenshot. `Mix` also takes an
+old Mix from an older release. Mix, 2D box art and Wheel are only on the card
+once you turn them on in
+[Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+
+### Backdrop art
+
+The pictures in a game list's Backdrop row: `3D box art` (default),
+`2D box art` or `Wheel`. The background stays the screenshot. Shows only while
+game lists are `Backdrop`.
+
+A game without that picture shows its 3D box art, else a placeholder box. 2D
+box art and Wheel come from
+[Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+
 ## Extra info
 
 ![Layouts settings, the game list, Extra info, page title and button hint rows](../../assets/screenshots/set-layouts-2.png)

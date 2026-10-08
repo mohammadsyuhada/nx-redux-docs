@@ -14,7 +14,7 @@ Depending on the game, the menu offers:
 | **Rename Rom** | Change a game's display name. The [keyboard](keyboard.md#editing-an-existing-name) opens with the current name to edit. The file itself is never touched. |
 | **Add to Collection** | Add the game to an existing collection or create a new one on the spot |
 | **Emulator Options** | Edit [per-game emulator options](emulator-options.md), overriding the system-wide defaults |
-| **Fetch Artwork** | Download the screenshot and box art for this game in the background. Shown in game lists when the game has neither yet; needs Wi-Fi. |
+| **Fetch Artwork** | Download the screenshot and box art for this game in the background, plus the 2D box art, wheel and mix when they are turned on in [Artwork Manager → Settings](../apps/artwork-manager.md). Shown in game lists when the game has neither yet; needs Wi-Fi. |
 | **Refresh Roms** | Rescan the ROMs list (on Home) |
 | **Tools** | Open Tools (on Home, when the Tools tab is hidden) |
 
