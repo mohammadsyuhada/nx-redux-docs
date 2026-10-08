@@ -8,7 +8,7 @@ Simple Mode is a simplified menu for children or casual users, enabled in
 When Simple Mode is on:
 
 - The **Tools** tab lists only **Settings**, whatever the
-  [Tools tab](../settings/layouts.md#consoles-tab-collections-tab-tools-tab)
+  [Tools tab](../settings/layouts.md#tab)
   setting says.
 - **Settings** is protected by a 4-digit PIN that you set when enabling
   Simple Mode. Only you can turn it back off.

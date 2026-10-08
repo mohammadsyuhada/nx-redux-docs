@@ -7,8 +7,9 @@ tab that shows when Home is turned off in
 
 ![Home tab](../../assets/screenshots/main-menu.png)
 
-Each tab except Home can be drawn as a list, a grid or a carousel, and game
-lists have a fourth style, Backdrop. [Menu Layouts](layouts.md) shows them all.
+Each tab can be drawn in its own style: Home as a list, a grid or a carousel, the
+other tabs as a list, a grid or a carousel, and game lists have a fourth style,
+Backdrop. [Menu Layouts](layouts.md) shows them all.
 
 ## Tabs
 
@@ -56,17 +57,52 @@ focus.
 ## Home
 
 Home is the starting point: your most recent game, this month's play time,
-and everything you pinned.
+and everything you pinned. It comes in three layouts, **List**, **Grid** (the
+default) and **Carousel**. Pick one in
+[Settings → Layouts → Home layout](../settings/layouts.md#home-layout).
+With [Extra info](../settings/layouts.md#extra-info) hidden, every layout
+leaves out the stats and the play time and achievements under each game.
 
-![Home with pinned games](../../assets/screenshots/home-pins.png)
+### List
+
+Everything on Home in one list, in the style of the other tabs' List layout.
+
+![Home in the List layout](../../assets/screenshots/home-list.png)
+
+- **Stats** sit on two lines under the tabs, lined up with the list.
+- **The list** starts with your most recent game, marked with a **Continue**
+  tag and selected when Home opens, then your pinned games in the order you
+  pinned them, then your pinned tools. When the list is longer than the
+  screen, arrows in the bottom row show there is more above or below.
+- **Behind the list** you see the selected game's picture (for the Continue
+  game, where you left off). A selected tool shows its icon on the right.
+- **Game info** (when you last played, for how long, your achievement
+  progress) shows only with [Button hints](../settings/layouts.md#button-hints)
+  hidden, in the hint bar's place, and only while
+  [Extra info](../settings/layouts.md#extra-info) is shown.
+- **On a fresh install** the **Pick a game** card fills the screen, as in
+  Grid and Carousel.
+
+| Button | What it does |
+| --- | --- |
+| `Up` / `Down` | Move through the list. It wraps around at either end |
+| `Left` / `Right` | Switch tab |
+| `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
+| `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
+| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` | Open [Search](#search) |
+
+### Grid
+
+![Home in the Grid layout](../../assets/screenshots/home-pins.png)
 
 - **Stats line.** The top lines show **This month**'s total play time, your
   RetroAchievements unlocked this month (left out when you are signed out),
   and the month's **Most played** game. A month without play shows
   **No play yet**.
-- **Continue card.** Your most recent game, showing where you left off (the
-  save-state picture, else the game's artwork), its name and when you last
-  played it. Press `A` to jump back in. On a fresh install it is replaced by
+- **Continue card.** Your most recent game, marked with a **Continue** badge
+  in its corner, showing where you left off (the save-state picture, else the
+  game's artwork), its name and when you last played it. Press `A` to jump back in. On a fresh install it is replaced by
   a **Pick a game** card that opens the Consoles tab.
 - **Pinned tools** sit beside the Continue card as square icon tiles. Every
   pinned tool is shown.
@@ -86,6 +122,33 @@ and everything you pinned.
 | Button | What it does |
 | --- | --- |
 | D-pad | Move between the cards |
+| `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
+| `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
+| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` | Open [Search](#search) |
+
+### Carousel
+
+The same games and tools in one row, centred on the screen.
+
+![Home in the Carousel layout](../../assets/screenshots/home-carousel.png)
+
+- **Stats** sit on two centred lines under the tabs: **This month** above,
+  **Most played** below.
+- **The carousel** starts on the **Continue** card, selected when Home opens,
+  and your pinned games follow it in the order you pinned them. On a fresh
+  install the **Pick a game** card fills the screen instead, as in Grid.
+- **Game info** sits inside the selected card: the name, when you last played
+  it and for how long, and your achievement progress. The cards beside it show
+  their picture only.
+- **Pinned tools** move to a row of small squares under the carousel. Press
+  `Down` to reach them and `Up` to return to the carousel.
+
+| Button | What it does |
+| --- | --- |
+| `Left` / `Right` | Move along the carousel or the tools row. Past either end, switch tab |
+| `Up` | From the tools row, back to the carousel. From the carousel, the tab row |
+| `Down` | From the carousel, the tools row |
 | `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
 | `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
@@ -118,7 +181,7 @@ carousel, and Tools is a grid.
 ![Consoles tab](../../assets/screenshots/consoles-carousel.png)
 
 - Consoles show their logo and how many games they hold. Behind the
-  selected console you see its controller, unless you turn **Controller** off
+  selected console you see its controller, unless you turn **Consoles controller** off
   in Layouts. A system without a logo shows its name under a cartridge
   emblem.
 - Collections show their name and game count.

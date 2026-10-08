@@ -5,6 +5,10 @@ drawn in their own style. Pick them in
 [Settings → Layouts](../settings/layouts.md). The menu picks up the change as
 soon as you leave Settings, with no restart.
 
+The pictures on this page are taken with
+[Page title](../settings/layouts.md#page-title) and
+[Button hints](../settings/layouts.md#button-hints) hidden.
+
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
 | [**List**](#list) | ✓ | ✓ | Text rows over the art, the most entries per screen |
@@ -14,6 +18,9 @@ soon as you leave Settings, with no restart.
 
 Out of the box, Consoles, Collections and game lists use **Carousel**, and
 Tools uses **Grid**.
+
+Home has its own three layouts, **List**, **Grid** and **Carousel**: see
+[Home](main-menu.md#home).
 
 ## List
 
@@ -34,11 +41,8 @@ background.
   list shows the selected game's last-played time, achievements and next
   achievement in the bottom row, where the hints were.
 - With [Page title](../settings/layouts.md#page-title) hidden, the up arrow
-  moves above the first row, so the list has one arrow at each end.
-
-*Game list with Page title and Button hints hidden*
-
-![Game list in List style with the page title and button hints hidden](../../assets/landing/handheld/game-list-list.webp)
+  moves above the first row, so the list has one arrow at each end. Home's
+  List keeps both arrows in the bottom row.
 
 - `Up` on the first row wraps to the last, and `Down` on the last wraps to the
   first (hold the button to stop at the end instead).
@@ -54,7 +58,7 @@ console instead of its controller, much like the list's look before 2.0.
 2. Put it in that console's `.media` folder:
    `Roms/<console> (<tag>)/.media/bg.png`, for example
    `Roms/Game Boy (GB)/.media/bg.png`.
-3. In [Settings → Layouts](../settings/layouts.md), set **Controller** to
+3. In [Settings → Layouts](../settings/layouts.md), set **Consoles controller** to
    **Hide**.
 
 The selected console's `bg.png` then fills the screen behind the list. A
@@ -68,7 +72,7 @@ hidden*
 ??? info "More detail"
     - Size the image to the screen: 1024×768 on the Brick, 1280×720 on the
       Brick Pro and Smart Pro S.
-    - With **Controller** on, the controller is shown and `bg.png` is
+    - With **Consoles controller** on, the controller is shown and `bg.png` is
       ignored.
     - The Collections tab in List takes a background too, with no setting to
       change: `Collections/.media/<collection name>.png` for one collection,
@@ -148,7 +152,7 @@ list).
 ![Game list in vertical Backdrop](../../assets/screenshots/game-list-backdrop-v.png)
 
 In a vertical game list the stack sits on the left and the details on the
-right. Set **Vertical alignment** to **Right** to swap the sides.
+right. Set **Game lists alignment** to **Right** to swap the sides.
 
 With the page title or the button hints hidden, carousels and Backdrop are no
 longer cut off at the top and bottom rows: the neighbouring items run on into
@@ -156,7 +160,7 @@ the freed space to the screen's edge.
 
 ??? info "More detail"
     - **Controller art.** The Consoles tab shows each console's controller
-      behind it in the List and Carousel styles. Turn **Controller** off in
+      behind it in the List and Carousel styles. Turn **Consoles controller** off in
       Layouts for plain logos.
     - **Logos.** Systems without a logo of their own show their name under a
       cartridge emblem. Tools without an icon get a generic one.

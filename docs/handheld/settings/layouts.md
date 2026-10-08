@@ -7,44 +7,35 @@ soon as you leave Settings, with no restart. See
 
 ![Layouts settings](../../assets/screenshots/set-layouts.png)
 
-## Consoles / Collections / Tools
-
-How each tab draws: `List`, `Grid` or `Carousel`.
-
-| Tab | Default |
-| --- | --- |
-| Consoles | `Carousel` |
-| Collections | `Carousel` |
-| Tools | `Grid` |
-
-## Game lists
-
-How a console's or collection's games draw: `List`, `Grid`, `Carousel` or
-`Backdrop`. Default `Carousel`.
-
-## Orientation
-
-Whether a carousel runs across (`Horizontal`, the default) or down
-(`Vertical`) the screen. Each tab and the game lists have their own
-orientation row, directly under their style. The row shows only while that
-style is `Carousel`, or `Backdrop` for game lists.
-
-## Vertical alignment
-
-Which side a vertical game list's stack sits on: `Left` (default) or `Right`.
-The game's details take the other side. Shows only while game lists are drawn
-vertically.
+The rows are grouped by what they change: Home first, then each tab, then the
+game lists, then the options that apply to the whole menu. A tab's layout rows
+show only while that tab is shown.
 
 ## Home tab
-
-![Layouts settings, the tab, page title and button hint rows](../../assets/screenshots/set-layouts-2.png)
 
 `Show` (default) or `Hide` the [Home](../guide/main-menu.md#home) tab. Home
 still shows when every other tab is hidden.
 
-## Consoles tab / Collections tab / Tools tab
+## Home layout
 
-`Show` (default) or `Hide` each tab. Hide all of them for a Home-only menu, as
+How Home draws:
+
+- `List`: one list with the Continue game first, then your pinned games, then
+  your pinned tools.
+- `Grid` (default): the Continue card beside your pinned tools, your pinned
+  games in rows below.
+- `Carousel`: one row that starts on the Continue card, your pinned games
+  after it, and your pinned tools in a row of small squares underneath.
+
+See [Home](../guide/main-menu.md#home) for both.
+
+## Consoles, Collections and Tools
+
+Each tab has the same rows, in this order.
+
+### Tab
+
+`Show` (default) or `Hide` the tab. Hide all of them for a Home-only menu, as
 in the [Five-Game Menu](../guide/five-game-menu.md). With a single tab left,
 the tab row is replaced by an **NX Redux** title.
 
@@ -53,13 +44,60 @@ the tab row is replaced by an **NX Redux** title.
     **Collections**, **Tools**), so Settings is never locked away. The list
     opens over the current tab in the hidden tab's own layout, and `B` returns.
 
-## Controller
+### Layout
 
-`Show` (default) or `Hide` each console's controller behind it on the
-Consoles tab.
+How the tab draws: `List`, `Grid` or `Carousel`.
+
+| Tab | Default |
+| --- | --- |
+| Consoles | `Carousel` |
+| Collections | `Carousel` |
+| Tools | `Grid` |
+
+### Orientation
+
+Whether the tab's carousel runs across (`Horizontal`, the default) or down
+(`Vertical`) the screen. Shows only while the tab's layout is `Carousel`.
+
+### Consoles controller
+
+Consoles only. `Show` (default) or `Hide` each console's controller behind it
+on the Consoles tab.
 
 Hide it to show your own picture behind each console in the List style
 instead: see [Your own console backgrounds](../guide/layouts.md#your-own-console-backgrounds).
+
+## Game lists
+
+### Game lists layout
+
+How a console's or collection's games draw: `List`, `Grid`, `Carousel` or
+`Backdrop`. Default `Carousel`.
+
+### Game lists orientation
+
+Whether the carousel or backdrop runs across (`Horizontal`, the default) or
+down (`Vertical`) the screen. Shows only while game lists are `Carousel` or
+`Backdrop`.
+
+### Game lists alignment
+
+Which side a vertical game list's stack sits on: `Left` (default) or `Right`.
+The game's details take the other side. Shows only while game lists are drawn
+vertically.
+
+## Extra info
+
+![Layouts settings, the game list, Extra info, page title and button hint rows](../../assets/screenshots/set-layouts-2.png)
+
+`Show` (default) or `Hide` the extra game details in the menus:
+
+- Home's monthly stats (**This month**, **Most played**);
+- the play time, last played, achievement progress and next achievement
+  under a game's name, on Home and in every game list layout.
+
+Names always show. The [Game Switcher](../guide/game-switcher.md) keeps its
+own details either way.
 
 ## Page title
 
@@ -74,7 +112,8 @@ volume and brightness changes included. Hidden:
 
 - the rows keep their place, so nothing jumps;
 - a game list in the List style shows the selected game's play time,
-  achievements and next achievement in the bar's row instead;
+  achievements and next achievement in the bar's row instead (unless
+  [Extra info](#extra-info) is hidden);
 - carousels run down into the freed row.
 
 ## Reset to defaults
