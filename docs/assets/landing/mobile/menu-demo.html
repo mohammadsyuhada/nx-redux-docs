@@ -461,6 +461,33 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .hpick .t, .hpick .h { position: relative; }
 /* Home: the tab row's top band shows only while the page is scrolled, so it never greys a white-filled card at rest */
 .home ~ .tabfade { transition: opacity .32s cubic-bezier(.2,.8,.2,1); }
+/* ---------- Home Carousel (2026-10-07 proposal, Layouts > Home: Carousel): the strip, then one row that opens on Continue with the
+   pinned games after it (the game-list Carousel's tiles, sized to the body), the caption under the selection, and the pinned tools moved
+   to a dock of small squares along the bottom (DOWN from the row) ---------- */
+/* 2026-10-08: the game's info sits inside the slot, as Grid's Continue card: the caption fade and the text bottom-left, on the selected
+   slot only (the neighbours are scaled down, their text would be too small to read); it fades with the selection */
+/* 2026-10-08: the stats strip centred over the row, on every screen (Grid keeps it left in landscape, under the left tabs) */
+.hc .hss .ln { justify-content: center; }
+.hcrow .hcfade, .hcrow .hctext { opacity: 0; transition: opacity .18s; }
+.hcrow .ctile.focus .hcfade, .hcrow .ctile.focus .hctext { opacity: 1; }
+.hcrow .hctext .il { color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hcrow .hctext .il.nx { color: var(--ink); }
+/* Continue names itself on the card: a quiet pill top-left, so it reads apart from the pinned games next to it */
+.hbadge { position: absolute; left: 10px; top: 10px; padding: 3px 9px; border-radius: 999px; background: rgba(0,0,0,.62); color: var(--ink); font-size: 12px; line-height: 15px; pointer-events: none; }
+.portrait .hbadge { left: 8px; top: 8px; font-size: 11px; line-height: 14px; padding: 2px 8px; }
+.hdock { position: absolute; left: 0; right: 0; display: flex; justify-content: center; gap: var(--d-gap); transition: opacity .18s; }
+.hdock .tile { width: var(--d-s); height: var(--d-s); flex: none; }
+.hdock .art-box { height: 100%; border-radius: 10px; }
+.tabfocus .hcrow, .tabfocus .hdock { opacity: .4; }
+/* in the dock the row's selection stays large but unringed, so only one thing reads as focused */
+.hc.indock .ctile.focus .art-box:has(.ga) { box-shadow: none; }
+/* ---------- Home List (2026-10-08 proposal, Layouts > Home: List): the strip as two lines at the list's inset, then the pill list:
+   Continue (a quiet "Continue" tag before its name), the pinned games, the pinned tools (names only, 2026-10-08); the selected game's
+   picture behind the list, as a game list's List style ---------- */
+.hl .hss { padding: 0 24px; }
+.portrait .hl .hss { padding: 0 16px; }
+.prow .ptag { flex: none; font-size: 12px; line-height: 16px; padding: 2px 8px; margin-right: 10px; border-radius: 999px; background: rgba(var(--ink-rgb),.14); color: var(--ink); }
+.prow.focus .ptag { background: rgba(0,0,0,.14); color: var(--on-accent); }
 /* an empty Game Switcher */
 .hempty { position: absolute; left: 0; right: 0; top: 0; bottom: var(--hb); display: grid; place-items: center; padding: 0 24px; text-align: center; font-size: 16px; color: var(--dim); }
 
@@ -511,7 +538,7 @@ body { margin: 0; padding: 0 0 4px; }
       </div>
       <div class="opt-panel" data-p="layouts">
         <div class="layouts" id="layouts" role="group" aria-label="Layouts"></div>
-        <span class="hd">Home is the same dashboard in every layout</span>
+        <span class="hd">Home: List puts Continue, the pinned games and the pinned tools in one list; Grid is the dashboard (Continue beside the tools, pinned games in rows); Carousel opens on Continue with the pinned games after it and the tools in a dock below</span>
       </div>
       <div class="opt-panel" data-p="home">
         <div class="switch" role="group" aria-label="Home state">
@@ -691,8 +718,8 @@ const headHTML = () => `<div class="head"><span class="ttl">${S.sub ? `Collectio
 const isHome = () => !S.inConsole && CATS[S.cat].home;
 /* Layouts: each main-menu tab has its own style (List / Grid / Carousel), game lists have one (List / Grid / Carousel / Backdrop).
    A main-menu Carousel draws the Backdrop row on black ("bd" below); the old Carousel tile row ("car") is for game lists only */
-const LAYOUTS = [["consoles", "Consoles", 1], ["collections", "Collections", 2], ["tools", "Tools", 3], ["games", "Game lists"]];
-S.lay = { consoles: "car", collections: "car", tools: "car", games: "bd" };
+const LAYOUTS = [["home", "Home", 0], ["consoles", "Consoles", 1], ["collections", "Collections", 2], ["tools", "Tools", 3], ["games", "Game lists"]];
+S.lay = { home: "grid", consoles: "car", collections: "car", tools: "car", games: "bd" };
 const catKey = c => (LAYOUTS.find(l => l[2] === c) || [])[0];
 /* Orientation: Carousel (main-menu tabs) and Carousel / Backdrop (game lists) also take Horizontal ("h") or Vertical ("v");
    one per main-menu tab, one for game lists (used by whichever of the two is chosen). Internal styles:
@@ -705,7 +732,7 @@ try { const v = localStorage.getItem("nx-valign"); if (v === "left" || v === "ri
 /* Layouts > Controller: Show / Hide the controller art (Carousel behind the logo, List on the right; Hide leaves the List's right side empty, no logo either); kept in localStorage */
 S.padArt = (() => { try { return localStorage.getItem("nx-padart") !== "off"; } catch (e) { return true; } })();
 const padEl = r => r.pad && !S.inConsole && S.padArt ? `<div class="bpad" style="--pad:url(${r.pad});--padk:${r.padk}"></div>` : "";   /* behind the focused logo, horizontal and vertical */
-const hasOri = k => k === "games" ? S.lay.games === "car" || S.lay.games === "bd" : S.lay[k] === "car";
+const hasOri = k => k === "home" ? false : k === "games" ? S.lay.games === "car" || S.lay.games === "bd" : S.lay[k] === "car";
 const sty = () => {
   if (S.inConsole) { const l = S.lay.games, v = S.ori.games === "v"; return v && l === "car" ? "cvert" : v && l === "bd" ? "vert" : l; }
   const k = catKey(S.cat), l = S.lay[k] || "grid";
@@ -855,6 +882,8 @@ const toTabs = () => { if (oneTab() || S.title === false) return; S.tabFocus = t
 /* UP on the tab row wraps to the bottom of the content: Grid's last row in the same column (else the last item), List's last row,
    Home's last pin row (from Continue its first pin, from the large game or a tool square its last), Carousel/Backdrop stay */
 function tabsToBottom() {
+  if (isHome() && homeList()) { const n = homeListItems().length; S.sel[S.cat] = Math.max(0, n - 1); return; }   /* List: UP on the tab row goes to the last row */
+  if (isHome() && homeCar()) { if (S.hcg && S.hcg.tools.length) S.hc.dock = true; return; }   /* Carousel: UP on the tab row goes to the dock */
   if (isHome()) {
     const H = S.home, G = S.hg; H.sec = 0;
     if (!G || !G.rows.length) return;
@@ -882,7 +911,7 @@ const tapTile = i => { if (S.justDragged) return; if (selKey() === i) press("A")
 function buildStyle() {
   S.row = null;
   if (!S.inConsole) S.cat = onCat(S.cat);   /* the tab asked for is off (Home off, B back to Consoles off, a layout row's tab): the next one on */
-  if (isHome()) return buildHome();
+  if (isHome()) return homeList() ? buildHomeList() : homeCar() ? buildHomeCar() : buildHome();
   const st = sty();
   if (st === "list") return buildList();
   if (st === "car") return buildCar();
@@ -921,7 +950,7 @@ function gridShade(tx) {
 
 function updateStyle() {
   syncScreen(); syncStyle();
-  if (isHome()) return updateHome();
+  if (isHome()) return homeList() ? updateHomeList() : homeCar() ? updateHomeCar() : updateHome();
   const st = sty();
   if (st === "list") return updateList();
   if (st === "car") return updateCar();
@@ -953,7 +982,7 @@ function updateStyle() {
 }
 
 function pressStyle(k, repeat) {
-  if (isHome()) return pressHome(k, repeat);
+  if (isHome()) return homeList() ? pressHomeList(k) : homeCar() ? pressHomeCar(k, repeat) : pressHome(k, repeat);
   const st = sty();
   if (st === "list") return pressList(k);
   if (st === "car" || st === "bd") return pressCar(k, repeat);
@@ -1301,7 +1330,7 @@ const syncStyle = () => {
 /* the Layouts block: List / Grid / Carousel per main-menu tab, plus Backdrop for game lists; then, while the row is on
    Carousel (or Backdrop), its orientation Horizontal / Vertical. Both kept in localStorage like the accent */
 document.getElementById("layouts").insertAdjacentHTML("beforeend", LAYOUTS.map(([k, n]) =>
-  `<div class="switch" role="group" aria-label="${n} layout"><span class="lbl">${n}</span>${[["list", "List"], ["grid", "Grid"], ["car", "Carousel"], ...(k === "games" ? [["bd", "Backdrop"]] : [])]
+  `<div class="switch" role="group" aria-label="${n} layout"><span class="lbl">${n}</span>${(k === "home" ? [["list", "List"], ["grid", "Grid"], ["car", "Carousel"]] : [["list", "List"], ["grid", "Grid"], ["car", "Carousel"], ...(k === "games" ? [["bd", "Backdrop"]] : [])])
     .map(([s, t]) => `<button data-l="${k}" data-s="${s}" aria-pressed="false">${t}</button>`).join("")}<span class="osw" data-k="${k}" role="group" aria-label="${n} orientation"><span class="lbl">Orientation</span>${[["h", "Horizontal"], ["v", "Vertical"]]
     .map(([o, t]) => `<button data-k="${k}" data-o="${o}" aria-pressed="false">${t}</button>`).join("")}</span>${k === "games" ? `<span class="osw vasw" role="group" aria-label="Game lists vertical alignment"><span class="lbl">Vertical alignment</span>${[["left", "Left"], ["right", "Right"]]
     .map(([v, t]) => `<button data-valign="${v}" aria-pressed="false">${t}</button>`).join("")}</span>` : ""}</div>`).join(""));
@@ -1312,6 +1341,7 @@ document.getElementById("layouts").insertAdjacentHTML("beforeend", LAYOUTS.map((
      a stored "vert" (the earlier separate Vertical layout) reads as Carousel (main menu) or Backdrop (game lists) + Vertical */
   if (saved) LAYOUTS.forEach(([k]) => { const v = saved[k];
     if (v === "vert") { S.lay[k] = k === "games" ? "bd" : "car"; S.ori[k] = "v"; }
+    else if (k === "home") { if (v === "list" || v === "grid" || v === "car") S.lay.home = v; }   /* Home: List, Grid (the dashboard) or Carousel */
     else if (ok.includes(v)) S.lay[k] = k !== "games" && v === "bd" ? "car" : v; });
   if (saved && Object.values(saved).includes("vert")) try { localStorage.setItem("nx-layouts", JSON.stringify(S.lay)); localStorage.setItem("nx-orient", JSON.stringify(S.ori)); } catch (e) {} }
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Controller art"><span class="lbl">Controller</span>${[["on", "Show"], ["off", "Hide"]]
@@ -1753,7 +1783,7 @@ function contHTML(g) {
   const tm = timeSeg(g), rows = tm ? `<div class="il">${tm}</div>` : "";
   /* 2026-10-04: no save state and no artwork: the game's abstract picture, drawn and captioned as any other */
   const src = !S.hsSave && !artOn() ? absAlways(g) : GART[g.g + "-shot"];
-  return `<img class="ga shot" src="${src}" alt="">
+  return `<img class="ga shot" src="${src}" alt=""><span class="hbadge">Continue</span>
           <div class="hcfade" style="height:80%;background:${HFADE}"></div>
           <div class="hctext"><div class="t">${g.n}</div>${rows}</div>`;
 }
@@ -1896,8 +1926,173 @@ function setHomeState(hs, save = S.hsSave, st = S.hst) {
   S.switcher = false; S.inConsole = false; S.sub = null; S.sw = 0; S.tabFocus = false;
   S.cat = CATS.findIndex(c => c.home);
   S.home = { sec: 0, idx: [0, 0], y: 0 };
+  S.sel[HOME_I] = 0; S.hc = { dock: false, t: 0 };   /* Carousel: back on Continue */
   build(); update();
 }
+/* ---------- Home Carousel (Layouts > Home: Carousel, 2026-10-07 proposal) ----------
+   The strip as on Grid, then one Carousel row: Continue first and selected, the pinned games after it in pin order. The pinned tools
+   leave the row for a dock of small squares under the caption: DOWN from the row, UP back. The selection's index is S.sel[Home],
+   so a swipe on the row (rowDrag) selects like any Carousel; S.hc holds the dock focus and the square last on */
+const homeCar = () => S.lay.home === "car" || (S.lay.home === "list" && fresh());
+S.hc = { dock: false, t: 0 };
+function homeCarGeom() {
+  const o = S.orient, d = DIM[o], p = PORT(o), c = CAR[o], W = d.w - 2 * d.gutter, pins = homePins();
+  const games = pins.filter(r => r.g), tools = pins.filter(r => !r.g);
+  /* the strip on two centred lines on every screen (This month, then Most played; 2026-10-08), one when nothing was played this month */
+  /* 2026-10-08: everything sits e lower (10, 6 portrait), a gap between the tab row and the strip; the body runs down to the hint bar
+     (the dock's ring room is its only margin there), so the room under the tools pays for it */
+  const e = n0 => n0 ? (p ? 6 : 10) : 0;
+  const n0 = stripLines(), n = n0 && S.hst !== "none" ? 2 : n0, lh = p ? 17 : 18, sh = e(n), pt = (n ? 46 + n * lh + (n - 1) * 2 + 8 : 52) + sh;
+  const avail = d.h - pt - HB();
+  const capGap = p ? 10 : 12, capRoom = 3;   /* the info is inside the slot (2026-10-08): only the ring room under the row */
+  /* the dock: squares of 44 (36 portrait), as many as fit the width; the same gap as Home's cards */
+  const s = p ? 36 : 44, g = p ? 10 : 12, fit = Math.max(1, Math.floor((W + g) / (s + g))), dockT = tools.slice(0, fit);
+  const dockRoom = dockT.length ? capGap + 3 + s + 3 : 0;
+  /* the tile: what the body leaves, the game-list Carousel's shape (340 × 240), never larger than its tile */
+  /* fresh install (2026-10-08): the Pick a game card alone fills the body as on Grid, the full width down to the dock or the hint bar */
+  const alone = fresh();
+  const h = alone ? avail - 3 - capRoom - dockRoom : Math.max(80, Math.min(c.h, avail - 3 - capRoom - dockRoom)), w = alone ? W : Math.min(W, h * c.w / c.h);
+  /* the block centred between the strip's last line and the hint bar (2026-10-08; was centred in the body below the strip's 8 dp margin,
+     which left it low, nearly on the hint bar, wherever the tile hits its size cap, as portrait) */
+  const block = 3 + h + capRoom + dockRoom, y0 = alone ? pt - 3 : pt - 8 + Math.max(0, (avail + 8 - block) / 2);
+  const list = [{ kind: "cont", r: contItem() }, ...games.map(r => ({ kind: "pin", r }))];
+  return { pt, n, list, tools: dockT, h, w, s, g, rowTop: y0, rowH: 3 + h + capRoom, dockTop: y0 + 3 + h + capRoom + capGap,
+    scale: c.scale, gap: c.gap,
+    /* 2026-10-08: the strip's lines centred between the tab row (44) and the selected tile's ring (y0): its top offset under
+       the page's 46 (.hss top is --h-so - 2, so this is the line block's top − 44) */
+    so: n ? (y0 - 44 - (n * lh + (n - 1) * 2)) / 2 : 0 };
+}
+/* the slot's caption: the name, the last-played time with the achievements, then Next on its own line */
+const hcCap = r => { const l1 = [timeSeg(r), achSeg(r)].filter(Boolean).join(" · "), nx = nextSeg(r);
+  return `<div class="hcfade" style="height:80%;background:${HFADE}"></div><div class="hctext"><div class="t">${r.n}</div>${l1 ? `<div class="il">${l1}</div>` : ""}${nx ? `<div class="il nx">${nx}</div>` : ""}</div>`; };
+const hcTile = (t, i) => {
+  const r = t.r;
+  if (t.kind === "cont") {
+    if (r.pick) return `<div class="tile ctile hcard" data-i="${i}" aria-label="${r.n}"><div class="art-box">${contHTML(r)}</div></div>`;
+    const src = !S.hsSave && !artOn() ? absAlways(r) : GART[r.g + "-shot"];   /* the resume frame (or the screenshot, else the abstract picture) */
+    return `<div class="tile ctile hcard" data-i="${i}" aria-label="Continue ${r.n}"><div class="art-box"><img class="ga shot" src="${src}" alt=""><span class="hbadge">Continue</span>${hcCap(r)}</div></div>`;
+  }
+  const body = artOn() ? gameArt(r) : `<img class="ga shot abs" src="${absAlways(r)}" alt="">`;
+  return `<div class="tile ctile" data-i="${i}" aria-label="${r.n}"><div class="art-box">${body}${hcCap(r)}</div></div>`;
+};
+function buildHomeCar() {
+  const G = S.hcg = homeCarGeom();
+  S.sel[S.cat] = Math.max(0, Math.min(S.sel[S.cat] || 0, G.list.length - 1));
+  if (!G.tools.length) S.hc.dock = false;
+  S.hc.t = Math.max(0, Math.min(S.hc.t, G.tools.length - 1));
+  screen.innerHTML = `<div class="home hc" id="home" style="--h-pt:${G.n ? 46 : 52}px;--h-so:${G.so - 2}px"><div class="hpage">${stripHTML(G.n)}</div>
+      <div class="car hcrow" style="top:${G.rowTop}px;bottom:auto;height:${G.rowH}px;--car-w:${G.w}px;--car-h:${G.h}px;--car-top:3px">${G.list.map(hcTile).join("")}</div>
+      ${G.tools.length ? `<div class="hdock" style="top:${G.dockTop + 3}px;--d-s:${G.s}px;--d-gap:${G.g}px">${G.tools.map((r, i) =>
+        `<div class="tile hsq" data-d="${i}" aria-label="${r.n}"><div class="art-box"><i class="hsq-i" style="--m:url(${r.m});--ic:${Math.round(G.s * .55)}px"></i></div></div>`).join("")}</div>` : ""}
+    </div>
+    ${tabsHTML()}
+    <div class="hints" id="hints"></div>`;
+  screen.querySelectorAll(".hcrow .ctile").forEach(el => el.onclick = () => {
+    if (S.justDragged) return; const i = +el.dataset.i;
+    if (!S.hc.dock && selKey() === i) return homeCarOpen();
+    S.hc.dock = false; setSel(i); update();
+  });
+  screen.querySelectorAll(".hdock .tile").forEach(el => el.onclick = () => {
+    const i = +el.dataset.d; S.tabFocus = false;
+    if (S.hc.dock && S.hc.t === i) return homeCarOpen();
+    S.hc.dock = true; S.hc.t = i; update();
+  });
+  screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
+  S.row = { els: [...screen.querySelectorAll(".hcrow .ctile")], W: G.w, scale: G.scale, gap: G.gap, kind: "car" };
+  rowDrag(screen.querySelector(".hcrow"));
+}
+const hcItem = () => S.hc.dock ? S.hcg.tools[S.hc.t] : S.hcg.list[selKey()].r;
+function updateHomeCar() {
+  const G = S.hcg, idx = selKey(), t = G.list[idx], it = t.r;
+  screen.querySelectorAll(".tab").forEach(e => e.classList.toggle("on", +e.dataset.c === S.cat));
+  screen.querySelectorAll(".hcrow .ctile").forEach((el, j) => el.classList.toggle("focus", j === idx));
+  screen.querySelectorAll(".hdock .tile").forEach((el, j) => el.classList.toggle("focus", S.hc.dock && j === S.hc.t));
+  document.getElementById("home").classList.toggle("indock", S.hc.dock);
+  moveRow(idx);
+  const f = hcItem(), cont = !S.hc.dock && idx === 0;
+  document.getElementById("hints").innerHTML = f.game ? hint("nav_button_menu", "Options") + hint("nav_button_a", cont && S.hsSave ? "Resume" : "Play")
+    : hint("nav_button_a", f.pick ? "Open" : f.n);   /* a lit tool's name is the A action */
+}
+function homeCarOpen() {
+  if (hcItem().pick) { S.cat = CATS.findIndex(c => c.items === CONSOLES); build(); return update(); }   /* fresh install: pick a game from Consoles */
+}
+function pressHomeCar(k, repeat) {
+  const G = S.hcg, n = G.list.length, cur = selKey();
+  if (k === "L1" || k === "R1") return switchTab(k === "R1" ? 1 : -1);
+  if (k === "A") return homeCarOpen();
+  if (S.hc.dock) {   /* the dock: along it (a fresh press past an end switches tab), UP back to the row */
+    if (k === "left") { if (S.hc.t > 0) { S.hc.t--; return update(); } return edgeSwitch(-1, repeat); }
+    if (k === "right") { if (S.hc.t < G.tools.length - 1) { S.hc.t++; return update(); } return edgeSwitch(1, repeat); }
+    if (k === "up") { S.hc.dock = false; return update(); }
+    return;
+  }
+  if (k === "left") { if (cur > 0) { setSel(cur - 1); return update(); } return edgeSwitch(-1, repeat); }
+  if (k === "right") { if (cur < n - 1) { setSel(cur + 1); return update(); } return edgeSwitch(1, repeat); }
+  if (k === "up") return toTabs();
+  if (k === "down" && G.tools.length) { S.hc.dock = true; return update(); }
+}
+
+/* ---------- Home List (Layouts > Home: List, 2026-10-08 proposal) ----------
+   One pill list, as every List: Continue first (selected when Home opens), then the pinned games in pin order, then the pinned tools.
+   The strip sits above it in two lines at the list's inset. Behind the list, the selected game's picture under the List fade (Continue:
+   its resume frame); a tool shows its glyph large and dim on the right, as the Tools tab's List. UP/DOWN wrap, LEFT/RIGHT switch tab */
+/* a fresh install draws the Carousel's full-size Pick a game card (and its tools dock), as Grid and Carousel do (2026-10-08) */
+const homeList = () => S.lay.home === "list" && !fresh();
+const homeListItems = () => { const pins = homePins(); return [{ kind: "cont", r: contItem() }, ...pins.filter(r => r.g).map(r => ({ kind: "pin", r })), ...pins.filter(r => !r.g).map(r => ({ kind: "tool", r }))]; };
+function buildHomeList() {
+  const list = S.hl = homeListItems(), o = S.orient, p = PORT(o);
+  S.sel[S.cat] = Math.max(0, Math.min(S.sel[S.cat] || 0, list.length - 1));
+  /* the strip: two lines (one when nothing was played this month, none fresh), 8 dp under the tab row's 44 + 4; the list 12 dp under it */
+  const n0 = stripLines(), n = n0 && S.hst !== "none" ? 2 : n0, lh = p ? 17 : 18, stripH = n ? n * lh + (n - 1) * 2 : 0, top = n ? 44 + 8 + stripH + 12 : (p ? 54 : 56);
+  const row = t => t.kind === "cont" && !t.r.pick ? `<span class="ptag">Continue</span><span>${t.r.n}</span>` : `<span>${t.r.n}</span>`;
+  screen.innerHTML = `<img class="gbg" id="gbg" alt=""><canvas class="gfade" id="gfade"></canvas><div class="lbg" id="lbg" hidden></div>
+    <div class="tabfade" style="background:${TAB_FADE}"></div>
+    ${tabsHTML()}
+    <div class="home hl" style="--h-pt:44px;--h-so:10px">${n ? `<div class="hpage">${stripHTML(n)}</div>` : ""}</div>
+    <div class="lview games tabbed" style="top:${top}px"><div class="plist" id="plist">${list.map((t, i) => `<div class="prow" data-i="${i}">${row(t)}</div>`).join("")}</div></div>
+    <div class="band${!infoOn() ? " plain" : ""}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
+    <span class="uparrow" id="uparrow" hidden></span>
+    <div class="hints scrim" id="hints"></div>`;
+  drawFade(document.getElementById("gfade"));
+  screen.querySelectorAll(".prow").forEach(el => el.onclick = () => { const i = +el.dataset.i; if (selKey() === i) return homeListOpen(); setSel(i); update(); });
+  screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
+}
+function updateHomeList() {
+  const list = S.hl, idx = selKey(), t = list[idx], it = t.r, rows = screen.querySelectorAll(".prow");
+  rows.forEach((r, j) => r.classList.toggle("focus", j === idx));
+  screen.querySelectorAll(".tab").forEach(e => e.classList.toggle("on", +e.dataset.c === S.cat));
+  /* as updateList: the selection kept mid-list, whole rows only, packed arrows in the band */
+  const view = screen.querySelector(".lview"), rowH = rows[0].offsetHeight + 4, fits = Math.max(1, Math.floor((view.clientHeight + 4) / rowH));
+  const first = Math.max(0, Math.min(idx - Math.floor(fits / 2), list.length - fits)), shown = Math.min(fits, list.length - first);
+  const plist = document.getElementById("plist");
+  plist.style.transform = `translateY(${-first * rowH}px)`;
+  plist.style.clipPath = `inset(${first * rowH}px -40px ${Math.max(0, plist.offsetHeight - (first + shown) * rowH + 4)}px -40px)`;
+  document.getElementById("arrows").innerHTML = (first > 0 ? ARROW_UP : "") + (first + fits < list.length ? ARROW_DOWN : "");
+  const info = it.game ? bandText(it) : "";
+  /* 2026-10-08: no info band over the list; the info shows only in the hint bar's place with Button hints: Hide (the .binfo below) */
+  document.getElementById("btext").innerHTML = "";
+  /* behind the list: a game's picture (Continue: its resume frame, else the screenshot), a tool's glyph, nothing for Pick a game */
+  const gbg = document.getElementById("gbg"), lbg = document.getElementById("lbg");
+  const src = it.game ? (t.kind === "cont" && S.hsSave ? GART[it.g + "-shot"] : artOn() ? shotOf(it) : absAlways(it)) : "";
+  gbg.onload = () => { const d = DIM[S.orient], covers = d.h * gbg.naturalWidth / gbg.naturalHeight >= d.w;
+    gbg.style.transform = d.w > d.h ? "none" : `translateX(${(covers ? .20 : .07) * d.w}px)`; };
+  gbg.hidden = !src; if (src) gbg.src = src; else gbg.removeAttribute("src");
+  lbg.hidden = t.kind !== "tool"; if (t.kind === "tool") lbg.style.setProperty("--m", `url(${it.m})`);
+  const cont = t.kind === "cont";
+  document.getElementById("hints").innerHTML = (it.game ? hint("nav_button_menu", "Options") + hint("nav_button_a", cont && S.hsSave ? "Resume" : "Play")
+    : hint("nav_button_a", it.pick ? "Open" : it.n)) + `<span class="binfo">${info}</span>`;
+}
+function homeListOpen() {
+  if (S.hl[selKey()].r.pick) { S.cat = CATS.findIndex(c => c.items === CONSOLES); build(); return update(); }   /* fresh install: pick a game from Consoles */
+}
+function pressHomeList(k) {
+  if (k === "L1" || k === "R1" || k === "left" || k === "right") return switchTab(k === "R1" || k === "right" ? 1 : -1);
+  if (k === "A") return homeListOpen();
+  const n = S.hl.length, cur = selKey();
+  if (k === "up") { setSel((cur + n - 1) % n); return update(); }   /* wraps, as every List (the tab row only by a tap) */
+  if (k === "down") { setSel((cur + 1) % n); return update(); }
+}
+
 ["normal", "nora", "noart", "fresh"].forEach(k => document.getElementById("hs-" + k).onclick = () => setHomeState(k));
 ["ok", "none", "wait"].forEach(k => document.getElementById("hs-st-" + k).onclick = () => setHomeState(S.hs, S.hsSave, k));
 
