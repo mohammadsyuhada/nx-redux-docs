@@ -28,6 +28,33 @@ Dreamcast gets the same features as the other systems:
     Older versions ran Dreamcast on a standalone Flycast with its own overlay
     menu.
 
+## Dreamcast Lite
+
+On the Brick, Brick Pro and Smart Pro, heavy 3D games (Crazy Taxi 2, for example) can't
+keep up on Flycast v2.7: the game slows down and the sound breaks up.
+**Dreamcast Lite** is a second Dreamcast system that runs an older, lighter
+Flycast (2022). It keeps those games at full speed with smooth sound.
+
+To use it, copy or move a game into `Roms/Dreamcast Lite (DCX)/`; it then shows
+up under **Dreamcast Lite** in the main menu. Naomi and Atomiswave arcade games
+work there too.
+
+- **It has its own BIOS folder.** Copy your BIOS files into `Bios/DCX/`
+  (the same files as in `Bios/DC/`: `dc_boot.bin`, and `naomi.zip` /
+  `awbios.zip` for the arcade games). Without `dc_boot.bin` it uses a built-in
+  BIOS, as Dreamcast does.
+- **Saves are separate.** Dreamcast Lite has its own memory card per game
+  (`Saves/DCX/`), its own save states and its own settings. Progress made in
+  one system doesn't appear in the other.
+- **What it doesn't have:** netplay, and the *SH4 CPU under/overclock* and
+  *Auto Skip Frame* settings.
+- RetroAchievements, save states, auto-resume, fast-forward and the Artwork
+  Manager work as on Dreamcast.
+
+Use Dreamcast Lite for the games that stutter, and keep the rest on Dreamcast:
+Flycast v2.7 is more accurate. The Smart Pro S runs most games at full speed on
+v2.7 already; Dreamcast Lite is there too if one doesn't.
+
 ## Controls
 
 The face buttons map to the Dreamcast pad **by position**, the way the

@@ -45,6 +45,7 @@ Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 | Sega 32X (32X) | PicoDrive | None |
 | Sega CD (SEGACD) | PicoDrive | **Required** — `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` |
 | Sega Dreamcast (DC) | Flycast | Optional — `dc_boot.bin` (a built-in HLE BIOS is used without it). Naomi / Atomiswave arcade games **require** `naomi.zip` / `awbios.zip` — see the [Dreamcast page](dreamcast.md#arcade-games-naomi-atomiswave) |
+| Dreamcast Lite (DCX) | Flycast (2022 libretro build) | Same files as Dreamcast, in `Bios/DCX/` — see [Dreamcast Lite](dreamcast.md#dreamcast-lite) |
 | Sega Game Gear (GG) | PicoDrive | None |
 | Sega Genesis (MD) | PicoDrive | None |
 | Sega Master System (SMS) | PicoDrive | None |
@@ -71,6 +72,7 @@ folder you use:
 | **Game Boy Advance** | gpSP (`GBA`), the only GBA core with [Netplay](../netplay.md#supported-systems) | mGBA (`MGBA`), better for ROM hacks, no netplay |
 | **Super Nintendo** | Snes9x (`SFC`), the default | Supafaust (`SUPA`), but heavier |
 | **The Sega systems** | PicoDrive | Genesis Plus GX (`GPGX`) |
+| **Dreamcast** | Flycast 2022 (`DCX`, [Dreamcast Lite](dreamcast.md#dreamcast-lite)), no netplay | Flycast v2.7 (`DC`), the default |
 
 See [Game Boy Advance](game-boy-advance.md) and
 [Super Nintendo](super-nintendo.md) for which to use.
