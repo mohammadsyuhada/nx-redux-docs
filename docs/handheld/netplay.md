@@ -1,12 +1,13 @@
 # Netplay
 
 NX Redux includes [Netplay](https://github.com/mohammadsyuhada/nextui-netplay)
-for **local wireless multiplayer**. When a game supports it, the hint bar in
+for **local multiplayer**. When a game supports it, the hint bar in
 the game list shows `Y NETPLAY`:
 
 ![Y NETPLAY hint in the game list](../assets/screenshots/netplay-hint.png)
 
-Press `Y` to host or join over Wi-Fi or a hotspot hosted by one device. There
+Press `Y` to host or join over Wi-Fi, a hotspot hosted by one device, or a
+[USB cable](#usb-cable) between the two devices. There
 is no IP to type and no persistent toggle to remember to turn off. Save data
 syncs automatically before the match starts.
 
@@ -17,17 +18,62 @@ syncs automatically before the match starts.
 
     ![Netplay host/join](../assets/screenshots/netplay.png)
 
-3. Both players choose how to connect: **Hotspot** (hosted by one device) or **WiFi** (the
-   local network).
+3. Both players choose how to connect: [**USB Cable**](#usb-cable) (a cable
+   between the two devices), **Hotspot** (hosted by one device) or **WiFi**
+   (the local network).
 
-    ![The Connection screen with Hotspot and WiFi](../assets/landing/features/netplay-connection.webp)
+    ![The Connection screen with USB Cable, Hotspot and WiFi](../assets/landing/features/netplay-connection.webp)
 
-4. The joiner picks the host from the **Select Host** list. Devices find each
-   other automatically.
+4. Connect, depending on what you chose:
+    - **USB Cable:** nothing to pick. Both screens wait for the cable link,
+      then connect on their own. See [USB Cable](#usb-cable).
+    - **Hotspot:** the host shows a code; the joiner picks that code.
+    - **WiFi:** the joiner picks the host from the **Select Host** list.
+      Devices on the same network find each other automatically.
 
-    ![The Select Host list showing one host](../assets/landing/features/netplay-select-host.webp)
+        ![The Select Host list showing one host](../assets/landing/features/netplay-select-host.webp)
 
 5. Save data syncs, then the match starts.
+
+## USB Cable
+
+No Wi-Fi nearby, or a laggy one? Connect the two devices with a USB-C to
+USB-C data cable instead. A cable is much steadier than Wi-Fi.
+
+1. Plug the cable into the **top** USB-C port of one device and the
+   **bottom** USB-C port (the charging port) of the other. Either device can
+   take either end.
+2. Both players pick the same game, press `Y` and choose **Host Game** or
+   **Join Game** as usual.
+3. Both players choose **USB Cable**. The screen shows *Waiting for the other
+   device…* until the cable link is up. You can plug the cable in now if you
+   haven't yet. Press `B` to cancel.
+4. There is no host list: the joiner connects straight to the other device.
+   Save data syncs over the cable, then the match starts.
+
+![USB Cable waiting screen](../assets/screenshots/netplay-usb-wait.png)
+
+- **2 players only.** One cable connects two devices.
+- **The top-port device powers the other.** The device with the cable in its
+  top port charges the other one for the whole session, so its battery drains
+  faster. Start with that one well charged.
+- **Same NX Redux version on both.** Otherwise the wizard shows *Both devices
+  need the same NXRedux version.*
+
+!!! tip "Host and Join don't depend on the cable"
+    **Host Game** and **Join Game** have nothing to do with which device has
+    the cable in its top port. Pick them as you like.
+
+??? info "More detail"
+    - Tested between the Brick and the Smart Pro S in both cable directions.
+      The Brick Pro runs the same software as the Brick.
+    - With both ends in top ports, or both in bottom ports, the devices won't
+      connect — the wizard just keeps waiting. Move one end.
+    - Pulling the cable out mid-game ends the session, the same as a lost
+      Wi-Fi connection.
+    - Over the cable the devices answer each other in about 1 ms, with no
+      dropped packets. Wi-Fi through a router has occasional spikes of
+      70–190 ms and some loss.
 
 ## Supported systems
 
