@@ -91,6 +91,8 @@ vertically.
 The picture beside a game list in the List style. Shows only while game lists
 are `List`.
 
+![Layouts settings, the List art row](../../assets/screenshots/set-layouts-list-art.png)
+
 - `Screenshot` (default): the game's screenshot fills the background.
 - `Mix`, `3D box art`, `2D box art` or `Wheel`: the whole picture in a box on
   the right, and the game names stop short of it.
@@ -99,6 +101,10 @@ A game without that picture falls back to the screenshot. `Mix` also takes an
 old Mix from an older release. Mix, 2D box art and Wheel are only on the card
 once you turn them on in
 [Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+
+*List art set to Mix*
+
+![Game list in List style with the Mix in a box on the right](../../assets/screenshots/game-list-list-mix.png)
 
 ### Backdrop art
 
@@ -109,6 +115,10 @@ game lists are `Backdrop`.
 A game without that picture shows its 3D box art, else a placeholder box. 2D
 box art and Wheel come from
 [Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+
+*Backdrop art set to 2D box art*
+
+![Game list in Backdrop style with 2D box art](../../assets/screenshots/game-list-backdrop-2d.png)
 
 ## Extra info
 
