@@ -108,6 +108,19 @@ is the Dreamcast's `A`. The Dreamcast pad is lettered like an Xbox pad:
   [in-game menu](../in-game-menu.md). On NAOMI and Atomiswave the game sees
   the `SELECT` press first, so it may count a coin.
 
+## Multiplayer
+
+Up to four players can play, each on their own controller; see
+[Local Multiplayer](../multiplayer.md). NAOMI and Atomiswave games take
+up to four players too. The points below are for Dreamcast discs:
+
+- Every player's controller has the Vibration Pack.
+- Only Player 1's controller has a memory card. Games save to Player 1's
+  card.
+- To give Players 2 to 4 a card, set **Device in Expansion Slot B1**,
+  **C1** or **D1** to **VMU** in [Emulator Settings](../emulator-settings.md)
+  under **Core settings**.
+
 ## Memory cards (VMU)
 
 Every game gets **its own memory card**, kept with your other saves:

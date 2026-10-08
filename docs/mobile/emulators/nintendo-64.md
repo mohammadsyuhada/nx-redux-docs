@@ -43,6 +43,11 @@ the console or **Game Settings** for one game. The Rumble Pak takes the
 Controller Pak's place. Start the game again for the change to take effect.
 See [Vibration](../controls.md#game-rumble).
 
+Up to four players can play, each on their own controller; see
+[Local Multiplayer](../multiplayer.md). Each player has their own setting,
+from **Player 1 Pak** to **Player 4 Pak**. Only games that support the
+Rumble Pak rumble, such as Super Smash Bros. Mario Kart 64 doesn't.
+
 ## Settings
 
 - Video uses the **GLideN64** plugin. The paraLLEl plugins are not offered:

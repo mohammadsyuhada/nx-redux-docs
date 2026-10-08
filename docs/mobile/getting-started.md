@@ -34,9 +34,10 @@ New to NX Redux? See [About NX Redux](../about.md) first.
   Android games and apps. See [Launcher Mode & Android Games](launcher.md).
 - **Foldables:** on a half-folded phone, Flex mode puts the game above the
   hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
-- **In a later release:** Netplay, Device Sync, local multiplayer for 2 to 4
-  players on their own controllers, and more systems, such as home computers
-  (Amiga, C64 and so on).
+- **Local multiplayer:** two to four players on one phone, each on their
+  own controller. See [Local Multiplayer](multiplayer.md).
+- **In a later release:** Netplay, Device Sync, and more systems, such as
+  home computers (Amiga, C64 and so on).
 - **Not available:** RetroAchievements hardcore mode, the same as on the
   handheld.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,

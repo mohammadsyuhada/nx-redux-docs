@@ -3,7 +3,8 @@
 While a game is running, open the in-game menu in any of these ways:
 
 - press `MENU` on the on-screen pad or a controller,
-- hold `SELECT` and `START` together,
+- hold `SELECT` and `START` together (in a multiplayer game, on Player 1's
+  controller only),
 - use Android's Back gesture or button.
 
 Some consoles have shortcuts of their own; see their pages under
@@ -34,6 +35,7 @@ phone in landscape, the menu shows two pages side by side. See [Foldables & Larg
 | **Disc** | Only for games with more than one disc. Shows the disc in the drive, such as `1/2`. `LEFT` / `RIGHT` change the disc, as opening the lid and swapping it would. |
 | **Save** | Save a state to the chosen slot. |
 | **Load** | Load the state in the chosen slot. |
+| **Players** | Only in games with more than one player. Shows which controller is which player. See [Players](#players). |
 | **Options** | Open the options pages below. |
 | **Quit** | Leave the game. |
 
@@ -46,6 +48,21 @@ There are 8 save state slots. On **Save** and **Load**:
 Quitting also saves a hidden resume state, and so does leaving the app with
 the game open. That is what lets the [Game Switcher](game-switcher.md) resume
 a game where you left it.
+
+## Players
+
+In a game with more than one player, the **Players** page shows who is who:
+
+- **Player 1** to **Player 4** show the controller's name, **Empty**, or
+  the name with **(disconnected)**. `LEFT` / `RIGHT` give the player another
+  controller, or **Empty**. Picking a controller another player has swaps
+  the two.
+- Each connected controller has a row set to **Playing** or **Not playing**.
+  A controller that is **Not playing** is ignored in multiplayer games until
+  it plays again.
+
+To add a player, close the menu and press a button on the new controller.
+See [Local Multiplayer](multiplayer.md).
 
 ## Options
 

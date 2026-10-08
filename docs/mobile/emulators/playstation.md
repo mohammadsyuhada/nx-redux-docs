@@ -34,6 +34,8 @@ The face buttons map to the PlayStation buttons **by position**:
 - The game sees a DualShock pad, so games with
   [DualShock rumble](../controls.md#game-rumble) rumble.
 - `MENU`, or `SELECT` + `START`, opens the [in-game menu](../in-game-menu.md).
+- Two players can play, each on their own controller. Player 2 gets the
+  same DualShock pad as Player 1. See [Local Multiplayer](../multiplayer.md).
 
 ## Multi-disc games
 

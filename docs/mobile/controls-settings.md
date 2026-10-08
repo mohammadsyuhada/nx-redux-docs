@@ -22,7 +22,9 @@ When it ticks: see [Controls → Pad vibration](controls.md#pad-vibration).
 
 The game's own rumble, on the controller you play with when it has a motor,
 else on the phone. Changing the level plays a short pulse at that strength,
-so you can feel it. **Off** plays none.
+so you can feel it. **Off** plays none. In a
+[multiplayer](multiplayer.md#rumble) game it sets the strength for every
+player.
 
 Which consoles rumble, and the Nintendo 64's Rumble Pak: see
 [Controls → Game rumble](controls.md#game-rumble).

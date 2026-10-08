@@ -79,8 +79,21 @@ Not yet. Netplay and Device Sync come in a later release.
 
 ## Can two people play on one phone?
 
-Not yet. Local multiplayer, for 2 to 4 players each on their own controller,
-comes in a later release.
+Yes. Two to four people can play one game, each on their own controller.
+Start the game and press a button on each controller to join. Nintendo 64,
+Sega Dreamcast, Arcade and TurboGrafx-16 take up to four players, and most
+other home consoles two. See [Local Multiplayer](../../mobile/multiplayer.md).
+
+## Can a second player use the touch controls?
+
+No. The on-screen pad always controls Player 1, so every other player needs
+a controller.
+
+## Why did my Joy-Cons become two players?
+
+Android sees a pair of Joy-Cons as two controllers, so each one joins as its
+own player. Multitap adapters, such as the NES Four Score, aren't supported
+yet either. See [Local Multiplayer](../../mobile/multiplayer.md#limits).
 
 ## Can I remap controller buttons?
 

@@ -37,6 +37,8 @@ Arcade games run on the bundled **FinalBurn Neo** core.
   buttons.
 - `MENU`, or `SELECT` + `START`, opens the [in-game menu](../in-game-menu.md).
   The game sees the `SELECT` press first, so it may count a coin.
+- Up to four players can play, each on their own controller, as many as the
+  game has. See [Local Multiplayer](../multiplayer.md).
 
 ## Limits
 

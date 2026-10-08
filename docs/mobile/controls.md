@@ -3,7 +3,8 @@
 ## On-screen pad and controllers
 
 Without a controller the app shows an on-screen pad. Connect any Android
-controller to play with real buttons instead.
+controller to play with real buttons instead. With a controller each, two to
+four people can play one game; see [Local Multiplayer](multiplayer.md).
 
 - **Portrait:** the pad sits in a band below the screen, in the menus and in
   games. On Nintendo DS, the band goes away while a controller is connected,
@@ -153,7 +154,8 @@ The other buttons:
 | `L3`, `R3` (pressing the sticks) | `L3`, `R3`, for the consoles that use them, such as the NAOMI and Atomiswave Test and Service buttons |
 
 On a controller without a mode button, hold `SELECT` and `START` together to
-open the in-game menu.
+open the in-game menu. In a multiplayer game only Player 1's `SELECT` +
+`START` does; see [Local Multiplayer](multiplayer.md#the-in-game-menu).
 
 ### Nintendo 64
 
@@ -213,6 +215,9 @@ the controller you are playing with when it has a rumble motor, and to the
 phone (or the handheld's motor) when it doesn't. Pressing the on-screen pad
 moves it back to the phone.
 
+In a [multiplayer](multiplayer.md#rumble) game each player's rumble goes to
+their own controller. Only Player 1 falls back to the phone.
+
 - Changing the level plays a short pulse at that strength, so you can feel
   it. **Off** plays none.
 - The rumble stops while the [in-game menu](in-game-menu.md) is open and
@@ -241,14 +246,14 @@ the box. To feel a game's rumble, open
 Settings** for one game, and under **Core settings → Pak/Controller
 Options** set **Player 1 Pak** to **rumble**. The Rumble Pak takes the
 Controller Pak's place, so a game can't save to the Controller Pak while it
-is in. Start the game again for the change to take effect.
+is in. Start the game again for the change to take effect. For more players,
+set **Player 2 Pak** to **Player 4 Pak** the same way.
 
 ??? info "More detail"
     - The emulators' own rumble options are in **Core settings** too, such
       as **Rumble Effects** for PlayStation and Doom, **Device in Expansion
       Slot A2** for Dreamcast, and **Controller Rumble Strength** for Game
       Boy. Leave them as they are; **Game rumble** sets how strong it feels.
-    - Only player 1's rumble is played.
 
 ## In the menus
 
@@ -289,6 +294,7 @@ Shaders, Core Options, Cheats, Achievements and Save Changes. See
 ## Console shortcuts
 
 `MENU`, `SELECT` + `START` and Back open the in-game menu on every console.
+In a multiplayer game, `SELECT` + `START` works on Player 1's controller only.
 `MENU` and the combo never reach the game, but the game does see the
 `SELECT` press before `START`, except on the Nintendo 3DS.
 
