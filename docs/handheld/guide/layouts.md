@@ -62,7 +62,7 @@ console instead of its controller, much like the list's look before 2.0.
    `Roms/<console> (<tag>)/.media/bg.png`, for example
    `Roms/Game Boy (GB)/.media/bg.png`.
 3. In [Settings → Layouts](../settings/layouts.md), set **Consoles controller** to
-   **Hide**.
+   **Background**.
 
 The selected console's `bg.png` then fills the screen behind the list. A
 console without one shows the plain list on black.
@@ -75,8 +75,8 @@ hidden*
 ??? info "More detail"
     - Size the image to the screen: 1024×768 on the Brick, 1280×720 on the
       Brick Pro and Smart Pro S.
-    - With **Consoles controller** on, the controller is shown and `bg.png` is
-      ignored.
+    - With **Consoles controller** set to `Controller`, the controller is
+      shown and `bg.png` is ignored. Set to `None`, neither shows.
     - The Collections tab in List takes a background too, with no setting to
       change: `Collections/.media/<collection name>.png` for one collection,
       or `Collections/.media/bg.png` for all of them.
@@ -164,8 +164,8 @@ the freed space to the screen's edge.
 
 ??? info "More detail"
     - **Controller art.** The Consoles tab shows each console's controller
-      behind it in the List and Carousel styles. Turn **Consoles controller** off in
-      Layouts for plain logos.
+      behind it in the List and Carousel styles. Set **Consoles controller** to
+      `Background` or `None` in Layouts for plain logos.
     - **Logos.** Systems without a logo of their own show their name under a
       cartridge emblem. Tools without an icon get a generic one.
     - **Games without artwork.** A game with no screenshot or box art gets a

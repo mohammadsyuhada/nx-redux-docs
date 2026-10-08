@@ -61,11 +61,15 @@ Whether the tab's carousel runs across (`Horizontal`, the default) or down
 
 ### Consoles controller
 
-Consoles only. `Show` (default) or `Hide` each console's controller behind it
-on the Consoles tab.
+Consoles only. What shows behind the Consoles tab (the row reads
+**Controller**):
 
-Hide it to show your own picture behind each console in the List style
-instead: see [Your own console backgrounds](../guide/layouts.md#your-own-console-backgrounds).
+- `Controller` (default): each console's controller.
+- `Background`: no controller. In the List style your own picture shows
+  behind each console instead: see
+  [Your own console backgrounds](../guide/layouts.md#your-own-console-backgrounds).
+- `None`: no controller and, in the List style, no background either, not
+  even your own `bg.png`: a plain list on black.
 
 ## Game lists
 
@@ -96,6 +100,9 @@ are `List`.
 - `Screenshot` (default): the game's screenshot fills the background.
 - `Mix`, `3D box art`, `2D box art` or `Wheel`: the whole picture in a box on
   the right, and the game names stop short of it.
+- `None`: no picture and no background, not even a `bg.png`: a plain list on
+  black. This applies to every list in the List style below the tabs (games,
+  collection contents, folders).
 
 A game without that picture falls back to the screenshot. `Mix` also takes an
 old Mix from an older release. Mix, 2D box art and Wheel are only on the card
