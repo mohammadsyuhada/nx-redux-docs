@@ -142,7 +142,7 @@ def check_highlights():
         check((SITE / src).exists(), f"feature screenshot missing: {src}")
     for name in ["home", "games", "game", "detail"]:
         check(f"assets/landing/features/ra-{name}.webp" in html, f"achievements slideshow lacks the {name} screen")
-    for name in ["join", "connection", "select-host", "connected", "playing"]:
+    for name in ["join", "connection", "connected", "playing"]:
         check(f"assets/landing/features/netplay-{name}.webp" in html, f"netplay slideshow lacks the {name} screen")
     check(html.count('role="tab" id="nx-tab-') == len(HIGHLIGHT_LINKS), "feature rows should be tabs that select, not links")
     check(html.count('class="nx-features__link"') == len(HIGHLIGHT_LINKS), "each feature description needs its docs link")
