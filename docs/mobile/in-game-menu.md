@@ -6,6 +6,9 @@ While a game is running, open the in-game menu in any of these ways:
 - hold `SELECT` and `START` together,
 - use Android's Back gesture or button.
 
+Some consoles have shortcuts of their own; see their pages under
+[Emulators](emulators/index.md).
+
 The game pauses while the menu is open.
 
 - `B` goes back one page.
@@ -65,7 +68,7 @@ The line under the list says which settings the game uses right now:
 
 ??? info "More detail"
     Two things are saved straight away instead: the Nintendo DS layout
-    hotkeys (see [Nintendo DS](emulators.md#hotkeys)) and achievement mutes
+    hotkeys (see [Nintendo DS](emulators/nintendo-ds.md#controls)) and achievement mutes
     (`X` on the Achievements page).
 
 To set these before a game starts, for a whole emulator or one game, use
@@ -81,7 +84,7 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | --- | --- | --- | --- |
 | **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
 | **Controller Layout** | Every console except Nintendo 64 | Auto-detect, Xbox (A at the bottom), Nintendo (B at the bottom) | Auto-detect |
-| **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators.md#nintendo-ds) | |
+| **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
 
 **Controller Type** is the Sega pad the game sees. **Auto** uses 6 buttons
 only for games made for them. **Controller Layout** tells the app which way
@@ -158,7 +161,7 @@ The running core's own settings, grouped into the categories the core
 defines. `LEFT` / `RIGHT` change a value.
 
 Only options that can change while the game runs are listed (except the DS
-**Render Mode**; see [Nintendo DS](emulators.md#3d-rendering)). If there are
+**Render Mode**; see [Nintendo DS](emulators/nintendo-ds.md#3d-rendering)). If there are
 none, the menu says **This core has no options that can be changed while
 running.**
 

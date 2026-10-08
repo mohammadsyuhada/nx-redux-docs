@@ -28,7 +28,7 @@ already used Genesis Plus GX: kept in that folder, their saves and states
 carry over (see below).
 
 Dreamcast memory cards carry over: both name them
-`Saves/DC/<game>.A1.bin`. See [Sega Dreamcast](../../mobile/dreamcast.md#memory-cards-vmu).
+`Saves/DC/<game>.A1.bin`. See [Sega Dreamcast](../../mobile/emulators/dreamcast.md#memory-cards-vmu).
 
 ## My Sega Genesis save states are gone
 
@@ -58,12 +58,12 @@ carry over.
       the copied file must be newer than the game's last `MD` save. A copy
       that keeps its old date loses.
 
-See [Emulators](../../mobile/emulators.md#sega-genesis).
+See [Emulators](../../mobile/emulators/other-systems.md#sega-genesis-sega-cd-and-32x).
 
 ## Do I need to download emulators or cores?
 
 No. Every core is bundled in the app. See
-[Emulators](../../mobile/emulators.md) for the full list.
+[Emulators](../../mobile/emulators/index.md) for the full list.
 
 ## Is there DraStic or Dreamcast?
 
@@ -71,7 +71,7 @@ There is no DraStic. It is closed-source and no longer available, so
 Nintendo DS runs on **melonDS DS** instead. DraStic battery saves carry over.
 
 Dreamcast is included, with the NAOMI and Atomiswave arcade games. See
-[Sega Dreamcast](../../mobile/dreamcast.md).
+[Sega Dreamcast](../../mobile/emulators/dreamcast.md).
 
 ## Can I play netplay or use Device Sync with the app?
 

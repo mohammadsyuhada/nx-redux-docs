@@ -8,7 +8,7 @@ controller to play with real buttons instead.
 - **Portrait:** the pad sits in a band below the screen, in the menus and in
   games. On Nintendo DS, the band goes away while a controller is connected,
   so both screens get the full height (see
-  [Nintendo DS](emulators.md#nintendo-ds)).
+  [Nintendo DS](emulators/nintendo-ds.md)).
 - **Landscape:** the buttons sit in two clusters over the game. See
   [Landscape](#landscape).
 - **`STICK`** switches the on-screen d-pad to an analog stick and back. While
@@ -130,7 +130,8 @@ The other buttons:
 | `START`, `SELECT` | `START`, `SELECT` |
 | Mode button (Android's `BUTTON_MODE`) | `MENU` |
 | D-pad | `UP`, `DOWN`, `LEFT`, `RIGHT` |
-| Left and right sticks | The core's analog sticks (on Nintendo DS the left stick works as the d-pad, or moves the pen in stylus mode) |
+| Left and right sticks | The core's analog sticks. On consoles without an analog stick, the left stick also works as the d-pad. On Nintendo DS the left stick is the d-pad, or moves the pen in stylus mode. |
+| `L3`, `R3` (pressing the sticks) | `L3`, `R3`, for the consoles that use them, such as the NAOMI and Atomiswave Test and Service buttons |
 
 On a controller without a mode button, hold `SELECT` and `START` together to
 open the in-game menu.
@@ -264,3 +265,21 @@ Press `MENU`, hold `SELECT` + `START`, or use Android's Back gesture during a
 game. The menu has save states and Options: Console Settings, Frontend,
 Shaders, Core Options, Cheats, Achievements and Save Changes. See
 [In-game Menu](in-game-menu.md).
+
+## Console shortcuts
+
+`MENU`, `SELECT` + `START` and Back open the in-game menu on every console.
+`MENU` and the combo never reach the game, but the game does see the
+`SELECT` press before `START`.
+
+Some consoles have buttons and shortcuts of their own. They are on each
+console's page:
+
+| Console | Its own buttons |
+| --- | --- |
+| [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode or touch mode on |
+| [Sega Dreamcast, NAOMI, Atomiswave](emulators/dreamcast.md#controls) | Analog `L2` / `R2`, and on the arcade boards `SELECT` for a coin, `L3` for Test and `R3` for Service |
+| [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
+| [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by name, `Z` on `L2`, the C buttons on the right stick |
+| [PlayStation](emulators/playstation.md#controls), [PSP](emulators/psp.md#controls) | `×` `○` `△` `□` by position |
+| [Other systems](emulators/other-systems.md) | Sega `Mode`, NES disk and coin buttons, Game Boy turbo, Neo Geo Pocket `Option` and more |

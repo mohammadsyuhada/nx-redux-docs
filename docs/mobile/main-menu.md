@@ -168,7 +168,7 @@ where the game is listed.
 | **Add to Collection** | Add the game to a collection, or start a new one |
 | **Game Settings** | This game's own emulator settings. See [Emulator Settings](emulator-settings.md) |
 | **Fetch art** | Download art for this game. See [Artwork](artwork.md) |
-| **Emulator** | Pick which emulator runs this game. See [Emulators](emulators.md) |
+| **Emulator** | Pick which emulator runs this game. See [Emulators](emulators/index.md) |
 | **Remove from Collection** | Take the game out of the collection you are in |
 
 Not every item shows everywhere:

@@ -39,6 +39,7 @@ plugins:
         reference/release-notes.md: reference/release-notes/handheld.md
         handheld/index.md: handheld/getting-started.md
         mobile/index.md: mobile/getting-started.md
+        mobile/dreamcast.md: mobile/emulators/dreamcast.md
         getting-started.md: handheld/getting-started.md
         guide/main-menu.md: handheld/guide/main-menu.md
         guide/game-switcher.md: handheld/guide/game-switcher.md
@@ -197,8 +198,14 @@ nav:
           - Game Tracker: mobile/game-tracker.md
           - RetroAchievements: mobile/retroachievements.md
       - Emulators:
-          - Bundled Emulators: mobile/emulators.md
-          - Sega Dreamcast: mobile/dreamcast.md
+          - Bundled Emulators: mobile/emulators/index.md
+          - Arcade (FBNeo): mobile/emulators/arcade.md
+          - Nintendo 64: mobile/emulators/nintendo-64.md
+          - Sega Dreamcast: mobile/emulators/dreamcast.md
+          - PlayStation: mobile/emulators/playstation.md
+          - PlayStation Portable: mobile/emulators/psp.md
+          - Nintendo DS: mobile/emulators/nintendo-ds.md
+          - Other Systems: mobile/emulators/other-systems.md
       - Settings:
           - Overview: mobile/settings.md
           - Appearance: mobile/appearance.md

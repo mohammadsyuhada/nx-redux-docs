@@ -133,7 +133,7 @@ Roms/Dreamcast (DC)/
 A sheet named anything else, such as a TOSEC `disc.gdi`, doesn't make the
 folder a game. Saves, states and the VMU are keyed by that name, so every such
 game would share them. Rename the sheet after its folder. See
-[Dreamcast](dreamcast.md).
+[Dreamcast](emulators/dreamcast.md).
 
 ## Android games as a console
 

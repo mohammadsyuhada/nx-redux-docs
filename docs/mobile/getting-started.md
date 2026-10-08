@@ -23,7 +23,7 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 
 - **Emulators:** Sega Dreamcast, NAOMI and Atomiswave are included. Nintendo
   DS runs melonDS DS (DraStic is not available). See
-  [Emulators](emulators.md) and [Sega Dreamcast](dreamcast.md).
+  [Emulators](emulators/index.md) and [Sega Dreamcast](emulators/dreamcast.md).
 - **Library:** besides the home folder, the app can scan extra folders in
   place. See [Library & ROM folders](library.md).
 - **Controls:** an on-screen pad, or any Android controller. See

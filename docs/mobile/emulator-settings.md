@@ -91,4 +91,4 @@ the emulator in use.
 - A folder with a tag, such as `Game Boy Advance (MGBA)`, always uses that
   tag's emulator.
 - To switch one game to another emulator, use **Emulator** in its context
-  menu. See [Emulators](emulators.md).
+  menu. See [Emulators](emulators/index.md).

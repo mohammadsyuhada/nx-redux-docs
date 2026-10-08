@@ -35,7 +35,7 @@ Quitting a game from the [in-game menu](in-game-menu.md) saves a hidden resume
 state, and so does leaving the app while a game is open. So with nearly every
 core, every game you have played can be resumed. No manual save state is
 needed. PICO-8 is the exception for now (see
-[Emulators](emulators.md#limits)).
+[Emulators](emulators/index.md#limits)).
 
 ## Only resumable games are listed
 

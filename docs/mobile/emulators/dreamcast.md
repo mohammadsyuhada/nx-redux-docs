@@ -4,13 +4,13 @@ Play Dreamcast games, plus the **Sega NAOMI** and **Sammy Atomiswave**
 arcade games built on the same hardware. They all run on **Flycast**, from one
 folder: `Roms/Dreamcast (DC)/`.
 
-![Soulcalibur running on the Dreamcast core in portrait](../assets/screenshots/mobile/dc-game.webp)
+![Soulcalibur running on the Dreamcast core in portrait](../../assets/screenshots/mobile/dc-game.webp)
 
 Dreamcast gets the same features as the other systems:
 
-- the [in-game menu](in-game-menu.md) with save states and auto-resume
-- the [Game Switcher](game-switcher.md)
-- play time in the [Game Tracker](game-tracker.md)
+- the [in-game menu](../in-game-menu.md) with save states and auto-resume
+- the [Game Switcher](../game-switcher.md)
+- play time in the [Game Tracker](../game-tracker.md)
 - [RetroAchievements](#retroachievements) for disc games
 
 Dreamcast has no cheats.
@@ -67,7 +67,7 @@ The folder shows as one game in the list.
 
 A multi-disc game plays as one game from an `.m3u` that lists its discs. The
 in-game menu then has a **Disc** row; see
-[Multi-disc games](emulators.md#multi-disc-games).
+[Multi-disc games](index.md#multi-disc-games).
 
 ## Controls
 
@@ -88,6 +88,8 @@ Dreamcast controller is laid out:
 | `L2` / `R2` | Analog triggers |
 | `START` | `START` |
 | `SELECT` | Insert a coin (NAOMI and Atomiswave) |
+| `L3` (press the left stick) | Test, the operator menu (NAOMI and Atomiswave) |
+| `R3` (press the right stick) | Service (NAOMI and Atomiswave) |
 
 - The on-screen pad draws `A` `B` `X` `Y` in the Dreamcast's colours, in the
   positions above.
@@ -96,7 +98,14 @@ Dreamcast controller is laid out:
 - A controller is read by position too, so a "Press A" prompt means the
   bottom button, whatever letter it shows. If a controller is read wrongly,
   set **Controller Layout** in **Options → Console Settings** (see
-  [Controls](controls.md)).
+  [Controls](../controls.md)).
+- `L3` and `R3` are on controllers only: the on-screen pad has no stick
+  buttons.
+- On a controller the triggers press as far as you pull them. On the
+  on-screen pad, `L2` and `R2` press fully.
+- `MENU`, or `SELECT` + `START`, opens the
+  [in-game menu](../in-game-menu.md). On NAOMI and Atomiswave the game sees
+  the `SELECT` press first, so it may count a coin.
 
 ## Memory cards (VMU)
 
@@ -136,7 +145,7 @@ is. Eight full slots for one game take close to 300 MB on your phone.
 
 Change Dreamcast's settings in **Options → Core Options** in the in-game menu.
 You can also set them outside a game, for every game or for one, in
-[Emulator Settings](emulator-settings.md).
+[Emulator Settings](../emulator-settings.md).
 
 The internal resolution starts at 640×480, the Dreamcast's own. Higher values
 look sharper but cost speed.
@@ -189,7 +198,7 @@ Get a complete set that matches Flycast's version of MAME.
 ## RetroAchievements
 
 Dreamcast discs use the app's
-[RetroAchievements](retroachievements.md) support, like the other systems.
+[RetroAchievements](../retroachievements.md) support, like the other systems.
 The app recognises `.chd`, `.gdi`, `.cue` and `.m3u` games, and a zipped
 disc once it is unpacked.
 
