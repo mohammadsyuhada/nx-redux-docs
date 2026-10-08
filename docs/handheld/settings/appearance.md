@@ -64,6 +64,12 @@ Show or hide the `SELECT` recent games button hint on the main menu. Hiding it
 only removes the hint: pressing `SELECT` still opens the
 [Game Switcher](../guide/game-switcher.md).
 
+## Show netplay hint
+
+Show or hide the `Y` netplay button hint in game lists and search results.
+Hiding it only removes the hint: pressing `Y` on a game that supports netplay
+still opens the netplay menu.
+
 ## Show menu animations
 
 Enable or disable menu animations.
