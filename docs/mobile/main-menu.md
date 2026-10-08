@@ -57,6 +57,7 @@ and everything you pinned. It looks the same whatever layouts you pick.
   you are signed out of [RetroAchievements](retroachievements.md). The second
   line shows the month's **Most played** game and its time. A month without
   play shows **No play yet**. "This month" is the calendar month.
+  [Extra info](layouts.md#extra-info) can hide it.
 - **Continue card.** Your most recent game, with when you last played it and
   for how long. Press `A` to jump back in.
 - **Pick a game.** On a fresh install the Continue card is replaced by

@@ -2,8 +2,8 @@
 
 The Consoles, Collections and Tools tabs, and every game list, can each be
 drawn in their own style. Pick them in **Tools → Settings → Layouts**, which
-also lets you hide the page title and the button hints. Home has no layout
-setting: it looks the same whatever you pick here.
+also lets you hide the page title, the button hints and the game stats. Home
+has no layout setting: it looks the same whatever style you pick here.
 
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
@@ -37,6 +37,7 @@ only show when they apply.
 | **Controller** | Show, Hide | Show | Always |
 | [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
 | [**Button hints**](#page-title-and-button-hints) | Show, Hide | Show | Always |
+| [**Extra info**](#extra-info) | Show, Hide | Show | Always |
 | [**Reset to defaults**](#reset-to-defaults) | | | Always |
 
 ## List
@@ -193,12 +194,37 @@ Other screens, such as Settings and the in-game menu, keep both.
   game list, the selected game's play time and achievements move down into
   that row.
 
+## Extra info
+
+**Extra info** set to **Hide** removes the game stats from the main menu and
+the game lists, for a cleaner look:
+
+- **Home** drops its stats strip (**This month**, **Most played**) and the
+  play time and achievements on the Continue card, pinned games and the
+  [shelves](foldables.md#shelves).
+- A **List** game list leaves the selected game's play time, achievements
+  and next achievement out of the bottom line, and out of the hint row when
+  the hints are hidden.
+- The selected **Grid** tile shows only the game's name.
+- **Carousel** and **Backdrop** captions show only the name, horizontal and
+  vertical alike.
+
+Home gives the strip's space to the top section: the Continue card and the
+tool squares grow, and a column of squares gains one more only when a whole
+square fits.
+
+Unlike the page title and hints, this works in every mode: touch alone,
+with a controller, portrait or landscape. A console's or collection's game
+count stays, and the [Game Switcher](game-switcher.md), the
+[in-game menu](in-game-menu.md), the [Game Tracker](game-tracker.md) and
+[RetroAchievements](retroachievements.md) keep all their info.
+
 ## Reset to defaults
 
 **Reset to defaults** puts every row on the Layouts page back to its
 default: each tab's style and orientation, the game lists' style,
-orientation and alignment, **Controller**, **Page title** and
-**Button hints**. It does not ask first.
+orientation and alignment, **Controller**, **Page title**,
+**Button hints** and **Extra info**. It does not ask first.
 
 ??? info "Games without artwork"
     A game with no screenshot or box art gets a generated abstract picture,
