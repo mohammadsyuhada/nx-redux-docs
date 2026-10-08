@@ -98,29 +98,48 @@ The landscape clusters always stay Charcoal.
 
 ## Controller buttons
 
-A controller's face buttons work **by position**, like the console's own pad:
-the bottom button does the same thing on every controller, whatever letter it
-shows. So the bottom button is the Super Nintendo's `B`, the PlayStation's `×`
-and the Dreamcast's `A`.
+A controller's face buttons work **as printed**: the button with `A` on it
+is the console's `A`, whatever controller you use. So `A` is the Super
+Nintendo's `A`, the Nintendo 64's `A` and the Dreamcast's `A`.
 
-To do that the app reads the controller's layout:
+The app reads which letters your controller has where:
 
-- A **Nintendo-layout** pad (`B` at the bottom) is used as it is. Nintendo's
-  own controllers and pads in Switch mode are recognised.
-- Any other pad is read as **Xbox layout** (`A` at the bottom), and its `A`/`B`
-  and `X`/`Y` are swapped.
+- A **Nintendo-layout** pad has `A` on the right and `B` at the bottom.
+  Nintendo's own controllers and pads in Switch mode are recognised.
+- Any other pad is read as **Xbox layout**, with `A` at the bottom and `B`
+  on the right.
 
-If a controller is read wrongly, set **Controller Layout** in the in-game
-menu's **Options → [Console Settings](in-game-menu.md#console-settings)**:
+**Controller Layout**, in the in-game menu's
+**Options → [Console Settings](in-game-menu.md#console-settings)**, names
+the letters printed on your controller:
 
 | Value | Use it for |
 | --- | --- |
-| **Auto-detect** (default) | Let the app decide |
+| **Auto-detect** (default) | Let the app read your controller |
 | **Xbox (A at the bottom)** | A pad with `A` at the bottom |
-| **Nintendo (B at the bottom)** | A pad with `B` at the bottom |
+| **Nintendo (A on the right)** | A pad with `A` on the right |
 
-Every console has it except Nintendo 64. Save it for the console or the game
-with Save Changes.
+Pick the layout that isn't your controller's to play with the console's
+original button positions. On an Xbox pad set to **Nintendo**, the right
+button is `A` on Super Nintendo, Nintendo DS and Nintendo 3DS, as on the
+console's own pad.
+
+Every console has it. Save it for the console or the game with Save
+Changes.
+
+These consoles go by the printed letter: Super Nintendo, NES and Famicom
+Disk System, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS,
+Nintendo 3DS, Virtual Boy, Atari Lynx, Pokémon mini, WonderSwan,
+Nintendo 64, Sega Dreamcast, NAOMI, Atomiswave and Neo Geo Pocket.
+
+These go **by position** instead, like the console's own pad: PlayStation,
+PSP, the Sega consoles (Genesis, Sega CD, 32X, Master System, Game Gear,
+SG-1000), TurboGrafx-16, PICO-8, Atari, ColecoVision, Doom and arcade. The
+bottom button is the PlayStation's `×` on every controller. Their buttons
+have no letters, or, on the Sega pad, `C` and `Z` would end up on the
+shoulders by letter. There, Controller Layout only changes which button
+confirms in the in-game menu, so it can't fix a Nintendo-layout pad that
+the app reads as Xbox layout.
 
 The other buttons:
 
@@ -138,8 +157,8 @@ open the in-game menu.
 
 ### Nintendo 64
 
-The Nintendo 64 goes by name instead: the button printed `A` is the N64's `A`
-on every controller.
+The Nintendo 64 goes by the printed letter too: the button printed `A` is
+the N64's `A`.
 
 | Controller | Nintendo 64 |
 | --- | --- |
@@ -245,7 +264,8 @@ is in. Start the game again for the change to take effect.
 **Which button confirms:**
 
 - On a controller, `A` confirms and `B` goes back, by the letters printed on
-  it.
+  it. In the in-game menu too, with the letters
+  [Controller Layout](#controller-buttons) names.
 - On the on-screen pad, the button drawn as `A` confirms and the one drawn as
   `B` goes back. On PlayStation and PSP, `×` confirms and `○` goes back.
 
@@ -280,6 +300,6 @@ console's page:
 | [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode or touch mode on |
 | [Sega Dreamcast, NAOMI, Atomiswave](emulators/dreamcast.md#controls) | Analog `L2` / `R2`, and on the arcade boards `SELECT` for a coin, `L3` for Test and `R3` for Service |
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
-| [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by name, `Z` on `L2`, the C buttons on the right stick |
+| [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by letter, `Z` on `L2`, the C buttons on the right stick |
 | [PlayStation](emulators/playstation.md#controls), [PSP](emulators/psp.md#controls) | `×` `○` `△` `□` by position |
 | [Other systems](emulators/other-systems.md) | Sega `Mode`, NES disk and coin buttons, Game Boy turbo, Neo Geo Pocket `Option` and more |

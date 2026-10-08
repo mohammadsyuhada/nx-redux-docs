@@ -86,13 +86,14 @@ comes in a later release.
 
 Not freely. Each console has a fixed mapping:
 
-- Face buttons work **by position**, like the console's own pad: the bottom
-  button does the same thing on every controller, whatever letter it shows.
-- If your controller is read wrongly, set **Controller Layout** in the
-  in-game menu's **Options → Console Settings**: **Auto-detect**,
-  **Xbox (A at the bottom)** or **Nintendo (B at the bottom)**.
-- The Nintendo 64 goes by the printed name instead, and has no Controller
-  Layout.
+- Face buttons work **as printed**: your controller's `A` is the console's
+  `A`. PlayStation, PSP, Sega, arcade and a few others go by position
+  instead.
+- **Controller Layout** in the in-game menu's **Options → Console Settings**
+  names your controller's letters: **Auto-detect**,
+  **Xbox (A at the bottom)** or **Nintendo (A on the right)**. Pick the one
+  that isn't your controller's for the console's original button positions,
+  such as the right button as `A` on Super Nintendo with an Xbox pad.
 
 On a controller without a mode button, hold `SELECT` + `START` to open the
 in-game menu. See [Controls](../../mobile/controls.md).

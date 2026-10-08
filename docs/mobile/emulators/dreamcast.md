@@ -71,8 +71,8 @@ in-game menu then has a **Disc** row; see
 
 ## Controls
 
-The face buttons map to the Dreamcast pad **by position**, the way the
-Dreamcast controller is laid out:
+The face buttons map to the Dreamcast pad **by the printed letter**: `A`
+is the Dreamcast's `A`. The Dreamcast pad is lettered like an Xbox pad:
 
 | Position | Dreamcast button |
 | --- | --- |
@@ -95,10 +95,11 @@ Dreamcast controller is laid out:
   positions above.
 - With the on-screen pad, the in-game menu follows the drawn letters: the
   bottom button (`A`) confirms and the right one (`B`) goes back.
-- A controller is read by position too, so a "Press A" prompt means the
-  bottom button, whatever letter it shows. If a controller is read wrongly,
-  set **Controller Layout** in **Options → Console Settings** (see
-  [Controls](../controls.md)).
+- On a controller, a "Press A" prompt means the button printed `A`. If a
+  controller is read wrongly, set **Controller Layout** in
+  **Options → Console Settings** (see
+  [Controls](../controls.md#controller-buttons)). On a Nintendo-layout pad,
+  set it to **Xbox** to play with the Dreamcast's positions instead.
 - `L3` and `R3` are on controllers only: the on-screen pad has no stick
   buttons.
 - On a controller the triggers press as far as you pull them. On the

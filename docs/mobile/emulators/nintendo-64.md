@@ -10,8 +10,8 @@ Nintendo 64 games run on the bundled **Mupen64Plus-Next** core.
 
 ## Controls
 
-The Nintendo 64 maps a controller **by name**, not by position: the button
-printed `A` is the N64's `A` on every controller.
+The Nintendo 64 maps a controller **by the printed letter**, like every
+Nintendo console: the button printed `A` is the N64's `A`.
 
 | Controller | Nintendo 64 |
 | --- | --- |
@@ -29,8 +29,10 @@ printed `A` is the N64's `A` on every controller.
   `L2`. It has no `SELECT`.
 - `MENU`, or `SELECT` + `START`, still opens the
   [in-game menu](../in-game-menu.md).
-- N64 has no **Controller Layout** setting. Every other console maps face
-  buttons by position; see [Controls](../controls.md#controller-buttons).
+- **Controller Layout** in **Options → Console Settings** names your
+  controller's letters if it is read wrongly. Set it to the layout that
+  isn't your controller's to swap `A`/`B` and `X`/`Y`; see
+  [Controls](../controls.md#controller-buttons).
 
 ## Rumble
 

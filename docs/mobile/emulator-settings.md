@@ -25,7 +25,7 @@ The page is titled with the emulator, the console and the tag, such as
 
 | Group | What it holds |
 | --- | --- |
-| **Console settings** | The app's own settings for the console: **Controller Layout** for every console but N64, **Controller Type** for Sega Genesis, Sega CD and Sega 32X, and the **Layout** and **Big Screen** rows for Nintendo DS. These are the rows of the in-game [Console Settings](in-game-menu.md#console-settings) page. |
+| **Console settings** | The app's own settings for the console: **Controller Layout** for every console, **Controller Type** for Sega Genesis, Sega CD and Sega 32X, and the **Layout** and **Big Screen** rows for Nintendo DS. These are the rows of the in-game [Console Settings](in-game-menu.md#console-settings) page. |
 | **Core settings** | The emulator's own options. Rows with `›` open a group of options, such as **Video** or **Audio**. |
 
 ![Genesis Plus GX for Sega Genesis: Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp)

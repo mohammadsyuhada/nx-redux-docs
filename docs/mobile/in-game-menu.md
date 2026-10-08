@@ -14,6 +14,9 @@ The game pauses while the menu is open.
 - `B` goes back one page.
 - `B` on the first page, or `MENU` on any page, returns to the game.
 
+On a controller, `A` and `B` are the letters printed on it, as
+[Controller Layout](#console-settings) names them, on every console.
+
 ![The in-game menu's first page, with the save slot preview](../assets/screenshots/mobile/in-game-menu-root.webp)
 
 The menu uses your **Accent** and **Secondary accent** from
@@ -50,7 +53,7 @@ a game where you left it.
 
 | Row | When it shows | What it's for |
 | --- | --- | --- |
-| [Console Settings](#console-settings) | Every console except Nintendo 64 | The controller rows, and the Nintendo DS screen layouts. |
+| [Console Settings](#console-settings) | Always | The controller rows, and the Nintendo DS screen layouts. |
 | [Frontend](#frontend) | Always | Scaling, sharpness, overlay, screen offset, pad opacity and the debug HUD. |
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
@@ -83,12 +86,13 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | Row | Consoles | Values | Default |
 | --- | --- | --- | --- |
 | **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
-| **Controller Layout** | Every console except Nintendo 64 | Auto-detect, Xbox (A at the bottom), Nintendo (B at the bottom) | Auto-detect |
+| **Controller Layout** | Every console | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect |
 | **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
 
 **Controller Type** is the Sega pad the game sees. **Auto** uses 6 buttons
-only for games made for them. **Controller Layout** tells the app which way
-round your controller's face buttons are. See
+only for games made for them. **Controller Layout** names the letters printed
+on your controller, so its `A` is the console's `A`; the other layout gives
+the console's original button positions. See
 [Controls](controls.md#controller-buttons) for both.
 
 ## Frontend

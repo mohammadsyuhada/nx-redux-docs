@@ -4,9 +4,12 @@ The other bundled systems play as you would expect. This page lists what is
 special about each one: its folder notes, settings and buttons that do
 something more than the console's own pad.
 
-A controller's face buttons work **by position** on all of them; see
-[Controls](../controls.md#controller-buttons). `MENU`, or `SELECT` + `START`,
-opens the [in-game menu](../in-game-menu.md) on every system.
+A controller's face buttons work **by the printed letter** on the NES, Super
+Nintendo, Game Boy, Virtual Boy, Pokémon mini, Atari Lynx, WonderSwan and
+Neo Geo Pocket, and **by position** on the Sega consoles, TurboGrafx-16,
+PICO-8, Atari, ColecoVision and Doom; see
+[Controls](../controls.md#controller-buttons). `MENU`, or `SELECT` +
+`START`, opens the [in-game menu](../in-game-menu.md) on every system.
 
 ## Sega Genesis, Sega CD and 32X
 
@@ -61,7 +64,7 @@ The Famicom Disk System needs its BIOS: `disksys.rom` in `Bios/FDS/` (or
 
 | Control | What it does |
 | --- | --- |
-| Top, left face buttons | Turbo `A`, Turbo `B` |
+| `X`, `Y` | Turbo `A`, Turbo `B` |
 | `L2`, `R2` | Turbo `L`, Turbo `R` (mGBA and Super Game Boy only) |
 
 The on-screen pad marks them `TA`, `TB`, `TL` and `TR`.
@@ -70,8 +73,7 @@ The on-screen pad marks them `TA`, `TB`, `TL` and `TR`.
 
 | Control | Neo Geo Pocket |
 | --- | --- |
-| Bottom face button | `A` |
-| Right face button | `B` |
+| `A`, `B` | `A`, `B` |
 | `START` | `Option` |
 
 ## TurboGrafx-16
@@ -103,7 +105,7 @@ The bottom face button is Fire.
 | --- | --- |
 | `L2`, `R2` | The right d-pad's up and left |
 | Right stick | The right d-pad (controllers only) |
-| Top face button | Low-battery toggle |
+| `X` | Low-battery toggle |
 
 Games show in anaglyph 3D out of the box.
 
@@ -114,7 +116,7 @@ Games show in anaglyph 3D out of the box.
 | `R1` | `C` |
 | `L1` | Shake |
 | `SELECT` | Power |
-| Top face button | Turbo `A` |
+| `X` | Turbo `A` |
 
 ## PICO-8
 
