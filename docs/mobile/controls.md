@@ -290,13 +290,14 @@ Shaders, Core Options, Cheats, Achievements and Save Changes. See
 
 `MENU`, `SELECT` + `START` and Back open the in-game menu on every console.
 `MENU` and the combo never reach the game, but the game does see the
-`SELECT` press before `START`.
+`SELECT` press before `START`, except on the Nintendo 3DS.
 
 Some consoles have buttons and shortcuts of their own. They are on each
 console's page:
 
 | Console | Its own buttons |
 | --- | --- |
+| [Nintendo 3DS](emulators/nintendo-3ds.md#controls) | `SELECT` + `R1` swaps screens, `SELECT` + `L1` turns stylus mode on, `SELECT` + `LEFT` / `RIGHT` changes the layout, `L2` / `R2` are `ZL` / `ZR`, the right stick is the C-stick |
 | [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode or touch mode on |
 | [Sega Dreamcast, NAOMI, Atomiswave](emulators/dreamcast.md#controls) | Analog `L2` / `R2`, and on the arcade boards `SELECT` for a coin, `L3` for Test and `R3` for Service |
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |

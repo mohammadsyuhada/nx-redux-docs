@@ -6,7 +6,8 @@ tag names match NX Redux on the handheld.
 The systems with their own controls or settings have a page each:
 [Arcade (FBNeo)](arcade.md), [Nintendo 64](nintendo-64.md),
 [Sega Dreamcast](dreamcast.md), [PlayStation](playstation.md),
-[PlayStation Portable](psp.md) and [Nintendo DS](nintendo-ds.md). The
+[PlayStation Portable](psp.md), [Nintendo DS](nintendo-ds.md) and
+[Nintendo 3DS](nintendo-3ds.md). The
 smaller differences of the others, such as the Sega `Mode` button or the
 Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 
@@ -18,6 +19,7 @@ Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 | System | Tag(s) | Core |
 | --- | --- | --- |
 | [Nintendo DS](nintendo-ds.md) | `NDS` | melonDS DS |
+| [Nintendo 3DS](nintendo-3ds.md) | `3DS` | Azahar |
 | [Nintendo 64](nintendo-64.md) | `N64` | Mupen64Plus-Next |
 | [PlayStation Portable](psp.md) | `PSP` | PPSSPP |
 | Game Boy / Game Boy Color | `GB`, `GBC` | Gambatte |

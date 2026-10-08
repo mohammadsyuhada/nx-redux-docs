@@ -21,8 +21,8 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 
 ## What's different from the handheld
 
-- **Emulators:** Sega Dreamcast, NAOMI and Atomiswave are included. Nintendo
-  DS runs melonDS DS (DraStic is not available). See
+- **Emulators:** Sega Dreamcast, NAOMI, Atomiswave and Nintendo 3DS are
+  included. Nintendo DS runs melonDS DS (DraStic is not available). See
   [Emulators](emulators/index.md) and [Sega Dreamcast](emulators/dreamcast.md).
 - **Library:** besides the home folder, the app can scan extra folders in
   place. See [Library & ROM folders](library.md).
@@ -35,8 +35,8 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 - **Foldables:** on a half-folded phone, Flex mode puts the game above the
   hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
 - **In a later release:** Netplay, Device Sync, local multiplayer for 2 to 4
-  players on their own controllers, and more systems, such as Nintendo 3DS and
-  home computers (Amiga, C64 and so on).
+  players on their own controllers, and more systems, such as home computers
+  (Amiga, C64 and so on).
 - **Not available:** RetroAchievements hardcore mode, the same as on the
   handheld.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,

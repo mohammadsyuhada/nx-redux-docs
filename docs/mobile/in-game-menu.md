@@ -53,7 +53,7 @@ a game where you left it.
 
 | Row | When it shows | What it's for |
 | --- | --- | --- |
-| [Console Settings](#console-settings) | Always | The controller rows, and the Nintendo DS screen layouts. |
+| [Console Settings](#console-settings) | Always | The controller rows, the Nintendo DS screen layouts and the Nintendo 3DS New 3DS Controls. |
 | [Frontend](#frontend) | Always | Scaling, sharpness, overlay, screen offset, pad opacity and the debug HUD. |
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
@@ -88,6 +88,7 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
 | **Controller Layout** | Every console | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect |
 | **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
+| **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
 
 **Controller Type** is the Sega pad the game sees. **Auto** uses 6 buttons
 only for games made for them. **Controller Layout** names the letters printed
