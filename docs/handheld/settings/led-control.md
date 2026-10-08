@@ -14,9 +14,8 @@ Opening a zone shows its options — here the F1 key:
 ## Effect
 
 The lighting effect for the zone: Linear, Breathe, Interval Breathe,
-Static, Blink 1–3, Rainbow, Twinkle, Fire, Glitter, NeonGlow, Firefly,
-Aurora and Reactive, plus zone-specific extras (Topbar Rainbow and Topbar
-night on the top bar; LR Rainbow and LR Reactive on the triggers).
+Static or Blink 1–3. These are the effects the device's LED hardware
+supports.
 
 ## Color
 
