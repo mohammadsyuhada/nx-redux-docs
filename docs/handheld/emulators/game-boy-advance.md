@@ -7,7 +7,7 @@ one per game by which `Roms` folder the game is in:
 | --- | --- | --- |
 | Folder | `Roms/Game Boy Advance (GBA)/` | `Roms/Game Boy Advance (MGBA)/` |
 | Strength | Faster | More accurate, better for ROM hacks |
-| [Netplay](../netplay.md) (GBA Link) | Yes, for link and wireless adapter games | No |
+| [Netplay](../netplay.md) (GBA Link) | Yes, for link and wireless adapter games | Link cable games, [USB Cable](../netplay.md#mgba-link-cable-over-usb) only |
 | BIOS | Recommended: `Bios/GBA/gba_bios.bin` | Optional: `Bios/MGBA/gba_bios.bin` |
 | [File types](rom-formats.md) | `gba` `bin` `agb` `gbz` | `gba` |
 
@@ -20,16 +20,19 @@ Use **mGBA** in the `MGBA` folder for **ROM hacks**, and for any game that
 glitches, crashes or runs incorrectly on gpSP. mGBA trades some speed for
 accuracy, so it handles games that gpSP gets wrong.
 
-!!! warning "Netplay needs gpSP, and a game that supports link play"
-    Only **gpSP** can play over [Netplay](../netplay.md), so move a game to
-    the `GBA` folder to play together. Netplay only works with games that
-    support the GBA **link cable or wireless adapter**, such as trading and
-    versus modes.
+!!! warning "Netplay needs a game that supports link play"
+    Netplay only works with games that support the GBA **link cable or
+    wireless adapter**, such as trading and versus modes. **gpSP** plays over
+    USB Cable, Hotspot and WiFi, wireless adapter included. **mGBA** plays
+    link cable games over the
+    [USB Cable](../netplay.md#mgba-link-cable-over-usb) only, so for Wi-Fi
+    or the Union Room move the game to the `GBA` folder.
 
 ??? info "More detail: netplay"
-    A game in the `MGBA` folder shows no `Y NETPLAY` hint. Netplay emulates
-    the GBA **link cable and wireless adapter**, so games without link play
-    have nothing to connect.
+    Netplay connects the GBA **link cable** (and, on gpSP, the **wireless
+    adapter**), so games without link play have nothing to connect. Both
+    players must use the same folder: an mGBA device can't link with a gpSP
+    device.
 
 !!! note "gpSP and the BIOS"
     gpSP has a built-in replacement BIOS, so games start without one. The
@@ -59,5 +62,5 @@ The `Super Game Boy (SGB)` folder runs Game Boy games on **mGBA** as a Super
 Game Boy. `sgb_bios.bin` in `Bios/SGB/` is optional and gives full Super Game
 Boy accuracy.
 
-Like the `MGBA` folder, it has no netplay. Use the `Game Boy (GB)` folder for
+It has no netplay. Use the `Game Boy (GB)` folder for
 Game Boy link cable games.

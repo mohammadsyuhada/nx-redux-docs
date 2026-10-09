@@ -101,6 +101,26 @@ starting the session. The joiner follows the host's choice.
     - Cross-game trades between FireRed/LeafGreen and Ruby/Sapphire also need
       the game's own requirements, such as the National Pokédex in FireRed.
 
+### mGBA link cable over USB
+
+Games in the `Game Boy Advance (MGBA)` folder (the **mGBA** core) also get a
+real link cable, but **over the USB Cable only**. After `Y`, the Connection
+screen offers just **USB Cable** for these games. Cable link play such as
+Pokémon trades and battles, cross-game trades and Four Swords works the same
+way as on gpSP, for 2 players.
+
+- **No wireless adapter on mGBA.** The Union Room and other wireless adapter
+  features (FireRed, LeafGreen, Emerald) need the `Game Boy Advance (GBA)`
+  folder (gpSP).
+- **Both players use the `MGBA` folder.** An mGBA device can't link with a
+  gpSP device.
+
+??? info "More detail"
+    - Wi-Fi and Hotspot aren't offered for mGBA because the real cable needs
+      the USB connection's speed.
+    - Saves, `MENU` pause, the leave countdown and charging work as for the
+      gpSP link cable above.
+
 ## Supported systems
 
 Netplay works only on the cores below. The `Y NETPLAY` hint appears only for
@@ -113,6 +133,7 @@ netplay.
 | Game Boy | `Game Boy (GB)` | gambatte | **GB Link** — link cable games (Pokémon trades and battles, etc.) |
 | Game Boy Color | `Game Boy Color (GBC)` | gambatte | **GB Link** — link cable games |
 | Game Boy Advance | `Game Boy Advance (GBA)` | gpSP | **GBA Link** — wireless adapter and link cable games |
+| Game Boy Advance | `Game Boy Advance (MGBA)` | mGBA | **GBA Link** — link cable games, [USB Cable only](#mgba-link-cable-over-usb) |
 | Nintendo ES | `Nintendo ES (FC)` | FCEUmm | Lockstep |
 | Famicom Disk System | `Famicom Disk System (FDS)` | FCEUmm | Lockstep |
 | Super Nintendo ES | `Super Nintendo ES (SFC)` | Snes9x | Lockstep |
@@ -139,12 +160,14 @@ same game.
 | **GGPO** (Dreamcast) | Rollback netplay. Stays responsive over Wi-Fi. |
 | **GB Link** / **GBA Link** | Emulates the link cable (and, for GBA, the wireless adapter). Trading and versus battles in single-player cartridges work between two devices. |
 
-!!! warning "Game Boy Advance: use the `GBA` folder, not `MGBA`"
-    Only **gpSP** in `Game Boy Advance (GBA)` supports netplay. A GBA game in
-    `Game Boy Advance (MGBA)` (the **mGBA** core) shows no `Y NETPLAY` hint and
-    cannot host or join. Move it to `Game Boy Advance (GBA)` to play over link.
+!!! warning "Game Boy Advance: `MGBA` is USB Cable only"
+    **gpSP** in `Game Boy Advance (GBA)` plays over USB Cable, Hotspot and
+    WiFi, with the wireless adapter. **mGBA** in `Game Boy Advance (MGBA)`
+    plays only over the [USB Cable](#mgba-link-cable-over-usb), link cable
+    games only. For Wi-Fi or the Union Room, move the game to
+    `Game Boy Advance (GBA)`.
 
-    The same applies to `Super Game Boy (SGB)`, which also runs on mGBA. Put
+    `Super Game Boy (SGB)`, which also runs on mGBA, has no netplay. Put
     Game Boy games in `Game Boy (GB)` / `Game Boy Color (GBC)` for link play.
 
 ??? info "More detail"
