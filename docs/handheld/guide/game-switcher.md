@@ -21,7 +21,7 @@ yet, the switcher says **Nothing played yet**.
 
 Quitting a game auto-saves to a hidden save slot. The Game Switcher always
 resumes exactly where you left off, with no manual save states needed. This
-works on the built-in cores, Dreamcast included, and Nintendo 64.
+works on the built-in cores, Dreamcast and Nintendo 64 included.
 
 Games without a save state show their box art instead, so the switcher stays
 visual even for freshly added titles.

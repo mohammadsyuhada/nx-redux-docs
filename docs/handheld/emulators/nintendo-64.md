@@ -1,7 +1,18 @@
 # Nintendo 64
 
-Nintendo 64 games run on a bundled standalone **Mupen64Plus** emulator. Put
-your ROMs in `Roms/Nintendo 64 (N64)/`.
+Nintendo 64 games run on the **Mupen64Plus-Next** core, the same way as the
+other built-in systems: the in-game menu, save states with screenshots,
+[RetroAchievements](../apps/retroachievements.md), [cheats](../apps/cheats.md),
+the Game Switcher and quit-autosave all work as they do everywhere else, and
+ROMs can be zipped. Put your ROMs in
+`Roms/Nintendo 64 (N64)/`.
+
+!!! info "Coming from an older NX Redux"
+    N64 used to run on a separate, standalone emulator. Your game saves come
+    along on their own: the **first time** you start a game after updating, its
+    in-game saves and Controller Pak data are copied over (the old files are
+    left untouched). **Save states don't carry over**, so make an in-game save
+    before you update. Texture packs stay where they were.
 
 ## Controls
 
@@ -26,6 +37,7 @@ whichever buttons act as `A` and `B`. The two C buttons on the face follow
 All four C buttons are on the right stick. C-Left and C-Down are also on the
 face, so you can press the two C buttons most games use for items or actions
 without letting go of the stick. C-Up and C-Right exist only on the right stick.
+You can remap everything in the in-game menu under **Controls**.
 
 !!! note "Brick: no analog sticks"
     The **Brick** has no sticks, so most games (Mario Kart 64, Super Mario 64)
@@ -42,106 +54,106 @@ without letting go of the stick. C-Up and C-Right exist only on the right stick.
 
 ## Video plugin
 
-Two video plugins are bundled, and each game can use whichever one you pick:
+Two video plugins are built in, and each game can use whichever one you pick:
 
 | Plugin | Best for | Texture packs |
 | --- | --- | --- |
-| **GLideN64** | More accurate rendering, and the fullest set of Emulator Options sections. Heavier on the hardware. | Yes, the only plugin that loads them |
+| **GLideN64** | More accurate rendering. Heavier on the hardware. | Yes, the only plugin that loads them |
 | **Rice** | Much lighter to run | No |
 
-The default plugin depends on your device.
+The default plugin depends on your device:
+
+| Device | Default plugin |
+| --- | --- |
+| Brick | Rice |
+| Brick Pro | Rice |
+| Smart Pro | Rice |
+| Smart Pro S | GLideN64 |
 
 To change it:
 
 1. Open the N64 emulator's options:
     - For all games: [Tools → Emulator Settings](../apps/emulator-settings.md)
-      → *Nintendo 64 (Mupen64Plus)*.
+      → *Nintendo 64 (mupen64plus-next)*.
     - For one game: its [context menu](../guide/context-menu.md) →
       *Emulator Options*. A per-game choice overrides the system-wide
       default.
-2. In **Video Plugin**, the first option section, choose `GLideN64` or
-   `Rice`.
+2. Set **RDP Plugin** to `GLideN64` or `Rice`.
 3. Restart the game. The change takes effect the next time the game starts.
 
 See [Emulator Options](../guide/emulator-options.md) for how these fit
 together.
 
-!!! warning "Rice has no true widescreen"
-    Rice's **16:9** and **Stretch** modes only stretch the 4:3 picture rather
-    than widening the view. Keep Rice on **4:3** for correct geometry. Switch
-    to **GLideN64** for a proper widescreen picture, since it adjusts the
-    game's field of view.
+!!! warning "Doom 64 needs GLideN64"
+    With Rice, **Doom 64** shows a black screen. On the Brick, Brick Pro and
+    Smart Pro, switch Doom 64 to **GLideN64** in its Emulator Options. It runs
+    below full speed on the Brick, since GLideN64 is heavy on its GPU.
 
 ??? info "More detail"
-    **Default plugin per device.** Existing installs pick up their
-    platform's default automatically the next time you launch an N64 game or
-    open its options.
+    **Why Rice on the Brick-class devices.** In testing on the **Brick**, Mario
+    Kart 64 ran at full speed with Rice, while GLideN64 kept the GPU close to
+    its limit and fell behind in heavier games (Doom 64 at about two thirds of
+    full speed).
 
-    | Device | Default plugin |
-    | --- | --- |
-    | Brick | Rice |
-    | Brick Pro | Rice |
-    | Smart Pro | Rice |
-    | Smart Pro S | GLideN64 |
-
-    **Rice performance.** On the **Brick** in testing, Rice used roughly 2.6×
-    less CPU and produced far fewer audio underruns than GLideN64.
-
-    **Option sections follow the selected plugin.** The Emulator Options
-    sections change with **Video Plugin**: pick a plugin, press **B** back to
-    the section list, and that plugin's sections appear.
-
-    - GLideN64 has the full set: Rendering, Texture Enhancement, Hi-Res
-      Textures, Dithering, Frame Buffer, Performance, Gamma.
-    - Rice has its own smaller set: **Rendering**, **Texture Enhancement**,
-      **Frame Buffer** and **Performance**.
-    - High-resolution texture packs still load under **GLideN64 only**.
-
-    **Same behaviour on both plugins.** The in-game menu (Continue / Save
-    State / Load State / Quit), quit-autosave and Game Switcher resume all
-    behave the same on both plugins.
-
-    **Aspect ratio on 16:9 screens.** On the 16:9 **Smart Pro** and
-    **Smart Pro S** panels, Rice keeps the 4:3 N64 picture with black bars
-    down each side by default, the same as GLideN64. To change it, open
-    **Emulator Options → Rendering → Aspect Ratio** (4:3 / 16:9 / Stretch)
-    while Rice is the selected plugin. The 4:3 **Brick** and **Brick Pro**
-    panels are unaffected. Rice cannot render true widescreen.
+    **Same behaviour on both plugins.** The in-game menu, save states,
+    quit-autosave and Game Switcher resume behave the same on both plugins.
 
 ## High-resolution texture packs
 
-Rice-format texture packs are supported (with limitations due to 1 GB RAM).
+Texture packs replace the N64's blurry textures with high-resolution ones.
+They're **off by default** (they need a lot of memory on these 1 GB devices),
+and they load only under the **GLideN64** [video plugin](#video-plugin).
 
-!!! note "Texture packs need GLideN64"
-    Despite the "Rice-format" name, packs load only under the **GLideN64**
-    [video plugin](#video-plugin), **not** Rice. On devices that default to
-    Rice (Brick, Brick Pro and Smart Pro), switch the game to GLideN64 first.
+1. Put the pack where the game looks for it:
+    - **A ready-made cache** (a single `<NAME>_HIRESTEXTURES.hts` file) goes in
+      `Roms/Nintendo 64 (N64)/.cache/`. This is the fastest way: the game
+      starts right away.
+    - **A folder of PNG files** goes in
+      `Roms/Nintendo 64 (N64)/.hires_texture/<ROM NAME>/`. `<ROM NAME>` is the
+      ROM's **internal header name** (e.g. `MARIOKART64`), not its filename.
+2. Open the game's *Emulator Options* (its context menu), set **RDP Plugin**
+   to `GLideN64` if your device defaults to Rice, and turn on
+   **Use High-Res textures**.
+3. Launch the game. A PNG pack is converted into a cache on the first launch,
+   with a *Processing hi-res textures (first time only)...* screen. Large packs
+   take several minutes. Later launches start fast.
 
-1. Place the pack in `Roms/Nintendo 64 (N64)/.hires_texture/<ROM NAME>/`.
-   `<ROM NAME>` is the ROM's **internal header name** (e.g. `MARIOKART64`),
-   not its filename.
-2. Launch the game. The first launch converts the pack, with an on-screen
-   progress display. Large packs take several minutes.
-3. Later launches start fast.
+!!! tip "Pack instructions written for Mupen64Plus or RetroArch"
+    Many packs (e.g. Mario Kart 64 Reloaded) list settings like
+    `txHiresEnable`, `txHiresTextureFileStorage` and
+    `CorrectTexrectCoords = Auto`. Only the first one is up to you (**Use
+    High-Res textures**). The others are already the N64 defaults here, and the
+    resolution is set to 2× native.
 
 ??? info "More detail"
+    - **Short stutters are normal.** Textures are read from the SD card the
+      first time a scene uses them.
+    - **Memory.** At most 200 MB of high-resolution textures stay loaded. While
+      an N64 game runs with packs on the card, a 512 MB swap file on the
+      internal storage backs this up (created on the first such launch).
+      Tested with a 3.6 GB Mario Kart 64 cache on the Smart Pro S.
     - **Finding the header name:** run the game once and look for the
-      `Core: Name:` line in `.userdata/<platform>/logs/N64.txt`.
-    - **The cache:** the pack is converted into a cache in
-      `Roms/Nintendo 64 (N64)/.cache/`. It needs extra free space on the SD
-      card (e.g. a 2.6 GB pack produces a ~450 MB cache). Later launches load
-      straight from the cache.
+      `mupen64plus: Name:` line in `.userdata/<platform>/logs/N64.txt`.
+    - **The cache** needs extra free space on the SD card (a 2.6 GB PNG pack
+      produces a cache of roughly 450 MB).
+    - **Use enhanced Texture Storage** only matters if you turn on one of the
+      texture enhancement filters; it keeps the enhanced textures in a file
+      instead of memory.
 
 ## Netplay
 
 Nintendo 64 [Netplay](../netplay.md) supports up to 4 players.
 
 !!! warning "Player count depends on the device"
-    3–4 players need a **Smart Pro S** on *every* seat. On the **Smart Pro /
-    Brick / Brick Pro**, N64 netplay is limited to **2 players** (as host or
-    joiner).
+    For 3–4 players, use a **Smart Pro S** on *every* seat. On the **Smart Pro /
+    Brick / Brick Pro**, stick to **2 players** (as host or joiner).
 
 ??? info "More detail"
-    N64 renders a separate split-screen viewport per player. On the Smart
-    Pro, Brick and Brick Pro, the GPU can't hold full speed past a 2-way
-    split.
+    - N64 renders a separate split-screen viewport per player. With
+      GLideN64, the Smart Pro, Brick and Brick Pro GPUs can't hold full speed
+      past a 2-way split (3–4 players haven't been tested with Rice).
+    - Devices on different video plugins can play together (for example a
+      Brick on Rice with a Smart Pro S on GLideN64): only the controller inputs
+      travel between them. If a game ever drifts out of sync, set the same RDP
+      Plugin for that game on every device.
+    - Every device in a session must run the same NX Redux version.

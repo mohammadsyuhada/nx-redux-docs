@@ -49,7 +49,7 @@ commercial product.
 | Beetle WonderSwan | WonderSwan Color | GPL-2.0 | Both |
 | melonDS DS | Nintendo DS | GPL-3.0 | Mobile |
 | mGBA | Game Boy Advance, Super Game Boy | MPL-2.0 | Both |
-| Mupen64Plus | Nintendo 64 | GPL-2.0 | Both |
+| Mupen64Plus-Next (with GLideN64 and Rice) | Nintendo 64 | GPL-2.0 | Both |
 | PCSX ReARMed | PlayStation | GPL-2.0 | Both |
 | PicoDrive | 32X; on the handheld also Mega Drive / Genesis, Master System, Game Gear, SG-1000, Sega CD | **Non-commercial** (PicoDrive license) | Both |
 | PokeMini | Pokémon mini | GPL-3.0 | Both |

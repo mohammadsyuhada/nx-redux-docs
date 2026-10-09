@@ -40,6 +40,7 @@ Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 | Neo Geo Pocket (NGP) | RACE | None |
 | Neo Geo Pocket Color (NGPC) | RACE | None |
 | Nintendo ES (FC) | FCEUmm | None |
+| Nintendo 64 (N64) | Mupen64Plus-Next (GLideN64 and Rice video plugins) | None — see the [Nintendo 64 page](nintendo-64.md) |
 | Pico-8 (P8) | fake-08 | None (plays `.p8` / `.p8.png` carts) |
 | Pokémon mini (PKM) | PokeMini | Optional — `bios.min` (FreeBIOS built in) |
 | Sega 32X (32X) | PicoDrive | None |
@@ -98,6 +99,5 @@ default `Sega Genesis (MD)` folder uses PicoDrive.
 
 ## Standalone emulators
 
-[Nintendo 64](nintendo-64.md) (Mupen64Plus) and
-[Nintendo DS](nintendo-ds.md) (Drastic) run on standalone emulators and need
-no BIOS files.
+[Nintendo DS](nintendo-ds.md) (Drastic) runs on a standalone emulator and
+needs no BIOS files.

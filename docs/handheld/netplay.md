@@ -151,7 +151,7 @@ netplay.
 | Sony PlayStation | `Sony PlayStation (PS)` | PCSX-ReARMed | Lockstep |
 | Sony PlayStation | `Sony PlayStation (PSX)` | SwanStation | Lockstep |
 | Arcade | `Arcade (FBN)` | FBNeo | Lockstep |
-| Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus (standalone) | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |
+| Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus-Next | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |
 | Sega Dreamcast | `DreamCast (DC)` | Flycast | GGPO rollback, 2 players ([details](emulators/dreamcast.md#netplay)) |
 
 Both players must use the same system folder (and so the same core) for the

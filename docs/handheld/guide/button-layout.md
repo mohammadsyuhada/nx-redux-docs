@@ -37,8 +37,7 @@ restart. Restart once and the whole device agrees.
     - the menus and every app
     - the in-game menu
     - all libretro cores (their button remapping screens included)
-    - the standalone Nintendo DS and Nintendo 64 emulators, together with
-      their in-game overlays
+    - the standalone Nintendo DS emulator, together with its in-game overlay
     - PortMaster ports
     - the On-Screen Display
 

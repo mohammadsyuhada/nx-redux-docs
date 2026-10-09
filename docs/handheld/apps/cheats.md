@@ -79,21 +79,21 @@ cheats cannot be enabled. Trying to toggle one shows *"Cheats disabled in
 Hardcore mode"* and the switch snaps back off. This keeps hardcore runs
 legitimate. Leave hardcore mode to use cheats.
 
-## DS and N64 { #ds-n64-and-dreamcast }
+## Nintendo DS { #ds-n64-and-dreamcast }
 
 !!! warning "Built-in cores only, for now"
     Cheats take effect on the **built-in libretro cores** (Game Boy, GBA, NES,
-    SNES, Mega Drive, PlayStation, Dreamcast, and the like). They **don't take
-    effect yet** on Nintendo DS or Nintendo 64.
+    SNES, Mega Drive, PlayStation, Nintendo 64, Dreamcast, and the like). They
+    **don't take effect yet** on Nintendo DS.
 
-The Cheat Database still **delivers** files for these two systems. You'll
-find them under `Cheats/NDS/` and `Cheats/N64/`. They are shipped for future
-use.
+The Cheat Database still **delivers** files for it. You'll find them under
+`Cheats/NDS/`. They are shipped for future use.
 
 ??? info "More detail: why they don't work yet"
-    **Nintendo DS and Nintendo 64** run on **standalone emulators** (DraStic
-    and mupen64plus). These use their own native cheat formats and don't read
-    these libretro `.cht` files.
+    **Nintendo DS** runs on a **standalone emulator** (DraStic), which uses its
+    own native cheat format and doesn't read these libretro `.cht` files.
+    Nintendo 64 moved to the built-in Mupen64Plus-Next core, so its cheats in
+    `Cheats/N64/` now work like any other system's.
 
 ## Where the files go
 

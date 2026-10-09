@@ -17,7 +17,7 @@ There are two exceptions:
 
 | System | What to use |
 | --- | --- |
-| [Nintendo 64](nintendo-64.md) and [Nintendo DS](nintendo-ds.md) | Uncompressed ROMs. These standalone emulators get their files directly. |
+| [Nintendo DS](nintendo-ds.md) | Uncompressed ROMs. This standalone emulator gets its files directly. |
 | [Sega Dreamcast](dreamcast.md) | `.chd` for disc images, which is compressed internally anyway. Don't zip disc images: there a `.zip` is a Naomi/Atomiswave **arcade set**. |
 
 ??? info "More detail"
@@ -93,6 +93,7 @@ all of these on top of what is listed. Multi-disc games use
 | Super Game Boy (SGB) | mgba | `gb` `gbc` `sgb` |
 | Neo Geo Pocket (NGP/NGPC) | race | `ngp` `ngc` `ngpc` `npc` |
 | Nintendo ES (FC) | fceumm | `nes` `unf` `unif` |
+| Nintendo 64 (N64) | mupen64plus_next | `z64` `n64` `v64` |
 | Pico-8 (P8) | fake-08 | `p8` `png` |
 | Pokémon mini (PKM) | pokemini | `min` |
 | Sega Genesis (MD) | picodrive | `md` `gen` `smd` `bin` `68k` `sgd` |
@@ -136,7 +137,6 @@ compressed, no extraction.
 
 | System | Emulator | Formats |
 | --- | --- | --- |
-| Nintendo 64 (N64) | mupen64plus | `z64` `n64` `v64` |
 | Nintendo DS (NDS) | DraStic | `nds` |
 
 [Additional emulators](additional.md) installed from the

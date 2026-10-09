@@ -20,8 +20,8 @@ Press `MENU` while playing to pause the game and open the in-game menu.
 
 ??? info "More detail"
     All emulators share the same menu, with UI styling consistent with the
-    rest of the system. That covers the built-in cores (Dreamcast included)
-    and the standalone Nintendo 64 and Nintendo DS emulators.
+    rest of the system. That covers the built-in cores (Dreamcast and
+    Nintendo 64 included) and the standalone Nintendo DS emulator.
 
 ## Saves and save states
 
