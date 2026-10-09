@@ -54,9 +54,10 @@ USB-C data cable instead. A cable is much steadier than Wi-Fi.
 ![USB Cable waiting screen](../assets/screenshots/netplay-usb-wait.png)
 
 - **2 players only.** One cable connects two devices.
-- **The top-port device powers the other.** The device with the cable in its
-  top port charges the other one for the whole session, so its battery drains
-  faster. Start with that one well charged.
+- **Start both devices charged.** The device with the cable in its top port
+  powers the other one's USB connection. The bottom-port device does not
+  charge from it during the session (charging over the cable can drop the
+  link) and runs on its own battery; it charges normally again afterwards.
 - **Same NX Redux version on both.** Otherwise the wizard shows *Both devices
   need the same NXRedux version.*
 
@@ -74,6 +75,31 @@ USB-C data cable instead. A cable is much steadier than Wi-Fi.
     - Over the cable the devices answer each other in about 1 ms, with no
       dropped packets. Wi-Fi through a router has occasional spikes of
       70–190 ms and some loss.
+
+### Game Boy Advance link cable over USB
+
+Over a USB cable, Game Boy Advance games (gpSP, `Game Boy Advance (GBA)`
+folder) get a real link cable between the two devices, not just the
+built-in emulation of a few games. Cable link play works as on real
+hardware, for example:
+
+- Pokémon Ruby, Sapphire and Emerald trades and battles in the Cable Club
+- **Cross-game trades** such as FireRed or LeafGreen with Ruby or Sapphire
+- Mario Kart: Super Circuit races and The Legend of Zelda: Four Swords
+
+With the link mode left on **Automatic**, games that support the wireless
+adapter (FireRed, LeafGreen, Emerald) keep using it, so the Union Room works
+as before. For a cable trade between FireRed/LeafGreen and Ruby/Sapphire the
+host sets the game's link option to **Link Cable - Real (USB only)** before
+starting the session. The joiner follows the host's choice.
+
+??? info "More detail"
+    - Wi-Fi and Hotspot sessions keep the previous Game Boy Advance link
+      emulation. The real cable needs the USB connection's speed.
+    - The two games run in step, transfer by transfer, as two GBAs on a cable
+      do. During link play the CPU runs at full speed to keep that smooth.
+    - Cross-game trades between FireRed/LeafGreen and Ruby/Sapphire also need
+      the game's own requirements, such as the National Pokédex in FireRed.
 
 ## Supported systems
 
@@ -196,13 +222,17 @@ Pressing `MENU` doesn't open the full in-game menu. It asks **Leave netplay?**:
 
 | Button | What it does |
 | --- | --- |
-| `B` **Continue** | Goes back to the game |
+| `B` or `MENU` **Continue** | Goes back to the game |
 | `A` **Leave** | Ends the session and returns you to the game list |
 
 - On most systems both players pause while the question is open, with no time
   limit.
 - After one player leaves a Lockstep game, the other can keep playing on their
   own.
+- On **Game Boy Advance link** (GBA Link, wireless adapter or cable) the other
+  player's game freezes on its last frame while the question is open, so the
+  link survives the pause. The question counts down and you leave
+  automatically after 20 seconds.
 - On **Dreamcast** the other player's game waits for you. The question counts
   down and you leave automatically after 20 seconds. The other player sees
   **Netplay ended** right away.
