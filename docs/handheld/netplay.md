@@ -113,13 +113,16 @@ way as on gpSP, for 2 players.
   features (FireRed, LeafGreen, Emerald) need the `Game Boy Advance (GBA)`
   folder (gpSP).
 - **Both players use the `MGBA` folder.** An mGBA device can't link with a
-  gpSP device.
+  gpSP device: if one player picks the game from `MGBA` and the other from
+  `GBA`, the connection is refused and both go back to the game list.
 
 ??? info "More detail"
     - Wi-Fi and Hotspot aren't offered for mGBA because the real cable needs
       the USB connection's speed.
     - Saves, `MENU` pause, the leave countdown and charging work as for the
       gpSP link cable above.
+    - On the Smart Pro S, an mGBA link session keeps the faster CPU cores
+      awake (solo mGBA play doesn't), so it uses a little more battery.
 
 ## Supported systems
 
