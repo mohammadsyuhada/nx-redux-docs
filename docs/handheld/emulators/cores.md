@@ -73,7 +73,7 @@ folder you use:
 | **Game Boy Advance** | gpSP (`GBA`), the only GBA core with [Netplay](../netplay.md#supported-systems) | mGBA (`MGBA`), better for ROM hacks, no netplay |
 | **Super Nintendo** | Snes9x (`SFC`), the default | Supafaust (`SUPA`), but heavier |
 | **The Sega systems** | PicoDrive | Genesis Plus GX (`GPGX`) |
-| **PlayStation** | PCSX-ReARMed (`PS`), the default | SwanStation (`PSX`, [details](playstation.md#swanstation)), sharper 3D but heavier |
+| **PlayStation** | PCSX-ReARMed (`PS`), the default | SwanStation (`PSX`, [details](playstation.md#swanstation)), heavier |
 | **Dreamcast** | Flycast 2022 (`DCX`, [Dreamcast Lite](dreamcast.md#dreamcast-lite)), no netplay | Flycast v2.7 (`DC`), the default |
 
 See [Game Boy Advance](game-boy-advance.md) and

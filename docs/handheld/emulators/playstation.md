@@ -48,8 +48,8 @@ Both options are off by default. Measured in a Wipeout 3 race:
 ## SwanStation
 
 **SwanStation** is a second PlayStation system built on a more accurate
-emulator. It draws 3D games with the device's GPU at twice the native
-resolution, for sharper models and textures with no extra setup.
+emulator. It draws games with the device's GPU, and can render 3D games at a
+higher resolution for sharper models and textures.
 
 To use it, copy or move a game into `Roms/Sony PlayStation (PSX)/`. Both
 folders show up together under **Sony PlayStation** in the main menu; the
@@ -69,19 +69,23 @@ folder a game is in decides which core plays it.
   (`Saves/PSX/`), save states and settings. Progress made in the
   PCSX-ReARMed version of a game does not carry over.
 
-Use PCSX-ReARMed by default, and SwanStation for games that glitch on it or
-when you want the sharper picture. SwanStation runs at full speed on every
+Use PCSX-ReARMed by default, and SwanStation for games that glitch on it. SwanStation runs at full speed on every
 device but works the CPU harder, so the odd frame takes longer: measured
 2026-10-09, about 3 hitches a minute against none on PCSX-ReARMed.
 
 | Measured (60 s) | Brick | Smart Pro S |
 | --- | --- | --- |
 | PCSX-ReARMed, native resolution | Full speed, 58% CPU | Full speed, 40% CPU |
-| SwanStation, 2× resolution (default) | Full speed, 77% CPU | Full speed, 74% CPU |
+| SwanStation, 2× resolution | Full speed, 77% CPU | Full speed, 74% CPU |
+
+!!! tip "Sharper 3D games"
+    SwanStation plays at the native resolution by default. For a 3D game,
+    raise **Internal Resolution Scale** to 2x in that game's
+    [emulator options](../guide/emulator-options.md); it still runs at full
+    speed on every device. Leave 2D games at 1x: at 2x their sprite art
+    shows thin seams.
 
 ??? info "More detail"
-    The resolution, the renderer (hardware or software) and PGXP geometry
-    correction, which removes the wobble of PlayStation 3D, are in the
-    game's [emulator options](../guide/emulator-options.md). Native
-    resolution saves a little CPU on the Brick; the software renderer looks
-    like real hardware.
+    The same options hold the renderer (hardware or software) and PGXP
+    geometry correction, which removes the wobble of PlayStation 3D. The
+    software renderer looks like real hardware.
