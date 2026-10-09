@@ -99,6 +99,7 @@ netplay.
 | Sega 32X | `Sega 32X (32X)` | PicoDrive | Lockstep |
 | Sega (Genesis Plus GX) | `Sega … (GPGX)` folders | Genesis Plus GX | Lockstep |
 | Sony PlayStation | `Sony PlayStation (PS)` | PCSX-ReARMed | Lockstep |
+| Sony PlayStation | `Sony PlayStation (PSX)` | SwanStation | Lockstep |
 | Arcade | `Arcade (FBN)` | FBNeo | Lockstep |
 | Nintendo 64 | `Nintendo 64 (N64)` | Mupen64Plus (standalone) | Up to 4 players, device-dependent ([details](emulators/nintendo-64.md#netplay)) |
 | Sega Dreamcast | `DreamCast (DC)` | Flycast | GGPO rollback, 2 players ([details](emulators/dreamcast.md#netplay)) |

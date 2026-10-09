@@ -55,6 +55,7 @@ Game Boy Advance (GBA) → `Bios/GBA/`). File names must match exactly.
 | Sega Game Gear (GPGX) | Genesis Plus GX | None |
 | Sega CD (GPGX) | Genesis Plus GX | **Required** — `bios_CD_U.bin`, `bios_CD_E.bin`, `bios_CD_J.bin` in `Bios/GPGX/` |
 | Sony PlayStation (PS) | PCSX-ReARMed | Recommended — `psxonpsp660.bin` or `scph1001.bin` (an HLE fallback exists; a real BIOS is strongly recommended for compatibility) — see the [PlayStation page](playstation.md) |
+| Sony PlayStation (PSX) | SwanStation | Recommended — `scph5500.bin` (Japan), `scph5501.bin` (USA), `scph5502.bin` (Europe) in `Bios/PSX/` (a built-in OpenBIOS is used without them) — see [SwanStation](playstation.md#swanstation) |
 | Sony PlayStation Portable (PSP) | PPSSPP | None — see the [PSP page](psp.md) |
 | Super Nintendo ES (SFC) | Snes9x | None |
 | Super Nintendo ES (SUPA) | Mednafen Supafaust | None |
@@ -72,6 +73,7 @@ folder you use:
 | **Game Boy Advance** | gpSP (`GBA`), the only GBA core with [Netplay](../netplay.md#supported-systems) | mGBA (`MGBA`), better for ROM hacks, no netplay |
 | **Super Nintendo** | Snes9x (`SFC`), the default | Supafaust (`SUPA`), but heavier |
 | **The Sega systems** | PicoDrive | Genesis Plus GX (`GPGX`) |
+| **PlayStation** | PCSX-ReARMed (`PS`), the default | SwanStation (`PSX`, [details](playstation.md#swanstation)), sharper 3D but heavier |
 | **Dreamcast** | Flycast 2022 (`DCX`, [Dreamcast Lite](dreamcast.md#dreamcast-lite)), no netplay | Flycast v2.7 (`DC`), the default |
 
 See [Game Boy Advance](game-boy-advance.md) and

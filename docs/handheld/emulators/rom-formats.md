@@ -112,6 +112,7 @@ all of these on top of what is listed. Multi-disc games use
 | System | Core | Formats |
 | --- | --- | --- |
 | Sony PlayStation (PS) | pcsx_rearmed | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` `exe` |
+| Sony PlayStation (PSX) | swanstation | `chd` `cue` `bin` `img` `iso` `pbp` `ecm` `mds` `m3u` `exe` `psexe` `psf` |
 | Sega CD (SEGACD) | picodrive | `chd` `cue` `bin` `iso` `m3u` |
 | Sega CD (GPGX) | genesis_plus_gx | `chd` `cue` `bin` `iso` `m3u` (BIOS in `Bios/GPGX/`) |
 | Sega Dreamcast (DC) | flycast | `chd` `gdi` `cdi` `cue` `m3u` + Naomi/Atomiswave `zip` `7z` — see [Dreamcast](dreamcast.md) |
