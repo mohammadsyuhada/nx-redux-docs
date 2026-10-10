@@ -119,6 +119,7 @@ are used first; otherwise they are fetched automatically when online.
 | `MENU` | Show this controls list on screen (any button closes it) |
 | `SELECT` | Turn the screen off now (see below) |
 | `SELECT` + `A` | Wake the screen when it is off |
+| `START` | Leave the app and keep playing in the background |
 
 With shuffle on, *previous* retraces the tracks that actually played, in
 order.
@@ -138,6 +139,11 @@ set (default 60 s). This saves battery and prevents accidental button presses.
 
 Music, radio and podcasts keep playing when you leave the Music Player, both
 in the menus and inside games.
+
+To leave while something is playing, tap `START` on the player screen (music,
+radio or podcast): the app closes and the audio carries on. **Quit App** in the
+`MENU` list, or `B` from the app's main menu, asks first whether to keep
+playing.
 
 ### Control it from the OSD
 
@@ -204,6 +210,7 @@ While a station plays, the screen shows:
 | `MENU` | Context menu (including **Playback Controls**, this list on screen) |
 | `SELECT` | Turn the screen off now |
 | `SELECT` + `A` | Wake the screen when it is off |
+| `START` | Leave the app and keep playing in the background |
 
 [Auto screen off](#auto-screen-off) works here exactly like local playback,
 including the idle timeout and headset media buttons staying live while the
@@ -309,6 +316,7 @@ progress bar and position. Playback position is saved as you listen, so
 | `Up` / `Down` | Playback speed up / down (0.5× – 2×, in 0.25 steps) |
 | `SELECT` | Turn the screen off now |
 | `SELECT` + `A` | Wake the screen when it is off |
+| `START` | Leave the app and keep playing in the background |
 
 [Auto screen off](#auto-screen-off) applies here too: idle timeout, and
 headset media buttons keep working while the screen is dark.
