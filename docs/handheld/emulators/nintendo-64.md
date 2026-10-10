@@ -104,10 +104,37 @@ Texture packs replace the N64's blurry textures with high-resolution ones.
 They're **off by default** (they need a lot of memory on these 1 GB devices),
 and they load only under the **GLideN64** [video plugin](#video-plugin).
 
+<figure class="compare">
+<img-comparison-slider>
+  <img slot="first" width="100%" src="../../../assets/screenshots/n64-hires-textures-off.png" alt="Mario Kart 64 Game Select screen with the original, blurry textures">
+  <img slot="second" width="100%" src="../../../assets/screenshots/n64-hires-textures-on.png" alt="The same screen with the Mario Kart 64 Reloaded texture pack: sharp lettering and character faces">
+</img-comparison-slider>
+<figcaption>Drag the slider: original textures (left), Mario Kart 64 Reloaded pack (right). Smart Pro S.</figcaption>
+</figure>
+
+### Where to get them
+
+[evilgames.eu](https://evilgames.eu/texture-packs.htm) hosts a collection of
+packs, among them *Mario Kart 64 Reloaded*, *Super Mario 64 Reloaded* and
+*The Legend of Zelda: Ocarina of Time Reloaded*. Each pack's page offers
+several downloads; pick the ones marked **GLideN64**:
+
+| Download | What it is | Use it? |
+| --- | --- | --- |
+| **GLideN64 Cache** (`…-gliden64-hts-….7z`) | The ready-made cache: one `.hts` file inside a `.7z` archive | **Yes, recommended.** Nothing to convert, the game starts right away |
+| **GLideN64 / rt64 Source** (`.zip`) | The pack as PNG images | Works too, but the first launch converts it into a cache (several minutes) |
+| Dolphin, rt64, SpaghettiKart… | Packs for other emulators and PC ports | No |
+
+Where a pack comes in **HD** and **4k**, take **HD**: it is much smaller and
+loads faster. The 4k textures are far bigger than these screens can show.
+
+### Installing a pack
+
 1. Put the pack where the game looks for it:
     - **A ready-made cache** (a single `<NAME>_HIRESTEXTURES.hts` file) goes in
       `Roms/Nintendo 64 (N64)/.cache/`. This is the fastest way: the game
-      starts right away.
+      starts right away. Extract the `.hts` file from the downloaded `.7z`
+      first (on your computer, with e.g. 7-Zip); keep its file name as it is.
     - **A folder of PNG files** goes in
       `Roms/Nintendo 64 (N64)/.hires_texture/<ROM NAME>/`. `<ROM NAME>` is the
       ROM's **internal header name** (e.g. `MARIOKART64`), not its filename.
@@ -123,7 +150,9 @@ and they load only under the **GLideN64** [video plugin](#video-plugin).
     `txHiresEnable`, `txHiresTextureFileStorage` and
     `CorrectTexrectCoords = Auto`. Only the first one is up to you (**Use
     High-Res textures**). The others are already the N64 defaults here, and the
-    resolution is set to 2× native.
+    resolution is set to 2× native. Ignore the cache folder paths those
+    instructions give for PC (`%appdata%`, `~/.cache`…): on NX Redux the
+    `.hts` file goes in `Roms/Nintendo 64 (N64)/.cache/`.
 
 ??? info "More detail"
     - **Short stutters are normal.** Textures are read from the SD card the

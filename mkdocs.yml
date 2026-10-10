@@ -27,9 +27,11 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - javascripts/vendor/img-comparison-slider/styles.css
 
 extra_javascript:
   - javascripts/sidebar-sections.js
+  - javascripts/vendor/img-comparison-slider/index.js
 
 plugins:
   - search

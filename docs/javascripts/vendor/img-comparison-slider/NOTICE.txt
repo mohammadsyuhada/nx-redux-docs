@@ -1,0 +1,2 @@
+img-comparison-slider 8.0.7 (https://github.com/sneas/img-comparison-slider),
+vendored unmodified from the npm package (dist/index.js, dist/styles.css). MIT, see LICENSE.

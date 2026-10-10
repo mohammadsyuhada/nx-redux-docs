@@ -211,3 +211,28 @@
   width: 95.445%;
   height: 94.317%;
 }
+
+/* Before/after image slider (img-comparison-slider, vendored) */
+.md-typeset figure.compare {
+  display: block;
+  max-width: 100%;
+}
+.md-typeset figure.compare img-comparison-slider {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  --divider-width: 2px;
+}
+/* The slider follows the screenshot rule above (half width on larger
+   screens); the images fill it instead. */
+@media screen and (min-width: 60em) {
+  .md-typeset figure.compare img-comparison-slider {
+    max-width: 50%;
+  }
+}
+.md-typeset figure.compare img-comparison-slider img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
