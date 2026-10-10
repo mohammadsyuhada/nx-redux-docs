@@ -63,6 +63,11 @@ default) and **Carousel**. Pick one in
 With [Extra info](../settings/layouts.md#extra-info) hidden, every layout
 leaves out the stats and the play time and achievements under each game.
 
+In every layout, `Y` starts the Continue game or a pinned game with
+[netplay](../netplay.md), as in the game lists, when the game supports it. The
+`Y NETPLAY` hint follows
+[Show netplay hint](../settings/appearance.md#show-netplay-hint).
+
 ### List
 
 Everything on Home in one list, in the style of the other tabs' List layout.
@@ -87,6 +92,7 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 | --- | --- |
 | `Up` / `Down` | Move through the list. It wraps around at either end |
 | `Left` / `Right` | Switch tab |
+| `Y` **Netplay** | Start the selected game with [netplay](../netplay.md), when it supports it |
 | `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
 | `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
@@ -122,6 +128,7 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 | Button | What it does |
 | --- | --- |
 | D-pad | Move between the cards |
+| `Y` **Netplay** | Start the selected game with [netplay](../netplay.md), when it supports it |
 | `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
 | `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
@@ -149,6 +156,7 @@ The same games and tools in one row, centred on the screen.
 | `Left` / `Right` | Move along the carousel or the tools row. Past either end, switch tab |
 | `Up` | From the tools row, back to the carousel. From the carousel, the tab row |
 | `Down` | From the carousel, the tools row |
+| `Y` **Netplay** | Start the selected game with [netplay](../netplay.md), when it supports it |
 | `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
 | `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
