@@ -114,7 +114,8 @@ way as on gpSP, for 2 players.
   folder (gpSP).
 - **Both players use the `MGBA` folder.** An mGBA device can't link with a
   gpSP device: if one player picks the game from `MGBA` and the other from
-  `GBA`, the connection is refused and both go back to the game list.
+  `GBA`, both screens say which emulator the other player is using and go
+  back to the game list.
 
 ??? info "More detail"
     - Wi-Fi and Hotspot aren't offered for mGBA because the real cable needs
@@ -209,6 +210,12 @@ the same question appears while connecting.
     - Both devices must run an NX Redux build that includes this prompt. An
       older host still answers *"The host is running a different game."* and
       the join is refused.
+    - Both devices must also run the game on the same emulator, so pick it
+      from the same folder on both: `MD` with `MD`, `GPGX` with `GPGX`, `SFC`
+      with `SFC`, `PS` with `PS`. If the folders differ, the wizard says so on
+      both screens (for example *"The host is using Genesis Plus GX (GPGX
+      folder)."*) and nothing starts. On Wi-Fi or Hotspot the host's lobby
+      stays open for the other players.
 
 ## Saves
 
