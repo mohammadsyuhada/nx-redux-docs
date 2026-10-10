@@ -9,6 +9,135 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.1.0
+
+*11 October 2026*
+
+Netplay grows up in NX Redux 2.1: play over a USB cable between two devices,
+link Game Boy Advance games with a real link cable, and start netplay straight
+from Home. Nintendo 64 now runs inside NX Redux's own emulator, PlayStation
+gains a second, sharper system (SwanStation) and Dreamcast a lighter one for
+the slower devices, and the menus run at a smooth 60 fps with more art choices
+for your game lists.
+
+!!! warning "Before you update"
+    - **Netplay needs v2.1 on both devices.** v2.1 can't play with v2.0 or
+      older.
+    - **Nintendo 64 save states** made with the old standalone emulator can't
+      be loaded. Make an in-game save first if you rely on one; in-game saves
+      and Controller Pak data come across on a game's first launch.
+    - **Coming from v1.x?** Back up your SD card first. A clean install is
+      recommended: delete the hidden `.system` and `.tmp_update` folders
+      (keep `Roms`, `Saves`, `Bios` and `.userdata`), then extract the
+      release.
+    - **Your own paks are no longer removed on update.** A pak in `/Emus` or
+      `/Tools` with the same name as a shipped one is now ignored instead, so
+      give yours its own name. See
+      [Additional Emulators](../../handheld/emulators/additional.md).
+
+### New features
+
+- **Netplay over a USB cable.** Connect two devices with a USB-C cable and
+  pick **USB Cable** in the netplay wizard: no Wi-Fi, and lower lag. See
+  [Netplay → USB Cable](../../handheld/netplay.md#usb-cable).
+- **A real Game Boy Advance link cable.** Over the USB cable, GBA games link
+  like the original cable: trade Pokémon, play Four Swords or Mario Kart
+  multiplayer, on both gpSP and mGBA. See
+  [Game Boy Advance link cable over USB](../../handheld/netplay.md#game-boy-advance-link-cable-over-usb)
+  and [mGBA link cable over USB](../../handheld/netplay.md#mgba-link-cable-over-usb).
+- **Netplay from Home.** `Y` starts the Continue game or a pinned game with
+  netplay, as it does in the game lists. See
+  [Home](../../handheld/guide/main-menu.md#home).
+- **Better netplay.** Analog sticks stay in sync (PlayStation), the
+  third and fourth players' input reaches the game, Genesis Plus GX games
+  support netplay, and the wizard says on both screens when the two devices
+  picked the game from different folders (different emulators). A
+  **Show netplay hint** setting hides the `Y NETPLAY` hint. See
+  [Netplay](../../handheld/netplay.md) and
+  [Show netplay hint](../../handheld/settings/appearance.md#show-netplay-hint).
+- **Nintendo 64 on NX Redux's emulator.** N64 runs on Mupen64Plus-Next with
+  the in-game menu, save states with screenshots, RetroAchievements, cheats
+  and the Game Switcher. The Brick uses the lighter Rice video plugin, high
+  resolution texture packs still work, and N64 netplay supports up to four
+  players (3–4 players need a Smart Pro S on every seat). See
+  [Nintendo 64](../../handheld/emulators/nintendo-64.md).
+- **SwanStation for PlayStation.** A second PlayStation system with a more
+  accurate emulator that draws on the GPU and can render 3D games at a higher
+  resolution. Put games in `Roms/Sony PlayStation (PSX)/`. See
+  [SwanStation](../../handheld/emulators/playstation.md#swanstation).
+- **Dreamcast Lite.** A second Dreamcast system on a lighter Flycast that keeps
+  heavy 3D games such as Crazy Taxi 2 at full speed on the Brick, Brick Pro and
+  Smart Pro. See
+  [Dreamcast Lite](../../handheld/emulators/dreamcast.md#dreamcast-lite).
+- **Home in List and Carousel layouts.** Home now comes as a **List**,
+  **Grid** or **Carousel**, and **Extra info** hides the stats. See
+  [Home](../../handheld/guide/main-menu.md#home) and
+  [Home layout](../../handheld/settings/layouts.md#home-layout).
+- **Smooth menus.** Every layout, Home and the game lists scroll at 60 fps,
+  and **Settings → Layouts** gathers all the layout choices in one place. See
+  [Layouts](../../handheld/settings/layouts.md).
+- **More art in game lists.** The List can show a game's **Mix**, **3D box
+  art**, **2D box art** or **Wheel** in a box beside the list, Backdrop can use
+  them as the picture, and **None** hides list art or the Consoles controller.
+  The Artwork Manager can download 2D box art and wheels and build a Mix. See
+  [List art](../../handheld/settings/layouts.md#list-art),
+  [Backdrop art](../../handheld/settings/layouts.md#backdrop-art) and
+  [Artwork Manager](../../handheld/apps/artwork-manager.md).
+- **Optimize images.** The Artwork Manager can shrink your existing art so
+  menus load faster. See
+  [Optimize images](../../handheld/apps/artwork-manager.md#optimize-images).
+- **Your own console backgrounds.** With **Consoles controller** set to
+  **Background**, a `bg.png` in a console's `.media` folder shows behind it
+  in the List layout. See
+  [Your own console backgrounds](../../handheld/guide/layouts.md#your-own-console-backgrounds).
+- **Text sized for each device.** Menus use a size tuned for each screen, so
+  they look the same on the Brick, Brick Pro and Smart Pro S; the UI scale
+  setting is gone.
+- **RetroAchievements.** Games are recognized from their emulator, file type
+  and folder, so more of your games earn achievements, and a game now tells
+  you when it has no achievements or isn't recognized. See
+  [RetroAchievements](../../handheld/apps/retroachievements.md).
+- **Music Player.** Lyrics show more lines on the Brick Pro and Smart Pro S,
+  album art is looked up in your country's iTunes store, then the US store,
+  then Deezer, and the spectrum visualizer moves smoothly. Tap `START` on the
+  music, radio or podcast player to leave the app and keep listening. See
+  [Background playback](../../handheld/apps/music-player.md#background-playback).
+- **Newer emulators.** Snes9x, FCEUmm, Gambatte and mGBA are updated to their
+  latest versions.
+
+### Fixes
+
+- **Brick Pro:** no more random reboots after joining Wi-Fi.
+- **PSP:** games save again on FAT32-formatted cards.
+- **Game Boy Advance:** gpSP no longer crashes when a netplay session starts.
+- **Netplay:** a session stays in step when one player's menu closes while the
+  other's is still open, a host only accepts the device it paired with, and
+  Genesis games always use a 3-button pad in a session so both devices match.
+- **Fast-forward:** **Max FF Speed** now really caps the speed.
+- **Saving:** **Save** in the in-game menu is instant again with shaders on.
+- **Home:** multi-disc games kept in a folder show their screenshot and box
+  art.
+- **PortMaster:** ports from the NextOS Ports catalog no longer show a black
+  screen on the Brick, Brick Pro and Smart Pro.
+- **RetroAchievements:** keep working after the device sleeps, and unlocks
+  made offline sync reliably.
+- **Music Player:** with the screen off, `A` still plays and pauses and the
+  power button still works.
+- **Battery:** the percentage shows while charging.
+- **Volume:** with an FN mode set and the volume on **Unchanged**, launching
+  an app no longer jumps to full volume.
+- **Brightness and color temperature:** holding `SELECT` with the volume keys
+  works after the device has been idle, and volume-only presses no longer show
+  the brightness hint.
+- **OSD:** changing a setting from the OSD no longer pops the speaker or
+  flashes the screen.
+- **LED Control:** only lists the effects the LED actually supports.
+- **SSH:** turning SSH off also closes open sessions, so it stays off.
+- **Updates:** a failed in-app update download no longer leaves a broken zip
+  that makes Windows ask for "the last disk of a multi-volume set".
+- **Folders:** every system now has its `Bios`, `Cheats`, `Overlays` and
+  `Saves` folders on a fresh install.
+
 ## v2.0.0
 
 *4 October 2026*
