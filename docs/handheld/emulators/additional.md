@@ -22,6 +22,6 @@ for the platform folder name per device.
     with NX Redux-specific behavior.
 
 !!! note "Naming"
-    Do not give your own pak the same name as one shipped with NX Redux.
-    Same-named paks in `/Emus` and `/Tools` are treated as NX Redux leftovers
-    and are removed on every update.
+    Give your pak its own name. NX Redux always uses the emulators and tools it
+    ships, so a pak in `/Emus` or `/Tools` with the same name as a shipped one
+    is ignored.

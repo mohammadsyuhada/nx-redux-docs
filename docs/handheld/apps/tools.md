@@ -37,9 +37,9 @@ Some paks say to use a **platform folder**, for example
 `Tools/tg5040/<Name>.pak`. If the pak's README says so, do it.
 
 !!! warning
-    Don't give your pak the same name as a tool or emulator shipped with NX
-    Redux. Same-named paks in `/Tools` and `/Emus` count as NX Redux leftovers
-    and are removed on every update.
+    Give your pak its own name. NX Redux always uses the tools and emulators it
+    ships, so a pak in `/Tools` or `/Emus` with the same name as a shipped one
+    is ignored.
 
 These paks target NextUI, not NX Redux. See the support notes in
 [Additional Emulators](../emulators/additional.md).

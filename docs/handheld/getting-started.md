@@ -90,9 +90,9 @@ nothing to copy by hand.
 
 !!! note "Your own paks"
     The `/Emus` and `/Tools` folders on the SD card are for your **own**
-    community paks (e.g. `MyEmu.pak`). Do not give a pak there the same name as
-    a shipped one. Same-named paks are treated as NX Redux leftovers and are
-    removed on every update.
+    community paks (e.g. `MyEmu.pak`). Give each one its own name: NX Redux
+    always uses its shipped paks, so a pak of yours with a shipped pak's name
+    is ignored.
 
 ??? info "More detail"
     Emulator and Tool paks are part of NX Redux itself. They live in
