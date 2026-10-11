@@ -334,6 +334,7 @@ A `map.txt` at the top level (`Roms/map.txt`) does the same for the
 
 The context menu's [**Rename Rom**](context-menu.md) writes these aliases for
 you. Renaming on the device edits the `map.txt` rather than the file.
+Collections show the same names as the console lists.
 
 ??? info "More detail"
     - The number-prefix trick above works inside aliases too.
