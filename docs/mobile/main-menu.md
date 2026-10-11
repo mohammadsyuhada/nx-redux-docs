@@ -44,6 +44,7 @@ there is no tab row, and `L1` / `R1` switch tabs.
 | `Down`, `A` or `B` | Go back into the content |
 | `Up` | Jump to the bottom of the content |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` **Search** | [Search](#search) your games |
 
 ## Home
 
@@ -73,11 +74,13 @@ and everything you pinned. It looks the same whatever layouts you pick.
 | Button | What it does |
 | --- | --- |
 | D-pad | Move between the cards |
+| `MENU` **Options** | **Pin** or **Unpin** the selected game or tool |
+| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` **Search** | [Search](#search) your games |
+| `Y` **Netplay** | Play the selected game with another device. Shown for games that have [netplay](netplay.md) |
 | `A` **Resume** / **Play** | Start the selected game. **Resume** continues from its auto-save; **Play** shows when it has none |
 | `A` on a pinned tool | Open the tool. The hint names the tool, e.g. **Game Tracker** |
 | `A` **More tools** | On **+N**: open the Tools tab |
-| `MENU` **Options** | **Pin** or **Unpin** the selected game or tool |
-| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 
 ??? info "Touch on Home"
     - Tap a card to select it, then tap it again to play or open it. This
@@ -122,9 +125,10 @@ and Tools is a grid.
 
 | Button | What it does |
 | --- | --- |
-| `A` **Open** | Open the console, collection or tool |
 | `MENU` **Options** | **Rename** / **Delete** on a collection, **Pin** / **Unpin** on a tool |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` **Search** | [Search](#search) your games |
+| `A` **Open** | Open the console, collection or tool |
 
 ![Tool menu with Unpin](../assets/screenshots/mobile/tool-menu.webp)
 
@@ -146,11 +150,12 @@ and version text in brackets.
 
 | Button | What it does |
 | --- | --- |
-| `A` **Open** | Launch the game |
+| `MENU` **Options** | Open the game's context menu |
+| `SELECT` | Open the [Game Switcher](game-switcher.md) |
+| `Y` **Netplay** | Play the game with another device. Shown for games that have [netplay](netplay.md) |
 | `X` **Resume** | Jump straight back into your auto-saved session (shown when the game has one) |
 | `B` **Back** | Return to the tab |
-| `SELECT` | Open the [Game Switcher](game-switcher.md) |
-| `MENU` **Options** | Open the game's context menu |
+| `A` **Open** | Launch the game |
 
 A long press on a game opens the context menu too.
 
@@ -168,6 +173,7 @@ where the game is listed.
 | **Rename Rom** | Change the name the list shows |
 | **Add to Collection** | Add the game to a collection, or start a new one |
 | **Game Settings** | This game's own emulator settings. See [Emulator Settings](emulator-settings.md) |
+| **Netplay** | Play the game with another device. See [Netplay](netplay.md) |
 | **Fetch art** | Download art for this game. See [Artwork](artwork.md) |
 | **Emulator** | Pick which emulator runs this game. See [Emulators](emulators/index.md) |
 | **Remove from Collection** | Take the game out of the collection you are in |
@@ -176,12 +182,14 @@ Not every item shows everywhere:
 
 | List | Items |
 | --- | --- |
-| A console | **Pin Item**, **Hide Game**, **Rename Rom**, **Add to Collection**, **Game Settings**, **Fetch art**, and **Emulator** on systems with more than one emulator |
+| A console | **Pin Item**, **Hide Game**, **Rename Rom**, **Add to Collection**, **Game Settings**, **Netplay**, **Fetch art**, and **Emulator** on systems with more than one emulator |
 | A collection | The same, with **Remove from Collection** at the end |
+| [Search](#search) results | The same as a console, without **Emulator** |
 | Unassigned games | **Hide Game**, **Rename Rom**, **Console** |
 | The Android console | **Pin Item** / **Unpin Item** only |
 
 - **Fetch art** shows only for systems the art sources know.
+- **Netplay** shows only for systems that have [netplay](netplay.md).
 - **Unassigned games** are files in an extra ROM folder that the app could
   not match to a system. Open
   them from **Tools → Settings → Library → Unassigned games**, and use
@@ -191,6 +199,53 @@ Not every item shows everywhere:
   Press `A` **Unhide** there to bring one back.
 - The Android console holds the Android games you added. See
   [Launcher Mode & Android Games](launcher.md).
+
+## Search
+
+Press `START` on the main menu to search your games. It works from any tab,
+and from the tab row. The hint reads **Search** once you have games.
+
+1. The **Search** prompt opens, with your last search filled in.
+2. Type part of a name and press `A` or the keyboard's **Done**.
+3. The matches open as a game list titled **Search:** and your words, such
+   as **Search: mario kart**.
+
+![The Search prompt over the Consoles tab, with “super mario” typed and the keyboard up](../assets/screenshots/mobile/search-prompt.webp)
+
+`B` or `START` closes the prompt without searching.
+
+The results list games from every console, in your game list style, each
+with its console's tag, such as `GBA`. It reads **No results** when nothing
+matches.
+
+![Search: super mario, showing Super Mario 64 with its play time and achievements, and the X Resume hint](../assets/screenshots/mobile/search-results.webp)
+
+| Button | What it does |
+| --- | --- |
+| `MENU` **Options** | The game's context menu |
+| `Y` **Netplay** | Play the game with another device, for games that have [netplay](netplay.md) |
+| `X` **Resume** | Jump back into the game's auto-saved session (shown when it has one) |
+| `B` **Back** | Return to the tab and the item you searched from |
+| `A` **Open** | Launch the game |
+
+### How matching works
+
+The search looks in each game's name, its file name and its console tag.
+
+- **Case, accents and punctuation don't matter.** `pokemon` finds
+  *Pokémon*, and `pac man` finds *Pac-Man*.
+- **Words can come in any order**, and each can be part of a word.
+  `kart mario` finds *Mario Kart: Super Circuit*.
+- **Roman numerals and digits match.** `final fantasy 6` finds *Final
+  Fantasy VI*, and `vi` still finds *Virtua Fighter*.
+- **Words can be glued together.** `pacman` finds *Pac-Man*.
+- **No typos.** Each word you type has to be there.
+
+Names that start with your search come first, then names where every word
+starts a word, then the rest. Each group is A to Z.
+
+Unassigned games, games without an emulator and Android games are not
+searched.
 
 ## Collections
 

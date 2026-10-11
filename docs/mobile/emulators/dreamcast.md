@@ -4,7 +4,10 @@ Play Dreamcast games, plus the **Sega NAOMI** and **Sammy Atomiswave**
 arcade games built on the same hardware. They all run on **Flycast**, from one
 folder: `Roms/Dreamcast (DC)/`.
 
-![Soulcalibur running on the Dreamcast core in portrait](../../assets/screenshots/mobile/dc-game.webp)
+<figure class="nx-phone" markdown>
+![Crazy Taxi 2 on the Fold's cover screen, with the Dreamcast pad: A, B, X and Y in the Dreamcast's colours](../../assets/screenshots/mobile/pad-dc.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
 Dreamcast gets the same features as the other systems:
 

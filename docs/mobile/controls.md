@@ -55,12 +55,12 @@ The Sega pad follows the game's [Controller Type](#controller-type-sega).
 </figure>
 
 <figure class="nx-phone" markdown>
-![The Nintendo 64 pad with the C-button diamond and Z](../assets/landing/controls/pad-n64.webp){ .nx-phone__screen }
+![The Nintendo 64 pad with the C-button diamond and Z](../assets/screenshots/mobile/pad-n64.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
 <figure class="nx-phone" markdown>
-![The Dreamcast pad with coloured face buttons](../assets/landing/controls/pad-dc.webp){ .nx-phone__screen }
+![The Dreamcast pad with coloured face buttons](../assets/screenshots/mobile/pad-dc.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
@@ -262,7 +262,9 @@ set **Player 2 Pak** to **Player 4 Pak** the same way.
 | `A` | Open or start the highlighted item |
 | `B` | Back. Android's Back gesture does the same. |
 | `X` | In a game list, resume the highlighted game when it can be resumed |
+| `Y` | On a game that has [netplay](netplay.md), open the Netplay sheet |
 | `SELECT` | Open the [Game Switcher](game-switcher.md). The main menu's hint reads **Recent**. |
+| `START` | On the main menu, [search](main-menu.md#search) your games |
 | `MENU`, or a long press | Open the context menu |
 | `L1` / `R1` | Switch main menu tabs |
 
@@ -275,12 +277,16 @@ set **Player 2 Pak** to **Player 4 Pak** the same way.
   `B` goes back. On PlayStation and PSP, `×` confirms and `○` goes back.
 
 Menus show key hints you can tap when a controller or the on-screen pad is
-present, and real buttons in landscape without one.
+present, and real buttons in landscape without one. **Options** (`MENU`)
+always comes first. The other hints follow the pad from left to right: the
+d-pad and left shoulders, `SELECT`, `START`, then `Y` `X` `B` `A`, then the
+right shoulders.
 
 ## Game-list context menu
 
 Press `MENU`, or long-press a game, for its context menu: Pin Item, Hide
-Game, Rename Rom, Add to Collection, Game Settings, Fetch art and Emulator.
+Game, Rename Rom, Add to Collection, Game Settings, Netplay, Fetch art and
+Emulator.
 See [Context menus](main-menu.md#context-menus) for what each does and where
 it shows.
 

@@ -32,6 +32,7 @@ Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 | Sega 32X | `32X` | PicoDrive |
 | [Dreamcast, NAOMI, Atomiswave](dreamcast.md) | `DC` | Flycast |
 | [PlayStation](playstation.md) | `PS` | PCSX-ReARMed |
+| [PlayStation](playstation.md) | `PSX` | SwanStation |
 | Neo Geo Pocket / Color | `NGP`, `NGPC` | RACE |
 | PC Engine / TurboGrafx-16 | `PCE` | Beetle PCE Fast |
 | Virtual Boy | `VB` | Beetle VB |
@@ -53,12 +54,13 @@ and no folder.
 
 ## Choosing an emulator
 
-Two consoles have a second emulator, each with its own tag:
+Three consoles have a second emulator, each with its own tag:
 
 | Console | Tags |
 | --- | --- |
 | Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) |
 | Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
+| Sony PlayStation | `PS` (PCSX-ReARMed), `PSX` (SwanStation) |
 
 - A folder named with a tag, such as `Game Boy Advance (MGBA)`, uses that
   tag.
@@ -81,7 +83,9 @@ Put BIOS files in `Bios/<TAG>/`.
 - The app checks for it before launch and names the missing file, such as
   **Sega CD needs a BIOS: put bios_CD_U.bin (or bios_CD_E.bin,
   bios_CD_J.bin) in Bios/SEGACD/**.
-- PlayStation has a BIOS built in, and uses a real one when present.
+- PlayStation on PCSX-ReARMed (`PS`) has a BIOS built in, and uses a real
+  one when present. SwanStation (`PSX`) needs a real one; see
+  [PlayStation](playstation.md).
 
 ??? info "More detail"
     A launch also reads the folders of tags that share its core. So a

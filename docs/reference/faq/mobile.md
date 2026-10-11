@@ -73,9 +73,14 @@ Nintendo DS runs on **melonDS DS** instead. DraStic battery saves carry over.
 Dreamcast is included, with the NAOMI and Atomiswave arcade games. See
 [Sega Dreamcast](../../mobile/emulators/dreamcast.md).
 
-## Can I play netplay or use Device Sync with the app?
+## Can I play netplay with the app?
 
-Not yet. Netplay and Device Sync come in a later release.
+Yes. Two players can play over Wi-Fi or a USB-C cable, phone to phone or
+phone to an NX Redux handheld (TrimUI Brick, Brick Pro or Smart Pro S).
+Press `Y` **Netplay** on a game. Game Boy and Game Boy Advance games link
+for trades and battles. See [Netplay](../../mobile/netplay.md).
+
+Device Sync comes in a later release.
 
 ## Can two people play on one phone?
 
@@ -117,6 +122,12 @@ No, the same as on the handheld. RetroAchievements in the app is softcore
 only, so cheats and save states are not blocked. See
 [RetroAchievements](../../mobile/retroachievements.md).
 
+## How do I find a game in a big library?
+
+Press `START` on the main menu and type part of its name. Case, accents,
+punctuation and word order don't matter, and `fantasy 6` finds *Final Fantasy
+VI*. See [Search](../../mobile/main-menu.md#search).
+
 ## Where does the game artwork come from?
 
 The app fetches it. Open **Tools → Artwork** and pick **Fetch missing art**,
@@ -134,11 +145,10 @@ works without an account at a small daily quota.
 
 - **Signing in to ScreenScraper** raises that quota, so a large library
   fetches faster.
-- **TheGamesDB** works with the key built into the app. Your own free key
-  is optional and gives you your own monthly allowance.
-- **SteamGridDB** is only used with your own free API key.
+- **TheGamesDB** and **SteamGridDB** are only used with your own free API
+  key.
 
-Set them in **Tools → Artwork → Account**. See
+Set them in **Tools → Artwork → Settings**. See
 [Artwork](../../mobile/artwork.md).
 
 ## Can I use the app as my home screen?
@@ -160,8 +170,8 @@ they don't show in recents or on the Continue card. See
 Yes. On a half-folded phone with a horizontal hinge, the game moves above the
 fold and the controls go below it. This is automatic, except that Nintendo DS
 games keep their usual layout. In landscape on a wide screen, such as an
-unfolded Fold held sideways, Settings, the in-game menu and RetroAchievements
-split into two panes. See [Foldables & Large Screens](../../mobile/foldables.md).
+unfolded Fold held sideways, Settings, the in-game menu, RetroAchievements
+and Artwork split into two panes. See [Foldables & Large Screens](../../mobile/foldables.md).
 
 ## I removed my SD card and some games disappeared
 

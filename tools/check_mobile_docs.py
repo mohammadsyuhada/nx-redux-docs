@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 DOCS = Path("docs")
-pages = sorted((DOCS / "mobile").glob("*.md")) + [DOCS / "reference/faq/mobile.md"]
+pages = sorted((DOCS / "mobile").rglob("*.md")) + [DOCS / "reference/faq/mobile.md"]
 shots = DOCS / "assets/screenshots/mobile"
 failures = []
 

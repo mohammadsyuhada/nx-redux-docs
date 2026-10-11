@@ -12,6 +12,9 @@ is nothing to set up first:
 The on-screen pad is never a player of its own: it always controls
 Player 1. Each extra player needs a controller.
 
+Playing on two devices instead, such as two phones or a phone and an NX
+Redux handheld? See [Netplay](netplay.md).
+
 ## Which systems
 
 Each system has as many players as the console had controller ports. The
@@ -114,4 +117,5 @@ Which games rumble: see [Controls → Game rumble](controls.md#game-rumble).
   Joy-Cons, becomes two players.
 - No multitap adapters yet, such as the NES Four Score, the Super Nintendo
   or PlayStation multitap, or the Sega Team Player.
-- No link-cable play for handheld systems.
+- No link-cable play between players on one phone. Game Boy and Game Boy
+  Advance link play works between two devices with [Netplay](netplay.md).
