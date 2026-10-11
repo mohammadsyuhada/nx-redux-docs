@@ -76,15 +76,23 @@
   outline-offset: 0.15rem;
 }
 
-.nx-menu__tag {
-  font-size: 0.4em;
-  color: var(--md-accent-fg-color);
+/* A row's badge (the Handheld version, Mobile's Coming soon): a small accent pill, black on the selected row's white pill. */
+.nx-menu__badge {
+  padding: 0.3em 0.7em;
+  border-radius: 999px;
+  background: var(--md-accent-fg-color);
+  color: var(--nx-black);
+  font-size: 0.38em;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  transition: background-color 120ms ease, color 120ms ease;
 }
 
-.nx-menu:not(:hover):not(:focus-within) li:first-child .nx-menu__tag,
-.nx-menu a:hover .nx-menu__tag,
-.nx-menu a:focus-visible .nx-menu__tag {
-  color: var(--nx-grey);
+.nx-menu:not(:hover):not(:focus-within) li:first-child .nx-menu__badge,
+.nx-menu a:hover .nx-menu__badge,
+.nx-menu a:focus-visible .nx-menu__badge {
+  background: var(--nx-black);
+  color: var(--nx-white);
 }
 
 .nx-screen__tagline {

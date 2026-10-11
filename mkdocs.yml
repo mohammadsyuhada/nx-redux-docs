@@ -25,6 +25,9 @@ theme:
     - search.highlight
     - content.code.copy
 
+extra:
+  handheld_version: v2.1.0   # shown beside Handheld on the landing page; bump with each release
+
 extra_css:
   - stylesheets/extra.css
   - javascripts/vendor/img-comparison-slider/styles.css
