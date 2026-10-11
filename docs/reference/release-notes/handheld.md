@@ -9,6 +9,39 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.1.1
+
+*12 October 2026*
+
+A patch release. PortMaster ports get per-game CPU and GPU settings, Game Boy
+Advance no longer lags on the Smart Pro S, and RetroAchievements, the Music
+Player and Weston-based ports each get fixes.
+
+### New features
+
+- **Launch Options for ports.** Choose **Launch Options** in a port's context
+  menu to set its CPU speed and, on the Smart Pro S, how many CPU cores and
+  how much GPU speed it gets. Lower settings save battery on light games;
+  higher ones help heavy ports. Each port remembers its choice, and
+  **Tools → Emulator Settings → Ports (Launch Options)** sets the default for
+  all of them. See [Launch Options](../../handheld/guide/launch-options.md).
+- **JPG game art.** Box art and screenshots saved as `.jpg` or `.jpeg` in a
+  `.media` folder now show when there is no `.png` with the same name.
+
+### Fixes
+
+- **Game Boy Advance (Smart Pro S):** gpSP and mGBA no longer lag, including
+  with a shader on.
+- **RetroAchievements:** achievements made offline now sync even when your
+  username in Settings is capitalised differently from your account.
+  **Sync** no longer downloads games it already has, and the achievement list
+  follows the set's own order, so **Next** shows the right achievement.
+- **PortMaster:** ports that use the Weston runtime no
+  longer unmount the SD card and leave a black screen.
+- **Music Player:** song tags and radio song titles in non-English text
+  (accents, Japanese, Cyrillic and so on) show correctly instead of `???` or
+  nothing.
+
 ## v2.1.0
 
 *11 October 2026*
