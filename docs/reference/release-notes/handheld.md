@@ -34,6 +34,8 @@ for your game lists.
       `/Tools` with the same name as a shipped one is now ignored instead, so
       give yours its own name. See
       [Additional Emulators](../../handheld/emulators/additional.md).
+    - **The first start after updating rescans your games once** (the list
+      cache changed), so it takes a little longer than usual.
 
 ### New features
 
@@ -104,6 +106,9 @@ for your game lists.
   [Background playback](../../handheld/apps/music-player.md#background-playback).
 - **Newer emulators.** Snes9x, FCEUmm, Gambatte and mGBA are updated to their
   latest versions.
+- **Faster emulators.** DraStic (Nintendo DS) runs at the CPU's full speed,
+  **Auto** CPU speed uses the whole clock range, and the Smart Pro S keeps its
+  fast cores on for the lighter systems.
 
 ### Fixes
 
@@ -117,8 +122,26 @@ for your game lists.
 - **Saving:** **Save** in the in-game menu is instant again with shaders on.
 - **Home:** multi-disc games kept in a folder show their screenshot and box
   art.
+- **Collections:** games show the name you gave them (including multi-disc
+  games kept in a folder), **New Collection** checks the name the way
+  **Rename** does, and the Collections tab appears as soon as you make your
+  first collection. Renaming a game no longer writes a stray entry into
+  `Collections/map.txt`.
+- **Delete Rom** also removes the game's artwork. Saves and save states are
+  kept.
+- **Consoles:** a folder without a `(TAG)`, such as `Roms/GB`, no longer pulls
+  in another console's games (`GBA`), and a tab inside a `map.txt` no longer
+  makes every start rescan your games.
+- **Backdrop:** the picture no longer goes black after a menu closes or in a
+  short list such as a collection.
+- **Artwork:** fetched art shows right away, and **Refresh Roms** picks up art
+  you copied onto the card.
+- **Last played:** a game started from Search or the Game Switcher while inside
+  a collection reopens in its own place.
 - **PortMaster:** ports from the NextOS Ports catalog no longer show a black
-  screen on the Brick, Brick Pro and Smart Pro.
+  screen on the Brick, Brick Pro and Smart Pro, Streets of Rage 4 from NextOS
+  Ports installs on the Brick, and a failed PortMaster install or upgrade keeps
+  its `config`, `libs` and `themes`.
 - **RetroAchievements:** keep working after the device sleeps, and unlocks
   made offline sync reliably.
 - **Music Player:** with the screen off, `A` still plays and pauses and the
@@ -126,6 +149,8 @@ for your game lists.
 - **Battery:** the percentage shows while charging.
 - **Volume:** with an FN mode set and the volume on **Unchanged**, launching
   an app no longer jumps to full volume.
+- **Background music (Brick, Brick Pro):** no more pop when an app or game
+  starts.
 - **Brightness and color temperature:** holding `SELECT` with the volume keys
   works after the device has been idle, and volume-only presses no longer show
   the brightness hint.
@@ -135,6 +160,14 @@ for your game lists.
 - **SSH:** turning SSH off also closes open sessions, so it stays off.
 - **Updates:** a failed in-app update download no longer leaves a broken zip
   that makes Windows ask for "the last disk of a multi-volume set".
+- **Updates keep your files:** an update no longer overwrites your edited
+  shader presets, overlays or sample art, no longer resets the DraStic layout
+  and theme, and keeps PSP standalone save states when an earlier backup
+  exists. A damaged `MinUI.zip` no longer leaves the device unable to start:
+  the update is skipped and the current system boots. The Bluetooth upgrade no
+  longer leaves a 26 MB `.update_bluez` folder behind.
+- **Third-party paks:** paks built on the old mute settings, such as
+  minui-presenter, start again.
 - **Folders:** every system now has its `Bios`, `Cheats`, `Overlays` and
   `Saves` folders on a fresh install.
 
