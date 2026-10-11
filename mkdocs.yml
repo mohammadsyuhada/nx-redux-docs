@@ -27,6 +27,9 @@ theme:
 
 extra:
   handheld_version: v2.1.0   # shown beside Handheld on the landing page; bump with each release
+  analytics:
+    provider: google
+    property: G-PJ9F1Q2YLL
 
 extra_css:
   - stylesheets/extra.css
