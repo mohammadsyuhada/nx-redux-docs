@@ -16,3 +16,8 @@ For a **single game**, use **Emulator Options** in the game's
 the system-wide settings made here. See
 [Emulator Options](../guide/emulator-options.md) for how the three
 configuration places fit together.
+
+**Ports (Launch Options)** in the list sets the default CPU cores, CPU speed
+and GPU speed for every [PortMaster](portmaster.md) port. A single port can
+override it with **Launch Options** in its context menu. See
+[Launch Options](../guide/launch-options.md).

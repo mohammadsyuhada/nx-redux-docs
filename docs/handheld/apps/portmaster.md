@@ -24,6 +24,13 @@ Installed ports land in the `Roms/Ports (PORTS)` folder. They show up under
 Some ports need data files from the original game. Each port's details page
 says what it needs.
 
+## Battery and performance
+
+Each port can have its own CPU cores, CPU speed and GPU speed: choose
+**Launch Options** in the port's [context menu](../guide/context-menu.md).
+Lower settings save battery on light games, higher ones help heavy ports run
+smoothly. See [Launch Options](../guide/launch-options.md).
+
 ## Community catalogs
 
 Besides its own catalog, PortMaster can list games from community-run
