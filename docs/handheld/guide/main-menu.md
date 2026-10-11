@@ -105,7 +105,7 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 - **Stats line.** The top lines show **This month**'s total play time, your
   RetroAchievements unlocked this month (left out when you are signed out),
   and the month's **Most played** game. A month without play shows
-  **No play yet**.
+  **Nothing played yet. Let's go!** instead.
 - **Continue card.** Your most recent game, marked with a **Continue** badge
   in its corner, showing where you left off (the save-state picture, else the
   game's artwork), its name and when you last played it. Press `A` to jump back in. On a fresh install it is replaced by
