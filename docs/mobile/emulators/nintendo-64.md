@@ -10,6 +10,11 @@ Nintendo 64 games run on the bundled **Mupen64Plus-Next** core.
 
 ## Controls
 
+<figure class="nx-phone" markdown>
+![Super Mario 64 on the Fold's cover screen, with the Nintendo 64 pad: A, B, the yellow C buttons and Z](../../assets/screenshots/mobile/pad-n64.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
 The Nintendo 64 maps a controller **by the printed letter**, like every
 Nintendo console: the button printed `A` is the N64's `A`.
 

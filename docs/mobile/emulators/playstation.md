@@ -1,17 +1,27 @@
 # PlayStation
 
-PlayStation games run on the bundled **PCSX-ReARMed** core.
+PlayStation games run on the bundled **PCSX-ReARMed** core. Games in a
+`PSX` folder run on **SwanStation**, as on the handheld.
 
-| | PCSX-ReARMed |
-| --- | --- |
-| Folder | `Roms/Sony PlayStation (PS)/` |
-| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` (`psxonpsp660.bin`, `scph101.bin`, `scph5501.bin`, `scph7001.bin` or `scph1001.bin`) is used when present. |
-| [File types](index.md) | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` |
+| | PCSX-ReARMed | SwanStation |
+| --- | --- | --- |
+| Folder | `Roms/Sony PlayStation (PS)/` | `Roms/Sony PlayStation (PSX)/` |
+| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` (`psxonpsp660.bin`, `scph101.bin`, `scph5501.bin`, `scph7001.bin` or `scph1001.bin`) is used when present. | Needed: `scph5500.bin` (Japan), `scph5501.bin` (USA) or `scph5502.bin` (Europe) in `Bios/PSX/` |
+| [File types](index.md) | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` | `chd` `cue` `bin` `img` `iso` `pbp` `ecm` `mds` `m3u` |
 
 !!! tip "Use a real BIOS"
     The built-in BIOS plays most games, but some only work with a real one.
 
+To pick the emulator for a folder without a tag, or for one game, see
+[Choosing an emulator](index.md#choosing-an-emulator). PlayStation games
+also play over [Netplay](../netplay.md).
+
 ## Controls
+
+<figure class="nx-phone" markdown>
+![Street Fighter EX Plus Alpha on the Fold's cover screen, with the PlayStation pad: × ○ △ □](../../assets/screenshots/mobile/pad-ps.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
 
 The face buttons map to the PlayStation buttons **by position**:
 

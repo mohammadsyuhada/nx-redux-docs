@@ -100,6 +100,13 @@ the games list. The
 ![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
 </figure>
 
+### Artwork
+
+[Artwork](artwork.md) works the same way. **Fetch by console**,
+**Progress** and **Settings** open beside the Artwork page, and
+**Reset artwork** beside Settings. The page you came from stays on the
+left, dimmed, with its row lit. Tap a row there to open it instead.
+
 ### In-game menu
 
 The [in-game menu](in-game-menu.md) splits too:

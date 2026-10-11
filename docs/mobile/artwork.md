@@ -4,11 +4,13 @@
 through your whole library in the background, and you can keep playing while
 it runs.
 
-![Tools → Artwork, with the counts, one line per source and the credit line](../assets/screenshots/mobile/artwork.webp)
+![Tools → Artwork, with the counts and the credit line](../assets/screenshots/mobile/artwork.webp)
 
 The page opens with your counts, such as **217 games · 148 with art · 69
-missing**, then one line per art source and a credit line naming the sources
-in use. Below them are its rows:
+missing**. While a fetch runs or is paused, a line shows how far it is, and
+a source that stopped gets a note. The last line names the sources in use,
+such as **Source: ScreenScraper - libretro-thumbnails**. Below them are its
+rows:
 
 | Row | What it does |
 | --- | --- |
@@ -16,8 +18,7 @@ in use. Below them are its rows:
 | **Fetch missing art** | Fetches art for every game that has none. Reads **Fetch all art** when **Replace existing art** is on. |
 | **Fetch by console** | Fetches art for one console. |
 | **Progress** | Shows the current or last fetch. Only shown once a fetch has run. |
-| **Account** | Your ScreenScraper sign-in and the SteamGridDB and TheGamesDB keys. |
-| **Art settings** | **Replace existing art** and **Reset artwork…**. |
+| **Settings** | What to fetch, your ScreenScraper login, the SteamGridDB and TheGamesDB keys, and **Reset artwork…**. See [Settings](#settings). |
 
 Unassigned games, and folders whose tag no art source knows, are left out of
 the counts and are never fetched.
@@ -31,15 +32,19 @@ has what it needs:
 | --- | --- |
 | **Box art** | ScreenScraper 3D box, ScreenScraper 2D cover, libretro-thumbnails, TheGamesDB, then a SteamGridDB grid |
 | **Screenshot** | ScreenScraper, libretro-thumbnails, then TheGamesDB |
+| **2D box art** (optional) | ScreenScraper, libretro-thumbnails, then TheGamesDB |
+| **Wheel** (optional) | ScreenScraper, SteamGridDB, then TheGamesDB |
 
 - A game is only asked for what it lacks. A game with box art and a
   screenshot is skipped, unless **Replace existing art** is on.
 - When no source has a screenshot, SteamGridDB stands in: a wide **hero**
   image for landscape backgrounds, and a tall **grid** image for portrait
   ones.
-- libretro-thumbnails needs nothing from you. SteamGridDB needs your own
-  API key, and ScreenScraper and TheGamesDB go further with your own account
-  or key. See [Account](#account).
+- libretro-thumbnails needs nothing from you. SteamGridDB and TheGamesDB
+  need your own API key, and ScreenScraper goes further with your own
+  account. See [Accounts and keys](#accounts-and-keys).
+- 2D box art and the wheel are only fetched when you turn them on in
+  [Settings](#settings).
 - When a source runs out of requests or stops answering, the fetch carries
   on with the others. The Artwork page shows a note for the source that
   stopped.
@@ -67,7 +72,7 @@ the time left, such as **1 / 2 · ~1 min left**. Each game shows its status:
 | **Waiting** | Queued |
 | **Searching** / **Downloading** | Being fetched now |
 | **Done** | Box art and a screenshot were found, followed by the sources used. It adds **no screenshot** when a SteamGridDB hero stands in for the screenshot |
-| **Partial** | Only one was found, followed by **no box** or **no screenshot** |
+| **Partial** | Only part was found, followed by **no box**, **no screenshot** or, with **Generate mix** on, **no mix** |
 | **Not found** | No source had art for it |
 | **Skipped** | It already has art, or no source covers its console |
 | **Error** | Something went wrong, followed by the reason |
@@ -96,6 +101,14 @@ another app. A **Fetching artwork** notification shows its progress, with
 Art shows up in the menus as each game finishes. There is no need to
 rescan.
 
+### On a wide screen
+
+In landscape on a wide screen, such as an unfolded Fold, the pages below
+Artwork open beside it. The Artwork page stays on the left, dimmed, with the
+row you opened lit. Tap a row there to open it instead. **Reset artwork**
+opens beside **Settings** the same way. See
+[Foldables & Large Screens](foldables.md#two-pane-screens).
+
 ### One game
 
 Open a game's context menu with `MENU` in a game list, and choose **Fetch
@@ -106,48 +119,45 @@ shows. `B` cancels. It then says **Art fetched**, **No art found**, or
 **Fetch art** is only offered for games in a console an art source knows.
 See [Context menus](main-menu.md#context-menus) for the rest of the menu.
 
-## Account
+## Settings
 
-**Artwork → Account** holds what lets the app ask for more.
+**Artwork → Settings** holds what to fetch, your accounts and keys, and
+Reset artwork, on one page.
 
-![Artwork → Account: ScreenScraper not signed in, both keys Not set, and TheGamesDB's monthly requests](../assets/screenshots/mobile/artwork-account.webp)
-
-| Row | What it does |
-| --- | --- |
-| **Username** / **Password** | Opens **Sign in to ScreenScraper**. Signing in is optional. |
-| **Requests today** | Your ScreenScraper requests used today, out of your daily limit. Shown when signed in. |
-| **Sign out** | Forgets your ScreenScraper sign-in. Shown when signed in. |
-| **SteamGridDB API key** | Reads **Set** or **Not set**. `A` asks for the key. |
-| **Remove SteamGridDB key** | Shown when a key is set. |
-| **TheGamesDB API key** | Reads **Set** or **Not set**. `A` asks for the key. |
-| **Remove TheGamesDB key** | Shown when a key is set. |
-| **TheGamesDB** | How many TheGamesDB requests are left this month, such as **896 left this month**. |
-
-- **ScreenScraper** works without an account, on a shared anonymous
-  allowance. A free [ScreenScraper](https://www.screenscraper.fr/) account
-  gives you your own daily allowance, which goes much further. The Artwork
-  page reads **ScreenScraper: not signed in · anonymous quota** until you
-  sign in, then your username and the requests used today.
-- **TheGamesDB** can work without your own key, when the app has one built
-  in. The Artwork page then shows its monthly allowance, such as
-  **TheGamesDB: 896 requests left this month**. A free key from
-  [TheGamesDB](https://thegamesdb.net/) gives you your own allowance.
-- **SteamGridDB** is only used with your own free key from
-  [SteamGridDB](https://www.steamgriddb.com/). Until then, the Artwork page
-  reads **SteamGridDB: no key (Account)**.
-- A key is checked before it is saved. If the source turns it down, the app
-  says so and does not save it.
-
-## Art settings
-
-**Artwork → Art settings** has two rows.
-
-![Artwork → Art settings: Replace existing art Off, and Reset artwork…](../assets/screenshots/mobile/artwork-settings.webp)
+![Artwork → Settings: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork…](../assets/screenshots/mobile/artwork-settings.webp)
 
 | Row | Values | Default | What it does |
 | --- | --- | --- | --- |
 | **Replace existing art** | On, Off | Off | Fetch art again for games that already have it. **Fetch missing art** then reads **Fetch all art**. |
-| **Reset artwork…** | — | — | Delete art the app fetched |
+| **2D box art** | On, Off | Off | Also fetch the flat 2D cover, beside the 3D box. |
+| **Wheel** | On, Off | Off | Also fetch the game's logo. Locked **On** while **Generate mix** is on. |
+| **Generate mix** | On, Off | Off | Make the handheld's mix picture on the phone. See [Wheel and mix](#wheel-and-mix). |
+| **ScreenScraper login** / **ScreenScraper logout** | Today's requests, such as `312 / 20,000 today`, once logged in | — | Log in to ScreenScraper, or log out. |
+| **SteamGridDB API key** | **Set**, **Not set** | Not set | `A` asks for the key. **Remove SteamGridDB key** shows once one is set. |
+| **TheGamesDB API key** | **Set**, **Not set** | Not set | `A` asks for the key. **Remove TheGamesDB key** shows once one is set. |
+| **TheGamesDB** | Requests left, such as `896 left this month` | — | Shown once your key is set. |
+| **Reset artwork…** | — | — | Delete art the app fetched. See [Reset artwork](#reset-artwork). |
+
+`LEFT` / `RIGHT` or `A` switch the On/Off rows.
+
+### Accounts and keys
+
+- **ScreenScraper** works without an account, on a shared anonymous
+  allowance. A free [ScreenScraper](https://www.screenscraper.fr/) account
+  gives you your own daily allowance, which goes much further. **ScreenScraper
+  login** opens **Sign in to ScreenScraper**. Once you are in, the row reads
+  **ScreenScraper logout** with your requests used today. Logout asks first:
+  fetches then use the anonymous allowance again.
+- **SteamGridDB** is only used with your own free key from
+  [SteamGridDB](https://www.steamgriddb.com/).
+- **TheGamesDB** is only used with your own free key from
+  [TheGamesDB](https://thegamesdb.net/). The **TheGamesDB** row then shows
+  how many requests are left this month.
+- A key is checked before it is saved. If the source turns it down, the app
+  says so and does not save it.
+- Login and logout are dimmed while art is downloading.
+
+### Reset artwork
 
 **Reset artwork…** opens a list: **All**, then each console. Pick one, and
 the app asks **Delete fetched art for *console*? Art you added yourself is
@@ -157,6 +167,21 @@ kept.** **Delete** removes it and says how many files went.
   yourself stay.
 - A fetch running for the same games is paused first.
 
+### Wheel and mix
+
+The NX Redux handheld shows a game's **wheel** (its logo) and a **mix**: one
+384 × 288 picture of the screenshot, the box and the wheel. The app can make
+both, so a card shared with a handheld has them ready. The app itself
+doesn't show either yet.
+
+- **Generate mix** makes the mix on the phone, the way the handheld's
+  [Artwork Manager](../handheld/apps/artwork-manager.md) does. It needs the
+  wheel, so **Wheel** stays on with it.
+- A game needs a screenshot or a box for its mix. A wheel alone makes none.
+- With **Generate mix** on, a game counts as missing art until it has its
+  mix. When a later fetch brings a new screenshot, box or wheel, the mix is
+  made again.
+
 ## Where art is kept
 
 Fetched art goes in the `.media` folder next to the games, one folder per
@@ -165,10 +190,12 @@ kind of image:
 | Folder | Image |
 | --- | --- |
 | `.media/boxart/` | 3D box art |
-| `.media/box2d/` | Flat 2D cover |
+| `.media/boxart2d/` | Flat 2D cover. An older `.media/box2d/` folder is still read. |
 | `.media/screenshot/` | In-game screenshot |
 | `.media/grid/` | SteamGridDB grid (tall cover) |
 | `.media/hero/` | SteamGridDB hero (wide banner) |
+| `.media/wheel/` | The game's logo, with **Wheel** on |
+| `.media/mix/` | The mix, with **Generate mix** on |
 
 Each image is named after the game's file without its extension, as a
 `.png` or `.jpg`:
@@ -182,10 +209,9 @@ Roms/Game Boy Advance (GBA)/.media/screenshot/Golden Sun.png
 - **Your own art:** put images in the same folders by hand. The app uses
   them like fetched art. After adding them, use **Rescan library** in
   **Tools → Settings → Library** so the app picks them up.
-- **Art from the handheld:** the `.media/boxart/` and `.media/screenshot/`
-  folders made by the handheld's
+- **Art from the handheld:** the `.media/` folders made by the handheld's
   [Artwork Manager](../handheld/apps/artwork-manager.md) work here too. Its
-  old **Mix** image (`.media/<game>.png`) is ignored.
+  old untyped mix image (`.media/<game>.png`) is ignored.
 - **Multi-disc games** kept in their own folder: the art goes in the
   `.media` of the folder above it, named after the game's folder.
 - **Extra ROM folders:** the app writes only inside your home folder. Art it
@@ -228,10 +254,11 @@ See [Android games](launcher.md#android-games) for adding them.
 ## Credits
 
 Art comes from these sources. The Artwork page's last line names the ones in
-use, such as **Art from ScreenScraper, libretro-thumbnails and TheGamesDB**.
+use, such as **Source: ScreenScraper - libretro-thumbnails - TheGamesDB**.
 
-- [ScreenScraper](https://www.screenscraper.fr/): box art and screenshots
+- [ScreenScraper](https://www.screenscraper.fr/): box art, screenshots and
+  wheels
 - [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails):
   box art and screenshots, from the libretro project
-- [TheGamesDB](https://thegamesdb.net/): box art and screenshots
-- [SteamGridDB](https://www.steamgriddb.com/): grid and hero images
+- [TheGamesDB](https://thegamesdb.net/): box art, screenshots and logos
+- [SteamGridDB](https://www.steamgriddb.com/): grid, hero and logo images

@@ -24,6 +24,10 @@ The menu uses your **Accent** and **Secondary accent** from
 [Appearance](appearance.md): the highlighted row sits on the accent, and the
 value bar on the secondary accent.
 
+During a [netplay](netplay.md) match the menu shows only **Leave netplay?**,
+with **Continue** and **Leave**. See
+[Netplay → During a match](netplay.md#during-a-match).
+
 On a wide landscape screen, such as an unfolded foldable held sideways or a
 phone in landscape, the menu shows two pages side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
 

@@ -4,6 +4,8 @@
 sets each emulator's options for a whole console, without starting a game
 first.
 
+![Tools → Settings → Emulators: Default emulators and Settings](../assets/screenshots/mobile/settings-emulators.webp)
+
 For one game, use **Game Settings** in the game's context menu instead. See
 [Game Settings](#game-settings).
 

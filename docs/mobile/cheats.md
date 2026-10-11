@@ -27,7 +27,7 @@ One download covers every supported system.
 With the cheats installed, the page offers **Check for updates** and
 **Remove**.
 
-![Tools → Cheat Database, installed: 28 systems, the file count and the last update](../assets/screenshots/mobile/cheat-database.webp)
+![Tools → Cheat Database, installed: 25 systems, the file count and the last update](../assets/screenshots/mobile/cheat-database.webp)
 
 - **Check for updates** compares your copy with libretro's latest one and
   downloads it again only when it has changed. Otherwise it reports **Cheat
@@ -38,15 +38,24 @@ With the cheats installed, the page offers **Check for updates** and
 ## Where the files go
 
 The cheats live inside the app's own storage. Unlike the handheld, they are
-not on your card or in your home folder. Arcade (`FBN`), ColecoVision and
-Dreamcast (with NAOMI and Atomiswave) have no cheats.
+not on your card or in your home folder.
+
+These systems have no cheats, because their emulators don't take them:
+Arcade (`FBN`), ColecoVision, Dreamcast (with NAOMI and Atomiswave), Neo
+Geo Pocket, Virtual Boy, Atari Lynx, Atari 2600, 5200 and 7800, Pokémon
+mini, PICO-8 and Nintendo 3DS.
 
 ??? info "More detail"
     - The cheats are libretro `.cht` files, kept in one `Cheats/<TAG>/` folder
       per system inside the app's own storage. The app reads cheats only from
       there.
-    - The download installs folders only for systems whose core takes cheats,
-      so Arcade (`FBN`), ColecoVision and Dreamcast have none.
+    - The download installs folders only for systems whose core takes cheats.
+    - A game reads its own system's folder, even when it sits in another
+      system's `Roms` folder: a Sega CD disc in `Sega Genesis (MD)` reads
+      `Cheats/SEGACD/`, a `.fds` disk in `Nintendo ES (FC)` reads
+      `Cheats/FDS/`, and a PC Engine CD game reads the PC Engine CD cheats.
+      Game Boy and Game Boy Color look in each other's folder when their
+      own has nothing.
 
 ## Using cheats in a game
 
@@ -59,7 +68,9 @@ Dreamcast (with NAOMI and Atomiswave) have no cheats.
 ![The in-game Cheats page on Mega Man X4, with Infinite Lives turned On](../assets/screenshots/mobile/in-game-cheats.webp)
 
 The app finds the game's cheat file by the ROM's file name first, then by the
-game's name. If nothing matches, the page says **No cheats for this game.** and
+game's name, then by the first file whose name starts with the game's name.
+PSP games are matched by their game ID, such as `ULUS10041`, from the disc
+itself. If nothing matches, the page says **No cheats for this game.** and
 names the file it looked for, such as `Looked for Cheats/GBA/...`.
 
 !!! tip "Variants are merged"

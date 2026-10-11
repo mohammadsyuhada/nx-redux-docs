@@ -15,6 +15,11 @@ screens itself.
 
 ## Controls
 
+<figure class="nx-phone" markdown>
+![Majora's Mask 3D on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
 The 3DS has its own on-screen pad: the d-pad, or the Circle Pad with
 `STICK` / `D-PAD`, `A`, `B`, `X` and `Y` where they sit on a 3DS, `L`, `R`,
 `SELECT`, `START` and `MENU`.

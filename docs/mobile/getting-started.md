@@ -36,8 +36,11 @@ New to NX Redux? See [About NX Redux](../about.md) first.
   hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
 - **Local multiplayer:** two to four players on one phone, each on their
   own controller. See [Local Multiplayer](multiplayer.md).
-- **In a later release:** Netplay, Device Sync, and more systems, such as
-  home computers (Amiga, C64 and so on).
+- **Netplay:** play with another phone or an NX Redux handheld, over Wi-Fi
+  or a USB-C cable, Game Boy and GBA link trades included. See
+  [Netplay](netplay.md).
+- **In a later release:** Device Sync, and more systems, such as home
+  computers (Amiga, C64 and so on).
 - **Not available:** RetroAchievements hardcore mode, the same as on the
   handheld.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,

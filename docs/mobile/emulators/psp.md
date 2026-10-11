@@ -10,6 +10,11 @@ PSP games run on the bundled **PPSSPP** core.
 
 ## Controls
 
+<figure class="nx-phone" markdown>
+![Tekken 6 on the Fold's cover screen, with the PSP pad: × ○ △ □](../../assets/screenshots/mobile/pad-psp.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
 The face buttons map to the PSP buttons **by position**:
 
 | Position | PSP button |

@@ -10,6 +10,8 @@ previous one.
 | [**Game rumble**](#game-rumble) | Off, Light, Medium, Strong | Medium |
 | [**Reset to defaults**](#reset-to-defaults) | | |
 
+![Tools → Settings → Controls: Pad vibration Light, Game rumble Medium, Reset to defaults](../assets/screenshots/mobile/settings-controls.webp)
+
 ## Pad vibration
 
 A short tick when you press the on-screen pad. A controller never makes the
