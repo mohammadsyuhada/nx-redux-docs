@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{# Google Analytics on the published site only: mkdocs serve swaps site_url for the dev address. #}
+{% block analytics %}
+  {% if config.site_url and config.site_url.startswith("https://nxredux.com") %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
