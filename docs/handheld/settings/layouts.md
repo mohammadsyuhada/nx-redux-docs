@@ -130,7 +130,7 @@ box art and Wheel come from
 
 ## Extra info
 
-![Layouts settings, the Extra info, page title, button hint, default view and Game Switcher rows](../../assets/screenshots/set-layouts-2.png)
+![Layouts settings, the Extra info, page title, button hint, default view, Game Switcher layout and Game Switcher games rows](../../assets/screenshots/set-layouts-2.png)
 
 `Show` (default) or `Hide` the extra game details in the menus:
 
