@@ -134,6 +134,10 @@ to the sides. Consoles show their logo over their controller, collections
 their name, tools their icon. In a game list the caption under the selected
 game gives its name, play time and achievements.
 
+On the Collections and Tools tabs each item is only as wide as its name or
+icon, and the space between neighbours stays the same, so short and long names
+sit evenly along the row.
+
 *Consoles tab*
 
 ![Consoles tab in Carousel style](../assets/screenshots/mobile/consoles-carousel.webp)
