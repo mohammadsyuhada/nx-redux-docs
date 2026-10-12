@@ -48,7 +48,8 @@ unfolded Galaxy Z Fold or a tablet.
   and the tool squares.
 - With three or more pinned games, they fill a **Pinned** band below, four
   to a row.
-- Under them come the shelves.
+- Under them come the [shelves](#shelves), four to a row at the pinned
+  games' size.
 
 <figure class="nx-phone nx-phone--open" markdown>
 ![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp){ .nx-phone__screen }
@@ -57,17 +58,23 @@ unfolded Galaxy Z Fold or a tablet.
 
 ### Shelves
 
-The large face adds up to three shelves of games from your library. Each
-shelf shows only when it has games, and a game is never on two shelves.
+Home shows up to three shelves of games from your library, in portrait and
+landscape alike, on every screen size and in every Home layout. Each shelf
+shows only when it has games, holds at most 3, and a game is never on two
+shelves.
 
 | Shelf | What it holds |
 | --- | --- |
-| **New** | Games the app first found in the last 30 days, newest first. Up to 6. |
-| **Not started** | Games you have never played. Three wide tiles, picked again each day. |
-| **Pick up again** | Games you last played more than 14 days ago, most played first. Up to 6. |
+| **New** | Games the app first found in the last 30 days, newest first. |
+| **Not started** | Games you have never played. Picked again each day. |
+| **Pick up again** | Games you last played more than 14 days ago, most played first. |
 
 The game on the Continue card, your pinned games, Unassigned games and
 Android games are left off the shelves.
+
+[Layouts](layouts.md) can hide the **New** and **Not started** shelves, each
+with its own row. A hidden shelf's games don't move to another shelf. **Pick
+up again** always shows when it has games.
 
 ## Two-pane screens
 

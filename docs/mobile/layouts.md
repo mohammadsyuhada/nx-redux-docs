@@ -2,8 +2,9 @@
 
 The Consoles, Collections and Tools tabs, and every game list, can each be
 drawn in their own style. Pick them in **Tools → Settings → Layouts**, which
-also lets you hide the page title, the button hints and the game stats. Home
-has no layout setting: it looks the same whatever style you pick here.
+also lets you hide tabs, pick what shows behind consoles and beside games,
+and hide the page title, the button hints and the game stats. Home has its own
+layout, set here too, and comes in List, Grid or Carousel.
 
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
@@ -13,38 +14,83 @@ has no layout setting: it looks the same whatever style you pick here.
 | [**Backdrop**](#backdrop) | | ✓ | Box art over the game's screenshot |
 
 Out of the box, Consoles, Collections and game lists use **Carousel**, and
-Tools uses **Grid**.
+Home and Tools use **Grid**.
 
 ## The Layouts page
 
 ![Layouts page](../assets/screenshots/mobile/settings-layouts.webp)
 
 `Right` and `A` step the highlighted row to its next value, and `Left` to
-the previous one. Some rows
-only show when they apply.
+the previous one. Some rows only show when they apply. When a change adds or
+removes rows, the highlight stays on the row you changed.
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
-| **Consoles** | List, Grid, Carousel | Carousel | Always |
-| **Consoles orientation** | Horizontal, Vertical | Horizontal | When Consoles is Carousel |
-| **Collections** | List, Grid, Carousel | Carousel | Always |
-| **Collections orientation** | Horizontal, Vertical | Horizontal | When Collections is Carousel |
-| **Tools** | List, Grid, Carousel | Grid | Always |
-| **Tools orientation** | Horizontal, Vertical | Horizontal | When Tools is Carousel |
-| **Game lists** | List, Grid, Carousel, Backdrop | Carousel | Always |
-| **Game lists orientation** | Horizontal, Vertical | Horizontal | When Game lists is Carousel or Backdrop |
-| **Vertical alignment** | Left, Right | Left | When Game lists orientation is Vertical |
-| **Controller** | Show, Hide | Show | Always |
+| [**Home tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Home layout** | List, Grid, Carousel | Grid | When Home tab is Show |
+| [**New shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
+| [**Not started shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
+| [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
+| **Consoles orientation** | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |
+| [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
+| [**Collections tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Collections layout** | List, Grid, Carousel | Carousel | When Collections tab is Show |
+| **Collections orientation** | Horizontal, Vertical | Horizontal | When Collections tab is Show and Collections layout is Carousel |
+| [**Tools tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Tools layout** | List, Grid, Carousel | Grid | When Tools tab is Show |
+| **Tools orientation** | Horizontal, Vertical | Horizontal | When Tools tab is Show and Tools layout is Carousel |
+| **Game lists layout** | List, Grid, Carousel, Backdrop | Carousel | Always |
+| **Game lists orientation** | Horizontal, Vertical | Horizontal | When Game lists layout is Carousel or Backdrop |
+| [**Game lists alignment**](#game-lists-alignment) | Left, Right | Left | When Game lists orientation is Vertical |
+| [**List art**](#list-art) | Screenshot, Mix, 3D box art, 2D box art, Wheel, None | Screenshot | When Game lists layout is List |
+| [**Backdrop art**](#backdrop-art) | 3D box art, 2D box art, Wheel | 3D box art | When Game lists layout is Backdrop |
+| [**Extra info**](#extra-info) | Show, Hide | Show | Always |
 | [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
 | [**Button hints**](#page-title-and-button-hints) | Show, Hide | Show | Always |
-| [**Extra info**](#extra-info) | Show, Hide | Show | Always |
+| [**Recent hint**](#single-hints) | Show, Hide | Show | When Button hints is Show |
+| [**Search hint**](#single-hints) | Show, Hide | Show | When Button hints is Show |
+| [**Netplay hint**](#single-hints) | Show, Hide | Show | When Button hints is Show, on a phone with netplay |
 | [**Reset to defaults**](#reset-to-defaults) | | | Always |
+
+## Showing and hiding tabs
+
+Set a tab's row to **Hide** to take it out of the tab row. Hide all of them
+for a Home-only menu. With only one tab left, the tab row is replaced by an
+**NX Redux** title, `L1` / `R1` have nothing to switch to, and `Up` never
+moves onto the title.
+
+A hidden tab is never out of reach, so Settings, which lives in Tools, is
+always one press away:
+
+- Press `MENU` on any item of the main menu. After the item's own options,
+  the menu offers **Consoles**, **Collections** and **Tools** for each tab
+  that is hidden and has something in it. A menu that holds only these is
+  captioned **NX Redux**.
+- Or touch and hold the tab row (or the **NX Redux** title).
+
+Picking one opens that tab over the current one, in its own layout and with
+its name as the title. `A` opens items as usual and `MENU` gives their
+options. The hint bar shows `B` **Back**, which returns to the tab
+underneath, where you left it. `L1` / `R1` and `Left` / `Right` past the ends
+do not switch tabs; a Grid wraps around instead, and `Up` never moves onto
+the title. A game you start from it brings you back to the main menu's own
+tab afterwards.
+
+The tab drops back to the one underneath by itself when you show its tab
+again, or when it is emptied.
+
+Home's **+N** square and **Pick a game** open a hidden Tools or Consoles tab
+the same way. While that tab is hidden, a long press on **+N** or **Pick a
+game** also opens the hidden-tab menu, which is how touch reaches it when the
+tab row is hidden.
 
 ## List
 
 A plain list. On the Consoles tab the selected console's controller sits
-beside the list. In a game list the selected game's screenshot fills the
-background.
+beside the list (see [Consoles controller](#consoles-controller)). In a game
+list the selected game's picture fills the background or sits in a box (see
+[List art](#list-art)).
 
 *Consoles tab*
 
@@ -124,10 +170,10 @@ goes to the last and `Down` on the last to the first, on a fresh press only.
 
 </div>
 
-## Vertical alignment
+## Game lists alignment
 
 In a vertical game list the stack sits on the left and the details on the
-right. Set **Vertical alignment** to **Right** to swap the sides.
+right. Set **Game lists alignment** to **Right** to swap the sides.
 
 <div class="grid" markdown>
 
@@ -170,10 +216,37 @@ These are the Carousel and Backdrop game lists, both Horizontal.
 
 </div>
 
-## Controller art
+## List art
 
-The Consoles tab shows each console's controller behind it in the List and
-Carousel styles. Set **Controller** to **Hide** for plain logos.
+The picture a game list shows in the List style:
+
+- **Screenshot** (default): the game's screenshot fills the background.
+- **Mix**, **3D box art**, **2D box art** or **Wheel**: that picture, whole,
+  in a box on the right. The game names always stop short of the box.
+- **None**: no picture and no background on any List-style list below the
+  tabs, game lists and collections alike.
+
+A game without the picture you picked shows its screenshot full-screen
+instead. Mix, 2D box art and Wheel come from [Artwork](artwork.md).
+
+## Backdrop art
+
+The box in a Backdrop row: **3D box art** (default), **2D box art** or
+**Wheel**. A wheel keeps its own shape instead of being cut into a case. A
+game without that picture shows its 3D box art, else a placeholder box. The
+background stays the screenshot.
+
+## Consoles controller
+
+What shows behind the Consoles tab in the List style. The row shows only
+while **Consoles layout** is **List**; the Carousel style always shows each
+console's controller.
+
+- **Controller** (default): each console's controller beside the list.
+- **Background**: no controller. The selected console's own picture,
+  `Roms/<console>/.media/bg.png`, fills the background as a game list's
+  screenshot does. A console without one shows plain black.
+- **None**: no controller and no background: a plain list on black.
 
 ## Page title and button hints
 
@@ -193,6 +266,21 @@ Other screens, such as Settings and the in-game menu, keep both.
 - With the hints hidden, their space stays empty, Home included. In a List
   game list, the selected game's play time and achievements move down into
   that row.
+
+### Single hints
+
+**Recent hint**, **Search hint** and **Netplay hint** each hide one hint,
+`SELECT` **Recent**, `START` **Search** or `Y` **Netplay**, and leave the rest
+of the bar. The button still works. Its action moves into the `MENU` menu
+instead:
+
+- **Netplay** leads a game's menu, in game lists and on Home.
+- **Recent** and **Search** join every main menu item's menu, after its own
+  items. An item without a menu of its own, such as a console, gets one with
+  just these. A long press on the tab row offers them too.
+
+With **Button hints** hidden, all three are in the menu, along with
+**Resume** in a game list.
 
 ## Extra info
 
@@ -222,9 +310,10 @@ count stays, and the [Game Switcher](game-switcher.md), the
 ## Reset to defaults
 
 **Reset to defaults** puts every row on the Layouts page back to its
-default: each tab's style and orientation, the game lists' style,
-orientation and alignment, **Controller**, **Page title**,
-**Button hints** and **Extra info**. It does not ask first.
+default: every tab shown, each tab's layout and orientation, the game
+lists' layout, orientation and alignment, **Consoles controller**,
+**List art**, **Backdrop art**, **Extra info**, **Page title** and
+**Button hints**. It does not ask first.
 
 ??? info "Games without artwork"
     A game with no screenshot or box art gets a generated abstract picture,
