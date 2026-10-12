@@ -1,7 +1,8 @@
 # Main Menu & Home
 
 The main menu is split into four tabs: **Home**, **Consoles**,
-**Collections** and **Tools**. The app opens on Home.
+**Collections** and **Tools**. The app opens on Home, or on the first tab you
+have not hidden.
 
 ![Home tab](../assets/screenshots/mobile/home.webp)
 
@@ -27,8 +28,12 @@ See [Controls](controls.md).
     - in Grid and a Horizontal Carousel, when you push past the first or last
       item;
     - on Home, when you push past the left or right edge.
-- Home and Tools always show. A Consoles or Collections tab with nothing in
-  it, such as Collections before you make one, is left out.
+- A Consoles or Collections tab with nothing in it, such as Collections before
+  you make one, is left out.
+- You can hide any tab in [Layouts](layouts.md#showing-and-hiding-tabs).
+  `MENU` on any item, or touching and holding the tab row, still opens a
+  hidden tab, so Settings is always reachable. If a tab you are on goes away,
+  the menu moves to the next tab.
 
 ### The tab row
 
@@ -36,7 +41,9 @@ Press `Up` from the top of Home, from the top row of a Grid or from a
 Horizontal Carousel to move the highlight onto the tab row. In List style and
 a Vertical Carousel, `Up` on the first item wraps to the last instead. With
 **Page title** hidden in [Layouts](layouts.md#page-title-and-button-hints)
-there is no tab row, and `L1` / `R1` switch tabs.
+there is no tab row, and `L1` / `R1` switch tabs. With only one tab left, an
+**NX Redux** title stands in its place, and `Up` does not move onto it. The
+same goes for a tab opened over another.
 
 | Button | What it does |
 | --- | --- |
@@ -51,7 +58,7 @@ there is no tab row, and `L1` / `R1` switch tabs.
 Home is the starting point: your most recent game, this month's play time,
 and everything you pinned. It comes in three layouts, **List**, **Grid** (the
 default) and **Carousel**. Pick one in
-[Settings → Layouts → Home](layouts.md#the-layouts-page). With
+[Settings → Layouts → Home layout](layouts.md#the-layouts-page). With
 [Extra info](layouts.md#extra-info) hidden, every layout leaves out the stats.
 
 In every layout the buttons are the same:
@@ -60,7 +67,7 @@ In every layout the buttons are the same:
 | --- | --- |
 | `A` **Play** / **Resume** / **Open** | Start the game (**Resume** continues from its auto-save, **Play** shows when it has none), or open the tool |
 | `Y` **Netplay** | Play the selected game with another device. Shown for games that have [netplay](netplay.md) |
-| `MENU` **Options** | The context menu for the selected game or tool. There is none on **Pick a game** |
+| `MENU` **Options** | The context menu for the selected game or tool. There is none on **Pick a game**, unless a tab is hidden and the menu offers it |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` **Search** | [Search](#search) your games |
 
@@ -81,8 +88,9 @@ Everything on Home in one list.
   tag and selected when Home opens. On a fresh install it is **Pick a game**
   instead. Your pinned games follow in the order you pinned them, then the
   games from the shelves (**New**, **Not started**, **Pick up again**), each
-  showing its shelf name in grey on the right, and last every pinned tool.
-  The shelves show in List on any screen size.
+  wearing its shelf name as a pill tag, like the Continue game's tag, and
+  last every pinned tool. Each shelf holds at most 3 games. The shelves show
+  in List on any screen size.
 - **Behind the list** you see the selected game's picture (for the Continue
   game, where you left off). A selected tool shows its icon, large and dim, on
   the right.
@@ -106,13 +114,16 @@ This is the default layout.
   line shows the month's **Most played** game and its time. A month without
   play shows **No play yet**. "This month" is the calendar month.
   [Extra info](layouts.md#extra-info) can hide it.
-- **Continue card.** Your most recent game, with when you last played it and
-  for how long. Press `A` to jump back in.
+- **Continue card.** Your most recent game, wearing a **Continue** badge, with
+  when you last played it and for how long. Press `A` to jump back in.
 - **Pick a game.** On a fresh install the Continue card is replaced by
-  **Pick a game** ("Nothing played yet"), which opens the Consoles tab.
+  **Pick a game** ("Nothing played yet"), which opens the Consoles tab. While
+  the Consoles tab is hidden, it opens it over Home, and a long press opens
+  the hidden-tab menu.
 - **Pinned tools** sit beside the Continue card as square icon tiles. When
   more tools are pinned than fit, the last square becomes **+N**, which opens
-  the Tools tab.
+  the Tools tab. While Tools is hidden, it opens over Home, and a long press
+  opens the hidden-tab menu.
 - **Pinned games** fill the rows below. Home scrolls when there are more. The
   selected pin shows its name and play time.
 - Games without art get a generated abstract picture, so every card looks
@@ -135,8 +146,9 @@ This is the default layout.
     - A long press opens the same menu as `MENU`.
     - Drag up and down to scroll without selecting anything.
 
-On an unfolded phone or a tablet in landscape, Home adds shelves of games to
-pick from. See [Foldables & Large Screens](foldables.md).
+Under the pinned games, Home shows shelves of games to pick from, in portrait
+and landscape alike: **New**, **Not started** and **Pick up again**, at most
+3 games each. See [Shelves](foldables.md#shelves).
 
 ### Carousel
 
@@ -148,8 +160,8 @@ The same games in one row of cards, centred on the screen.
 - **The carousel** starts on the **Continue** card (with a **Continue** badge),
   selected when Home opens, or **Pick a game** on a fresh install. Your pinned
   games follow, then the games from the shelves in the order **New**, **Not
-  started**, **Pick up again**, each badged with its shelf name. The shelves
-  show in Carousel on any screen size.
+  started**, **Pick up again**, each badged with its shelf name. Each shelf holds at most 3 games. The
+  shelves show in Carousel on any screen size.
 - **Game info** shows under the selected card: its name, when you last played
   it, play time and achievements. The cards beside it show their picture only.
 - **Pinned tools** sit in a row of squares under the carousel. When they don't
@@ -182,7 +194,8 @@ and Tools is a grid.
 
 - **Consoles** show their logo and how many games they hold. In the List and
   Carousel styles the selected console's controller shows too, unless you set
-  **Controller** to **Hide** in [Layouts](layouts.md#controller-art).
+  **Consoles controller** to **Background** or **None** in
+  [Layouts](layouts.md#consoles-controller).
 - **Collections** show their name and game count.
 
 ![Collections tab](../assets/screenshots/mobile/tab-collections.webp)
@@ -244,6 +257,7 @@ where the game is listed.
 | **Rename Rom** | Change the name the list shows |
 | **Add to Collection** | Add the game to a collection, or start a new one |
 | **Game Settings** | This game's own emulator settings. See [Emulator Settings](emulator-settings.md) |
+| **Resume** | Jump back into the game's auto-save. Shown only while Button hints are hidden |
 | **Netplay** | Play the game with another device. See [Netplay](netplay.md) |
 | **Fetch art** | Download art for this game. See [Artwork](artwork.md) |
 | **Emulator** | Pick which emulator runs this game. See [Emulators](emulators/index.md) |
@@ -259,7 +273,16 @@ Not every item shows everywhere:
 | Unassigned games | **Hide Game**, **Rename Rom**, **Console** |
 | The Android console | **Pin Item** / **Unpin Item** only |
 
-- **Fetch art** shows only for systems the art sources know.
+- **Fetch art** shows only for systems the art sources know, and only when
+  the game's art is incomplete, or when **Artwork → Replace existing art** is
+  on.
+- While [Button hints](layouts.md#page-title-and-button-hints) are hidden
+  (with a controller connected or the portrait pad shown), the `X` Resume and
+  `Y` Netplay hints are not on screen, so a game's menu starts with
+  **Resume** (when the game has a save) and **Netplay** (when available).
+  On Home it starts with **Netplay** only.
+- A menu with 9 to 16 items shows as two columns when the screen is wide
+  enough. `Left` / `Right` move between the columns.
 - **Netplay** shows only for systems that have [netplay](netplay.md).
 - **Unassigned games** are files in an extra ROM folder that the app could
   not match to a system. Open
@@ -270,6 +293,14 @@ Not every item shows everywhere:
   Press `A` **Unhide** there to bring one back.
 - The Android console holds the Android games you added. See
   [Launcher Mode & Android Games](launcher.md).
+
+### Hidden tabs
+
+When you hide a tab in [Layouts](layouts.md#showing-and-hiding-tabs), `MENU`
+on any item of the main menu ends with **Consoles**, **Collections** and
+**Tools** for each hidden tab that has something in it. Items that have no
+menu of their own, such as a console, get a menu with just these, captioned
+**NX Redux**. Pick one to open that tab over the current one; `B` returns.
 
 ## Search
 

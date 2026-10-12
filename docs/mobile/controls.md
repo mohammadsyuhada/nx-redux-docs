@@ -286,7 +286,7 @@ right shoulders.
 
 Press `MENU`, or long-press a game, for its context menu: Pin Item, Hide
 Game, Rename Rom, Add to Collection, Game Settings, Netplay, Fetch art and
-Emulator.
+Emulator. While Button hints are hidden it starts with Resume and Netplay.
 See [Context menus](main-menu.md#context-menus) for what each does and where
 it shows.
 

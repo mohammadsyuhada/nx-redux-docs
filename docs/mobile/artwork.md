@@ -116,7 +116,8 @@ art**. The app fetches that game straight away while **Fetching art…**
 shows. `B` cancels. It then says **Art fetched**, **No art found**, or
 **Already has art (Replace existing art is off)**.
 
-**Fetch art** is only offered for games in a console an art source knows.
+**Fetch art** is only offered for games in a console an art source knows,
+and only when the game's art is incomplete or **Replace existing art** is on.
 See [Context menus](main-menu.md#context-menus) for the rest of the menu.
 
 ## Settings
