@@ -128,6 +128,16 @@ box art and Wheel come from
 
 ![Game list in Backdrop style with 2D box art](../../assets/screenshots/game-list-backdrop-2d.png)
 
+## Game Switcher layout
+
+How the [Game Switcher](../guide/game-switcher.md) draws:
+
+- `Full screen` (default): one game at a time, its resume frame filling the
+  screen, `Left` / `Right` to flip through them.
+- `List`: your recent games as a list titled **Recent**, drawn like a game
+  list in the List style, with the selected game's resume frame behind the
+  rows. `Up` / `Down` to move.
+
 ## Extra info
 
 ![Layouts settings, the Extra info, page title, button hint, default view and Game Switcher rows](../../assets/screenshots/set-layouts-2.png)
@@ -138,8 +148,8 @@ box art and Wheel come from
 - the play time, last played, achievement progress and next achievement
   under a game's name, on Home and in every game list layout.
 
-Names always show. The [Game Switcher](../guide/game-switcher.md) keeps its
-own details either way.
+Names always show. The [Game Switcher](../guide/game-switcher.md) follows this
+too.
 
 ## Page title
 
@@ -153,9 +163,9 @@ up arrow moves to the top of the list. Carousels run up into the freed row.
 volume and brightness changes included. Hidden:
 
 - the rows keep their place, so nothing jumps;
-- a game list in the List style shows the selected game's play time,
-  achievements and next achievement in the bar's row instead (unless
-  [Extra info](#extra-info) is hidden);
+- a game list in the List style, and the Game Switcher, show the selected
+  game's play time, achievements and next achievement in the bar's row instead
+  (unless [Extra info](#extra-info) is hidden);
 - carousels run down into the freed row.
 
 ## Default view
