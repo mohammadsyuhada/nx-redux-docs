@@ -3,7 +3,8 @@
 The Consoles, Collections and Tools tabs, and every game list, can each be
 drawn in their own style. Pick them in **Tools → Settings → Layouts**, which
 also lets you hide tabs, pick what shows behind consoles and beside games,
-and hide the page title, the button hints and the game stats. Home has its own
+pick the Game Switcher's layout, and hide the page title, the button hints and
+the game stats. Home has its own
 layout, set here too, and comes in List, Grid or Carousel.
 
 | Style | Tabs | Game lists | In short |
@@ -45,6 +46,7 @@ removes rows, the highlight stays on the row you changed.
 | [**Game lists alignment**](#game-lists-alignment) | Left, Right | Left | When Game lists orientation is Vertical |
 | [**List art**](#list-art) | Screenshot, Mix, 3D box art, 2D box art, Wheel, None | Screenshot | When Game lists layout is List |
 | [**Backdrop art**](#backdrop-art) | 3D box art, 2D box art, Wheel | 3D box art | When Game lists layout is Backdrop |
+| [**Game Switcher layout**](#game-switcher-layout) | Full screen, List | Full screen | Always |
 | [**Extra info**](#extra-info) | Show, Hide | Show | Always |
 | [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
 | [**Button hints**](#page-title-and-button-hints) | Show, Hide | Show | Always |
@@ -276,8 +278,8 @@ Other screens, such as Settings and the in-game menu, keep both.
   squares. Grid, Carousel and Backdrop keep their size and centre in the full
   height.
 - With the hints hidden, their space stays empty, Home included. In a List
-  game list, the selected game's play time and achievements move down into
-  that row.
+  game list and in the [Game Switcher](game-switcher.md#play-time-and-achievements),
+  the selected game's play time and achievements move down into that row.
 
 ### Single hints
 
@@ -294,6 +296,15 @@ instead:
 With **Button hints** hidden, all three are in the menu, along with
 **Resume** in a game list.
 
+## Game Switcher layout
+
+How the [Game Switcher](game-switcher.md) draws your recent games:
+
+- **Full screen** (default): one game at a time, its picture filling the
+  screen. `LEFT` / `RIGHT` move between games.
+- **List**: the games as a List-style game list titled **Recent**, the
+  selected game's picture behind the rows. `UP` / `DOWN` move between games.
+
 ## Extra info
 
 **Extra info** set to **Hide** removes the game stats from the main menu and
@@ -308,6 +319,8 @@ the game lists, for a cleaner look:
 - The selected **Grid** tile shows only the game's name.
 - **Carousel** and **Backdrop** captions show only the name, horizontal and
   vertical alike.
+- The [Game Switcher](game-switcher.md#play-time-and-achievements) leaves
+  out its info line, in both layouts.
 
 Home gives the strip's space to the top section: the Continue card and the
 tool squares grow, and a column of squares gains one more only when a whole
@@ -315,17 +328,17 @@ square fits.
 
 Unlike the page title and hints, this works in every mode: touch alone,
 with a controller, portrait or landscape. A console's or collection's game
-count stays, and the [Game Switcher](game-switcher.md), the
-[in-game menu](in-game-menu.md), the [Game Tracker](game-tracker.md) and
-[RetroAchievements](retroachievements.md) keep all their info.
+count stays, and the [in-game menu](in-game-menu.md), the
+[Game Tracker](game-tracker.md) and [RetroAchievements](retroachievements.md)
+keep all their info.
 
 ## Reset to defaults
 
 **Reset to defaults** puts every row on the Layouts page back to its
 default: every tab shown, each tab's layout and orientation, the game
 lists' layout, orientation and alignment, **Consoles controller**,
-**List art**, **Backdrop art**, **Extra info**, **Page title** and
-**Button hints**. It does not ask first.
+**List art**, **Backdrop art**, **Game Switcher layout**, **Extra info**,
+**Page title** and **Button hints**. It does not ask first.
 
 ??? info "Games without artwork"
     A game with no screenshot or box art gets a generated abstract picture,

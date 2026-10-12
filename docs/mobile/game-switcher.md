@@ -1,8 +1,14 @@
 # Game Switcher
 
 Press `SELECT` on the main menu or in a game list to open the Game Switcher:
-a full-screen view of your recent games that resumes any of them where you
-left off. On the main menu the `SELECT` hint reads **Recent**.
+your recent games, ready to resume any of them where you left off. On the
+main menu the `SELECT` hint reads **Recent**.
+
+It has two layouts, picked in
+[**Tools → Settings → Layouts → Game Switcher layout**](layouts.md#game-switcher-layout):
+**Full screen** (the default) and **List**.
+
+## Full screen
 
 ![The Game Switcher showing Streets of Rage 2, 1 of 23](../assets/screenshots/mobile/game-switcher.webp)
 
@@ -18,9 +24,40 @@ next one to unlock.
   take the game out of your recent games.
 - `B` **Back**, or `SELECT` again, returns to where you were.
 
+`LEFT` and `RIGHT` stop at the first and last game; they do not wrap.
+
+## List
+
+Your recent games as a list titled **Recent**, drawn like a game list in the
+[List](layouts.md#list) style. The selected game's picture fills the
+background behind the rows, and the line at the bottom gives its info, as in a
+List game list.
+
+- `UP` / `DOWN` move through the games. `UP` on the first wraps to the last
+  and `DOWN` on the last to the first, on a fresh press only: holding the
+  button stops at the end.
+- A tap on a row highlights it, and a second tap resumes it.
+- `A` **Resume**, `Y` **Remove** and `B` **Back** work as in Full screen.
+  `LEFT` and `RIGHT` do nothing.
+
+Two games with the same name from different consoles show the console's
+tag, such as **Tetris (GB)**, or their whole file names when those differ only
+by extension, such as **Tetris.nes (FC)**. A copy of a game kept in an extra
+folder shows that folder's name after the title, dimmed.
+
+The background is the first of these that loads:
+
+1. the screenshot of the game's resume point, with any black bars trimmed off,
+2. its screenshot,
+3. its hero image, then its grid image,
+4. its generated abstract picture.
+
+With no recent games, the List shows the same **No Recents** screen as Full
+screen.
+
 ## The picture
 
-The switcher shows the first of these it has for the game:
+In Full screen the switcher shows the first of these it has for the game:
 
 1. the screenshot of its resume point,
 2. its 3D box art,
@@ -28,6 +65,17 @@ The switcher shows the first of these it has for the game:
 4. **No Preview**.
 
 See [Artwork](artwork.md) for where box art comes from.
+
+## Play time and achievements
+
+Both layouts follow [**Extra info**](layouts.md#extra-info) and
+[**Button hints**](layouts.md#page-title-and-button-hints) in
+**Tools → Settings → Layouts**:
+
+- With **Extra info** hidden, the info line is left out.
+- With **Button hints** hidden, the hint bar's row stays, without hints, and
+  the info line moves into it. In Full screen the row keeps its dark shade so
+  the line reads over a light picture.
 
 ## Always resumable
 
