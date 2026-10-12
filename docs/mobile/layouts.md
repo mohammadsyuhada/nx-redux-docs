@@ -150,7 +150,9 @@ sit evenly along the row.
 ## Backdrop
 
 Game lists only. The selected game's box art stands over its dimmed
-screenshot, with its neighbours' boxes to the sides.
+screenshot, with its neighbours' boxes to the sides. Its caption is laid out
+like the Carousel's: the name, then the play time and achievement count, then
+the next achievement on its own line. The Vertical orientation shows the same lines.
 
 ![Game list in Backdrop style](../assets/screenshots/mobile/game-list-backdrop.webp)
 
