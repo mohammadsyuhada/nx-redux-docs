@@ -56,24 +56,6 @@ Settings itself.
 - `Layout letters`: hints show the button's role instead (`A` for confirm,
   whichever cap that is).
 
-## Default view
-
-The first view shown on boot: the content list or the
-[Game Switcher](../guide/game-switcher.md).
-
-## Game Switcher games
-
-Which recently played games appear in the Game Switcher: `Resumable only`
-(the default) or all recent games.
-
-## Show 24h time format
-
-Show the clock in 24-hour format.
-
-## Show clock
-
-Show the clock in the status pill.
-
 ## Set time and date automatically
 
 Sync time via NTP (requires internet).
@@ -126,3 +108,11 @@ Clears the cached emulator/ROMs list so it rescans on the next launch.
 ## Reset to defaults
 
 Resets all options on this page to their default values.
+
+??? info "Options that moved"
+    | Option | Now |
+    | --- | --- |
+    | **Default view**, **Game Switcher games** | [Layouts](layouts.md#default-view) |
+    | **Show clock**, **Show 24h time format** | [Appearance](appearance.md#show-clock) |
+
+    Your existing choices carry over.

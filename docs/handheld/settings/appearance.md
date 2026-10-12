@@ -53,6 +53,16 @@ Color of the selected list entry's text.
 
 Show the battery level as a percentage in the status pill.
 
+![Appearance settings, the status pill rows](../../assets/screenshots/set-appearance-2.png)
+
+## Show clock
+
+Show the clock in the status pill. Off by default.
+
+## Show 24h time format
+
+Show the clock in 24-hour format. On by default.
+
 ## Show search hint
 
 Show or hide the `START` search button hint on the main menu tabs. Hiding it
@@ -102,3 +112,4 @@ Resets all options on this page to their default values. The
     | **Show Recents** | Removed. Your last game is Home's Continue card, and the [Game Switcher](../guide/game-switcher.md) lists the rest. |
     | **Game art visible / style / type / width / corner radius**, **Use folder background for ROMs** | Removed. Each [layout](../guide/layouts.md) places the art itself. |
     | **Show folder names at root** | Removed. Names always show. |
+    | **Show clock**, **Show 24h time format** (were in [System](system.md)) | Here, under [Show battery percentage](#show-battery-percentage). Your existing choices carry over. |
