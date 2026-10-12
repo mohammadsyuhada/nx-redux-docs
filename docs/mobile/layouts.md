@@ -132,7 +132,8 @@ handheld.
 A single row with the selected item large in the middle and its neighbours
 to the sides. Consoles show their logo over their controller, collections
 their name, tools their icon. In a game list the caption under the selected
-game gives its name, play time and achievements.
+game gives its name, then its play time and achievement count on one line and
+the next achievement to earn on the line below.
 
 On the Collections and Tools tabs each item is only as wide as its name or
 icon, and the space between neighbours stays the same, so short and long names
