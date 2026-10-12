@@ -85,7 +85,7 @@ afterwards to remove the `.DS_Store` and `._*` files Finder leaves behind.
 |---------------------|--------------------------------------------------------------|
 | `Roms/`             | Your games, one folder per system                            |
 | `Saves/`            | In-game saves                                                |
-| `Bios/`             | BIOS files for systems that need them ([Cores & BIOS Files](../emulators/cores.md)) |
+| `Bios/`             | BIOS files for systems that need them ([BIOS checklist](../emulators/index.md#bios-checklist)) |
 | `Cheats/`           | Cheat files ([Cheats](../apps/cheats.md))                    |
 | `Collections/`      | Your game collections                                        |
 | `Music/`            | Files for the [Music Player](../apps/music-player.md)        |

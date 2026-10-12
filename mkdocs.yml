@@ -76,7 +76,8 @@ plugins:
         apps/retroachievements.md: handheld/apps/retroachievements.md
         apps/xtras.md: handheld/apps/xtras.md
         emulators/index.md: handheld/emulators/index.md
-        emulators/cores.md: handheld/emulators/cores.md
+        emulators/cores.md: handheld/emulators/index.md
+        handheld/emulators/cores.md: handheld/emulators/index.md
         emulators/rom-formats.md: handheld/emulators/rom-formats.md
         emulators/arcade.md: handheld/emulators/arcade.md
         emulators/nintendo-64.md: handheld/emulators/nintendo-64.md
@@ -161,7 +162,6 @@ nav:
           - Xtras Store: handheld/apps/xtras.md
       - Emulators:
           - Bundled Emulators: handheld/emulators/index.md
-          - Cores & BIOS Files: handheld/emulators/cores.md
           - ROM File Formats: handheld/emulators/rom-formats.md
           - Arcade (FBNeo): handheld/emulators/arcade.md
           - Game Boy Advance: handheld/emulators/game-boy-advance.md
@@ -171,6 +171,7 @@ nav:
           - PlayStation Portable: handheld/emulators/psp.md
           - Nintendo DS: handheld/emulators/nintendo-ds.md
           - Super Nintendo: handheld/emulators/super-nintendo.md
+          - Other Systems: handheld/emulators/other-systems.md
           - Additional Emulators: handheld/emulators/additional.md
       - Netplay: handheld/netplay.md
       - Settings:

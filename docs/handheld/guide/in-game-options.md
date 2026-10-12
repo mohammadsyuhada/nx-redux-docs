@@ -103,7 +103,12 @@ the buttons the running core uses are listed.
 Hotkeys for actions during play. All are unbound (`NONE`) by default. Bind
 them the same way as [Controls](#controls): `A` then the button or
 `MENU` + button to set, `X` to clear. Using a `MENU` + button combination
-keeps the shortcut from clashing with the game's own controls.
+keeps the shortcut from clashing with the game's own controls: a shortcut on
+a button the game also uses does both. On the Famicom Disk System, `L1` and
+`R1` are the [disk buttons](../emulators/other-systems.md#flipping-disk-sides).
+
+Shortcuts are saved per emulator (or per game), so fast-forward bound for
+one system isn't bound for another until you set it there too.
 
 | Shortcut | Action |
 | --- | --- |
