@@ -341,10 +341,13 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .swtopfade { position: absolute; left: 0; right: 0; top: 0; height: 119px; pointer-events: none; }   /* subtitle bottom ≈ 55 + 64 */
 .swbotfade { position: absolute; left: 0; right: 0; bottom: var(--hb); height: 88px; pointer-events: none; }  /* info text top at 68 above the screen bottom: 24 + 64 */
 .swtop { position: absolute; left: 24px; right: 24px; top: 12px; display: grid; gap: 2px; }
-.swtop .t { font-size: 20px; line-height: 25px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.swtop .n { font-size: 13px; line-height: 16px; color: var(--dim); white-space: pre; }
+.swtop .t { font-size: 22px; line-height: 28px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.swtop .n { font-size: 11px; line-height: 14px; color: var(--dim); white-space: pre; }
 .swinfo { position: absolute; left: 24px; right: 24px; bottom: calc(var(--hb) + 6px); }
-.swinfo .il { font-size: 14px; line-height: 18px; }
+.swinfo .il { font-size: 14px; line-height: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#screen.nohints .swinfo { display: none; }
+#screen.nohints .swbotfade { bottom: 44px; }   /* Button hints: Hide keeps the bar's 90% row for the info line; the fade rises from it */
+.hints.sw90 .binfo { margin-left: 0; }   /* the switcher's info line in the bar's row: left, where it sat above it */
 .portrait .swtop, .portrait .swinfo { left: 16px; right: 16px; }
 /* the Game Switcher's title keeps clear of it, as NX Redux's menu bar title (the group's ~48 dp plus 2 × PADDING 10 at 22 / 16) */
 .swtop { right: calc(24px + 48px + 27.5px); } .portrait .swtop { right: calc(16px + 48px + 27.5px); }
@@ -524,6 +527,7 @@ body { margin: 0; padding: 0 0 4px; }
           <span class="lbl">Screen</span>
           <button id="scr-main" aria-pressed="true">Main menu</button>
           <button id="scr-games" aria-pressed="false">Game list (Mega Drive)</button>
+          <button id="scr-sw" aria-pressed="false">Game Switcher</button>
         </div>
         <div class="switch" role="group" aria-label="Orientation">
           <span class="lbl">Orientation</span>
@@ -539,7 +543,7 @@ body { margin: 0; padding: 0 0 4px; }
       </div>
       <div class="opt-panel" data-p="layouts">
         <div class="layouts" id="layouts" role="group" aria-label="Layouts"></div>
-        <span class="hd">Home: List puts Continue, the pinned games and the pinned tools in one list; Grid is the dashboard (Continue beside the tools, pinned games in rows); Carousel opens on Continue with the pinned games after it and the tools in a dock below</span>
+        <span class="hd">Home: List puts Continue, the pinned games and the pinned tools in one list; Grid is the dashboard (Continue beside the tools, pinned games in rows); Carousel opens on Continue with the pinned games after it and the tools in a dock below. Game Switcher (SELECT): Full screen shows one resume frame at a time; List shows Recent as a list over the selected game's resume frame</span>
       </div>
       <div class="opt-panel" data-p="home">
         <div class="switch" role="group" aria-label="Home state">
@@ -744,9 +748,8 @@ const scaleK = () => fit.clientWidth / DIM[S.orient].w;
 
 /* ---------- the info line (ui/GameInfo.kt): "Today - 1m 31s · [trophy] 0 of 35 · Next: …" ---------- */
 const dur = h => { const s = Math.round(+h * 3600), H = Math.floor(s / 3600), M = Math.floor(s % 3600 / 60); return H ? `${H}h ${M}m` : `${M}m ${s % 60}s`; };
-/* Style > Extra info: Hide drops these segments on Home and in game lists (every info line and caption row built from them);
-   the Game Switcher keeps them */
-const infoOn = () => S.switcher || (S.info !== false && !(S.inConsole && sty() === "list" && S.hints !== false));   /* a game list on List shows them only with Button hints: Hide (its band line sits on the bar) */
+/* Style > Extra info: Hide drops these segments on Home, in game lists and in the Game Switcher (every info line and caption row built from them) */
+const infoOn = () => S.info !== false && !(S.switcher ? S.swLay === "list" && S.hints !== false : S.inConsole && sty() === "list" && S.hints !== false);   /* 2026-10-12: the Game Switcher follows Extra info too; its List as a game list's List */   /* a game list on List shows them only with Button hints: Hide (its band line sits on the bar) */
 const timeSeg = it => !infoOn() ? "" : [it.last, it.h ? dur(it.h) : ""].filter(Boolean).join(" - ");   /* ASCII hyphen inside the time segment */
 const achSeg = it => !infoOn() ? "" : it.ra ? `<i class="rai"></i>${it.ra[0]} of ${it.ra[1]}` : "";
 const nextSeg = it => !infoOn() ? "" : it.ra && it.ra[2] ? `<span class="next">Next: ${it.ra[2]}</span>` : "";
@@ -1146,8 +1149,11 @@ function press(k, repeat = false) {
   S.settleTo = null;
   if (k === "SELECT" && !S.inConsole) { S.tabFocus = false; S.switcher = !S.switcher; if (S.switcher) S.sw = 0; build(); return update(); }
   if (S.switcher) {
-    if (k === "left" && S.sw > 0) S.sw--;
-    if (k === "right" && S.sw < recent().length - 1) S.sw++;
+    const n = recent().length, list = S.swLay === "list";
+    if (list && n && k === "up") S.sw = (S.sw + n - 1) % n;
+    if (list && n && k === "down") S.sw = (S.sw + 1) % n;
+    if (!list && k === "left" && S.sw > 0) S.sw--;
+    if (!list && k === "right" && S.sw < n - 1) S.sw++;
     if (k === "B" || k === "A") { S.switcher = false; build(); }
     return update();
   }
@@ -1167,22 +1173,50 @@ function placeTabPill() {
   S.tp = { x, w };
 }
 /* ---------- the Game Switcher: recently played, one resume frame at a time ---------- */
+/* Layouts > Game Switcher (2026-10-12): Full screen (one resume frame at a time, LEFT/RIGHT) or List (the game-list List
+   style: Recent as rows, the selected game's resume frame behind them faded in from the right, UP/DOWN); kept in localStorage */
+S.swLay = (() => { try { return localStorage.getItem("nx-swlayout") === "list" ? "list" : "full"; } catch (e) { return "full"; } })();
 function buildSwitcher() {
   S.row = null;
   if (!recent().length) { screen.innerHTML = `<div class="hempty">Nothing played yet</div><div class="hints sw90" id="hints">${hint("nav_button_b", "Back")}</div>`; return; }
+  if (S.swLay === "list") return buildSwitcherList();
   screen.innerHTML = `<div class="sw" id="sw"></div>
     <div class="swtopfade" style="background:${eased("180deg", .9, 3.5)}"></div><div class="swbotfade" style="background:${eased("0deg", .9, 2)}"></div>
     <div class="swtop"><div class="t" id="swt"></div><div class="n" id="swn"></div></div>
     <div class="swinfo" id="swinfo"></div>
-    <div class="hints sw90" id="hints">${hint("nav_button_y", "Remove") + hint("nav_button_b", "Back") + hint("nav_button_a", "Resume")}</div>`;
+    <div class="hints sw90 scrim" id="hints">${hint("nav_button_y", "Remove") + hint("nav_button_b", "Back") + hint("nav_button_a", "Resume")}<span class="binfo" id="swbinfo"></span></div>`;
 }
 function updateSwitcher() {
   if (!recent().length) { syncScreen(); syncStyle(); return; }
+  if (S.swLay === "list") return updateSwitcherList();
   const it = RECENT[S.sw];
   document.getElementById("sw").style.backgroundImage = `url(${GART[it.g + "-shot"]})`;   /* stand-in for the game's resume frame */
   document.getElementById("swt").textContent = it.n;
   document.getElementById("swn").textContent = `${it.sys}   ${S.sw + 1} / ${RECENT.length}`;
   document.getElementById("swinfo").innerHTML = `<div class="il">${infoLine(it)}</div>`;
+  document.getElementById("swbinfo").innerHTML = infoLine(it);
+  syncScreen(); syncStyle();
+}
+/* List: a game list's List titled Recent, one row per game; as there, the band holds the arrows and the info line shows only
+   with Button hints: Hide (in the bar's row) and Extra info on; the list wraps UP/DOWN like a game list */
+function buildSwitcherList() {
+  screen.innerHTML = `<img class="gbg" id="gbg" alt=""><canvas class="gfade" id="gfade"></canvas>
+    <div class="tabfade" style="background:${TAB_FADE}"></div>
+    <div class="head"><span class="ttl">Recent</span></div>
+    <div class="lview games"><div class="plist" id="plist">${RECENT.map((r, i) =>
+      `<div class="prow" data-i="${i}"><span>${r.n}</span></div>`).join("")}</div></div>
+    <div class="band${infoOn() ? "" : " plain"}"><span class="arrows" id="arrows"></span><span class="btext" id="btext"></span></div>
+    <span class="uparrow" id="uparrow" hidden></span>
+    <div class="hints scrim" id="hints"></div>`;
+  drawFade(document.getElementById("gfade"));
+  screen.querySelectorAll(".prow").forEach(el => el.onclick = () => { const i = +el.dataset.i; if (S.sw === i) press("A"); else { S.sw = i; update(); } });
+}
+function updateSwitcherList() {
+  const it = RECENT[S.sw];
+  scrollList(S.sw, RECENT.length);
+  document.getElementById("btext").innerHTML = infoLine(it);
+  listBg(it);
+  document.getElementById("hints").innerHTML = hint("nav_button_y", "Remove") + hint("nav_button_b", "Back") + hint("nav_button_a", "Resume") + `<span class="binfo">${infoLine(it)}</span>`;
   syncScreen(); syncStyle();
 }
 
@@ -1195,12 +1229,15 @@ document.addEventListener("keydown", ev => {
 });
 document.querySelectorAll(".pad button").forEach(b => b.onclick = () => press(b.dataset.k));
 const syncScreen = () => {
-  document.getElementById("scr-main").setAttribute("aria-pressed", !S.inConsole);
-  document.getElementById("scr-games").setAttribute("aria-pressed", S.inConsole && !S.sub);
+  document.getElementById("scr-main").setAttribute("aria-pressed", !S.inConsole && !S.switcher);
+  document.getElementById("scr-games").setAttribute("aria-pressed", S.inConsole && !S.sub && !S.switcher);
+  document.getElementById("scr-sw").setAttribute("aria-pressed", S.switcher);
 };
 const setScreen = games => { S.switcher = false; S.tabFocus = false; S.inConsole = games; S.sub = null; if (games) { S.cat = CATS.findIndex(c => c.items === CONSOLES); S.sel[S.cat] = 0; } build(); update(); };
 document.getElementById("scr-main").onclick = () => setScreen(false);
 document.getElementById("scr-games").onclick = () => setScreen(true);
+const openSwitcher = () => { S.tabFocus = false; S.inConsole = false; S.sub = null; S.switcher = true; S.sw = 0; build(); update(); };
+document.getElementById("scr-sw").onclick = openSwitcher;
 
 
 /* ---------- List style: the same categories, each listed as pills instead of tiles ---------- */
@@ -1234,29 +1271,39 @@ function buildList() {
   screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
 }
 function updateList() {
-  const idx = selKey(), list = items(), it = list[idx], rows = screen.querySelectorAll(".prow");
-  rows.forEach((r, j) => r.classList.toggle("focus", j === idx));
+  const idx = selKey(), list = items(), it = list[idx];
   screen.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", +t.dataset.c === S.cat));
+  scrollList(idx, list.length);
+  document.getElementById("btext").innerHTML = bandText(it);
+  const lbg = document.getElementById("lbg");
+  if (lbg) { lbg.hidden = !it.logo || !S.padArt; if (it.logo) lbg.style.setProperty("--m", `url(${it.m})`); }
+  const lpad = document.getElementById("lpad");
+  if (lpad) { const on = !!it.pad && S.padArt; lpad.hidden = !on; lbg.classList.toggle("withpad", on); if (on) { lpad.style.setProperty("--pad", `url(${it.pad})`); lpad.style.setProperty("--padk", it.padk); } }   /* only consoles carry a logo behind the list */
+  listBg(it);
+  document.getElementById("hints").innerHTML = hintsFor(it) + `<span class="binfo">${bandText(it)}</span>`;
+}
+/* the List rows: focus row idx of n, scrolled so it sits mid-view, with the band's arrows (shared with the List Game Switcher) */
+function scrollList(idx, n) {
+  const rows = screen.querySelectorAll(".prow");
+  rows.forEach((r, j) => r.classList.toggle("focus", j === idx));
   const view = screen.querySelector(".lview"), rowH = rows[0].offsetHeight + 4, fits = Math.max(1, Math.floor((view.clientHeight + 4) / rowH));
-  const first = Math.max(0, Math.min(idx - Math.floor(fits / 2), list.length - fits));
-  const plist = document.getElementById("plist"), shown = Math.min(fits, list.length - first);
+  const first = Math.max(0, Math.min(idx - Math.floor(fits / 2), n - fits));
+  const plist = document.getElementById("plist"), shown = Math.min(fits, n - first);
   plist.style.transform = `translateY(${-first * rowH}px)`;
   /* only whole rows show: no part row peeks into the gap above the arrows */
   plist.style.clipPath = `inset(${first * rowH}px -40px ${Math.max(0, plist.offsetHeight - (first + shown) * rowH + 4)}px -40px)`;
   /* the band: packed arrows (only those that apply) at the list inset, then the one-line info, right-aligned */
   const upTop = first > 0 && !S.title, up = document.getElementById("uparrow");
-  document.getElementById("arrows").innerHTML = (first > 0 && !upTop ? ARROW_UP : "") + (first + fits < list.length ? ARROW_DOWN : "");
+  document.getElementById("arrows").innerHTML = (first > 0 && !upTop ? ARROW_UP : "") + (first + fits < n ? ARROW_DOWN : "");
   up.hidden = !upTop; up.innerHTML = upTop ? ARROW_UP : "";
   if (upTop) {   /* mirror the band's arrow line: its centre's gap under the last row, above the first */
     const band = screen.querySelector(".band"), rowTop = j => view.offsetTop + plist.offsetTop + rows[j].offsetTop - first * rowH;
     const below = band.offsetTop + band.offsetHeight / 2 - (rowTop(first + shown - 1) + rows[0].offsetHeight);
     up.style.top = `${rowTop(first) - below - 5}px`;
   }
-  document.getElementById("btext").innerHTML = bandText(it);
-  const lbg = document.getElementById("lbg");
-  if (lbg) { lbg.hidden = !it.logo || !S.padArt; if (it.logo) lbg.style.setProperty("--m", `url(${it.m})`); }
-  const lpad = document.getElementById("lpad");
-  if (lpad) { const on = !!it.pad && S.padArt; lpad.hidden = !on; lbg.classList.toggle("withpad", on); if (on) { lpad.style.setProperty("--pad", `url(${it.pad})`); lpad.style.setProperty("--padk", it.padk); } }   /* only consoles carry a logo behind the list */
+}
+/* the selected game's screenshot (in the Game Switcher its resume frame) behind the List, faded in from the right */
+function listBg(it) {
   const gbg = document.getElementById("gbg");
   if (gbg) {
     gbg.onload = () => {   /* NxScreenBackground: full height, right-aligned; portrait pushes it right 20% if it covers the width, else 7%; landscape keeps it flush so the wide screen shows it whole */
@@ -1267,7 +1314,6 @@ function updateList() {
     gbg.hidden = !src;   /* no screenshot: the list sits on black */
     if (src) gbg.src = src; else gbg.removeAttribute("src");
   }
-  document.getElementById("hints").innerHTML = hintsFor(it) + `<span class="binfo">${bandText(it)}</span>`;
 }
 function pressList(k) {
   /* main menu: LEFT/RIGHT switch tabs like L1/R1 (a list has no sideways move); game lists stop at the ends */
@@ -1327,6 +1373,7 @@ const syncStyle = () => {
   document.querySelectorAll("#layouts .osw[data-k]").forEach(g => g.hidden = !hasOri(g.dataset.k));   /* only under Carousel (main menu) or Carousel / Backdrop (game lists) */
   document.querySelectorAll("#layouts button[data-valign]").forEach(b => b.setAttribute("aria-pressed", S.vAlign === b.dataset.valign));
   document.querySelectorAll("#layouts .vasw").forEach(g => g.hidden = !(hasOri("games") && S.ori.games === "v"));   /* only game lists on Carousel / Backdrop + Vertical; the value is kept while hidden */
+  document.querySelectorAll("#layouts button[data-swl]").forEach(b => b.setAttribute("aria-pressed", S.swLay === b.dataset.swl));
 };
 /* the Layouts block: List / Grid / Carousel per main-menu tab, plus Backdrop for game lists; then, while the row is on
    Carousel (or Backdrop), its orientation Horizontal / Vertical. Both kept in localStorage like the accent */
@@ -1345,6 +1392,14 @@ document.getElementById("layouts").insertAdjacentHTML("beforeend", LAYOUTS.map((
     else if (k === "home") { if (v === "list" || v === "grid" || v === "car") S.lay.home = v; }   /* Home: List, Grid (the dashboard) or Carousel */
     else if (ok.includes(v)) S.lay[k] = k !== "games" && v === "bd" ? "car" : v; });
   if (saved && Object.values(saved).includes("vert")) try { localStorage.setItem("nx-layouts", JSON.stringify(S.lay)); localStorage.setItem("nx-orient", JSON.stringify(S.ori)); } catch (e) {} }
+/* the Game Switcher's own row, last: Full screen (default) or List; picking one opens the switcher */
+document.getElementById("layouts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Game Switcher layout"><span class="lbl">Game Switcher</span>${[["full", "Full screen"], ["list", "List"]]
+  .map(([v, t]) => `<button data-swl="${v}" aria-pressed="false">${t}</button>`).join("")}</div>`);
+document.querySelectorAll("#layouts button[data-swl]").forEach(b => b.onclick = () => {
+  S.swLay = b.dataset.swl;
+  try { localStorage.setItem("nx-swlayout", S.swLay); } catch (e) {}
+  openSwitcher();
+});
 document.getElementById("style-opts").insertAdjacentHTML("beforeend", `<div class="switch" role="group" aria-label="Controller art"><span class="lbl">Controller</span>${[["on", "Show"], ["off", "Hide"]]
   .map(([v, t]) => `<button data-padart="${v}" aria-pressed="false">${t}</button>`).join("")}</div>`);
 const syncPadArt = () => document.querySelectorAll("#style-opts button[data-padart]").forEach(b => b.setAttribute("aria-pressed", (b.dataset.padart === "on") === S.padArt));
