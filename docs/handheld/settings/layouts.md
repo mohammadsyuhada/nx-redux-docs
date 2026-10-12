@@ -8,7 +8,8 @@ soon as you leave Settings, with no restart. See
 ![Layouts settings](../../assets/screenshots/set-layouts.png)
 
 The rows are grouped by what they change: Home first, then each tab, then the
-game lists, then the options that apply to the whole menu. A tab's layout rows
+game lists, then the options that apply to the whole menu, then the view
+shown at boot and the Game Switcher. A tab's layout rows
 show only while that tab is shown.
 
 ## Home tab
@@ -129,7 +130,7 @@ box art and Wheel come from
 
 ## Extra info
 
-![Layouts settings, the game list, Extra info, page title and button hint rows](../../assets/screenshots/set-layouts-2.png)
+![Layouts settings, the Extra info, page title, button hint, default view and Game Switcher rows](../../assets/screenshots/set-layouts-2.png)
 
 `Show` (default) or `Hide` the extra game details in the menus:
 
@@ -156,6 +157,19 @@ volume and brightness changes included. Hidden:
   achievements and next achievement in the bar's row instead (unless
   [Extra info](#extra-info) is hidden);
 - carousels run down into the freed row.
+
+## Default view
+
+The first view shown on boot: `Content List` (the main menu, default) or
+`Game Switcher` (the [Game Switcher](../guide/game-switcher.md)). Moved here from
+[System](system.md); your existing choice carries over.
+
+## Game Switcher games
+
+Which recently played games appear in the
+[Game Switcher](../guide/game-switcher.md): `Resumable only` (the default) or
+`All recent games`. Moved here from [System](system.md); your existing choice
+carries over.
 
 ## Reset to defaults
 

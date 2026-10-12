@@ -29,5 +29,5 @@ visual even for freshly added titles.
 ## Resumable-only by default
 
 By default the switcher lists **only resumable games**. To see all recent
-games, set [**Game Switcher games**](../settings/system.md#game-switcher-games)
-in **Settings → System** to `All recent games`.
+games, set [**Game Switcher games**](../settings/layouts.md#game-switcher-games)
+in **Settings → Layouts** to `All recent games`.
