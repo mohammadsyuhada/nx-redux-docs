@@ -36,8 +36,32 @@ accuracy, so it handles games that gpSP gets wrong.
 
 !!! note "gpSP and the BIOS"
     gpSP has a built-in replacement BIOS, so games start without one. The
-    real `gba_bios.bin` in `Bios/GBA/` improves compatibility. See
-    [Cores & BIOS Files](cores.md).
+    real `gba_bios.bin` in `Bios/GBA/` improves compatibility.
+
+## Controls
+
+Both cores share one layout:
+
+| Device button | GBA button |
+| --- | --- |
+| Right (`A` on the cap) | A |
+| Bottom (`B` on the cap) | B |
+| `L1` / `R1` | L / R |
+| D-pad (and the left stick, on devices that have one) | D-pad |
+| `SELECT` / `START` | Select / Start |
+
+A and B follow the [Button Layout](../guide/button-layout.md) setting: they
+stay on whichever buttons act as `A` and `B`.
+
+A few extra controls have no button out of the box. Assign them in the
+in-game menu under [Options → Controls](../guide/in-game-options.md#controls):
+
+- **A Turbo** / **B Turbo** (both cores)
+- **L Turbo** / **R Turbo** (mGBA)
+- **More Sun** / **Less Sun** (mGBA): adjust the cartridge's solar sensor in
+  the Boktai games
+
+The [Super Game Boy](#super-game-boy) runs on mGBA and has the same controls.
 
 ## Using both
 

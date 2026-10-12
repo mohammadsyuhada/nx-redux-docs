@@ -14,7 +14,30 @@ Every device runs PlayStation games at full speed at the native resolution.
 
 !!! warning "Use a real BIOS"
     The core has a built-in fallback BIOS, but some games only work with a
-    real one. See [Cores & BIOS Files](cores.md).
+    real one.
+
+## Controls
+
+Both cores (PCSX-ReARMed and [SwanStation](#swanstation)) share one
+layout, with the DualShock controller selected:
+
+| Device button | PlayStation button (Nintendo layout) | PlayStation button (Xbox layout) |
+| --- | --- | --- |
+| Right (`A` on the cap) | ○ Circle | ✕ Cross |
+| Bottom (`B` on the cap) | ✕ Cross | ○ Circle |
+| Top (`X` on the cap) | △ Triangle | □ Square |
+| Left (`Y` on the cap) | □ Square | △ Triangle |
+| `L1` / `R1` | L1 / R1 | same |
+| `L2` / `R2` | L2 / R2 | same |
+| Left / right stick | Left / right analog stick | same |
+| D-pad | D-pad | same |
+| `SELECT` / `START` | Select / Start | same |
+
+With the default Nintendo [Button Layout](../guide/button-layout.md) the face
+buttons match the PlayStation pad by position. The Xbox layout swaps them:
+Circle stays on whichever button acts as `A`. To switch between the Standard
+and DualShock controller, or remap anything, use the in-game menu's
+[Options → Controls](../guide/in-game-options.md#controls).
 
 ## Enhanced Resolution
 

@@ -28,6 +28,26 @@ games may run less smoothly than on Snes9x, especially on lower-end devices.
     Only Snes9x opens Satellaview (`.bs`) and Sufami Turbo (`.st`) files, so
     keep those in the `SFC` folder.
 
+## Controls
+
+Both cores share one layout. The SNES pad has the same four face letters as
+the device, so each one sits on the button with that letter:
+
+| Device button | SNES button |
+| --- | --- |
+| Right (`A` on the cap) | A |
+| Bottom (`B` on the cap) | B |
+| Top (`X` on the cap) | X |
+| Left (`Y` on the cap) | Y |
+| `L1` / `R1` | L / R |
+| D-pad (and the left stick, on devices that have one) | D-pad |
+| `SELECT` / `START` | Select / Start |
+
+The face buttons follow the [Button Layout](../guide/button-layout.md)
+setting: SNES A stays on whichever button acts as `A`, and so on. Remap
+anything in the in-game menu under
+[Options → Controls](../guide/in-game-options.md#controls).
+
 ## Netplay
 
 Both cores support [Netplay](../netplay.md), so games with a built-in
