@@ -48,6 +48,9 @@ removes rows, the highlight stays on the row you changed.
 | [**Extra info**](#extra-info) | Show, Hide | Show | Always |
 | [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
 | [**Button hints**](#page-title-and-button-hints) | Show, Hide | Show | Always |
+| [**Recent hint**](#single-hints) | Show, Hide | Show | When Button hints is Show |
+| [**Search hint**](#single-hints) | Show, Hide | Show | When Button hints is Show |
+| [**Netplay hint**](#single-hints) | Show, Hide | Show | When Button hints is Show, on a phone with netplay |
 | [**Reset to defaults**](#reset-to-defaults) | | | Always |
 
 ## Showing and hiding tabs
@@ -263,6 +266,21 @@ Other screens, such as Settings and the in-game menu, keep both.
 - With the hints hidden, their space stays empty, Home included. In a List
   game list, the selected game's play time and achievements move down into
   that row.
+
+### Single hints
+
+**Recent hint**, **Search hint** and **Netplay hint** each hide one hint,
+`SELECT` **Recent**, `START` **Search** or `Y` **Netplay**, and leave the rest
+of the bar. The button still works. Its action moves into the `MENU` menu
+instead:
+
+- **Netplay** leads a game's menu, in game lists and on Home.
+- **Recent** and **Search** join every main menu item's menu, after its own
+  items. An item without a menu of its own, such as a console, gets one with
+  just these. A long press on the tab row offers them too.
+
+With **Button hints** hidden, all three are in the menu, along with
+**Resume** in a game list.
 
 ## Extra info
 
