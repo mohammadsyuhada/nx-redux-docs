@@ -162,7 +162,7 @@ in portrait, four on a tablet. See [Shelves](foldables.md#shelves).
 
 The same games in one row of cards, centred on the screen.
 
-- **Stats** sit on two lines under the tabs, left-aligned: **This month** above,
+- **Stats** sit on two centred lines under the tabs: **This month** above,
   **Most played** below. A month without play shows **Nothing played yet.
   Let's go!** instead.
 - **The carousel** starts on the **Continue** card (with a **Continue** badge),
