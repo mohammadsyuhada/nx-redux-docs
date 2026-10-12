@@ -114,6 +114,11 @@ Two rows of tiles that slide sideways as you move. Consoles show their logo
 and game count. Games show their screenshot, and the selected tile adds its
 name, last-played time and achievement count.
 
+On a phone held upright the Consoles tab shows two consoles across, each half
+the screen wide. Once you move past the second, the selected console stays in
+the middle with half of each neighbour showing on either side, as on the
+handheld.
+
 *Consoles tab*
 
 ![Consoles tab in Grid style](../assets/screenshots/mobile/consoles-grid.webp)
