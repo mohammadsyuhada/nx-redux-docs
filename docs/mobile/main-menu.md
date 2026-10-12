@@ -49,7 +49,54 @@ there is no tab row, and `L1` / `R1` switch tabs.
 ## Home
 
 Home is the starting point: your most recent game, this month's play time,
-and everything you pinned. It looks the same whatever layouts you pick.
+and everything you pinned. It comes in three layouts, **List**, **Grid** (the
+default) and **Carousel**. Pick one in
+[Settings → Layouts → Home](layouts.md#the-layouts-page). With
+[Extra info](layouts.md#extra-info) hidden, every layout leaves out the stats.
+
+In every layout the buttons are the same:
+
+| Button | What it does |
+| --- | --- |
+| `A` **Play** / **Resume** / **Open** | Start the game (**Resume** continues from its auto-save, **Play** shows when it has none), or open the tool |
+| `Y` **Netplay** | Play the selected game with another device. Shown for games that have [netplay](netplay.md) |
+| `MENU` **Options** | The context menu for the selected game or tool. There is none on **Pick a game** |
+| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` **Search** | [Search](#search) your games |
+
+Touch works the same everywhere: tap an item to select it, tap the selected
+item to play or open it, and long-press for the menu.
+
+Games without art get a generated abstract picture, so every card looks
+different.
+
+### List
+
+Everything on Home in one list.
+
+- **Stats** sit on two lines under the tabs, left-aligned: **This month** and
+  the achievements you unlocked, then **Most played**. A month without play
+  shows **Nothing played yet. Let's go!** instead.
+- **The list** starts with your most recent game, marked with a **Continue**
+  tag and selected when Home opens. On a fresh install it is **Pick a game**
+  instead. Your pinned games follow in the order you pinned them, then the
+  games from the shelves (**New**, **Not started**, **Pick up again**), each
+  showing its shelf name in grey on the right, and last every pinned tool.
+  The shelves show in List on any screen size.
+- **Behind the list** you see the selected game's picture (for the Continue
+  game, where you left off). A selected tool shows its icon, large and dim, on
+  the right.
+- **On a fresh install**, with only **Pick a game** in the list, its card
+  fills the screen.
+
+| Button | What it does |
+| --- | --- |
+| `Up` / `Down` | Move through the list. It wraps around at either end; a held button stops at the end |
+| `Left` / `Right` | Switch tab |
+
+### Grid
+
+This is the default layout.
 
 ![Home with a pinned game selected](../assets/screenshots/mobile/home-pins.webp)
 
@@ -90,6 +137,30 @@ and everything you pinned. It looks the same whatever layouts you pick.
 
 On an unfolded phone or a tablet in landscape, Home adds shelves of games to
 pick from. See [Foldables & Large Screens](foldables.md).
+
+### Carousel
+
+The same games in one row of cards, centred on the screen.
+
+- **Stats** sit on two centred lines under the tabs: **This month** above,
+  **Most played** below. A month without play shows **Nothing played yet.
+  Let's go!** instead.
+- **The carousel** starts on the **Continue** card (with a **Continue** badge),
+  selected when Home opens, or **Pick a game** on a fresh install. Your pinned
+  games follow, then the games from the shelves in the order **New**, **Not
+  started**, **Pick up again**, each badged with its shelf name. The shelves
+  show in Carousel on any screen size.
+- **Game info** shows under the selected card: its name, when you last played
+  it, play time and achievements. The cards beside it show their picture only.
+- **Pinned tools** sit in a row of squares under the carousel. When they don't
+  all fit, the last square is **+N**, which opens the Tools tab.
+- **Swipe** the carousel to scroll it.
+
+| Button | What it does |
+| --- | --- |
+| `Left` / `Right` | Move along the carousel or the tools row. Past either end, switch tab |
+| `Down` | From the carousel, go to the tools row (the square you last used) |
+| `Up` | From the tools row, back to the carousel. From the carousel, the tab row |
 
 ## Pinning games and tools
 

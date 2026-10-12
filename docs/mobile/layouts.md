@@ -3,7 +3,7 @@
 The Consoles, Collections and Tools tabs, and every game list, can each be
 drawn in their own style. Pick them in **Tools → Settings → Layouts**, which
 also lets you hide the page title, the button hints and the game stats. Home
-has no layout setting: it looks the same whatever style you pick here.
+has its own layout, set here too, and comes in List, Grid or Carousel.
 
 | Style | Tabs | Game lists | In short |
 | --- | :---: | :---: | --- |
@@ -13,7 +13,7 @@ has no layout setting: it looks the same whatever style you pick here.
 | [**Backdrop**](#backdrop) | | ✓ | Box art over the game's screenshot |
 
 Out of the box, Consoles, Collections and game lists use **Carousel**, and
-Tools uses **Grid**.
+Home and Tools use **Grid**.
 
 ## The Layouts page
 
@@ -25,6 +25,7 @@ only show when they apply.
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
+| **Home** | List, Grid, Carousel | Grid | Always |
 | **Consoles** | List, Grid, Carousel | Carousel | Always |
 | **Consoles orientation** | Horizontal, Vertical | Horizontal | When Consoles is Carousel |
 | **Collections** | List, Grid, Carousel | Carousel | Always |
