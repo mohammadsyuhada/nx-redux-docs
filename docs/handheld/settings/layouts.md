@@ -128,16 +128,6 @@ box art and Wheel come from
 
 ![Game list in Backdrop style with 2D box art](../../assets/screenshots/game-list-backdrop-2d.png)
 
-## Game Switcher layout
-
-How the [Game Switcher](../guide/game-switcher.md) draws:
-
-- `Full screen` (default): one game at a time, its resume frame filling the
-  screen, `Left` / `Right` to flip through them.
-- `List`: your recent games as a list titled **Recent**, drawn like a game
-  list in the List style, with the selected game's resume frame behind the
-  rows. `Up` / `Down` to move.
-
 ## Extra info
 
 ![Layouts settings, the Extra info, page title, button hint, default view and Game Switcher rows](../../assets/screenshots/set-layouts-2.png)
@@ -173,6 +163,16 @@ volume and brightness changes included. Hidden:
 The first view shown on boot: `Content List` (the main menu, default) or
 `Game Switcher` (the [Game Switcher](../guide/game-switcher.md)). Moved here from
 [System](system.md); your existing choice carries over.
+
+## Game Switcher layout
+
+How the [Game Switcher](../guide/game-switcher.md) draws:
+
+- `Full screen` (default): one game at a time, its resume frame filling the
+  screen, `Left` / `Right` to flip through them.
+- `List`: your recent games as a list titled **Recent**, drawn like a game
+  list in the List style, with the selected game's resume frame behind the
+  rows. `Up` / `Down` to move.
 
 ## Game Switcher games
 
