@@ -31,7 +31,7 @@ removes rows, the highlight stays on the row you changed.
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
 | **Consoles orientation** | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |
-| [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show |
+| [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
 | [**Collections tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Collections layout** | List, Grid, Carousel | Carousel | When Collections tab is Show |
 | **Collections orientation** | Horizontal, Vertical | Horizontal | When Collections tab is Show and Collections layout is Carousel |
@@ -233,14 +233,14 @@ background stays the screenshot.
 
 ## Consoles controller
 
-What shows behind the Consoles tab:
+What shows behind the Consoles tab in the List style. The row shows only
+while **Consoles layout** is **List**; the Carousel style always shows each
+console's controller.
 
-- **Controller** (default): each console's controller behind it, in the List
-  and Carousel styles.
-- **Background**: no controller. In the List style the selected console's
-  own picture, `Roms/<console>/.media/bg.png`, fills the background as a game
-  list's screenshot does. A console without one shows plain black. Carousel
-  is plain.
+- **Controller** (default): each console's controller beside the list.
+- **Background**: no controller. The selected console's own picture,
+  `Roms/<console>/.media/bg.png`, fills the background as a game list's
+  screenshot does. A console without one shows plain black.
 - **None**: no controller and no background: a plain list on black.
 
 ## Page title and button hints

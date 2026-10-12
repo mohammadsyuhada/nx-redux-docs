@@ -94,6 +94,11 @@ Everything on Home in one list.
 - **Behind the list** you see the selected game's picture (for the Continue
   game, where you left off). A selected tool shows its icon, large and dim, on
   the right.
+- **The scroll arrows** sit on the picture just above the button hints, with no
+  shade behind them.
+- **Game info** (when you last played, play time) shows only while
+  [Button hints](layouts.md#page-title-and-button-hints) are hidden and
+  [Extra info](layouts.md#extra-info) is on, in the row where the hints were.
 - **On a fresh install**, with only **Pick a game** in the list, its card
   fills the screen.
 
@@ -144,11 +149,14 @@ This is the default layout.
     - Tap a card to select it, then tap it again to play or open it. This
       goes for the Continue card, pinned games and pinned tools.
     - A long press opens the same menu as `MENU`.
-    - Drag up and down to scroll without selecting anything.
+    - Drag up and down to scroll without selecting anything. Let go mid-drag
+      and the page glides on.
 
-Under the pinned games, Home shows shelves of games to pick from, in portrait
-and landscape alike: **New**, **Not started** and **Pick up again**, at most
-3 games each. See [Shelves](foldables.md#shelves).
+Under the pinned games, Home shows shelves of games to pick from, on every
+screen size, portrait and landscape alike: **New**, **Not started** and
+**Pick up again**, at most 3 games each, under a label like the **Pinned**
+one. Their cards are the pinned games' size, in the same grid: two to a row
+in portrait, four on a tablet. See [Shelves](foldables.md#shelves).
 
 ### Carousel
 
@@ -162,10 +170,12 @@ The same games in one row of cards, centred on the screen.
   games follow, then the games from the shelves in the order **New**, **Not
   started**, **Pick up again**, each badged with its shelf name. Each shelf holds at most 3 games. The
   shelves show in Carousel on any screen size.
-- **Game info** shows under the selected card: its name, when you last played
-  it, play time and achievements. The cards beside it show their picture only.
-- **Pinned tools** sit in a row of squares under the carousel. When they don't
-  all fit, the last square is **+N**, which opens the Tools tab.
+- **Game info** shows inside the selected card, at the bottom over a dark
+  fade like the Grid's Continue card: its name, when you last played it, play
+  time and achievements. The cards beside it show their picture only.
+- **Pinned tools** sit in a row of squares under the carousel, the same size
+  as the Grid's tool squares on that screen. When they don't all fit, the last
+  square is **+N**, which opens the Tools tab.
 - **Swipe** the carousel to scroll it.
 
 | Button | What it does |
@@ -192,10 +202,10 @@ and Tools is a grid.
 
 ![Consoles tab](../assets/screenshots/mobile/tab-consoles.webp)
 
-- **Consoles** show their logo and how many games they hold. In the List and
-  Carousel styles the selected console's controller shows too, unless you set
-  **Consoles controller** to **Background** or **None** in
-  [Layouts](layouts.md#consoles-controller).
+- **Consoles** show their logo and how many games they hold. In the Carousel
+  style the selected console's controller shows too. In the List style it
+  does as well, unless you set **Consoles controller** to **Background** or
+  **None** in [Layouts](layouts.md#consoles-controller).
 - **Collections** show their name and game count.
 
 ![Collections tab](../assets/screenshots/mobile/tab-collections.webp)

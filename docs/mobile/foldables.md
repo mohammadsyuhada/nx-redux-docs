@@ -48,7 +48,8 @@ unfolded Galaxy Z Fold or a tablet.
   and the tool squares.
 - With three or more pinned games, they fill a **Pinned** band below, four
   to a row.
-- Under them come the [shelves](#shelves).
+- Under them come the [shelves](#shelves), four to a row at the pinned
+  games' size.
 
 <figure class="nx-phone nx-phone--open" markdown>
 ![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp){ .nx-phone__screen }
