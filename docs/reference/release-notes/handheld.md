@@ -261,7 +261,7 @@ tags, cover art and lyrics inside your files.
 - **WonderSwan built in.** WonderSwan and WonderSwan Color games play from
   the `Wonderswan Color (WSC)` folder with no pak to install, and earn
   RetroAchievements. See
-  [Cores & BIOS Files](../../handheld/emulators/cores.md#systems-and-cores).
+  [Other Systems](../../handheld/emulators/other-systems.md#wonderswan-and-wonderswan-color).
 - **Music Player tags, cover art and lyrics.** Titles, artists, albums and
   cover art are read from MP3, M4A, FLAC, Ogg and Opus files, and lyrics
   embedded in a file are shown before any online lookup. See
@@ -373,7 +373,7 @@ Menus and emulators also run cooler with new per-device CPU policies.
   single `(GPGX)` tag, picking the system from each ROM's extension so
   RetroAchievements identifies every game with the right console. Name a
   `Roms` folder `Sega Genesis (GPGX)`, say, to use it. See
-  [Cores & BIOS Files](../../handheld/emulators/cores.md#systems-and-cores).
+  [Other Systems](../../handheld/emulators/other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000).
 - **Dreamcast RetroAchievements.** Flycast now follows the tool's **Enable
   achievements** setting like the built-in cores, with **Hardcore Mode** as
   its one per-game option. The RetroAchievements tool caches Dreamcast, Naomi

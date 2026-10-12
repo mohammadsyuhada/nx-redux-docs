@@ -112,3 +112,19 @@ or replaced by approximations.
     ```
     Bios/FBN/fbneo/samples/<game>.zip
     ```
+
+## Controls
+
+The device buttons reach FBNeo as a standard pad, and FBNeo assigns them to
+each game's own buttons:
+
+| Device button | Arcade control |
+| --- | --- |
+| `SELECT` | Insert coin |
+| `START` | Start |
+| D-pad (and the left stick, on devices that have one) | Joystick |
+| Face buttons, `L1` / `R1` / `L2` / `R2` | The game's buttons, in FBNeo's order for that game |
+
+How many buttons a game uses, and which device button fires which, depends
+on the game. Remap anything in the in-game menu under
+[Options → Controls](../guide/in-game-options.md#controls).

@@ -294,7 +294,7 @@ with `1) `, `2) ` to control their order in the game list.
       `Roms/1) My Handheld Picks (GBA)` work exactly like
       `Roms/Game Boy Advance (GBA)`. Rename the front part to whatever you want
       the menu to show. The tag values are listed on
-      [Cores & BIOS Files](../emulators/cores.md).
+      [ROM File Formats](../emulators/rom-formats.md#formats-per-system).
 
 ## Multi-disc games
 

@@ -32,7 +32,7 @@ rename it.
     are skipped.
 
     **Sega and arcade.** The Sega `MD` and
-    [`GPGX`](../emulators/cores.md#systems-with-a-choice-of-core) tags cover several systems,
+    [`GPGX`](../emulators/other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000) tags cover several systems,
     so each game there is matched by its file extension instead:
 
     | Extension | Matched as |

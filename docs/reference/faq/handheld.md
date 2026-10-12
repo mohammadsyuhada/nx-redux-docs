@@ -104,7 +104,7 @@ the [official TrimUI firmware](https://github.com/trimui) for your device.
 The usual suspects, in order:
 
 1. **Missing BIOS** — some systems need BIOS files to run at all; check
-   the [Cores & BIOS Files](../../handheld/emulators/cores.md) table for yours.
+   the [BIOS checklist](../../handheld/emulators/index.md#bios-checklist) for yours.
 2. **Arcade games** — wrong romset version or missing BIOS/parent zip; see
    the [Arcade page](../../handheld/emulators/arcade.md).
 3. **The logs** — every emulator writes a log to

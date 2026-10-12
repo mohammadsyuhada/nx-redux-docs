@@ -1,7 +1,7 @@
 # Nintendo DS
 
 Nintendo DS games run on a bundled **Drastic** emulator. Put your ROMs in
-`Roms/Nintendo DS (NDS)/`.
+`Roms/Nintendo DS (NDS)/`. No BIOS is needed.
 
 ## Controls
 

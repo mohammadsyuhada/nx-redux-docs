@@ -5,7 +5,7 @@ other built-in systems: the in-game menu, save states with screenshots,
 [RetroAchievements](../apps/retroachievements.md), [cheats](../apps/cheats.md),
 the Game Switcher and quit-autosave all work as they do everywhere else, and
 ROMs can be zipped. Put your ROMs in
-`Roms/Nintendo 64 (N64)/`.
+`Roms/Nintendo 64 (N64)/`. No BIOS is needed.
 
 !!! info "Coming from an older NX Redux"
     N64 used to run on a separate, standalone emulator. Your game saves come

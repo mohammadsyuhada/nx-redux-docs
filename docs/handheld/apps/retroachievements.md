@@ -57,7 +57,7 @@ game and unlocks are tracked automatically as you play:
 
 !!! tip "Genesis Plus GX covers every Sega system"
     Keep your Sega games in `(GPGX)` folders and RetroAchievements just works.
-    The alternate Sega core [Genesis Plus GX](../emulators/cores.md) plays
+    The alternate Sega core [Genesis Plus GX](../emulators/other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000) plays
     Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD under a
     single `GPGX` tag. It still identifies each game with the correct console
     for achievements, by picking the system from the ROM's file extension.
