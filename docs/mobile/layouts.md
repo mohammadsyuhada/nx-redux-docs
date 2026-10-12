@@ -28,6 +28,8 @@ removes rows, the highlight stays on the row you changed.
 | --- | --- | --- | --- |
 | [**Home tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Home layout** | List, Grid, Carousel | Grid | When Home tab is Show |
+| [**New shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
+| [**Not started shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
 | **Consoles orientation** | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |

@@ -72,6 +72,10 @@ shelves.
 The game on the Continue card, your pinned games, Unassigned games and
 Android games are left off the shelves.
 
+[Layouts](layouts.md) can hide the **New** and **Not started** shelves, each
+with its own row. A hidden shelf's games don't move to another shelf. **Pick
+up again** always shows when it has games.
+
 ## Two-pane screens
 
 On a wide window, at least 600 dp wide and at least 1.3 times as wide as it
