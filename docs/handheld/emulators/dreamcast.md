@@ -17,8 +17,8 @@ Dreamcast gets the same features as the other systems:
 !!! warning "Upgrading from an older NX Redux"
     **Save states made with the old emulator can't be loaded** by the new one.
     Save your progress in-game (on the memory card) before updating if you
-    rely on a save state. Your memory cards come across automatically (see
-    [Memory cards](#memory-cards-vmu)).
+    rely on a save state. Your memory card needs copying over by hand (see
+    [Bringing in an existing card](#bringing-in-an-existing-card)).
 
 ??? info "More detail"
     Dreamcast games run on **Flycast** (v2.7), bundled as a libretro core and
@@ -45,7 +45,8 @@ work there too.
   BIOS, as Dreamcast does.
 - **Saves are separate.** Dreamcast Lite has its own memory card per game
   (`Saves/DCX/`), its own save states and its own settings. Progress made in
-  one system doesn't appear in the other.
+  one system doesn't appear in the other. To carry a game's progress across,
+  copy its card from `Saves/DC/` to `Saves/DCX/` (same file name).
 - **What it doesn't have:** netplay, and the *SH4 CPU under/overclock* and
   *Auto Skip Frame* settings.
 - RetroAchievements, save states, auto-resume, fast-forward and the Artwork
@@ -118,15 +119,45 @@ To give a game a **fresh, empty card**:
     - **Card writes are saved immediately,** so a crash or a forced quit
       can't leave a half-written card.
 
-    **Coming from an older version?** The standalone emulator kept one shared
-    card for all games. The first time you launch each game, its new card
-    starts as a **copy of that shared card**, so every existing save is still
-    there. The old card itself is never changed or deleted. It stays in
-    `.userdata/shared/DC-flycast/` as a backup. Your console settings and
-    arcade high scores are copied over the same way, once.
 
-    When you delete a game's `.A1.bin` for a fresh card, the old shared card
-    is not copied back.
+### Bringing in an existing card
+
+Older NX Redux versions, RetroArch and most other handheld firmwares keep
+**one shared card for all games**, usually named `vmu_save_A1.bin`. NX Redux
+doesn't pick it up on its own: copy it to each game's card yourself.
+
+1. Find your old card:
+    - **Older NX Redux (before 2.0):**
+      `.userdata/shared/DC-flycast/data/flycast/vmu_save_A1.bin`
+    - **RetroArch or another firmware:** usually `vmu_save_A1.bin` in its
+      BIOS (system) folder, sometimes in a `dc/` subfolder there.
+2. Copy it into `Saves/DC/` once **for each game** you have saves for, and
+   rename each copy after that game's ROM file: the name without its
+   extension and without any `(Disc 1)` tag, plus `.A1.bin`.
+3. If the game already has a card there (it does once you've launched it),
+   replace that one.
+4. Launch the game and load your save from the card as usual.
+
+For example, with `Grandia II (USA) (Disc 1).chd` and
+`Skies of Arcadia (USA) (Disc 1).chd` in `Roms/DreamCast (DC)/`, copy the
+old card twice, as:
+
+```
+Saves/DC/Grandia II (USA).A1.bin
+Saves/DC/Skies of Arcadia (USA).A1.bin
+```
+
+Each game gets a full copy of the old card, so every save on it is there.
+Save states can't come across, only saves made on the card.
+
+??? info "More detail"
+    - **Dreamcast Lite** works the same way, with `Saves/DCX/`.
+    - **Second card slot and console settings:** copy `vmu_save_A2.bin` and
+      `dc_nvmem.bin` from the old folder into `Bios/DC/` (or `Bios/DCX/`).
+    - **Arcade high scores and settings** (Naomi/Atomiswave): copy the
+      `<rom>.zip.nvmem`, `.nvmem2` and `.eeprom` files into
+      `Saves/DC/reicast/`.
+    - Copy, don't move: keep the old card as a backup.
 
 ## BIOS
 
