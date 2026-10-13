@@ -9,6 +9,56 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.1.2
+
+*13 October 2026*
+
+A patch release. The Game Switcher gets a List layout, fast-forward and
+PlayStation run faster, and a launch could load the wrong game from a zip.
+RetroAchievements, PSP and mGBA each get fixes too.
+
+### New features
+
+- **Game Switcher List layout.** **Settings → Layouts → Game Switcher
+  layout** switches between **Full screen** (the default) and **List**, which
+  shows your recent games as a list with the selected game's last frame
+  behind it. Full screen gets a larger title and an info line that runs the
+  full width and follows **Extra info**. See
+  [Game Switcher](../../handheld/guide/game-switcher.md).
+- **Resume and Netplay in the context menu.** With **Layouts → Button
+  hints** set to `Hide`, a game's `MENU` context menu now lists **Resume (X)** and
+  **Netplay (Y)** so those actions stay easy to find.
+- **Settings moved.** The boot view and Game Switcher rows are now under
+  **Layouts**, and the clock rows under **Appearance**.
+
+### Fixes
+
+- **Zipped games:** launching a game could load another game whose name
+  starts the same way (for example *Double Dragon* opening *Double Dragon
+  II*), with saves going to the wrong game. Every zip or 7z now unpacks into
+  its own folder.
+- **RetroAchievements:** an achievement earned offline no longer shows as
+  locked when you open the game again online before the sync finishes, and
+  the **offline (softcore)** notice shows again when a game starts without
+  Wi-Fi.
+- **PSP:** choosing **Vulkan** or **None** as the Backend made games very
+  slow (the core fell back to software rendering). Backend now offers
+  **Automatic** and **OpenGL** only; a saved Vulkan setting switches back
+  automatically.
+- **Fast-forward:** NES and Famicom Disk System now reach the Max FF Speed
+  you set (they stopped at 2x on the Brick).
+- **Smart Pro S:** the lighter consoles (NES, SNES, Mega Drive, Game Boy and
+  others) no longer stutter or crackle on CPU **Auto**, and shaders get the
+  full GPU speed.
+- **PlayStation (Brick, Brick Pro):** threaded rendering is on by default,
+  so demanding games drop far fewer frames.
+- **Dreamcast, Nintendo 64, PSP:** the left stick no longer also presses the
+  D-pad.
+- **mGBA:** **More Sun** and **Less Sun** now brighten and darken the solar
+  sensor as named (they were swapped), for the Boktai games.
+- **Music Player:** some MP3s with a cover embedded in the file showed a
+  wrong cover fetched online instead; the embedded cover now shows.
+
 ## v2.1.1
 
 *12 October 2026*
