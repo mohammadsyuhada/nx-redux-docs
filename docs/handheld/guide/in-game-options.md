@@ -15,7 +15,6 @@ The Options menu contains:
 | [Shaders](#shaders) | The video shader pipeline and shader presets. |
 | [Cheats](#cheats) | Turn the game's cheats on and off. |
 | [Controls](#controls) | Remap the emulated controller's buttons. |
-| [Shortcuts](#shortcuts) | Bind in-game hotkeys (save/load state, fast-forward, rewind, turbo…). |
 | [Achievements](#achievements) | Browse the game's RetroAchievements — shown only when achievements are enabled. |
 | [Save Changes](#save-changes) | Keep your changes for this system or this game, or restore defaults. |
 
@@ -47,7 +46,7 @@ same list appears for every system. Use `LEFT` / `RIGHT` to change a value.
 | **Debug HUD** | Off, On | Show frames per second, CPU load, resolution and scaler information on screen. |
 | **Max FF Speed** | None, 2x – 8x | Cap for fast-forward (it may run slower depending on the game and emulator). Default: 4x. |
 | **Fast forward audio** | Off, On | Play or mute audio while fast-forwarding. Default: Off. |
-| **Rewind** | Off, On | Enable the in-memory rewind buffer. Uses extra CPU and memory, and needs a [shortcut](#shortcuts) (**Toggle Rewind** or **Hold Rewind**) to use during play. Default: Off. |
+| **Rewind** | Off, On | Enable the in-memory rewind buffer. Uses extra CPU and memory, and needs a [shortcut](../settings/emulator-shortcuts.md) (**Toggle Rewind** or **Hold Rewind**) to use during play. Default: Off. |
 | **Rewind Buffer (MB)** | 8, 16, 32, 64, 128, 256 | Memory reserved for rewind snapshots — more memory means you can rewind further back. Default: 64. |
 | **Rewind Interval** | 16 ms (~60 fps) – 600 ms | Time between rewind snapshots. Shorter intervals give smoother rewinding but use more CPU and memory. Default: 16 ms. |
 | **Rewind Compression** | Off, On | Compress snapshots to fit more into the buffer, at the cost of CPU. Default: On. |
@@ -100,29 +99,9 @@ the buttons the running core uses are listed.
 
 ## Shortcuts
 
-Hotkeys for actions during play. All are unbound (`NONE`) by default. Bind
-them the same way as [Controls](#controls): `A` then the button or
-`MENU` + button to set, `X` to clear. Using a `MENU` + button combination
-keeps the shortcut from clashing with the game's own controls: a shortcut on
-a button the game also uses does both. On the Famicom Disk System, `L1` and
-`R1` are the [disk buttons](../emulators/other-systems.md#flipping-disk-sides).
-
-Shortcuts are saved per emulator (or per game), so fast-forward bound for
-one system isn't bound for another until you set it there too.
-
-| Shortcut | Action |
-| --- | --- |
-| **Save State** / **Load State** | Save to / load from the current save state slot. |
-| **Undo Load State** | Go back to where you were before the last Load State. |
-| **Reset Game** | Restart the game. |
-| **Save & Quit** | Save and exit the game. |
-| **Cycle Scaling** | Step through the Screen Scaling modes. |
-| **Cycle Effect** | Step through the Screen Effect modes. |
-| **Toggle FF** / **Hold FF** | Fast-forward: toggle on/off, or only while held. |
-| **Toggle Rewind** / **Hold Rewind** | Rewind: toggle on/off, or only while held. Needs [Rewind](#frontend) turned on. |
-| **Game Switcher** | Open the [Game Switcher](game-switcher.md). |
-| **Screenshot** | Take a screenshot. |
-| **Toggle Turbo A / B / X / Y / L / L2 / R / R2** | Turn turbo (rapid fire) on or off for that button. |
+In-game hotkeys (save/load state, fast-forward, rewind, turbo…) aren't set in
+this menu. They are global, one set for every console, and you bind them in
+[Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md).
 
 ## Achievements
 
@@ -140,8 +119,9 @@ If the game isn't recognized or has no achievements, a message tells you so.
 
 ## Save Changes
 
-Keeps what you've changed in Options: Frontend, Core Options, Shaders,
-Controls and Shortcuts. The entry's description tells you which settings the
+Keeps what you've changed in Options: Frontend, Core Options, Shaders and
+Controls. [Shortcuts](#shortcuts) aren't part of it; they're the same for
+every console. The entry's description tells you which settings the
 game is using right now: *Using defaults*, *Using console config* or *Using
 game config*.
 

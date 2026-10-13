@@ -124,7 +124,7 @@ side A…).
 
 !!! warning "Keep shortcuts off L1 and R1 in FDS"
     The disk buttons work without `MENU`, so a
-    [shortcut](../guide/in-game-options.md#shortcuts) on the same button does
+    [shortcut](../settings/emulator-shortcuts.md) on the same button does
     both. A fast-forward shortcut on `R1` also ejects the disk, and the game
     then sits on its loading screen as if fast-forward had stopped working.
     Bind FDS shortcuts to another button or a `MENU` + button combination, or

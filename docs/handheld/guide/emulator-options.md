@@ -35,7 +35,7 @@ performance tweak without touching the rest of the library.
 ## In-game: the pause menu
 
 While playing, press `MENU` and choose **Options** to change settings live:
-Frontend (video/UI), Core Options, Shaders, Cheats, Controls, Shortcuts and
+Frontend (video/UI), Core Options, Shaders, Cheats, Controls and
 Achievements. Every entry except Core Options is covered in
 [In-game Options](in-game-options.md):
 
