@@ -84,14 +84,23 @@ Measured at the default resolution while playing:
 | Grand Theft Auto: Vice City Stories | About 88% on foot | Full speed |
 | Tekken 6 | About 78% in fights; menus at full speed | Full speed, also at 2× |
 
-To get a heavy game to full speed on the Brick, set **Frameskip** to `1` for
-that game in [Emulator Options](../guide/emulator-options.md). It then shows
-30 frames per second at full speed (Tekken 6 measured about 99%). Leave it off
-for other games: skipping frames halves the frame rate even when a game keeps
-up, so it is off by default.
+To get a heavy game to full speed on the Brick, turn on frame skipping for
+that game in [Emulator Options](../guide/emulator-options.md):
+
+- **Auto Frameskip** suits games that run at 30 frames per second, such as
+  Grand Theft Auto: Vice City Stories or Final Fantasy Type-0, especially at
+  2× Rendering Resolution. It skips frames only when the game falls behind:
+  Vice City Stories at 2× went from about 70% to full speed and still showed
+  about 30 frames per second.
+- **Frameskip** `1` suits 60 frames per second games such as Tekken 6. It then
+  shows 30 frames per second at full speed (Tekken 6 measured about 99% at 1×).
+
+Leave both off for other games: skipping frames can halve the frame rate even
+when a game keeps up, so they are off by default.
 
 - **Rendering Resolution** is the PSP's native 480×272 (1×) by default. 2×
-  (960×544) looks sharper and runs at full speed on the Smart Pro S. Higher
+  (960×544) looks sharper and runs at full speed on the Smart Pro S; on the
+  Brick family it needs **Auto Frameskip** in heavier games. Higher
   settings aren't offered: they exceed the screen and only cost speed and heat.
 - **Frameskip**, **Auto Frameskip** and the other PPSSPP options are in
   [Emulator Options](../guide/emulator-options.md), for all games or per game.
