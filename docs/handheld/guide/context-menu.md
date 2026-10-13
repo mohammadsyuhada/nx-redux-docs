@@ -9,6 +9,7 @@ Depending on the game, the menu offers:
 
 | Option | What it does |
 | --- | --- |
+| **Resume (X) / Netplay (Y)** | Resume the game from its last save state, or start [netplay](../netplay.md). Shown only when [**Layouts → Button hints**](../settings/layouts.md#button-hints) is set to `Hide`, since the button bar normally offers them. Resume isn't listed on Home, where `A` already resumes. |
 | **Pin Item / Unpin Item** | Pin the game to [Home](main-menu.md#pinning-games-and-tools) for one-press access |
 | **Delete Rom** | Remove the game and its artwork, with a confirmation dialog. Saves and save states are kept. |
 | **Rename Rom** | Change a game's display name. The [keyboard](keyboard.md#editing-an-existing-name) opens with the current name to edit. The file itself is never touched. |
