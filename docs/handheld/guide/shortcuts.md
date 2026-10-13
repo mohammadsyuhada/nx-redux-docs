@@ -26,7 +26,7 @@ Volume and brightness show an on-screen indicator as you adjust.
     instead.
 
 The **FN switch** is a shortcut of its own. One flick applies the set of
-changes you configured for it (volume, screen, LEDs, turbo fire, D-pad mode;
+changes you configured for it (volume, screen and LEDs;
 see [FN switch settings](../settings/fn-switch.md)). Flipping it back restores
 everything. Muting the speaker from the OSD is separate and does not depend on
 the switch.
@@ -57,6 +57,7 @@ the switch.
 | `MENU` | Pause the game and open the [in-game menu](playing-games.md#the-in-game-menu) |
 | `MENU` + `SELECT` | Save, grab a fresh screenshot, and quit straight back to the [Game Switcher](game-switcher.md). The fastest way to hop between games. |
 
-Fast-forward, rewind and turbo get their own configurable shortcuts
-(optionally `MENU`-modified). Set them under the in-game menu's
-[Options → Shortcuts](in-game-options.md#shortcuts), per emulator or per game.
+Save states, fast-forward, rewind, turbo and the D-pad joystick get their own
+configurable shortcuts (optionally `MENU`-modified). Set them once in
+[Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md); they apply
+to every console.

@@ -41,15 +41,17 @@ You can remap everything in the in-game menu under **Controls**.
 
 !!! note "Brick: no analog sticks"
     The **Brick** has no sticks, so most games (Mario Kart 64, Super Mario 64)
-    won't move. Set the
-    [FN switch's Dpad mode](../settings/fn-switch.md#dpad-mode-when-fn-is-on)
-    to `Joystick` or `Both`, and flip the switch on to steer with the D-pad.
+    won't move. Bind
+    [Toggle D-pad Joystick](../settings/emulator-shortcuts.md#toggle-d-pad-joystick)
+    in Settings → Emulator Shortcuts, then press it in-game to steer with
+    the D-pad. Press it again for the N64 D-pad.
 
 ??? info "More detail"
     - A stick push counts as a C-button press once it is most of the way
       over.
     - On the Brick, the D-pad normally drives the N64 D-pad, not the analog
-      stick. That's why games won't move until you change the FN switch.
+      stick. That's why games won't move until you turn on Toggle D-pad
+      Joystick. It is off again every time a game starts.
     - C-Up and C-Right have no button on the Brick.
 
 ## Video plugin

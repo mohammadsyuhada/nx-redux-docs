@@ -15,7 +15,7 @@ Press `MENU` while playing to pause the game and open the in-game menu.
 | --- | --- |
 | **Continue** | Return to the game |
 | **Save** / **Load** | Save states, complete with screenshots so you can see what you're loading |
-| **Options** | [In-game options](in-game-options.md) for the running game (Frontend, Core Options, Shaders, Cheats, Controls, Shortcuts, Achievements and Save Changes), applied live |
+| **Options** | [In-game options](in-game-options.md) for the running game (Frontend, Core Options, Shaders, Cheats, Controls, Achievements and Save Changes), applied live |
 | **Quit** | Exit back to the menu. Quitting auto-saves to a hidden slot, so the [Game Switcher](game-switcher.md) can always resume exactly where you left off. |
 
 ??? info "More detail"

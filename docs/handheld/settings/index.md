@@ -14,8 +14,9 @@ page of the Settings app has its own page here.
 - [Network](network.md) — Wi-Fi
 - [Bluetooth](bluetooth.md) — pairing and audio
 - [Audio](audio.md) — output routing and sample rates
-- [FN Switch](fn-switch.md) — what the FN switch toggles, incl. turbo fire
+- [FN Switch](fn-switch.md) — a night-mode profile: volume, LEDs and screen
 - [F1 / F2 Keys](fn-keys.md) — launch a chosen tool straight from the menu
+- [Emulator Shortcuts](emulator-shortcuts.md) — in-game hotkeys for every console (save states, fast-forward, turbo…)
 - [Simple Mode](simple-mode.md) — the PIN-protected simplified menu
 - [System](system.md) — timeouts, clock, saves, power
 - [Developer](developer.md) — SSH/SFTP, sleep control, cleanup

@@ -4,9 +4,9 @@ Choose what flipping the **FN switch** does. The switch applies the changes you
 pick here all at once, and reverts them when you flip it back. Display options
 can be left `Unchanged`.
 
-Treat it as a quick-toggle profile for whatever you switch between most: a
-quiet, dim setup for late-night play, turbo fire and a joystick-style D-pad for
-one particular game, or just LEDs off.
+Treat it as a night-mode profile: a quiet, dim setup for late-night play, or
+just LEDs off. It changes only volume, LEDs and the screen. For turbo fire
+or a joystick-style D-pad, use [Emulator Shortcuts](emulator-shortcuts.md).
 
 ![FN switch settings](../../assets/screenshots/set-fn.png)
 
@@ -18,12 +18,6 @@ The FN switch and the OSD **Mute** toggle are separate things.
   nothing else, and doesn't depend on the FN switch. Press either volume key to unmute; that press also
   steps the volume.
 - **Volume when FN is on** (below) is part of the FN profile, not the OSD mute.
-
-!!! tip "D-pad stopped moving the menu cursor?"
-    Check **Dpad mode when FN is on**. `Joystick` makes the D-pad act only as
-    an analog stick while the switch is on, so it no longer moves the menu
-    cursor. Flip the switch back, or set that
-    option to `Dpad` or `Both`.
 
 ## Volume when FN is on
 
@@ -56,17 +50,6 @@ Saturation enhancement while toggled, `-5`–`5`, or `Unchanged`.
 
 Exposure enhancement while toggled, `-4`–`5`, or `Unchanged`.
 *(Hardware-dependent.)*
-
-## Turbo fire A / B / X / Y / L1 / L2 / R1 / R2
-
-Eight separate toggles. While the FN switch is on, the enabled buttons
-auto-repeat (turbo fire) in games.
-
-## Dpad mode when FN is on
-
-On devices without analog sticks: `Dpad` (default), `Joystick` (the D-pad
-acts exclusively as an analog stick), or `Both` (D-pad sends both inputs at
-once). Useful for games that expect a stick.
 
 ## Reset to defaults
 
