@@ -135,6 +135,31 @@ can swap the boxes for the 2D box art or the game's logo (wheel).
 
 ![Game list in Backdrop style](../../assets/screenshots/game-list-backdrop.png)
 
+## Your own console logos
+
+Each console on the Consoles tab shows its logo in Grid, Carousel and List. A
+console NX Redux has no logo for, such as a pak you added yourself, shows a
+placeholder emblem and its name instead. You can give any console a logo of
+your own, or replace a stock one:
+
+1. Make the image and name it `logo.png`.
+2. Put it in that console's `.media` folder:
+   `Roms/<console> (<tag>)/.media/logo.png`, for example
+   `Roms/DadMax (BKNDAD)/.media/logo.png`.
+
+The logo shows in every layout the next time the Consoles tab loads (switch
+tabs, or restart). It is on the SD card with your games, so updates keep it.
+
+??? info "More detail"
+    - The image is drawn as it is, colours and all. To match the stock logos,
+      use a white or light grey logo on a transparent background.
+    - Make it wide rather than tall, about 650 pixels across at most. A larger
+      image is shrunk to fit, but it takes longer to load.
+    - In List with **Consoles controller** set to `Controller`, a console with
+      a controller picture shows the controller, not the logo.
+    - The [Artwork Manager](../apps/artwork-manager.md) never touches
+      `logo.png`, and **Delete Rom** keeps it too.
+
 ## Vertical orientation
 
 Carousel and Backdrop can also run **down** the screen instead of across:
