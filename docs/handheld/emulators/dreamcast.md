@@ -150,6 +150,18 @@ Saves/DC/Skies of Arcadia (USA).A1.bin
 Each game gets a full copy of the old card, so every save on it is there.
 Save states can't come across, only saves made on the card.
 
+!!! tip "Or keep using one shared card"
+    To skip the copying, set **Options → Core Options → Visual Memory Unit →
+    Per-Game VMUs** to **disabled**. Every game then uses one shared card,
+    `Bios/DC/vmu_save_A1.bin` (`Bios/DCX/` for Dreamcast Lite): put your old
+    card there and all its saves show up.
+
+    - Saves already made on per-game cards stay on those cards and don't show
+      up while it's off.
+    - Netplay always plays on the game's own per-game card.
+    - Copying saves to and from [NX Redux for Android](../../mobile/getting-started.md)
+      works with per-game cards only.
+
 ??? info "More detail"
     - **Dreamcast Lite** works the same way, with `Saves/DCX/`.
     - **Second card slot and console settings:** copy `vmu_save_A2.bin` and
