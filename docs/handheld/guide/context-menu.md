@@ -18,7 +18,11 @@ Depending on the game, the menu offers:
 | **Launch Options** | Set a port's CPU cores, CPU speed and GPU speed, then launch it. See [Launch Options](launch-options.md). Shown for [PortMaster](../apps/portmaster.md) ports. |
 | **Fetch Artwork** | Download the screenshot and box art for this game in the background, plus the 2D box art, wheel and mix when they are turned on in [Artwork Manager → Settings](../apps/artwork-manager.md). Shown in game lists when the game has neither yet; needs Wi-Fi. |
 | **Refresh Roms** | Rescan the ROMs list (on Home) |
-| **Tools** | Open Tools (on Home, when the Tools tab is hidden) |
+| **Consoles** / **Collections** / **Tools** | Open a hidden tab's list (on Home, when that tab is hidden in [Layouts](../settings/layouts.md)) |
+
+On Home, the menu adds Refresh Roms:
+
+![Home context menu with Pin Item, Delete Rom, Rename Rom, Add to Collection, Emulator Options and Refresh Roms](../../assets/screenshots/home-context-menu.png)
 
 !!! tip "Bulk artwork"
     To fetch artwork for many games at once, use the

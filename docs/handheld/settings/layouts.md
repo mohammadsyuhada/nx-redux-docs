@@ -28,7 +28,7 @@ How Home draws:
 - `Carousel`: one row that starts on the Continue card, your pinned games
   after it, and your pinned tools in a row of small squares underneath.
 
-See [Home](../guide/main-menu.md#home) for both.
+See [Home](../guide/main-menu.md#home) for each.
 
 ## Consoles, Collections and Tools
 
@@ -62,8 +62,8 @@ Whether the tab's carousel runs across (`Horizontal`, the default) or down
 
 ### Consoles controller
 
-Consoles only. What shows behind the Consoles tab (the row reads
-**Controller**):
+Consoles only. What shows behind the Consoles tab. Shows only while the
+Consoles tab is shown.
 
 - `Controller` (default): each console's controller.
 - `Background`: no controller. In the List style your own picture shows
@@ -102,13 +102,16 @@ are `List`.
 - `Mix`, `3D box art`, `2D box art` or `Wheel`: the whole picture in a box on
   the right, and the game names stop short of it.
 - `None`: no picture and no background, not even a `bg.png`: a plain list on
-  black. This applies to every list in the List style below the tabs (games,
-  collection contents, folders).
+  black.
 
-A game without that picture falls back to the screenshot. `Mix` also takes an
-old Mix from an older release. Mix, 2D box art and Wheel are only on the card
-once you turn them on in
+Mix, 2D box art and Wheel come from
 [Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+
+??? info "More detail: List art"
+    - A game without the chosen picture falls back to its screenshot.
+    - `Mix` also uses a Mix made by an older release.
+    - `None` applies to every list in the List style below the tabs: games,
+      collection contents and folders.
 
 *List art set to Mix*
 
@@ -120,9 +123,9 @@ The pictures in a game list's Backdrop row: `3D box art` (default),
 `2D box art` or `Wheel`. The background stays the screenshot. Shows only while
 game lists are `Backdrop`.
 
-A game without that picture shows its 3D box art, else a placeholder box. 2D
-box art and Wheel come from
+2D box art and Wheel come from
 [Artwork Manager → Settings](../apps/artwork-manager.md#settings-extra-art).
+A game without the chosen picture shows its 3D box art, else a placeholder box.
 
 *Backdrop art set to 2D box art*
 

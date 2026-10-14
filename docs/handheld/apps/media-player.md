@@ -32,7 +32,7 @@ Every video remembers its playback position:
 | `A` | Pause / resume |
 | `B` | Stop and return to the library |
 | `X` | Toggle the on-screen info display |
-| `Y` | Cycle aspect ratio |
+| `Y` | Cycle aspect ratio (`AUTO`, `16:9`, `4:3`) |
 | `Left` / `Right` | Seek −/+ 10 s (hold to keep seeking) |
 | `L1` / `R1` | Seek −/+ 60 s |
 | `Up` | **Cycle audio track** |
@@ -66,7 +66,7 @@ subtitles-off step.
 `A` to play one.
 
 Before connecting, the player runs a quick reachability check. A dead or
-geo-blocked stream fails fast with an `Unavailable — offline or geo-blocked`
+geo-blocked stream fails fast with an `Unavailable - offline or geo-blocked`
 toast instead of a black screen.
 
 Press `MENU` for the page's context menu:
@@ -86,12 +86,8 @@ Press `MENU` for the page's context menu:
    marked. Pressing `A` again offers to remove them.
 
 Your list holds up to 64 channels. In the catalog, `MENU` offers **Refresh
-List** to re-fetch the catalog.
-
-!!! note
-    Streams come from iptv-org, so availability varies. Channels can go
-    offline or be blocked in your region at any time, as the catalog toast
-    says.
+List** to re-fetch the catalog. Availability varies: channels can go offline
+or be blocked in your region at any time.
 
 ??? info "More detail"
     - The catalog is built from the community-run

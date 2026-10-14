@@ -2,14 +2,16 @@
 
 NX Redux includes [Netplay](https://github.com/mohammadsyuhada/nextui-netplay)
 for **local multiplayer**. When a game supports it, the hint bar in
-the game list shows `Y NETPLAY`:
+the game list shows `Y NETPLAY` (hide the hint in
+[Settings → Appearance](settings/appearance.md#show-netplay-hint); `Y` still
+works):
 
 ![Y NETPLAY hint in the game list](../assets/screenshots/netplay-hint.png)
 
 Press `Y` to host or join over Wi-Fi, a hotspot hosted by one device, or a
 [USB cable](#usb-cable) between the two devices. There
-is no IP to type and no persistent toggle to remember to turn off. Save data
-syncs automatically before the match starts.
+is no IP to type and no persistent toggle to remember to turn off. Saves are
+handled for you; see [Saves](#saves).
 
 ## Starting a session
 
@@ -164,15 +166,12 @@ same game.
 | **GGPO** (Dreamcast) | Rollback netplay. Stays responsive over Wi-Fi. |
 | **GB Link** / **GBA Link** | Emulates the link cable (and, for GBA, the wireless adapter). Trading and versus battles in single-player cartridges work between two devices. |
 
-!!! warning "Game Boy Advance: `MGBA` is USB Cable only"
-    **gpSP** in `Game Boy Advance (GBA)` plays over USB Cable, Hotspot and
-    WiFi, with the wireless adapter. **mGBA** in `Game Boy Advance (MGBA)`
-    plays only over the [USB Cable](#mgba-link-cable-over-usb), link cable
-    games only. For Wi-Fi or the Union Room, move the game to
-    `Game Boy Advance (GBA)`.
-
-    `Super Game Boy (SGB)`, which also runs on mGBA, has no netplay. Put
-    Game Boy games in `Game Boy (GB)` / `Game Boy Color (GBC)` for link play.
+!!! note "Game Boy Advance and Super Game Boy"
+    For Wi-Fi, Hotspot or the Union Room, play from `Game Boy Advance (GBA)`
+    (gpSP); `Game Boy Advance (MGBA)` is
+    [USB Cable only](#mgba-link-cable-over-usb). `Super Game Boy (SGB)` has no
+    netplay: put Game Boy games in `Game Boy (GB)` / `Game Boy Color (GBC)`
+    for link play.
 
 ??? info "More detail"
     - **Lockstep** is classic frame-synchronised netplay.

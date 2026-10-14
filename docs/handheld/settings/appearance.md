@@ -1,57 +1,34 @@
 # Appearance
 
-Change how the interface looks: menu layouts, colors (with live swatches) and
-animations.
+Change how the interface looks: colors, the status pill, button hints,
+animations and the boot logo. Menu styles live in [Layouts](layouts.md).
 
-Text and menus are sized for each device's screen, so the interface looks the
-same size on the Brick, Brick Pro and Smart Pro S. There is no UI scale
+Text and menus are sized for each device's screen, so there is no UI scale
 setting.
 
 ![Appearance settings](../../assets/screenshots/set-appearance.png)
 
-## Main color
+## Colors
 
-The color used to render main UI elements.
+Each color row cycles through a palette with a live swatch beside the value.
 
-## Main color opacity
+| Setting | What it colors |
+| --- | --- |
+| **Main color** | Main UI elements |
+| **Primary accent color** | Highlights, such as the selection |
+| **Secondary accent color** | Secondary highlights |
+| **Hint info color** | Button hints and info text |
+| **List text** | List text |
+| **List text selected** | The selected list entry's text |
 
-Opacity of the main color, `10%`–`100%` in 10% steps. Below `100%`, the pills
-and selection capsules turn translucent and show the wallpaper through them.
-The wallpaper is `bg.png` at the SD card root.
-
-## Primary accent color
-
-The color used to highlight important things in the UI.
-
-## Primary accent opacity
-
-Opacity of the primary accent color, `10%`–`100%`. Below `100%` accented
-elements become translucent and show the wallpaper through them.
-
-## Secondary accent color
-
-A secondary highlight color.
-
-## Secondary accent opacity
-
-Opacity of the secondary accent color, `10%`–`100%`. Below `100%` accented
-elements become translucent and show the wallpaper through them.
-
-## Hint info color
-
-Color for button hints and info text.
-
-## List text
-
-List text color.
-
-## List text selected
-
-Color of the selected list entry's text.
+The main, primary accent and secondary accent colors each have an
+**opacity** row below them, `100%` down to `10%` in 10% steps. Below `100%`
+those elements turn translucent and show the wallpaper (`bg.png` at the SD
+card root) through them.
 
 ## Show battery percentage
 
-Show the battery level as a percentage in the status pill.
+Show the battery level as a percentage in the status pill. Off by default.
 
 ![Appearance settings, the status pill rows](../../assets/screenshots/set-appearance-2.png)
 
@@ -91,6 +68,8 @@ Enable or disable the animated slide transitions between screens.
 ## Bootlogo
 
 Change the device boot logo.
+
+![Bootlogo picker showing the NX Redux logo](../../assets/screenshots/set-bootlogo.png)
 
 1. Scroll through the images with left/right.
 2. Press `A` to apply one. The device reboots to show it.

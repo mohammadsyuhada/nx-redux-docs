@@ -13,7 +13,7 @@ These work on any screen, including mid-game:
 | `VOL +` / `VOL −` | Adjust volume (hold to repeat). |
 | `SELECT` + `VOL +` / `VOL −` | Adjust screen brightness. |
 | `START` + `VOL +` / `VOL −` | Adjust color temperature — *Brick, Brick Pro and Smart Pro*. |
-| `HOME` (Smart Pro S) · hold `MENU` ~1 s (other devices) | Open the [On-Screen Display](osd.md). |
+| hold `MENU` ~1 s, or `HOME` (Smart Pro S, Brick Pro) | Open the [On-Screen Display](osd.md). |
 | `L2` + `R2` | Take a screenshot — once the capture daemon is [armed via the OSD](osd.md#screenshots). |
 | `POWER` (tap) | Sleep. |
 | `POWER` (hold ~1 s) | Shut down. |

@@ -21,8 +21,8 @@ with `MENU` → **Pin Tool**.
 | [Settings](../settings/index.md) | Display, audio, network, input, Simple Mode and more — see the [Settings](../settings/index.md) page |
 | [Xtras](xtras.md) | On-device add-on store |
 
-Tools you install from the [Xtras store](xtras.md), such as PortMaster, appear
-in this menu too.
+Tools you install from the [Xtras store](xtras.md), such as PortMaster and the
+[Cheat Database](cheats.md), appear in this menu too.
 
 ## Installing community paks
 

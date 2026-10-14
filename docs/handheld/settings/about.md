@@ -25,6 +25,11 @@ The stock TrimUI firmware version. Compare it against the
 
 The system's Busybox version.
 
+## Font
+
+The interface font (MiSans by Xiaomi). Third-party licenses are in
+`.system/licenses` on the SD card.
+
 ## Updater
 
 Checks for a new NX Redux release (it starts checking when you open this

@@ -1,7 +1,8 @@
 # Game Switcher
 
-Tap `SELECT` anywhere in the menus to open the Game Switcher — your recent
-games, ready to resume any of them instantly. It has two layouts, picked in
+Tap `SELECT` anywhere in the menus (or `MENU` + `SELECT` in a game) to open
+the Game Switcher — your recent games, ready to resume any of them instantly.
+It has two layouts, picked in
 [**Settings → Layouts → Game Switcher layout**](../settings/layouts.md#game-switcher-layout):
 `Full screen` (the default) and `List`.
 
@@ -12,8 +13,7 @@ games, ready to resume any of them instantly. It has two layouts, picked in
 One game at a time, its resume frame filling the screen. The top shows the
 game's name and, under it, its system and its place in the list
 ("Game Boy Advance 1 / 12"). The line at the bottom shows when you last played
-it, your total play time and your achievement progress. With nothing played
-yet, the switcher says **Nothing played yet**.
+it, your total play time and your achievement progress.
 
 | Button | What it does |
 | --- | --- |
@@ -38,28 +38,30 @@ system's tag after the name, dimmed ("Tetris (GB)").
 | `Y` **Remove** | Take the game out of the switcher |
 | `B` **Back** | Return to the menu |
 
-## Play time and achievements
-
-Both layouts follow [**Extra info**](../settings/layouts.md#extra-info) and
-[**Button hints**](../settings/layouts.md#button-hints) in
-**Settings → Layouts**:
-
-- Extra info hidden: no play time or achievement line.
-- Button hints hidden: the hint bar's row stays, without hints, and the play
-  time and achievement line moves into it. In the List layout the line shows
-  only then, as in a List game list.
-
 ## Always resumable
 
-Quitting a game auto-saves to a hidden save slot. The Game Switcher always
-resumes exactly where you left off, with no manual save states needed. This
-works on the built-in cores, Dreamcast and Nintendo 64 included.
-
-Games without a save state show their box art instead, so the switcher stays
-visual even for freshly added titles.
-
-## Resumable-only by default
+Quitting a game with `A` (**Save & Quit**) auto-saves to a hidden slot, so the
+Game Switcher resumes exactly where you left off, with no manual save states
+needed. To leave without touching that resume point, press `X` (**Quit**) on
+Quit instead; see [Playing Games](playing-games.md#the-in-game-menu).
 
 By default the switcher lists **only resumable games**. To see all recent
 games, set [**Game Switcher games**](../settings/layouts.md#game-switcher-games)
 in **Settings → Layouts** to `All recent games`.
+
+??? info "More detail"
+    - **Play time and achievements** follow
+      [**Extra info**](../settings/layouts.md#extra-info) and
+      [**Button hints**](../settings/layouts.md#button-hints) in
+      **Settings → Layouts**. With Extra info hidden there is no play time or
+      achievement line. With Button hints hidden, the hint bar's row stays
+      empty and the line moves into it; in the List layout the line shows only
+      then, as in a List game list.
+    - Auto-resume works on every built-in core, Dreamcast, Nintendo 64 and PSP
+      included.
+    - A game with no resume picture shows its box art instead. With
+      `All recent games`, games that can't be resumed start fresh (`A`
+      **Start**).
+    - Empty switcher: **Nothing played yet** when you have never played a
+      game, or **No Resumable Games** when your recent games have no resume
+      point.

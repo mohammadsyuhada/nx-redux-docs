@@ -13,10 +13,12 @@ Press `MENU` while playing to pause the game and open the in-game menu.
 
 | Entry | What it does |
 | --- | --- |
-| **Continue** | Return to the game |
-| **Save** / **Load** | Save states, complete with screenshots so you can see what you're loading |
+| **Continue** | Return to the game. On a multi-disc game, `LEFT` / `RIGHT` picks the disc first. |
+| **Save** / **Load** | Save states, complete with screenshots so you can see what you're loading. `LEFT` / `RIGHT` picks the slot. Right after a load, `X` on **Load** undoes it. |
 | **Options** | [In-game options](in-game-options.md) for the running game (Frontend, Core Options, Shaders, Cheats, Controls, Achievements and Save Changes), applied live |
-| **Quit** | Exit back to the menu. Quitting auto-saves to a hidden slot, so the [Game Switcher](game-switcher.md) can always resume exactly where you left off. |
+| **Quit** | `A` **Save & Quit** auto-saves to a hidden slot, so the [Game Switcher](game-switcher.md) resumes exactly where you left off. `X` **Quit** leaves without that save; the game keeps its previous resume point. |
+
+![Quit highlighted in the in-game menu, with X Quit, B Back and A Save & Quit](../../assets/screenshots/in-game-quit.png)
 
 ??? info "More detail"
     All emulators share the same menu, with UI styling consistent with the

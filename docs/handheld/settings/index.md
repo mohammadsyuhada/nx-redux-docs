@@ -7,7 +7,7 @@ page of the Settings app has its own page here.
 ![Settings](../../assets/screenshots/settings.png)
 
 - [Display](display.md) — brightness and panel tuning
-- [Appearance](appearance.md) — UI scale, colors and animations
+- [Appearance](appearance.md) — colors, status pill, button hints, animations and boot logo
 - [Layouts](layouts.md) — main menu tab and game list styles, which tabs show, the page title and button hints
 - [In-game Notifications](notifications.md) — save/load/screenshot toasts
 - [LED Control](led-control.md) — per-zone lighting effects
@@ -24,5 +24,6 @@ page of the Settings app has its own page here.
 - [About](about.md) — versions and the built-in updater
 
 Some pages only appear when the device has the hardware for them (LEDs,
-Wi-Fi, Bluetooth, the FN switch, the F1/F2 keys, a fan). The screenshots in
-this section are from a TrimUI Brick.
+Wi-Fi, Bluetooth, the FN switch, the F1/F2 keys, a fan). In
+[Simple Mode](simple-mode.md), F1 / F2 Keys and Emulator Shortcuts are
+hidden. The screenshots in this section are from a TrimUI Brick.

@@ -83,6 +83,8 @@ To change it:
 2. Set **RDP Plugin** to `GLideN64` or `Rice`.
 3. Restart the game. The change takes effect the next time the game starts.
 
+![N64 Emulator Options, General page with RDP Plugin set to Rice](../../assets/screenshots/n64-emulator-options.png)
+
 See [Emulator Options](../guide/emulator-options.md) for how these fit
 together.
 

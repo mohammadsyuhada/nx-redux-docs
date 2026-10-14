@@ -191,13 +191,13 @@ Change Dreamcast's settings in **Options → Core Options** in the in-game
 menu. You can also set them before launching, per game or for all games, in
 the game list's [Emulator Options](../guide/emulator-options.md).
 
-<!-- SCREENSHOT: dc-core-options — Dreamcast Options → Core Options, showing Internal Resolution and Widescreen Hack (Brick) -->
+![Dreamcast Options, Video page with Internal Resolution at 640x480 (Native)](../../assets/screenshots/dc-core-options.png)
 
 | Setting | What it does | Default |
 | --- | --- | --- |
 | **Internal Resolution** | Higher values look sharper but cost speed. Can be changed mid-game. | 640×480 on every device |
-| **Widescreen Hack** | — | On for the Smart Pro S (16:9 screen); off for the Brick and Brick Pro |
-| **Auto Frame Skip** | Stays on for heavy 3D scenes | — |
+| **Widescreen Hack** | Draws 3D games wider than 4:3 to fill the screen. May show glitches at the edges. | On for the Smart Pro and Smart Pro S (16:9 screens); off for the Brick and Brick Pro |
+| **Auto Skip Frame** | Skips frames when a heavy 3D scene falls behind | Maximum on the Brick and Brick Pro; Normal on the Smart Pro and Smart Pro S |
 | **Netplay Input Delay** | See [Netplay](#netplay) | 1 |
 
 ??? info "More detail"

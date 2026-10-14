@@ -20,4 +20,5 @@ The connected network shows a check mark, and its hint shows the current IP
 address.
 
 Select a network to connect, entering the password with the on-screen
-keyboard. A known network offers **Forget**.
+keyboard. A saved network offers **Connect** (or **Disconnect** while
+connected) and **Forget**.

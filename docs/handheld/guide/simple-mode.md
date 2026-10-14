@@ -1,7 +1,7 @@
 # Simple Mode
 
 Simple Mode is a simplified menu for children or casual users, enabled in
-**Settings**.
+**Settings → Simple Mode**.
 
 ![Simple Mode in Settings](../../assets/screenshots/set-simple.png)
 
@@ -17,6 +17,8 @@ When Simple Mode is on:
   it up.
 - In-game, **Options** is replaced with **Reset**, so there are no settings to
   wander into mid-game.
+- The F1 / F2 tool keys do nothing, and **Settings** hides
+  **Emulator Shortcuts** and **F1 / F2 keys**.
 
 !!! question "Forgot the PIN?"
     Delete `.userdata/shared/enable-simple-mode` from the SD card (from a

@@ -37,7 +37,7 @@ default:
 | --- | --- | --- |
 | `Left` / `Right` | Previous / next image in the folder (wraps around) | Pan |
 | `Up` / `Down` | — | Pan |
-| `R1` / `L1` | Zoom in / out | Zoom in / out |
+| `R1` / `L1` | Zoom in | Zoom in / out (out of the first step returns to fit) |
 | `A` | Toggle the info overlay | Toggle the info overlay |
 | `B` | Back to the browser | Back to fit size, then back to the browser |
 
@@ -47,8 +47,8 @@ The info overlay shown above lists the file name, resolution, zoom level and
 your position among the folder's images (e.g. `1 / 2`).
 
 ??? info "More detail"
-    Zoom skips the 100% step when the image is already at or below screen
-    size, since that step wouldn't change anything.
+    Zoom skips any step that wouldn't enlarge the image past its fit size,
+    so a small image goes straight from fit to the first larger step.
 
 ## Rename & Delete
 

@@ -17,6 +17,8 @@ Launch Options are available for [PortMaster](../apps/portmaster.md) ports.
 The game keeps the settings. Launching it later with `A` uses them too, so
 you only need this page when you want to change something.
 
+![Launch Options for Apotris on the Brick: CPU Mode, Launch, Reset to Global](../../assets/screenshots/launch-options.png)
+
 ## The settings
 
 | Setting | Choices | Devices |
@@ -25,37 +27,34 @@ you only need this page when you want to change something.
 | **CPU Mode** | Auto, Powersave, Normal, Performance | All devices |
 | **GPU Mode** | Auto, Powersave, Performance | Smart Pro S only |
 
-**Auto** keeps what ports have always used, so nothing changes until you
-pick something else:
+- **CPU Cores** (Smart Pro S): **4 Little** turns the fast *big* cores off,
+  the biggest battery saving and plenty for most 2D games. **2 Little** is for
+  very light games, **4 Little + 2 Big** for games that need a little more,
+  **All 8** turns every core on.
+- **CPU Mode**: **Powersave**, **Normal** and **Performance** each hold the CPU
+  at one fixed speed, the same speeds as the in-game CPU Speed option.
+- **GPU Mode** (Smart Pro S): **Powersave** lets the graphics chip slow down
+  when the game doesn't need it. **Performance** keeps it at full speed.
+- **Auto** keeps what ports have always used, so nothing changes until you
+  pick something else.
 
-| Device | Auto |
-| --- | --- |
-| Brick, Brick Pro | CPU held at full speed (2000 MHz) |
-| Smart Pro S | All 8 cores on, CPU speed follows the load, GPU at full speed |
+??? info "More detail: speeds and Auto"
+    | Device | Auto |
+    | --- | --- |
+    | Brick, Brick Pro | CPU held at full speed (2000 MHz) |
+    | Smart Pro S | All 8 cores on, CPU speed follows the load, GPU at full speed |
 
-**CPU Cores (Smart Pro S).** The Smart Pro S has 4 power-saving *little*
-cores and 4 fast *big* cores. **4 Little** turns the big cores off, which is
-the biggest battery saving and is plenty for most 2D games. **2 Little** goes
-one step further and keeps only two cores on, for very light games.
-**4 Little + 2 Big** suits games that need a little more. **All 8** turns
-every core on.
+    | CPU Mode | Brick, Brick Pro | Smart Pro S |
+    | --- | --- | --- |
+    | Powersave | 1200 MHz | 1200 MHz |
+    | Normal | 1608 MHz | 1680 MHz |
+    | Performance | 2000 MHz | 2160 MHz |
 
-**CPU Mode.** Each mode holds the CPU at one fixed speed, the same speeds as
-the CPU Speed option for emulators:
-
-| Mode | Brick, Brick Pro | Smart Pro S |
-| --- | --- | --- |
-| Powersave | 1200 MHz | 1200 MHz |
-| Normal | 1608 MHz | 1680 MHz |
-| Performance | 2000 MHz | 2160 MHz |
-
-On the Brick and Brick Pro, **Performance** is the same as **Auto**. The little
-cores on the Smart Pro S top out at 1416 MHz. With **4 Little**, Normal and
-Performance both run at that speed.
-
-**GPU Mode (Smart Pro S).** **Powersave** lets the graphics chip slow down
-when the game doesn't need it. **Performance** (and Auto) keeps it at full
-speed.
+    - On the Brick and Brick Pro, **Performance** is the same as **Auto**.
+    - The little cores on the Smart Pro S top out at 1416 MHz. With
+      **4 Little** or **2 Little**, Normal and Performance both run at that
+      speed.
+    - GPU Mode **Auto** is the same as **Performance**.
 
 !!! tip "Finding the right setting"
     Start with **4 Little** and **Powersave** on a light game. If it slows

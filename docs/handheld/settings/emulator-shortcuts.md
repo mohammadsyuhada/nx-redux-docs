@@ -4,7 +4,8 @@ Hotkeys for actions during play: save states, fast-forward, rewind, turbo
 and more. All are unbound (`NONE`) by default.
 
 Shortcuts are global. One set applies to every console and every game on the
-device, so fast-forward bound once works everywhere.
+device, so fast-forward bound once works everywhere. The page is hidden in
+[Simple Mode](simple-mode.md).
 
 ![Emulator Shortcuts settings](../../assets/screenshots/set-emulator-shortcuts.png)
 
@@ -20,14 +21,16 @@ device, so fast-forward bound once works everywhere.
 - `LEFT` / `RIGHT` steps through the buttons instead.
 - Press `X` to clear a shortcut (`NONE`).
 
-Using a `MENU` + button combination keeps the shortcut from clashing with the
-game's own controls: a shortcut on a button the game also uses does both. A
-`MENU` + button shortcut doesn't also press that button in the game. On the
-Famicom Disk System, `L1` and `R1` are the
-[disk buttons](../emulators/other-systems.md#flipping-disk-sides).
+Prefer `MENU` + button combinations: a shortcut on a plain button the game
+also uses does both, while a `MENU` + button shortcut doesn't press that
+button in the game.
 
-`MENU` + `SELECT` can't be bound. It always opens the
-[Game Switcher](../guide/game-switcher.md).
+??? info "More detail"
+    - `MENU` + `SELECT` can't be bound. It always opens the
+      [Game Switcher](../guide/game-switcher.md).
+    - On the Famicom Disk System, `L1` and `R1` are the
+      [disk buttons](../emulators/other-systems.md#flipping-disk-sides), so
+      avoid binding them on their own.
 
 ## Shortcuts
 
@@ -47,6 +50,8 @@ Famicom Disk System, `L1` and `R1` are the
 | **Toggle D-pad Joystick** | Make the D-pad drive the left analog stick, until you press it again. |
 
 ## Toggle D-pad Joystick
+
+![Emulator Shortcuts, Toggle D-pad Joystick and Reset to defaults](../../assets/screenshots/set-emulator-shortcuts-2.png)
 
 For games that expect an analog stick on a device without one, such as
 [Nintendo 64](../emulators/nintendo-64.md) or [PSP](../emulators/psp.md)

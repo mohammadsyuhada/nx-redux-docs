@@ -36,7 +36,14 @@ Supported formats: `mp3`, `flac`, `wav`, `ogg`, `opus`, `m4a`, `aac` and
 
 Titles, artists, albums and cover art come from the tags inside your files
 (MP3, M4A, FLAC, Ogg and Opus), so tagged music shows its real names and
-album art without being online. Untagged files show their file name.
+album art without being online. Untagged files show their file name. A track
+with no embedded cover gets one fetched online when Wi-Fi is on.
+
+??? info "More detail: online cover art"
+    Missing covers are looked up by artist and title in the iTunes store for
+    your region, then the US store, then Deezer, and cached on the SD card
+    (empty it with **Clear Album Art** in [Settings](#settings)). Radio song
+    covers use the same lookup.
 
 ### Managing files
 
@@ -129,9 +136,11 @@ order.
 While music plays, the screen switches itself off after an idle time you can
 set (default 60 s). This saves battery and prevents accidental button presses.
 
-- While the screen is off, ordinary buttons are ignored.
 - Tap `SELECT` to turn the screen off right away instead of waiting.
 - Press `SELECT` + `A` to wake it.
+- While the screen is off, `A` still pauses and resumes. Other buttons are
+  ignored.
+- Tap `POWER` to show the wake hint again; hold it to power off.
 - Media buttons on a USB or Bluetooth headset keep working even with the
   screen off.
 
@@ -193,11 +202,10 @@ While a station plays, the screen shows:
   automatically for the playing song**
 - the live stream bitrate
 
+![Radio playing](../../assets/screenshots/music-radio-playing.png)
+
 ??? info "More detail"
     Radio goes through the same high-quality resampler as local playback.
-
-
-![Radio playing](../../assets/screenshots/music-radio-playing.png)
 
 ### Radio controls
 
