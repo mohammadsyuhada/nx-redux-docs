@@ -58,6 +58,23 @@ play with the 3DS's own positions on an Xbox pad (`A` on the right), set
     - After a combo (`SELECT` + `R1`, `L1`, `LEFT`, `RIGHT` or `START`) the
       game gets nothing.
 
+## Motion
+
+Games that use the 3DS's gyroscope and tilt read your phone's: turn or tip
+the phone the way you would turn or tip a 3DS. In Mario Kart 7's first-person
+view, for example, you steer by turning the phone.
+
+![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp)
+
+- Motion is always on, like on a 3DS. There's no setting for it.
+- It works in portrait and in both landscape directions.
+- The game reads the phone's tilt as it is. Hold the phone the way the game
+  expects, as you would a 3DS.
+- The sensors only run while you play. They stop while the game is paused,
+  in the in-game menu, or in the background.
+- On a phone without a gyroscope, tilting still works, but aiming by turning
+  the phone does nothing.
+
 ## New 3DS controls
 
 **New 3DS Controls** adds `ZL` and `ZR` and the C-stick to the on-screen pad.
