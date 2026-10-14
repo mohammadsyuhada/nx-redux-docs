@@ -11,8 +11,8 @@ See the [Mobile FAQ](mobile.md).
 
 No. SD cards are built per device model — resolution, OSD assets and other
 layout differ between models. Use the
-[Device Sync](../../handheld/apps/device-sync.md) tool to carry saves, save states,
-settings and (optionally) ROMs across devices.
+[Device Sync](../../handheld/apps/device-sync.md) tool to carry saves, save states
+and (optionally) ROMs across devices.
 
 ## Something doesn't work after installing
 
