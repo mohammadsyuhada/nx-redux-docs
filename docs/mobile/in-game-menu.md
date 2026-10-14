@@ -110,12 +110,20 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | **Controller Layout** | Every console | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect |
 | **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
 | **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
+| **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) | Auto |
 
 **Controller Type** is the Sega pad the game sees. **Auto** uses 6 buttons
 only for games made for them. **Controller Layout** names the letters printed
 on your controller, so its `A` is the console's `A`; the other layout gives
 the console's original button positions. See
 [Controls](controls.md#controller-buttons) for both.
+
+Settings the game reads only when it starts are not on this page, because
+changing them here would do nothing until the next launch: **Graphics API**
+([Graphics API](emulators/index.md#graphics-api)), and the Wii's **Wii
+Screen** and **Pointer** rows. Set them in
+[Game Settings](emulator-settings.md#game-settings) for one game, or in
+[Emulator Settings](emulator-settings.md) for the console.
 
 ## Frontend
 

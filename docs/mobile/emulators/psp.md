@@ -37,7 +37,9 @@ The face buttons map to the PSP buttons **by position**:
 
 ## Settings
 
-- PSP renders with OpenGL. The Vulkan and software choices are not offered.
+- PSP renders with OpenGL ES, or with Vulkan when **Graphics API** is set to
+  **Vulkan**; see [Graphics API](index.md#graphics-api). The software
+  renderer is not offered.
 - Some options, such as the CPU core and the PSP model, only take effect when
   a game starts. They are in [Emulator Settings](../emulator-settings.md),
   not in the in-game **Core Options**.

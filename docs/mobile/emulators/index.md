@@ -6,8 +6,9 @@ tag names match NX Redux on the handheld.
 The systems with their own controls or settings have a page each:
 [Arcade (FBNeo)](arcade.md), [Nintendo 64](nintendo-64.md),
 [Sega Dreamcast](dreamcast.md), [PlayStation](playstation.md),
-[PlayStation Portable](psp.md), [Nintendo DS](nintendo-ds.md) and
-[Nintendo 3DS](nintendo-3ds.md). The
+[PlayStation Portable](psp.md), [Nintendo DS](nintendo-ds.md),
+[Nintendo 3DS](nintendo-3ds.md) and
+[Nintendo Wii & GameCube](wii-gamecube.md). The
 smaller differences of the others, such as the Sega `Mode` button or the
 Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 
@@ -20,6 +21,8 @@ Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 | --- | --- | --- |
 | [Nintendo DS](nintendo-ds.md) | `NDS` | melonDS DS |
 | [Nintendo 3DS](nintendo-3ds.md) | `3DS` | Azahar |
+| [Nintendo Wii](wii-gamecube.md) | `WII` | Dolphin |
+| [Nintendo GameCube](wii-gamecube.md) | `GC` | Dolphin |
 | [Nintendo 64](nintendo-64.md) | `N64` | Mupen64Plus-Next |
 | [PlayStation Portable](psp.md) | `PSP` | PPSSPP |
 | Game Boy / Game Boy Color | `GB`, `GBC` | Gambatte |
@@ -73,6 +76,46 @@ The tag is where saves and settings are kept. To set a core's options outside
 a game, for a whole console or for one game, see
 [Emulator Settings](../emulator-settings.md).
 
+## Graphics API
+
+Seven consoles can draw with Vulkan instead of OpenGL ES: Nintendo Wii,
+GameCube, Nintendo 64, Sega Dreamcast, PlayStation on SwanStation (`PSX`),
+PSP and Nintendo 3DS. **Graphics API** picks:
+
+| Value | What it does |
+| --- | --- |
+| **Auto** (default) | OpenGL ES. |
+| **OpenGL ES** | OpenGL ES. |
+| **Vulkan** | Vulkan. On Nintendo 64 it also switches to the ParaLLEl-RDP renderer: more accurate, and heavier. |
+
+The game reads it when it starts, so it isn't in the in-game menu. To switch
+a game to Vulkan:
+
+1. In the game list, press `MENU` on the game and choose **Game Settings**.
+
+    ![A Wii game's context menu with Game Settings selected](../../assets/screenshots/mobile/wii-context-menu.webp)
+
+2. Move to **Graphics API** and set it to **Vulkan** with `LEFT` / `RIGHT`.
+
+    ![Game Settings for New Super Mario Bros. Wii, with Graphics API set to Vulkan](../../assets/screenshots/mobile/wii-game-settings-vulkan.webp)
+
+3. Start the game.
+
+For a whole console, set it in [Emulator Settings](../emulator-settings.md)
+instead. To put a game back on the console's setting, choose **Use emulator
+settings** at the top of its Game Settings.
+
+- A phone without a Vulkan GPU that the app can use stays on OpenGL ES,
+  whatever the setting.
+- If Vulkan can't start on your phone, the game starts again on OpenGL ES,
+  with a notice: **Vulkan couldn't start on this device, so this game is
+  using OpenGL ES.** The app remembers it for that emulator, so later
+  launches go straight to OpenGL ES, and the **Graphics API** row says
+  **Vulkan didn't work on this phone; using OpenGL ES.** An app update tries
+  Vulkan again.
+- Which is faster depends on the game and the phone. Try Vulkan on a game
+  that runs slowly, and go back if it doesn't help.
+
 ## BIOS files
 
 Put BIOS files in `Bios/<TAG>/`.
@@ -86,6 +129,7 @@ Put BIOS files in `Bios/<TAG>/`.
 - PlayStation on PCSX-ReARMed (`PS`) has a BIOS built in, and uses a real
   one when present. SwanStation (`PSX`) needs a real one; see
   [PlayStation](playstation.md).
+- Wii and GameCube need no BIOS: Dolphin's system files are bundled.
 
 ??? info "More detail"
     A launch also reads the folders of tags that share its core. So a
