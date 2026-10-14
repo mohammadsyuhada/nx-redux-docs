@@ -36,13 +36,15 @@ Below the account block, Settings also holds:
 | **Progress duration** | How long progress updates (top-left) stay on screen; `Off` disables them |
 | **Achievement sort order** | How achievements are sorted, both here and in the in-game menu |
 | **Reset account data** | Clear login and progress, keeping cached game data (for switching accounts) |
-| **Erase all achievement data** | Remove everything, including games and badges |
+| **Erase all achievement data** | Remove everything, including cached game data. Badges kept in your ROM folders stay |
 | **Reset settings to defaults** | Put every setting back to its default |
 
 ## Earning achievements
 
 Achievements work in the **built-in emulator cores**. Launch a recognized
-game and unlocks are tracked automatically as you play:
+game and unlocks are tracked automatically as you play. That includes the
+Sega systems under `GPGX`, Dreamcast (with Naomi and Atomiswave), Nintendo
+64, PSP and WonderSwan.
 
 - An **unlock notification** pops up when you earn an achievement.
 - **Progress updates** (e.g. collectible counters) appear in the top-left.
@@ -53,25 +55,23 @@ game and unlocks are tracked automatically as you play:
     - Press `X` to **mute** a specific achievement's notifications (handy for
       spammy progress trackers).
 
-<!-- SCREENSHOT: ra-ingame-achievements — the Achievements entry in the in-game Options menu, listing a game's achievements (Brick) -->
+![In-game Achievements list for Mario Kart - Super Circuit, 0/94 unlocked](../../assets/screenshots/ra-ingame-achievements.png)
 
-!!! tip "Genesis Plus GX covers every Sega system"
-    Keep your Sega games in `(GPGX)` folders and RetroAchievements just works.
-    The alternate Sega core [Genesis Plus GX](../emulators/other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000) plays
-    Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD under a
-    single `GPGX` tag. It still identifies each game with the correct console
-    for achievements, by picking the system from the ROM's file extension.
-
-!!! tip "Dreamcast is covered too"
-    [Dreamcast](../emulators/dreamcast.md), Naomi and Atomiswave games run on a
-    built-in core, so their achievements work like every other system,
-    offline journal included.
-
-!!! tip "WonderSwan is built in"
-    WonderSwan and WonderSwan Color games in the `Wonderswan Color (WSC)` folder
-    earn achievements too. If you installed the WonderSwan pak from the Pak
-    Store before, it keeps working and keeps priority over the built-in one;
-    delete it from `Emus/` to switch. Your saves stay where they are.
+??? info "More detail: system notes"
+    - **Genesis Plus GX covers every Sega system.** The alternate Sega core
+      [Genesis Plus GX](../emulators/other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000)
+      plays Genesis/Mega Drive, Master System, Game Gear, SG-1000 and Sega CD
+      under a single `GPGX` tag. It still identifies each game with the
+      correct console, by picking the system from the ROM's file extension.
+    - **Dreamcast.** [Dreamcast](../emulators/dreamcast.md), Naomi and
+      Atomiswave games run on a built-in core, so their achievements work
+      like every other system, offline journal included.
+    - **WonderSwan.** Games in the `Wonderswan Color (WSC)` folder earn
+      achievements on the built-in core. If you installed the WonderSwan pak
+      from the Pak Store before, it keeps priority over the built-in one;
+      delete it from `Emus/` to switch. Your saves stay where they are.
+    - **Nintendo DS** runs on the standalone DraStic emulator, which has no
+      achievements support.
 
 !!! info "Softcore only, by design"
     NX Redux is not an RA-approved hardcore emulator, so hardcore mode is
@@ -90,6 +90,15 @@ Everything is built to work without a connection:
 | **Cached game data** | Achievement definitions, unlock state and badges are cached as you play, so a game you've launched once keeps working offline |
 | **Pre-download** | **Download all game data** caches achievement data for every game in your library, with a live progress bar. Even games you have *never* launched online then work offline |
 
+??? info "More detail: where the cache lives"
+    - Each console folder keeps a `.retroachievements` folder: `hashes.json`
+      remembers each ROM's fingerprint, so a game isn't re-identified on every
+      launch, and `badges/<game id>/` holds that game's badge pictures.
+    - Achievement definitions and your account data stay in
+      `.userdata/shared/.ra/`.
+    - [Device Sync](device-sync.md) with ROMs on carries the
+      `.retroachievements` folders along.
+
 ??? info "More detail: Dreamcast and multi-disc games"
     - Pre-download includes Dreamcast folders. Disc images (`.chd`, `.gdi`,
       `.cdi`, `.cue`) and Naomi/Atomiswave sets (`.zip`) are identified the
@@ -103,20 +112,19 @@ Everything is built to work without a connection:
 **Achievements** lists every cached game with box art and unlock progress,
 fully offline:
 
-![Achievements browser](../../assets/screenshots/ra-games.png)
+![RetroAchievements Games list with 1942, Alleyway, Astro Boy and Batman Returns](../../assets/screenshots/ra-games.png)
 
-Open a game to see its achievements, each with its badge and points. The
-selected achievement's description shows below the list. Unlocked,
-pending-sync and locked achievements are all here, in your chosen sort
-order:
+Open a game to see its achievements, each with its badge, status and
+points. Unlocked, pending-sync and locked achievements are all here, in your
+chosen sort order:
 
-![Game achievements](../../assets/screenshots/ra-game-detail.png)
+![1942's achievements, each locked at 5 points](../../assets/screenshots/ra-game-detail.png)
 
 Press `A` for the full details of an achievement: badge, description,
 points, global unlock rate, and type tags like `[Missable]`,
 `[Progression]` or `[Win Condition]`:
 
-![Achievement details](../../assets/screenshots/ra-achievement-details.png)
+![Details for the 1942 achievement Midway](../../assets/screenshots/ra-achievement-details.png)
 
 ## Syncing
 

@@ -68,6 +68,8 @@ rename it.
 Opening a system lists its games with the artwork already on the card for each
 one:
 
+![Artwork Manager, Game Boy Advance games with their Done status](../../assets/screenshots/artwork-system-games.png)
+
 | Status | Meaning |
 | --- | --- |
 | **Done** | Both the screenshot and the box art are present |
@@ -88,9 +90,10 @@ In the game list:
 
 ## Progress
 
-Queued downloads run in the background. The **Progress** page shows what's
-being fetched. Art is placed alongside the ROMs, so it shows up in the game
-lists immediately.
+Queued downloads run in the background. The **Progress** page lists each
+queued game with its status and a running count (`12 / 40 complete, 2 failed`).
+Art is placed alongside the ROMs, so it shows up in the game lists
+immediately. Press `X` **Clear Done** to drop finished rows (Done, Not Found, Error).
 
 !!! tip "Single game instead?"
     For one game, use **Fetch Artwork** in the game's
@@ -130,6 +133,10 @@ mix) is saved too, for the [List art](../settings/layouts.md#list-art) and
     spot is yours: a picture you put there (a Port's art, a hand-made
     picture) is used when a game has no screenshot, and no Artwork Manager
     action changes it.
+
+    A `.jpg` or `.jpeg` with the same name is read when the `.png` is
+    missing (for example art copied from the companion app), in every
+    `.media` folder, and counts as art in the Library.
 
 !!! note "Art fetched by older releases"
     Releases up to v1.13.0 also made a **Mix** image (the screenshot with

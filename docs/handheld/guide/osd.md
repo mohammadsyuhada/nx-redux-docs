@@ -7,8 +7,8 @@ anywhere, in the menus or in-game, without quitting what you're doing.
 
 | Device | How to open it |
 | --- | --- |
-| **Smart Pro S** | Press the `HOME` button |
-| **Brick / Brick Pro / Smart Pro** | Long-press the `MENU` button |
+| **Smart Pro S**, **Brick Pro** | Press the `HOME` button, or hold `MENU` for about 1 second |
+| **Brick**, **Smart Pro** | Hold `MENU` for about 1 second |
 
 ![On-Screen Display](../../assets/screenshots/osd.png)
 

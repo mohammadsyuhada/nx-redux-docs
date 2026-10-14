@@ -45,15 +45,19 @@ and DualShock controller, or remap anything, use the in-game menu's
 sharper models and textures. Turn it on in the game's
 [emulator options](../guide/emulator-options.md).
 
-!!! tip "Turn on Threaded Rendering with it"
+!!! tip "Keep Threaded Rendering on with it"
     On its own, Enhanced Resolution slows heavy 3D games to about 40 fps.
-    Turn on **Threaded Rendering** in the same options as well, and the game
-    runs at a steady 60 fps again.
+    With **Threaded Rendering** on as well, the game runs at a steady 60 fps
+    again.
 
-    Leave Threaded Rendering off when you play at the native resolution. It
-    doesn't help there, and on the Smart Pro S it costs a few fps.
+| Option | Brick, Brick Hammer, Brick Pro, Smart Pro | Smart Pro S |
+| --- | --- | --- |
+| Enhanced Resolution | Off | Off |
+| Threaded Rendering | **On** | Off: turn it on together with Enhanced Resolution |
 
-Both options are off by default. Measured in a Wipeout 3 race:
+![PlayStation Emulator Options, Video page with Threaded Rendering enabled](../../assets/screenshots/ps-emulator-options.png)
+
+Measured in a Wipeout 3 race:
 
 | Setup | Brick | Smart Pro S |
 | --- | --- | --- |
@@ -67,6 +71,12 @@ Both options are off by default. Measured in a Wipeout 3 race:
     full-motion video, are shown as they are. Threaded Rendering moves the
     drawing work onto its own CPU core, so it no longer slows the emulation
     down.
+
+    - **Why it's on for the Brick family:** even at the native resolution it
+      smooths heavy scenes there (Tekken 3 on the Brick: 154 late frames a
+      minute without it, 58 with it).
+    - **Why it's off on the Smart Pro S:** at the native resolution it doesn't
+      help there and costs a few fps.
 
 ## SwanStation
 
@@ -92,14 +102,17 @@ folder a game is in decides which core plays it.
   (`Saves/PSX/`), save states and settings. Progress made in the
   PCSX-ReARMed version of a game does not carry over.
 
-Use PCSX-ReARMed by default, and SwanStation for games that glitch on it. SwanStation runs at full speed on every
-device but works the CPU harder, so the odd frame takes longer: measured
-2026-10-09, about 3 hitches a minute against none on PCSX-ReARMed.
+Use PCSX-ReARMed by default, and SwanStation for games that glitch on it.
+SwanStation runs at full speed on every device but works the CPU harder.
 
-| Measured (60 s) | Brick | Smart Pro S |
-| --- | --- | --- |
-| PCSX-ReARMed, native resolution | Full speed, 58% CPU | Full speed, 40% CPU |
-| SwanStation, 2× resolution | Full speed, 77% CPU | Full speed, 74% CPU |
+??? info "More detail: SwanStation speed"
+    The heavier CPU load means the odd frame takes longer: about 3 hitches a
+    minute, against none on PCSX-ReARMed (measured 2026-10-09).
+
+    | Measured (60 s) | Brick | Smart Pro S |
+    | --- | --- | --- |
+    | PCSX-ReARMed, native resolution | Full speed, 58% CPU | Full speed, 40% CPU |
+    | SwanStation, 2× resolution | Full speed, 77% CPU | Full speed, 74% CPU |
 
 !!! tip "Sharper 3D games"
     SwanStation plays at the native resolution by default. For a 3D game,

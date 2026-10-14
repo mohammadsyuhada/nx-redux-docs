@@ -10,16 +10,18 @@ device.
 2. Press `A` on an entry for its details.
 3. Install or update it from there.
 
-The **TOOLS** tab holds installable tools and emulators, including
-PortMaster and its two [community catalogs](portmaster.md#community-catalogs),
-**NextOS Ports** and **RHH Ports**. Already-installed entries are grouped under
-an *Installed* header:
+![Xtras details page for Pokemon Gen1Recomp++, with X Uninstall and A Update](../../assets/screenshots/xtras-detail.png)
+
+The **TOOLS** tab holds installable tools: PortMaster, its two
+[community catalogs](portmaster.md#community-catalogs) (**NextOS Ports** and
+**RHH Ports**) and the [Cheat Database](#cheat-database). Already-installed
+entries are grouped under an *Installed* header:
 
 ![Xtras TOOLS tab](../../assets/screenshots/xtras-tools.png)
 
 Installed entries show up in your regular menus. A game appears in **Xtra
-Games**, a tool appears in [Tools](tools.md). When an update is available, the
-store labels the entry accordingly.
+Games**, a tool appears in [Tools](tools.md). An entry with a newer release
+moves to an *Update Available* group, just above *Installed*.
 
 !!! note "The catalog grows"
     More standalone games and tools will be added to Xtras over time. Check

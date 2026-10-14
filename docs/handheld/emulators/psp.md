@@ -87,23 +87,28 @@ Measured at the default resolution while playing:
 To get a heavy game to full speed on the Brick, turn on frame skipping for
 that game in [Emulator Options](../guide/emulator-options.md):
 
-- **Auto Frameskip** suits games that run at 30 frames per second, such as
-  Grand Theft Auto: Vice City Stories or Final Fantasy Type-0, especially at
-  2× Rendering Resolution. It skips frames only when the game falls behind:
-  Vice City Stories at 2× went from about 70% to full speed and still showed
-  about 30 frames per second.
-- **Frameskip** `1` suits 60 frames per second games such as Tekken 6. It then
-  shows 30 frames per second at full speed (Tekken 6 measured about 99% at 1×).
+| Option | Use it for |
+| --- | --- |
+| **Auto Frameskip** | Games that run at 30 frames per second (Grand Theft Auto: Vice City Stories, Final Fantasy Type-0), especially at 2× Rendering Resolution |
+| **Frameskip** `1` | 60 frames per second games such as Tekken 6 (then shown at 30 frames per second, at full speed) |
 
 Leave both off for other games: skipping frames can halve the frame rate even
 when a game keeps up, so they are off by default.
 
-- **Rendering Resolution** is the PSP's native 480×272 (1×) by default. 2×
-  (960×544) looks sharper and runs at full speed on the Smart Pro S; on the
-  Brick family it needs **Auto Frameskip** in heavier games. Higher
-  settings aren't offered: they exceed the screen and only cost speed and heat.
-- **Frameskip**, **Auto Frameskip** and the other PPSSPP options are in
-  [Emulator Options](../guide/emulator-options.md), for all games or per game.
+**Rendering Resolution** is the PSP's native 480×272 (1×) by default. 2×
+(960×544) looks sharper and runs at full speed on the Smart Pro S; on the
+Brick family it needs **Auto Frameskip** in heavier games.
+
+??? info "More detail: frame skipping and resolution"
+    - **Auto Frameskip** skips frames only when the game falls behind: Vice
+      City Stories at 2× went from about 70% to full speed on the Brick and
+      still showed about 30 frames per second.
+    - **Frameskip** `1`: Tekken 6 measured about 99% at 1× on the Brick.
+    - **Resolutions above 2×** aren't offered: they exceed the screen and only
+      cost speed and heat.
+    - These and the other PPSSPP options are in
+      [Emulator Options](../guide/emulator-options.md), for all games or per
+      game.
 
 !!! warning "Reset Game"
     **Reset Game** restarts the game, but the restarted game may stop

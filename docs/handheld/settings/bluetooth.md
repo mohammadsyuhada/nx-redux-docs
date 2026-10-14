@@ -16,13 +16,15 @@ Extra Bluetooth logging for troubleshooting.
 
 ## Device list
 
-With Bluetooth on, discovered devices appear below — select one to pair
-and connect.
+With Bluetooth on, nearby devices appear below, each marked **Connected**,
+**Paired** or **Available**. Select one for its actions: **Pair**,
+**Connect**, **Disconnect** or **Unpair**.
 
 ## Under the hood
 
 After installing from a full release zip, NX Redux replaces the stock
-firmware's old Bluetooth stack with newer builds. This is what makes pairing and audio routing reliable.
+firmware's old Bluetooth stack with newer builds. This is what makes pairing
+and audio routing reliable.
 
 ??? info "More detail"
     The stock TrimUI firmware ships an old Bluetooth stack. When NX Redux is

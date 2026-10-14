@@ -12,5 +12,5 @@ notifications have their own settings; see
 | **Load states** | Show a notification when loading game state. |
 | **Screenshots** | Show a notification when taking a screenshot. |
 | **Vol / Display Adjustments** | Show an overlay for volume, brightness and color temperature adjustments. |
-| **Duration** | How long notifications stay on screen. |
+| **Duration** | How long notifications stay on screen, `1s`–`5s` (default `1s`). |
 | **Reset to defaults** | Resets all options on this page to their default values. |

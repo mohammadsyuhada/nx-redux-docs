@@ -70,7 +70,7 @@ twice with the emulator tag, `Advance Wars (GBA)` and
 `Advance Wars (MGBA)`. Pick the core each time you play (see
 [duplicate names](../guide/main-menu.md#duplicate-names)).
 
-![Game Boy Advance game list showing Advance Wars twice, tagged (MGBA) and (GBA)](../../assets/screenshots/game-list-duplicates.png)
+![Game Boy Advance game list showing Mario Kart - Super Circuit twice, tagged (GBA) and (MGBA)](../../assets/screenshots/game-list-duplicates.png)
 
 Saves are kept per folder, in `Saves/GBA/` and `Saves/MGBA/`. To carry your
 progress across, copy the game's save file from one folder to the other.

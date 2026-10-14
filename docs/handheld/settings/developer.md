@@ -34,12 +34,13 @@ Automatically start SSH and SFTP when the device boots.
 ## Debug logging
 
 Save app and game logs to the SD card under `.userdata/<platform>/logs/`.
-Turn this on when you need to capture a log for a bug report. It takes effect
-on the next launch, no reboot needed.
+Turn this on when you need to capture a log for a bug report. Off by default.
+It takes effect on the next launch, no reboot needed.
 
-Off by default. Logs then live only in RAM (`/tmp/nx-logs`), are cleared on
-every launch, and never touch the SD card. Turning it on also enables the
-shutdown trace written by the power-off sequence.
+??? info "More detail"
+    While it's off, logs live only in RAM (`/tmp/nx-logs`), are cleared on
+    every launch, and never touch the SD card. Turning it on also enables the
+    shutdown trace written by the power-off sequence.
 
 ## Clean dot files
 

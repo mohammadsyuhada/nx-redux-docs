@@ -27,7 +27,7 @@ options that require a core restart to apply.
 same complete option set. The result is saved **for that game only**,
 overriding the system-wide defaults:
 
-![Game context menu](../../assets/screenshots/context-menu.png)
+![Emulator Options for Mario Kart - Super Circuit, showing its core options](../../assets/screenshots/emulator-options-game.png)
 
 Use this for the one game that needs a different scaler, region or
 performance tweak without touching the rest of the library.
@@ -50,12 +50,13 @@ without restarting the core**. Changes take effect immediately as you play.
     [Emulator Settings](#system-wide-tools-emulator-settings) instead, which
     always show everything.
 
-## How the layers combine
-
-- **Emulator Settings** writes the system-wide config for that emulator.
-- **Emulator Options** (context menu) writes a per-game config next to it.
-  When present, the per-game file wins for that game.
-- **In-game changes** apply only to the current session until you use
-  **Options → [Save Changes](in-game-options.md#save-changes)**: **Save for
-  console** writes the system-wide config, **Save for game** writes the
-  per-game one.
+??? info "More detail: how the layers combine"
+    - **Emulator Settings** writes the system-wide config for that emulator.
+    - **Emulator Options** (context menu) writes a per-game config next to it.
+      When present, the per-game file wins for that game.
+    - **In-game changes** apply only to the current session until you use
+      **Options → [Save Changes](in-game-options.md#save-changes)**: **Save for
+      console** writes the system-wide config, **Save for game** writes the
+      per-game one.
+    - Emulator Options appears in the context menu only for systems whose
+      emulator has options to edit.

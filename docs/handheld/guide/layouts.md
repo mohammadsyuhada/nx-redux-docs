@@ -46,7 +46,6 @@ background.
 - With [Page title](../settings/layouts.md#page-title) hidden, the up arrow
   moves above the first row, so the list has one arrow at each end. Home's
   List keeps both arrows in the bottom row.
-
 - `Up` on the first row wraps to the last, and `Down` on the last wraps to the
   first (hold the button to stop at the end instead).
 - On the main menu `Left` / `Right` switch tabs. In game lists they page up

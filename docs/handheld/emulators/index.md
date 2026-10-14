@@ -48,7 +48,7 @@ folder you use:
 
 | System | Faster, lighter | More accurate |
 | --- | --- | --- |
-| [Game Boy Advance](game-boy-advance.md) | gpSP (`GBA`), the only GBA core with [Netplay](../netplay.md#supported-systems) | mGBA (`MGBA`), better for ROM hacks, no netplay |
+| [Game Boy Advance](game-boy-advance.md) | gpSP (`GBA`), [Netplay](../netplay.md#supported-systems) over every connection | mGBA (`MGBA`), better for ROM hacks, link cable netplay over the [USB Cable](../netplay.md#mgba-link-cable-over-usb) only |
 | [Super Nintendo](super-nintendo.md) | Snes9x (`SFC`), the default | Supafaust (`SUPA`), but heavier |
 | [The Sega systems](other-systems.md#sega-genesis-sega-cd-32x-master-system-game-gear-and-sg-1000) | PicoDrive | Genesis Plus GX (`GPGX`) |
 | [PlayStation](playstation.md) | PCSX-ReARMed (`PS`), the default | SwanStation (`PSX`, [details](playstation.md#swanstation)), heavier |
@@ -91,11 +91,13 @@ Every emulator, built-in cores and standalones alike, supports:
 
 ## Netplay
 
-Many built-in cores support local wireless [Netplay](../netplay.md). That
-includes Game Boy link cable (gambatte) and Game Boy Advance link (gpSP)
-games.
+Many built-in cores support local [Netplay](../netplay.md). That includes
+Game Boy link cable (gambatte) and Game Boy Advance link (gpSP, and mGBA over
+the USB Cable) games.
 
-!!! note "Game Boy Advance: use the GBA folder"
-    For Game Boy Advance, only the `GBA` (gpSP) folder supports netplay, not
-    `MGBA`. The [Netplay page](../netplay.md#supported-systems) lists exactly
-    which cores and `Roms` folders are netplay-capable.
+!!! note "Game Boy Advance: use the GBA folder for Wi-Fi"
+    For Game Boy Advance over Wi-Fi or Hotspot, use the `GBA` (gpSP) folder.
+    `MGBA` links over the
+    [USB Cable](../netplay.md#mgba-link-cable-over-usb) only. The
+    [Netplay page](../netplay.md#supported-systems) lists exactly which cores
+    and `Roms` folders are netplay-capable.

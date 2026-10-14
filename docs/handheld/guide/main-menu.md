@@ -7,9 +7,8 @@ tab that shows when Home is turned off in
 
 ![Home tab](../../assets/screenshots/main-menu.png)
 
-Each tab can be drawn in its own style: Home as a list, a grid or a carousel, the
-other tabs as a list, a grid or a carousel, and game lists have a fourth style,
-Backdrop. [Menu Layouts](layouts.md) shows them all.
+Every tab can be drawn as a List, Grid or Carousel, and game lists have a
+fourth style, Backdrop. [Menu Layouts](layouts.md) shows them all.
 
 ## Tabs
 
@@ -52,7 +51,10 @@ focus.
       list. A game launched from Search or the Game Switcher returns you
       to the tab that lists it.
     - The last tab is remembered until the device powers off. A cold boot
-      opens Home (the first tab that shows when Home is off).
+      opens Home (the first tab that shows when Home is off), or the
+      [Game Switcher](game-switcher.md) when
+      [Layouts → Default view](../settings/layouts.md#default-view) is set to
+      `Game Switcher`.
 
 ## Home
 
@@ -100,7 +102,7 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 
 ### Grid
 
-![Home in the Grid layout](../../assets/screenshots/home-pins.png)
+![Home in the Grid layout, scrolled down to the pinned games](../../assets/screenshots/home-pins.png)
 
 - **Stats line.** The top lines show **This month**'s total play time, your
   RetroAchievements unlocked this month (left out when you are signed out),
@@ -112,18 +114,8 @@ Everything on Home in one list, in the style of the other tabs' List layout.
   a **Pick a game** card that opens the Consoles tab.
 - **Pinned tools** sit beside the Continue card as square icon tiles. Every
   pinned tool is shown.
-- **Pinned games** fill the rows below, two per row on the Brick and Brick Pro
-  and three on the Smart Pro S. The selected pin shows its name (on up to two
-  lines) and play time.
-- **On the Brick and Brick Pro** the Continue card and the tool tiles (in
-  columns of four on the Brick, five on the Brick Pro) always fill the screen,
-  and the pinned games sit below it: press `Down` to scroll to them.
-- **On the Smart Pro S** the tools stand in columns of three and a row of
-  pinned games shares the screen; Home scrolls when there are more. With no
-  pinned games the top section fills the screen and the tool tiles grow, in
-  columns of four, and one or two pinned games stand in a column beside the
-  Continue card instead of a row.
-- Home looks the same size on every device.
+- **Pinned games** fill the rows below. The selected pin shows its name (on
+  up to two lines) and play time. Press `Down` to scroll to them.
 
 | Button | What it does |
 | --- | --- |
@@ -133,6 +125,17 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 | `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` | Open [Search](#search) |
+
+??? info "More detail: Grid on each device"
+    - **Brick and Brick Pro:** the Continue card and the tool tiles (in
+      columns of four on the Brick, five on the Brick Pro) fill the screen,
+      and the pinned games sit below, two per row.
+    - **Smart Pro S:** the tools stand in columns of three and a row of three
+      pinned games shares the screen; Home scrolls when there are more. With
+      no pinned games the top section fills the screen and the tool tiles
+      grow, in columns of four, and one or two pinned games stand in a column
+      beside the Continue card instead of a row.
+    - Home looks the same size on every device.
 
 ### Carousel
 
@@ -198,7 +201,7 @@ carousel, and Tools is a grid.
 | Button | What it does |
 | --- | --- |
 | `A` **Open** | Open the console, collection or tool |
-| `MENU` | **Refresh Roms**, plus **Rename** / **Delete** on a collection and **Pin Tool** on a tool |
+| `MENU` | **Refresh Roms** (Consoles, Collections), plus **Rename** / **Delete** on a collection. On Tools: **Pin Tool** / **Unpin Tool** |
 | `START` **Search** | Search your whole library |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 
@@ -349,12 +352,12 @@ Collections show the same names as the console lists.
 Added, renamed or reorganized ROMs **while the device is running** (over USB,
 ADB or a network share)? The menus won't see the changes yet. Rebuild the list:
 
-1. Press `MENU` on any tab.
+1. Press `MENU` on Home, Consoles or Collections.
 2. Choose **Refresh Roms**.
 
 ![Consoles tab context menu with Refresh Roms](../../assets/screenshots/main-menu-context.png)
 
-The same action is in a game's [context menu](context-menu.md)
+The same action is in a game's [context menu](context-menu.md) on Home
 (**Refresh Roms**) and in
 [Settings → System](../settings/system.md#refresh-emulatorroms-list)
 (**Refresh emulator/roms list**).

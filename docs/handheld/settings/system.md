@@ -7,11 +7,13 @@ Power behavior, clock, save formats and system maintenance. Options marked
 
 ## Screen timeout
 
-Period of inactivity before the screen turns off, `0`–`600` s.
+Period of inactivity before the screen turns off: `Never` or `5s`–`10m`.
+Default `60s`.
 
 ## Suspend timeout
 
-Time before the device goes to sleep after the screen is off, `5`–`600` s.
+Time before the device goes to sleep after the screen is off: `5s`–`10m`.
+Default `30s`.
 
 ## Haptic feedback
 
@@ -70,6 +72,8 @@ Your time zone.
 
 ## Save format
 
+![System settings, Save format and Save state format](../../assets/screenshots/set-system-2.png)
+
 Format for battery saves in `Saves/<TAG>/`: `MinUI` (`.sav`),
 `Retroarch (compressed)` / `Retroarch (uncompressed)` (`.srm`), or
 `Generic`. Default: **Retroarch (uncompressed)**, directly compatible
@@ -77,8 +81,8 @@ with RetroArch on other devices.
 
 ## Save state format
 
-Naming/format for save states: `MinUI` (`.st0`…), `Retroarch-ish` or
-`Retroarch` (`.state`, `.state1`…), each compressed or uncompressed.
+Naming/format for save states: `MinUI` (`.st0`…), or `Retroarch-ish` /
+`Retroarch` (`.state`, `.state1`…), each `(compressed)` or `(uncompressed)`.
 Default: **Retroarch (uncompressed)**.
 
 ## Use extracted file name

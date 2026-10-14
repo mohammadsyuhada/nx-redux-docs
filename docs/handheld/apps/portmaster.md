@@ -61,12 +61,11 @@ other port.
     Unlike PortMaster's own catalog, these catalogs don't always mark which
     ports can't run on a device, so PortMaster may still offer them.
 
-**Paperboat (RHH Ports)** shows two of these. On the Brick and Brick Pro it
-stays on a black screen. On the Smart Pro S it starts, but building its game
-data from the ROM (`pm64.o2r`) needs more memory than the device has, so the
-first start closes partway through.
-
 ??? info "More detail"
+    - **Example: Paperboat (RHH Ports)** shows two of these. On the Brick and
+      Brick Pro it stays on a black screen. On the Smart Pro S it starts, but
+      building its game data from the ROM (`pm64.o2r`) needs more memory than
+      the device has, so the first start closes partway through.
     - **Where the catalogs live.** Each Xtras entry copies the catalog's
       source file (`030_rhh.source.json`, `040_nextos.source.json`) into
       `Emus/shared/PortMaster/config/`. PortMaster loads every source file
@@ -221,23 +220,10 @@ above.
 
 ### Do ports that use symlinks work?
 
-Yes. The SD card is formatted exFAT/FAT32, which **can't store symlinks**.
-Some ports' launch scripts used to create one, mostly to point a game's save
-folder into its port folder.
-
-**PortMaster has already moved almost every port away from symlinks.** Ports
-now link save folders with a bind mount instead (PortMaster's
-[`bind_directories`](https://github.com/PortsMaster/PortMaster-GUI/blob/main/PortMaster/funcs.txt)
-helper), which works on exFAT. Over 230 ports in the
-[PortMaster ports repository](https://github.com/PortsMaster/PortMaster-New)
-use it. As of October 2026, only two still create a symlink, and neither
-needs a fix: Moonlight Old's lands in system memory, not on the card, and
-RVGL's only affects its own update check.
-
-**NX Redux covers any that remain while the game launches.** It doesn't edit
-the port's launch script. If a script tries to create a symlink on the card,
-NX Redux makes a bind mount instead, the same thing `bind_directories` does.
-There is nothing to fix by hand.
+Yes, with nothing to fix by hand. The SD card (exFAT/FAT32) **can't store
+symlinks**, but PortMaster has moved almost every port to bind mounts, which
+work on the card. If a launch script still tries to create a symlink on the
+card, NX Redux makes a bind mount instead while the game launches.
 
 !!! warning "Ports installed with an older NX Redux"
     Older NX Redux releases replaced some ports' launch scripts with their
@@ -251,7 +237,15 @@ Found a port that still won't start? Open an issue on
 name and the error you see.
 
 ??? info "More detail"
-    No launch script is edited. NX Redux adds a few helpers to PortMaster's
+    **Symlinks in ports today.** Ports link save folders with PortMaster's
+    [`bind_directories`](https://github.com/PortsMaster/PortMaster-GUI/blob/main/PortMaster/funcs.txt)
+    helper; over 230 ports in the
+    [PortMaster ports repository](https://github.com/PortsMaster/PortMaster-New)
+    use it. As of October 2026, only two still create a symlink, and neither
+    needs a fix: Moonlight Old's lands in system memory, not on the card, and
+    RVGL's only affects its own update check.
+
+    **How NX Redux covers the rest.** No launch script is edited. NX Redux adds a few helpers to PortMaster's
     `control.txt`, which every port's launch script loads before it starts
     the game, so they replace the matching commands for that script only:
 

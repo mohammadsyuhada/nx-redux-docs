@@ -34,9 +34,10 @@ own **Home tab** setting at `Hide`.)
 ## Getting back to Tools
 
 Nothing is locked away. Press `MENU` on Home and the context menu still
-offers **Tools**:
+offers **Tools**, plus **Consoles** and **Collections** while those tabs are
+hidden:
 
-![Home context menu with Tools](../../assets/screenshots/minimal-menu-context.png)
+![Home context menu with Consoles, Collections and Tools](../../assets/screenshots/minimal-menu-context.png)
 
 Pinned tools stay on Home too. Pin **Settings** and it is always one press
 away whenever you want to add a game, adjust something, or bring the tabs

@@ -22,28 +22,27 @@ download the cheats."* The entry moves to the *Installed* group in Xtras, and
 
 ![Cheat Database in the Tools menu](../../assets/landing/features/cheats-tools.webp)
 
-!!! note
-    This installs a **small tool** (about 1 MB). It does **not** download the
-    cheats yet. That happens on demand from inside the tool.
+This installs only the small tool (about 1 MB). The cheats themselves are
+downloaded from inside it.
 
 ## Downloading the cheats
 
 1. Open **Tools → Cheat Database**.
-2. The first time, the menu offers one choice: **Download cheat database**.
-   Select it.
+2. The first time, it shows *No cheat database installed*. Press `A`
+   **Download**.
 3. A progress bar advances system by system as it installs.
 4. When it finishes you'll see *"Done. Open a game and see Options > Cheats."*
 
-You need about **256 MB** free on the SD card.
+After that, the tool shows the cheat count and its two options:
 
-!!! note "One download, every system"
-    A single download covers every supported system at once. You don't grab
-    cheats per game or per console. Come back to the tool later to update them.
+![Cheat Database with 27788 cheats: Check for updates, Remove cheat database](../../assets/screenshots/cheatdb-tool.png)
+
+One download covers every supported system. You need Wi-Fi and about
+**256 MB** free on the SD card.
 
 ??? info "More detail"
     The tool downloads the libretro cheat collection (~37 MB) and unpacks it
-    onto the SD card. It takes about **185 MB** once extracted (you'll need
-    ~256 MB free).
+    onto the SD card, where it takes about **185 MB**.
 
 ## Keeping things up to date
 
@@ -63,21 +62,22 @@ There are **two separate kinds of update**, from two places:
 4. Toggle any cheat `On` or `Off`. Changes apply **immediately** while you
    play. Each entry carries a short description you can read from the list.
 
-If no cheats are found for the game, the menu tells you so. It points you to
-**Tools > Cheat Database** to download them.
+If no cheats are found for the game, the menu shows *"No cheat file
+loaded. Get cheats from Xtras > Cheat Database."* with the file names it
+looked for.
 
 !!! tip "Variants are merged automatically"
     Some games have cheat sets from several sources (Game Genie, GameShark,
     Code Breaker, Action Replay). NX Redux loads **all** of them for the
-    current game and merges them into one list. Each cheat is tagged with its
-    source (for example `[GameShark]`) so you can tell them apart.
+    current game and merges them into one list. Each cheat's description
+    under the list starts with its source (for example `(GameShark)`) so you
+    can tell them apart.
 
-### RetroAchievements hardcore mode blocks cheats
+### Cheats and RetroAchievements
 
-If [RetroAchievements](retroachievements.md) **hardcore mode** is active,
-cheats cannot be enabled. Trying to toggle one shows *"Cheats disabled in
-Hardcore mode"* and the switch snaps back off. This keeps hardcore runs
-legitimate. Leave hardcore mode to use cheats.
+[RetroAchievements](retroachievements.md) on NX Redux is **softcore only**,
+so there is no hardcore mode to block cheats. You can turn cheats on with
+achievements enabled.
 
 ## Nintendo DS { #ds-n64-and-dreamcast }
 
@@ -124,7 +124,7 @@ your hand-made `.cht` files**.
 
 | Where | What it removes |
 | --- | --- |
-| **Tools → Cheat Database → Remove cheat database** | Only the files it downloaded. The tool stays installed so you can download again later. You'll see *"Cheat database removed. Hand-made cheats kept."* |
+| **Tools → Cheat Database → Remove cheat database** | Only the files it downloaded, after a confirmation. The tool stays installed so you can download again later |
 | Uninstall **Cheat Database** from **Xtras** | The tool **and** its downloaded cheat files, in one step |
 
 You can safely install, download, remove and reinstall without losing your own
