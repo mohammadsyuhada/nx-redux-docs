@@ -9,7 +9,7 @@ with `MENU` → **Pin Tool**.
 | Tool | What it does |
 | --- | --- |
 | [Artwork Manager](artwork-manager.md) | Fetch screenshots and box art for your ROMs |
-| [Device Sync](device-sync.md) | Sync saves, states, settings and ROMs across devices |
+| [Device Sync](device-sync.md) | Sync saves, states and ROMs across devices |
 | [Emulator Settings](emulator-settings.md) | Configure each system's emulator options |
 | [Files](files.md) | Dual-pane file manager for the SD card |
 | [Game Tracker](game-tracker.md) | Play-time statistics per game |
