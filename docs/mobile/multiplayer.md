@@ -23,7 +23,7 @@ has four. Other multitap adapters aren't supported.
 
 | Players | Systems |
 | --- | --- |
-| Up to 4 | Nintendo 64, Sega Dreamcast, Arcade (FBNeo), TurboGrafx-16 |
+| Up to 4 | Nintendo 64, Nintendo Wii, Nintendo GameCube, Sega Dreamcast, Arcade (FBNeo), TurboGrafx-16 |
 | 2 | NES and Famicom Disk System, Super Nintendo, Sega Genesis, Master System, SG-1000, Sega CD, 32X, PlayStation, Atari 2600, Atari 7800, Atari 5200, ColecoVision |
 | 1 | Every other system, such as Game Gear, the Game Boys, Nintendo DS, Nintendo 3DS, PSP and PICO-8 |
 
@@ -110,6 +110,7 @@ Which games rumble: see [Controls → Game rumble](controls.md#game-rumble).
 | [PlayStation](emulators/playstation.md#controls) | Player 2 gets the same DualShock pad as Player 1. |
 | [Sega Genesis, Sega CD, 32X](emulators/other-systems.md#controller-type) | **Controller Type** applies to Player 2 too. |
 | [Nintendo 64](emulators/nintendo-64.md#rumble) | Each player's Rumble Pak is set in Core Options, from **Player 1 Pak** to **Player 4 Pak**. |
+| [Nintendo Wii, GameCube](emulators/wii-gamecube.md#multiplayer) | Every player gets Player 1's controller. On Wii, each player shakes with `R2`, and only Player 1 can point or use the phone's motion. |
 
 ## Limits
 

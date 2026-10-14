@@ -55,8 +55,9 @@ Rumble Pak rumble, such as Super Smash Bros. Mario Kart 64 doesn't.
 
 ## Settings
 
-- Video uses the **GLideN64** plugin. The paraLLEl plugins are not offered:
-  they need Vulkan, which the app doesn't use.
+- Video uses the **GLideN64** plugin. With **Graphics API** set to
+  **Vulkan**, it switches to the paraLLEl plugins: more accurate, and
+  heavier. See [Graphics API](index.md#graphics-api).
 - Many video options, such as the resolution, only take effect when a game
   starts. They are in [Emulator Settings](../emulator-settings.md), not in
   the in-game **Core Options**.

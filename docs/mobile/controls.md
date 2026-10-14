@@ -44,6 +44,8 @@ doesn't have:
 | PlayStation, PSP | `○` `×` `△` `□` |
 | Nintendo 64 | `A`, `B`, a yellow C-button diamond, and `Z` on `L2` |
 | Dreamcast | `A` `B` `X` `Y` in the Dreamcast's colours |
+| GameCube | A green `A`, a red `B`, `X`, `Y`, `Z`, `L` and `R` triggers, and a C-stick |
+| Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
 
 The Sega pad follows the game's [Controller Type](#controller-type-sega).
 
@@ -131,7 +133,8 @@ Changes.
 These consoles go by the printed letter: Super Nintendo, NES and Famicom
 Disk System, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS,
 Nintendo 3DS, Virtual Boy, Atari Lynx, Pokémon mini, WonderSwan,
-Nintendo 64, Sega Dreamcast, NAOMI, Atomiswave and Neo Geo Pocket.
+Nintendo 64, Nintendo Wii, Nintendo GameCube, Sega Dreamcast, NAOMI,
+Atomiswave and Neo Geo Pocket.
 
 These go **by position** instead, like the console's own pad: PlayStation,
 PSP, the Sega consoles (Genesis, Sega CD, 32X, Master System, Game Gear,
