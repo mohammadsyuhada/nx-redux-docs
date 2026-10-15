@@ -207,6 +207,7 @@ nav:
       - Apps & Features:
           - Artwork: mobile/artwork.md
           - Cheats: mobile/cheats.md
+          - Device Sync: mobile/device-sync.md
           - Emulator Settings: mobile/emulator-settings.md
           - Game Tracker: mobile/game-tracker.md
           - RetroAchievements: mobile/retroachievements.md

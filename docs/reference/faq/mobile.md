@@ -80,7 +80,12 @@ phone to an NX Redux handheld (TrimUI Brick, Brick Pro or Smart Pro S).
 Press `Y` **Netplay** on a game. Game Boy and Game Boy Advance games link
 for trades and battles. See [Netplay](../../mobile/netplay.md).
 
-Device Sync comes in a later release.
+## Can I sync saves with my handheld?
+
+Yes. **Tools → Device Sync** carries saves and save states between the phone
+and an NX Redux handheld, over Wi-Fi or a USB-C cable. Update the handheld to
+the latest NX Redux first. ROMs don't sync from the phone yet. See
+[Device Sync](../../mobile/device-sync.md).
 
 ## Can two people play on one phone?
 
