@@ -157,6 +157,11 @@ your own, or replace a stock one:
 The logo shows in every layout the next time the Consoles tab loads (switch
 tabs, or restart). It is on the SD card with your games, so updates keep it.
 
+*Consoles tab in Carousel with a PlayStation pad as the PlayStation logo,
+Consoles background set to None*
+
+![Consoles tab in Carousel style with a custom PlayStation logo](../../assets/screenshots/consoles-carousel-custom-logo.png)
+
 ??? info "More detail"
     - The image is drawn as it is, colours and all. To match the stock logos,
       use a white or light grey logo on a transparent background.
