@@ -192,7 +192,7 @@ carousel, and Tools is a grid.
 ![Consoles tab](../../assets/screenshots/consoles-carousel.png)
 
 - Consoles show their logo and how many games they hold. Behind the
-  selected console you see its controller, unless you set **Consoles controller** to
+  selected console you see its controller, unless you set **Consoles background** to
   `Background` or `None` in Layouts. A system without a logo shows its name under a cartridge
   emblem.
 - Collections show their name and game count.

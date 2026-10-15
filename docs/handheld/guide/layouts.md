@@ -51,37 +51,6 @@ background.
 - On the main menu `Left` / `Right` switch tabs. In game lists they page up
   and down.
 
-### Your own console backgrounds
-
-The Consoles tab in List can show a picture of your choosing behind each
-console instead of its controller, much like the list's look before 2.0.
-
-1. Make the image and name it `bg.png`.
-2. Put it in that console's `.media` folder:
-   `Roms/<console> (<tag>)/.media/bg.png`, for example
-   `Roms/Game Boy (GB)/.media/bg.png`.
-3. In [Settings → Layouts](../settings/layouts.md), set **Consoles controller** to
-   **Background**.
-
-The selected console's `bg.png` then fills the screen behind the list. A
-console without one shows the plain list on black.
-
-*Consoles tab in List with a custom background, Page title and Button hints
-hidden*
-
-![Consoles tab in List style with a custom Game Boy background](../../assets/screenshots/consoles-list-custom-bg.png)
-
-??? info "More detail"
-    - Size the image to the screen: 1024×768 on the Brick, 1280×720 on the
-      Brick Pro and Smart Pro S.
-    - With **Consoles controller** set to `Controller`, the controller is
-      shown and `bg.png` is ignored. Set to `None`, neither shows.
-    - The Collections tab in List takes a background too, with no setting to
-      change: `Collections/.media/<collection name>.png` for one collection,
-      or `Collections/.media/bg.png` for all of them.
-    - The [Artwork Manager](../apps/artwork-manager.md) never touches `bg.png`:
-      neither **Reset artwork** nor **Optimize images** changes it.
-
 ## Grid
 
 Two rows of tiles that slide sideways as you move. Consoles show their logo
@@ -134,6 +103,45 @@ can swap the boxes for the 2D box art or the game's logo (wheel).
 
 ![Game list in Backdrop style](../../assets/screenshots/game-list-backdrop.png)
 
+## Your own console backgrounds
+
+The Consoles tab in List or Carousel can show a picture of your choosing
+behind each console instead of its controller, much like the list's look
+before 2.0.
+
+1. Make the image and name it `bg.png`.
+2. Put it in that console's `.media` folder:
+   `Roms/<console> (<tag>)/.media/bg.png`, for example
+   `Roms/Game Boy (GB)/.media/bg.png`.
+3. In [Settings → Layouts](../settings/layouts.md), set **Consoles background** to
+   **Background**.
+
+The selected console's `bg.png` then fills the screen behind the list or the
+carousel, and changes as you move. A console without one shows on plain
+black.
+
+*Consoles tab in List with a custom background, Page title and Button hints
+hidden*
+
+![Consoles tab in List style with a custom Game Boy background](../../assets/screenshots/consoles-list-custom-bg.png)
+
+*Consoles tab in Carousel with the same background, Page title and Button
+hints hidden*
+
+![Consoles tab in Carousel style with a custom Game Boy background](../../assets/screenshots/consoles-carousel-custom-bg.png)
+
+??? info "More detail"
+    - Size the image to the screen: 1024×768 on the Brick, 1280×720 on the
+      Brick Pro and Smart Pro S.
+    - With **Consoles background** set to `Controller`, the controller is
+      shown and `bg.png` is ignored. Set to `None`, neither shows.
+    - The Grid style always shows the Consoles tab on black.
+    - The Collections tab in List takes a background too, with no setting to
+      change: `Collections/.media/<collection name>.png` for one collection,
+      or `Collections/.media/bg.png` for all of them.
+    - The [Artwork Manager](../apps/artwork-manager.md) never touches `bg.png`:
+      neither **Reset artwork** nor **Optimize images** changes it.
+
 ## Your own console logos
 
 Each console on the Consoles tab shows its logo in Grid, Carousel and List. A
@@ -149,12 +157,17 @@ your own, or replace a stock one:
 The logo shows in every layout the next time the Consoles tab loads (switch
 tabs, or restart). It is on the SD card with your games, so updates keep it.
 
+*Consoles tab in Carousel with a PlayStation pad as the PlayStation logo,
+Consoles background set to None*
+
+![Consoles tab in Carousel style with a custom PlayStation logo](../../assets/screenshots/consoles-carousel-custom-logo.png)
+
 ??? info "More detail"
     - The image is drawn as it is, colours and all. To match the stock logos,
       use a white or light grey logo on a transparent background.
     - Make it wide rather than tall, about 650 pixels across at most. A larger
       image is shrunk to fit, but it takes longer to load.
-    - In List with **Consoles controller** set to `Controller`, a console with
+    - In List with **Consoles background** set to `Controller`, a console with
       a controller picture shows the controller, not the logo.
     - The [Artwork Manager](../apps/artwork-manager.md) never touches
       `logo.png`, and **Delete Rom** keeps it too.
@@ -188,8 +201,9 @@ the freed space to the screen's edge.
 
 ??? info "More detail"
     - **Controller art.** The Consoles tab shows each console's controller
-      behind it in the List and Carousel styles. Set **Consoles controller** to
-      `Background` or `None` in Layouts for plain logos.
+      behind it in the List and Carousel styles. Set **Consoles background** to
+      `None` in Layouts for plain logos, or `Background` for
+      [your own pictures](#your-own-console-backgrounds) behind them.
     - **Logos.** Systems without a logo of their own show their name under a
       cartridge emblem. Tools without an icon get a generic one.
     - **Games without artwork.** A game with no screenshot or box art gets a

@@ -60,17 +60,17 @@ How the tab draws: `List`, `Grid` or `Carousel`.
 Whether the tab's carousel runs across (`Horizontal`, the default) or down
 (`Vertical`) the screen. Shows only while the tab's layout is `Carousel`.
 
-### Consoles controller
+### Consoles background
 
 Consoles only. What shows behind the Consoles tab. Shows only while the
 Consoles tab is shown.
 
 - `Controller` (default): each console's controller.
-- `Background`: no controller. In the List style your own picture shows
-  behind each console instead: see
+- `Background`: no controller. In the List and Carousel styles your own
+  picture shows behind each console instead: see
   [Your own console backgrounds](../guide/layouts.md#your-own-console-backgrounds).
-- `None`: no controller and, in the List style, no background either, not
-  even your own `bg.png`: a plain list on black.
+- `None`: no controller and no background either, not even your own
+  `bg.png`: plain black.
 
 ## Game lists
 
