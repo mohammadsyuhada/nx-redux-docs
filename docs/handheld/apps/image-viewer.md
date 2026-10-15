@@ -39,6 +39,7 @@ default:
 | `Up` / `Down` | — | Pan |
 | `R1` / `L1` | Zoom in | Zoom in / out (out of the first step returns to fit) |
 | `A` | Toggle the info overlay | Toggle the info overlay |
+| `Y` | Rotate 90° clockwise | Rotate 90° clockwise (returns to fit size) |
 | `B` | Back to the browser | Back to fit size, then back to the browser |
 
 Zoom steps through **fit → 100% → 200% → 400%**.
@@ -49,6 +50,26 @@ your position among the folder's images (e.g. `1 / 2`).
 ??? info "More detail"
     Zoom skips any step that wouldn't enlarge the image past its fit size,
     so a small image goes straight from fit to the first larger step.
+
+## Rotate
+
+Press `Y` in the fullscreen viewer to turn the image 90° clockwise. Press it
+again to keep turning (180°, 270°, back to the start).
+
+![Image Viewer showing a rotated screenshot](../../assets/screenshots/imageviewer-rotated.png)
+
+The rotation is saved to the file itself, so the picture stays rotated
+when you open it again and when you copy it to a computer. This is handy
+for screenshots of games you play holding the device sideways.
+
+- The file is saved a second after your last `Y` press, or straight away
+  when you move to another image or press `B`.
+- `jpg`, `jpeg`, `bmp` and `gif` files are re-saved through FFmpeg. JPG
+  screenshots are re-encoded at the same high quality the OSD uses, so there
+  is a very small quality loss; animated GIFs keep all their frames.
+- `png` files are re-saved without any loss.
+- If saving fails, a "Couldn't save rotation" message appears and the
+  original file is left as it was.
 
 ## Rename & Delete
 
