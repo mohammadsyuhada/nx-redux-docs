@@ -51,10 +51,25 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 When it's released, the APK is listed on the
 [Download](../reference/download.md) page.
 
+## Allow All files access
+
+On Android 11 and later, first setup starts by asking **Allow All files
+access**. The app uses it to read your library faster and to show its own
+folder picker, and Device Sync will use it to sync ROMs with a handheld.
+
+- Press `A` **Allow** to open Android's page for the app, turn the switch on,
+  then come back. Setup goes on to the home folder.
+- Press `B` **Skip** to go on without it. The app then uses Android's folder
+  picker, and works as before.
+
+Setup asks only once. You can turn it on or off later in **Tools → Settings →
+Library → ROM folders → All files access**.
+
 ## Choose a home folder
 
-On first start the app asks you to **Pick a home folder**. Press `A`
-**Pick folder** to open Android's folder picker.
+Next the app asks you to **Pick a home folder**. Press `A` **Pick folder**.
+With All files access the app's own [folder picker](library.md#the-folder-picker)
+opens; without it, Android's folder picker does.
 
 ![Pick a home folder](../assets/screenshots/mobile/first-run-home-folder.webp)
 
@@ -64,7 +79,6 @@ The app creates the NX Redux layout inside the folder you pick:
 | --- | --- |
 | `Roms/<Display Name (TAG)>/` | Games, one folder per system |
 | `Bios/<TAG>/` | BIOS files for systems that need them |
-| `Saves/<TAG>/` | Battery saves, mirrored from the app |
 | `Collections/` | Your game collections, once you make one |
 
 The folders are visible to file managers, so you can copy games in from a
@@ -73,9 +87,14 @@ computer. The home folder can sit on an SD card.
 If your games already follow the NX Redux layout from a handheld, the same
 folder names and `Bios/<TAG>/` files work unchanged.
 
+Saves and save states are kept inside the app, not in the home folder. See
+[Saves](library.md#saves).
+
 !!! note "Pick a folder, not a root"
-    The picker can't use the storage root, the SD card root or the Download
-    folder. Pick or create a folder inside one of them, such as `NXRedux`.
+    Android's picker can't use the storage root, the SD card root or the
+    Download folder. Pick or create a folder inside one of them, such as
+    `NXRedux`. The app's own picker can make one for you with `X` **New
+    folder**.
 
 ## Add a ROMs folder
 

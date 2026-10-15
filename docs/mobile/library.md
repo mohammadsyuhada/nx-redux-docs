@@ -56,6 +56,7 @@ reads.
 | Row | What it does |
 | --- | --- |
 | **Home folder** | Shows the home folder's name. `A` picks a different one. |
+| **All files access** | Android 11 and later. Shows **On** or **Off**. `A` opens Android's page for the app. |
 | One row per extra folder | Shows the folder's name and its state. `A` offers to remove it. |
 | **Add ROM folder** | Pick another extra folder to scan. |
 
@@ -66,6 +67,7 @@ An extra folder's row reads:
 | **ROM folder** | The folder was found at the last scan. |
 | **Not available** | Its storage was missing, such as an SD card taken out. |
 | **Not ready yet** | Its storage is in, but Android didn't list it in time. Use **Rescan library** in a moment. |
+| **All files access off** | The folder was picked with All files access, which is now off. |
 
 While the home folder's storage is missing, its row reads
 **"<name> · not available"**.
@@ -73,6 +75,36 @@ While the home folder's storage is missing, its row reads
 Removing an extra folder opens the **Remove folder** dialog: **Stop scanning
 this folder? Its ROMs stay where they are.** Choose **Remove** to stop
 scanning it. Nothing in the folder is deleted.
+
+## All files access
+
+With **All files access** on, the app reads your folders directly instead of
+through Android's storage picker, which is faster on large libraries, and
+every folder or file pick uses the app's own [folder picker](#the-folder-picker).
+
+- A home folder or extra folder you picked earlier through Android's picker,
+  on the phone's storage or an SD card, switches over by itself. Its games,
+  hidden games and names stay as they are.
+- If you turn the access off, your folders are kept. The library keeps its
+  last scan and says **All files access is off. Turn it on in Settings → All
+  files access, or pick the home folder again.** Turn it back on and your
+  games come back, with no rescan needed.
+
+## The folder picker
+
+With All files access, picking the home folder, an extra folder, or a folder
+or zip to import, and saving an export, all use the app's own picker, a list
+like the rest of the app.
+
+- It starts at your storage, **Internal storage** and any SD card, or next to
+  your home folder.
+- The first row is **Use this folder**, or **Save here** for an export.
+  Folders follow, A–Z; when importing a zip, `.zip` files are listed too.
+  Hidden (dot) folders are not shown.
+- `A` opens a folder, or picks the row. `B` goes up a level, and at the
+  storage list cancels.
+- `X` **New folder** asks for a name and opens the new folder.
+- An export over a file of the same name asks **Replace <name>?** first.
 
 ## Unassigned games
 
@@ -182,11 +214,19 @@ Use **Add to Collection** in the game-list context menu.
 
 ## Saves
 
-Battery saves are mirrored to `Saves/<TAG>/` in the home folder.
+Battery saves and save states are kept inside the app, in the handheld's card
+layout. The home folder holds only `Roms/`, `Bios/` and `Collections/`.
 
-!!! warning "Replace saves only while the game is closed"
-    Replace files in `Saves/<TAG>/` only while that game is not running. The
-    app's working copy wins on the next write.
+- **Tools → Settings → Emulators → Saves → Export saves** writes one zip of
+  your saves, states and slot pictures, which unzips onto a handheld card as it
+  is.
+- **Import saves**, on the same page, reads from the home folder, a zip file
+  or another folder. A newer file replaces the app's copy, which is kept as a
+  `.bak`.
+
+!!! warning "Export before uninstalling"
+    Saves are stored inside the app, so export them before you uninstall the
+    app or clear its data.
 
 - BIOS files are read from `Bios/<TAG>/` before each launch.
 - Pinned and hidden games are stored inside the app. Hidden games can be shown
