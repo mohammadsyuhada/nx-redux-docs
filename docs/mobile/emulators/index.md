@@ -65,12 +65,10 @@ Three consoles have a second emulator, each with its own tag:
 | Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
 | Sony PlayStation | `PS` (PCSX-ReARMed), `PSX` (SwanStation) |
 
-- A leftover older folder named with a tag, such as `Game Boy Advance (MGBA)`,
-  uses that tag.
-- Otherwise the emulator comes from **Tools → Settings → Emulators → Default
+- The emulator comes from **Tools → Settings → Emulators → Default
   emulators**.
 - For one game, press `MENU` on it in a game list and pick **Emulator**. This
-  choice wins over both.
+  choice wins over the default.
 
 Each console has one folder, and its battery saves and BIOS are shared by its
 emulators. Save states stay per emulator. To set a core's options outside

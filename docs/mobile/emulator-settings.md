@@ -90,8 +90,6 @@ always show:
 `A`, `LEFT` or `RIGHT` cycles them. The other rows are dimmed and only show
 the emulator in use.
 
-- A leftover older folder with a tag, such as `Game Boy Advance (MGBA)`, uses
-  that tag's emulator.
 - Saves and BIOS are shared by the console's emulators, so switching emulator
   copies nothing.
 - To switch one game to another emulator, use **Emulator** in its context

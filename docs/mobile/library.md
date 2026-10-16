@@ -138,12 +138,11 @@ with its own tag:
 | Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) | `GBA` |
 | Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) | `SFC` |
 
-Sega Genesis has one tag, `MD`, on Genesis Plus GX. An older `Sega Genesis (GPGX)` folder uses a legacy tag and still lists under Sega Genesis.
+Sega Genesis has one tag, `MD`, on Genesis Plus GX.
 
 A game runs with the emulator from its `systems.txt` entry or its own
-**Emulator** choice. Without one, a leftover older folder such as `Game Boy
-Advance (MGBA)` uses its tag, and anything else uses **Tools → Settings →
-Emulators → Default emulators**. This covers extra folders without a `(TAG)`,
+**Emulator** choice. Without one, it uses **Tools → Settings → Emulators →
+Default emulators**. This covers extra folders without a `(TAG)`,
 such as one named `My Game Boy Advance`, and Unassigned games you give a
 console. See [Emulator Settings](emulator-settings.md#default-emulators).
 
