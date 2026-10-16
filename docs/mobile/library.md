@@ -4,8 +4,9 @@
 
 The library comes from two kinds of folder:
 
-- **The home folder**, laid out as `Roms/<Name (TAG)>/`. The app created it
-  and writes only inside it.
+- **The home folder**, laid out as `Roms/<Name (TAG)>/`, one folder per
+  console, such as `Roms/Game Boy Advance (GBA)/`. The app created it and
+  writes only inside it.
 - **Extra folders**, any number of them, scanned in place and never written
   to.
 
@@ -128,7 +129,9 @@ Rom** and **Console**.
 
 ## Default emulators
 
-Two consoles have two emulators, each with its own tag:
+Each console has one folder, its saves and BIOS are kept per console, and a
+game runs on the console's emulator. Two consoles have two emulators, each
+with its own tag:
 
 | Console | Tags | Default |
 | --- | --- | --- |
@@ -137,15 +140,16 @@ Two consoles have two emulators, each with its own tag:
 
 Sega Genesis has one tag, `MD`, on Genesis Plus GX. An older `Sega Genesis (GPGX)` folder uses a legacy tag and still lists under Sega Genesis.
 
-**Tools → Settings → Emulators → Default emulators** sets the tag for games in
-a folder without a `(TAG)`, such as an extra folder named `My Game Boy
-Advance`, and for Unassigned games you give a console. A folder with a tag, in
-the home folder or an extra one, always uses that tag. See
-[Emulator Settings](emulator-settings.md#default-emulators).
+A game runs with the emulator from its `systems.txt` entry or its own
+**Emulator** choice. Without one, a leftover older folder such as `Game Boy
+Advance (MGBA)` uses its tag, and anything else uses **Tools → Settings →
+Emulators → Default emulators**. This covers extra folders without a `(TAG)`,
+such as one named `My Game Boy Advance`, and Unassigned games you give a
+console. See [Emulator Settings](emulator-settings.md#default-emulators).
 
 To run one game on the other emulator, use **Emulator** in its context menu.
-For consoles whose saves work on both emulators, the app then offers to copy
-the newer save across, keeping a timestamped `.bak` of the save it replaces.
+Both emulators share the console's battery saves, so nothing is copied and
+the game picks up where it left off. Save states stay per emulator.
 
 ## Disc games in their own folder
 
@@ -228,14 +232,17 @@ layout. The home folder holds only `Roms/`, `Bios/` and `Collections/`.
     Saves are stored inside the app, so export them before you uninstall the
     app or clear its data.
 
-- BIOS files are read from `Bios/<TAG>/` before each launch.
+- Saves and BIOS are kept per console, in `Saves/<TAG>/` and `Bios/<TAG>/`
+  with the console's tag, such as `GBA` for both gpSP and mGBA. BIOS files are
+  read from `Bios/<TAG>/` before each launch.
 - Pinned and hidden games are stored inside the app. Hidden games can be shown
   again from **Tools → Settings → Library → Hidden games**.
 - Nothing in the app deletes a ROM.
 
 ??? info "More detail"
     Cores play from a private working copy of each battery save. The mirror in
-    `Saves/<TAG>/` is updated after each save write and when you quit.
+    `Saves/<TAG>/` is updated after each save write and when you quit. Save
+    states are kept per emulator, in `.userdata/shared/<TAG>-<core>/`.
 
 ## Unpacked games cache
 

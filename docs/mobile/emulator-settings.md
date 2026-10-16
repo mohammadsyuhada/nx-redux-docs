@@ -66,8 +66,8 @@ Settings**. The same page opens over the list, for that one game.
 ## Default emulators
 
 Some consoles can run on more than one emulator. **Tools → Settings →
-Emulators → Default emulators** picks the one used for a folder that has no
-tag.
+Emulators → Default emulators** picks the emulator for a game with
+no emulator of its own and no older tagged folder.
 
 ![Default emulators: one row per console, with Game Boy Advance the only one shown here that can change](../assets/screenshots/mobile/default-emulators.webp)
 
@@ -90,7 +90,9 @@ always show:
 `A`, `LEFT` or `RIGHT` cycles them. The other rows are dimmed and only show
 the emulator in use.
 
-- A folder with a tag, such as `Game Boy Advance (MGBA)`, always uses that
-  tag's emulator.
+- A leftover older folder with a tag, such as `Game Boy Advance (MGBA)`, uses
+  that tag's emulator.
+- Saves and BIOS are shared by the console's emulators, so switching emulator
+  copies nothing.
 - To switch one game to another emulator, use **Emulator** in its context
   menu. See [Emulators](emulators/index.md).

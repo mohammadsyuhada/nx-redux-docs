@@ -65,14 +65,15 @@ Three consoles have a second emulator, each with its own tag:
 | Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
 | Sony PlayStation | `PS` (PCSX-ReARMed), `PSX` (SwanStation) |
 
-- A folder named with a tag, such as `Game Boy Advance (MGBA)`, uses that
-  tag.
-- For folders without a tag, pick the emulator in **Tools → Settings →
-  Emulators → Default emulators**.
+- A leftover older folder named with a tag, such as `Game Boy Advance (MGBA)`,
+  uses that tag.
+- Otherwise the emulator comes from **Tools → Settings → Emulators → Default
+  emulators**.
 - For one game, press `MENU` on it in a game list and pick **Emulator**. This
   choice wins over both.
 
-The tag is where saves and settings are kept. To set a core's options outside
+Each console has one folder, and its battery saves and BIOS are shared by its
+emulators. Save states stay per emulator. To set a core's options outside
 a game, for a whole console or for one game, see
 [Emulator Settings](../emulator-settings.md).
 

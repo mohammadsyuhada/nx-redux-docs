@@ -27,7 +27,18 @@ its date, time and length, newest first.
 
 ![Game Tracker → Advance Wars: 11m 47s total, 17 sessions, then each session](../assets/screenshots/mobile/game-tracker-sessions.webp)
 
-The page is read-only. `B` goes back to the list, on the same game.
+`B` goes back to the list, on the same game. The page also has the game's
+play-time actions, the same as [Options](#options):
+
+| Button | What it does |
+| --- | --- |
+| `X` **Merge** | Merge this game into another. Shown when the tracker has two games or more. |
+| `SELECT` **Unmerge** | Split a merged game back out. Shown only on a game with others merged into it. |
+| `Y` **Delete** | Delete the game's play time |
+
+On touch they are icons at the right of the title row. **Cancel** in any of
+them returns to the sessions. After a merge, unmerge or delete you land on the
+list.
 
 ## Options
 

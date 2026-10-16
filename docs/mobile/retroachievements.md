@@ -119,8 +119,10 @@ It works offline. With nothing cached yet it shows **No cached games** and
 ![RetroAchievements → Achievements, listing cached games with their progress, shown here signed out](../assets/screenshots/mobile/ra-games.webp)
 
 Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
-or **Locked**, with its points, in green, amber or grey. `Y` switches between
-**Locked only** and **Show all**.
+or **Locked**, with its points, in green, amber or grey. `Y` (on touch, the
+filter icon) switches between **Locked only** and **Show all**, and a notice
+says which: **Showing locked achievements only** or **Showing all
+achievements**.
 
 `A` opens an achievement's details: its badge, description, points, when it
 was unlocked or its progress, its unlock rate, its type (`[Missable]`,
