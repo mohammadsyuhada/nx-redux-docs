@@ -15,9 +15,12 @@ other.
 
 - **Game saves** (`Saves/`)
 - **Save states**, with their slot pictures
+- **ROMs**, only when you turn them on (see [ROMs](#roms)), with their art and
+  RetroAchievements data
+- **BIOS** files, **collections** and game hashes
 
-ROMs don't sync from the phone yet. Everything else stays on each device:
-settings, recently played, play time and your RetroAchievements login.
+Everything else stays on each device: settings, recently played, play time and
+your RetroAchievements login.
 
 ## How to sync
 
@@ -41,14 +44,63 @@ side got, such as **Sync complete: 12 files received, 5 sent.**
 | `B` **Cancel** | Stop looking for the other device |
 | `B` **Stop** | Stop a running sync. It asks **Stop the sync?** first. |
 | `A` **Sync again** / **Retry** | Run it again, after it ends or fails |
+| `X` **ROMS: ON / OFF** | Sync ROMs too. Off each time the page opens. |
 | `B` **Back** | Go back |
 
 - A stopped sync keeps the files it already copied.
+- A sync that is stopped or fails on one device ends on the other at once.
+  A phone left waiting says **The other device's sync failed. Check it, then
+  sync again.**; a handheld says **The other device's sync failed**.
+- If the other device paired but its answer was lost, the phone stops with **The
+  other device paired, but its answer never reached this phone. Stop the
+  sync on it, then start again on both.**
 - You can leave the page or switch apps: the sync goes on, with a
   **Device Sync** notification. The notification's **Cancel** stops
   it. Open Device Sync again to see where it is.
 - Sync via Wi-Fi needs the phone on Wi-Fi. If it isn't, the page says
   **Wi-Fi not connected. Turn on Wi-Fi, or sync via cable.**
+
+## ROMs
+
+ROMs are off each time you open the page. Press `X` (**ROMS: ON**), or, on
+touch without a hint bar, tap the SD-card icon at the right of the page title.
+The icon is lit when ROMs sync, and a notice says **ROMs will sync too** or
+**ROMs won't sync**. ROM sync needs **All files access**; without it the page
+says **ROMs were skipped: turn on All files access to sync them.**
+
+Between two phones, each console folder syncs as it is. With a handheld, the
+phone's one folder per console maps onto the handheld's per-emulator folders:
+
+- Games from every handheld folder of a console land in the phone's console
+  folder. A game the handheld keeps in two emulator folders of one console
+  is pulled once.
+- A game pulled from a handheld emulator folder, such as `Game Boy Advance
+  (MGBA)` or `Sega Master System (GPGX)`, keeps that emulator on the phone:
+  it becomes the game's **Emulator** choice. A game that already has a
+  choice keeps it.
+- Each phone game goes to one handheld folder: the one whose tag is the
+  emulator the phone runs the game with. With several such folders, the one
+  named like the console. With none, the console's first emulator folder the
+  handheld has. A handheld with only `Sony PlayStation (PSX)` gets the
+  phone's PCSX ReARMed games there.
+- A console the handheld has no folder for is skipped, and listed when the
+  sync is done. Sync never creates a ROM folder on the handheld.
+- Box art and screenshots travel with the games, and only fill gaps.
+
+Handheld folders that were renamed still match: by the console's name,
+ignoring case, spaces and punctuation (`Gameboy (GB)`, `Mastersystem
+(GPGX)`), by a console name inside the folder name (`Sega Mega-CD (GPGX)`), or
+by the tag. A folder with a tag that several consoles share, such as `GPGX`,
+and a name no console matches is skipped, not guessed.
+
+Saves match by game across the handheld's save formats (MinUI, Generic,
+RetroArch, compressed) and go where the game is. BIOS files only fill what the
+other side lacks, per console. Collections and game hashes follow the same
+mapping.
+
+On Nintendo DS, when a game's only save is the handheld's DraStic `.dsv`, the
+phone plays and saves that `.dsv` in place, so progress goes both ways. A game
+you started on the phone keeps the phone's save format.
 
 ??? info "More detail"
     - Sync never deletes anything. A file missing on one device is copied

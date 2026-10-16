@@ -148,6 +148,7 @@ Nintendo 64, Dreamcast, Nintendo DS, Nintendo 3DS and PSP, has no
 | Super Nintendo | `SFC` | Snes9x, or Supafaust | Lockstep |
 | Super Nintendo | `SUPA` | Supafaust, or Snes9x | Lockstep |
 | Sega Genesis, Master System, Game Gear, SG-1000, Sega CD | `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | PicoDrive, or Genesis Plus GX | Lockstep |
+| Sega Genesis, Master System, Game Gear, SG-1000, Sega CD | `GPGX` | Genesis Plus GX, or PicoDrive | Lockstep |
 | Sega 32X | `32X` | PicoDrive | Lockstep |
 | PlayStation | `PS` | PCSX-ReARMed, or SwanStation | Lockstep |
 | PlayStation | `PSX` | SwanStation, or PCSX-ReARMed | Lockstep |
@@ -156,18 +157,10 @@ Nintendo 64, Dreamcast, Nintendo DS, Nintendo 3DS and PSP, has no
 | Game Boy Advance | `GBA` | gpSP, or mGBA (USB Cable only) | **GBA Link** |
 | Game Boy Advance | `MGBA` | mGBA, or gpSP | **GBA Link**, [USB Cable only](#game-boy-advance-link) |
 
-A legacy `Sega Genesis (GPGX)` folder plays too, on Genesis Plus GX first.
-
 | Netplay type | What it means |
 | --- | --- |
 | **Lockstep** | Both devices run the same game and swap controller input every frame. For games with a two-player mode. |
 | **GB Link** / **GBA Link** | The link cable between two Game Boys. Trades and versus battles in single-player cartridges work between the two devices. |
-
-!!! note "Sega games play on PicoDrive"
-    The phone plays Sega games on Genesis Plus GX, but a netplay match
-    starts on PicoDrive, as the handheld does. Your progress in a PicoDrive
-    match isn't saved to your Genesis Plus GX save. Two phones can set
-    **Emulator** to **Genesis Plus GX** to play on their real saves.
 
 !!! info "Game Gear"
     The Game Gear has one controller port: its two-player games used the
@@ -233,9 +226,9 @@ Your own save is never overwritten by the other player's.
 - **The host** plays on its real save, so its progress is kept, as long as
   the match runs on the folder's own emulator or one that shares its saves:
   gpSP and mGBA, Snes9x and Supafaust, PCSX-ReARMed and SwanStation.
-- **A host on another emulator**, such as PicoDrive for a Sega game, plays on
-  a copy. The game starts with **Using PicoDrive for this match - progress
-  won't be saved.**
+- **A host on another emulator**, such as Genesis Plus GX for a Sega game on
+  PicoDrive, plays on a copy. The game starts with **Using Genesis Plus GX
+  for this match - progress won't be saved.**
 - If the host has no save for the game, both start fresh.
 - Hosting on your real save clears the game's resume point, so
   [Resume](game-switcher.md) can't roll the save back.

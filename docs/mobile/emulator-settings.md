@@ -23,7 +23,7 @@ the console first.
 ## An emulator's settings
 
 The page is titled with the emulator, the console and the tag, such as
-**Genesis Plus GX — Sega Genesis (MD)**. It has two groups:
+**Genesis Plus GX — Sega Genesis (GPGX)**. It has two groups:
 
 | Group | What it holds |
 | --- | --- |
@@ -31,9 +31,6 @@ The page is titled with the emulator, the console and the tag, such as
 | **Core settings** | The emulator's own options. Rows with `›` open a group of options, such as **Video** or **Audio**. |
 
 ![Genesis Plus GX for Sega Genesis: Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp)
-
-The shot shows a legacy `Sega Genesis (GPGX)` folder. A `Sega Genesis (MD)`
-folder looks the same, with `(MD)` in the title.
 
 - `LEFT` and `RIGHT` change a value. `A` steps it forward too.
 - Each change is saved straight away. There is no **Save** row.
@@ -66,31 +63,25 @@ Settings**. The same page opens over the list, for that one game.
 ## Default emulators
 
 Some consoles can run on more than one emulator. **Tools → Settings →
-Emulators → Default emulators** picks the one used for a folder that has no
-tag.
+Emulators → Default emulators** picks the emulator for a game with
+no emulator of its own.
 
 ![Default emulators: one row per console, with Game Boy Advance the only one shown here that can change](../assets/screenshots/mobile/default-emulators.webp)
 
 The page explains:
 
-> For games in folders without a (TAG), e.g. "My Game Boy Advance". A
+> For every game of the console, whichever of its folders holds it. A
 > per-game Emulator choice still wins.
 >
 > The tag is where saves and settings are kept.
 
 Each console you have games for has a row, showing its emulator and tag,
-such as **gpSP (GBA)**. Only two consoles have a choice, and their rows
-always show:
-
-| Console | Choices |
-| --- | --- |
-| **Game Boy Advance** | **gpSP (GBA)**, **mGBA (MGBA)** |
-| **Super Nintendo ES** | **Snes9x (SFC)**, **Supafaust (SUPA)** |
-
-`A`, `LEFT` or `RIGHT` cycles them. The other rows are dimmed and only show
+such as **gpSP (GBA)**. The consoles with more than one emulator (listed in
+[Choosing an emulator](emulators/index.md#choosing-an-emulator)) always show,
+and `A`, `LEFT` or `RIGHT` cycles their emulators. The other rows are dimmed and only show
 the emulator in use.
 
-- A folder with a tag, such as `Game Boy Advance (MGBA)`, always uses that
-  tag's emulator.
+- Saves and BIOS are shared by the console's emulators, so switching emulator
+  copies nothing.
 - To switch one game to another emulator, use **Emulator** in its context
   menu. See [Emulators](emulators/index.md).
