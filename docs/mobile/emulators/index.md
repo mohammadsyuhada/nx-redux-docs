@@ -31,7 +31,8 @@ Neo Geo Pocket's `Option`, are on [Other Systems](other-systems.md).
 | NES / Famicom Disk System | `FC`, `FDS` | FCEUmm |
 | Super Nintendo | `SFC` | Snes9x |
 | Super Nintendo | `SUPA` | Supafaust |
-| Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | Genesis Plus GX |
+| Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `MD`, `SMS`, `GG`, `SG1000`, `SEGACD` | PicoDrive |
+| Genesis / Mega Drive, Master System, Game Gear, SG-1000, Sega CD | `GPGX` | Genesis Plus GX |
 | Sega 32X | `32X` | PicoDrive |
 | [Dreamcast, NAOMI, Atomiswave](dreamcast.md) | `DC` | Flycast |
 | [PlayStation](playstation.md) | `PS` | PCSX-ReARMed |
@@ -57,18 +58,31 @@ and no folder.
 
 ## Choosing an emulator
 
-Three consoles have a second emulator, each with its own tag:
+Eight consoles have a second emulator, each with its own tag:
 
 | Console | Tags |
 | --- | --- |
 | Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) |
 | Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) |
 | Sony PlayStation | `PS` (PCSX-ReARMed), `PSX` (SwanStation) |
+| Sega Genesis | `MD` (PicoDrive), `GPGX` (Genesis Plus GX) |
+| Sega Master System | `SMS` (PicoDrive), `GPGX` (Genesis Plus GX) |
+| Sega Game Gear | `GG` (PicoDrive), `GPGX` (Genesis Plus GX) |
+| Sega SG-1000 | `SG1000` (PicoDrive), `GPGX` (Genesis Plus GX) |
+| Sega CD | `SEGACD` (PicoDrive), `GPGX` (Genesis Plus GX) |
 
 - The emulator comes from **Tools → Settings → Emulators → Default
   emulators**.
 - For one game, press `MENU` on it in a game list and pick **Emulator**. This
   choice wins over the default.
+- PicoDrive is the Sega consoles' default, as on the handheld, so a
+  handheld save state resumes on the phone. Genesis Plus GX shows as
+  **Genesis Plus GX (GPGX)**, with its states in the handheld's
+  `GPGX-genesis_plus_gx` folder.
+- A Classic NES Series cart, such as Pac-Man, doesn't run on gpSP. On its
+  first launch with gpSP as the console's default, the app sets its
+  **Emulator** to mGBA and starts it there. A game you set to gpSP yourself
+  stays on gpSP.
 
 Each console has one folder, and its battery saves and BIOS are shared by its
 emulators. Save states stay per emulator. To set a core's options outside

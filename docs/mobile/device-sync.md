@@ -48,6 +48,12 @@ side got, such as **Sync complete: 12 files received, 5 sent.**
 | `B` **Back** | Go back |
 
 - A stopped sync keeps the files it already copied.
+- A sync that is stopped or fails on one device ends on the other at once.
+  A phone left waiting says **The other device's sync failed. Check it, then
+  sync again.**; a handheld says **The other device's sync failed**.
+- If the other device paired but its answer was lost, the phone stops with **The
+  other device paired, but its answer never reached this phone. Stop the
+  sync on it, then start again on both.**
 - You can leave the page or switch apps: the sync goes on, with a
   **Device Sync** notification. The notification's **Cancel** stops
   it. Open Device Sync again to see where it is.
@@ -66,7 +72,12 @@ Between two phones, each console folder syncs as it is. With a handheld, the
 phone's one folder per console maps onto the handheld's per-emulator folders:
 
 - Games from every handheld folder of a console land in the phone's console
-  folder. A game the other emulator's folder already has isn't copied twice.
+  folder. A game the handheld keeps in two emulator folders of one console
+  is pulled once.
+- A game pulled from a handheld emulator folder, such as `Game Boy Advance
+  (MGBA)` or `Sega Master System (GPGX)`, keeps that emulator on the phone:
+  it becomes the game's **Emulator** choice. A game that already has a
+  choice keeps it.
 - Each phone game goes to one handheld folder: the one whose tag is the
   emulator the phone runs the game with. With several such folders, the one
   named like the console. With none, the console's first emulator folder the

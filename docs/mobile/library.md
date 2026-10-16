@@ -136,9 +136,10 @@ emulator, each with its own tag: see
 
 A game runs with the emulator from its `systems.txt` entry or its own
 **Emulator** choice. Without one, it uses **Tools → Settings → Emulators →
-Default emulators**. This covers extra folders without a `(TAG)`,
-such as one named `My Game Boy Advance`, and Unassigned games you give a
-console. See [Emulator Settings](emulator-settings.md#default-emulators).
+Default emulators**. This covers every folder of the console, whatever its
+`(TAG)`, extra folders such as one named `My Game Boy Advance`, and
+Unassigned games you give a console. See
+[Emulator Settings](emulator-settings.md#default-emulators).
 
 To run one game on the other emulator, use **Emulator** in its context menu.
 Both emulators share the console's battery saves, so nothing is copied and
@@ -236,6 +237,13 @@ layout. The home folder holds only `Roms/`, `Bios/` and `Collections/`.
     Cores play from a private working copy of each battery save. The mirror in
     `Saves/<TAG>/` is updated after each save write and when you quit. Save
     states are kept per emulator, in `.userdata/shared/<TAG>-<core>/`.
+    - An export writes each console's saves under its default emulator's
+      handheld tag, such as `Saves/GPGX/` for a Sega console on Genesis Plus
+      GX. When two consoles' saves would meet under one name there, both keep
+      their console folders (`Saves/MD/`, `Saves/SMS/`), so neither is
+      dropped.
+    - An import puts a save from `Saves/GPGX/` with the console whose games
+      hold its game. With none or several, it goes to Sega Genesis.
 
 ## Unpacked games cache
 

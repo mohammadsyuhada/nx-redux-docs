@@ -15,14 +15,18 @@ PICO-8, Atari, ColecoVision and Doom; see
 
 Sega Genesis uses the `MD` tag, and the app creates
 `Roms/Sega Genesis (MD)/`. Genesis, Master System, Game Gear, SG-1000 and
-Sega CD all run Genesis Plus GX. Only 32X runs PicoDrive.
+Sega CD run PicoDrive, as on the handheld, with Genesis Plus GX (`GPGX`) as
+their second emulator; see
+[Choosing an emulator](index.md#choosing-an-emulator). 32X runs PicoDrive
+only.
 
-??? info "Coming from a legacy GPGX folder"
-    A legacy `Sega Genesis (GPGX)` folder from the handheld still lists under
-    Sega Genesis and plays, with its saves in the legacy `Saves/GPGX/`.
-    The app never offers the legacy GPGX tag as an emulator. Read
-    [the FAQ](../../reference/faq/mobile.md#my-sega-genesis-save-states-are-gone)
-    before you move those games to the `MD` folder.
+??? info "More detail"
+    - Battery saves are shared by PicoDrive and Genesis Plus GX, so a game
+      switched to the other emulator keeps its progress. Save states stay
+      per emulator.
+    - A handheld `Sega Genesis (GPGX)` or `Sega Master System (GPGX)` folder
+      is just that console's folder. Its tag names the console, not the
+      emulator.
 
 ### Controller Type
 
