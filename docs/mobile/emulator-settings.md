@@ -79,15 +79,9 @@ The page explains:
 > The tag is where saves and settings are kept.
 
 Each console you have games for has a row, showing its emulator and tag,
-such as **gpSP (GBA)**. Only two consoles have a choice, and their rows
-always show:
-
-| Console | Choices |
-| --- | --- |
-| **Game Boy Advance** | **gpSP (GBA)**, **mGBA (MGBA)** |
-| **Super Nintendo ES** | **Snes9x (SFC)**, **Supafaust (SUPA)** |
-
-`A`, `LEFT` or `RIGHT` cycles them. The other rows are dimmed and only show
+such as **gpSP (GBA)**. The consoles with more than one emulator (listed in
+[Choosing an emulator](emulators/index.md#choosing-an-emulator)) always show,
+and `A`, `LEFT` or `RIGHT` cycles their emulators. The other rows are dimmed and only show
 the emulator in use.
 
 - Saves and BIOS are shared by the console's emulators, so switching emulator

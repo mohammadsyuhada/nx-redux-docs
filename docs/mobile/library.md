@@ -130,15 +130,9 @@ Rom** and **Console**.
 ## Default emulators
 
 Each console has one folder, its saves and BIOS are kept per console, and a
-game runs on the console's emulator. Two consoles have two emulators, each
-with its own tag:
-
-| Console | Tags | Default |
-| --- | --- | --- |
-| Game Boy Advance | `GBA` (gpSP), `MGBA` (mGBA) | `GBA` |
-| Super Nintendo ES | `SFC` (Snes9x), `SUPA` (Supafaust) | `SFC` |
-
-Sega Genesis has one tag, `MD`, on Genesis Plus GX.
+game runs on the console's emulator. A few consoles have more than one
+emulator, each with its own tag: see
+[Choosing an emulator](emulators/index.md#choosing-an-emulator).
 
 A game runs with the emulator from its `systems.txt` entry or its own
 **Emulator** choice. Without one, it uses **Tools → Settings → Emulators →
