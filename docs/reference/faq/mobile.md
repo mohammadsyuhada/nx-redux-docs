@@ -30,33 +30,19 @@ carry over (see below).
 Dreamcast memory cards carry over: both name them
 `Saves/DC/<game>.A1.bin`. See [Sega Dreamcast](../../mobile/emulators/dreamcast.md#memory-cards-vmu).
 
-## My Sega Genesis save states are gone
+## Do my handheld's Sega save states work on the phone?
 
-Sega Genesis now uses the `MD` tag only. The app creates
-`Roms/Sega Genesis (MD)/`, and folders without a tag use `MD` too.
+Yes. The phone runs the Sega consoles on PicoDrive, as the handheld does, so
+a state made in a handheld folder such as `Sega Genesis (MD)` resumes on the
+phone.
 
-Save states are kept per tag. States made under the legacy GPGX tag don't
-show in the in-game menu of a game that now runs as `MD`, and they don't
-carry over.
-
-- **A legacy GPGX folder** (`Sega Genesis (GPGX)`, from the handheld) still
-  plays. Move its games to `Roms/Sega Genesis (MD)/` when you're ready to
-  leave its states behind.
-- **Battery saves** don't move by themselves. This applies to games you
-  move into the `MD` folder, and to games in a folder without a tag. Copy
-  each game's `.srm` from the legacy `Saves/GPGX/` folder to `Saves/MD/`.
-  The original stays in the legacy `Saves/GPGX/` folder.
-
-!!! warning "Copy the save before you play"
-    The app takes a save from `Saves/MD/` when the game starts, and only if
-    the file is newer than its own copy. When you quit, its own copy
-    replaces the file in `Saves/MD/`. So:
-
-    - Copy the `.srm` with the game closed. A game waiting in the Game
-      Switcher counts as open.
-    - Copy it before you first play the game as `MD`. If you already have,
-      the copied file must be newer than the game's last `MD` save. A copy
-      that keeps its old date loses.
+- **Games from a handheld `(GPGX)` folder** ran on Genesis Plus GX there.
+  [Device Sync](../../mobile/device-sync.md) sets such a game's
+  **Emulator** to Genesis Plus GX when it brings the game over, so its
+  states resume too. For a game you copied yourself, pick Genesis Plus GX in
+  its **Emulator** menu.
+- **Battery saves** work in either emulator: PicoDrive and Genesis Plus GX
+  share them.
 
 See [Emulators](../../mobile/emulators/other-systems.md#sega-genesis-sega-cd-and-32x).
 
