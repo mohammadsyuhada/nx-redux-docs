@@ -46,6 +46,8 @@ Each system has as many players as the console had controller ports.
 3. A notice names the player and the controller, such as
    **Player 2: Xbox Wireless Controller**.
 
+![Super Mario Kart with two controllers joined: the notices Player 1: GameSir-Pocket 1 and Player 2: 8BitDo Ultimate 2 Wireless](../assets/screenshots/mobile/multiplayer-join.webp)
+
 Close the [in-game menu](in-game-menu.md) first: a press while it is open
 never joins. Players are kept until you quit the game.
 
