@@ -76,6 +76,8 @@ The first time you open the app, a short setup walks you through it. Use
 
 Everything setup asks can be changed later in **Tools → Settings**.
 
+![Setup's Text size page: Text size Large, with Continue at the top right](../assets/screenshots/mobile/first-run-text-size.webp)
+
 ??? info "More detail"
     From the folders on, the page title counts **Setup · Step n of m**.
 
@@ -83,6 +85,8 @@ Everything setup asks can be changed later in **Tools → Settings**.
 
 On Android 11 and later, setup's **Permissions** page lists **All files
 access**, which makes the library faster:
+
+![Setup's Permissions page: All files access and Notifications, both Allowed](../assets/screenshots/mobile/first-run-permissions.webp)
 
 - Select the row, turn the switch on in Android's page, then come back.
 - Choose **Continue** to go on, with or without it.
@@ -100,7 +104,7 @@ access**.
 Next the app asks you to **Pick a home folder**: an empty folder, or one
 NX Redux used before. Press `A` **Pick folder** and choose it.
 
-![Pick a home folder](../assets/screenshots/mobile/first-run-home-folder.webp)
+![Setup · Step 2 of 9: Pick a home folder, with Pick folder selected](../assets/screenshots/mobile/first-run-home-folder.webp)
 
 The app creates the NX Redux layout inside the folder you pick:
 
@@ -137,7 +141,7 @@ Saves and save states are kept inside the app, not in the home folder. See
 
 Right after the home folder, the app asks **Add a ROMs folder?**
 
-![Add a ROMs folder?](../assets/screenshots/mobile/first-run-add-roms.webp)
+![Setup · Step 4 of 10: Add a ROMs folder?, with Add folder selected and Skip at the top right](../assets/screenshots/mobile/first-run-add-roms.webp)
 
 - If you already keep games somewhere else on the phone, press `A`
   **Add folder** and pick that folder. It is scanned in place: nothing is
@@ -151,8 +155,6 @@ You can add more folders later in **Tools → Settings → Library → ROM folde
 
 When the app finds games installed on your phone, the last folder step asks
 **Add N Android games to Consoles?** and lists them.
-
-![The Android games question](../assets/screenshots/mobile/first-run-android-games.webp)
 
 - Choose **Yes** to add them. They show up as an **Android** console on
   the Consoles tab.

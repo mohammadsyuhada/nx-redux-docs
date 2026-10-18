@@ -111,6 +111,8 @@ With All files access, every folder or file pick (home folder, extra
 folder, import, export) uses the app's own picker, a list like the rest of
 the app.
 
+![The app's folder picker in NXTest: NX Redux folder, Use this folder, Create new folder, then its folders](../assets/screenshots/mobile/file-picker.webp)
+
 - Open folders until you reach the one you want, then choose **Use this
   folder** (or **Save here** for an export).
 - `A` **Select** opens a folder, or picks the row. `B` **Back** goes up a
