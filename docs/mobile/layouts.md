@@ -269,29 +269,6 @@ right. Set **Game lists alignment** to **Right** to swap the sides.
 
 </div>
 
-## In landscape
-
-Turn the phone sideways and the same layouts spread across the wider screen.
-These are the Carousel and Backdrop game lists, both Horizontal.
-
-<div class="grid" markdown>
-
-<figure markdown>
-
-![Carousel game list in landscape](../assets/screenshots/mobile/game-list-carousel-landscape.webp)
-
-<figcaption>Carousel, landscape</figcaption>
-</figure>
-
-<figure markdown>
-
-![Backdrop game list in landscape](../assets/screenshots/mobile/game-list-backdrop-landscape.webp)
-
-<figcaption>Backdrop, landscape</figcaption>
-</figure>
-
-</div>
-
 ## List art
 
 The picture a game list shows in the List style:
