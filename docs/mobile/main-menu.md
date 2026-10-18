@@ -342,6 +342,8 @@ the trophy icon opens a panel from the right with the selected game's
 achievements. See [RetroAchievements on game lists](retroachievements.md#on-game-lists)
 for its buttons.
 
+![The achievements panel over the Game Boy Advance list: Advance Wars (0 of 92) and its achievements, Class Dismissed! selected](../assets/screenshots/mobile/achievements-panel.webp)
+
 ??? info "More detail"
     - Tapping the selected game's name or info line opens the panel too.
     - With **Achievements panel** hidden, `X` still opens it, and the game's
