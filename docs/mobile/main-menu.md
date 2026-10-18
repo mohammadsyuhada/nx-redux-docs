@@ -4,7 +4,7 @@ The main menu is split into four tabs: **Home**, **Consoles**,
 **Collections** and **Tools**. The app opens on Home, or on the first tab you
 have not hidden.
 
-![Home tab, with Comix Zone on the Continue card](../assets/screenshots/mobile/home.webp)
+![Home in Grid, with Dragon Ball Z - The Legacy of Goku II on the Continue card under the This month and Most played strip](../assets/screenshots/mobile/home.webp)
 
 Each tab and the game lists can be drawn in different styles (list, grid,
 carousel and more). [Menu Layouts](layouts.md) shows them all.
@@ -144,7 +144,7 @@ Everything on Home in one list, with the selected game's picture behind it.
 
 This is the default layout.
 
-![Grid Home scrolled to the pinned games, with Alleyway selected](../assets/screenshots/mobile/home-pins.webp)
+![Grid Home scrolled to the pinned games, with Mother 3 selected](../assets/screenshots/mobile/home-pins.webp)
 
 - **Continue card.** Your most recent game, with when you last played it and
   for how long. Press `A` to jump back in. On a fresh install it reads
@@ -232,12 +232,12 @@ These three tabs list their entries in the style chosen in
 [Layouts](layouts.md). By default Consoles and Collections are a carousel,
 and Tools is a grid.
 
-![Consoles tab](../assets/screenshots/mobile/tab-consoles.webp)
+![Consoles tab in Carousel, with Dreamcast (8 games) in the middle](../assets/screenshots/mobile/tab-consoles.webp)
 
 - **Consoles** show their logo and how many games they hold.
 - **Collections** show their name and game count.
 
-![Collections tab](../assets/screenshots/mobile/tab-collections.webp)
+![Collections tab in Carousel, with Pokemon World (9 games) in the middle](../assets/screenshots/mobile/tab-collections.webp)
 
 - **Tools** show an icon for each tool: **RetroAchievements**,
   **Game Tracker**, **Artwork**, **Cheat Database**, **Device Sync** and
@@ -270,7 +270,7 @@ The tools have their own pages: [RetroAchievements](retroachievements.md),
 Opening a console or a collection shows its games. The page title names the
 console or collection, e.g. **Sega Genesis**.
 
-![The Game Boy game list in the default Carousel style, with Alleyway selected](../assets/screenshots/mobile/game-list.webp)
+![The Game Boy Advance list in the default Carousel style, with Advance Wars 2 - Black Hole Rising selected: 0 of 72, Next: Lucky Star](../assets/screenshots/mobile/game-list.webp)
 
 The selected game shows when you last played it and your total play time
 ("Today - 11m 0s"), plus your achievement progress where it has any. Game
@@ -308,7 +308,7 @@ On a phone or tablet, icons sit at the right of a game list's title:
 | **Layout** | Pick the game list layout. It applies to every game list. See [Menu Layouts](layouts.md) |
 | Trophy | Open or close the [achievements panel](#achievements-panel) |
 
-![The Layout dropdown open over the Game Boy Advance list, with Carousel ticked](../assets/screenshots/mobile/game-list-layout-menu.webp)
+![The Layout dropdown open from the title icons over the Game Boy Advance list, with Carousel ticked](../assets/screenshots/mobile/game-list-layout-menu.webp)
 
 ??? info "More detail"
     - The **Layout** dropdown offers **List**, **Grid**, **Carousel**,
@@ -346,7 +346,7 @@ for its buttons.
 Press `MENU` on a game to see what you can do with it. The menu depends on
 where the game is listed.
 
-![Alleyway's context menu in the Game Boy list](../assets/screenshots/mobile/context-menu.webp)
+![Advance Wars 2 - Black Hole Rising's context menu in the Game Boy Advance list, with Netplay first](../assets/screenshots/mobile/context-menu.webp)
 
 | Item | What it does |
 | --- | --- |
@@ -415,14 +415,14 @@ list: see [Searching a game list](#searching-a-game-list).
 3. The matches open as a game list titled **Search:** and your words, such
    as **Search: mario kart**.
 
-![The Search prompt over the Home tab, with “contra” typed](../assets/screenshots/mobile/search-prompt.webp)
+![The Search prompt over the Home tab, with “castlevania” typed](../assets/screenshots/mobile/search-prompt.webp)
 
 `B` or `START` closes the prompt without searching.
 
 The results list games from every console, each with its console's tag, such
 as `GBA`. It reads **No results** when nothing matches.
 
-![Search: contra, showing Contra - Hard Corps, and the A Open hint](../assets/screenshots/mobile/search-results.webp)
+![Search results for castlevania in Carousel, with Castlevania - Aria of Sorrow selected: 0 of 66, Next: Old Bones](../assets/screenshots/mobile/search-results.webp)
 
 | Button | What it does |
 | --- | --- |

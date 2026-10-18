@@ -55,11 +55,6 @@ Continue card.
     - Under them come the [shelves](#shelves), four to a row at the pinned
       games' size.
 
-<figure class="nx-phone nx-phone--open" markdown>
-![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp){ .nx-phone__screen }
-![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
-</figure>
-
 ### Shelves
 
 Home shows up to three shelves of games from your library, to help you
@@ -100,11 +95,6 @@ page at a time.
 **Tools → Settings** shows its sections on the left and the selected
 section's page on the right. Moving through the sections previews each page.
 
-<figure class="nx-phone nx-phone--open" markdown>
-![Settings in two panes on an unfolded Fold, with Layouts open](../assets/screenshots/mobile/settings-two-pane.webp){ .nx-phone__screen }
-![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
-</figure>
-
 ### RetroAchievements
 
 Below the [RetroAchievements](retroachievements.md) page, each level opens
@@ -115,11 +105,6 @@ The [Game Tracker](game-tracker.md) shows a game's sessions the same way.
 ??? info "More detail"
     The dimmed page keeps the row that opened the right pane highlighted. A
     game's achievements open beside the games list.
-
-<figure class="nx-phone nx-phone--open" markdown>
-![An achievement's details beside the game's achievements list](../assets/screenshots/mobile/ra-game-two-pane.webp){ .nx-phone__screen }
-![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
-</figure>
 
 ### Artwork
 
@@ -142,8 +127,3 @@ The [in-game menu](in-game-menu.md) splits too:
 - `RIGHT` on a row that opens a page opens it, as `A` does. Value rows still
   change with `LEFT` / `RIGHT`.
 - Tap a row in the dimmed pane to go back to it.
-
-<figure class="nx-phone nx-phone--open" markdown>
-![The in-game menu in two panes on an unfolded Fold](../assets/screenshots/mobile/in-game-menu-two-pane.webp){ .nx-phone__screen }
-![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
-</figure>

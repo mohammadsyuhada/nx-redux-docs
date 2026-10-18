@@ -3,7 +3,7 @@
 **Tools → Game Tracker** shows how long you have played each game. The app
 records every play session on its own, with nothing to set up.
 
-![Game Tracker: the total in the title, then each game with its total, average session and play count](../assets/screenshots/mobile/game-tracker.webp)
+![Game Tracker: 1m 20s in the title, then Kirby - Nightmare in Dream Land and Dragon Ball Z - The Legacy of Goku II, each with its total, average session and play count](../assets/screenshots/mobile/game-tracker.webp)
 
 - The title shows your total play time, such as **Game Tracker: 41m 10s**.
 - Games are listed by play time, most played first.
@@ -29,7 +29,7 @@ game's name when they open beside the list on a wide screen): the
 game's total time, play count and when you last played it, then every session
 with its date, time and length, newest first.
 
-![Game Tracker in two panes: the games on the left, and Alleyway's 1m 15s total, 1 play and its session on the right](../assets/screenshots/mobile/game-tracker-sessions.webp)
+![Game Tracker | Kirby - Nightmare in Dream Land: 57s total, 1 play, when it was last played, and its one session](../assets/screenshots/mobile/game-tracker-sessions.webp)
 
 `B` goes back to the list. The page also has the game's play-time actions,
 the same as [Options](#options):

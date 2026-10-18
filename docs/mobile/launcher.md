@@ -63,7 +63,7 @@ to Consoles?**). It asks only once.
 
 ## The Android console
 
-![The Android console in Carousel, Minecraft highlighted](../assets/screenshots/mobile/android-console.webp)
+![The Android console in Carousel, Minecraft in the middle](../assets/screenshots/mobile/android-console.webp)
 
 `A` **Open** starts the game's app. Android games differ from the other
 consoles:

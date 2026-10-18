@@ -6,7 +6,7 @@ sign in, browse your achievements and change its settings there. Once you are
 signed in, game lists also show a game's achievements in a
 [panel](#on-game-lists).
 
-![Tools → RetroAchievements, signed out: Not signed in, Sign in under Settings, then the three rows](../assets/screenshots/mobile/ra-home.webp)
+![Tools → RetroAchievements, signed in as kotaksempit: 23 points, Nothing waiting, the last sync time, then the three rows](../assets/screenshots/mobile/ra-home.webp)
 
 The home screen shows your username and points, with three rows:
 **Achievements**, **Sync now** and **Settings**.
@@ -121,6 +121,8 @@ panel that slides in from the right. Open it with `X` (**Achievements** in
 the hint bar), or on a touchscreen, the trophy icon at the right of the
 list's title.
 
+![A game list with the achievements panel open: Advance Wars 2 - Black Hole Rising (0 of 72) and its achievements, Lucky Star highlighted](../assets/screenshots/mobile/ra-panel.webp)
+
 | Button | What it does |
 | --- | --- |
 | `UP` / `DOWN` | Move through the achievements |
@@ -182,6 +184,8 @@ every game in your library, in the background. It needs a sign-in and a
 connection, and opens its **Progress** page, which shows how far it is and the
 time left, such as **12 / 340 · ~9 min left**.
 
+![The Progress page mid-download: 128 / 285 · ~1 min left, 0 cached · 6 without achievements · 122 skipped, the Pause and Cancel buttons, then the games still to do, the first Hashing and the rest Waiting](../assets/screenshots/mobile/ra-download.webp)
+
 | Button | What it does |
 | --- | --- |
 | `Y` **Pause** / **Resume** | Pauses before the next game, or carries on |
@@ -236,13 +240,13 @@ games. A notice then says how many unlocks were synced, **Up to date**, or
 **Achievements** on the home screen lists every cached game with its art and
 progress, such as `12/40 unlocked`. It works offline.
 
-![RetroAchievements → Achievements, listing cached games with their progress, shown here signed out](../assets/screenshots/mobile/ra-games.webp)
+![RetroAchievements → Achievements, listing cached games with their progress, from 1942 (0/27 unlocked) on](../assets/screenshots/mobile/ra-games.webp)
 
 Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
 or **Locked**, with its points. `Y` (on touch, the filter icon) shows only
 locked ones, or all again. `A` opens an achievement's details.
 
-![Streets of Rage 2's achievements on a phone: each with its badge, status and points](../assets/screenshots/mobile/ra-game.webp)
+![1942's achievements (0/27): each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp)
 
 ??? info "More detail"
 

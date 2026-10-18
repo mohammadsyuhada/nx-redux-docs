@@ -147,11 +147,11 @@ list the selected game's picture fills the background or sits in a box (see
 
 *Consoles tab*
 
-![Consoles tab in List style](../assets/screenshots/mobile/consoles-list.webp)
+![Consoles tab in List style, Dreamcast selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
 
 *Game list*
 
-![Game list in List style](../assets/screenshots/mobile/game-list-list.webp)
+![Game Boy Advance list in List style, Astro Boy - Omega Factor selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
 
 `Up` on the first row wraps to the last, and `Down` on the last row wraps to
 the first.
@@ -172,11 +172,11 @@ last-played time and achievement count.
 
 *Consoles tab*
 
-![Consoles tab in Grid style](../assets/screenshots/mobile/consoles-grid.webp)
+![Consoles tab in Grid style, Final Burn Neo selected](../assets/screenshots/mobile/consoles-grid.webp)
 
 *Game list*
 
-![Game list in Grid style](../assets/screenshots/mobile/game-list-grid.webp)
+![Game Boy Advance list in Grid style, Astro Boy - Omega Factor selected](../assets/screenshots/mobile/game-list-grid.webp)
 
 ??? info "More detail: rows and columns"
     - Two rows on most phones, three on a tall phone held upright (such as a
@@ -198,11 +198,11 @@ sit at the bottom of the picture.
 
 *Consoles tab*
 
-![Consoles tab in Carousel style](../assets/screenshots/mobile/consoles-carousel.webp)
+![Consoles tab in Carousel style, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
 
 *Game list*
 
-![Game list in Carousel style](../assets/screenshots/mobile/game-list-carousel.webp)
+![Game Boy Advance list in Carousel style, Advance Wars 2 - Black Hole Rising in the middle](../assets/screenshots/mobile/game-list-carousel.webp)
 
 ??? info "More detail"
     - A game's stats sit over a dark fade. The side games get smaller the
@@ -218,7 +218,7 @@ screenshot, with its neighbours' boxes to the sides. Its caption gives the
 name, then the play time and achievement count, then the next achievement on
 its own line. The Vertical orientation shows the same lines.
 
-![Game list in Backdrop style](../assets/screenshots/mobile/game-list-backdrop.webp)
+![Game Boy Advance list in Backdrop style, Advance Wars 2 - Black Hole Rising's box over its screenshot](../assets/screenshots/mobile/game-list-backdrop.webp)
 
 ## Orientation
 
@@ -232,14 +232,14 @@ set the **orientation** row under the style to **Vertical**.
 
 <figure markdown>
 
-![Consoles tab in horizontal Carousel](../assets/screenshots/mobile/consoles-carousel.webp)
+![Consoles tab in horizontal Carousel, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
 
 <figcaption>Consoles, Horizontal</figcaption>
 </figure>
 
 <figure markdown>
 
-![Consoles tab in vertical Carousel](../assets/screenshots/mobile/consoles-carousel-vertical.webp)
+![Consoles tab in vertical Carousel, Dreamcast between Final Burn Neo and Famicom Disk System](../assets/screenshots/mobile/consoles-carousel-vertical.webp)
 
 <figcaption>Consoles, Vertical</figcaption>
 </figure>
@@ -255,14 +255,14 @@ right. Set **Game lists alignment** to **Right** to swap the sides.
 
 <figure markdown>
 
-![Vertical Backdrop aligned left](../assets/screenshots/mobile/game-list-backdrop-vertical-left.webp)
+![Vertical Backdrop aligned left: Advance Wars 2's box on the left, its details on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-left.webp)
 
 <figcaption>Backdrop, Vertical, Left</figcaption>
 </figure>
 
 <figure markdown>
 
-![Vertical Backdrop aligned right](../assets/screenshots/mobile/game-list-backdrop-vertical-right.webp)
+![Vertical Backdrop aligned right: Advance Wars 2's details on the left, its box on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-right.webp)
 
 <figcaption>Backdrop, Vertical, Right</figcaption>
 </figure>
