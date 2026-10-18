@@ -1,7 +1,7 @@
 # Nintendo 3DS
 
-Nintendo 3DS games run on the bundled **Azahar** core. The core draws both
-screens itself.
+Nintendo 3DS games run on the bundled **Azahar** core, which draws both
+screens.
 
 | | Azahar |
 | --- | --- |
@@ -20,9 +20,8 @@ screens itself.
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
-The 3DS has its own on-screen pad: the d-pad, or the Circle Pad with
-`STICK` / `D-PAD`, `A`, `B`, `X` and `Y` where they sit on a 3DS, `L`, `R`,
-`SELECT`, `START` and `MENU`.
+The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
+the d-pad and the Circle Pad.
 
 The 3DS shortcuts are all `SELECT` combos, because `L2` and `R2` are the
 3DS's own `ZL` and `ZR`:
@@ -45,11 +44,15 @@ A controller adds:
 | `L3` (press the left stick) | Swap the screens |
 
 A controller's face buttons work as printed: its `A` is the 3DS's `A`. To
-play with the 3DS's own positions on an Xbox pad (`A` on the right), set
+use the 3DS's positions on an Xbox pad (`A` on the right), set
 **Controller Layout** to **Nintendo** in **Options → Console Settings**; see
 [Controls](../controls.md#controller-buttons).
 
 !!! note "`SELECT` waits"
+    The game gets `SELECT` when you let go of it, so a combo doesn't pause
+    the game.
+
+??? info "More detail: `SELECT`"
     Many 3DS games pause on Select, so the game never sees `SELECT` while you
     hold it:
 
@@ -66,14 +69,17 @@ view, for example, you steer by turning the phone.
 
 ![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp)
 
-- Motion is always on, like on a 3DS. There's no setting for it.
-- It works in portrait and in both landscape directions.
-- The game reads the phone's tilt as it is. Hold the phone the way the game
-  expects, as you would a 3DS.
-- The sensors only run while you play. They stop while the game is paused,
-  in the in-game menu, or in the background.
-- On a phone without a gyroscope, tilting still works, but aiming by turning
-  the phone does nothing.
+Motion is always on, like on a 3DS. Hold the phone the way the game expects,
+as you would a 3DS.
+
+??? info "More detail"
+    - There's no setting for motion.
+    - It works in portrait and in both landscape directions. The game reads
+      the phone's tilt as it is.
+    - The sensors only run while you play. They stop while the game is
+      paused, in the in-game menu, or in the background.
+    - On a phone without a gyroscope, tilting still works, but aiming by
+      turning the phone does nothing.
 
 ## New 3DS controls
 
@@ -85,20 +91,23 @@ console:
 
 | Value | What the pad shows |
 | --- | --- |
-| **Auto** (default) | The extra controls for games known to use the C-stick, `ZL` / `ZR` or the Circle Pad Pro, such as Majora's Mask 3D (camera), Monster Hunter 4 Ultimate and Xenoblade Chronicles 3D. |
+| **Auto** (default) | The extra controls for games known to use them, such as Majora's Mask 3D (camera). |
 | **On** | The extra controls for every game. |
 | **Off** | No extra controls. |
 
-- `ZL` and `ZR` sit where `L2` and `R2` are on other consoles.
-- The C-stick is centred under `SELECT` and `START` in portrait, and at the
-  top left of the face buttons in landscape.
-- A change in the in-game menu updates the pad straight away.
-- A controller's right stick, `L2` and `R2` always reach the game, whatever
-  the setting.
-
-Azahar runs as a New 3DS, so Circle Pad Pro games work without extra setup.
+A controller's right stick, `L2` and `R2` always reach the game, whatever
+the setting. Azahar runs as a New 3DS, so Circle Pad Pro games work without
+extra setup.
 
 ??? info "More detail"
+    - **Auto** covers games that use the C-stick, `ZL` / `ZR` or the Circle
+      Pad Pro, such as Majora's Mask 3D, Monster Hunter 4 Ultimate and
+      Xenoblade Chronicles 3D.
+    - `ZL` and `ZR` sit where `L2` and `R2` are on other consoles. The
+      C-stick is centred under `SELECT` and `START` in portrait, and at the
+      top left of the face buttons in landscape.
+    - A change in the in-game menu updates the pad straight away.
+
     **Auto** finds the game by the title ID in `.3ds`, `.cci` and `.cxi`
     files. It can't read the compressed `zcci`, `zcxi` and `z3dsx` files or
     `3dsx` files, so for those set **On** yourself.
@@ -117,10 +126,12 @@ Stylus mode is off each time a game starts, and is not saved.
 
 ## Screen layout
 
-- `SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
-  without Save Changes.
-- The layout is Azahar's **Screen Layout** option, so you can also set it in
-  **Core Options**, or for the console in
-  [Emulator Settings](../emulator-settings.md).
-- **Screen Swap Mode** in **Core Options** sets whether the swap toggles (the
-  default) or lasts only while you hold the buttons.
+`SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
+without Save Changes.
+
+??? info "More detail"
+    - The layout is Azahar's **Screen Layout** option, so you can also set it
+      in **Core Options**, or for the console in
+      [Emulator Settings](../emulator-settings.md).
+    - **Screen Swap Mode** in **Core Options** sets whether the swap toggles
+      (the default) or lasts only while you hold the buttons.

@@ -14,11 +14,10 @@ Two people on one phone, each with a controller? That is
 ## Starting a session
 
 1. Both players pick the same game. On the phone, highlight it on Home or
-   in a game list and press `Y` **Netplay**. `MENU` **Options → Netplay**
-   does the same.
-2. The **Netplay** sheet opens, titled with the game.
+   in a game list and press `Y` **Netplay**.
+2. The **Netplay** menu opens, titled with the game.
 
-    ![The Netplay sheet for Contra III: Connection Wi-Fi, Host Game, Join Game and Emulator Auto (match the other device)](../assets/screenshots/mobile/netplay-sheet.webp)
+    ![The Netplay menu for Comix Zone: Host Game, Join Game and Emulator Auto (match the other device)](../assets/screenshots/mobile/netplay-sheet.webp)
 
 3. Both players choose the same **Connection**: **Wi-Fi** or
    [**USB Cable**](#usb-cable).
@@ -26,53 +25,75 @@ Two people on one phone, each with a controller? That is
 5. The joiner picks the host (over Wi-Fi), the host's save is copied, and
    the game starts on both devices.
 
-On a handheld, press `Y` on the game and pick **Host Game** or **Join Game**
-as usual. See the handheld's [Netplay](../handheld/netplay.md) page. The
-phone has no **Hotspot** choice: on the handheld, pick **WiFi** or
-**USB Cable**. Keep the handheld on the latest NX Redux: older versions
-can't pair with the phone.
+On a handheld, press `Y` on the game and pick **Host Game** or **Join Game**,
+then **WiFi** or **USB Cable**. See the handheld's
+[Netplay](../handheld/netplay.md) page.
 
-`Y` **Netplay** only shows for games on a [supported system](#supported-systems).
+!!! note "Keep the handheld up to date"
+    Keep the handheld on the latest NX Redux: older versions can't pair with
+    the phone.
 
-### The Netplay sheet
+??? info "More detail"
+
+    - In a game list, **Netplay** in the game's `MENU` menu does the same as
+      `Y`. On a touchscreen with no controller there is no hint bar:
+      long-press the game and pick **Netplay**, which then leads the menu.
+    - `Y` **Netplay** only shows for games on a
+      [supported system](#supported-systems). When the `Y` **Netplay** hint
+      is hidden, **Netplay** moves to the top of the game's menu. See
+      [Context menus](main-menu.md#context-menus).
+    - The phone has no **Hotspot** choice, so don't pick it on the handheld.
+
+### The Netplay menu
 
 | Row | What it does |
 | --- | --- |
-| **Connection** | **Wi-Fi** or **USB Cable**. `LEFT` / `RIGHT` or `A` switch. Remembered for next time. Only shown on phones that can use the cable. |
+| **Connection** | **Wi-Fi** or **USB Cable**. `LEFT` / `RIGHT` or `A` switch. |
 | **Host Game** | Wait for the other player to join. |
 | **Join Game** | Find the host and join it. |
-| **Emulator** | Which emulator runs the match. Only for systems with more than one. See [Emulator](#emulator). |
-| **Wi-Fi settings** | Only shown when the phone isn't on Wi-Fi, under **Connect to Wi-Fi first**. Opens Android's Wi-Fi settings. |
+| **Emulator** | Which emulator runs the match. See [Emulator](#emulator). |
+| **Wi-Fi settings** | Opens Android's Wi-Fi settings, when the phone isn't on Wi-Fi. |
 
-`B` closes the sheet.
+`B` closes the menu.
+
+??? info "More detail"
+
+    - **Connection** is remembered for next time, and only shown on phones
+      that can use the cable.
+    - **Emulator** only shows for systems with more than one.
+    - **Wi-Fi settings** shows under **Connect to Wi-Fi first**.
 
 ### Hosting
 
-The host's screen shows the phone's name and address, **Other device must
-be on the same Wi-Fi**, and **Waiting for player...**. The screen stays on
-while it waits.
+The host's screen shows the phone's name and address and **Waiting for
+player...**. The other device must be on the same Wi-Fi. When a player
+connects, the game starts. `B` **Cancel** stops hosting.
 
 ![Hosting over Wi-Fi: the phone's name and IP address, “Other device must be on the same Wi-Fi” and “Waiting for player...”](../assets/screenshots/mobile/netplay-host.webp)
 
-- When a player connects, the status reads **Player connected**, then
-  **Sending saves...**, and the game starts.
-- If a joiner is turned away, such as one on another emulator, the host
-  keeps waiting for the next one.
-- `B` **Cancel** stops hosting.
+??? info "More detail"
+
+    - The screen stays on while it waits.
+    - When a player connects, the status reads **Player connected**, then
+      **Sending saves...**.
+    - If a joiner is turned away, such as one on another emulator, the host
+      keeps waiting for the next one.
 
 ### Joining
 
-Over Wi-Fi, **Join Game** opens **Select Host**. It lists every device
-hosting on the same network, phones and handhelds alike, with the game and
-its address, such as **Contra III - The Alien Wars (192.168.1.23)**.
+Over Wi-Fi, **Join Game** opens **Select Host**, listing every device hosting
+on the same network, phones and handhelds alike, such as **Contra III - The
+Alien Wars (192.168.1.23)**. Press `A` on the host to join. `B` goes back to
+the menu.
 
 ![Select Host on the Fold, listing a Brick Pro hosting Contra III - The Alien Wars at 192.168.1.17](../assets/screenshots/mobile/netplay-join.webp)
 
-- Press `A` on the host. The screen reads **Connecting...**, then
-  **Receiving saves...**, then **Connected - starting game...**.
-- The list reads **Searching for hosts...** until a host shows up. After two
-  minutes with none it says **No host found.**
-- `B` goes back to the sheet.
+??? info "More detail"
+
+    - After `A`, the screen reads **Connecting...**, then **Receiving
+      saves...**, then **Connected - starting game...**.
+    - The list reads **Searching for hosts...** until a host shows up. After
+      two minutes with none it says **No host found.**
 
 ### Different versions of one game
 
@@ -111,24 +132,22 @@ cable needs it.
 
 ![Hosting over USB Cable: “Connect the phone to the handheld's bottom port, or to another phone.” and “Starting USB link...”](../assets/screenshots/mobile/netplay-usb.webp)
 
-- **Android asks once to allow a VPN.** It only carries the cable link,
-  nothing else. Another VPN app that is always on blocks the cable: turn it
-  off first.
-- **There is no host list.** The joiner connects straight to the other end
-  of the cable. The host's screen reads **USB** and **Connected by USB
-  cable**.
-- **2 players only.** One cable joins two devices.
+- **Android asks once to allow a VPN.** It only carries the cable link.
+  Turn off any other always-on VPN app first: it blocks the cable.
 - **Same NX Redux version on both.** Otherwise the phone says **Both devices
   need the same NX Redux version.**
-
-If no link comes up within about 30 seconds, the phone says **No USB link**
-and what to check: the handheld's bottom port, **USB Cable** picked on the
-handheld, or **USB controlled by** on two phones.
-
-!!! tip "Host and Join don't depend on the cable"
-    Either device can host, whichever end of the cable it has.
+- **2 players only.** Either device can host.
 
 ??? info "More detail"
+
+    - There is no host list: the joiner connects straight to the other end of
+      the cable. The host's screen reads **USB** and **Connected by USB
+      cable**.
+    - Host and Join don't depend on the cable: either device can host,
+      whichever end of the cable it has.
+    - If no link comes up within about 30 seconds, the phone says **No USB
+      link** and what to check: the handheld's bottom port, **USB Cable**
+      picked on the handheld, or **USB controlled by** on two phones.
     - Pull the cable out mid-game and plug it back in before the countdown
       ends (about 28 seconds), and the match carries on.
     - A phone that can't use the cable has no **Connection** row, and plays
@@ -163,28 +182,36 @@ Nintendo 64, Dreamcast, Nintendo DS, Nintendo 3DS and PSP, has no
 | **GB Link** / **GBA Link** | The link cable between two Game Boys. Trades and versus battles in single-player cartridges work between the two devices. |
 
 !!! info "Game Gear"
-    The Game Gear has one controller port: its two-player games used the
-    link cable, which netplay doesn't connect. Both devices play the same
-    game in step, but only games that read a second pad react to the other
-    player.
+    The Game Gear has one controller port, so only games that read a second
+    pad react to the other player.
+
+??? info "More detail"
+
+    The Game Gear's two-player games used the link cable, which netplay
+    doesn't connect. Both devices still play the same game in step.
 
 ### Emulator
 
-Systems with two emulators have an **Emulator** row on the sheet.
+Systems with two emulators have an **Emulator** row on the menu.
 `LEFT` / `RIGHT` change it.
 
 - **Auto (match the other device)** (default): the phone runs whatever the
-  other device runs, when this folder offers it. With two phones on Auto,
-  the host's emulator wins. A handheld can't switch, so a phone always
-  follows a handheld.
+  other device runs. Leave it on Auto unless you need one emulator.
 - **An emulator by name**: the phone runs only that one. A device on another
   emulator can't join.
 
-When the two don't match, the joiner sees why, such as **The host is using
-PicoDrive (MD folder). Pick the game from the same folder on both
-devices.**, or **Set Emulator to PicoDrive.** when that is one of its own
-choices. The host flashes **A player using Genesis Plus GX was turned
-away.** and keeps waiting.
+If the two don't match, the joiner is told what to change.
+
+??? info "More detail"
+
+    - Auto follows the other device only when this folder offers its
+      emulator. With two phones on Auto, the host's emulator wins. A handheld
+      can't switch, so a phone always follows a handheld.
+    - A mismatch message reads, for example, **The host is using PicoDrive
+      (MD folder). Pick the game from the same folder on both devices.**, or
+      **Set Emulator to PicoDrive.** when that is one of its own choices.
+    - The host flashes **A player using Genesis Plus GX was turned away.**
+      and keeps waiting.
 
 ### Game Boy Advance link
 
@@ -197,20 +224,26 @@ Game Boy Advance games link as two GBAs on a cable:
   real hardware, such as Pokémon trades and battles, cross-game trades like
   FireRed with Ruby, and The Legend of Zelda: Four Swords.
 - **mGBA links over the USB Cable only.** A game in the `MGBA` folder offers
-  only **USB Cable**. A phone that can't use the cable has no `Y`
-  **Netplay** for it. Setting **Emulator** to **mGBA** on a `GBA` game over
-  Wi-Fi says **mGBA links over the USB cable only.**
+  only **USB Cable**.
 
-gpSP's **Link Cable Connectivity** core option picks the link mode. The
-host's choice is used by both devices. Leave it on **Automatic**, or for a
-cable trade between FireRed/LeafGreen and Ruby/Sapphire, set it to
-**Link Cable - Real (USB only)** before hosting. Change it in
-**Game Settings** or [Emulator Settings](emulator-settings.md): the
-in-game menu has no Options during a match.
+For a cable trade between FireRed/LeafGreen and Ruby/Sapphire, the host sets
+gpSP's **Link Cable Connectivity** core option to **Link Cable - Real (USB
+only)** before hosting, in **Game Settings** or
+[Emulator Settings](emulator-settings.md).
 
 !!! tip "Give each device its own save"
     Two Pokémon games with the same save share a Trainer ID and refuse to
     trade.
+
+??? info "More detail"
+
+    - A phone that can't use the cable has no `Y` **Netplay** for `MGBA`
+      games. Setting **Emulator** to **mGBA** on a `GBA` game over Wi-Fi says
+      **mGBA links over the USB cable only.**
+    - **Link Cable Connectivity** picks the link mode, and the host's choice
+      is used by both devices. Otherwise leave it on **Automatic**.
+    - It can't be changed in a match: the in-game menu has no Options during
+      a match.
 
 ## Saves
 
@@ -221,19 +254,23 @@ Your own save is never overwritten by the other player's.
 | **Lockstep** | The host's. Its save is copied to the joiner, so both start from the host's progress. |
 | **GB Link** and **GBA Link** | Each player's own. Nothing is copied. |
 
-- **The joiner** plays on a copy. Its own save is left exactly as it was,
-  and progress made in the match isn't kept.
-- **The host** plays on its real save, so its progress is kept, as long as
-  the match runs on the folder's own emulator or one that shares its saves:
-  gpSP and mGBA, Snes9x and Supafaust, PCSX-ReARMed and SwanStation.
-- **A host on another emulator**, such as Genesis Plus GX for a Sega game on
-  PicoDrive, plays on a copy. The game starts with **Using Genesis Plus GX
-  for this match - progress won't be saved.**
+- **The joiner** plays on a copy: its own save is left as it was, and
+  progress made in the match isn't kept.
+- **The host** plays on its real save, so its progress is kept, unless the
+  match runs on an emulator that doesn't share the folder's saves.
 - If the host has no save for the game, both start fresh.
-- Hosting on your real save clears the game's resume point, so
-  [Resume](game-switcher.md) can't roll the save back.
+
+!!! note "Hosting clears the resume point"
+    Hosting on your real save clears the game's resume point, so
+    [Resume](game-switcher.md) can't roll the save back.
 
 ??? info "More detail"
+
+    - The emulators that share saves: gpSP and mGBA, Snes9x and Supafaust,
+      PCSX-ReARMed and SwanStation.
+    - A host on another emulator, such as Genesis Plus GX for a Sega game on
+      PicoDrive, plays on a copy. The game starts with **Using Genesis Plus
+      GX for this match - progress won't be saved.**
     - Only battery saves travel (`.srm` and `.sav`). Save states are never
       copied.
     - If the copy fails, the join stops with **Could not copy the host's
@@ -244,32 +281,40 @@ Your own save is never overwritten by the other player's.
 
 ![The in-game menu during a match with the Brick Pro: Leave netplay? with Continue and Leave](../assets/screenshots/mobile/netplay-in-game.webp)
 
-To keep both devices in step, a match has no save states, cheats,
-achievements, core options or disc changes. Each device is one player:
-every controller on the phone, and the on-screen pad, play as that player.
+A match has no save states, cheats, achievements, core options or disc
+changes. Each device is one player: every controller on the phone, and the
+on-screen pad, play as that player.
 
-Opening the in-game menu shows only **Leave netplay?**:
+The in-game menu shows only **Leave netplay?**:
 
 | Row | What it does |
 | --- | --- |
 | **Continue** | Back to the game. |
 | **Leave** | Ends the match for both, and returns you to the game list. |
 
-While your menu is open, or the app is in the background, your input stops
-and the other player sees **Other player paused (30 s)** counting down. Come
-back before it runs out, or the match ends.
-
-Notices at the top of the screen:
+!!! warning "Come back within 30 seconds"
+    While your menu is open, or the app is in the background, the other
+    player sees **Other player paused (30 s)** counting down. Come back
+    before it runs out, or the match ends.
 
 | Notice | What it means |
 | --- | --- |
 | **Waiting for the other player... (N s)** | The other device stopped sending. The match ends if it doesn't come back within 30 seconds. |
 | **Other player paused (N s)** | The other player opened their menu or left the app. |
-| **Netplay ended** | The other player left or the connection was lost. You keep playing on your own. The menu is then **Continue** / **Quit**. On a copy it reads **Netplay ended - progress here won't be saved.** |
+| **Netplay ended** | The other player left or the connection was lost. You keep playing on your own. |
 
-If the match can't start or breaks, a **Netplay failed** dialog says why,
-such as **Could not reach the other device.** or **Netplay failed - the
-other device's emulator doesn't match.**, and you go back to the game list.
+??? info "More detail"
+
+    - The features are off to keep both devices in step.
+    - The menu's line reads **Leaving ends the netplay session.** While it is
+      open, your input stops.
+    - Notices show at the top of the screen.
+    - After **Netplay ended** the menu is **Continue** / **Quit**. On a copy
+      the notice reads **Netplay ended - progress here won't be saved.**
+    - If the match can't start or breaks, a **Netplay failed** dialog says
+      why, such as **Could not reach the other device.** or
+      **Netplay failed - the other device's emulator doesn't match.**, and
+      you go back to the game list.
 
 ## Not supported
 
