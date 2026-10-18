@@ -77,31 +77,6 @@ and everything you pinned. It comes in three layouts, **List**, **Grid** (the
 default) and **Carousel**. Pick one in
 [Settings → Layouts → Home → Home layout](layouts.md#the-layouts-page).
 
-<div class="grid" markdown>
-
-<figure markdown>
-
-![Home in Grid: the Continue card filling the top, under the stats strip](../assets/screenshots/mobile/home-layout-grid.webp)
-
-<figcaption>Grid (default)</figcaption>
-</figure>
-
-<figure markdown>
-
-![Home in List: Continue first, then the pinned games as rows over the selected game's picture](../assets/screenshots/mobile/home-layout-list.webp)
-
-<figcaption>List</figcaption>
-</figure>
-
-<figure markdown>
-
-![Home in Carousel: the Continue card in the middle with its time and achievements, the next items beside it](../assets/screenshots/mobile/home-layout-carousel.webp)
-
-<figcaption>Carousel</figcaption>
-</figure>
-
-</div>
-
 Every layout starts with a two-line stats strip:
 
 - **This month:** your play time this calendar month, and the
@@ -138,6 +113,8 @@ long-press for the menu.
 
 Everything on Home in one list, with the selected game's picture behind it.
 
+![Home in List: Continue first, then the pinned games as rows over the selected game's picture](../assets/screenshots/mobile/home-layout-list.webp)
+
 - **The list** starts with your most recent game, tagged **Continue** (or
   **Pick a game** on a fresh install). Then come your pinned games, games
   from the [shelves](foldables.md#shelves), and your pinned tools.
@@ -168,6 +145,8 @@ Everything on Home in one list, with the selected game's picture behind it.
 ### Grid
 
 This is the default layout.
+
+![Home in Grid: the Continue card filling the top, under the stats strip](../assets/screenshots/mobile/home-layout-grid.webp)
 
 ![Grid Home scrolled to the pinned games, with Mother 3 selected](../assets/screenshots/mobile/home-pins.webp)
 
@@ -215,6 +194,8 @@ This is the default layout.
 
 The same games in one row of cards, centred on the screen, with your pinned
 tools in a row of squares underneath. Swipe the carousel to scroll it.
+
+![Home in Carousel: the Continue card in the middle with its time and achievements, the next items beside it](../assets/screenshots/mobile/home-layout-carousel.webp)
 
 - **The carousel** starts on the **Continue** card (or **Pick a game** on a
   fresh install), then your pinned games, then the shelf games.
