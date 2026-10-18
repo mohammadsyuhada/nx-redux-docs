@@ -250,7 +250,7 @@ and Tools is a grid.
   **Settings**, plus any Android apps you choose to show there (see
   [Launcher Mode & Android Games](launcher.md)).
 
-![Tools tab](../assets/screenshots/mobile/tab-tools.webp)
+![Tools tab in Grid: RetroAchievements, Game Tracker, Artwork, Cheat Database, Device Sync and Settings](../assets/screenshots/mobile/tab-tools.webp)
 
 | Button | What it does |
 | --- | --- |
@@ -259,7 +259,7 @@ and Tools is a grid.
 | `START` **Search** | [Search](#search) your games |
 | `A` **Open** | Open the console, collection or tool |
 
-![The RetroAchievements tool's menu with Unpin, over Home](../assets/screenshots/mobile/tool-menu.webp)
+![The RetroAchievements tool's menu with Unpin, over the Tools tab](../assets/screenshots/mobile/tool-menu.webp)
 
 The tools have their own pages: [RetroAchievements](retroachievements.md),
 [Game Tracker](game-tracker.md), [Artwork](artwork.md),
