@@ -10,7 +10,7 @@ Android handhelds. Download the APK from the
 
 ## v0.1.0
 
-*Release date to be set*
+*18 October 2026*
 
 The first public release: an early preview, so our first players can try it
 and tell us what works and what doesn't before v1.0. Expect rough edges, and
