@@ -236,3 +236,10 @@
   max-width: none;
   height: auto;
 }
+
+/* Mobile screenshots: a black border round each, so the app's black edges read
+   against the page. Not on the framed phone shots (the frame is their edge). */
+.md-typeset img[src*="screenshots/mobile/"]:not(.nx-phone__screen) {
+  border: 5px solid #000;
+  box-sizing: content-box;
+}
