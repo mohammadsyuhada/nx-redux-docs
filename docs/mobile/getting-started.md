@@ -21,33 +21,30 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 
 ## What's different from the handheld
 
-- **Emulators:** Sega Dreamcast, NAOMI, Atomiswave and Nintendo 3DS are
-  included. Nintendo DS runs melonDS DS (DraStic is not available). See
-  [Emulators](emulators/index.md) and [Sega Dreamcast](emulators/dreamcast.md).
+- **Emulators:** the app adds Nintendo 3DS and Nintendo Wii & GameCube, which
+  the handheld doesn't have. Nintendo DS runs melonDS DS (DraStic is not
+  available). See [Emulators](emulators/index.md),
+  [Nintendo 3DS](emulators/nintendo-3ds.md) and
+  [Wii & GameCube](emulators/wii-gamecube.md).
 - **Library:** besides the home folder, the app can scan extra folders in
   place. See [Library & ROM folders](library.md).
 - **Controls:** an on-screen pad, or any Android controller. See
   [Controls](controls.md).
-- **Artwork:** the app downloads box art and screenshots for your games. See
-  [Artwork](artwork.md).
 - **Home screen:** the app can be your phone's home screen, and list your
   Android games and apps. See [Launcher Mode & Android Games](launcher.md).
 - **Foldables:** on a half-folded phone, Flex mode puts the game above the
   hinge and the pad below it. See [Foldables & Large Screens](foldables.md).
 - **Local multiplayer:** two to four players on one phone, each on their
   own controller. See [Local Multiplayer](multiplayer.md).
-- **Netplay:** play with another phone or an NX Redux handheld, over Wi-Fi
-  or a USB-C cable, Game Boy and GBA link trades included. See
-  [Netplay](netplay.md).
-- **Device Sync:** carry games, saves and save states between the phone and
-  an NX Redux handheld, over Wi-Fi or a USB-C cable. See
-  [Device Sync](device-sync.md).
-- **In a later release:** more systems, such as home computers (Amiga, C64
-  and so on).
-- **Not available:** RetroAchievements hardcore mode, the same as on the
-  handheld.
+- **Not in the app yet:** some systems the handheld runs, such as home
+  computers (Amiga, C64 and so on). They come in a later release.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
   the music player, PortMaster and firmware updates are not part of the app.
+
+The same as on the handheld: [Artwork](artwork.md),
+[RetroAchievements](retroachievements.md) (no hardcore mode),
+[Netplay](netplay.md) (with another phone or an NX Redux handheld) and
+[Device Sync](device-sync.md) (between the phone and a handheld).
 
 ## Install
 
