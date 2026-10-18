@@ -29,7 +29,7 @@ game's name when they open beside the list on a wide screen): the
 game's total time, play count and when you last played it, then every session
 with its date, time and length, newest first.
 
-![Game Tracker | Kirby - Nightmare in Dream Land: 57s total, 1 play, when it was last played, and its one session](../assets/screenshots/mobile/game-tracker-sessions.webp)
+![Game Tracker in two panes: the games on the left, and Kirby - Nightmare in Dream Land's 2m 4s total, 3 plays, when it was last played and its three sessions on the right](../assets/screenshots/mobile/game-tracker-sessions.webp)
 
 `B` goes back to the list. The page also has the game's play-time actions,
 the same as [Options](#options):
