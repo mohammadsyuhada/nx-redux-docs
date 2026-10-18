@@ -240,13 +240,12 @@ games. A notice then says how many unlocks were synced, **Up to date**, or
 **Achievements** on the home screen lists every cached game with its art and
 progress, such as `12/40 unlocked`. It works offline.
 
-![RetroAchievements → Achievements, listing cached games with their progress, from 1942 (0/27 unlocked) on](../assets/screenshots/mobile/ra-games.webp)
 
 Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
 or **Locked**, with its points. `Y` (on touch, the filter icon) shows only
 locked ones, or all again. `A` opens an achievement's details.
 
-![1942's achievements (0/27): each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp)
+![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp)
 
 ??? info "More detail"
 
