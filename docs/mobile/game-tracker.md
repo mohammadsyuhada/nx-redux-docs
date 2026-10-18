@@ -3,7 +3,7 @@
 **Tools → Game Tracker** shows how long you have played each game. The app
 records every play session on its own, with nothing to set up.
 
-![Game Tracker: 1m 20s in the title, then Kirby - Nightmare in Dream Land and Dragon Ball Z - The Legacy of Goku II, each with its total, average session and play count](../assets/screenshots/mobile/game-tracker.webp)
+![Game Tracker: 1m 52s in the title, then each game with its box art, total, average session and play count, from Kirby - Nightmare in Dream Land down](../assets/screenshots/mobile/game-tracker.webp)
 
 - The title shows your total play time, such as **Game Tracker: 41m 10s**.
 - Games are listed by play time, most played first.
