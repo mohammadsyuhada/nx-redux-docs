@@ -60,9 +60,26 @@ games and, for the systems that need them, BIOS files. See
 
 ### Not in this release
 
-- Home computers such as the Amiga and C64, which the handheld runs.
-- RetroAchievements hardcore mode, the same as on the handheld.
-- iOS.
+Features many retro frontends have that this preview doesn't yet:
+
+- **Fast-forward, slow motion and rewind.**
+- **Screenshots** of a game while you play.
+- **Turbo (autofire) buttons**, other than the few cores with their own
+  turbo option.
+- **Full button remapping.** Controller Layout swaps the `A`/`B` and `X`/`Y`
+  letters, and Pad layout moves the on-screen buttons, but you can't assign
+  any button to any action.
+- **Run-ahead** to cut input lag, other than the few cores with their own
+  run-ahead option.
+- **ROM patches** (IPS, BPS, UPS) applied at launch: a patched game has to be
+  patched into its own file.
+- **RetroAchievements leaderboards**, and hardcore mode (the same as on the
+  handheld).
+- **Cloud saves.** Saves stay on the phone; Device Sync carries them to a
+  handheld, and Export saves makes a backup.
+- **External display:** playing on a TV or monitor over a cable or casting.
+- **Home computers** such as the Amiga and C64, which the handheld runs.
+- **iOS.**
 
 ### Feedback
 
