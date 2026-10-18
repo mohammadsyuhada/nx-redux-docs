@@ -41,6 +41,8 @@ Your recent games as a list titled **Recent**, drawn like a
 [List](layouts.md#list) game list, with the selected game's picture behind the
 rows.
 
+![The Game Switcher in List: Streets of Rage 2 selected over its picture, then Contra - Hard Corps, Comix Zone, Sonic 3D Blast and Super Street Fighter II, with its time and achievements at the bottom](../assets/screenshots/mobile/game-switcher-list.webp)
+
 - `UP` / `DOWN` move through the games.
 - A tap on a row highlights it, and a second tap resumes it.
 - `A` **Resume**, `Y` **Remove** and `B` **Back** work as in Full screen.
