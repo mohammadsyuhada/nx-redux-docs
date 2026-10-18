@@ -26,7 +26,8 @@ theme:
     - content.code.copy
 
 extra:
-  handheld_version: v2.1.2   # shown beside Handheld on the landing page; bump with each release
+  handheld_version: v2.2.0   # shown beside Handheld on the landing page; bump with each release
+  mobile_version: v0.1.0     # shown beside Mobile on the landing page; bump with each release
   analytics:
     provider: google
     property: G-PJ9F1Q2YLL

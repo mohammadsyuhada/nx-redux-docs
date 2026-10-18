@@ -4,10 +4,6 @@ title: Getting Started on Mobile
 
 # Getting Started
 
-!!! info "Coming soon"
-    NX Redux for Android is not released yet. These pages describe the app as it
-    is today.
-
 NX Redux for Android brings the NX Redux look, folder layout and in-game
 features to Android phones, tablets, foldables and Android handhelds. It runs retro
 systems through emulators bundled in the app, with nothing extra to download.
@@ -48,8 +44,18 @@ The same as on the handheld: [Artwork](artwork.md),
 
 ## Install
 
-When it's released, the APK is listed on the
-[Download](../reference/download.md) page.
+1. Download the latest `NXReduxMobile-vX.Y.Z.apk` from the
+   [releases page](https://github.com/mohammadsyuhada/nx-mobile/releases),
+   on the phone itself. See also [Download](../reference/download.md).
+2. Open it. Android asks to allow installs from your browser or file manager
+   the first time; allow it, then **Install**.
+3. Open **NX Redux** and follow the setup below.
+
+It needs Android 8.0 or later on a 64-bit ARM (arm64) device. A newer release
+installs over the old one and keeps your settings and saves.
+
+Found a problem? Report it on
+[GitHub](https://github.com/mohammadsyuhada/nx-mobile/issues).
 
 ## First-run setup
 

@@ -9,6 +9,99 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.2.0
+
+*18 October 2026*
+
+Device Sync now works over a USB cable, syncs with NX Redux for Android, and
+also carries your BIOS files and collections. Emulator shortcuts move to
+Settings and apply to every game. Consoles can use your own logos, and
+fast-forward runs faster on SNES, arcade and Mega Drive.
+
+!!! warning "Before you update"
+    - **Set your emulator shortcuts again.** Shortcuts are now set once for
+      every game in **Settings → Emulator Shortcuts**. Shortcuts you set
+      earlier in a game's **Options → Shortcuts** menu (for a console or a
+      game) don't carry over. The FN switch no longer turns on turbo fire or
+      D-pad joystick mode; bind the **Toggle Turbo** and **Toggle D-pad
+      Joystick** shortcuts instead. See
+      [Emulator Shortcuts](../../handheld/settings/emulator-shortcuts.md).
+    - **Achievement badges download again.** Badges are now kept per game in
+      each console's ROM folder, and the old badge folder is removed on
+      update. Each game's badges come back the next time you launch it
+      online, or all at once with **RetroAchievements → Download all game
+      data**. Your achievements and offline unlocks are kept.
+    - **Update both devices before using Device Sync.** A device on v2.1 or
+      older still sends its settings and recently played list, can't sync
+      over the cable, and skips BIOS files and collections.
+    - **Old Dreamcast memory cards are no longer copied in on every launch.**
+      If your cards are still in the old standalone emulator's folder, copy
+      them across once by hand. See
+      [Bringing in an existing card](../../handheld/emulators/dreamcast.md#bringing-in-an-existing-card).
+
+### New features
+
+- **Device Sync over a USB cable.** **Tools → Device Sync** gets **Sync via
+  cable** (the default) next to **Sync via Wi-Fi**, using the same cable as
+  netplay. See [Device Sync](../../handheld/apps/device-sync.md).
+- **Device Sync carries only your progress.** Saves, save states and, if you
+  turn them on, ROMs. Settings, recently played, pinned games and your
+  RetroAchievements login stay on each device. It also adds your BIOS files
+  (never replacing one the other device already has) and merges your
+  collections on both sides. It can sync with a phone running NX Redux for
+  Android.
+- **Emulator shortcuts in Settings.** **Settings → Emulator Shortcuts** sets
+  save, load, reset, fast-forward, Game Switcher and the other shortcuts for
+  every game in one place, plus a new **Toggle D-pad Joystick** shortcut that
+  makes the D-pad move the left stick. The **FN switch** now turns night mode
+  on and off only.
+- **Your own console logos.** Put a `logo.png` in a console's
+  `Roms/<Folder>/.media/` folder to give a custom console a logo or replace
+  a built-in one. See
+  [Your own console logos](../../handheld/guide/layouts.md#your-own-console-logos).
+- **Console backgrounds in the Carousel.** The Consoles Carousel shows a
+  console's `.media/bg.png` behind it when **Consoles background** (renamed
+  from **Consoles controller**) is set to **Background**. See
+  [Your own console backgrounds](../../handheld/guide/layouts.md#your-own-console-backgrounds).
+- **Quit without saving.** On **Quit** in the in-game menu, `X` quits without
+  the resume save, so **Resume** goes back to where you were before. `A`
+  still saves and quits.
+- **Rotate pictures.** In the **Image Viewer**, `Y` turns the picture 90°
+  clockwise and saves it to the file. See
+  [Image Viewer](../../handheld/apps/image-viewer.md).
+- **Controller art.** Ports show a modern gamepad, and Pico-8, Doom and the
+  home computers show a keyboard, instead of a blank space.
+
+### Improvements
+
+- **Faster fast-forward.** SNES (snes9x and Supafaust), FBNeo arcade and
+  Genesis Plus GX no longer draw the frames fast-forward skips, so they get
+  much closer to your Max FF Speed (SNES at 8x on the Brick went from about
+  2.75x to 5.5x).
+- **Faster RetroAchievements launches.** Each console folder remembers its
+  games' fingerprints, so a game isn't checked again on every launch, and
+  **Download** in the RetroAchievements app skips games it has already
+  checked.
+
+### Fixes
+
+- **Device Sync:** a sync could hang when the devices paired but one missed
+  the other's reply, and a failed or cancelled sync on one device left the
+  other waiting. A sync cut short (`B`, cable pulled, Wi-Fi lost) no longer
+  leaves a half-copied file behind. ROM sync no longer copies a game into a
+  second emulator folder of the same console, and never replaces existing
+  game art.
+- **Dreamcast:** save states made mid-game (on the handheld or a phone) load
+  on the first try. The shared memory cards now live in `Saves/DC`, so Device
+  Sync carries them with your other saves; existing cards move there on
+  their own.
+- **Nintendo 64:** save, load and Game Switcher shortcuts no longer freeze
+  the game.
+- **Nintendo DS (Brick, Brick Pro):** holding `A` drags the stylus again.
+- **Game Boy Advance:** Classic NES Series carts (such as *Pac-Man* or
+  *Super Mario Bros.*) now run; they start on mGBA automatically, keeping
+  their saves in `Saves/GBA`.
+
 ## v2.1.2
 
 *13 October 2026*

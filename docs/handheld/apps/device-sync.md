@@ -12,9 +12,15 @@ SD cards are built for one device model, so don't swap them between devices.
 
 - **Game saves** (`Saves/`)
 - **Save states**, with their slot pictures
+- **BIOS files** (`Bios/`) — a file the other device already has is never
+  replaced.
+- **Collections** — each collection is merged, so games added on either
+  device end up in it on both. Nothing is removed from a collection.
 - **ROMs** — optional: press `X` to toggle `ROMS: ON/OFF` before starting. The
   whole `Roms/` folder travels, including artwork (`.media`) and
-  RetroAchievements data (`.retroachievements`).
+  RetroAchievements data (`.retroachievements`). Artwork only fills in
+  pictures the other device is missing, and a game the other device already
+  has in another emulator folder of the same console isn't copied again.
 
 Everything else stays on each device: settings, recently played, pinned games,
 and your RetroAchievements login (sign in on each device).
