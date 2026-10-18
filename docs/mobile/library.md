@@ -10,6 +10,11 @@ The library comes from two kinds of folder:
 - **Extra folders**, any number of them, scanned in place and never written
   to.
 
+During [first-run setup](getting-started.md#first-run-setup), the page that
+says what a folder holds offers **Move them into <home>/Roms**: on by
+default for the home folder's games outside `Roms/`, off for an extra
+folder. Only then does the app move games, never delete them.
+
 The app matches the files in an extra folder to a console by the folder's
 name or the file's extension. Anything left over lands in
 [Unassigned games](#unassigned-games) until you pick its console.
@@ -98,13 +103,22 @@ or zip to import, and saving an export, all use the app's own picker, a list
 like the rest of the app.
 
 - It starts at your storage, **Internal storage** and any SD card, or next to
-  your home folder.
-- The first row is **Use this folder**, or **Save here** for an export.
-  Folders follow, A–Z; when importing a zip, `.zip` files are listed too.
-  Hidden (dot) folders are not shown.
-- `A` opens a folder, or picks the row. `B` goes up a level, and at the
-  storage list cancels.
-- `X` **New folder** asks for a name and opens the new folder.
+  your home folder. The title shows the folder's path, such as
+  **Internal storage/NXRedux**.
+- The first rows are **Use this folder** (or **Save here** for an export) and
+  **Create new folder**, then **..** for the folder above. Folders follow,
+  A–Z, then the files, dimmed: they show what a folder holds, but can't be
+  picked. When importing a zip, the `.zip` files are the ones you pick.
+  Hidden (dot) folders and files are not shown.
+- When picking the home folder, a line under the title says what the folder
+  is: **Empty folder**, **NX Redux folder**, or **Has other files: games
+  found in it will be sorted into Roms**. An SD card's root can be the home
+  folder; the phone's storage root has no **Use this folder** row.
+- In landscape, the folder's entries sit in a column on the right.
+- `A` **Select** opens a folder, or picks the row. `B` **Back** goes up a
+  level, and at the storage list cancels.
+- `X` **New folder**, or **Create new folder**, asks for a name and opens the
+  new folder.
 - An export over a file of the same name asks **Replace <name>?** first.
 
 ## Unassigned games

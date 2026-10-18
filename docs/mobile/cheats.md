@@ -20,7 +20,9 @@ row: **Download (about 37 MB)**.
 - When it is done, the page shows **Installed**, the number of systems and
   files, and the date of the last update.
 
-One download covers every supported system.
+One download covers every supported system. It has no Wii or GameCube
+cheats: those games list Dolphin's own codes instead. See
+[Nintendo Wii & GameCube](emulators/wii-gamecube.md#cheats-and-achievements).
 
 ## Keeping it up to date
 
@@ -33,7 +35,8 @@ With the cheats installed, the page offers **Check for updates** and
   downloads it again only when it has changed. Otherwise it reports **Cheat
   database is up to date**. With no connection it reports **Could not check
   for updates (Wi-Fi?)**.
-- **Remove** asks to confirm, then deletes the downloaded files.
+- **Remove** asks **Remove cheat database?**, then deletes the downloaded
+  files. Your own cheat files stay.
 
 ## Where the files go
 

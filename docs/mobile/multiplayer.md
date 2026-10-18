@@ -10,7 +10,10 @@ is nothing to set up first:
   on its built-in controls while a friend uses a Bluetooth pad.
 
 The on-screen pad is never a player of its own: it always controls
-Player 1. Each extra player needs a controller.
+Player 1. Each extra player needs a controller. In portrait, connecting a
+controller removes the on-screen pad and gives the game the whole screen,
+unless it is a clip-on controller such as the GameSir Pocket Taco. See
+[Controls](controls.md#on-screen-pad-and-controllers).
 
 Playing on two devices instead, such as two phones or a phone and an NX
 Redux handheld? See [Netplay](netplay.md).

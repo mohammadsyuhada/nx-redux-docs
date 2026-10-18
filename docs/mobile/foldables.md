@@ -46,8 +46,7 @@ unfolded Galaxy Z Fold or a tablet.
 
 - The top section is as on the wide face: Continue, one or two pinned games
   and the tool squares.
-- With three or more pinned games, they fill a **Pinned** band below, four
-  to a row.
+- With three or more pinned games, they fill the rows below, four to a row.
 - Under them come the [shelves](#shelves), four to a row at the pinned
   games' size.
 
@@ -61,7 +60,8 @@ unfolded Galaxy Z Fold or a tablet.
 Home shows up to three shelves of games from your library, in portrait and
 landscape alike, on every screen size and in every Home layout. Each shelf
 shows only when it has games, holds at most 3, and a game is never on two
-shelves.
+shelves. Each shelf has its name as a label above it; on Carousel and List
+Home each game wears it as a badge or tag instead.
 
 | Shelf | What it holds |
 | --- | --- |
@@ -73,7 +73,7 @@ The game on the Continue card, your pinned games, Unassigned games and
 Android games are left off the shelves.
 
 [Layouts](layouts.md) can hide the **New** and **Not started** shelves, each
-with its own row. A hidden shelf's games don't move to another shelf. **Pick
+with its own row in **Layouts → Home**. A hidden shelf's games don't move to another shelf. **Pick
 up again** always shows when it has games.
 
 ## Two-pane screens

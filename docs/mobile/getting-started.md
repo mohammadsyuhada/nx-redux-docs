@@ -39,11 +39,11 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 - **Netplay:** play with another phone or an NX Redux handheld, over Wi-Fi
   or a USB-C cable, Game Boy and GBA link trades included. See
   [Netplay](netplay.md).
-- **Device Sync:** carry saves and save states between the phone and an
-  NX Redux handheld, over Wi-Fi or a USB-C cable. See
+- **Device Sync:** carry games, saves and save states between the phone and
+  an NX Redux handheld, over Wi-Fi or a USB-C cable. See
   [Device Sync](device-sync.md).
-- **In a later release:** ROMs in Device Sync, and more systems, such as
-  home computers (Amiga, C64 and so on).
+- **In a later release:** more systems, such as home computers (Amiga, C64
+  and so on).
 - **Not available:** RetroAchievements hardcore mode, the same as on the
   handheld.
 - **Left to Android:** Wi-Fi and Bluetooth management, the on-screen display,
@@ -54,25 +54,50 @@ New to NX Redux? See [About NX Redux](../about.md) first.
 When it's released, the APK is listed on the
 [Download](../reference/download.md) page.
 
+## First-run setup
+
+The first time you open the app, a short setup walks you through it. From
+the folders on, the page title counts **Setup · Step n of m**, and
+**Continue** or **Skip** sit at the top right. `B` goes back a page.
+
+1. **Welcome.** Press **Get started**.
+2. **Text size.** **Large** or **Small**. Every page after it, setup's own
+   included, reads at the size you pick. See [Text size](appearance.md#text-size).
+3. **Permissions.** **All files access** and **Notifications**, where your
+   phone has them. See [Allow All files access](#allow-all-files-access).
+4. **Your folders.** The home folder, an extra ROMs folder, and the Android
+   games on your phone. See [Choose a home folder](#choose-a-home-folder).
+5. **Your handheld.** If you also play on an NX Redux handheld, setup matches
+   its save formats and offers a [Device Sync](device-sync.md).
+6. **Artwork.** Fetch box art and screenshots in the background. See
+   [Artwork](artwork.md).
+7. **RetroAchievements.** Sign in, then download the achievement data in the
+   background. See [RetroAchievements](retroachievements.md).
+8. **Customise the layout?** Pick the menu's look page by page, each with a
+   picture, or keep the defaults. See [Menu Layouts](layouts.md).
+9. **Accents.** Pick your **Accent** and **Secondary accent**.
+10. **Ready, player one.** Press **Press Start** to open the main menu.
+
+Everything setup asks can be changed later in **Tools → Settings**.
+
 ## Allow All files access
 
-On Android 11 and later, first setup starts by asking **Allow All files
-access**. The app uses it to read your library faster and to show its own
-folder picker, and Device Sync will use it to sync ROMs with a handheld.
+On Android 11 and later, setup's **Permissions** page lists **All files
+access**. The app uses it to read your library faster, to show its own
+folder picker, and to sync ROMs with a handheld. Select the row to open
+Android's page for the app, turn the switch on, then come back. Choose
+**Continue** to go on with or without it; without it the app uses Android's
+folder picker.
 
-- Press `A` **Allow** to open Android's page for the app, turn the switch on,
-  then come back. Setup goes on to the home folder.
-- Press `B` **Skip** to go on without it. The app then uses Android's folder
-  picker, and works as before.
-
-Setup asks only once. You can turn it on or off later in **Tools → Settings →
-Library → ROM folders → All files access**.
+You can turn it on or off later in **Tools → Settings → Library → ROM
+folders → All files access**.
 
 ## Choose a home folder
 
-Next the app asks you to **Pick a home folder**. Press `A` **Pick folder**.
-With All files access the app's own [folder picker](library.md#the-folder-picker)
-opens; without it, Android's folder picker does.
+Next the app asks you to **Pick a home folder**: an empty folder, or one
+NX Redux used before. Press `A` **Pick folder**. With All files access the
+app's own [folder picker](library.md#the-folder-picker) opens; without it,
+Android's folder picker does.
 
 ![Pick a home folder](../assets/screenshots/mobile/first-run-home-folder.webp)
 
@@ -88,7 +113,10 @@ The folders are visible to file managers, so you can copy games in from a
 computer. The home folder can sit on an SD card.
 
 If your games already follow the NX Redux layout from a handheld, the same
-folder names and `Bios/<TAG>/` files work unchanged.
+folder names and `Bios/<TAG>/` files work unchanged. When the folder already
+holds games, setup says **Found N games in** the folder, a line per console.
+Games outside `Roms/`, and a console split over two folders, are tidied into
+`Roms/` while **Move them into …/Roms** is on (the default).
 
 Saves and save states are kept inside the app, not in the home folder. See
 [Saves](library.md#saves).
@@ -96,33 +124,34 @@ Saves and save states are kept inside the app, not in the home folder. See
 !!! note "Pick a folder, not a root"
     Android's picker can't use the storage root, the SD card root or the
     Download folder. Pick or create a folder inside one of them, such as
-    `NXRedux`. The app's own picker can make one for you with `X` **New
-    folder**.
+    `NXRedux`. With All files access, the app's own picker can use an SD
+    card's root, but not the phone's storage root, and can make a folder for
+    you with `X` **New folder**.
 
 ## Add a ROMs folder
 
-Right after you pick the home folder, the app asks **Add a ROMs folder?**
+Right after the home folder, the app asks **Add a ROMs folder?**
 
 ![Add a ROMs folder?](../assets/screenshots/mobile/first-run-add-roms.webp)
 
 - If you already keep games somewhere else on the phone, press `A`
   **Add folder** and pick that folder. It is scanned in place and nothing is
-  moved.
-- Press `B` **Skip** to go on without one.
+  moved, and setup says what it found.
+- Choose **Skip** to go on without one.
 
 You can add more folders later in **Tools → Settings → Library → ROM folders
 → Add ROM folder**. See [Library & ROM folders](library.md).
 
 ## Android games
 
-When the app finds games installed on your phone, the last step asks
+When the app finds games installed on your phone, the last folder step asks
 **Add N Android games to Consoles?** and lists them.
 
 ![The Android games question](../assets/screenshots/mobile/first-run-android-games.webp)
 
-- Press `A` **Yes** to add them. They show up as an **Android** console on
+- Choose **Yes** to add them. They show up as an **Android** console on
   the Consoles tab.
-- Press `B` **Not now** to leave them out.
+- Choose **Not now** to leave them out.
 
 The question is asked once. On an install that already has a library, it can
 show once as a dialog over the main menu instead. Change the list any time in

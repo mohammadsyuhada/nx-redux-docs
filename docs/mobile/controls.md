@@ -6,14 +6,22 @@ Without a controller the app shows an on-screen pad. Connect any Android
 controller to play with real buttons instead. With a controller each, two to
 four people can play one game; see [Local Multiplayer](multiplayer.md).
 
-- **Portrait:** the pad sits in a band below the screen, in the menus and in
-  games. On Nintendo DS, the band goes away while a controller is connected,
-  so both screens get the full height (see
-  [Nintendo DS](emulators/nintendo-ds.md)).
+- **Portrait:** the pad sits in a band below the screen, in games and on the
+  main menu, the game lists and the Game Switcher. The tools' pages have no
+  pad.
+    - In a game, the band goes away while a controller is connected, so the
+      game gets the full height. A clip-on controller that sits where the
+      band was, such as the GameSir Pocket Taco or the 8BitDo FlipPad, keeps
+      it. On Nintendo DS the screens then use their own controller layout (see
+      [Nintendo DS](emulators/nintendo-ds.md)).
+    - On the main menu the band stays with a controller. Turn it off with
+      [**Menu pad**](controls-settings.md#menu-pad).
 - **Landscape:** the buttons sit in two clusters over the game. See
   [Landscape](#landscape).
 - **`STICK`** switches the on-screen d-pad to an analog stick and back. While
   the stick is on, the button reads **D-PAD**.
+- To move or resize the pad's buttons, for every console or for one, use
+  [**Pad layout**](controls-settings.md#pad-layout).
 
 ### Landscape
 
@@ -262,12 +270,12 @@ set **Player 2 Pak** to **Player 4 Pak** the same way.
 
 | Button | What it does |
 | --- | --- |
-| `A` | Open or start the highlighted item |
+| `A` | Open or start the highlighted item. On a game with a save state it resumes the game (**Resume**) |
 | `B` | Back. Android's Back gesture does the same. |
-| `X` | In a game list, resume the highlighted game when it can be resumed |
+| `X` | In a game list, open the [achievements panel](main-menu.md#achievements-panel) for the highlighted game, while you are signed in to [RetroAchievements](retroachievements.md) |
 | `Y` | On a game that has [netplay](netplay.md), open the Netplay sheet |
 | `SELECT` | Open the [Game Switcher](game-switcher.md). The main menu's hint reads **Recent**. |
-| `START` | On the main menu, [search](main-menu.md#search) your games |
+| `START` | On the main menu, [search](main-menu.md#search) your games. In a game list, [search that list's games](main-menu.md#searching-a-game-list) |
 | `MENU`, or a long press | Open the context menu |
 | `L1` / `R1` | Switch main menu tabs |
 
@@ -280,18 +288,32 @@ set **Player 2 Pak** to **Player 4 Pak** the same way.
   `B` goes back. On PlayStation and PSP, `×` confirms and `○` goes back.
 
 Menus show key hints you can tap when a controller or the on-screen pad is
-present, and real buttons in landscape without one. **Options** (`MENU`)
-always comes first. The other hints follow the pad from left to right: the
-d-pad and left shoulders, `SELECT`, `START`, then `Y` `X` `B` `A`, then the
-right shoulders.
+present. **Options** (`MENU`) always comes first. The other hints follow the
+pad from left to right: the d-pad and left shoulders, `SELECT`, `START`, then
+`Y` `X` `B` `A`, then the right shoulders.
+
+With touch alone (no controller and no pad below the screen: in landscape,
+on the tools' pages in portrait, or with [Menu pad](controls-settings.md#menu-pad)
+Off), there is no hint bar:
+
+- Tap an item to select it, tap it again to open it, and long-press for its
+  menu. Android's Back gesture goes back.
+- **Recent** and **Search** are icons at the right of the tab row, and a
+  page's own actions are icons by its title or buttons on the page.
+- Dialogs have real buttons.
+- A Settings value with three or more choices opens a dropdown of them. See
+  [Settings](settings.md).
 
 ## Game-list context menu
 
 Press `MENU`, or long-press a game, for its context menu: Pin Item, Hide
 Game, Rename Rom, Add to Collection, Game Settings, Netplay, Fetch art and
-Emulator. While Button hints are hidden it starts with Resume and Netplay.
-See [Context menus](main-menu.md#context-menus) for what each does and where
-it shows.
+Emulator. A game with a save state starts it with **Play from start**. While
+the Netplay hint is hidden, or with touch alone, **Netplay** comes next. With
+the [Achievements panel](layouts.md#layout-options-and-achievements-panel)
+row set to Hide, **Achievements** comes last. See
+[Context menus](main-menu.md#context-menus) for what each does and where it
+shows.
 
 ## In-game menu
 

@@ -11,7 +11,9 @@ a grid or a carousel, and game lists have a fourth style, Backdrop.
 [Menu Layouts](layouts.md) shows them all.
 
 You can drive every screen with the on-screen pad, a controller or touch.
-See [Controls](controls.md).
+See [Controls](controls.md). With touch only (no controller, and no pad on
+screen) there is no hint bar: tap the items, and use the icons at the top
+right.
 
 ## Tabs
 
@@ -53,13 +55,31 @@ same goes for a tab opened over another.
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` **Search** | [Search](#search) your games |
 
+When the hint bar doesn't show **Recent** or **Search** (touch only, Button
+hints hidden, or their own hint hidden in
+[Layouts](layouts.md#page-title-and-button-hints)), they are icons at the
+right of the tab row instead.
+
 ## Home
 
 Home is the starting point: your most recent game, this month's play time,
 and everything you pinned. It comes in three layouts, **List**, **Grid** (the
 default) and **Carousel**. Pick one in
-[Settings → Layouts → Home layout](layouts.md#the-layouts-page). With
-[Extra info](layouts.md#extra-info) hidden, every layout leaves out the stats.
+[Settings → Layouts → Home → Home layout](layouts.md#the-layouts-page).
+
+Every layout starts with the same two-line stats strip:
+
+- **This month** and its total play time, then the RetroAchievements you
+  unlocked this month while you are signed in to
+  [RetroAchievements](retroachievements.md). "This month" is the calendar
+  month.
+- **Most played**: the month's most played game and its time. A month
+  without play shows **No play yet** on the first line, and no second line.
+
+[Home stats](layouts.md#home-stats) in Layouts → Home hides the strip.
+[Extra info](layouts.md#extra-info) hides the play time and achievements on
+the cards. With **Page title** hidden, the strip moves up into the tab row's
+place.
 
 In every layout the buttons are the same:
 
@@ -67,7 +87,7 @@ In every layout the buttons are the same:
 | --- | --- |
 | `A` **Play** / **Resume** / **Open** | Start the game (**Resume** continues from its auto-save, **Play** shows when it has none), or open the tool |
 | `Y` **Netplay** | Play the selected game with another device. Shown for games that have [netplay](netplay.md) |
-| `MENU` **Options** | The context menu for the selected game or tool. There is none on **Pick a game**, unless a tab is hidden and the menu offers it |
+| `MENU` **Options** | The context menu for the selected game or tool: **Pin** / **Unpin**, led by **Play from start** when the game has an auto-save. There is none on **Pick a game**, unless a tab is hidden and the menu offers it |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` **Search** | [Search](#search) your games |
 
@@ -81,9 +101,7 @@ different.
 
 Everything on Home in one list.
 
-- **Stats** sit on two lines under the tabs, left-aligned: **This month** and
-  the achievements you unlocked, then **Most played**. A month without play
-  shows **Nothing played yet. Let's go!** instead.
+- **Stats** sit on two lines under the tabs, left-aligned.
 - **The list** starts with your most recent game, marked with a **Continue**
   tag and selected when Home opens. On a fresh install it is **Pick a game**
   instead. Your pinned games follow in the order you pinned them, then the
@@ -113,12 +131,7 @@ This is the default layout.
 
 ![Home with a pinned game selected](../assets/screenshots/mobile/home-pins.webp)
 
-- **Stats strip.** The top line shows **This month**'s total play time and
-  the RetroAchievements you unlocked this month. It reads **Sign in** while
-  you are signed out of [RetroAchievements](retroachievements.md). The second
-  line shows the month's **Most played** game and its time. A month without
-  play shows **No play yet**. "This month" is the calendar month.
-  [Extra info](layouts.md#extra-info) can hide it.
+- **Stats strip** on two lines under the tabs.
 - **Continue card.** Your most recent game, wearing a **Continue** badge, with
   when you last played it and for how long. Press `A` to jump back in.
 - **Pick a game.** On a fresh install the Continue card is replaced by
@@ -129,15 +142,15 @@ This is the default layout.
   more tools are pinned than fit, the last square becomes **+N**, which opens
   the Tools tab. While Tools is hidden, it opens over Home, and a long press
   opens the hidden-tab menu.
-- **Pinned games** fill the rows below. Home scrolls when there are more. The
-  selected pin shows its name and play time.
+- **Pinned games** fill the rows below, each with its name and play time.
+  Home scrolls when there are more.
 - Games without art get a generated abstract picture, so every card looks
   different.
 
 | Button | What it does |
 | --- | --- |
 | D-pad | Move between the cards |
-| `MENU` **Options** | **Pin** or **Unpin** the selected game or tool |
+| `MENU` **Options** | **Pin** or **Unpin** the selected game or tool (**Play from start** first on a game with an auto-save) |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` **Search** | [Search](#search) your games |
 | `Y` **Netplay** | Play the selected game with another device. Shown for games that have [netplay](netplay.md) |
@@ -154,17 +167,16 @@ This is the default layout.
 
 Under the pinned games, Home shows shelves of games to pick from, on every
 screen size, portrait and landscape alike: **New**, **Not started** and
-**Pick up again**, at most 3 games each, under a label like the **Pinned**
-one. Their cards are the pinned games' size, in the same grid: two to a row
-in portrait, four on a tablet. See [Shelves](foldables.md#shelves).
+**Pick up again**, at most 3 games each, each under its own label. Their
+cards are the pinned games' size, in the same grid: two to a row in
+portrait, four on a tablet. A **New** or **Not started** game shows its
+console under its name. See [Shelves](foldables.md#shelves).
 
 ### Carousel
 
 The same games in one row of cards, centred on the screen.
 
-- **Stats** sit on two centred lines under the tabs: **This month** above,
-  **Most played** below. A month without play shows **Nothing played yet.
-  Let's go!** instead.
+- **Stats** sit on two centred lines under the tabs.
 - **The carousel** starts on the **Continue** card (with a **Continue** badge),
   selected when Home opens, or **Pick a game** on a fresh install. Your pinned
   games follow, then the games from the shelves in the order **New**, **Not
@@ -173,9 +185,10 @@ The same games in one row of cards, centred on the screen.
 - **Game info** shows inside the selected card, at the bottom over a dark
   fade like the Grid's Continue card: its name, when you last played it, play
   time and achievements. The cards beside it show their picture only.
-- **Pinned tools** sit in a row of squares under the carousel, the same size
-  as the Grid's tool squares on that screen. When they don't all fit, the last
-  square is **+N**, which opens the Tools tab.
+- **Pinned tools** sit in a row of squares under the carousel, the size of
+  the Grid's portrait tool squares, in landscape too. The strip, the carousel
+  and the tools row sit centred on the screen as one group. When the tools
+  don't all fit, the last square is **+N**, which opens the Tools tab.
 - **Swipe** the carousel to scroll it.
 
 | Button | What it does |
@@ -187,8 +200,8 @@ The same games in one row of cards, centred on the screen.
 ## Pinning games and tools
 
 - **Pin a game:** press `MENU` on it in a game list and choose **Pin Item**.
-  **Unpin Item** removes it again. On Home, `MENU` on the Continue card offers
-  **Pin**, and on a pinned game **Unpin**.
+  **Unpin Item** removes it again. On Home, `MENU` on the Continue card or a
+  shelf game offers **Pin**, and on a pinned game **Unpin**.
 - **Pin a tool:** press `MENU` on it in the Tools tab and choose **Pin**.
   **Unpin** removes it.
 - You can pin up to **12** games. At the limit the app says
@@ -211,7 +224,8 @@ and Tools is a grid.
 ![Collections tab](../assets/screenshots/mobile/tab-collections.webp)
 
 - **Tools** show an icon for each tool: **RetroAchievements**,
-  **Game Tracker**, **Artwork**, **Cheat Database** and **Settings**, plus any
+  **Game Tracker**, **Artwork**, **Cheat Database**, **Device Sync** and
+  **Settings**, plus any
   Android apps you choose to show there (see
   [Launcher Mode & Android Games](launcher.md)).
 
@@ -228,7 +242,8 @@ and Tools is a grid.
 
 The tools have their own pages: [RetroAchievements](retroachievements.md),
 [Game Tracker](game-tracker.md), [Artwork](artwork.md),
-[Cheat Database](cheats.md) and [Settings](settings.md).
+[Cheat Database](cheats.md), [Device Sync](device-sync.md) and
+[Settings](settings.md).
 
 ## Game lists
 
@@ -237,21 +252,58 @@ console or collection, e.g. **Sega Genesis**.
 
 ![Game list in the default Carousel style](../assets/screenshots/mobile/game-list.webp)
 
-Under the selected game you see when you last played it and your total play
-time ("Today - 11m 0s"). For games with achievements, the line adds your
-progress and the next achievement to go for. Game names leave out the region
-and version text in brackets.
+The selected game shows when you last played it and your total play time
+("Today - 11m 0s"). For games with achievements, the line adds your progress
+and the next achievement to go for. In Carousel it sits inside the selected
+card, with the name below it. In List it shows in the hint bar's row, so only
+while [Button hints](layouts.md#page-title-and-button-hints) are hidden or
+with touch only. Game names leave out the region and version text in
+brackets.
 
 | Button | What it does |
 | --- | --- |
 | `MENU` **Options** | Open the game's context menu |
 | `SELECT` | Open the [Game Switcher](game-switcher.md) |
+| `START` | [Search](#searching-a-game-list) this list |
+| `X` **Achievements** | Open the [achievements panel](#achievements-panel) |
 | `Y` **Netplay** | Play the game with another device. Shown for games that have [netplay](netplay.md) |
-| `X` **Resume** | Jump straight back into your auto-saved session (shown when the game has one) |
 | `B` **Back** | Return to the tab |
-| `A` **Open** | Launch the game |
+| `A` **Resume** / **Open** | Launch the game. **Resume** continues from its auto-save; **Open** shows when it has none |
 
-A long press on a game opens the context menu too.
+A long press on a game opens the context menu too. To start a game with an
+auto-save from the beginning, choose **Play from start** in its menu.
+
+### Title icons
+
+On a phone or tablet, icons sit at the right of a game list's title:
+
+| Icon | What it does |
+| --- | --- |
+| **Recent** | Open the [Game Switcher](game-switcher.md) |
+| **Search** | [Search](#searching-a-game-list) this list |
+| **Layout** | A dropdown of the game list layouts: **List**, **Grid**, **Carousel**, **Carousel, vertical left** / **right**, **Backdrop** and **Backdrop, vertical left** / **right**. The one you pick applies to every game list. See [Menu Layouts](layouts.md) |
+| Trophy | Open or close the [achievements panel](#achievements-panel) |
+
+**Layout options** and **Achievements panel** in Layouts → Game lists hide
+the Layout and trophy icons. See
+[Layouts](layouts.md#layout-options-and-achievements-panel).
+
+### Searching a game list
+
+`START`, or the **Search** icon, searches only the games of the list you are
+in. The prompt is titled after the list, such as **Search Sega Genesis**, and
+the results are titled with the list and your words, such as **Sega Genesis:
+sonic**. `B` returns to the list, on the game you had selected in the
+results. Matching works as in [Search](#how-matching-works).
+
+### Achievements panel
+
+While you are signed in to [RetroAchievements](retroachievements.md), `X` or
+the trophy icon opens a panel from the right with the selected game's
+achievements. Tapping the selected game's name or info line opens it too.
+See [RetroAchievements on game lists](retroachievements.md#on-game-lists) for
+its buttons. With **Achievements panel** hidden, `X` still opens it, and the
+game's menu ends with **Achievements**.
 
 ## Context menus
 
@@ -262,22 +314,23 @@ where the game is listed.
 
 | Item | What it does |
 | --- | --- |
+| **Play from start** | Start the game from the beginning instead of its auto-save. Shown first when the game has one |
 | **Pin Item** / **Unpin Item** | Pin the game to Home, or take it off |
 | **Hide Game** | Hide the game from its list |
 | **Rename Rom** | Change the name the list shows |
 | **Add to Collection** | Add the game to a collection, or start a new one |
 | **Game Settings** | This game's own emulator settings. See [Emulator Settings](emulator-settings.md) |
-| **Resume** | Jump back into the game's auto-save. Shown only while Button hints are hidden |
 | **Netplay** | Play the game with another device. See [Netplay](netplay.md) |
 | **Fetch art** | Download art for this game. See [Artwork](artwork.md) |
 | **Emulator** | Pick which emulator runs this game. See [Emulators](emulators/index.md) |
 | **Remove from Collection** | Take the game out of the collection you are in |
+| **Achievements** | Open the [achievements panel](#achievements-panel). Shown last, only while its icon is hidden |
 
 Not every item shows everywhere:
 
 | List | Items |
 | --- | --- |
-| A console | **Pin Item**, **Hide Game**, **Rename Rom**, **Add to Collection**, **Game Settings**, **Netplay**, **Fetch art**, and **Emulator** on systems with more than one emulator |
+| A console | **Play from start** when the game has an auto-save, then **Pin Item**, **Hide Game**, **Rename Rom**, **Add to Collection**, **Game Settings**, **Netplay**, **Fetch art**, and **Emulator** on systems with more than one emulator |
 | A collection | The same, with **Remove from Collection** at the end |
 | [Search](#search) results | The same as a console, without **Emulator** |
 | Unassigned games | **Hide Game**, **Rename Rom**, **Console** |
@@ -286,13 +339,13 @@ Not every item shows everywhere:
 - **Fetch art** shows only for systems the art sources know, and only when
   the game's art is incomplete, or when **Artwork → Replace existing art** is
   on.
-- While [Button hints](layouts.md#page-title-and-button-hints) are hidden
-  (with a controller connected or the portrait pad shown), the `X` Resume and
-  `Y` Netplay hints are not on screen, so a game's menu starts with
-  **Resume** (when the game has a save) and **Netplay** (when available).
-  On Home it starts with **Netplay** only.
+- When the `Y` **Netplay** hint is not on screen (touch only, Button hints
+  hidden, or **Netplay hint** hidden in
+  [Layouts](layouts.md#page-title-and-button-hints)), **Netplay** moves up,
+  right after **Play from start**. On Home too.
 - A menu with 9 to 16 items shows as two columns when the screen is wide
-  enough. `Left` / `Right` move between the columns.
+  enough. `Left` / `Right` move between the columns. `Up` / `Down` loop
+  round the items.
 - **Netplay** shows only for systems that have [netplay](netplay.md).
 - **Unassigned games** are files in an extra ROM folder that the app could
   not match to a system. Open
@@ -314,8 +367,10 @@ menu of their own, such as a console, get a menu with just these, captioned
 
 ## Search
 
-Press `START` on the main menu to search your games. It works from any tab,
-and from the tab row. The hint reads **Search** once you have games.
+Press `START` on the main menu, or tap the **Search** icon, to search all
+your games. It works from any tab, and from the tab row. The hint reads
+**Search** once you have games. In a game list, `START` searches only that
+list: see [Searching a game list](#searching-a-game-list).
 
 1. The **Search** prompt opens, with your last search filled in.
 2. Type part of a name and press `A` or the keyboard's **Done**.
@@ -330,15 +385,15 @@ The results list games from every console, in your game list style, each
 with its console's tag, such as `GBA`. It reads **No results** when nothing
 matches.
 
-![Search: super mario, showing Super Mario 64 with its play time and achievements, and the X Resume hint](../assets/screenshots/mobile/search-results.webp)
+![Search: super mario, showing Super Mario 64 with its play time and achievements, and the A Resume hint](../assets/screenshots/mobile/search-results.webp)
 
 | Button | What it does |
 | --- | --- |
 | `MENU` **Options** | The game's context menu |
+| `X` **Achievements** | Open the [achievements panel](#achievements-panel) |
 | `Y` **Netplay** | Play the game with another device, for games that have [netplay](netplay.md) |
-| `X` **Resume** | Jump back into the game's auto-saved session (shown when it has one) |
 | `B` **Back** | Return to the tab and the item you searched from |
-| `A` **Open** | Launch the game |
+| `A` **Resume** / **Open** | Launch the game, from its auto-save when it has one |
 
 ### How matching works
 

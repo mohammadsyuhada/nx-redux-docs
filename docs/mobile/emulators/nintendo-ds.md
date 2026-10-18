@@ -37,9 +37,10 @@ offsets don't apply to the DS screens.
 
 </div>
 
-With a controller connected in portrait, the on-screen pad band goes away, so
-the screens get the full height. **Layout (portrait, controller)** is used
-instead. Its choices are the same, and its default is **Stacked**.
+With a controller connected in portrait, the on-screen pad band goes away, as
+on every console, so the screens get the full height. **Layout (portrait,
+controller)** is used instead. Its choices are the same, and its default is
+**Stacked**.
 
 A clip-on controller that holds the phone keeps the pad band and the normal
 portrait layout. The GameSir Pocket Taco is recognised as one. The 8BitDo

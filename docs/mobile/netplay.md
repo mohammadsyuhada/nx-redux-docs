@@ -14,8 +14,10 @@ Two people on one phone, each with a controller? That is
 ## Starting a session
 
 1. Both players pick the same game. On the phone, highlight it on Home or
-   in a game list and press `Y` **Netplay**. `MENU` **Options → Netplay**
-   does the same.
+   in a game list and press `Y` **Netplay**. In a game list, **Netplay** in
+   the game's `MENU` menu does the same. On a touchscreen with no
+   controller there is no hint bar: long-press the game and pick
+   **Netplay**, which then leads the menu.
 2. The **Netplay** sheet opens, titled with the game.
 
     ![The Netplay sheet for Contra III: Connection Wi-Fi, Host Game, Join Game and Emulator Auto (match the other device)](../assets/screenshots/mobile/netplay-sheet.webp)
@@ -33,6 +35,8 @@ phone has no **Hotspot** choice: on the handheld, pick **WiFi** or
 can't pair with the phone.
 
 `Y` **Netplay** only shows for games on a [supported system](#supported-systems).
+When the `Y` **Netplay** hint is hidden, **Netplay** moves to the top of the
+game's menu. See [Context menus](main-menu.md#context-menus).
 
 ### The Netplay sheet
 
@@ -248,7 +252,8 @@ To keep both devices in step, a match has no save states, cheats,
 achievements, core options or disc changes. Each device is one player:
 every controller on the phone, and the on-screen pad, play as that player.
 
-Opening the in-game menu shows only **Leave netplay?**:
+Opening the in-game menu shows only **Leave netplay?**, with the line
+**Leaving ends the netplay session.**
 
 | Row | What it does |
 | --- | --- |

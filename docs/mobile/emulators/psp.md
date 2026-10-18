@@ -43,4 +43,5 @@ The face buttons map to the PSP buttons **by position**:
 - Some options, such as the CPU core and the PSP model, only take effect when
   a game starts. They are in [Emulator Settings](../emulator-settings.md),
   not in the in-game **Core Options**.
-- In-game saves go in the PSP's own `SAVEDATA` folder, under `Saves/PSP/`.
+- In-game saves go in the PSP's own `SAVEDATA` folder, under `Saves/PSP/`,
+  with your other [saves inside the app](../library.md#saves).

@@ -17,7 +17,7 @@ rows:
 | **Resume art fetch (d/t)** | Carries on a paused fetch. Only shown while one is paused. |
 | **Fetch missing art** | Fetches art for every game that has none. Reads **Fetch all art** when **Replace existing art** is on. |
 | **Fetch by console** | Fetches art for one console. |
-| **Progress** | Shows the current or last fetch. Only shown once a fetch has run. |
+| **Progress** | Shows the current or last fetch. Only shown once a fetch has run, until you choose **Done** there. |
 | **Settings** | What to fetch, your ScreenScraper login, the SteamGridDB and TheGamesDB keys, and **Reset artwork…**. See [Settings](#settings). |
 
 Unassigned games, and folders whose tag no art source knows, are left out of
@@ -62,10 +62,17 @@ art, such as **Dreamcast 6 missing**. Press `A` **Fetch** on one.
 If there is nothing to fetch, the app says **Every game has art**, or
 **Every *console* game has art** for one console.
 
+First-run setup offers the same: its **Fetch artwork** step's **Fetch now**
+starts **Fetch missing art** in the background, or **Fetch all art** with
+**Replace existing art** on. See [Getting Started](getting-started.md).
+
 ### Progress
 
 Starting a fetch opens **Progress**. Its first line shows how far it is and
-the time left, such as **1 / 2 · ~1 min left**. Each game shows its status:
+the time left, such as **1 / 2 · ~1 min left**, or that it is **paused**,
+**done** or **cancelled**. The second line counts what the games came to so
+far, such as **12 fetched · 2 partial · 3 not found**. Each game shows its
+status:
 
 | Status | Meaning |
 | --- | --- |
@@ -83,7 +90,14 @@ the time left, such as **1 / 2 · ~1 min left**. Each game shows its status:
 | --- | --- |
 | `Y` **Pause** / **Resume** | Pauses the fetch, or carries it on |
 | `X` **Cancel** | Asks **Cancel art fetch?** Games already fetched keep their art. **Stop** ends the fetch. |
+| `A` **Done** | Once the fetch has ended: clears it, and the **Progress** row with it |
 | `B` **Back** | Leaves the page. The fetch keeps running. |
+
+On touch, **Pause**, **Cancel** and **Done** are buttons above the list.
+
+Once a fetch has ended, the list keeps only the games to look at: those
+**Not found** and those with an **Error**. The second line counts the rest,
+and with a cancelled fetch, the games **not fetched**.
 
 ### In the background
 

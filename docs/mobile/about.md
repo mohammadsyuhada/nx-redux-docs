@@ -21,6 +21,6 @@ A row the app can't read shows **Unknown**.
 
 ## Copy device info
 
-Select **Copy device info** and press `A` **Copy** to put all the rows on the
-clipboard as text. The app shows "Device info copied". Paste it into a bug
+Select **Copy device info** and press `A` **Copy** to put the rows, all but
+**Font**, on the clipboard as text. The app shows "Device info copied". Paste it into a bug
 report so the details are exact.

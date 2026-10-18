@@ -15,17 +15,19 @@ Before you have played anything, the page shows **No play activity** and
 
 | Button | What it does |
 | --- | --- |
-| `A` **Sessions** | Opens the game's sessions |
+| `A` **Plays** | Opens the game's sessions. A tap on a game does the same. |
 | `MENU` **Options** | Merge, unmerge or delete the game's play time. A long press does the same. |
 | `B` **Back** | Go back |
 
 ## Sessions
 
-`A` on a game opens its **Sessions** page. It shows the game's total time,
-how many sessions it has and when you last played it, then every session with
-its date, time and length, newest first.
+`A` on a game opens its sessions, titled **Game Tracker | *game***. It shows
+the game's total time, how many plays it has, such as **17 plays**, and when
+you last played it. Then every session follows with its date, time and length,
+newest first. When a game has sessions from more than one device, each row
+also names the device it was played on.
 
-![Game Tracker → Advance Wars: 11m 47s total, 17 sessions, then each session](../assets/screenshots/mobile/game-tracker-sessions.webp)
+![Game Tracker | Super Mario Kart: 16m 57s total, 10 plays, then each session](../assets/screenshots/mobile/game-tracker-sessions.webp)
 
 `B` goes back to the list, on the same game. The page also has the game's
 play-time actions, the same as [Options](#options):

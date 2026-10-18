@@ -73,8 +73,8 @@ Eight consoles have a second emulator, each with its own tag:
 
 - The emulator comes from **Tools → Settings → Emulators → Default
   emulators**.
-- For one game, press `MENU` on it in a game list and pick **Emulator**. This
-  choice wins over the default.
+- For one game, press `MENU` on it in a game list, or long-press it, and
+  pick **Emulator**. This choice wins over the default.
 - PicoDrive is the Sega consoles' default, as on the handheld, so a
   handheld save state resumes on the phone. Genesis Plus GX shows as
   **Genesis Plus GX (GPGX)**, with its states in the handheld's
@@ -104,11 +104,14 @@ PSP and Nintendo 3DS. **Graphics API** picks:
 The game reads it when it starts, so it isn't in the in-game menu. To switch
 a game to Vulkan:
 
-1. In the game list, press `MENU` on the game and choose **Game Settings**.
+1. In the game list, press `MENU` on the game, or long-press it, and choose
+   **Game Settings**.
 
     ![A Wii game's context menu with Game Settings selected](../../assets/screenshots/mobile/wii-context-menu.webp)
 
 2. Move to **Graphics API** and set it to **Vulkan** with `LEFT` / `RIGHT`.
+   On a touchscreen with no controller, tap the row and pick **Vulkan** from
+   the list.
 
     ![Game Settings for New Super Mario Bros. Wii, with Graphics API set to Vulkan](../../assets/screenshots/mobile/wii-game-settings-vulkan.webp)
 

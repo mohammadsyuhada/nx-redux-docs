@@ -20,12 +20,8 @@ folders works as the app's home folder. A handheld's BIOS layout (such as
 Battery saves carry over for systems that run the same core on both. Where
 the app uses the same core as the handheld, save states carry over too.
 
-The Sega systems are the exception. The handheld runs PicoDrive for Sega
-Genesis, Master System, Game Gear, SG-1000 and Sega CD, and the app runs
-Genesis Plus GX. Cartridge saves usually carry over, but save states don't.
-Games you ran from a legacy `Sega Genesis (GPGX)` folder on the handheld
-already used Genesis Plus GX: kept in that folder, their saves and states
-carry over (see below).
+The Sega systems run PicoDrive on both, so their saves and states carry over
+too. For games from a legacy handheld `(GPGX)` folder, see below.
 
 Dreamcast memory cards carry over: both name them
 `Saves/DC/<game>.A1.bin`. See [Sega Dreamcast](../../mobile/emulators/dreamcast.md#memory-cards-vmu).
@@ -70,8 +66,8 @@ for trades and battles. See [Netplay](../../mobile/netplay.md).
 
 Yes. **Tools → Device Sync** carries saves and save states between the phone
 and an NX Redux handheld, over Wi-Fi or a USB-C cable. Update the handheld to
-the latest NX Redux first. ROMs don't sync from the phone yet. See
-[Device Sync](../../mobile/device-sync.md).
+the latest NX Redux first. ROMs sync too when you turn them on, with
+**All files access** allowed. See [Device Sync](../../mobile/device-sync.md).
 
 ## Can two people play on one phone?
 
@@ -115,9 +111,17 @@ only, so cheats and save states are not blocked. See
 
 ## How do I find a game in a big library?
 
-Press `START` on the main menu and type part of its name. Case, accents,
-punctuation and word order don't matter, and `fantasy 6` finds *Final Fantasy
-VI*. See [Search](../../mobile/main-menu.md#search).
+Press `START` on the main menu, or tap the **Search** icon, and type part of
+its name. Case, accents, punctuation and word order don't matter, and
+`fantasy 6` finds *Final Fantasy VI*. In a game list, `START` searches just
+that list. See [Search](../../mobile/main-menu.md#search).
+
+## Can I make the text smaller?
+
+Yes. **Tools → Settings → Appearance → Text size** has **Large** (the
+default) and **Small**. It sets the text of the lists, page titles and
+button hints across the app. First-run setup asks it first. See
+[Text size](../../mobile/appearance.md#text-size).
 
 ## Where does the game artwork come from?
 

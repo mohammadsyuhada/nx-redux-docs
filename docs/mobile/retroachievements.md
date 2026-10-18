@@ -2,14 +2,18 @@
 
 NX Redux for Android supports [RetroAchievements](https://retroachievements.org/),
 with offline play. **Tools → RetroAchievements** is the home for the feature:
-sign in, browse your achievements and change its settings there.
+sign in, browse your achievements and change its settings there. Once you are
+signed in, game lists also show a game's achievements in a
+[panel](#on-game-lists).
 
 ![Tools → RetroAchievements, signed out: Not signed in, Sign in under Settings, then the three rows](../assets/screenshots/mobile/ra-home.webp)
 
 The home screen shows your username, your points, how many unlocks are
 waiting to be synced and when you last synced, above three rows:
 **Achievements**, **Sync now** and **Settings**. Signed out, it reads **Not
-signed in** and **Sign in under Settings** instead.
+signed in** and **Sign in under Settings** instead. After you start
+[Download all game data](#downloading-all-game-data), a fourth row,
+**Progress**, such as **Progress (12/340)**, opens its progress page.
 
 !!! info "Softcore only"
     NX Redux for Android is not an RA-approved hardcore client, so there is no
@@ -30,6 +34,10 @@ account.
 The app keeps only the sign-in token RetroAchievements returns, not your
 password.
 
+First-run setup asks you to sign in too, and then offers **Achievement
+data**: **Download now** starts [Download all game data](#downloading-all-game-data)
+in the background. See [Getting Started](getting-started.md).
+
 ![RetroAchievements → Settings, signed out: Sign in at the top, Status Not signed in, and Enable achievements and Download all game data dimmed](../assets/screenshots/mobile/ra-settings.webp)
 
 Signed out, **Enable achievements** and **Download all game data** are dimmed.
@@ -39,17 +47,19 @@ The settings page also has:
 | Row | Values | Default | What it does |
 | --- | --- | --- | --- |
 | **Enable achievements** | On, Off | On after you sign in | Track achievements in games. Needs a sign-in. |
-| **Download all game data** | — | — | Cache achievement data for your whole library. See [Offline play](#offline-play). Needs a sign-in. |
+| **Download all game data** | How many games are cached, such as `48 games cached` | — | Cache achievement data for your whole library. See [Downloading all game data](#downloading-all-game-data). Needs a sign-in. |
 | **Show notifications** | On, Off | On | Show unlock and progress notices in games. |
 | **Notification duration** | 1–5 s | 3 s | How long achievement notices stay. |
 | **Progress duration** | Off, 1–5 s | 1 s | How long a progress notice stays. |
 | **Achievement sort order** | See [below](#sort-orders) | Unlocked first | How achievements are sorted, here and in the in-game menu. |
 | **Reset account data** | — | — | Sign out and forget sessions and unsynced unlocks. Game data and badges stay. |
-| **Erase all achievement data** | — | — | Delete every cached game, badge and unsynced unlock, and sign out. |
+| **Erase all achievement data** | — | — | Delete every cached game and unsynced unlock, and sign out. Badges and game fingerprints kept in your ROM folders stay. |
 | **Reset settings to defaults** | — | — | Put the notification and sort settings back to their defaults and turn **Enable achievements** off. You stay signed in. |
 
 - `A` changes a value. On **Notification duration**, **Progress duration**
-  and **Achievement sort order**, `LEFT` / `RIGHT` work too.
+  and **Achievement sort order**, `LEFT` / `RIGHT` work too. On touch, with
+  no controller and no on-screen pad, a tap on one of these three opens a
+  list of its values to pick from.
 - **Sign out**, **Reset account data** and **Erase all achievement data** ask
   to confirm first.
 - Signing out turns achievements off, and signing in again needs your
@@ -80,8 +90,54 @@ Start a recognised game and unlocks are tracked as you play.
 Home's stats strip counts your achievements for the month: **This month**,
 your play time, then the number of achievements you unlocked this calendar
 month, such as **12 achievements**. Unlocks still waiting to be synced count
-too. Signed out, it reads **Sign in** instead of a number. See
+too. Signed out, the strip leaves the achievements out. See
 [Home](main-menu.md#home).
+
+## On game lists
+
+Signed in, any game list opens the highlighted game's achievements in a
+panel that slides in from the right. Open it with:
+
+- `X` (**Achievements** in the hint bar),
+- on a touchscreen, the trophy icon at the right of the list's title,
+- or a tap on the highlighted game's name or info (Carousel and Backdrop, and
+  List's info line).
+
+The panel heads with the game's name and its progress, such as **Drill Dozer
+(3 of 56)**, and lists the achievements as [Browsing your
+achievements](#browsing-your-achievements) does, in the
+[sort order](#sort-orders) from Settings. It takes 60% of the screen's width
+in portrait and 45% in landscape, so the list shows beside it.
+
+| Button | What it does |
+| --- | --- |
+| `UP` / `DOWN` | Move through the achievements |
+| `LEFT` / `RIGHT` | Go to the previous or next game. The panel follows. |
+| `A` | Show the highlighted achievement's details |
+| `B` | Back from the details, or close the panel |
+| `X` | Close the panel |
+
+On touch, tap an achievement for its details. Android's Back leaves the
+details or closes the panel, and a tap beside the panel closes it.
+
+- **No cached data yet:** the panel downloads that game's achievements in the
+  background, what [Download all game data](#downloading-all-game-data) does
+  for one game, and shows **Downloading this game's achievements…** until
+  they arrive. Moving on to another game doesn't stop it.
+- **Not recognised:** when RetroAchievements doesn't know the game's file,
+  the panel says so with the file's hash: it may be a different version, a
+  hack or a bad dump. A file that can't be read says **Couldn't read this
+  game's file to identify it.** Neither is downloaded again.
+- **No connection:** the panel says **Couldn't download this game's
+  achievements: no connection.** It tries again the next time you open it.
+- A game with no achievements, or on a console RetroAchievements doesn't
+  cover, reads **This game has no achievements.**
+
+Signed out, there is no panel: no trophy icon, no `X` hint and no menu entry.
+**Settings → Layouts → Game lists → Achievements panel** set to **Hide**
+removes the trophy icon and the `X` hint; `X` still opens the panel, and the
+game's context menu (`MENU`) gains an **Achievements** entry instead. See
+[Menu Layouts](layouts.md).
 
 ## Offline play
 
@@ -95,9 +151,47 @@ too. Signed out, it reads **Sign in** instead of a number. See
   and says so.
 - **Download all game data** caches achievement data and badges for every
   game in your library, so games you have never played online work offline
-  too. A progress bar shows each game, and `B` cancels. When it is done, a
-  notice counts the games cached, the games without achievements and the
-  games skipped. Zipped and 7z games are unpacked to be identified.
+  too. See [Downloading all game data](#downloading-all-game-data).
+
+## Downloading all game data
+
+**Settings → Download all game data** needs a sign-in and a connection. It
+works through every game on a console RetroAchievements covers, in the
+background, and opens its **Progress** page.
+
+Its first line shows how far it is and the time left, such as **12 / 340 ·
+~9 min left**, or that it is **paused**, **done**, **cancelled** or
+**stopped**, with the reason. The second line counts the games so far, such
+as **10 cached · 1 without achievements · 1 skipped**. Below them is each game
+still to do, the current one first:
+
+| Status | Meaning |
+| --- | --- |
+| **Waiting** | Queued |
+| **Hashing** | Being identified. Zipped and 7z games are unpacked for this. |
+| **Downloading** | Its achievements and badges are being fetched |
+| **Skipped** / **Error** | It couldn't be done, followed by the reason, such as **couldn't read the file**. These stay listed. |
+
+Games that finish well leave the list. A game already cached counts as
+skipped, so running it again only fetches what is new.
+
+| Button | What it does |
+| --- | --- |
+| `Y` **Pause** / **Resume** | Pauses before the next game, or carries on |
+| `X` **Cancel** | Asks **Cancel download?** Games already downloaded keep their data. **Stop** ends the download. |
+| `A` **Done** | Once it has ended: clears it, and the **Progress** row with it |
+| `B` **Back** | Back to the RetroAchievements page. The download keeps running. |
+
+On touch, **Pause**, **Cancel** and **Done** are buttons above the list.
+
+- The download keeps running when you leave the page or switch to another
+  app. A **Downloading achievement data** notification shows its progress,
+  with **Pause** and **Cancel** buttons. Paused, the notification goes away;
+  resume it from the Progress page.
+- Android asks once whether the app may show notifications. If you say no,
+  the download still runs, just without the notification.
+- A lost connection or a refused sign-in stops it. When it ends, a notice
+  counts the games cached, without achievements and skipped.
 
 ## Syncing
 
@@ -107,7 +201,8 @@ too. Signed out, it reads **Sign in** instead of a number. See
 2. It refreshes your points and the progress of your cached games.
 
 A notice then says how many unlocks were synced, **Up to date**, or **Sync
-failed**. `B` cancels a sync; unlocks not yet sent stay waiting.
+failed**. `B` cancels a sync; unlocks not yet sent stay waiting. While game
+data downloads, Sync now says **Wait for the game data download to finish**.
 
 ## Browsing your achievements
 

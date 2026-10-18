@@ -23,7 +23,7 @@ the console first.
 ## An emulator's settings
 
 The page is titled with the emulator, the console and the tag, such as
-**Genesis Plus GX — Sega Genesis (GPGX)**. It has two groups:
+**PicoDrive — Sega Genesis (MD)**. It has two groups:
 
 | Group | What it holds |
 | --- | --- |
@@ -33,6 +33,10 @@ The page is titled with the emulator, the console and the tag, such as
 ![Genesis Plus GX for Sega Genesis: Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp)
 
 - `LEFT` and `RIGHT` change a value. `A` steps it forward too.
+- With no controller and no on-screen pad, a tap on a value with three or
+  more choices opens a dropdown of them, with the current one highlighted.
+  Tap a choice to pick it, or tap outside to close it. A row with two values
+  flips on a tap.
 - Each change is saved straight away. There is no **Save** row.
 - The page also offers options that only take effect when a game starts,
   such as the N64 resolution. The in-game
@@ -48,8 +52,8 @@ menu's **Save Changes → Save for console** writes. See the
 
 ## Game Settings
 
-Open a game's context menu with `MENU` in a game list and choose **Game
-Settings**. The same page opens over the list, for that one game.
+Open a game's context menu with `MENU` in a game list, or a long press on
+the game, and choose **Game Settings**. The same page opens over the list, for that one game.
 
 ![Game Settings for Streets of Rage 2, over the Sega Genesis game list](../assets/screenshots/mobile/game-settings.webp)
 

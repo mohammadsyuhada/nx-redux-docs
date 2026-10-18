@@ -22,10 +22,12 @@ On a controller, `A` and `B` are the letters printed on it, as
 
 The menu uses your **Accent** and **Secondary accent** from
 [Appearance](appearance.md): the highlighted row sits on the accent, and the
-value bar on the secondary accent.
+value bar on the secondary accent. Its rows, the save slot's text and its
+dialogs follow [**Text size**](appearance.md#text-size) there too.
 
 During a [netplay](netplay.md) match the menu shows only **Leave netplay?**,
-with **Continue** and **Leave**. See
+with **Continue** and **Leave**. Once the match has ended and you play on
+alone, it shows **Continue** and **Quit**. See
 [Netplay → During a match](netplay.md#during-a-match).
 
 On a wide landscape screen, such as an unfolded foldable held sideways or a
@@ -41,17 +43,44 @@ phone in landscape, the menu shows two pages side by side. See [Foldables & Larg
 | **Load** | Load the state in the chosen slot. |
 | **Players** | Only in games with more than one player. Shows which controller is which player. See [Players](#players). |
 | **Options** | Open the options pages below. |
-| **Quit** | Leave the game. |
+| **Quit** | Leave the game. See [Quitting](#quitting). |
 
 There are 8 save state slots. On **Save** and **Load**:
 
 - `LEFT` / `RIGHT` choose the slot.
 - The preview shows the slot's screenshot and date, or **Empty Slot**.
 - `A` saves or loads.
+- A sideways swipe on the preview, or on the list, also changes the slot.
 
-Quitting also saves a hidden resume state, and so does leaving the app with
-the game open. That is what lets the [Game Switcher](game-switcher.md) resume
-a game where you left it.
+## Quitting
+
+On **Quit**, the hints offer two ways to leave:
+
+- `A` **Save & Quit** saves a hidden resume state, then leaves. That is what
+  lets the [Game Switcher](game-switcher.md) resume the game where you left
+  it.
+- `X` **Quit** leaves without it, so the game's last resume point stays as it
+  was.
+
+A tap on **Quit** opens the **Quit Game** dialog with the same two choices,
+**Save & Quit** and **Quit**, and the line **Save & Quit keeps your place for
+next time. Quit keeps the last resume point.** Tap outside it, or press `B`, to
+stay in the menu.
+
+Both keep the game's battery save. Leaving the app with the game open also
+saves a resume state.
+
+## Touch
+
+You can use the whole menu by touch:
+
+- Tap a row to act on it, as `A` does. **Save** and **Load** take two
+  taps: one to highlight the row, then another on the row or on the slot
+  preview to save or load.
+- Tap the highlighted row's value to step it forward, as `RIGHT` does.
+- Each hint along the bottom is a button. Off the first page, a tap on the
+  bar's empty space goes back.
+- Tap a description page, or an achievement's details, to close it.
 
 ## Players
 
@@ -79,7 +108,7 @@ See [Local Multiplayer](multiplayer.md).
 | [Shaders](#shaders) | Always | Shader presets and their parameters. |
 | [Core Options](#core-options) | Always | The emulator core's own settings. |
 | [Cheats](#cheats) | When the core takes cheats | Turn the game's cheats on and off. |
-| [Achievements](#achievements) | When the game's RetroAchievements session has started | The game's achievements. Your progress, such as `12 / 40 unlocked`, shows in the description lines when the row is highlighted. |
+| [Achievements](#achievements) | When the game's RetroAchievements session has started | The game's achievements. Your progress, such as `12 / 40 unlocked`, or **Not recognised**, shows in the description lines when the row is highlighted. |
 | [Save Changes](#save-changes) | Always | Keep your changes for this console or this game, or restore defaults. |
 
 The line under the list says which settings the game uses right now:
@@ -140,6 +169,9 @@ same for every console. `LEFT` / `RIGHT` change a value.
 | **Offset screen X** / **Offset screen Y** | −64 to 64 | 0 | Move the game image by this many pixels. |
 | **Pad Opacity (landscape)** | 100%, 60%, 40%, 25% | 40% | How opaque the on-screen buttons are in landscape, where they sit over the game. The portrait pad has its own band and is not affected. |
 | **Debug HUD** | Off, On | Off | Show frames per second, the core, the resolution and scaler information. |
+
+While the Nintendo DS screens are drawn apart, **Overlay** reads
+**Unavailable**: overlays are off in those layouts.
 
 Overlays are bundled for Game Boy, Game Boy Color, Game Boy Advance (`GBA`
 and `MGBA`), NES, Super Nintendo (`SFC` and `SUPA`), Mega Drive (`MD`),
@@ -212,8 +244,9 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
 
 - With no cheats for the game, the page says **No cheats for this game.** and
   names the file it looked for.
-- The row is hidden for Arcade (`FBN`), ColecoVision and Dreamcast (with
-  NAOMI and Atomiswave), whose cores don't take cheats.
+- The row is hidden for consoles whose cores don't take cheats, such as
+  Arcade (`FBN`) and Dreamcast. See
+  [Cheats → Where the files go](cheats.md#where-the-files-go) for the list.
 
 ## Achievements
 
@@ -225,7 +258,8 @@ is on a system RetroAchievements covers. It shows the game's achievements, in th
 
 - `A` opens an achievement's details. `LEFT` / `RIGHT` step to the previous
   or next one.
-- `Y` switches between all achievements and only the locked ones.
+- `Y` switches between all achievements and only the locked ones. With
+  every achievement unlocked, the locked list reads **Everything unlocked.**
 - `X` mutes or unmutes the achievement's notifications. A muted achievement
   shows `[M]` before its name.
 

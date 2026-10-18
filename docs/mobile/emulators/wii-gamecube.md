@@ -75,13 +75,17 @@ keeps it for the game or the console.
 
 The on-screen pad follows the controller: the sideways Wiimote's `1` and
 `2`, the Nunchuk's stick, `C` and `Z`, or the Classic Controller's two
-sticks and shoulder buttons. Every Wii pad has:
+sticks and shoulder buttons. Every Wii pad has **`HOME`**, between `−` and
+`+`. It opens the game's HOME menu. The app saves a resume point first, so
+the game pauses for about a second.
 
-- **`HOME`**, between `−` and `+`. It opens the game's HOME menu. The app
-  saves a resume point first, so the game pauses for about a second.
+The Wiimote pads also have:
+
 - **`Shake`**, which shakes the Wiimote, for a spin jump or a swing. The
   Nunchuk pad adds **`Shake N`** for the Nunchuk.
 - **`MOTION`**, which turns [motion controls](#motion-controls) on or off.
+
+The Classic Controller pad has neither.
 
 A controller adds:
 
@@ -135,6 +139,7 @@ the phone's motion is used:
   you hold the phone now becomes straight ahead.
 - Motion needs a phone with a gyroscope. The sensors only run while you
   play.
+- The Classic Controller has no motion, whatever the setting.
 
 ### Wii Screen
 
@@ -167,8 +172,8 @@ game starts. They are set in
 
 ## Saves
 
-- Wii game saves are in `Saves/WII/`.
-- GameCube memory cards are in `Saves/GC/`.
+- Wii game saves are in `Saves/WII/`, and GameCube memory cards in
+  `Saves/GC/`, with your other [saves inside the app](../library.md#saves).
 - Save states work as on other consoles. They are large, about 100 MB each.
 
 ## Multiplayer
@@ -186,10 +191,7 @@ Up to four players can play, each on their own controller; see
 ## Cheats and achievements
 
 - [Cheats](../cheats.md): Dolphin's own codes for the game are listed after
-  the game's first start. Your own codes go in `Cheats/WII/` or
-  `Cheats/GC/` as `.cht` files: Gecko codes by default, Action Replay when a
-  code's description starts with `[AR]`. The cheat download has no Wii or
-  GameCube codes.
+  the game's first start. The cheat download has no Wii or GameCube codes.
 - [RetroAchievements](../retroachievements.md) works for Wii and GameCube
   in every file type above. A game is identified once, then remembered.
   Compressed discs listed in an `.m3u`, and split WBFS files, aren't

@@ -126,7 +126,8 @@ up to four players too. The points below are for Dreamcast discs:
 
 ## Memory cards (VMU)
 
-Every game gets **its own memory card**, kept with your other saves:
+Every game gets **its own memory card**, kept with your other
+[saves inside the app](../library.md#saves):
 
 ```
 Saves/DC/<game>.A1.bin
@@ -135,20 +136,17 @@ Saves/DC/<game>.A1.bin
 For example `Saves/DC/Soulcalibur (USA).A1.bin`. A GDI game's card is named
 after its folder, and an `.m3u` game shares one card across its discs.
 
-To give a game a **fresh, empty card**:
-
-1. Delete the game's `.A1.bin` file in `Saves/DC/`.
-2. Launch the game. It starts with a blank card.
-
-!!! warning "Renaming a ROM"
-    Renaming a ROM leaves its card behind under the old name, as with any
-    save. Rename the card to match.
+!!! warning "Renaming a ROM file"
+    Renaming the game's file leaves its card behind under the old name, as
+    with any save. **Rename Rom** in the app only changes the name the list
+    shows, so the card stays with the game.
 
 ??? info "More detail"
-    - The names match the handheld's NX Redux, so you can copy a card between
-      your phone and your handheld.
+    - The names match the handheld's NX Redux, so a card carries between
+      your phone and your handheld with **Export saves** and **Import
+      saves**, or with [Device Sync](../device-sync.md).
     - The arcade games keep their high scores and cabinet settings in
-      `Saves/DC/reicast/`.
+      `Saves/DC/reicast/`, with the other saves.
 
 ## Save states
 

@@ -2,10 +2,12 @@
 
 Press `SELECT` on the main menu or in a game list to open the Game Switcher:
 your recent games, ready to resume any of them where you left off. On the
-main menu the `SELECT` hint reads **Recent**.
+main menu the `SELECT` hint reads **Recent**. The **Recent** icon at the top
+right does the same: in a game list on any touchscreen, and on the main menu
+whenever the hint bar doesn't show **Recent**.
 
 It has two layouts, picked in
-[**Tools → Settings → Layouts → Game Switcher layout**](layouts.md#game-switcher-layout):
+[**Tools → Settings → Layouts → Game Switcher → Game Switcher layout**](layouts.md#game-switcher-layout):
 **Full screen** (the default) and **List**.
 
 ## Full screen
@@ -23,6 +25,9 @@ next one to unlock.
 - `Y` **Remove** asks **Remove "‹name›" from recents?** Choose **Remove** to
   take the game out of your recent games.
 - `B` **Back**, or `SELECT` again, returns to where you were.
+
+On a touchscreen with no controller there is no hint bar: **Remove** is a
+trash icon at the top right, level with the game's name.
 
 `LEFT` and `RIGHT` stop at the first and last game; they do not wrap.
 
@@ -79,9 +84,10 @@ Both layouts follow [**Extra info**](layouts.md#extra-info) and
 
 ## Always resumable
 
-Quitting a game from the [in-game menu](in-game-menu.md) saves a hidden resume
-state, and so does leaving the app while a game is open. So with nearly every
-core, every game you have played can be resumed. No manual save state is
+**Save & Quit** in the [in-game menu](in-game-menu.md#quitting) saves a hidden
+resume state, and so does leaving the app while a game is open. **Quit**
+leaves the last resume point as it was. So with nearly every core, every
+game you have played can be resumed. No manual save state is
 needed. PICO-8 is the exception for now (see
 [Emulators](emulators/index.md#limits)).
 
@@ -92,5 +98,6 @@ The switcher lists only recent games that can be resumed. With none, it shows
 is no setting to list every recent game instead. Android games are never
 listed.
 
-In a game list, `X` **Resume** does the same for the highlighted game when it
-can be resumed.
+In a game list, `A` **Resume** does the same for the highlighted game when it
+can be resumed. To start it fresh instead, choose **Play from start** in its
+`MENU` menu.
