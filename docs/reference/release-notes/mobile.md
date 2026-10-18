@@ -85,4 +85,7 @@ Features many retro frontends have that this preview doesn't yet:
 
 This preview is for finding what to fix and improve before v1.0. Tell us
 what goes wrong, which games don't run well on your phone, and what you'd
-like to see.
+like to see. Open an issue on
+[GitHub](https://github.com/mohammadsyuhada/nx-mobile/issues), with your phone's
+model and Android version (**Tools → Settings → About → Copy device info** copies them
+for you).

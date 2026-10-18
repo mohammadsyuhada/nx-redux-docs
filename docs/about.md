@@ -41,10 +41,10 @@ line. See [Credits](reference/credits.md) for everyone whose work it builds on.
 - **Handheld:** custom firmware for TrimUI handhelds (Brick, Brick Hammer,
   Brick Pro, Smart Pro S and Smart Pro).
 - **Mobile:** an Android app for phones, tablets and Android handhelds.
-  Coming soon.
 
-Both use the same `Roms/`, `Bios/`, `Saves/` and `Collections/`
-folders, so one library can move between them.
+Both use the same `Roms/`, `Bios/` and `Collections/` folders, so one
+library can move between them, and Device Sync carries saves and save states
+from one to the other.
 
 ## Get started
 

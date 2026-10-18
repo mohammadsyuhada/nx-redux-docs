@@ -4,10 +4,9 @@ Every way to get NX Redux, for each platform.
 
 <!-- The badges are theme buttons with the GitHub and Google Play icons, not the
      official store artwork: Google's badge rules forbid altering the badge,
-     including greying it out. When the app is live, turn the mobile GitHub
-     badge into a link like the handheld one, and replace the disabled Google
-     Play button with Google's official "Get it on Google Play" badge,
-     unmodified. -->
+     including greying it out. When the app is on Google Play, replace the
+     disabled Google Play button with Google's official "Get it on Google Play"
+     badge, unmodified. -->
 
 ## Handheld
 
@@ -22,15 +21,12 @@ and Smart Pro. Releases are packaged per device, so download the zip for
 
 ## Mobile
 
-NX Redux for Android phones, tablets and Android handhelds is
-**coming soon**. See
-[Getting Started on Mobile](../mobile/getting-started.md) for what
-is coming.
-
-It will be available from two places: the **GitHub releases** page as an
-APK, and **Google Play**.
+NX Redux for Android phones, tablets and Android handhelds (Android 8.0 or
+later, arm64). Download the APK, then follow
+[Getting Started on Mobile](../mobile/getting-started.md#install) to install
+it. Google Play is coming later.
 
 <div class="nx-badges" markdown>
-<span class="nx-badge-link is-disabled" role="link" aria-disabled="true" markdown>:fontawesome-brands-github: Download on GitHub <span class="nx-badge-link__note">Coming soon</span></span>
+[:fontawesome-brands-github: Download on GitHub](https://github.com/mohammadsyuhada/nx-mobile/releases){ .nx-badge-link }
 <span class="nx-badge-link is-disabled" role="link" aria-disabled="true" markdown>:fontawesome-brands-google-play: Get it on Google Play <span class="nx-badge-link__note">Coming soon</span></span>
 </div>
