@@ -1,7 +1,7 @@
 # Nintendo DS
 
-Nintendo DS games run on the bundled **melonDS DS** core. The core draws both
-screens and the app lays them out.
+Nintendo DS games run on the bundled **melonDS DS** core. The app lays out
+the two screens.
 
 | | melonDS DS |
 | --- | --- |
@@ -12,9 +12,8 @@ screens and the app lays them out.
 ## Screen layouts
 
 The layout options are in the in-game menu under **Options → Console
-Settings**. Like the other options, they are kept per game or console with
-[Save Changes](../in-game-menu.md#save-changes). Screen Scaling and the screen
-offsets don't apply to the DS screens.
+Settings**. Keep them for the game or console with
+[Save Changes](../in-game-menu.md#save-changes).
 
 ### Portrait layouts
 
@@ -37,14 +36,15 @@ offsets don't apply to the DS screens.
 
 </div>
 
-With a controller connected in portrait, the on-screen pad band goes away, as
-on every console, so the screens get the full height. **Layout (portrait,
-controller)** is used instead. Its choices are the same, and its default is
-**Stacked**.
+With a controller connected, the on-screen pad goes away and the screens get
+the full height. **Layout (portrait, controller)** is used then: same
+choices, **Stacked** by default.
 
-A clip-on controller that holds the phone keeps the pad band and the normal
-portrait layout. The GameSir Pocket Taco is recognised as one. The 8BitDo
-FlipPad is expected to be recognised too.
+??? info "More detail"
+    - A clip-on controller that holds the phone keeps the pad band and the
+      normal portrait layout. The GameSir Pocket Taco is recognised as one.
+      The 8BitDo FlipPad is expected to be recognised too.
+    - Screen Scaling and the screen offsets don't apply to the DS screens.
 
 ### Landscape layouts
 
@@ -63,8 +63,8 @@ FlipPad is expected to be recognised too.
 ![A DS game in landscape, Picture in picture: the bottom screen small in the bottom-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)
 
 Without a controller, the on-screen buttons sit over the game in landscape.
-**Pad Opacity (landscape)** in **Options → Frontend** sets how opaque they
-are: 100%, 60%, 40% or 25%, 40% by default.
+**Pad Opacity (landscape)** in **Options → Frontend** sets how opaque
+they are: 100%, 60%, 40% or 25% (40% by default).
 
 ![A DS title screen in landscape with the on-screen pad at 40% opacity over it](../../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
 
@@ -79,11 +79,12 @@ These apply in both orientations:
 | **Inset Size** | Small, Medium, Large | Medium | The small screen's width: 25%, 33% or 40% of the big screen's width. |
 | **Inset Opacity** | 100%, 75%, 50% | 100% | How opaque the small screen is. Below 100%, the big screen shows through it. |
 
-- The small screen in picture in picture never takes touches.
-- Overlays are off while the DS screens are drawn apart. The **Overlay** row
-  shows **Unavailable**.
-- Shader presets apply to the big screen, and to both screens in stacked and
-  side by side.
+??? info "More detail"
+    - The small screen in picture in picture never takes touches.
+    - Overlays are off while the DS screens are drawn apart. The **Overlay**
+      row shows **Unavailable**.
+    - Shader presets apply to the big screen, and to both screens in stacked
+      and side by side.
 
 ## Controls
 
@@ -98,17 +99,17 @@ On top of that, with a controller or the on-screen pad:
 | `L2` | Turn stylus mode on or off, or start touch mode (see below). |
 | `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
 
-- `L2` and `R2` never reach the game: the DS has no such buttons.
-- `SELECT` on its own still reaches the game. Only `SELECT` + a direction is
-  kept by the app.
-- A controller's left stick works as the d-pad, except in stylus mode, where
-  it moves the pen.
-
-A short label shows the new setting. The layout hotkeys (`R2` and `SELECT` +
-a direction) are saved straight away, without Save Changes. Stylus mode and
-touch mode are not saved.
+The layout hotkeys (`R2` and `SELECT` + a direction) are saved straight
+away, without Save Changes. Stylus mode and touch mode are not saved.
 
 ??? info "More detail"
+    - A short label shows the new setting.
+    - `L2` and `R2` never reach the game: the DS has no such buttons.
+    - `SELECT` on its own still reaches the game. Only `SELECT` + a direction
+      is kept by the app.
+    - A controller's left stick works as the d-pad, except in stylus mode,
+      where it moves the pen.
+
     Saving a layout hotkey gives the game its own settings, copied from the
     console's if it had none. From then on the game uses only its own
     settings. Later **Save for console** changes don't reach it until you use
@@ -117,29 +118,29 @@ touch mode are not saved.
 ## Stylus mode
 
 In stylus mode, the d-pad or left stick moves a pen on the bottom screen,
-faster the longer you hold it, and `A` touches at the pen. Stylus mode is off each time a
-game starts.
+faster the longer you hold it, and `A` touches at the pen. Stylus mode is off
+each time a game starts.
 
 ## Touch
 
-You can touch the bottom screen whenever it is drawn full size. You can't when
-it is the small inset in picture in picture.
+Touch the bottom screen when it is drawn full size (not as the small inset).
 
-- Touch works in portrait.
-- In landscape it works with a controller, or in touch mode.
-- While the on-screen buttons sit over the game in landscape, the DS screens
-  take no touches.
+- In portrait, touch always works.
+- In landscape, it works with a controller. Without one, the on-screen
+  buttons cover the game, so use touch mode.
 
-**Touch mode:** in landscape with the on-screen buttons shown and stylus mode
-off, `L2` hides the buttons and shows the bottom screen big, so you can touch
-it. A **Controls** button in a free corner brings the on-screen buttons back.
+**Touch mode:** in landscape, `L2` hides the on-screen buttons and shows the
+bottom screen big, so you can touch it. The **Controls** button in a free
+corner brings the buttons back.
 
-- In single screen and picture in picture, the bottom screen becomes the big
-  one. Side by side already shows it full size.
-- Rotating the phone, or connecting or disconnecting a controller, also ends
-  touch mode.
-- `R2` does nothing in touch mode, and touch mode is not saved.
-- With stylus mode on, `L2` turns stylus mode off first.
+??? info "More detail"
+    - Touch mode starts with the on-screen buttons shown and stylus mode off.
+      With stylus mode on, `L2` turns stylus mode off first.
+    - In single screen and picture in picture, the bottom screen becomes the
+      big one. Side by side already shows it full size.
+    - Rotating the phone, or connecting or disconnecting a controller, also
+      ends touch mode.
+    - `R2` does nothing in touch mode, and touch mode is not saved.
 
 ![Touch mode in landscape: the bottom screen big, the pad hidden and a Controls button in the top-right corner](../../assets/screenshots/mobile/ds-touch-mode.webp)
 
@@ -160,8 +161,7 @@ by default. Some games slow down at 4× or higher.
 
 ## Saves from other DS emulators
 
-Battery saves from the older melonDS core and from DraStic carry over
-(converted to `.srm` on a game's first launch). Save
+Battery saves from the older melonDS core and from DraStic carry over. Save
 states from the older melonDS core don't load.
 
 ??? info "More detail"

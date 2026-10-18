@@ -3,7 +3,7 @@
 Open **Tools → Settings** for the app's settings. They are split into eight
 sections.
 
-![Settings](../assets/screenshots/mobile/settings.webp)
+![Settings: the eight sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp)
 
 | Section | What it holds |
 | --- | --- |
@@ -18,20 +18,25 @@ sections.
 
 - Press `A` **Open** to open a section, and `B` **Back** to leave it.
 - On a page, `A` **Select** runs the highlighted row or steps it to its next
-  value; `Left` and `Right` step a value too. The rows on [About](about.md)
-  only show information.
-- With touch alone (no controller, and no on-screen pad below the screen),
-  there is no hint bar: tap a row to run it, and use Android's Back gesture
-  to leave. A tap on a value with two choices flips it. A value with three or
-  more opens a dropdown at the value that lists them all, the current one
-  highlighted: tap one to pick it, or tap outside the dropdown to close it.
-- In portrait, the on-screen pad shows on the **Appearance** and **Controls**
-  pages only (while [Menu pad](controls-settings.md#menu-pad) is On), so you
-  can see the pad you are changing. The other Settings pages use the full
-  height.
-- In landscape on a wide screen, such as an unfolded Fold held sideways or
-  most phones turned sideways, Settings shows the sections and the open page
+  value. `Left` and `Right` step a value too.
+- With touch alone, tap a row to run it, and use Android's Back gesture to
+  leave. A tap on a value with two choices flips it; a value with three or
+  more opens a dropdown: tap one to pick it.
+- On a wide landscape screen, Settings shows the sections and the open page
   side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
+
+??? info "More detail"
+    - "Touch alone" means no controller and no on-screen pad below the
+      screen. There is no hint bar then.
+    - The dropdown opens at the value and lists every choice, the current one
+      highlighted. Tap outside it to close it.
+    - The rows on [About](about.md) only show information.
+    - In portrait, the on-screen pad shows on the **Appearance** and
+      **Controls** pages only (while
+      [Menu pad](controls-settings.md#menu-pad) is On), so you can see the
+      pad you are changing. The other Settings pages use the full height.
+    - The side-by-side view shows on screens such as an unfolded Fold held
+      sideways or most phones turned sideways.
 
 ## Developer
 

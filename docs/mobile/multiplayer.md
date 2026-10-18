@@ -9,20 +9,22 @@ is nothing to set up first:
 - **A handheld plus a pad:** on an Android handheld, such as a Retroid, play
   on its built-in controls while a friend uses a Bluetooth pad.
 
-The on-screen pad is never a player of its own: it always controls
-Player 1. Each extra player needs a controller. In portrait, connecting a
-controller removes the on-screen pad and gives the game the whole screen,
-unless it is a clip-on controller such as the GameSir Pocket Taco. See
-[Controls](controls.md#on-screen-pad-and-controllers).
+The on-screen pad always controls Player 1. Each extra player needs a
+controller.
 
 Playing on two devices instead, such as two phones or a phone and an NX
 Redux handheld? See [Netplay](netplay.md).
 
+??? info "More detail"
+
+    The on-screen pad is never a player of its own. In portrait, connecting a
+    controller removes the on-screen pad and gives the game the whole screen,
+    unless it is a clip-on controller such as the GameSir Pocket Taco. See
+    [Controls](controls.md#on-screen-pad-and-controllers).
+
 ## Which systems
 
-Each system has as many players as the console had controller ports. The
-TurboGrafx-16 is the exception: its multitap is always plugged in, so it
-has four. Other multitap adapters aren't supported.
+Each system has as many players as the console had controller ports.
 
 | Players | Systems |
 | --- | --- |
@@ -30,7 +32,11 @@ has four. Other multitap adapters aren't supported.
 | 2 | NES and Famicom Disk System, Super Nintendo, Sega Genesis, Master System, SG-1000, Sega CD, 32X, PlayStation, Atari 2600, Atari 7800, Atari 5200, ColecoVision |
 | 1 | Every other system, such as Game Gear, the Game Boys, Nintendo DS, Nintendo 3DS, PSP and PICO-8 |
 
-On Arcade, each game uses as many players as the cabinet had.
+??? info "More detail"
+
+    - The TurboGrafx-16 is the exception: its multitap is always plugged in,
+      so it has four. Other multitap adapters aren't supported.
+    - On Arcade, each game uses as many players as the cabinet had.
 
 ## Joining a game
 
@@ -40,12 +46,15 @@ On Arcade, each game uses as many players as the cabinet had.
 3. A notice names the player and the controller, such as
    **Player 2: Xbox Wireless Controller**.
 
-Moving the left stick or the d-pad joins too. Moving only the right stick
-doesn't. A press while the [in-game menu](in-game-menu.md) is open never
-joins: close the menu first.
+Close the [in-game menu](in-game-menu.md) first: a press while it is open
+never joins. Players are kept until you quit the game.
 
-Who is which player lasts until you quit the game. Each launch starts with
-every player free again. Save states don't store who is which player.
+??? info "More detail"
+
+    - Moving the left stick or the d-pad joins too. Moving only the right
+      stick doesn't.
+    - Each launch starts with every player free again. Save states don't
+      store who is which player.
 
 ## The in-game menu
 
@@ -61,12 +70,17 @@ under **Load**. Its page lists:
 
 | Row | Value | `LEFT` / `RIGHT` |
 | --- | --- | --- |
-| **Player 1** to **Player 4** | The controller's name, **Empty**, or the name with **(disconnected)** | Steps through the connected controllers that are playing, and **Empty**. Picking a controller another player has swaps the two players. |
+| **Player 1** to **Player 4** | The controller's name, **Empty**, or the name with **(disconnected)** | Pick another controller, or **Empty**. Picking a controller another player has swaps the two players. |
 | One row per connected controller | **Playing** or **Not playing** | Switches between them. |
 
-The footer reads **Close the menu, then press a button on a new controller to
-join.** Two controllers with the same name are numbered, such as
-**Xbox Wireless Controller (2)**.
+??? info "More detail"
+
+    - The **Player** rows step through the connected controllers that are
+      playing, and **Empty**.
+    - The footer reads **Close the menu, then press a button on a new
+      controller to join.**
+    - Two controllers with the same name are numbered, such as **Xbox
+      Wireless Controller (2)**.
 
 ### Not playing
 
@@ -80,30 +94,31 @@ games, and it doesn't affect one-player games.
 
 ## When a controller disconnects
 
-If a controller drops out, such as a flat battery or a lost Bluetooth
-connection, its player stays reserved. Its row reads, for example,
-**Xbox Wireless Controller (disconnected)**.
+If a controller drops out, its player stays reserved, and its row reads, for
+example, **Xbox Wireless Controller (disconnected)**. Reconnect the same
+controller and it gets the same player back. The other players carry on.
 
-- Reconnect the same controller and it gets the same player back.
-- The other players carry on as before.
-- Any buttons the dropped player was holding are let go.
+??? info "More detail"
+
+    - A drop-out can be a flat battery or a lost Bluetooth connection.
+    - Any buttons the dropped player was holding are let go.
 
 ## Rumble
 
-Each player's rumble goes to their own controller.
+Each player's rumble goes to their own controller. **Game rumble** in
+[**Tools → Settings → Controls**](controls-settings.md) sets the strength for
+everyone.
 
-- **Player 1** falls back to the phone's vibration motor when their
-  controller has no motor Android can use, or when they play on the
-  on-screen pad.
-- **Players 2 to 4** never vibrate the phone.
-- **Game rumble** in [**Tools → Settings → Controls**](controls-settings.md)
-  sets the strength for everyone.
+??? info "More detail"
 
-Some controllers' motors aren't available to Android over Bluetooth. An
-8BitDo Ultimate 2 over Bluetooth on a Galaxy Fold is one we tried. That
-player then gets no rumble.
-
-Which games rumble: see [Controls → Game rumble](controls.md#game-rumble).
+    - **Player 1** falls back to the phone's vibration motor when their
+      controller has no motor Android can use, or when they play on the
+      on-screen pad.
+    - **Players 2 to 4** never vibrate the phone.
+    - Some controllers' motors aren't available to Android over Bluetooth. An
+      8BitDo Ultimate 2 over Bluetooth on a Galaxy Fold is one we tried. That
+      player then gets no rumble.
+    - Which games rumble: see [Controls → Game rumble](controls.md#game-rumble).
 
 ## System notes
 

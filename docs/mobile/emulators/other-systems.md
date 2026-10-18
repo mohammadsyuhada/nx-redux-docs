@@ -1,24 +1,23 @@
 # Other Systems
 
-The other bundled systems play as you would expect. This page lists what is
-special about each one: its folder notes, settings and buttons that do
-something more than the console's own pad.
+The other bundled systems play as you would expect. This page lists only
+what is special about each one. `MENU`, or `SELECT` + `START`, opens the
+[in-game menu](../in-game-menu.md) on every system.
 
-A controller's face buttons work **by the printed letter** on the NES, Super
-Nintendo, Game Boy, Virtual Boy, Pokémon mini, Atari Lynx, WonderSwan and
-Neo Geo Pocket, and **by position** on the Sega consoles, TurboGrafx-16,
-PICO-8, Atari, ColecoVision and Doom; see
-[Controls](../controls.md#controller-buttons). `MENU`, or `SELECT` +
-`START`, opens the [in-game menu](../in-game-menu.md) on every system.
+??? info "More detail: face buttons"
+    A controller's face buttons work **by the printed letter** on the NES,
+    Super Nintendo, Game Boy, Virtual Boy, Pokémon mini, Atari Lynx,
+    WonderSwan and Neo Geo Pocket, and **by position** on the Sega consoles,
+    TurboGrafx-16, PICO-8, Atari, ColecoVision and Doom; see
+    [Controls](../controls.md#controller-buttons).
 
 ## Sega Genesis, Sega CD and 32X
 
-Sega Genesis uses the `MD` tag, and the app creates
-`Roms/Sega Genesis (MD)/`. Genesis, Master System, Game Gear, SG-1000 and
-Sega CD run PicoDrive, as on the handheld, with Genesis Plus GX (`GPGX`) as
-their second emulator; see
+Sega Genesis games go in `Roms/Sega Genesis (MD)/`. Genesis, Master System,
+Game Gear, SG-1000 and Sega CD run PicoDrive, with Genesis Plus GX (`GPGX`)
+as a second emulator; see
 [Choosing an emulator](index.md#choosing-an-emulator). 32X runs PicoDrive
-only.
+only. Sega CD needs its BIOS in `Bios/SEGACD/`.
 
 ??? info "More detail"
     - Battery saves are shared by PicoDrive and Genesis Plus GX, so a game
@@ -40,8 +39,9 @@ menu's **Options → Console Settings**:
 | **6 buttons** | A 6-button pad |
 
 Some older games misbehave with a 6-button pad. The on-screen pad changes to
-match. See [Controls](../controls.md#controller-type-sega). In a two-player
-game, Player 2 gets the same pad; see [Local Multiplayer](../multiplayer.md).
+match, and Player 2 gets the same pad. See
+[Controls](../controls.md#controller-type-sega) and
+[Local Multiplayer](../multiplayer.md).
 
 ### Buttons
 
@@ -83,15 +83,15 @@ The on-screen pad marks them `TA`, `TB`, `TL` and `TR`.
 
 Game Boy, Game Boy Color and Game Boy Advance games link with another phone
 or an NX Redux handheld over [Netplay](../netplay.md), for trades and versus
-battles. Each player keeps their own save.
+battles. Each player keeps their own save. See
+[Netplay → Game Boy Advance link](../netplay.md#game-boy-advance-link).
 
-- Game Boy and Game Boy Color link over Wi-Fi or the USB Cable.
-- Game Boy Advance on gpSP (`GBA`) links over Wi-Fi, with the wireless
-  adapter, or over the USB Cable as a real link cable.
-- mGBA (`MGBA`) links over the USB Cable only.
-- Super Game Boy (`SGB`) has no link play.
-
-See [Netplay → Game Boy Advance link](../netplay.md#game-boy-advance-link).
+| Tag | Links over |
+| --- | --- |
+| `GB`, `GBC` | Wi-Fi or the USB Cable |
+| `GBA` (gpSP) | Wi-Fi (as the wireless adapter) or the USB Cable (as a real link cable) |
+| `MGBA` (mGBA) | The USB Cable only |
+| `SGB` | No link play |
 
 ## Neo Geo Pocket / Color
 

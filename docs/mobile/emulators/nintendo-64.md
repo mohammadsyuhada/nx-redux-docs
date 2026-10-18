@@ -34,24 +34,34 @@ Nintendo console: the button printed `A` is the N64's `A`.
   `L2`. It has no `SELECT`.
 - `MENU`, or `SELECT` + `START`, still opens the
   [in-game menu](../in-game-menu.md).
-- **Controller Layout** in **Options → Console Settings** names your
-  controller's letters if it is read wrongly. Set it to the layout that
-  isn't your controller's to swap `A`/`B` and `X`/`Y`; see
-  [Controls](../controls.md#controller-buttons).
+
+??? info "More detail"
+    **Controller Layout** in **Options → Console Settings** names your
+    controller's letters if it is read wrongly. Set it to the layout that
+    isn't your controller's to swap `A`/`B` and `X`/`Y`; see
+    [Controls](../controls.md#controller-buttons).
 
 ## Rumble
 
-The controller holds the Controller Pak (for saves) out of the box. To feel a
-game's rumble, set **Player 1 Pak** to **rumble** under **Core settings →
-Pak/Controller Options**, in [Emulator Settings](../emulator-settings.md) for
-the console or **Game Settings** for one game. The Rumble Pak takes the
-Controller Pak's place. Start the game again for the change to take effect.
-See [Vibration](../controls.md#game-rumble).
+Rumble is off out of the box: the controller holds the Controller Pak (for
+saves) instead. To turn it on:
+
+1. Open [Emulator Settings](../emulator-settings.md) for the console, or
+   **Game Settings** for one game.
+2. Under **Core settings → Pak/Controller Options**, set **Player 1 Pak** to
+   **rumble**.
+3. Start the game again.
+
+Only games that support the Rumble Pak rumble, such as Super Smash Bros.
+Mario Kart 64 doesn't. See [Vibration](../controls.md#game-rumble).
 
 Up to four players can play, each on their own controller; see
-[Local Multiplayer](../multiplayer.md). Each player has their own setting,
-from **Player 1 Pak** to **Player 4 Pak**. Only games that support the
-Rumble Pak rumble, such as Super Smash Bros. Mario Kart 64 doesn't.
+[Local Multiplayer](../multiplayer.md).
+
+??? info "More detail"
+    - The Rumble Pak takes the Controller Pak's place.
+    - Each player has their own setting, from **Player 1 Pak** to **Player 4
+      Pak**.
 
 ## Settings
 

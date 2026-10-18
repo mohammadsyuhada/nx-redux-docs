@@ -56,9 +56,8 @@ When it's released, the APK is listed on the
 
 ## First-run setup
 
-The first time you open the app, a short setup walks you through it. From
-the folders on, the page title counts **Setup · Step n of m**, and
-**Continue** or **Skip** sit at the top right. `B` goes back a page.
+The first time you open the app, a short setup walks you through it. Use
+**Continue** or **Skip** at the top right, and `B` to go back a page.
 
 1. **Welcome.** Press **Get started**.
 2. **Text size.** **Large** or **Small**. Every page after it, setup's own
@@ -80,24 +79,29 @@ the folders on, the page title counts **Setup · Step n of m**, and
 
 Everything setup asks can be changed later in **Tools → Settings**.
 
+??? info "More detail"
+    From the folders on, the page title counts **Setup · Step n of m**.
+
 ## Allow All files access
 
 On Android 11 and later, setup's **Permissions** page lists **All files
-access**. The app uses it to read your library faster, to show its own
-folder picker, and to sync ROMs with a handheld. Select the row to open
-Android's page for the app, turn the switch on, then come back. Choose
-**Continue** to go on with or without it; without it the app uses Android's
-folder picker.
+access**, which makes the library faster:
 
-You can turn it on or off later in **Tools → Settings → Library → ROM
-folders → All files access**.
+- Select the row, turn the switch on in Android's page, then come back.
+- Choose **Continue** to go on, with or without it.
+
+Change it later in **Tools → Settings → Library → ROM folders → All files
+access**.
+
+??? info "More detail: what All files access is for"
+    The app uses it to read your library faster, to show its own folder
+    picker, and to sync ROMs with a handheld. Without it, the app uses
+    Android's folder picker.
 
 ## Choose a home folder
 
 Next the app asks you to **Pick a home folder**: an empty folder, or one
-NX Redux used before. Press `A` **Pick folder**. With All files access the
-app's own [folder picker](library.md#the-folder-picker) opens; without it,
-Android's folder picker does.
+NX Redux used before. Press `A` **Pick folder** and choose it.
 
 ![Pick a home folder](../assets/screenshots/mobile/first-run-home-folder.webp)
 
@@ -109,17 +113,21 @@ The app creates the NX Redux layout inside the folder you pick:
 | `Bios/<TAG>/` | BIOS files for systems that need them |
 | `Collections/` | Your game collections, once you make one |
 
-The folders are visible to file managers, so you can copy games in from a
-computer. The home folder can sit on an SD card.
-
-If your games already follow the NX Redux layout from a handheld, the same
-folder names and `Bios/<TAG>/` files work unchanged. When the folder already
-holds games, setup says **Found N games in** the folder, a line per console.
-Games outside `Roms/`, and a console split over two folders, are tidied into
-`Roms/` while **Move them into …/Roms** is on (the default).
+The folders show in file managers, so you can copy games in from a
+computer. The home folder can sit on an SD card. A games folder from an NX Redux handheld works
+unchanged.
 
 Saves and save states are kept inside the app, not in the home folder. See
 [Saves](library.md#saves).
+
+??? info "More detail"
+    - With All files access the app's own
+      [folder picker](library.md#the-folder-picker) opens; without it,
+      Android's folder picker does.
+    - When the folder already holds games, setup says **Found N games in**
+      the folder, a line per console.
+    - Games outside `Roms/`, and a console split over two folders, are tidied
+      into `Roms/` while **Move them into …/Roms** is on (the default).
 
 !!! note "Pick a folder, not a root"
     Android's picker can't use the storage root, the SD card root or the
@@ -135,8 +143,8 @@ Right after the home folder, the app asks **Add a ROMs folder?**
 ![Add a ROMs folder?](../assets/screenshots/mobile/first-run-add-roms.webp)
 
 - If you already keep games somewhere else on the phone, press `A`
-  **Add folder** and pick that folder. It is scanned in place and nothing is
-  moved, and setup says what it found.
+  **Add folder** and pick that folder. It is scanned in place: nothing is
+  moved.
 - Choose **Skip** to go on without one.
 
 You can add more folders later in **Tools → Settings → Library → ROM folders
@@ -153,10 +161,13 @@ When the app finds games installed on your phone, the last folder step asks
   the Consoles tab.
 - Choose **Not now** to leave them out.
 
-The question is asked once. On an install that already has a library, it can
-show once as a dialog over the main menu instead. Change the list any time in
-**Tools → Settings → Launcher → Android games**. See
+The question is asked once. Change the list any time in **Tools → Settings
+→ Launcher → Android games**. See
 [Launcher Mode & Android Games](launcher.md).
+
+??? info "More detail"
+    On an install that already has a library, the question can show once as a
+    dialog over the main menu instead.
 
 ## Next steps
 

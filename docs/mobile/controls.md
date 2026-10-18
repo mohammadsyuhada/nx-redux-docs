@@ -7,13 +7,9 @@ controller to play with real buttons instead. With a controller each, two to
 four people can play one game; see [Local Multiplayer](multiplayer.md).
 
 - **Portrait:** the pad sits in a band below the screen, in games and on the
-  main menu, the game lists and the Game Switcher. The tools' pages have no
-  pad.
+  main menu, the game lists and the Game Switcher.
     - In a game, the band goes away while a controller is connected, so the
-      game gets the full height. A clip-on controller that sits where the
-      band was, such as the GameSir Pocket Taco or the 8BitDo FlipPad, keeps
-      it. On Nintendo DS the screens then use their own controller layout (see
-      [Nintendo DS](emulators/nintendo-ds.md)).
+      game gets the full height.
     - On the main menu the band stays with a controller. Turn it off with
       [**Menu pad**](controls-settings.md#menu-pad).
 - **Landscape:** the buttons sit in two clusters over the game. See
@@ -22,6 +18,13 @@ four people can play one game; see [Local Multiplayer](multiplayer.md).
   the stick is on, the button reads **D-PAD**.
 - To move or resize the pad's buttons, for every console or for one, use
   [**Pad layout**](controls-settings.md#pad-layout).
+
+??? info "More detail"
+    - The tools' pages have no pad.
+    - A clip-on controller that sits where the band was, such as the GameSir
+      Pocket Taco or the 8BitDo FlipPad, keeps the band in a game.
+    - When the band goes away for a controller, the Nintendo DS screens use
+      their own controller layout (see [Nintendo DS](emulators/nintendo-ds.md)).
 
 ### Landscape
 
@@ -34,10 +37,13 @@ In landscape the pad splits into two clusters over the game:
 
 ![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp)
 
-**Pad Opacity (landscape)** sets how opaque the clusters are: 100%, 60%, 40% or
-25% (40% by default). It is in the in-game menu under **Options →
-[Frontend](in-game-menu.md#frontend)**, not in Settings. It is saved per game
-or console with Save Changes.
+**Pad Opacity (landscape)** sets how opaque the clusters are (40% by
+default). It is in the in-game menu under **Options →
+[Frontend](in-game-menu.md#frontend)**, not in Settings, and is saved per
+game or console with Save Changes.
+
+??? info "More detail"
+    **Pad Opacity (landscape)** offers 100%, 60%, 40% and 25%.
 
 ### Each console's buttons
 
@@ -46,7 +52,7 @@ doesn't have:
 
 | Console | What the pad shows |
 | --- | --- |
-| Sega Genesis, Sega CD, 32X | The Sega pad: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a 6-button pad (`Y` and `Z` are on the shoulder buttons, and `Mode` is in place of `SELECT`) |
+| Sega Genesis, Sega CD, 32X | The Sega pad: `A` `B` `C` on a 3-button pad, plus `X` `Y` `Z` and `Mode` on a 6-button pad |
 | Master System, Game Gear, SG-1000 | `1` and `2` |
 | TurboGrafx-16 | `I` to `VI`, `Run` and `Mode` |
 | PlayStation, PSP | `○` `×` `△` `□` |
@@ -56,6 +62,8 @@ doesn't have:
 | Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
 
 The Sega pad follows the game's [Controller Type](#controller-type-sega).
+On the 6-button pad, `Y` and `Z` are on the shoulder buttons, and `Mode` is
+in place of `SELECT`.
 
 <div class="grid" markdown>
 
@@ -113,16 +121,14 @@ A controller's face buttons work **as printed**: the button with `A` on it
 is the console's `A`, whatever controller you use. So `A` is the Super
 Nintendo's `A`, the Nintendo 64's `A` and the Dreamcast's `A`.
 
-The app reads which letters your controller has where:
-
-- A **Nintendo-layout** pad has `A` on the right and `B` at the bottom.
-  Nintendo's own controllers and pads in Switch mode are recognised.
-- Any other pad is read as **Xbox layout**, with `A` at the bottom and `B`
-  on the right.
+The app detects your controller's layout: a **Nintendo-layout** pad has `A`
+on the right and `B` at the bottom, and any other pad is read as **Xbox
+layout**, with `A` at the bottom and `B` on the right.
 
 **Controller Layout**, in the in-game menu's
 **Options → [Console Settings](in-game-menu.md#console-settings)**, names
-the letters printed on your controller:
+the letters printed on your controller. Every console has it. Save it for
+the console or the game with Save Changes.
 
 | Value | Use it for |
 | --- | --- |
@@ -130,28 +136,29 @@ the letters printed on your controller:
 | **Xbox (A at the bottom)** | A pad with `A` at the bottom |
 | **Nintendo (A on the right)** | A pad with `A` on the right |
 
-Pick the layout that isn't your controller's to play with the console's
-original button positions. On an Xbox pad set to **Nintendo**, the right
-button is `A` on Super Nintendo, Nintendo DS and Nintendo 3DS, as on the
-console's own pad.
+PlayStation, PSP, the Sega consoles, TurboGrafx-16, PICO-8, Atari,
+ColecoVision, Doom and arcade go **by position** instead, like the console's
+own pad: the bottom button is the PlayStation's `×` on every controller.
 
-Every console has it. Save it for the console or the game with Save
-Changes.
-
-These consoles go by the printed letter: Super Nintendo, NES and Famicom
-Disk System, Game Boy, Game Boy Color, Game Boy Advance, Nintendo DS,
-Nintendo 3DS, Virtual Boy, Atari Lynx, Pokémon mini, WonderSwan,
-Nintendo 64, Nintendo Wii, Nintendo GameCube, Sega Dreamcast, NAOMI,
-Atomiswave and Neo Geo Pocket.
-
-These go **by position** instead, like the console's own pad: PlayStation,
-PSP, the Sega consoles (Genesis, Sega CD, 32X, Master System, Game Gear,
-SG-1000), TurboGrafx-16, PICO-8, Atari, ColecoVision, Doom and arcade. The
-bottom button is the PlayStation's `×` on every controller. Their buttons
-have no letters, or, on the Sega pad, `C` and `Z` would end up on the
-shoulders by letter. There, Controller Layout only changes which button
-confirms in the in-game menu, so it can't fix a Nintendo-layout pad that
-the app reads as Xbox layout.
+??? info "More detail: by letter and by position"
+    - Nintendo's own controllers and pads in Switch mode are recognised as
+      Nintendo layout.
+    - Pick the layout that isn't your controller's to play with the console's
+      original button positions. On an Xbox pad set to **Nintendo**, the
+      right button is `A` on Super Nintendo, Nintendo DS and Nintendo 3DS, as
+      on the console's own pad.
+    - These consoles go by the printed letter: Super Nintendo, NES and
+      Famicom Disk System, Game Boy, Game Boy Color, Game Boy Advance,
+      Nintendo DS, Nintendo 3DS, Virtual Boy, Atari Lynx, Pokémon mini,
+      WonderSwan, Nintendo 64, Nintendo Wii, Nintendo GameCube, Sega
+      Dreamcast, NAOMI, Atomiswave and Neo Geo Pocket.
+    - The Sega consoles that go by position are Genesis, Sega CD, 32X, Master
+      System, Game Gear and SG-1000. These consoles' buttons have no letters,
+      or, on the Sega pad, `C` and `Z` would end up on the shoulders by
+      letter.
+    - On the by-position consoles, Controller Layout only changes which
+      button confirms in the in-game menu, so it can't fix a Nintendo-layout
+      pad that the app reads as Xbox layout.
 
 The other buttons:
 
@@ -161,12 +168,16 @@ The other buttons:
 | `START`, `SELECT` | `START`, `SELECT` |
 | Mode button (Android's `BUTTON_MODE`) | `MENU` |
 | D-pad | `UP`, `DOWN`, `LEFT`, `RIGHT` |
-| Left and right sticks | The core's analog sticks. On consoles without an analog stick, the left stick also works as the d-pad. On Nintendo DS the left stick is the d-pad, or moves the pen in stylus mode. |
+| Left and right sticks | The core's analog sticks. On consoles without an analog stick, the left stick also works as the d-pad |
 | `L3`, `R3` (pressing the sticks) | `L3`, `R3`, for the consoles that use them, such as the NAOMI and Atomiswave Test and Service buttons |
 
 On a controller without a mode button, hold `SELECT` and `START` together to
 open the in-game menu. In a multiplayer game only Player 1's `SELECT` +
 `START` does; see [Local Multiplayer](multiplayer.md#the-in-game-menu).
+
+??? info "More detail"
+    On Nintendo DS the left stick is the d-pad, or moves the pen in stylus
+    mode.
 
 ### Nintendo 64
 
@@ -204,38 +215,31 @@ and the game's own rumble. Set how strong each one is, or turn it off, in
 
 ### Pad vibration
 
-A short tick when you use the on-screen pad. It ticks:
-
-- When you press a button, not when you let go.
-- When the d-pad moves to a new direction, diagonals included. Holding a
-  direction, or letting go back to the centre, does not tick.
-- When your thumb slides onto another button.
-- When the on-screen stick moves to a new direction (up, down, left or
-  right), in the main menu only. In games the stick never ticks.
-
-A controller never makes the phone tick.
+A short tick when you press the on-screen pad. A controller never makes the
+phone tick.
 
 Pad vibration follows the phone's own touch feedback setting: with touch
-feedback off in Android's settings, the pad stays silent too. On Android 13
-and later, Android's touch vibration strength also scales it.
+feedback off in Android's settings, the pad stays silent too.
+
+??? info "More detail: when it ticks"
+    - When you press a button, not when you let go.
+    - When the d-pad moves to a new direction, diagonals included. Holding a
+      direction, or letting go back to the centre, does not tick.
+    - When your thumb slides onto another button.
+    - When the on-screen stick moves to a new direction (up, down, left or
+      right), in the main menu only. In games the stick never ticks.
+    - On Android 13 and later, Android's touch vibration strength also
+      scales it.
 
 ### Game rumble
 
 The game's own rumble, for the games and consoles that have it. It goes to
 the controller you are playing with when it has a rumble motor, and to the
-phone (or the handheld's motor) when it doesn't. Pressing the on-screen pad
-moves it back to the phone.
+phone when it doesn't.
 
-In a [multiplayer](multiplayer.md#rumble) game each player's rumble goes to
-their own controller. Only Player 1 falls back to the phone.
-
-- Changing the level plays a short pulse at that strength, so you can feel
-  it. **Off** plays none.
-- The rumble stops while the [in-game menu](in-game-menu.md) is open and
-  picks up again when you close it. It also stops when you leave the app or
-  quit the game.
-- Game rumble plays as media vibration, so turning touch feedback off in
-  Android's settings does not silence it. Set it to **Off** here instead.
+Game rumble plays as media vibration, so turning touch feedback off in
+Android's settings does not silence it. Set it to **Off** in
+[Controls settings](controls-settings.md#game-rumble) instead.
 
 These consoles rumble:
 
@@ -251,16 +255,31 @@ These consoles rumble:
 
 Other consoles have no rumble.
 
-**Nintendo 64:** the controller holds the Controller Pak (for saves) out of
-the box. To feel a game's rumble, open
-[Emulator Settings](emulator-settings.md) for the console, or **Game
-Settings** for one game, and under **Core settings → Pak/Controller
-Options** set **Player 1 Pak** to **rumble**. The Rumble Pak takes the
-Controller Pak's place, so a game can't save to the Controller Pak while it
-is in. Start the game again for the change to take effect. For more players,
-set **Player 2 Pak** to **Player 4 Pak** the same way.
+**Nintendo 64:** out of the box the controller holds the Controller Pak (for
+saves). To feel a game's rumble:
+
+1. Open [Emulator Settings](emulator-settings.md) for the console, or **Game
+   Settings** for one game.
+2. Under **Core settings → Pak/Controller Options**, set **Player 1 Pak** to
+   **rumble**. For more players, set **Player 2 Pak** to **Player 4 Pak** the
+   same way.
+3. Start the game again for the change to take effect.
+
+!!! note
+    The Rumble Pak takes the Controller Pak's place, so a game can't save to
+    the Controller Pak while it is in.
 
 ??? info "More detail"
+    - Without a controller motor, rumble goes to the phone (or the
+      handheld's motor). Pressing the on-screen pad moves it back to the
+      phone.
+    - In a [multiplayer](multiplayer.md#rumble) game each player's rumble
+      goes to their own controller. Only Player 1 falls back to the phone.
+    - Changing the level plays a short pulse at that strength, so you can
+      feel it. **Off** plays none.
+    - The rumble stops while the [in-game menu](in-game-menu.md) is open and
+      picks up again when you close it. It also stops when you leave the app
+      or quit the game.
     - The emulators' own rumble options are in **Core settings** too, such
       as **Rumble Effects** for PlayStation and Doom, **Device in Expansion
       Slot A2** for Dreamcast, and **Controller Rumble Strength** for Game
@@ -288,9 +307,12 @@ set **Player 2 Pak** to **Player 4 Pak** the same way.
   `B` goes back. On PlayStation and PSP, `×` confirms and `○` goes back.
 
 Menus show key hints you can tap when a controller or the on-screen pad is
-present. **Options** (`MENU`) always comes first. The other hints follow the
-pad from left to right: the d-pad and left shoulders, `SELECT`, `START`, then
-`Y` `X` `B` `A`, then the right shoulders.
+present.
+
+??? info "More detail: hint order"
+    **Options** (`MENU`) always comes first. The other hints follow the pad
+    from left to right: the d-pad and left shoulders, `SELECT`, `START`, then
+    `Y` `X` `B` `A`, then the right shoulders.
 
 With touch alone (no controller and no pad below the screen: in landscape,
 on the tools' pages in portrait, or with [Menu pad](controls-settings.md#menu-pad)
@@ -308,12 +330,16 @@ Off), there is no hint bar:
 
 Press `MENU`, or long-press a game, for its context menu: Pin Item, Hide
 Game, Rename Rom, Add to Collection, Game Settings, Netplay, Fetch art and
-Emulator. A game with a save state starts it with **Play from start**. While
-the Netplay hint is hidden, or with touch alone, **Netplay** comes next. With
-the [Achievements panel](layouts.md#layout-options-and-achievements-panel)
-row set to Hide, **Achievements** comes last. See
-[Context menus](main-menu.md#context-menus) for what each does and where it
-shows.
+Emulator. See [Context menus](main-menu.md#context-menus) for what each does
+and where it shows.
+
+??? info "More detail: menu order"
+    - A game with a save state starts the menu with **Play from start**.
+    - While the Netplay hint is hidden, or with touch alone, **Netplay**
+      comes next.
+    - With the
+      [Achievements panel](layouts.md#layout-options-and-achievements-panel)
+      row set to Hide, **Achievements** comes last.
 
 ## In-game menu
 
@@ -326,8 +352,10 @@ Shaders, Core Options, Cheats, Achievements and Save Changes. See
 
 `MENU`, `SELECT` + `START` and Back open the in-game menu on every console.
 In a multiplayer game, `SELECT` + `START` works on Player 1's controller only.
-`MENU` and the combo never reach the game, but the game does see the
-`SELECT` press before `START`, except on the Nintendo 3DS.
+
+??? info "More detail"
+    `MENU` and the combo never reach the game, but the game does see the
+    `SELECT` press before `START`, except on the Nintendo 3DS.
 
 Some consoles have buttons and shortcuts of their own. They are on each
 console's page:

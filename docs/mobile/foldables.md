@@ -31,24 +31,29 @@ you open it flat. It works in games and in the main menu alike.
 ## Home on wide and large screens
 
 Home lays itself out for the screen's shape. In portrait and on most
-screens it looks as in [Main Menu](main-menu.md#home).
+screens it looks as in [Main Menu](main-menu.md#home). On a wide or large
+landscape screen, such as a Galaxy Z Flip sideways or an unfolded Galaxy Z
+Fold, the tool squares, and one or two pinned games, sit beside the
+Continue card.
 
-**Wide face:** a phone in landscape with a 20:9 or wider screen, such as a
-Galaxy Z Flip.
+??? info "More detail"
+    **Wide face:** a phone in landscape with a 20:9 or wider screen, such as
+    a Galaxy Z Flip.
 
-- One or two pinned games sit beside the Continue card, in the top section.
-  With three or more, they go in rows below it instead.
-- The pinned tools are smaller squares, up to six. With more, the last square
-  is **+N**, which opens Tools.
+    - One or two pinned games sit beside the Continue card, in the top
+      section. With three or more, they go in rows below it instead.
+    - The pinned tools are smaller squares, up to six. With more, the last
+      square is **+N**, which opens Tools.
 
-**Large face:** a landscape screen at least 840 × 480 dp, such as an
-unfolded Galaxy Z Fold or a tablet.
+    **Large face:** a landscape screen at least 840 × 480 dp, such as an
+    unfolded Galaxy Z Fold or a tablet.
 
-- The top section is as on the wide face: Continue, one or two pinned games
-  and the tool squares.
-- With three or more pinned games, they fill the rows below, four to a row.
-- Under them come the [shelves](#shelves), four to a row at the pinned
-  games' size.
+    - The top section is as on the wide face: Continue, one or two pinned
+      games and the tool squares.
+    - With three or more pinned games, they fill the rows below, four to a
+      row.
+    - Under them come the [shelves](#shelves), four to a row at the pinned
+      games' size.
 
 <figure class="nx-phone nx-phone--open" markdown>
 ![Home on the large face of an unfolded Fold, with the shelves](../assets/screenshots/mobile/home-large.webp){ .nx-phone__screen }
@@ -57,11 +62,9 @@ unfolded Galaxy Z Fold or a tablet.
 
 ### Shelves
 
-Home shows up to three shelves of games from your library, in portrait and
-landscape alike, on every screen size and in every Home layout. Each shelf
-shows only when it has games, holds at most 3, and a game is never on two
-shelves. Each shelf has its name as a label above it; on Carousel and List
-Home each game wears it as a badge or tag instead.
+Home shows up to three shelves of games from your library, to help you
+pick something to play. They show on every screen size and in every Home
+layout.
 
 | Shelf | What it holds |
 | --- | --- |
@@ -69,19 +72,28 @@ Home each game wears it as a badge or tag instead.
 | **Not started** | Games you have never played. Picked again each day. |
 | **Pick up again** | Games you last played more than 14 days ago, most played first. |
 
-The game on the Continue card, your pinned games, Unassigned games and
-Android games are left off the shelves.
-
 [Layouts](layouts.md) can hide the **New** and **Not started** shelves, each
-with its own row in **Layouts → Home**. A hidden shelf's games don't move to another shelf. **Pick
-up again** always shows when it has games.
+with its own row in **Layouts → Home**. **Pick up again** always shows when
+it has games.
+
+??? info "More detail"
+    - Shelves show in portrait and landscape alike. Each shelf shows only
+      when it has games, holds at most 3, and a game is never on two shelves.
+    - Each shelf has its name as a label above it; on Carousel and List Home
+      each game wears it as a badge or tag instead.
+    - The game on the Continue card, your pinned games, Unassigned games and
+      Android games are left off the shelves.
+    - A hidden shelf's games don't move to another shelf.
 
 ## Two-pane screens
 
-On a wide window, at least 600 dp wide and at least 1.3 times as wide as it
-is tall, some pages show two panes side by side. An unfolded Fold in landscape
-and most phones in landscape qualify. Portrait screens keep one page at a
-time.
+On a wide screen, such as most phones in landscape or an unfolded Fold held
+sideways, some pages show two panes side by side. Portrait screens keep one
+page at a time.
+
+??? info "More detail"
+    A window counts as wide when it is at least 600 dp wide and at least 1.3
+    times as wide as it is tall.
 
 ### Settings
 
@@ -89,18 +101,20 @@ time.
 section's page on the right. Moving through the sections previews each page.
 
 <figure class="nx-phone nx-phone--open" markdown>
-![Settings in two panes on an unfolded Fold](../assets/screenshots/mobile/settings-two-pane.webp){ .nx-phone__screen }
+![Settings in two panes on an unfolded Fold, with Layouts open](../assets/screenshots/mobile/settings-two-pane.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8-open.webp){ .nx-phone__frame }
 </figure>
 
 ### RetroAchievements
 
 Below the [RetroAchievements](retroachievements.md) page, each level opens
-beside the one it came from. The page you came from stays on the left,
-dimmed, with the row that opened it highlighted. An achievement's details
-show beside the game's achievements list, and a game's achievements beside
-the games list. The
-[Game Tracker](game-tracker.md) shows a game's sessions the same way.
+beside the one it came from, such as an achievement's details beside the
+game's achievements list. The page you came from stays on the left, dimmed.
+The [Game Tracker](game-tracker.md) shows a game's sessions the same way.
+
+??? info "More detail"
+    The dimmed page keeps the row that opened the right pane highlighted. A
+    game's achievements open beside the games list.
 
 <figure class="nx-phone nx-phone--open" markdown>
 ![An achievement's details beside the game's achievements list](../assets/screenshots/mobile/ra-game-two-pane.webp){ .nx-phone__screen }
@@ -109,10 +123,13 @@ the games list. The
 
 ### Artwork
 
-[Artwork](artwork.md) works the same way. **Fetch by console**,
-**Progress** and **Settings** open beside the Artwork page, and
-**Reset artwork** beside Settings. The page you came from stays on the
-left, dimmed, with its row lit. Tap a row there to open it instead.
+[Artwork](artwork.md) works the same way: its pages open beside the
+Artwork page. Tap a row in the dimmed left pane to open it instead.
+
+??? info "More detail"
+    **Fetch by console**, **Progress** and **Settings** open beside the
+    Artwork page, and **Reset artwork** beside Settings. The page you came
+    from keeps its row lit.
 
 ### In-game menu
 

@@ -9,11 +9,13 @@ handheld? See the [Handheld FAQ](handheld.md).
 
 ## Can I use the same games folder as my handheld?
 
-Yes. The app uses the NX Redux layout: `Roms/<Name (TAG)>/`, `Bios/<TAG>/`,
-`Saves/<TAG>/`, `Collections/` and `map.txt`. A copy of your handheld's
-folders works as the app's home folder. A handheld's BIOS layout (such as
-`Bios/PS/psxonpsp660.bin`) works unchanged. See
-[Library & ROM folders](../../mobile/library.md).
+Yes. A copy of your handheld's folders, BIOS files included, works as the
+app's home folder. See [Library & ROM folders](../../mobile/library.md).
+
+??? info "More detail"
+    The app uses the NX Redux layout: `Roms/<Name (TAG)>/`, `Bios/<TAG>/`,
+    `Saves/<TAG>/`, `Collections/` and `map.txt`. A handheld's BIOS layout
+    (such as `Bios/PS/psxonpsp660.bin`) works unchanged.
 
 ## Do my handheld saves carry over?
 
@@ -89,19 +91,22 @@ yet either. See [Local Multiplayer](../../mobile/multiplayer.md#limits).
 
 ## Can I remap controller buttons?
 
-Not freely. Each console has a fixed mapping:
-
-- Face buttons work **as printed**: your controller's `A` is the console's
-  `A`. PlayStation, PSP, Sega, arcade and a few others go by position
-  instead.
-- **Controller Layout** in the in-game menu's **Options → Console Settings**
-  names your controller's letters: **Auto-detect**,
-  **Xbox (A at the bottom)** or **Nintendo (A on the right)**. Pick the one
-  that isn't your controller's for the console's original button positions,
-  such as the right button as `A` on Super Nintendo with an Xbox pad.
+Not freely. Each console has a fixed mapping, and face buttons work **as
+printed**: your controller's `A` is the console's `A`. To swap the layout,
+use **Controller Layout** in the in-game menu's **Options → Console
+Settings**.
 
 On a controller without a mode button, hold `SELECT` + `START` to open the
 in-game menu. See [Controls](../../mobile/controls.md).
+
+??? info "More detail"
+    - PlayStation, PSP, Sega, arcade and a few others go by position instead
+      of by letter.
+    - **Controller Layout** names your controller's letters: **Auto-detect**,
+      **Xbox (A at the bottom)** or **Nintendo (A on the right)**. Pick the
+      one that isn't your controller's for the console's original button
+      positions, such as the right button as `A` on Super Nintendo with an
+      Xbox pad.
 
 ## Is there a RetroAchievements hardcore mode?
 
@@ -127,11 +132,12 @@ button hints across the app. First-run setup asks it first. See
 
 The app fetches it. Open **Tools → Artwork** and pick **Fetch missing art**,
 or **Fetch by console**. To fetch one game, press `MENU` on it and pick
-**Fetch art**.
+**Fetch art**. See [Artwork](../../mobile/artwork.md).
 
-The art comes from ScreenScraper, libretro-thumbnails, TheGamesDB and
-SteamGridDB, and is saved in each game folder's `.media` folder. Art you put
-there yourself is used too. See [Artwork](../../mobile/artwork.md).
+??? info "More detail"
+    The art comes from ScreenScraper, libretro-thumbnails, TheGamesDB and
+    SteamGridDB, and is saved in each game folder's `.media` folder. Art you
+    put there yourself is used too.
 
 ## Why does artwork need a ScreenScraper account or API keys?
 
@@ -163,10 +169,14 @@ they don't show in recents or on the Continue card. See
 ## Does the app work on foldables?
 
 Yes. On a half-folded phone with a horizontal hinge, the game moves above the
-fold and the controls go below it. This is automatic, except that Nintendo DS
-games keep their usual layout. In landscape on a wide screen, such as an
-unfolded Fold held sideways, Settings, the in-game menu, RetroAchievements
-and Artwork split into two panes. See [Foldables & Large Screens](../../mobile/foldables.md).
+fold and the controls go below it. This is automatic. On a wide screen, such
+as an unfolded Fold held sideways, some pages split into two panes. See
+[Foldables & Large Screens](../../mobile/foldables.md).
+
+??? info "More detail"
+    - Nintendo DS games keep their usual layout when folded.
+    - The pages that split into two panes are Settings, the in-game menu,
+      RetroAchievements and Artwork.
 
 ## I removed my SD card and some games disappeared
 
