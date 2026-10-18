@@ -407,6 +407,8 @@ on any item of the main menu ends with an entry for each hidden tab
 (**Consoles**, **Collections** or **Tools**). Pick one to open that tab over
 the current one; `B` returns.
 
+![Home with the Tools tab hidden: Dragon Ball Z - The Legacy of Goku II's menu, with Netplay, Pin and Tools, Tools selected](../assets/screenshots/mobile/hidden-tabs-menu.webp)
+
 ??? info "More detail"
     Only a hidden tab that has something in it is offered. Items that have no
     menu of their own, such as a console, get a menu with just these,
