@@ -247,6 +247,8 @@ locked ones, or all again. `A` opens an achievement's details.
 
 ![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp)
 
+![An achievement's details beside 1942's achievements: Midway, Clear Stages 32-29., 5 points, Locked, 20.61% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp)
+
 ??? info "More detail"
 
     - The games list also shows how many unlocks are pending sync. With
