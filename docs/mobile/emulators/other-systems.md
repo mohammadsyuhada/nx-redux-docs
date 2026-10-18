@@ -40,7 +40,6 @@ menu's **Options → Console Settings**:
 
 Some older games misbehave with a 6-button pad. The on-screen pad changes to
 match, and Player 2 gets the same pad. See
-[Controls](../controls.md#controller-type-sega) and
 [Local Multiplayer](../multiplayer.md).
 
 ### Buttons

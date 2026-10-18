@@ -61,7 +61,7 @@ doesn't have:
 | GameCube | A green `A`, a red `B`, `X`, `Y`, `Z`, `L` and `R` triggers, and a C-stick |
 | Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
 
-The Sega pad follows the game's [Controller Type](#controller-type-sega).
+The Sega pad follows the game's [Controller Type](emulators/other-systems.md#controller-type).
 On the 6-button pad, `Y` and `Z` are on the shoulder buttons, and `Mode` is
 in place of `SELECT`.
 
@@ -179,33 +179,9 @@ open the in-game menu. In a multiplayer game only Player 1's `SELECT` +
     On Nintendo DS the left stick is the d-pad, or moves the pen in stylus
     mode.
 
-### Nintendo 64
-
-The Nintendo 64 goes by the printed letter too: the button printed `A` is
-the N64's `A`.
-
-| Controller | Nintendo 64 |
-| --- | --- |
-| `A`, `B` | `A`, `B` |
-| `X` | C-Left |
-| `Y` | C-Down |
-| `L1`, `R1` | `L`, `R` |
-| `L2` | `Z` |
-| Right stick | The C buttons |
-
-### Controller Type (Sega)
-
-Sega Genesis, Sega CD and 32X games have **Controller Type** in **Options →
-[Console Settings](in-game-menu.md#console-settings)**:
-
-| Value | What the game sees |
-| --- | --- |
-| **Auto** (default) | A 6-button pad only for games made for one, else a 3-button pad |
-| **3 buttons** | A 3-button pad |
-| **6 buttons** | A 6-button pad |
-
-Some older games misbehave with a 6-button pad. The on-screen pad changes to
-match.
+Each console's own mapping, such as the [Nintendo 64](emulators/nintendo-64.md#controls)
+or the Sega [Controller Type](emulators/other-systems.md#controller-type)
+(3 or 6 buttons), is on its [emulator page](emulators/index.md).
 
 ## Vibration
 
