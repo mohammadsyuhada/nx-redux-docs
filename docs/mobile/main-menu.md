@@ -475,6 +475,8 @@ Build your own game collections from a game list:
 3. Pick an existing collection, or **New Collection…** to make one and name
    it.
 
+![Advance Wars' menu in the Game Boy Advance list, with Add to Collection selected](../assets/screenshots/mobile/add-to-collection.webp)
+
 Your collections live on the **Collections** tab, each with its game count.
 The tab appears once you have a collection.
 
