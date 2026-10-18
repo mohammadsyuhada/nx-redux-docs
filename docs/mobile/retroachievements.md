@@ -6,7 +6,7 @@ sign in, browse your achievements and change its settings there. Once you are
 signed in, game lists also show a game's achievements in a
 [panel](#on-game-lists).
 
-![Tools → RetroAchievements, signed in as kotaksempit: 23 points, Nothing waiting, the last sync time, then the three rows](../assets/screenshots/mobile/ra-home.webp)
+![Tools → RetroAchievements in two panes: kotaksempit with 23 points, Nothing waiting and the last sync time, then Achievements, Sync now and Settings on the left, and the cached games on the right](../assets/screenshots/mobile/ra-home.webp)
 
 The home screen shows your username and points, with three rows:
 **Achievements**, **Sync now** and **Settings**.
@@ -240,7 +240,7 @@ games. A notice then says how many unlocks were synced, **Up to date**, or
 **Achievements** on the home screen lists every cached game with its art and
 progress, such as `12/40 unlocked`. It works offline.
 
-![RetroAchievements in two panes: the account and its rows on the left, Achievements on the right listing each cached game with its progress, from 1942 (0/27 unlocked) on](../assets/screenshots/mobile/ra-games.webp)
+![RetroAchievements → Achievements, listing cached games with their progress, from 1942 (0/27 unlocked) on](../assets/screenshots/mobile/ra-games.webp)
 
 Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
 or **Locked**, with its points. `Y` (on touch, the filter icon) shows only
