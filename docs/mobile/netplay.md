@@ -15,9 +15,9 @@ Two people on one phone, each with a controller? That is
 
 1. Both players pick the same game. On the phone, highlight it on Home or
    in a game list and press `Y` **Netplay**.
-2. The **Netplay** sheet opens, titled with the game.
+2. The **Netplay** menu opens, titled with the game.
 
-    ![The Netplay sheet for Comix Zone: Host Game, Join Game and Emulator Auto (match the other device)](../assets/screenshots/mobile/netplay-sheet.webp)
+    ![The Netplay menu for Comix Zone: Host Game, Join Game and Emulator Auto (match the other device)](../assets/screenshots/mobile/netplay-sheet.webp)
 
 3. Both players choose the same **Connection**: **Wi-Fi** or
    [**USB Cable**](#usb-cable).
@@ -44,7 +44,7 @@ then **WiFi** or **USB Cable**. See the handheld's
       [Context menus](main-menu.md#context-menus).
     - The phone has no **Hotspot** choice, so don't pick it on the handheld.
 
-### The Netplay sheet
+### The Netplay menu
 
 | Row | What it does |
 | --- | --- |
@@ -54,7 +54,7 @@ then **WiFi** or **USB Cable**. See the handheld's
 | **Emulator** | Which emulator runs the match. See [Emulator](#emulator). |
 | **Wi-Fi settings** | Opens Android's Wi-Fi settings, when the phone isn't on Wi-Fi. |
 
-`B` closes the sheet.
+`B` closes the menu.
 
 ??? info "More detail"
 
@@ -84,7 +84,7 @@ connects, the game starts. `B` **Cancel** stops hosting.
 Over Wi-Fi, **Join Game** opens **Select Host**, listing every device hosting
 on the same network, phones and handhelds alike, such as **Contra III - The
 Alien Wars (192.168.1.23)**. Press `A` on the host to join. `B` goes back to
-the sheet.
+the menu.
 
 ![Select Host on the Fold, listing a Brick Pro hosting Contra III - The Alien Wars at 192.168.1.17](../assets/screenshots/mobile/netplay-join.webp)
 
@@ -192,7 +192,7 @@ Nintendo 64, Dreamcast, Nintendo DS, Nintendo 3DS and PSP, has no
 
 ### Emulator
 
-Systems with two emulators have an **Emulator** row on the sheet.
+Systems with two emulators have an **Emulator** row on the menu.
 `LEFT` / `RIGHT` change it.
 
 - **Auto (match the other device)** (default): the phone runs whatever the

@@ -268,7 +268,7 @@ saves). To feel a game's rumble:
 | `A` | Open or start the highlighted item. On a game with a save state it resumes the game (**Resume**) |
 | `B` | Back. Android's Back gesture does the same. |
 | `X` | In a game list, open the [achievements panel](main-menu.md#achievements-panel) for the highlighted game, while you are signed in to [RetroAchievements](retroachievements.md) |
-| `Y` | On a game that has [netplay](netplay.md), open the Netplay sheet |
+| `Y` | On a game that has [netplay](netplay.md), open the Netplay menu |
 | `SELECT` | Open the [Game Switcher](game-switcher.md). The main menu's hint reads **Recent**. |
 | `START` | On the main menu, [search](main-menu.md#search) your games. In a game list, [search that list's games](main-menu.md#searching-a-game-list) |
 | `MENU`, or a long press | Open the context menu |
