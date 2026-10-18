@@ -77,6 +77,31 @@ and everything you pinned. It comes in three layouts, **List**, **Grid** (the
 default) and **Carousel**. Pick one in
 [Settings → Layouts → Home → Home layout](layouts.md#the-layouts-page).
 
+<div class="grid" markdown>
+
+<figure markdown>
+
+![Home in Grid: the Continue card filling the top, under the stats strip](../assets/screenshots/mobile/home-layout-grid.webp)
+
+<figcaption>Grid (default)</figcaption>
+</figure>
+
+<figure markdown>
+
+![Home in List: Continue first, then the pinned games as rows over the selected game's picture](../assets/screenshots/mobile/home-layout-list.webp)
+
+<figcaption>List</figcaption>
+</figure>
+
+<figure markdown>
+
+![Home in Carousel: the Continue card in the middle with its time and achievements, the next items beside it](../assets/screenshots/mobile/home-layout-carousel.webp)
+
+<figcaption>Carousel</figcaption>
+</figure>
+
+</div>
+
 Every layout starts with a two-line stats strip:
 
 - **This month:** your play time this calendar month, and the
