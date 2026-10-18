@@ -88,6 +88,11 @@ see [Emulator Settings](../emulator-settings.md).
       first launch with gpSP as the console's default, the app sets its
       **Emulator** to mGBA and starts it there. A game you set to gpSP
       yourself stays on gpSP.
+    - A game runs on the emulator from its `systems.txt` entry or its own
+      **Emulator** choice, and otherwise on the console's default. This covers
+      every folder of the console, whatever its `(TAG)`, extra folders such as
+      one named `My Game Boy Advance`, and Unassigned games you give a console.
+    - Battery saves are shared, so nothing is copied when you switch.
 
 ## Graphics API
 

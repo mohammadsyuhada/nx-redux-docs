@@ -150,7 +150,7 @@ An Unassigned game can't start until it has a console. To give it one:
 1. Highlight the game and press `MENU`, or long-press it.
 2. Choose **Console**. It lists the consoles that can run the file.
 3. Pick the console. The game moves to that console's list, using the
-   console's [default emulator](#default-emulators).
+   console's [default emulator](emulators/index.md#choosing-an-emulator).
 
 ??? info "More detail"
     - **Console** lists every console whose emulator can run the file's type.
@@ -158,28 +158,6 @@ An Unassigned game can't start until it has a console. To give it one:
       it.
     - The context menu for an Unassigned game offers only **Hide Game**,
       **Rename Rom** and **Console**.
-
-## Default emulators
-
-A few consoles have more than one emulator. Each console's default is set
-in **Tools → Settings → Emulators → Default emulators**. See
-[Emulator Settings](emulator-settings.md#default-emulators) and
-[Choosing an emulator](emulators/index.md#choosing-an-emulator).
-
-To run one game on the other emulator, use **Emulator** in its context menu.
-Both emulators share the console's battery saves, so the game picks up where
-it left off. Save states stay per emulator.
-
-??? info "More detail"
-    - Each console has one folder, its saves and BIOS are kept per console,
-      and a game runs on the console's emulator. Each emulator of a console
-      has its own tag.
-    - A game runs with the emulator from its `systems.txt` entry or its own
-      **Emulator** choice. Without one, it uses the default emulator. This
-      covers every folder of the console, whatever its `(TAG)`, extra folders
-      such as one named `My Game Boy Advance`, and Unassigned games you give
-      a console.
-    - Battery saves are shared, so nothing is copied when you switch.
 
 ## Disc games in their own folder
 
