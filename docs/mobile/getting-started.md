@@ -104,7 +104,7 @@ access**.
 Next the app asks you to **Pick a home folder**: an empty folder, or one
 NX Redux used before. Press `A` **Pick folder** and choose it.
 
-![Setup · Step 2 of 9: Pick a home folder, with Pick folder selected](../assets/screenshots/mobile/first-run-home-folder.webp)
+![Setup · Step 2 of 9: Pick a home folder, with Pick folder selected, in landscape](../assets/screenshots/mobile/first-run-home-folder.webp)
 
 The app creates the NX Redux layout inside the folder you pick:
 
@@ -141,7 +141,7 @@ Saves and save states are kept inside the app, not in the home folder. See
 
 Right after the home folder, the app asks **Add a ROMs folder?**
 
-![Setup · Step 4 of 10: Add a ROMs folder?, with Add folder selected and Skip at the top right](../assets/screenshots/mobile/first-run-add-roms.webp)
+![Setup · Step 4 of 10: Add a ROMs folder?, with Add folder selected and Skip at the top right, in landscape](../assets/screenshots/mobile/first-run-add-roms.webp)
 
 - If you already keep games somewhere else on the phone, press `A`
   **Add folder** and pick that folder. It is scanned in place: nothing is
