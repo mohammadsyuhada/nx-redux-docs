@@ -1,12 +1,14 @@
 # PlayStation
 
-PlayStation games run on the bundled **PCSX-ReARMed** core. Games in a
-`PSX` folder run on **SwanStation**, as on the handheld.
+PlayStation games run on the bundled **PCSX-ReARMed** core by default, or
+on **SwanStation**. Both play from the same folder and share its battery
+saves and BIOS.
 
-| | PCSX-ReARMed | SwanStation |
+| | PCSX-ReARMed (default) | SwanStation |
 | --- | --- | --- |
-| Folder | `Roms/Sony PlayStation (PS)/` | `Roms/Sony PlayStation (PSX)/` |
-| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` is used when present. | Needed: `scph5500.bin` (Japan), `scph5501.bin` (USA) or `scph5502.bin` (Europe) in `Bios/PSX/` |
+| Folder | `Roms/Sony PlayStation (PS)/` | The same |
+| Saves | `Saves/PS/` | The same (save states stay per emulator) |
+| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` is used when present. | Needed: `scph5500.bin` (Japan), `scph5501.bin` (USA) or `scph5502.bin` (Europe) in `Bios/PS/` |
 | [File types](index.md) | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` | `chd` `cue` `bin` `img` `iso` `pbp` `ecm` `mds` `m3u` |
 
 !!! tip "Use a real BIOS"
@@ -14,9 +16,10 @@ PlayStation games run on the bundled **PCSX-ReARMed** core. Games in a
     For PCSX-ReARMed, put one of `psxonpsp660.bin`, `scph101.bin`,
     `scph5501.bin`, `scph7001.bin` or `scph1001.bin` in `Bios/PS/`.
 
-To pick the emulator for a folder without a tag, or for one game, see
-[Choosing an emulator](index.md#choosing-an-emulator). PlayStation games
-also play over [Netplay](../netplay.md).
+- To use SwanStation for every PlayStation game, or for one game, see
+  [Choosing an emulator](index.md#choosing-an-emulator).
+- **Graphics API** can switch a SwanStation game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
 
 ## Controls
 
@@ -44,17 +47,25 @@ The face buttons map to the PlayStation buttons **by position**:
 - In the app's menus, `×` confirms and `○` goes back.
 - `MENU`, or `SELECT` + `START`, opens the [in-game menu](../in-game-menu.md).
 - Games with [DualShock rumble](../controls.md#game-rumble) rumble.
-- Two players can play, each on their own controller; see
-  [Local Multiplayer](../multiplayer.md).
-
-??? info "More detail"
-    The game sees a DualShock pad, for Player 2 as well as Player 1.
 
 ## Multi-disc games
 
 Put a multi-disc game in an `.m3u` that lists its discs, or use a multi-disc
 `.pbp`. The in-game menu then has a **Disc** row to change disc; see
 [Multi-disc games](index.md#multi-disc-games).
+
+## Multiplayer
+
+- Two players can play, each on their own controller; see
+  [Local Multiplayer](../multiplayer.md). The game sees a DualShock pad for
+  both.
+- PlayStation games also play over [Netplay](../netplay.md), on both cores.
+
+## Cheats and achievements
+
+- [Cheats](../cheats.md): the cheat download has codes for PlayStation games,
+  on both cores, or add your own `.cht` files.
+- [RetroAchievements](../retroachievements.md) works for PlayStation games.
 
 ## Limits
 

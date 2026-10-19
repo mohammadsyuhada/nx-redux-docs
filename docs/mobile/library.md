@@ -39,7 +39,7 @@ The app never deletes a game. It moves games only while **Move them into
 **Tools → Settings → Library** shows what the library holds (home folder,
 game and console count, last scan), then its rows.
 
-![Settings, with Library open beside the sections: the home folder, the counts, Rescan library, ROM folders and Unassigned games](../assets/screenshots/mobile/settings-library.webp)
+![Settings, with Library open beside the sections: the home folder, the counts, Rescan library, ROM folders and Unassigned games](../assets/screenshots/mobile/settings-library.webp){ .nx-wide }
 
 | Row | What it does |
 | --- | --- |
@@ -60,7 +60,7 @@ game and console count, last scan), then its rows.
 **Tools → Settings → Library → ROM folders** lists every folder the library
 reads.
 
-![Library → ROM folders beside the Settings sections: Home folder, All files access, a ROM folder and Add ROM folder](../assets/screenshots/mobile/rom-folders.webp)
+![Library → ROM folders beside the Settings sections: Home folder, All files access, a ROM folder and Add ROM folder](../assets/screenshots/mobile/rom-folders.webp){ .nx-wide }
 
 | Row | What it does |
 | --- | --- |
@@ -111,7 +111,7 @@ With All files access, every folder or file pick (home folder, extra
 folder, import, export) uses the app's own picker, a list like the rest of
 the app.
 
-![The app's folder picker at Internal storage's root: Create new folder on the left, the folders beside it with NXRedux selected, files dimmed](../assets/screenshots/mobile/file-picker.webp)
+![The app's folder picker at Internal storage's root: Create new folder on the left, the folders beside it with NXRedux selected, files dimmed](../assets/screenshots/mobile/file-picker.webp){ .nx-wide }
 
 - Open folders until you reach the one you want, then choose **Use this
   folder** (or **Save here** for an export).
@@ -143,7 +143,7 @@ Games the app couldn't match to a console are listed under **Tools →
 Settings → Library → Unassigned games**. The row shows only while there are
 some. They don't show on the main menu.
 
-![The Unassigned games list, holding one game](../assets/screenshots/mobile/unassigned.webp)
+![The Unassigned games list, holding one game](../assets/screenshots/mobile/unassigned.webp){ .nx-wide }
 
 An Unassigned game can't start until it has a console. To give it one:
 

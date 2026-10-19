@@ -4,10 +4,11 @@ The main menu is split into four tabs: **Home**, **Consoles**,
 **Collections** and **Tools**. The app opens on Home, or on the first tab you
 have not hidden.
 
-![Home in Grid, with Dragon Ball Z - The Legacy of Goku II on the Continue card under the This month and Most played strip](../assets/screenshots/mobile/home.webp)
+![Home in Grid: the Home, Consoles and Tools tabs at the top, the This month and Most played strip, Streets of Rage 2 on the Continue card beside the pinned tools, and the button hints along the bottom](../assets/screenshots/mobile/home.webp)
 
-Each tab and the game lists can be drawn in different styles (list, grid,
-carousel and more). [Menu Layouts](layouts.md) shows them all.
+Each tab and the game lists can be drawn in different styles, picked in
+[Menu Layouts](layouts.md): see [Home](#home), [Consoles](#consoles),
+[Collections](#collections), [Tools](#tools) and [Game lists](#game-lists).
 
 You can drive every screen with the on-screen pad, a controller or touch.
 See [Controls](controls.md).
@@ -22,10 +23,10 @@ See [Controls](controls.md).
 
 | Tab | What it holds |
 | --- | --- |
-| **Home** | Your last game, play stats, and the games and tools you pinned |
-| **Consoles** | One entry per system that has games in it |
-| **Collections** | Your [collections](#collections) |
-| **Tools** | The built-in tools, Settings included |
+| [**Home**](#home) | Your last game, play stats, and the games and tools you pinned |
+| [**Consoles**](#consoles) | One entry per system that has games in it |
+| [**Collections**](#collections) | Your own lists of games |
+| [**Tools**](#tools) | The built-in tools, Settings included |
 
 - **Switch tabs** with `L1` / `R1`, or tap a tab. `Left` / `Right` switch
   tabs too.
@@ -232,32 +233,131 @@ tools in a row of squares underneath. Swipe the carousel to scroll it.
 - You can pin up to **12** games. At the limit the app says
   "Pins are full (12). Unpin one first."
 
-## Consoles, Collections and Tools
+## Consoles
 
-These three tabs list their entries in the style chosen in
-[Layouts](layouts.md). By default Consoles and Collections are a carousel,
-and Tools is a grid.
-
-![Consoles tab in Carousel, with Dreamcast (8 games) in the middle](../assets/screenshots/mobile/tab-consoles.webp)
-
-- **Consoles** show their logo and how many games they hold.
-- **Collections** show their name and game count.
-
-![Collections tab in Carousel, with Pokemon World (9 games) in the middle](../assets/screenshots/mobile/tab-collections.webp)
-
-- **Tools** show an icon for each tool: **RetroAchievements**,
-  **Game Tracker**, **Artwork**, **Cheat Database**, **Device Sync** and
-  **Settings**, plus any Android apps you choose to show there (see
-  [Launcher Mode & Android Games](launcher.md)).
-
-![Tools tab in Grid: RetroAchievements, Game Tracker, Artwork, Cheat Database, Device Sync and Settings](../assets/screenshots/mobile/tab-tools.webp)
+One entry per system that has games in it, each with its logo and how many
+games it holds. The tab is drawn in its style from
+[Layouts](layouts.md#consoles): **List**, **Grid** or **Carousel** (the
+default).
 
 | Button | What it does |
 | --- | --- |
-| `MENU` **Options** | **Rename** / **Delete** on a collection, **Pin** / **Unpin** on a tool |
+| `A` **Open** | Open the console's [game list](#game-lists) |
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` **Search** | [Search](#search) your games |
-| `A` **Open** | Open the console, collection or tool |
+
+Collections and Tools take the same buttons, and `MENU` adds their options.
+
+??? info "More detail"
+    In the List and Carousel styles the selected console's controller shows
+    too, unless you set **Consoles background** to **Background** or **None**
+    in [Layouts](layouts.md#consoles-background).
+
+### List { #consoles-list }
+
+A plain list, with the selected console's controller beside it.
+
+![Consoles tab in List style, Dreamcast selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
+
+`Up` on the first row wraps to the last, and `Down` on the last row wraps to
+the first.
+
+??? info "More detail"
+    - Only a fresh press wraps: holding the button stops at the end.
+    - The scroll arrows sit at the bottom, above the button hints.
+    - Collections and Tools lists work the same way.
+
+### Grid { #consoles-grid }
+
+Rows of tiles that slide sideways as you move, each console's logo with its
+game count.
+
+![Consoles tab in Grid style, Final Burn Neo selected](../assets/screenshots/mobile/consoles-grid.webp)
+
+??? info "More detail: rows and columns"
+    - Two rows on most phones, three on a tall phone held upright (such as a
+      Galaxy Z Flip), and three or four on a large screen.
+    - On a phone held upright the Consoles tab shows two consoles across,
+      each half the screen wide. Once you move past the second, the selected
+      console stays in the middle with half of each neighbour showing on
+      either side, as on the handheld.
+    - A tall phone's Grid starts with two or three columns across, and once
+      it scrolls the selected column stays in the middle the same way.
+
+### Carousel { #consoles-carousel }
+
+A single row with the selected console's logo large in the middle, over its
+controller, and its neighbours to the sides.
+
+### Orientation
+
+A Carousel, and a game list's Carousel or [Backdrop](#games-backdrop), can
+also run **down** the screen instead of across: set its **orientation** row
+in [Layouts](layouts.md) to **Vertical**.
+
+- `Up` / `Down` move through the items, wrapping as a [List](#consoles-list) does.
+- `Left` / `Right` switch tabs on a tab, and do nothing in a game list.
+
+<div class="grid" markdown>
+
+<figure markdown>
+
+![Consoles tab in horizontal Carousel, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
+
+<figcaption>Consoles, Horizontal</figcaption>
+</figure>
+
+<figure markdown>
+
+![Consoles tab in vertical Carousel, Dreamcast between Final Burn Neo and Famicom Disk System](../assets/screenshots/mobile/consoles-carousel-vertical.webp)
+
+<figcaption>Consoles, Vertical</figcaption>
+</figure>
+
+</div>
+
+## Collections
+
+Your own lists of games, each with its name and game count. The tab appears
+once you have a collection, and `A` **Open** opens its
+[game list](#game-lists). By default it is a Carousel; pick its style in
+[Layouts](layouts.md#collections). The styles work as on
+[Consoles](#consoles).
+
+![Collections tab in Carousel, with Pokemon World (9 games) in the middle](../assets/screenshots/mobile/tab-collections.webp)
+
+To build one from a game list:
+
+1. Press `MENU` on a game.
+2. Choose **Add to Collection**.
+3. Pick an existing collection, or **New Collection…** to make one and name
+   it.
+
+![Advance Wars' menu in the Game Boy Advance list, with Add to Collection selected](../assets/screenshots/mobile/add-to-collection.webp)
+
+Press `MENU` on a collection, or long-press it, to **Rename** or **Delete**
+it. Delete asks first, and removes only the list: the games stay in your
+library.
+
+??? info "More detail"
+    - Collections are saved in the `Collections/` folder in your home folder.
+    - In the Carousel each collection is only as wide as its name, and the
+      space between neighbours stays the same, so short and long names sit
+      evenly along the row.
+
+## Tools
+
+The built-in tools, each with its icon: **RetroAchievements**,
+**Game Tracker**, **Artwork**, **Cheat Database**, **Device Sync** and
+**Settings**, plus any Android apps you choose to show there (see
+[Launcher Mode & Android Games](launcher.md)). By default it is a Grid; pick
+its style in [Layouts](layouts.md#tools). The styles work as on
+[Consoles](#consoles).
+
+![Tools tab in Grid: RetroAchievements, Game Tracker, Artwork, Cheat Database, Device Sync and Settings](../assets/screenshots/mobile/tab-tools.webp)
+
+`A` **Open** opens the tool. `MENU` on a tool, or a long press, offers **Pin**
+or **Unpin**, which puts it on [Home](#pinning-games-and-tools).
 
 ![The RetroAchievements tool's menu with Unpin, over the Tools tab](../assets/screenshots/mobile/tool-menu.webp)
 
@@ -267,16 +367,16 @@ The tools have their own pages: [RetroAchievements](retroachievements.md),
 [Settings](settings.md).
 
 ??? info "More detail"
-    In the Carousel style the selected console's controller shows too. In the
-    List style it does as well, unless you set **Consoles controller** to
-    **Background** or **None** in [Layouts](layouts.md#consoles-controller).
+    In the Carousel each tool is only as wide as its icon, and the space
+    between neighbours stays the same.
 
 ## Game lists
 
 Opening a console or a collection shows its games. The page title names the
-console or collection, e.g. **Sega Genesis**.
-
-![The Game Boy Advance list in the default Carousel style, with Advance Wars 2 - Black Hole Rising selected: 0 of 72, Next: Lucky Star](../assets/screenshots/mobile/game-list.webp)
+console or collection, e.g. **Sega Genesis**. The list is drawn in the game
+lists' style from [Layouts](layouts.md#game-lists): **List**, **Grid**,
+**Carousel** (the default) or **Backdrop**. It is the same for every game
+list.
 
 The selected game shows when you last played it and your total play time
 ("Today - 11m 0s"), plus your achievement progress where it has any. Game
@@ -296,12 +396,75 @@ A long press on a game opens the context menu too. To start a game with an
 auto-save from the beginning, choose **Play from start** in its menu.
 
 ??? info "More detail"
-    - For games with achievements, the info line adds your progress and the
-      next achievement to go for.
-    - In Carousel the line sits inside the selected card, with the name below
-      it. In List it shows in the hint bar's row, so only while
-      [Button hints](layouts.md#page-title-and-button-hints) are hidden or
-      with touch only.
+    For games with achievements, the info line adds your progress and the
+    next achievement to go for.
+
+### List { #games-list }
+
+The games as rows, with the selected game's picture filling the background
+or in a box (see [List art](layouts.md#list-art)).
+
+![Game Boy Advance list in List style, Astro Boy - Omega Factor selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
+
+`Up` and `Down` wrap at the ends, as on a [tab](#consoles-list).
+
+??? info "More detail"
+    The selected game's last-played time, achievements and next achievement
+    show only where the hints would be: with
+    [Button hints](layouts.md#page-title-and-button-hints) hidden, or with
+    touch alone. While the hint bar shows, they are left out.
+
+### Grid { #games-grid }
+
+Rows of tiles with each game's screenshot. The selected tile adds its name,
+last-played time and achievement count.
+
+![Game Boy Advance list in Grid style, Astro Boy - Omega Factor selected](../assets/screenshots/mobile/game-list-grid.webp)
+
+### Carousel { #games-carousel }
+
+The default. The selected game is large in the middle, its name below its
+picture, and its play time, achievement count and next achievement at the
+bottom of the picture.
+
+![Game Boy Advance list in Carousel style, Advance Wars 2 - Black Hole Rising in the middle](../assets/screenshots/mobile/game-list-carousel.webp)
+
+??? info "More detail"
+    A game's stats sit over a dark fade. The side games get smaller the
+    further they are from the middle.
+
+### Backdrop { #games-backdrop }
+
+The selected game's box art stands over its dimmed screenshot, with its
+neighbours' boxes to the sides. Its caption gives the name, then the play
+time and achievement count, then the next achievement on its own line.
+
+![Game Boy Advance list in Backdrop style, Advance Wars 2 - Black Hole Rising's box over its screenshot](../assets/screenshots/mobile/game-list-backdrop.webp)
+
+### Vertical game lists { #game-lists-alignment }
+
+A Carousel or Backdrop game list can run down the screen (see
+[Orientation](#orientation)), with the same caption lines. The stack sits on
+the left and the details on the right; set **Game lists alignment** in
+[Layouts](layouts.md#game-lists) to **Right** to swap the sides.
+
+<div class="grid" markdown>
+
+<figure markdown>
+
+![Vertical Backdrop aligned left: Advance Wars 2's box on the left, its details on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-left.webp)
+
+<figcaption>Backdrop, Vertical, Left</figcaption>
+</figure>
+
+<figure markdown>
+
+![Vertical Backdrop aligned right: Advance Wars 2's details on the left, its box on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-right.webp)
+
+<figcaption>Backdrop, Vertical, Right</figcaption>
+</figure>
+
+</div>
 
 ### Title icons
 
@@ -465,24 +628,3 @@ The search looks in each game's name, its file name and its console tag.
       word starts a word, then the rest. Each group is A to Z.
     - Unassigned games, games without an emulator and Android games are not
       searched.
-
-## Collections
-
-Build your own game collections from a game list:
-
-1. Press `MENU` on a game.
-2. Choose **Add to Collection**.
-3. Pick an existing collection, or **New Collection…** to make one and name
-   it.
-
-![Advance Wars' menu in the Game Boy Advance list, with Add to Collection selected](../assets/screenshots/mobile/add-to-collection.webp)
-
-Your collections live on the **Collections** tab, each with its game count.
-The tab appears once you have a collection.
-
-Press `MENU` on a collection, or long-press it, to **Rename** or **Delete**
-it. Delete asks first, and removes only the list: the games stay in your
-library.
-
-??? info "More detail"
-    Collections are saved in the `Collections/` folder in your home folder.

@@ -6,6 +6,7 @@ the two screens.
 | | melonDS DS |
 | --- | --- |
 | Folder | `Roms/Nintendo DS (NDS)/` |
+| Saves | `Saves/NDS/`. Saves from other DS emulators carry over (see [below](#saves-from-other-ds-emulators)). |
 | BIOS | Not needed: free BIOS and firmware are built in. Real ones in `Bios/NDS/` are used when present. |
 | [File types](index.md) | `nds` (also inside a zip or 7z) |
 
@@ -224,6 +225,12 @@ by default. Some games slow down at 4× or higher.
     - If the GPU renderer can't start, the game runs in software and the app
       shows **GPU renderer unavailable — using software** once. The next
       launch tries the GPU again.
+
+## Cheats and achievements
+
+- [Cheats](../cheats.md): the cheat download has codes for Nintendo DS
+  games, or add your own `.cht` files.
+- [RetroAchievements](../retroachievements.md) works for Nintendo DS games.
 
 ## Saves from other DS emulators
 

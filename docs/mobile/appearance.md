@@ -9,7 +9,7 @@ pad, the text size and the colours. The menu styles have their own category,
 - With touch alone, a tap on **Accent** or **Secondary accent** opens a
   dropdown of the colours (see [Settings](settings.md)).
 
-![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp)
+![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
 
 | Setting | What it does | Values | Default |
 | --- | --- | --- | --- |
@@ -25,6 +25,23 @@ The colours of the on-screen pad in portrait, in the menus and in games.
 
 - **Charcoal** (default): the dark pad.
 - **Retro**: a light grey body with magenta face buttons.
+
+<div class="nx-phones" markdown>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Settings → Appearance with Pad theme set to Charcoal: the dark pad below](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Charcoal</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Settings → Appearance with Pad theme set to Retro: a light grey pad with magenta face buttons](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
+![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Retro</p>
+</div>
+</div>
 
 The landscape button clusters always stay Charcoal. See
 [Controls](controls.md) for the pad itself.

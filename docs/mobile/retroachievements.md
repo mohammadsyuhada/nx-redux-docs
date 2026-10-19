@@ -6,7 +6,7 @@ sign in, browse your achievements and change its settings there. Once you are
 signed in, game lists also show a game's achievements in a
 [panel](#on-game-lists).
 
-![Tools → RetroAchievements in two panes: kotaksempit with 23 points, Nothing waiting and the last sync time, then Achievements, Sync now and Settings on the left, and the cached games on the right](../assets/screenshots/mobile/ra-home.webp)
+![Tools → RetroAchievements in two panes: kotaksempit with 23 points, Nothing waiting and the last sync time, then Achievements, Sync now and Settings on the left, and the cached games on the right](../assets/screenshots/mobile/ra-home.webp){ .nx-wide }
 
 The home screen shows your username and points, with three rows:
 **Achievements**, **Sync now** and **Settings**.
@@ -40,7 +40,7 @@ First-run setup asks you to sign in too, and can start
 [Download all game data](#downloading-all-game-data) for you. See
 [Getting Started](getting-started.md).
 
-![RetroAchievements → Settings, signed out: Sign in at the top, Status Not signed in, and Enable achievements and Download all game data dimmed](../assets/screenshots/mobile/ra-settings.webp)
+![RetroAchievements → Settings, signed out: Sign in at the top, Status Not signed in, and Enable achievements and Download all game data dimmed](../assets/screenshots/mobile/ra-settings.webp){ .nx-wide }
 
 The settings page also has:
 
@@ -245,7 +245,7 @@ Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
 or **Locked**, with its points. `Y` (on touch, the filter icon) shows only
 locked ones, or all again. `A` opens an achievement's details.
 
-![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp)
+![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp){ .nx-wide }
 
 ![An achievement's details beside 1942's achievements: Midway, Clear Stages 32-29., 5 points, Locked, 20.61% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp)
 

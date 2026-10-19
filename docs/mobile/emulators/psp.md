@@ -5,8 +5,12 @@ PSP games run on the bundled **PPSSPP** core.
 | | PPSSPP |
 | --- | --- |
 | Folder | `Roms/Sony Playstation Portable (PSP)/` |
+| Saves | `Saves/PSP/` (the PSP's own `SAVEDATA` folder) |
 | BIOS | Not needed: PPSSPP's own files are bundled |
 | [File types](index.md) | `iso` `cso` `chd` `pbp` `elf` `prx` |
+
+- **Graphics API** can switch a game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
 
 ## Controls
 
@@ -34,17 +38,14 @@ The face buttons map to the PSP buttons **by position**:
 - In the app's menus, `×` confirms and `○` goes back.
 - `MENU`, or `SELECT` + `START`, opens the [in-game menu](../in-game-menu.md).
 
-## Settings
+## Core options
 
-- PSP renders with OpenGL ES, or with Vulkan; see
-  [Graphics API](index.md#graphics-api).
-- Some options, such as the CPU core and the PSP model, only take effect when
-  a game starts. They are in [Emulator Settings](../emulator-settings.md),
-  not in the in-game **Core Options**.
-- In-game saves go in `Saves/PSP/`, with your other
-  [saves inside the app](../library.md#saves).
+Some options, such as the CPU core and the PSP model, only take effect when
+a game starts. They are in [Emulator Settings](../emulator-settings.md), not
+in the in-game **Core Options**. The software renderer is not offered.
 
-??? info "More detail"
-    - The software renderer is not offered.
-    - In-game saves are in the PSP's own `SAVEDATA` folder, under
-      `Saves/PSP/`.
+## Cheats and achievements
+
+- [Cheats](../cheats.md): the cheat download has codes for PSP games, or add
+  your own `.cht` files.
+- [RetroAchievements](../retroachievements.md) works for PSP games.

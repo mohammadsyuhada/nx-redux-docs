@@ -158,7 +158,7 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | **Layout (portrait)** and the other screen rows | Nintendo DS, Nintendo 3DS | See [Nintendo DS](emulators/nintendo-ds.md) and [Nintendo 3DS](emulators/nintendo-3ds.md) | |
 | **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
 | **Portrait Pad** | Nintendo DS, Nintendo 3DS | Shown, Hidden | Shown |
-| **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) | Auto |
+| **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii) | Auto |
 
 - **Controller Type** is the Sega pad the game sees.
 - **Controller Layout** names the letters printed on your controller. See

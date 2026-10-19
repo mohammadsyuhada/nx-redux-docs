@@ -7,10 +7,10 @@ Systems with their own controls or settings have a page each:
 [Arcade (FBNeo)](arcade.md), [Nintendo 64](nintendo-64.md),
 [Sega Dreamcast](dreamcast.md), [PlayStation](playstation.md),
 [PlayStation Portable](psp.md), [Nintendo DS](nintendo-ds.md),
-[Nintendo 3DS](nintendo-3ds.md) and
-[Nintendo Wii & GameCube](wii-gamecube.md). The rest, such as the Sega
-`Mode` button or the Neo Geo Pocket's `Option`, are on
-[Other Systems](other-systems.md).
+[Nintendo 3DS](nintendo-3ds.md), [Nintendo Wii & GameCube](wii-gamecube.md),
+the [Sega consoles](sega.md) and the
+[Game Boy & Game Boy Advance](game-boy.md). The rest, such as the Neo Geo
+Pocket's `Option`, are on [Other Systems](other-systems.md).
 
 | Put this | Here |
 | --- | --- |

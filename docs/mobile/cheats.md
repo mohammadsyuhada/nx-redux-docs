@@ -11,7 +11,7 @@ Database is part of the app.
 
 Open **Tools → Cheat Database** and choose **Download (about 37 MB)**.
 
-![Tools → Cheat Database, not installed: about 37 MB download, cheats for 25 systems, and Download (about 37 MB)](../assets/screenshots/mobile/cheat-database.webp)
+![Tools → Cheat Database, not installed: about 37 MB download, cheats for 25 systems, and Download (about 37 MB)](../assets/screenshots/mobile/cheat-database.webp){ .nx-wide }
 
 - You need about 400 MB of free space. With less, it stops with **Not enough
   space (needs about 400 MB free)**.

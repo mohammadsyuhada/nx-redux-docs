@@ -6,12 +6,14 @@ screens.
 | | Azahar |
 | --- | --- |
 | Folder | `Roms/Nintendo 3DS (3DS)/` |
+| Saves | `Saves/3DS/Azahar/` (the 3DS's own storage: its SD card and system memory) |
 | BIOS | Not needed |
 | [File types](index.md) | Decrypted `3ds` `cci` `cxi` `3dsx`, and their compressed versions `zcci` `zcxi` `z3dsx` |
 
 - **Encrypted games don't load.** Decrypt them first.
 - `.cia` install files are not supported.
-- 3DS games are not on RetroAchievements in the app, and have no cheats.
+- **Graphics API** can switch a game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
 
 ## Controls
 
@@ -171,7 +173,7 @@ Games that use the 3DS's gyroscope and tilt read your phone's: turn or tip
 the phone the way you would turn or tip a 3DS. In Mario Kart 7's first-person
 view, for example, you steer by turning the phone.
 
-![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp)
+![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp){ .nx-wide }
 
 Motion is always on, like on a 3DS. Hold the phone the way the game expects,
 as you would a 3DS.
@@ -254,3 +256,9 @@ Settings**, and the long-press saves it for the console.
     - With a controller connected the see-through buttons hide too, as in
       landscape.
     - Landscape is not affected.
+
+## Cheats and achievements
+
+- Cheats: not available. Azahar's libretro core doesn't support them, so the
+  in-game menu has no **Cheats** page for 3DS games.
+- RetroAchievements: not available for 3DS games in the app.

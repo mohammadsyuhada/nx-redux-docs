@@ -38,7 +38,7 @@ In landscape the pad splits into two clusters over the game:
 - The shoulders, the d-pad and the face buttons sit at the bottom.
 - Both clusters keep clear of the camera cutout, on whichever side it is.
 
-![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp)
+![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp){ .nx-wide }
 
 **Pad Opacity (landscape)** sets how opaque the clusters are (40% by
 default). It is in the in-game menu under **Options →
@@ -62,9 +62,9 @@ doesn't have:
 | Nintendo 64 | `A`, `B`, a yellow C-button diamond, and `Z` on `L2` |
 | Dreamcast | `A` `B` `X` `Y` in the Dreamcast's colours |
 | GameCube | A green `A`, a red `B`, `X`, `Y`, `Z`, `L` and `R` triggers, and a C-stick |
-| Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
+| Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii) |
 
-The Sega pad follows the game's [Controller Type](emulators/other-systems.md#controller-type).
+The Sega pad follows the game's [Controller Type](emulators/sega.md#controller-type).
 On the 6-button pad, `Y` and `Z` are on the shoulder buttons, and `Mode` is
 in place of `SELECT`.
 
@@ -104,18 +104,21 @@ the portrait pad:
 
 The landscape clusters always stay Charcoal.
 
-<div class="grid" markdown>
-
+<div class="nx-phones" markdown>
+<div markdown>
 <figure class="nx-phone" markdown>
-![The portrait pad in Charcoal](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
+![Settings → Appearance with Pad theme set to Charcoal: the dark pad below](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
-
+<p class="nx-phones__caption">Charcoal</p>
+</div>
+<div markdown>
 <figure class="nx-phone" markdown>
-![The portrait pad in Retro](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
+![Settings → Appearance with Pad theme set to Retro: a light grey pad with magenta face buttons](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
-
+<p class="nx-phones__caption">Retro</p>
+</div>
 </div>
 
 ## Controller buttons
@@ -183,7 +186,7 @@ open the in-game menu. In a multiplayer game only Player 1's `SELECT` +
     mode.
 
 Each console's own mapping, such as the [Nintendo 64](emulators/nintendo-64.md#controls)
-or the Sega [Controller Type](emulators/other-systems.md#controller-type)
+or the Sega [Controller Type](emulators/sega.md#controller-type)
 (3 or 6 buttons), is on its [emulator page](emulators/index.md).
 
 ## Vibration
@@ -347,4 +350,6 @@ console's page:
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
 | [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by letter, `Z` on `L2`, the C buttons on the right stick |
 | [PlayStation](emulators/playstation.md#controls), [PSP](emulators/psp.md#controls) | `×` `○` `△` `□` by position |
-| [Other systems](emulators/other-systems.md) | Sega `Mode`, NES disk and coin buttons, Game Boy turbo, Neo Geo Pocket `Option` and more |
+| [Sega consoles](emulators/sega.md) | The Sega pad, `Mode` and **Controller Type** |
+| [Game Boy & Game Boy Advance](emulators/game-boy.md) | Turbo buttons and the link cable |
+| [Other systems](emulators/other-systems.md) | NES disk and coin buttons, Neo Geo Pocket `Option` and more |

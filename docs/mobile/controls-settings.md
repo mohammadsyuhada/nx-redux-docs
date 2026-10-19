@@ -13,7 +13,7 @@ previous one.
 | [**Pad layout**](#pad-layout) | Move and resize the pad's buttons | Default, Custom | Default |
 | [**Reset to defaults**](#reset-to-defaults) | Puts this page back to its defaults | | |
 
-![Settings, with Controls open beside the sections: Pad vibration Light, Game rumble Medium, Menu pad On, Pad layout Default, Reset to defaults](../assets/screenshots/mobile/settings-controls.webp)
+![Settings, with Controls open beside the sections: Pad vibration Light, Game rumble Medium, Menu pad On, Pad layout Default, Reset to defaults](../assets/screenshots/mobile/settings-controls.webp){ .nx-wide }
 
 ## Pad vibration
 
@@ -61,7 +61,7 @@ you have changed a layout, and `A` opens its page:
 | **Landscape overlay** | Opens the editor for the button clusters over a landscape game |
 | **Reset console** | Puts the chosen console's layouts on this screen back |
 
-![Controls → Pad layout beside the Settings sections: Console Shared, Portrait band Default, Landscape overlay Default and Reset console](../assets/screenshots/mobile/settings-controls-pad-layout.webp)
+![Controls → Pad layout beside the Settings sections: Console Shared, Portrait band Default, Landscape overlay Default and Reset console](../assets/screenshots/mobile/settings-controls-pad-layout.webp){ .nx-wide }
 
 **Shared** is the layout every console uses. A console you give a layout of
 its own uses that instead.

@@ -5,8 +5,12 @@ Nintendo 64 games run on the bundled **Mupen64Plus-Next** core.
 | | Mupen64Plus-Next |
 | --- | --- |
 | Folder | `Roms/Nintendo 64 (N64)/` |
+| Saves | `Saves/N64/` |
 | BIOS | Not needed |
 | [File types](index.md) | `n64` `z64` `v64` (also inside a zip or 7z) |
+
+- **Graphics API** can switch a game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
 
 ## Controls
 
@@ -55,19 +59,28 @@ saves) instead. To turn it on:
 Only games that support the Rumble Pak rumble, such as Super Smash Bros.
 Mario Kart 64 doesn't. See [Vibration](../controls.md#game-rumble).
 
-Up to four players can play, each on their own controller; see
-[Local Multiplayer](../multiplayer.md).
-
 ??? info "More detail"
     - The Rumble Pak takes the Controller Pak's place.
     - Each player has their own setting, from **Player 1 Pak** to **Player 4
       Pak**.
 
-## Settings
+## Video
 
 - Video uses the **GLideN64** plugin. With **Graphics API** set to
   **Vulkan**, it switches to the paraLLEl plugins: more accurate, and
-  heavier. See [Graphics API](index.md#graphics-api).
+  heavier.
 - Many video options, such as the resolution, only take effect when a game
   starts. They are in [Emulator Settings](../emulator-settings.md), not in
   the in-game **Core Options**.
+
+## Multiplayer
+
+Up to four players can play, each on their own controller; see
+[Local Multiplayer](../multiplayer.md). [Netplay](../netplay.md) isn't
+available for the Nintendo 64 in the app yet (the handheld has it).
+
+## Cheats and achievements
+
+- [Cheats](../cheats.md): the cheat download has codes for Nintendo 64
+  games, or add your own `.cht` files.
+- [RetroAchievements](../retroachievements.md) works for Nintendo 64 games.

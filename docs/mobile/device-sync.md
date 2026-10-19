@@ -37,7 +37,7 @@ one wins.
    both devices, and press `A` **Start**. The devices find each other and
    sync.
 
-![Tools → Device Sync: Sync ROMs Off, then Sync via cable and Sync via Wi-Fi](../assets/screenshots/mobile/device-sync.webp)
+![Tools → Device Sync: Sync ROMs Off, then Sync via cable and Sync via Wi-Fi](../assets/screenshots/mobile/device-sync.webp){ .nx-wide }
 
 While it runs, the page shows each step and file. When it ends, it shows how
 many files each side got, such as **Sync complete: 12 files received, 5

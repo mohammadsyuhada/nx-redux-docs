@@ -42,7 +42,7 @@ phone.
 - **Battery saves** work in either emulator: PicoDrive and Genesis Plus GX
   share them.
 
-See [Emulators](../../mobile/emulators/other-systems.md#sega-genesis-sega-cd-and-32x).
+See [Emulators](../../mobile/emulators/sega.md).
 
 ## Do I need to download emulators or cores?
 

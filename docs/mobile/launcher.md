@@ -4,7 +4,7 @@ NX Redux can be your phone's home screen, show your Android apps in
 Tools, and list your Android games as a console. All three are in **Tools →
 Settings → Launcher**.
 
-![Settings, with Launcher open beside the sections: Use as home screen, Android apps and Android games](../assets/screenshots/mobile/settings-launcher.webp)
+![Settings, with Launcher open beside the sections: Use as home screen, Android apps and Android games](../assets/screenshots/mobile/settings-launcher.webp){ .nx-wide }
 
 | Row | Values | What it does |
 | --- | --- | --- |

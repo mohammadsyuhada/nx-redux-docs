@@ -46,7 +46,7 @@ Each system has as many players as the console had controller ports.
 3. A notice names the player and the controller, such as
    **Player 2: Xbox Wireless Controller**.
 
-![Super Mario Kart with two controllers joined: the notices Player 1: GameSir-Pocket 1 and Player 2: 8BitDo Ultimate 2 Wireless](../assets/screenshots/mobile/multiplayer-join.webp)
+![Super Mario Kart with two controllers joined: the notices Player 1: GameSir-Pocket 1 and Player 2: 8BitDo Ultimate 2 Wireless](../assets/screenshots/mobile/multiplayer-join.webp){ .nx-wide }
 
 Close the [in-game menu](in-game-menu.md) first: a press while it is open
 never joins. Players are kept until you quit the game.
@@ -128,7 +128,7 @@ everyone.
 | --- | --- |
 | [Sega Dreamcast](emulators/dreamcast.md#multiplayer) | Players 2 to 4 have the Vibration Pack but no memory card. Games save to Player 1's card. |
 | [PlayStation](emulators/playstation.md#controls) | Player 2 gets the same DualShock pad as Player 1. |
-| [Sega Genesis, Sega CD, 32X](emulators/other-systems.md#controller-type) | **Controller Type** applies to Player 2 too. |
+| [Sega Genesis, Sega CD, 32X](emulators/sega.md#controller-type) | **Controller Type** applies to Player 2 too. |
 | [Nintendo 64](emulators/nintendo-64.md#rumble) | Each player's Rumble Pak is set in Core Options, from **Player 1 Pak** to **Player 4 Pak**. |
 | [Nintendo Wii, GameCube](emulators/wii-gamecube.md#multiplayer) | Every player gets Player 1's controller. On Wii, each player shakes with `R2`, and only Player 1 can point or use the phone's motion. |
 

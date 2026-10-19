@@ -3,7 +3,7 @@
 Open **Tools → Settings** for the app's settings. They are split into eight
 sections.
 
-![Settings: the eight sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp)
+![Settings: the eight sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp){ .nx-wide }
 
 | Section | What it holds |
 | --- | --- |
