@@ -241,6 +241,12 @@ folder.
   or another folder. A newer file replaces the app's copy, which is kept as a
   `.bak`.
 
+!!! warning "Imported save states may not load"
+    A save state loads only in the emulator that made it, with the same BIOS
+    setting. A state from RetroArch's mGBA, for example, needs mGBA, and
+    **Use BIOS File if Found** set the way RetroArch had it. If a state won't
+    load, use the battery save: it works in any emulator for that console.
+
 !!! warning "Export before uninstalling"
     Saves are stored inside the app, so export them before you uninstall the
     app or clear its data.
