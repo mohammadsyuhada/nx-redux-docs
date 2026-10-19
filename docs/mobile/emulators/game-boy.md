@@ -23,6 +23,11 @@ Saves go in `Saves/<tag>/`, such as `Saves/GBA/`.
 
 ## Controls
 
+<figure class="nx-phone" markdown>
+![Castlevania: Aria of Sorrow on the Fold's cover screen, with the Game Boy Advance pad: L, R, A, B and the turbo buttons TA and TB](../../assets/screenshots/mobile/pad-gba.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
 A controller's face buttons work **by the printed letter**: `A` is the Game
 Boy's `A`. On top of the Game Boy's own buttons:
 
