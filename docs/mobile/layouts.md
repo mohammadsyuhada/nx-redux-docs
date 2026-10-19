@@ -16,12 +16,12 @@ on a group to open its page, and `B` to come back.
 | Row | Shows |
 | --- | --- |
 | [**Home**](#home) | Home's layout, or **Hidden** |
-| [**Consoles**](#consoles-collections-and-tools) | The Consoles tab's layout, or **Hidden** |
-| [**Collections**](#consoles-collections-and-tools) | The Collections tab's layout, or **Hidden** |
-| [**Tools**](#consoles-collections-and-tools) | The Tools tab's layout, or **Hidden** |
+| [**Consoles**](#consoles) | The Consoles tab's layout, or **Hidden** |
+| [**Collections**](#collections) | The Collections tab's layout, or **Hidden** |
+| [**Tools**](#tools) | The Tools tab's layout, or **Hidden** |
 | [**Game lists**](#game-lists) | The game lists' layout |
 | [**Title and hints**](#title-and-hints) | **Show**, **Title only**, **Hints only** or **Hide** |
-| [**Game Switcher**](#game-switcher-layout) | **Full screen** or **List** |
+| [**Game Switcher**](#game-switcher) | **Full screen** or **List** |
 | [**Extra info**](#extra-info) | Show, Hide (default Show) |
 | [**Reset to defaults**](#reset-to-defaults) | |
 
@@ -30,8 +30,6 @@ on a group to open its page, and `B` to come back.
 A group's page has its rows at the top and a picture of how they look below
 (beside the rows on a wide landscape screen, such as a phone turned
 sideways). The picture changes as you change a row.
-
-![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
 
 - `Right` and `A` step the highlighted row to its next value, `Left` to the
   previous one.
@@ -44,7 +42,9 @@ sideways). The picture changes as you change a row.
     - When a change adds or removes rows, the highlight stays on the row you
       changed.
 
-#### Home
+## Home
+
+![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -54,25 +54,64 @@ sideways). The picture changes as you change a row.
 | [**Not started shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
 | [**Home stats**](#home-stats) | Show, Hide | Show | When Home tab is Show |
 
-#### Consoles, Collections and Tools
+### Home stats
+
+**Home stats** set to **Hide** removes Home's stats strip (**This month**,
+**Most played**) in every Home layout. The cards keep their play time and
+achievements; [Extra info](#extra-info) hides those.
+
+??? info "More detail"
+    The strip's space goes to the top section: the Continue card and the tool
+    squares grow, and a column of squares gains one more only when a whole
+    square fits. The group's picture shows Home without the strip.
+
+## Consoles
 
 ![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
-
-![Layouts → Collections: Collections tab Show, Collections layout Carousel, Collections orientation Horizontal, with a picture of the collections carousel](../assets/screenshots/mobile/settings-layouts-collections.webp){ .nx-wide }
-
-![Layouts → Tools: Tools tab Show, Tools layout Grid, with a picture of the Tools grid](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
-
-Each of the three tabs has its own page with the same rows, named after the
-tab. **Consoles controller** is on the Consoles page only.
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Consoles layout** | List, Grid, Carousel | Carousel (Tools: Grid) | When the tab is Show |
-| [**Consoles orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When the tab is Show and its layout is Carousel |
+| **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
+| [**Consoles orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |
 | [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
 
-#### Game lists
+### Consoles controller
+
+What shows behind the Consoles tab in the List style. The row shows only
+while **Consoles layout** is **List**.
+
+- **Controller** (default): each console's controller beside the list.
+- **Background**: no controller. The selected console's own background
+  picture fills the screen, as a game list's screenshot does.
+- **None**: no controller and no background: a plain list on black.
+
+??? info "More detail"
+    - The Background picture is `Roms/<console>/.media/bg.png`. A console
+      without one shows plain black.
+    - The Carousel style always shows each console's controller.
+
+## Collections
+
+![Layouts → Collections: Collections tab Show, Collections layout Carousel, Collections orientation Horizontal, with a picture of the collections carousel](../assets/screenshots/mobile/settings-layouts-collections.webp){ .nx-wide }
+
+| Row | Values | Default | Shows |
+| --- | --- | --- | --- |
+| [**Collections tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Collections layout** | List, Grid, Carousel | Carousel | When Collections tab is Show |
+| [**Collections orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Collections tab is Show and Collections layout is Carousel |
+
+## Tools
+
+![Layouts → Tools: Tools tab Show, Tools layout Grid, with a picture of the Tools grid](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
+
+| Row | Values | Default | Shows |
+| --- | --- | --- | --- |
+| [**Tools tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
+| **Tools layout** | List, Grid, Carousel | Grid | When Tools tab is Show |
+| [**Tools orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Tools tab is Show and Tools layout is Carousel |
+
+## Game lists
 
 ![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel Show, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
 
@@ -86,7 +125,56 @@ tab. **Consoles controller** is on the Consoles page only.
 | [**Layout options**](#layout-options-and-achievements-panel) | Show, Hide | Show | Always |
 | [**Achievements panel**](#layout-options-and-achievements-panel) | Show, Hide | Show | Always |
 
-#### Title and hints
+### List art
+
+The picture a game list shows in the List style:
+
+- **Screenshot** (default): the game's screenshot fills the background.
+- **Mix**, **3D box art**, **2D box art** or **Wheel**: that picture, whole,
+  in a box on the right.
+- **None**: no picture and no background.
+
+A game without the picture you picked shows its screenshot full-screen
+instead. Mix, 2D box art and Wheel come from [Artwork](artwork.md).
+
+??? info "More detail"
+    - With a box, the game names always stop short of it.
+    - **None** applies to every List-style list below the tabs, game lists
+      and collections alike.
+
+### Backdrop art
+
+The box in a Backdrop row: **3D box art** (default), **2D box art** or
+**Wheel**. The background stays the screenshot.
+
+??? info "More detail"
+    - A wheel keeps its own shape instead of being cut into a case.
+    - A game without the picture you picked shows its 3D box art, else a
+      placeholder box.
+
+### Layout options and achievements panel
+
+On a phone with a touchscreen, a game list's title has
+[icons](main-menu.md#title-icons) at its right: **Recent**, **Search**,
+**Layout** and a trophy for the
+[achievements panel](main-menu.md#achievements-panel). These two rows hide
+the last two.
+
+- **Layout options** set to **Hide** removes the **Layout** icon. That icon
+  opens a dropdown of every game list layout, and picking one sets the
+  [Game lists](#game-lists) rows for every game list. Hidden, change the
+  layout here instead.
+- **Achievements panel** set to **Hide** removes the trophy icon and the `X`
+  **Achievements** hint. `X` still opens the panel, and the game's `MENU`
+  menu gains an **Achievements** item.
+
+??? info "More detail"
+    - The Layout dropdown lists List, Grid, Carousel, Carousel vertical left
+      and right, Backdrop, and Backdrop vertical left and right.
+    - The trophy icon, the hint and the **Achievements** item show only while
+      you are signed in to [RetroAchievements](retroachievements.md).
+
+## Title and hints
 
 ![Layouts → Title and hints: Page title, Button hints, Recent hint, Search hint and Netplay hint Show, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
 
@@ -98,13 +186,87 @@ tab. **Consoles controller** is on the Consoles page only.
 | [**Search hint**](#single-hints) | Show, Hide | Show | When Button hints is Show |
 | [**Netplay hint**](#single-hints) | Show, Hide | Show | When Button hints is Show, on a phone with netplay |
 
-#### Game Switcher
+### Page title and button hints
+
+- **Page title** set to **Hide** removes the main menu's tab row and a game
+  list's title. `L1` / `R1` still switch tabs.
+- **Button hints** set to **Hide** removes the hint bar along the bottom of
+  the main menu and the game lists.
+
+Other screens, such as Settings and the in-game menu, keep both. The
+**Title and hints** row on the Layouts page sums up the two: **Show**,
+**Title only**, **Hints only** or **Hide**.
+
+!!! note
+    These only take effect while a controller is connected or the portrait
+    pad shows. With touch alone there is no hint bar at all, and the main
+    menu keeps its tab row (a tap on a tab is the only touch way to switch
+    tabs), while a game list's title still hides.
+
+??? info "More detail: where the space goes"
+    - With the title hidden, its space goes to the page. A List shows more
+      rows. Home moves its stats strip up into the tab row's place, and a
+      Grid Home's columns of tool squares gain one more. Grid, Carousel and
+      Backdrop keep their size and centre in the full height. A game list's
+      icons stay at the top right.
+    - With the hints hidden, their space stays empty, Home included. In a
+      List game list and in the
+      [Game Switcher](game-switcher.md#play-time-and-achievements), the
+      selected game's play time and achievements move down into that row.
+      **Recent** and **Search** become icons at the right of the tab row.
+
+#### Single hints
+
+**Recent hint**, **Search hint** and **Netplay hint** each hide one hint
+(`SELECT` **Recent**, `START` **Search** or `Y` **Netplay**) and leave the
+rest of the bar. The button still works, and touch gets another way in:
+
+- **Recent** and **Search** become icons at the right of the tab row, or of
+  a game list's title.
+- **Netplay** leads a game's `MENU` menu, after **Play from start**, in game
+  lists and on Home.
+
+With **Button hints** hidden, all three are handled this way.
+
+## Game Switcher
 
 ![Layouts → Game Switcher: Game Switcher layout Full screen, with a picture of the full-screen Game Switcher](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
 
 | Row | Values | Default |
 | --- | --- | --- |
 | [**Game Switcher layout**](#game-switcher-layout) | Full screen, List | Full screen |
+
+### Game Switcher layout
+
+How the [Game Switcher](game-switcher.md) draws your recent games:
+
+- **Full screen** (default): one game at a time, its picture filling the
+  screen. `LEFT` / `RIGHT` move between games.
+- **List**: the games as a List-style game list titled **Recent**, the
+  selected game's picture behind the rows. `UP` / `DOWN` move between games.
+
+## Extra info
+
+**Extra info** set to **Hide** removes the game stats from the main menu,
+the game lists and the Game Switcher, for a cleaner look. Unlike the page
+title and hints, it works in every mode: touch alone, with a controller,
+portrait or landscape.
+
+??? info "More detail: what it hides"
+    - **Home** leaves the play time and achievements off the Continue card,
+      pinned games and the [shelves](foldables.md#shelves). Its stats strip
+      follows [Home stats](#home-stats) instead.
+    - A **List** game list leaves the selected game's play time,
+      achievements and next achievement out of the hint row when the hints
+      are hidden.
+    - The selected **Grid** tile shows only the game's name.
+    - **Carousel** and **Backdrop** captions show only the name, horizontal
+      and vertical alike.
+    - The [Game Switcher](game-switcher.md#play-time-and-achievements)
+      leaves out its info line, in both layouts.
+    - A console's or collection's game count stays, and the
+      [in-game menu](in-game-menu.md), the [Game Tracker](game-tracker.md)
+      and [RetroAchievements](retroachievements.md) keep all their info.
 
 ## Showing and hiding tabs
 
@@ -139,155 +301,6 @@ underneath, where you left it.
       Consoles tab the same way. While that tab is hidden, a long press on
       **+N** or **Pick a game** also opens the hidden-tab menu, which is how
       touch reaches it when the tab row is hidden.
-
-## List art
-
-The picture a game list shows in the List style:
-
-- **Screenshot** (default): the game's screenshot fills the background.
-- **Mix**, **3D box art**, **2D box art** or **Wheel**: that picture, whole,
-  in a box on the right.
-- **None**: no picture and no background.
-
-A game without the picture you picked shows its screenshot full-screen
-instead. Mix, 2D box art and Wheel come from [Artwork](artwork.md).
-
-??? info "More detail"
-    - With a box, the game names always stop short of it.
-    - **None** applies to every List-style list below the tabs, game lists
-      and collections alike.
-
-## Backdrop art
-
-The box in a Backdrop row: **3D box art** (default), **2D box art** or
-**Wheel**. The background stays the screenshot.
-
-??? info "More detail"
-    - A wheel keeps its own shape instead of being cut into a case.
-    - A game without the picture you picked shows its 3D box art, else a
-      placeholder box.
-
-## Consoles controller
-
-What shows behind the Consoles tab in the List style. The row shows only
-while **Consoles layout** is **List**.
-
-- **Controller** (default): each console's controller beside the list.
-- **Background**: no controller. The selected console's own background
-  picture fills the screen, as a game list's screenshot does.
-- **None**: no controller and no background: a plain list on black.
-
-??? info "More detail"
-    - The Background picture is `Roms/<console>/.media/bg.png`. A console
-      without one shows plain black.
-    - The Carousel style always shows each console's controller.
-
-## Home stats
-
-**Home stats** set to **Hide** removes Home's stats strip (**This month**,
-**Most played**) in every Home layout. The cards keep their play time and
-achievements; [Extra info](#extra-info) hides those.
-
-??? info "More detail"
-    The strip's space goes to the top section: the Continue card and the tool
-    squares grow, and a column of squares gains one more only when a whole
-    square fits. The group's picture shows Home without the strip.
-
-## Layout options and achievements panel
-
-On a phone with a touchscreen, a game list's title has
-[icons](main-menu.md#title-icons) at its right: **Recent**, **Search**,
-**Layout** and a trophy for the
-[achievements panel](main-menu.md#achievements-panel). These two rows hide
-the last two.
-
-- **Layout options** set to **Hide** removes the **Layout** icon. That icon
-  opens a dropdown of every game list layout, and picking one sets the
-  [Game lists](#game-lists) rows for every game list. Hidden, change the
-  layout here instead.
-- **Achievements panel** set to **Hide** removes the trophy icon and the `X`
-  **Achievements** hint. `X` still opens the panel, and the game's `MENU`
-  menu gains an **Achievements** item.
-
-??? info "More detail"
-    - The Layout dropdown lists List, Grid, Carousel, Carousel vertical left
-      and right, Backdrop, and Backdrop vertical left and right.
-    - The trophy icon, the hint and the **Achievements** item show only while
-      you are signed in to [RetroAchievements](retroachievements.md).
-
-## Page title and button hints
-
-- **Page title** set to **Hide** removes the main menu's tab row and a game
-  list's title. `L1` / `R1` still switch tabs.
-- **Button hints** set to **Hide** removes the hint bar along the bottom of
-  the main menu and the game lists.
-
-Other screens, such as Settings and the in-game menu, keep both. The
-**Title and hints** row on the Layouts page sums up the two: **Show**,
-**Title only**, **Hints only** or **Hide**.
-
-!!! note
-    These only take effect while a controller is connected or the portrait
-    pad shows. With touch alone there is no hint bar at all, and the main
-    menu keeps its tab row (a tap on a tab is the only touch way to switch
-    tabs), while a game list's title still hides.
-
-??? info "More detail: where the space goes"
-    - With the title hidden, its space goes to the page. A List shows more
-      rows. Home moves its stats strip up into the tab row's place, and a
-      Grid Home's columns of tool squares gain one more. Grid, Carousel and
-      Backdrop keep their size and centre in the full height. A game list's
-      icons stay at the top right.
-    - With the hints hidden, their space stays empty, Home included. In a
-      List game list and in the
-      [Game Switcher](game-switcher.md#play-time-and-achievements), the
-      selected game's play time and achievements move down into that row.
-      **Recent** and **Search** become icons at the right of the tab row.
-
-### Single hints
-
-**Recent hint**, **Search hint** and **Netplay hint** each hide one hint
-(`SELECT` **Recent**, `START` **Search** or `Y` **Netplay**) and leave the
-rest of the bar. The button still works, and touch gets another way in:
-
-- **Recent** and **Search** become icons at the right of the tab row, or of
-  a game list's title.
-- **Netplay** leads a game's `MENU` menu, after **Play from start**, in game
-  lists and on Home.
-
-With **Button hints** hidden, all three are handled this way.
-
-## Game Switcher layout
-
-How the [Game Switcher](game-switcher.md) draws your recent games:
-
-- **Full screen** (default): one game at a time, its picture filling the
-  screen. `LEFT` / `RIGHT` move between games.
-- **List**: the games as a List-style game list titled **Recent**, the
-  selected game's picture behind the rows. `UP` / `DOWN` move between games.
-
-## Extra info
-
-**Extra info** set to **Hide** removes the game stats from the main menu,
-the game lists and the Game Switcher, for a cleaner look. Unlike the page
-title and hints, it works in every mode: touch alone, with a controller,
-portrait or landscape.
-
-??? info "More detail: what it hides"
-    - **Home** leaves the play time and achievements off the Continue card,
-      pinned games and the [shelves](foldables.md#shelves). Its stats strip
-      follows [Home stats](#home-stats) instead.
-    - A **List** game list leaves the selected game's play time,
-      achievements and next achievement out of the hint row when the hints
-      are hidden.
-    - The selected **Grid** tile shows only the game's name.
-    - **Carousel** and **Backdrop** captions show only the name, horizontal
-      and vertical alike.
-    - The [Game Switcher](game-switcher.md#play-time-and-achievements)
-      leaves out its info line, in both layouts.
-    - A console's or collection's game count stays, and the
-      [in-game menu](in-game-menu.md), the [Game Tracker](game-tracker.md)
-      and [RetroAchievements](retroachievements.md) keep all their info.
 
 ## Reset to defaults
 
