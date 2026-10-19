@@ -71,14 +71,16 @@ The first time you open the app, a short setup walks you through it. Use
    games on your phone. See [Choose a home folder](#choose-a-home-folder).
 5. **Your handheld.** If you also play on an NX Redux handheld, setup matches
    its save formats and offers a [Device Sync](device-sync.md).
-6. **Artwork.** Fetch box art and screenshots in the background. See
+6. **Bring your saves.** Copy battery saves and save states from a folder, a
+   zip file or RetroArch. See [Import saves](library.md#import-saves).
+7. **Artwork.** Fetch box art and screenshots in the background. See
    [Artwork](artwork.md).
-7. **RetroAchievements.** Sign in, then download the achievement data in the
+8. **RetroAchievements.** Sign in, then download the achievement data in the
    background. See [RetroAchievements](retroachievements.md).
-8. **Customise the layout?** Pick the menu's look page by page, each with a
+9. **Customise the layout?** Pick the menu's look page by page, each with a
    picture, or keep the defaults. See [Menu Layouts](layouts.md).
-9. **Accents.** Pick your **Accent** and **Secondary accent**.
-10. **Ready, player one.** Press **Press Start** to open the main menu.
+10. **Accents.** Pick your **Accent** and **Secondary accent**.
+11. **Ready, player one.** Press **Press Start** to open the main menu.
 
 Everything setup asks can be changed later in **Tools → Settings**.
 
