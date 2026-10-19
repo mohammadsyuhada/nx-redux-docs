@@ -26,13 +26,26 @@ Saves go in `Saves/<tag>/`, such as `Saves/MD/`.
 
 ## Controls
 
+<div class="nx-phones" markdown>
+<div markdown>
 <figure class="nx-phone" markdown>
 ![Sonic & Knuckles on the Fold's cover screen, with the Sega 3-button pad: A, B and C](../../assets/screenshots/mobile/pad-md.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
+<p class="nx-phones__caption">3-button pad</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Comix Zone on the Fold's cover screen, with the Sega 6-button pad: A, B, C, X, Y, Z and MODE](../../assets/screenshots/mobile/pad-md-6.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">6-button pad</p>
+</div>
+</div>
 
-The on-screen pad draws the Sega pad. A controller plays the Genesis, Sega
-CD and 32X **by position**:
+The on-screen pad draws the Sega pad the game gets: the 3-button pad, or the
+6-button pad for games made for it (see [Controller Type](#controller-type)).
+A controller plays the Genesis, Sega CD and 32X **by position**:
 
 | Controller | 6-button pad | 3-button pad |
 | --- | --- | --- |
