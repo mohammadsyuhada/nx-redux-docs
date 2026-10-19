@@ -1,20 +1,10 @@
 # Menu Layouts
 
-Each main menu tab and the game lists can have their own style. Set them in
-**Tools → Settings → Layouts**. The same page also hides tabs, picks the art
-behind consoles and beside games, sets the Game Switcher's layout, and hides
-the page title, the button hints and the game stats. Home has its own
-layout: List, Grid or Carousel.
-
-| Style | Tabs | Game lists | In short |
-| --- | :---: | :---: | --- |
-| [**List**](#list) | ✓ | ✓ | Text rows over the art, the most entries per screen |
-| [**Grid**](#grid) | ✓ | ✓ | Rows of tiles that slide sideways |
-| [**Carousel**](#carousel) | ✓ | ✓ | One large item at a time, across or down the screen |
-| [**Backdrop**](#backdrop) | | ✓ | Box art over the game's screenshot |
-
-Out of the box, Consoles, Collections and game lists use **Carousel**, and
-Home and Tools use **Grid**.
+**Tools → Settings → Layouts** sets each main menu tab's and the game lists'
+style, hides tabs, picks the art behind consoles and beside games, sets the
+Game Switcher's layout, and hides the page title, the button hints and the
+game stats. For what each style looks like, see
+[Main Menu → Layout styles](main-menu.md#layout-styles).
 
 ## The Layouts page
 
@@ -79,7 +69,7 @@ tab. **Consoles controller** is on the Consoles page only.
 | --- | --- | --- | --- |
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Consoles layout** | List, Grid, Carousel | Carousel (Tools: Grid) | When the tab is Show |
-| [**Consoles orientation**](#orientation) | Horizontal, Vertical | Horizontal | When the tab is Show and its layout is Carousel |
+| [**Consoles orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When the tab is Show and its layout is Carousel |
 | [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
 
 #### Game lists
@@ -89,8 +79,8 @@ tab. **Consoles controller** is on the Consoles page only.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | **Game lists layout** | List, Grid, Carousel, Backdrop | Carousel | Always |
-| [**Game lists orientation**](#orientation) | Horizontal, Vertical | Horizontal | When Game lists layout is Carousel or Backdrop |
-| [**Game lists alignment**](#game-lists-alignment) | Left, Right | Left | When Game lists orientation is Vertical |
+| [**Game lists orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Game lists layout is Carousel or Backdrop |
+| [**Game lists alignment**](main-menu.md#game-lists-alignment) | Left, Right | Left | When Game lists orientation is Vertical |
 | [**List art**](#list-art) | Screenshot, Mix, 3D box art, 2D box art, Wheel, None | Screenshot | When Game lists layout is List |
 | [**Backdrop art**](#backdrop-art) | 3D box art, 2D box art, Wheel | 3D box art | When Game lists layout is Backdrop |
 | [**Layout options**](#layout-options-and-achievements-panel) | Show, Hide | Show | Always |
@@ -149,137 +139,6 @@ underneath, where you left it.
       Consoles tab the same way. While that tab is hidden, a long press on
       **+N** or **Pick a game** also opens the hidden-tab menu, which is how
       touch reaches it when the tab row is hidden.
-
-## List
-
-A plain list. On the Consoles tab the selected console's controller sits
-beside the list (see [Consoles controller](#consoles-controller)). In a game
-list the selected game's picture fills the background or sits in a box (see
-[List art](#list-art)).
-
-*Consoles tab*
-
-![Consoles tab in List style, Dreamcast selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
-
-*Game list*
-
-![Game Boy Advance list in List style, Astro Boy - Omega Factor selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
-
-`Up` on the first row wraps to the last, and `Down` on the last row wraps to
-the first.
-
-??? info "More detail"
-    - Only a fresh press wraps: holding the button stops at the end.
-    - The scroll arrows sit at the bottom, above the button hints.
-    - In a game list, the selected game's last-played time, achievements and
-      next achievement show only where the hints would be: with
-      [Button hints](#page-title-and-button-hints) hidden, or with touch
-      alone. While the hint bar shows, they are left out.
-
-## Grid
-
-Rows of tiles that slide sideways as you move. Consoles show their logo and
-game count. Games show their screenshot, and the selected tile adds its name,
-last-played time and achievement count.
-
-*Consoles tab*
-
-![Consoles tab in Grid style, Final Burn Neo selected](../assets/screenshots/mobile/consoles-grid.webp)
-
-*Game list*
-
-![Game Boy Advance list in Grid style, Astro Boy - Omega Factor selected](../assets/screenshots/mobile/game-list-grid.webp)
-
-??? info "More detail: rows and columns"
-    - Two rows on most phones, three on a tall phone held upright (such as a
-      Galaxy Z Flip), and three or four on a large screen.
-    - On a phone held upright the Consoles tab shows two consoles across,
-      each half the screen wide. Once you move past the second, the selected
-      console stays in the middle with half of each neighbour showing on
-      either side, as on the handheld.
-    - A tall phone's Grid starts with two or three columns across, and once
-      it scrolls the selected column stays in the middle the same way.
-
-## Carousel
-
-A single row with the selected item large in the middle and its neighbours
-to the sides. Consoles show their logo over their controller, collections
-their name, tools their icon. In a game list the selected game's name sits
-below its picture, and its play time, achievement count and next achievement
-sit at the bottom of the picture.
-
-*Consoles tab*
-
-![Consoles tab in Carousel style, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
-
-*Game list*
-
-![Game Boy Advance list in Carousel style, Advance Wars 2 - Black Hole Rising in the middle](../assets/screenshots/mobile/game-list-carousel.webp)
-
-??? info "More detail"
-    - A game's stats sit over a dark fade. The side games get smaller the
-      further they are from the middle.
-    - On the Collections and Tools tabs each item is only as wide as its name
-      or icon, and the space between neighbours stays the same, so short and
-      long names sit evenly along the row.
-
-## Backdrop
-
-Game lists only. The selected game's box art stands over its dimmed
-screenshot, with its neighbours' boxes to the sides. Its caption gives the
-name, then the play time and achievement count, then the next achievement on
-its own line. The Vertical orientation shows the same lines.
-
-![Game Boy Advance list in Backdrop style, Advance Wars 2 - Black Hole Rising's box over its screenshot](../assets/screenshots/mobile/game-list-backdrop.webp)
-
-## Orientation
-
-Carousel and Backdrop can also run **down** the screen instead of across:
-set the **orientation** row under the style to **Vertical**.
-
-- `Up` / `Down` move through the items, wrapping as a [List](#list) does.
-- `Left` / `Right` switch tabs on a tab, and do nothing in a game list.
-
-<div class="grid" markdown>
-
-<figure markdown>
-
-![Consoles tab in horizontal Carousel, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
-
-<figcaption>Consoles, Horizontal</figcaption>
-</figure>
-
-<figure markdown>
-
-![Consoles tab in vertical Carousel, Dreamcast between Final Burn Neo and Famicom Disk System](../assets/screenshots/mobile/consoles-carousel-vertical.webp)
-
-<figcaption>Consoles, Vertical</figcaption>
-</figure>
-
-</div>
-
-## Game lists alignment
-
-In a vertical game list the stack sits on the left and the details on the
-right. Set **Game lists alignment** to **Right** to swap the sides.
-
-<div class="grid" markdown>
-
-<figure markdown>
-
-![Vertical Backdrop aligned left: Advance Wars 2's box on the left, its details on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-left.webp)
-
-<figcaption>Backdrop, Vertical, Left</figcaption>
-</figure>
-
-<figure markdown>
-
-![Vertical Backdrop aligned right: Advance Wars 2's details on the left, its box on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-right.webp)
-
-<figcaption>Backdrop, Vertical, Right</figcaption>
-</figure>
-
-</div>
 
 ## List art
 

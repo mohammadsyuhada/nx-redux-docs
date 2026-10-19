@@ -349,6 +349,153 @@ for its buttons.
     - With **Achievements panel** hidden, `X` still opens it, and the game's
       menu ends with **Achievements**.
 
+## Layout styles
+
+Each tab and the game lists have a style, picked in
+[Settings → Layouts](layouts.md). Home has its own: List, Grid or Carousel
+(see [Home](#home)).
+
+| Style | Tabs | Game lists | In short |
+| --- | :---: | :---: | --- |
+| [**List**](#list-style) | ✓ | ✓ | Text rows over the art, the most entries per screen |
+| [**Grid**](#grid-style) | ✓ | ✓ | Rows of tiles that slide sideways |
+| [**Carousel**](#carousel-style) | ✓ | ✓ | One large item at a time, across or down the screen |
+| [**Backdrop**](#backdrop-style) | | ✓ | Box art over the game's screenshot |
+
+Out of the box, Consoles, Collections and game lists use **Carousel**, and
+Home and Tools use **Grid**.
+
+### List style
+
+A plain list. On the Consoles tab the selected console's controller sits
+beside the list (see [Consoles controller](layouts.md#consoles-controller)). In a game
+list the selected game's picture fills the background or sits in a box (see
+[List art](layouts.md#list-art)).
+
+*Consoles tab*
+
+![Consoles tab in List style, Dreamcast selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
+
+*Game list*
+
+![Game Boy Advance list in List style, Astro Boy - Omega Factor selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
+
+`Up` on the first row wraps to the last, and `Down` on the last row wraps to
+the first.
+
+??? info "More detail"
+    - Only a fresh press wraps: holding the button stops at the end.
+    - The scroll arrows sit at the bottom, above the button hints.
+    - In a game list, the selected game's last-played time, achievements and
+      next achievement show only where the hints would be: with
+      [Button hints](layouts.md#page-title-and-button-hints) hidden, or with touch
+      alone. While the hint bar shows, they are left out.
+
+### Grid style
+
+Rows of tiles that slide sideways as you move. Consoles show their logo and
+game count. Games show their screenshot, and the selected tile adds its name,
+last-played time and achievement count.
+
+*Consoles tab*
+
+![Consoles tab in Grid style, Final Burn Neo selected](../assets/screenshots/mobile/consoles-grid.webp)
+
+*Game list*
+
+![Game Boy Advance list in Grid style, Astro Boy - Omega Factor selected](../assets/screenshots/mobile/game-list-grid.webp)
+
+??? info "More detail: rows and columns"
+    - Two rows on most phones, three on a tall phone held upright (such as a
+      Galaxy Z Flip), and three or four on a large screen.
+    - On a phone held upright the Consoles tab shows two consoles across,
+      each half the screen wide. Once you move past the second, the selected
+      console stays in the middle with half of each neighbour showing on
+      either side, as on the handheld.
+    - A tall phone's Grid starts with two or three columns across, and once
+      it scrolls the selected column stays in the middle the same way.
+
+### Carousel style
+
+A single row with the selected item large in the middle and its neighbours
+to the sides. Consoles show their logo over their controller, collections
+their name, tools their icon. In a game list the selected game's name sits
+below its picture, and its play time, achievement count and next achievement
+sit at the bottom of the picture.
+
+*Consoles tab*
+
+![Consoles tab in Carousel style, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
+
+*Game list*
+
+![Game Boy Advance list in Carousel style, Advance Wars 2 - Black Hole Rising in the middle](../assets/screenshots/mobile/game-list-carousel.webp)
+
+??? info "More detail"
+    - A game's stats sit over a dark fade. The side games get smaller the
+      further they are from the middle.
+    - On the Collections and Tools tabs each item is only as wide as its name
+      or icon, and the space between neighbours stays the same, so short and
+      long names sit evenly along the row.
+
+### Backdrop style
+
+Game lists only. The selected game's box art stands over its dimmed
+screenshot, with its neighbours' boxes to the sides. Its caption gives the
+name, then the play time and achievement count, then the next achievement on
+its own line. The Vertical orientation shows the same lines.
+
+![Game Boy Advance list in Backdrop style, Advance Wars 2 - Black Hole Rising's box over its screenshot](../assets/screenshots/mobile/game-list-backdrop.webp)
+
+### Orientation
+
+Carousel and Backdrop can also run **down** the screen instead of across:
+set the style's **orientation** row in [Layouts](layouts.md) to **Vertical**.
+
+- `Up` / `Down` move through the items, wrapping as a [List](#list-style) does.
+- `Left` / `Right` switch tabs on a tab, and do nothing in a game list.
+
+<div class="grid" markdown>
+
+<figure markdown>
+
+![Consoles tab in horizontal Carousel, Dreamcast in the middle](../assets/screenshots/mobile/consoles-carousel.webp)
+
+<figcaption>Consoles, Horizontal</figcaption>
+</figure>
+
+<figure markdown>
+
+![Consoles tab in vertical Carousel, Dreamcast between Final Burn Neo and Famicom Disk System](../assets/screenshots/mobile/consoles-carousel-vertical.webp)
+
+<figcaption>Consoles, Vertical</figcaption>
+</figure>
+
+</div>
+
+### Game lists alignment
+
+In a vertical game list the stack sits on the left and the details on the
+right. Set **Game lists alignment** in [Layouts](layouts.md#game-lists) to **Right** to swap the sides.
+
+<div class="grid" markdown>
+
+<figure markdown>
+
+![Vertical Backdrop aligned left: Advance Wars 2's box on the left, its details on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-left.webp)
+
+<figcaption>Backdrop, Vertical, Left</figcaption>
+</figure>
+
+<figure markdown>
+
+![Vertical Backdrop aligned right: Advance Wars 2's details on the left, its box on the right](../assets/screenshots/mobile/game-list-backdrop-vertical-right.webp)
+
+<figcaption>Backdrop, Vertical, Right</figcaption>
+</figure>
+
+</div>
+
 ## Context menus
 
 Press `MENU` on a game to see what you can do with it. The menu depends on
