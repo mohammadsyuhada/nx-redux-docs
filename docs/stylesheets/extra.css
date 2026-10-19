@@ -243,3 +243,10 @@
   border: 5px solid #000;
   box-sizing: content-box;
 }
+
+/* A layout table with a picture per row (DS and 3DS screen layouts): the thumbnails keep their width instead of
+   shrinking to the column, and the table scrolls sideways on a narrow screen. */
+.md-typeset .nx-layouts table:not([class]) { font-size: 0.7rem; }
+.md-typeset .nx-layouts td { vertical-align: top; }
+.md-typeset .nx-layouts img { width: 10rem; max-width: none; height: auto; }
+.md-typeset .nx-layouts td:first-child { min-width: 9rem; }
