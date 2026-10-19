@@ -76,8 +76,8 @@ Mario Kart 64 doesn't. See [Vibration](../controls.md#game-rumble).
 ## Multiplayer
 
 Up to four players can play, each on their own controller; see
-[Local Multiplayer](../multiplayer.md). Netplay isn't available for the
-Nintendo 64.
+[Local Multiplayer](../multiplayer.md). [Netplay](../netplay.md) isn't
+available for the Nintendo 64 in the app yet (the handheld has it).
 
 ## Cheats and achievements
 
