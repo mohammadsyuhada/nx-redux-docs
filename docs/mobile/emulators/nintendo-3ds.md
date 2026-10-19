@@ -34,6 +34,45 @@ Every row takes effect straight away; none needs the game restarted.
 in [Game Settings](../emulator-settings.md#game-settings) or Emulator
 Settings (see [Graphics API](index.md#graphics-api)).
 
+## Screen layout
+
+<div class="nx-layouts" markdown>
+
+| Layout | Portrait | Landscape |
+| --- | --- | --- |
+| **Top over bottom** (default)<br>The top screen above the bottom screen. In landscape the top screen takes three quarters of the height and the bottom screen is a third of its size. | [![Mario Kart 7 in portrait, Top over bottom: the top screen above the bottom screen](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp) | [![Mario Kart 7 in landscape, Top over bottom: the top screen big, the bottom screen a third of its size below it](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp) |
+| **Large screen**<br>The top screen big, the bottom screen small at its top right. | [![Mario Kart 7 in portrait, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-portrait-large.webp)](../../assets/screenshots/mobile/3ds-portrait-large.webp) | [![Mario Kart 7 in landscape, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-landscape-large.webp)](../../assets/screenshots/mobile/3ds-landscape-large.webp) |
+| **Side by side**<br>The two screens next to each other. | [![Mario Kart 7 in portrait, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp)](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp) | [![Mario Kart 7 in landscape, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp)](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp) |
+| **Single screen**<br>Only the top screen. | [![Mario Kart 7 in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-portrait-single.webp)](../../assets/screenshots/mobile/3ds-portrait-single.webp) | [![Mario Kart 7 in landscape, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-landscape-single.webp)](../../assets/screenshots/mobile/3ds-landscape-single.webp) |
+
+</div>
+
+**SWAP** (or `SELECT` + `R1`) swaps which screen is the big or upper one, in
+every layout.
+`SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
+without Save Changes.
+
+### Portrait pad
+
+In portrait, long-press the arrow in the pad's bottom-right corner to hide
+the pad band: the screens get its room and the see-through landscape buttons
+sit over the lower half of the game. Long-press the arrow again to bring the
+band back. It's **Portrait Pad** in **Options → Console Settings**, and the
+long-press saves it for the console.
+
+![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
+
+Touch follows the [touch rule](#touch): swap the bottom screen up with
+**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
+controller connected the buttons hide.
+
+??? info "More detail"
+    - The layout is Azahar's **Screen Layout** option, so you can also set it
+      in **Core Options**, or for the console in
+      [Emulator Settings](../emulator-settings.md).
+    - **Screen Swap Mode** in **Core Options** sets whether the swap toggles
+      (the default) or lasts only while you hold the buttons.
+
 ## Controls
 
 <figure class="nx-phone" markdown>
@@ -166,42 +205,3 @@ it:
 | **STYLUS**, or `SELECT` + `L1` | Turn stylus mode off again. |
 
 Stylus mode is off each time a game starts, and is not saved.
-
-## Screen layout
-
-<div class="nx-layouts" markdown>
-
-| Layout | Portrait | Landscape |
-| --- | --- | --- |
-| **Top over bottom** (default)<br>The top screen above the bottom screen. In landscape the top screen takes three quarters of the height and the bottom screen is a third of its size. | [![Mario Kart 7 in portrait, Top over bottom: the top screen above the bottom screen](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp) | [![Mario Kart 7 in landscape, Top over bottom: the top screen big, the bottom screen a third of its size below it](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp) |
-| **Large screen**<br>The top screen big, the bottom screen small at its top right. | [![Mario Kart 7 in portrait, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-portrait-large.webp)](../../assets/screenshots/mobile/3ds-portrait-large.webp) | [![Mario Kart 7 in landscape, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-landscape-large.webp)](../../assets/screenshots/mobile/3ds-landscape-large.webp) |
-| **Side by side**<br>The two screens next to each other. | [![Mario Kart 7 in portrait, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp)](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp) | [![Mario Kart 7 in landscape, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp)](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp) |
-| **Single screen**<br>Only the top screen. | [![Mario Kart 7 in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-portrait-single.webp)](../../assets/screenshots/mobile/3ds-portrait-single.webp) | [![Mario Kart 7 in landscape, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-landscape-single.webp)](../../assets/screenshots/mobile/3ds-landscape-single.webp) |
-
-</div>
-
-**SWAP** (or `SELECT` + `R1`) swaps which screen is the big or upper one, in
-every layout.
-`SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
-without Save Changes.
-
-### Portrait pad
-
-In portrait, long-press the arrow in the pad's bottom-right corner to hide
-the pad band: the screens get its room and the see-through landscape buttons
-sit over the lower half of the game. Long-press the arrow again to bring the
-band back. It's **Portrait Pad** in **Options → Console Settings**, and the
-long-press saves it for the console.
-
-![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
-
-Touch follows the [touch rule](#touch): swap the bottom screen up with
-**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
-controller connected the buttons hide.
-
-??? info "More detail"
-    - The layout is Azahar's **Screen Layout** option, so you can also set it
-      in **Core Options**, or for the console in
-      [Emulator Settings](../emulator-settings.md).
-    - **Screen Swap Mode** in **Core Options** sets whether the swap toggles
-      (the default) or lasts only while you hold the buttons.
