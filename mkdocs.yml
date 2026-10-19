@@ -27,7 +27,7 @@ theme:
 
 extra:
   handheld_version: v2.2.1   # shown beside Handheld on the landing page; bump with each release
-  mobile_version: v0.1.1     # shown beside Mobile on the landing page; bump with each release
+  mobile_version: v0.2.0     # shown beside Mobile on the landing page; bump with each release
   analytics:
     provider: google
     property: G-PJ9F1Q2YLL
