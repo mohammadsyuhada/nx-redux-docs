@@ -154,20 +154,20 @@ buttons aren't over the game: in portrait with the pad band, or with a
 controller.
 
 While the on-screen buttons are over the game (landscape without a
-controller, or portrait with the [pad hidden](#portrait-pad)), only the big
-screen takes touches: in picture in picture, large screen and single screen
-the big one, in stacked and side by side the first one.
+controller, or portrait with the [pad hidden](#portrait-pad)), only the main
+screen takes touches: the big one, or the first (top or left) when both are
+the same size.
 
-**For games that need buttons and touch together**, press **SWAP** to make the
-bottom screen the big one. Then touch it anywhere between the buttons while
-you play with them. Single screen, large screen or picture in picture give
-the bottom screen the most room.
+**For games that need buttons and touch together**, press **SWAP** to make
+the bottom screen the main one. Then touch it anywhere between the buttons
+while you play with them. A layout with one big screen gives it the most
+room.
 
 ??? info "More detail"
     - The see-through buttons still take the touches that land on them. To
       reach something under a button, such as a menu item in a corner of the
-      bottom screen, use [stylus mode](#stylus-mode) or turn the phone to
-      portrait.
+      bottom screen, use [stylus mode](#stylus-mode), whose pen reaches the
+      bottom screen either way, or turn the phone to portrait.
 
 ## Portrait pad
 
