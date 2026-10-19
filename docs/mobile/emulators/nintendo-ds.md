@@ -142,10 +142,16 @@ These apply in both orientations, straight away: no restart needed.
 
 ## Stylus mode
 
-In stylus mode a dot on the bottom screen is the pen. The d-pad or left
-stick moves it, faster the longer you hold it, and `A` touches at it.
-**STYLUS** (or `L2` on a controller) turns stylus mode on and off. It is off
-each time a game starts.
+In stylus mode a dot on the bottom screen is the pen, for touching it without
+your finger.
+
+| Control | What it does |
+| --- | --- |
+| D-pad or left stick | Move the dot. The d-pad speeds up the longer you hold it. |
+| `A` | Touch at the dot. |
+| **STYLUS**, or `L2` on a controller | Turn stylus mode on or off. |
+
+Stylus mode is off each time a game starts, and is not saved.
 
 ## Touch
 

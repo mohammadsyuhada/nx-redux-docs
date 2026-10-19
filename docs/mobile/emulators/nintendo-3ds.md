@@ -187,15 +187,14 @@ as you would a 3DS.
 
 ## Stylus mode
 
-In stylus mode a dot on the bottom screen is the stylus, the same pen dot
-as on the [Nintendo DS](nintendo-ds.md#stylus-mode). It shows once you move
-it:
+In stylus mode a dot on the bottom screen is the pen, for touching it without
+your finger. The dot shows once you move it.
 
 | Control | What it does |
 | --- | --- |
 | D-pad or left stick | Move the dot. The d-pad speeds up the longer you hold it. |
-| `A` | Tap at the dot. |
-| **STYLUS**, or `SELECT` + `L1` | Turn stylus mode off again. |
+| `A` | Touch at the dot. |
+| **STYLUS**, or `SELECT` + `L1` on a controller | Turn stylus mode on or off. |
 
 Stylus mode is off each time a game starts, and is not saved.
 
