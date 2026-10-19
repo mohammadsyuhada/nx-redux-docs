@@ -24,10 +24,10 @@ Settings**. Keep them for the game or console with
 | Layout | Picture |
 | --- | --- |
 | **Auto** (default)<br>**Stacked** when both screens fit the width, else **Picture in picture**. |  |
-| **Picture in picture**<br>One screen big, the other small in a corner. | [![A DS game in portrait, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)](../../assets/screenshots/mobile/ds-portrait-pip.webp) |
+| **Picture in picture**<br>One screen big, the other small in a corner. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game in portrait, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)](../../assets/screenshots/mobile/ds-portrait-pip.webp) |
 | **Stacked**<br>One screen above the other. | [![A DS game in portrait, Stacked: the top screen above the bottom screen](../../assets/screenshots/mobile/ds-portrait-stacked.webp)](../../assets/screenshots/mobile/ds-portrait-stacked.webp) |
 | **Single screen**<br>Only the big screen. | [![A DS game in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/ds-portrait-single.webp)](../../assets/screenshots/mobile/ds-portrait-single.webp) |
-| **Large screen**<br>One screen big, the other small above or below it, at the inset corner's side. | [![A DS game in portrait, Large screen: the bottom screen small above the top screen, at the right](../../assets/screenshots/mobile/ds-portrait-large.webp)](../../assets/screenshots/mobile/ds-portrait-large.webp) |
+| **Large screen**<br>One screen big, the other small above or below it, at the inset corner's side. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game in portrait, Large screen: the bottom screen small above the top screen, at the right](../../assets/screenshots/mobile/ds-portrait-large.webp)](../../assets/screenshots/mobile/ds-portrait-large.webp) |
 
 </div>
 
@@ -52,8 +52,8 @@ choices, **Stacked** by default.
 | **Stacked** (default)<br>The big screen above, taking three quarters of the height; the other below it, a third of its size. | [![A DS game in landscape, Stacked: the top screen big, the bottom screen small below it](../../assets/screenshots/mobile/ds-landscape-stacked.webp)](../../assets/screenshots/mobile/ds-landscape-stacked.webp) |
 | **Side by side**<br>Each screen takes half the width. | [![A DS game in landscape, Side by side: the two screens next to each other, with the on-screen pad over them](../../assets/screenshots/mobile/ds-landscape-side-by-side.webp)](../../assets/screenshots/mobile/ds-landscape-side-by-side.webp) |
 | **Single screen**<br>The big screen only, centred. | [![A DS game in landscape, Single screen: the top screen centred](../../assets/screenshots/mobile/ds-landscape-single.webp)](../../assets/screenshots/mobile/ds-landscape-single.webp) |
-| **Picture in picture**<br>The big screen centred, the other small in a corner. | [![A DS game in landscape, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)](../../assets/screenshots/mobile/ds-landscape-pip.webp) |
-| **Large screen**<br>The big screen, the other small beside it, level with its top or bottom edge. | [![A DS game in landscape, Large screen: the bottom screen small beside the top screen, at its top right](../../assets/screenshots/mobile/ds-landscape-large.webp)](../../assets/screenshots/mobile/ds-landscape-large.webp) |
+| **Picture in picture**<br>The big screen centred, the other small in a corner. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game in landscape, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)](../../assets/screenshots/mobile/ds-landscape-pip.webp) |
+| **Large screen**<br>The big screen, the other small beside it, level with its top or bottom edge. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game in landscape, Large screen: the bottom screen small beside the top screen, at its top right](../../assets/screenshots/mobile/ds-landscape-large.webp)](../../assets/screenshots/mobile/ds-landscape-large.webp) |
 
 </div>
 
