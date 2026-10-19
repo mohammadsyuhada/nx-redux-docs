@@ -61,8 +61,6 @@ Without a controller, the on-screen buttons sit over the game in landscape.
 **Pad Opacity (landscape)** in **Options → Frontend** sets how opaque
 they are: 100%, 60%, 40% or 25% (40% by default).
 
-![A DS game in landscape with the on-screen pad at 40% opacity over it](../../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
-
 ### Big screen and inset
 
 These apply in both orientations:
