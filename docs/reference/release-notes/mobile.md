@@ -8,6 +8,60 @@ What changed in each release of NX Redux for Android phones, tablets and
 Android handhelds. Download the APK from the
 [releases page](https://github.com/mohammadsyuhada/nx-mobile/releases).
 
+## v0.2.0
+
+*20 October 2026*
+
+Bring your saves over from another app, a folder or a zip file. The DS and
+3DS get a portrait pad you can hide, more screen layouts and on-screen Stylus
+and Swap buttons. The Consoles Carousel can show your own console
+backgrounds.
+
+### New features
+
+- **Import saves from anywhere.** **Tools → Settings → Emulators → Saves →
+  Import saves** copies battery saves and save states **From a folder**,
+  **From a zip file** or **From RetroArch**. Saves are matched to your games
+  by name, nothing is moved or deleted, and a state never overwrites one you
+  already have. First-run setup gets a matching **Bring your saves** step.
+  See [Import saves](../../mobile/library.md#import-saves).
+- **DS and 3DS: hide the portrait pad.** Long-press the arrow at the bottom
+  right of the pad to hide it: the screens take its room and see-through
+  buttons sit over the game. Long-press again to bring it back. See
+  [Nintendo DS](../../mobile/emulators/nintendo-ds.md#portrait-pad) and
+  [Nintendo 3DS](../../mobile/emulators/nintendo-3ds.md#portrait-pad).
+- **DS and 3DS: more screen layouts.** Large screen on both, Side by side in
+  portrait and Stacked in landscape on the DS, and separate layouts for
+  portrait, portrait with a controller and landscape on the 3DS. See the
+  [DS](../../mobile/emulators/nintendo-ds.md#screen-layouts) and
+  [3DS](../../mobile/emulators/nintendo-3ds.md#screen-layouts) screen layouts.
+- **DS and 3DS: Stylus and Swap buttons** on the on-screen pad. **Swap**
+  trades the two screens, so you can touch the bottom screen under the
+  see-through pad. See
+  [Stylus mode](../../mobile/emulators/nintendo-ds.md#stylus-mode).
+- **Console backgrounds in the Carousel.** **Consoles controller** is now
+  **Consoles background** and works in the Carousel too: **Background** shows
+  the console's own `.media/bg.png` behind the row, **None** shows neither,
+  and the picture on the Layouts page follows it. See
+  [Consoles background](../../mobile/layouts.md#consoles-background).
+
+### Improvements
+
+- **Artwork for badly named zips.** When a zipped game's name isn't found,
+  the second lookup now uses the ROM inside the zip, so it gets its art. A
+  7z is no longer looked up a second time, which saves ScreenScraper quota.
+- **Artwork progress** drops games as they finish, so the one being fetched
+  stays in view on a long library.
+- **On-screen pad labels** are bigger on the portrait pad, and the Wii
+  Classic Controller's lowercase letters sit in the middle of their buttons.
+- **Bring your saves** has **Skip** at the top right, as the other setup
+  steps do.
+
+### Fixes
+
+- **BIOS files in ROM folders** (such as `scph1001.bin` or `bios7.bin`) are
+  no longer listed as games, so artwork fetches stop asking for them.
+
 ## v0.1.0
 
 *18 October 2026*
