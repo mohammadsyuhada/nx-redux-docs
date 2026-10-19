@@ -118,6 +118,14 @@ extra setup.
     files. It can't read the compressed `zcci`, `zcxi` and `z3dsx` files or
     `3dsx` files, so for those set **On** yourself.
 
+## Touch
+
+Touch the bottom screen directly. While the on-screen buttons are over the
+game (landscape without a controller, or portrait with the
+[pad hidden](#portrait-pad)), it takes finger touches only when it is the
+main screen: swap it there with `SELECT` + `R1`, then touch it between the
+buttons. Stylus mode's cursor reaches it either way.
+
 ## Stylus mode
 
 Azahar draws its own touch cursor on the bottom screen. In stylus mode:
@@ -157,9 +165,9 @@ long-press saves it for the console.
 
 ![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
 
-Touches under the see-through buttons don't reach the game, so swap the
-bottom screen up with `SELECT` + `R1` to touch it, or use
-[stylus mode](#stylus-mode). With a controller connected the buttons hide.
+Touch follows the [touch rule](#touch): swap the bottom screen up with
+`SELECT` + `R1` to touch it, or use [stylus mode](#stylus-mode). With a
+controller connected the buttons hide.
 
 ??? info "More detail"
     - The layout is Azahar's **Screen Layout** option, so you can also set it
