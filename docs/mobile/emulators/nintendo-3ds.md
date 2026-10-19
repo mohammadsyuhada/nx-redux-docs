@@ -128,20 +128,6 @@ pad goes away in portrait and **Layout (portrait, controller)** is used.
 `SELECT` + `LEFT` / `RIGHT` changes the one you're in and saves it for the
 game straight away, without Save Changes.
 
-### Portrait pad
-
-In portrait, long-press the arrow in the pad's bottom-right corner to hide
-the pad band: the screens get its room and the see-through landscape buttons
-sit over the lower half of the game. Long-press the arrow again to bring the
-band back. It's **Portrait Pad** in **Options → Console Settings**, and the
-long-press saves it for the console.
-
-![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
-
-Touch follows the [touch rule](#touch): swap the bottom screen up with
-**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
-controller connected the buttons hide.
-
 ??? info "More detail"
     - The app sets Azahar's own **Screen Layout** option from the layout rows,
       so in **Core Options** it shows locked.
@@ -220,3 +206,17 @@ it:
 | **STYLUS**, or `SELECT` + `L1` | Turn stylus mode off again. |
 
 Stylus mode is off each time a game starts, and is not saved.
+
+## Portrait pad
+
+In portrait, long-press the arrow in the pad's bottom-right corner to hide
+the pad band: the screens get its room and the see-through landscape buttons
+sit over the lower half of the game. Long-press the arrow again to bring the
+band back. It's **Portrait Pad** in **Options → Console Settings**, and the
+long-press saves it for the console.
+
+![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
+
+Touch follows the [touch rule](#touch): swap the bottom screen up with
+**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
+controller connected the buttons hide.
