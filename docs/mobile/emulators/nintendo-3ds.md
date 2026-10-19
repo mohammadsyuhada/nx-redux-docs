@@ -13,6 +13,61 @@ screens.
 - `.cia` install files are not supported.
 - 3DS games are not on RetroAchievements in the app, and have no cheats.
 
+## Controls
+
+<figure class="nx-phone" markdown>
+![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
+The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
+the d-pad and the Circle Pad. Games that use the New 3DS buttons also get
+`ZL`, `ZR` and the C-stick: see [New 3DS controls](#new-3ds-controls).
+
+The pad also has **STYLUS**, which turns [stylus mode](#stylus-mode) on or
+off (pressed in while it's on), and **SWAP**, which swaps the screens. In
+portrait they sit either side of `MENU` and `STICK`; over the game
+(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
+under `MENU` and **SWAP** under `START`.
+
+On a controller the shortcuts are `SELECT` combos, because `L2` and `R2` are
+the 3DS's own `ZL` and `ZR`:
+
+| Buttons | What they do |
+| --- | --- |
+| `SELECT` + `R1`, or **SWAP** | Swap the screens. |
+| `SELECT` + `L1`, or **STYLUS** | Turn stylus mode on or off. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout: **Top over bottom**, **Large screen**, **Side by side**, **Single screen**, and round again. |
+| `SELECT` + `START`, or `MENU` | Open the [in-game menu](../in-game-menu.md). |
+
+A controller adds:
+
+| Control | Nintendo 3DS |
+| --- | --- |
+| `L2`, `R2` | `ZL`, `ZR`, also on controllers whose triggers are analog only |
+| Left stick | The Circle Pad |
+| Right stick | The C-stick, and the touch cursor |
+| `R3` (press the right stick) | Tap at the cursor |
+| `L3` (press the left stick) | Swap the screens |
+
+A controller's face buttons work as printed: its `A` is the 3DS's `A`. To
+use the 3DS's positions on an Xbox pad (`A` on the right), set
+**Controller Layout** to **Nintendo** in **Options → Console Settings**; see
+[Controls](../controls.md#controller-buttons).
+
+!!! note "`SELECT` waits"
+    The game gets `SELECT` when you let go of it, so a combo doesn't pause
+    the game.
+
+??? info "More detail: `SELECT`"
+    Many 3DS games pause on Select, so the game never sees `SELECT` while you
+    hold it:
+
+    - Tap it and the game gets `SELECT` when you let go.
+    - Hold it longer than 1 second without a combo and nothing is sent.
+    - After a combo (`SELECT` + `R1`, `L1`, `LEFT`, `RIGHT` or `START`) the
+      game gets nothing.
+
 ## Console Settings
 
 The 3DS's own options are in the in-game menu under **Options → Console
@@ -72,61 +127,6 @@ controller connected the buttons hide.
       [Emulator Settings](../emulator-settings.md).
     - **Screen Swap Mode** in **Core Options** sets whether the swap toggles
       (the default) or lasts only while you hold the buttons.
-
-## Controls
-
-<figure class="nx-phone" markdown>
-![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
-![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
-</figure>
-
-The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
-the d-pad and the Circle Pad. Games that use the New 3DS buttons also get
-`ZL`, `ZR` and the C-stick: see [New 3DS controls](#new-3ds-controls).
-
-The pad also has **STYLUS**, which turns [stylus mode](#stylus-mode) on or
-off (pressed in while it's on), and **SWAP**, which swaps the screens. In
-portrait they sit either side of `MENU` and `STICK`; over the game
-(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
-under `MENU` and **SWAP** under `START`.
-
-On a controller the shortcuts are `SELECT` combos, because `L2` and `R2` are
-the 3DS's own `ZL` and `ZR`:
-
-| Buttons | What they do |
-| --- | --- |
-| `SELECT` + `R1`, or **SWAP** | Swap the screens. |
-| `SELECT` + `L1`, or **STYLUS** | Turn stylus mode on or off. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout: **Top over bottom**, **Large screen**, **Side by side**, **Single screen**, and round again. |
-| `SELECT` + `START`, or `MENU` | Open the [in-game menu](../in-game-menu.md). |
-
-A controller adds:
-
-| Control | Nintendo 3DS |
-| --- | --- |
-| `L2`, `R2` | `ZL`, `ZR`, also on controllers whose triggers are analog only |
-| Left stick | The Circle Pad |
-| Right stick | The C-stick, and the touch cursor |
-| `R3` (press the right stick) | Tap at the cursor |
-| `L3` (press the left stick) | Swap the screens |
-
-A controller's face buttons work as printed: its `A` is the 3DS's `A`. To
-use the 3DS's positions on an Xbox pad (`A` on the right), set
-**Controller Layout** to **Nintendo** in **Options → Console Settings**; see
-[Controls](../controls.md#controller-buttons).
-
-!!! note "`SELECT` waits"
-    The game gets `SELECT` when you let go of it, so a combo doesn't pause
-    the game.
-
-??? info "More detail: `SELECT`"
-    Many 3DS games pause on Select, so the game never sees `SELECT` while you
-    hold it:
-
-    - Tap it and the game gets `SELECT` when you let go.
-    - Hold it longer than 1 second without a combo and nothing is sent.
-    - After a combo (`SELECT` + `R1`, `L1`, `LEFT`, `RIGHT` or `START`) the
-      game gets nothing.
 
 ## Motion
 

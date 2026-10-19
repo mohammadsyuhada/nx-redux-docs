@@ -9,6 +9,52 @@ the two screens.
 | BIOS | Not needed: free BIOS and firmware are built in. Real ones in `Bios/NDS/` are used when present. |
 | [File types](index.md) | `nds` (also inside a zip or 7z) |
 
+## Controls
+
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack on the Fold's cover screen, with the DS pad: L and R, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
+The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own:
+the on-screen pad labels `L1` and `R1` as **L** and **R**. Two more buttons
+on the pad are the app's:
+
+- **STYLUS** turns [stylus mode](#stylus-mode) on or off. It stays pressed in
+  while stylus mode is on.
+- **SWAP** swaps the big screen.
+
+In portrait they sit either side of `MENU` and `STICK`. Over the game
+(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
+under `MENU` and **SWAP** under `START`.
+
+With a controller or the on-screen pad:
+
+| Buttons | What they do |
+| --- | --- |
+| `R2` on a controller, or **SWAP** | Swap the big screen. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen and Large screen. |
+| `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
+| `L2` on a controller, or **STYLUS** | Turn stylus mode on or off. |
+| `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
+
+The layout hotkeys (swap and `SELECT` + a direction) are saved straight
+away, without Save Changes. Stylus mode is not saved.
+
+??? info "More detail"
+    - A short label shows the new setting.
+    - A controller's `L2` and `R2` never reach the game: the DS has no such
+      buttons.
+    - `SELECT` on its own still reaches the game. Only `SELECT` + a direction
+      is kept by the app.
+    - A controller's left stick works as the d-pad, except in stylus mode,
+      where it moves the pen.
+
+    Saving a layout hotkey gives the game its own settings, copied from the
+    console's if it had none. From then on the game uses only its own
+    settings. Later **Save for console** changes don't reach it until you use
+    **Restore defaults** in that game.
+
 ## Console Settings
 
 The DS's own options are in the in-game menu under **Options → Console
@@ -107,52 +153,6 @@ These apply in both orientations, straight away: no restart needed.
     - Shader presets apply to the big screen, and to both screens in portrait
       stacked and side by side. The small screen of picture in picture, large
       screen and landscape stacked is drawn without them.
-
-## Controls
-
-<figure class="nx-phone" markdown>
-![Kirby Mass Attack on the Fold's cover screen, with the DS pad: L and R, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-ds.webp){ .nx-phone__screen }
-![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
-</figure>
-
-The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own:
-the on-screen pad labels `L1` and `R1` as **L** and **R**. Two more buttons
-on the pad are the app's:
-
-- **STYLUS** turns [stylus mode](#stylus-mode) on or off. It stays pressed in
-  while stylus mode is on.
-- **SWAP** swaps the big screen.
-
-In portrait they sit either side of `MENU` and `STICK`. Over the game
-(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
-under `MENU` and **SWAP** under `START`.
-
-With a controller or the on-screen pad:
-
-| Buttons | What they do |
-| --- | --- |
-| `R2` on a controller, or **SWAP** | Swap the big screen. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen and Large screen. |
-| `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
-| `L2` on a controller, or **STYLUS** | Turn stylus mode on or off. |
-| `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
-
-The layout hotkeys (swap and `SELECT` + a direction) are saved straight
-away, without Save Changes. Stylus mode is not saved.
-
-??? info "More detail"
-    - A short label shows the new setting.
-    - A controller's `L2` and `R2` never reach the game: the DS has no such
-      buttons.
-    - `SELECT` on its own still reaches the game. Only `SELECT` + a direction
-      is kept by the app.
-    - A controller's left stick works as the d-pad, except in stylus mode,
-      where it moves the pen.
-
-    Saving a layout hotkey gives the game its own settings, copied from the
-    console's if it had none. From then on the game uses only its own
-    settings. Later **Save for console** changes don't reach it until you use
-    **Restore defaults** in that game.
 
 ## Stylus mode
 
