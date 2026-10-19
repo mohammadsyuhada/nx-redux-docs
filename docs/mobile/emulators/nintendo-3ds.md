@@ -101,21 +101,22 @@ Every row takes effect straight away; none needs the game restarted.
 in [Game Settings](../emulator-settings.md#game-settings) or Emulator
 Settings (see [Graphics API](index.md#graphics-api)).
 
-## Screen layout
+## Screen layouts
 
 <div class="nx-layouts" markdown>
 
-| Layout | Portrait | Landscape |
-| --- | --- | --- |
-| **Top over bottom** (default)<br>The top screen above the bottom screen. In landscape the top screen takes three quarters of the height and the bottom screen is a third of its size. | [![Mario Kart 7 in portrait, Top over bottom: the top screen above the bottom screen](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp) | [![Mario Kart 7 in landscape, Top over bottom: the top screen big, the bottom screen a third of its size below it](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp) |
-| **Large screen**<br>The top screen big, the bottom screen small at its top right. | [![Mario Kart 7 in portrait, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-portrait-large.webp)](../../assets/screenshots/mobile/3ds-portrait-large.webp) | [![Mario Kart 7 in landscape, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-landscape-large.webp)](../../assets/screenshots/mobile/3ds-landscape-large.webp) |
-| **Side by side**<br>The two screens next to each other. | [![Mario Kart 7 in portrait, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp)](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp) | [![Mario Kart 7 in landscape, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp)](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp) |
-| **Single screen**<br>Only the top screen. | [![Mario Kart 7 in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-portrait-single.webp)](../../assets/screenshots/mobile/3ds-portrait-single.webp) | [![Mario Kart 7 in landscape, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-landscape-single.webp)](../../assets/screenshots/mobile/3ds-landscape-single.webp) |
+| Layout | Picture |
+| --- | --- |
+| **Top over bottom** (default)<br>The top screen above the bottom screen. In landscape the top screen takes three quarters of the height and the bottom screen is a third of its size. | [![Mario Kart 7, Top over bottom: the top screen above the bottom screen](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp)](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp) |
+| **Large screen**<br>The top screen big, the bottom screen small at its top right. | [![Mario Kart 7, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-portrait-large.webp)](../../assets/screenshots/mobile/3ds-portrait-large.webp) |
+| **Side by side**<br>The two screens next to each other. | [![Mario Kart 7, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp)](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp) |
+| **Single screen**<br>Only the top screen. | [![Mario Kart 7, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-portrait-single.webp)](../../assets/screenshots/mobile/3ds-portrait-single.webp) |
 
 </div>
 
-**SWAP** (or `SELECT` + `R1`) swaps which screen is the big or upper one, in
-every layout.
+The pictures are in portrait; landscape draws the same layouts across the
+wider screen. **SWAP** (or `SELECT` + `R1`) swaps which screen is the big
+or upper one, in every layout.
 `SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
 without Save Changes.
 
