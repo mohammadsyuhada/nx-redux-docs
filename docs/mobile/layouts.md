@@ -4,7 +4,7 @@
 style, hides tabs, picks the art behind consoles and beside games, sets the
 Game Switcher's layout, and hides the page title, the button hints and the
 game stats. For what each style looks like, see
-[Main Menu → Layout styles](main-menu.md#layout-styles).
+[Main Menu](main-menu.md).
 
 ## The Layouts page
 

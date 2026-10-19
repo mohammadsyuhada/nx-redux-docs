@@ -38,7 +38,7 @@ last played it and for how long, and its achievements.
 ## List
 
 Your recent games as a list titled **Recent**, drawn like a
-[List](main-menu.md#list-style) game list, with the selected game's picture behind the
+[List](main-menu.md#games-list) game list, with the selected game's picture behind the
 rows.
 
 ![The Game Switcher in List: Streets of Rage 2 selected over its picture, then Contra - Hard Corps, Comix Zone, Sonic 3D Blast and Super Street Fighter II, with its time and achievements at the bottom](../assets/screenshots/mobile/game-switcher-list.webp)

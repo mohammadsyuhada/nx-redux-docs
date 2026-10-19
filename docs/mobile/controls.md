@@ -62,7 +62,7 @@ doesn't have:
 | Nintendo 64 | `A`, `B`, a yellow C-button diamond, and `Z` on `L2` |
 | Dreamcast | `A` `B` `X` `Y` in the Dreamcast's colours |
 | GameCube | A green `A`, a red `B`, `X`, `Y`, `Z`, `L` and `R` triggers, and a C-stick |
-| Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
+| Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii) |
 
 The Sega pad follows the game's [Controller Type](emulators/sega.md#controller-type).
 On the 6-button pad, `Y` and `Z` are on the shoulder buttons, and `Mode` is
