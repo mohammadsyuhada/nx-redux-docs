@@ -31,6 +31,10 @@ value; keep it for the game or the console with
 | **Portrait Pad** | Shown, Hidden | Shown | [Portrait pad](#portrait-pad) |
 | **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
 
+Every row takes effect straight away; none needs the game restarted. Only
+**Render Mode** in **Core Options** waits for the next start (see
+[3D rendering](#3d-rendering)).
+
 ## Screen layouts
 
 The DS has two screens, and there's more than one way to fit them on a
@@ -88,7 +92,7 @@ they are: 100%, 60%, 40% or 25% (40% by default).
 
 ### Big screen and inset
 
-These apply in both orientations:
+These apply in both orientations, straight away: no restart needed.
 
 | Option | Values | Default | What it does |
 | --- | --- | --- | --- |
