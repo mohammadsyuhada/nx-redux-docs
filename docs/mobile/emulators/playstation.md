@@ -1,13 +1,14 @@
 # PlayStation
 
-PlayStation games run on the bundled **PCSX-ReARMed** core. Games in a
-`PSX` folder run on **SwanStation**, as on the handheld.
+PlayStation games run on the bundled **PCSX-ReARMed** core by default, or
+on **SwanStation**. Both play from the same folder and share its battery
+saves and BIOS.
 
-| | PCSX-ReARMed | SwanStation |
+| | PCSX-ReARMed (default) | SwanStation |
 | --- | --- | --- |
-| Folder | `Roms/Sony PlayStation (PS)/` | `Roms/Sony PlayStation (PSX)/` |
-| Saves | `Saves/PS/` | `Saves/PSX/` |
-| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` is used when present. | Needed: `scph5500.bin` (Japan), `scph5501.bin` (USA) or `scph5502.bin` (Europe) in `Bios/PSX/` |
+| Folder | `Roms/Sony PlayStation (PS)/` | The same |
+| Saves | `Saves/PS/` | The same (save states stay per emulator) |
+| BIOS | Optional: a BIOS is built in. A real one in `Bios/PS/` is used when present. | Needed: `scph5500.bin` (Japan), `scph5501.bin` (USA) or `scph5502.bin` (Europe) in `Bios/PS/` |
 | [File types](index.md) | `chd` `cue` `bin` `img` `iso` `pbp` `toc` `mdf` `cbn` `m3u` | `chd` `cue` `bin` `img` `iso` `pbp` `ecm` `mds` `m3u` |
 
 !!! tip "Use a real BIOS"
@@ -15,9 +16,9 @@ PlayStation games run on the bundled **PCSX-ReARMed** core. Games in a
     For PCSX-ReARMed, put one of `psxonpsp660.bin`, `scph101.bin`,
     `scph5501.bin`, `scph7001.bin` or `scph1001.bin` in `Bios/PS/`.
 
-- To pick the emulator for a folder without a tag, or for one game, see
+- To use SwanStation for every PlayStation game, or for one game, see
   [Choosing an emulator](index.md#choosing-an-emulator).
-- **Graphics API** can switch a SwanStation (`PSX`) game to Vulkan. See
+- **Graphics API** can switch a SwanStation game to Vulkan. See
   [Graphics API](index.md#graphics-api).
 
 ## Controls
