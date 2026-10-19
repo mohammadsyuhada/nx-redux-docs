@@ -1,18 +1,66 @@
 # Sega Dreamcast
 
-Play Dreamcast games, plus the **Sega NAOMI** and **Sammy Atomiswave**
-arcade games built on the same hardware. They all run on **Flycast**, from one
-folder: `Roms/Dreamcast (DC)/`.
+Dreamcast games, plus the **Sega NAOMI** and **Sammy Atomiswave** arcade
+games built on the same hardware, run on the bundled **Flycast** core, from
+one folder.
+
+| | Flycast |
+| --- | --- |
+| Folder | `Roms/Dreamcast (DC)/` |
+| Saves | `Saves/DC/`: a memory card per game (see [Memory cards](#memory-cards-vmu)) |
+| BIOS | `Bios/DC/`: `dc_boot.bin` for discs, `naomi.zip` / `awbios.zip` for the arcade games (see [BIOS](#bios)) |
+| [File types](index.md) | `chd` `cdi` `gdi` `cue` `m3u`, a zip or 7z holding one disc, and NAOMI / Atomiswave zips |
+
+- **Graphics API** can switch a game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
+- Save states are large, about 36 MB each, so eight full slots for one game
+  take close to 300 MB.
+
+## Controls
 
 <figure class="nx-phone" markdown>
 ![Crazy Taxi 2 on the Fold's cover screen, with the Dreamcast pad: A, B, X and Y in the Dreamcast's colours](../../assets/screenshots/mobile/pad-dc.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
-Dreamcast has the [in-game menu](../in-game-menu.md) with save states and
-auto-resume, the [Game Switcher](../game-switcher.md), play time in the
-[Game Tracker](../game-tracker.md), and
-[RetroAchievements](#retroachievements) for disc games. It has no cheats.
+The face buttons map to the Dreamcast pad **by the printed letter**: `A`
+is the Dreamcast's `A`. The Dreamcast pad is lettered like an Xbox pad:
+
+| Position | Dreamcast button |
+| --- | --- |
+| Bottom | `A` |
+| Right | `B` |
+| Left | `X` |
+| Top | `Y` |
+
+| Control | Dreamcast control |
+| --- | --- |
+| D-pad | D-pad |
+| Left stick | Analog stick |
+| `L2` / `R2` | Analog triggers |
+| `START` | `START` |
+| `SELECT` | Insert a coin (NAOMI and Atomiswave) |
+| `L3` (press the left stick) | Test, the operator menu (NAOMI and Atomiswave) |
+| `R3` (press the right stick) | Service (NAOMI and Atomiswave) |
+
+- `MENU`, or `SELECT` + `START`, opens the
+  [in-game menu](../in-game-menu.md). On NAOMI and Atomiswave the game sees
+  the `SELECT` press first, so it may count a coin.
+- On a Nintendo-layout pad, set **Controller Layout** to **Xbox** in
+  **Options → Console Settings** to play with the Dreamcast's positions (see
+  [Controls](../controls.md#controller-buttons)).
+
+??? info "More detail"
+    - The on-screen pad draws `A` `B` `X` `Y` in the Dreamcast's colours, in
+      the positions above. With it, the in-game menu follows the drawn
+      letters: the bottom button (`A`) confirms and the right one (`B`) goes
+      back.
+    - On a controller, a "Press A" prompt means the button printed `A`. If a
+      controller is read wrongly, set **Controller Layout** to match it.
+    - `L3` and `R3` are on controllers only: the on-screen pad has no stick
+      buttons.
+    - On a controller the triggers press as far as you pull them. On the
+      on-screen pad, `L2` and `R2` press fully.
 
 ## BIOS
 
@@ -62,65 +110,9 @@ Roms/Dreamcast (DC)/
 A multi-disc game plays as one game from an `.m3u` that lists its discs; see
 [Multi-disc games](index.md#multi-disc-games).
 
-## Controls
-
-The face buttons map to the Dreamcast pad **by the printed letter**: `A`
-is the Dreamcast's `A`. The Dreamcast pad is lettered like an Xbox pad:
-
-| Position | Dreamcast button |
-| --- | --- |
-| Bottom | `A` |
-| Right | `B` |
-| Left | `X` |
-| Top | `Y` |
-
-| Control | Dreamcast control |
-| --- | --- |
-| D-pad | D-pad |
-| Left stick | Analog stick |
-| `L2` / `R2` | Analog triggers |
-| `START` | `START` |
-| `SELECT` | Insert a coin (NAOMI and Atomiswave) |
-| `L3` (press the left stick) | Test, the operator menu (NAOMI and Atomiswave) |
-| `R3` (press the right stick) | Service (NAOMI and Atomiswave) |
-
-- `MENU`, or `SELECT` + `START`, opens the
-  [in-game menu](../in-game-menu.md). On NAOMI and Atomiswave the game sees
-  the `SELECT` press first, so it may count a coin.
-- On a Nintendo-layout pad, set **Controller Layout** to **Xbox** in
-  **Options → Console Settings** to play with the Dreamcast's positions (see
-  [Controls](../controls.md#controller-buttons)).
-
-??? info "More detail"
-    - The on-screen pad draws `A` `B` `X` `Y` in the Dreamcast's colours, in
-      the positions above. With it, the in-game menu follows the drawn
-      letters: the bottom button (`A`) confirms and the right one (`B`) goes
-      back.
-    - On a controller, a "Press A" prompt means the button printed `A`. If a
-      controller is read wrongly, set **Controller Layout** to match it.
-    - `L3` and `R3` are on controllers only: the on-screen pad has no stick
-      buttons.
-    - On a controller the triggers press as far as you pull them. On the
-      on-screen pad, `L2` and `R2` press fully.
-
-## Multiplayer
-
-Up to four players can play, each on their own controller; see
-[Local Multiplayer](../multiplayer.md). On Dreamcast discs, games save to
-Player 1's memory card.
-
-??? info "More detail"
-    - NAOMI and Atomiswave games take up to four players too.
-    - On Dreamcast discs, every player's controller has the Vibration Pack,
-      and only Player 1's has a memory card.
-    - To give Players 2 to 4 a card, set **Device in Expansion Slot B1**,
-      **C1** or **D1** to **VMU** in
-      [Emulator Settings](../emulator-settings.md) under **Core settings**.
-
 ## Memory cards (VMU)
 
-Every game gets **its own memory card**, kept with your other
-[saves inside the app](../library.md#saves):
+Every game gets **its own memory card**:
 
 ```
 Saves/DC/<game>.A1.bin
@@ -141,13 +133,7 @@ Saves/DC/<game>.A1.bin
     - The arcade games keep their high scores and cabinet settings in
       `Saves/DC/reicast/`, with the other saves.
 
-## Save states
-
-Save states work as on every other system: eight slots, plus the auto-save
-when you quit. Each Dreamcast state is **about 36 MB**, so eight full slots
-for one game take close to 300 MB.
-
-## Settings
+## Core options
 
 Change Dreamcast's settings in the in-game menu under **Options → Core
 Options**, or outside a game in [Emulator Settings](../emulator-settings.md).
@@ -194,9 +180,25 @@ Flycast's version of MAME.
     - The game's own zip incomplete: **‹Game› needs ‹file›, which ‹set›.zip
       does not have: the set is incomplete or from another MAME version**
 
-## RetroAchievements
+## Multiplayer
 
-Dreamcast discs work with [RetroAchievements](../retroachievements.md) in
-`.chd`, `.gdi`, `.cue` and `.m3u`, and zipped discs once unpacked. `.cdi`
-games are not recognised, and NAOMI and Atomiswave games are not on
-RetroAchievements.
+Up to four players can play, each on their own controller; see
+[Local Multiplayer](../multiplayer.md). On Dreamcast discs, games save to
+Player 1's memory card.
+
+??? info "More detail"
+    - NAOMI and Atomiswave games take up to four players too.
+    - On Dreamcast discs, every player's controller has the Vibration Pack,
+      and only Player 1's has a memory card.
+    - To give Players 2 to 4 a card, set **Device in Expansion Slot B1**,
+      **C1** or **D1** to **VMU** in
+      [Emulator Settings](../emulator-settings.md) under **Core settings**.
+
+## Cheats and achievements
+
+- Cheats: not available. Flycast's libretro core doesn't take them, so the
+  in-game menu has no **Cheats** page for Dreamcast games.
+- [RetroAchievements](../retroachievements.md) works for Dreamcast discs in
+  `.chd`, `.gdi`, `.cue` and `.m3u`, and zipped discs once unpacked. `.cdi`
+  games are not recognised, and NAOMI and Atomiswave games are not on
+  RetroAchievements.
