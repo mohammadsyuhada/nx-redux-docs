@@ -13,6 +13,27 @@ screens.
 - `.cia` install files are not supported.
 - 3DS games are not on RetroAchievements in the app, and have no cheats.
 
+## Console Settings
+
+The 3DS's own options are in the in-game menu under **Options → Console
+Settings**, and for the console in
+[Emulator Settings](../emulator-settings.md). `LEFT` / `RIGHT` change a
+value; keep it for the game or the console with
+[Save Changes](../in-game-menu.md#save-changes).
+
+![Console Settings of a 3DS game in landscape: New 3DS Controls, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/3ds-console-settings.webp){ .nx-wide }
+
+| Row | Values | Default | See |
+| --- | --- | --- | --- |
+| **New 3DS Controls** | Auto, On, Off | Auto | [New 3DS controls](#new-3ds-controls) |
+| **Portrait Pad** | Shown, Hidden | Shown | [Portrait pad](#portrait-pad) |
+| **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
+
+Every row takes effect straight away; none needs the game restarted.
+**Graphics API** is read only when a game starts, so it's not here: set it
+in [Game Settings](../emulator-settings.md#game-settings) or Emulator
+Settings (see [Graphics API](index.md#graphics-api)).
+
 ## Controls
 
 <figure class="nx-phone" markdown>
