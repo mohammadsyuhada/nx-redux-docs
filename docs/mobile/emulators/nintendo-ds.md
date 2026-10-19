@@ -183,7 +183,22 @@ buttons sit over the lower half of the game instead. The arrow stays in the
 corner: long-press it again to bring the band back. A plain tap does
 nothing.
 
-![Kirby Mass Attack in portrait with the pad hidden: the two screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/ds-portrait-pad-hidden.webp)
+<div class="nx-phones" markdown>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack in portrait with the pad band shown, the arrow in its bottom-right corner ringed](../../assets/screenshots/mobile/ds-portrait-pad-shown-arrow.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Pad shown</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack in portrait with the pad hidden: the two screens fill the height, the see-through buttons over the lower half, the arrow ringed](../../assets/screenshots/mobile/ds-portrait-pad-hidden-arrow.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Pad hidden</p>
+</div>
+</div>
 
 The choice is **Portrait Pad** (Shown or Hidden) in **Options → Console
 Settings**, and the long-press saves it for the console.
