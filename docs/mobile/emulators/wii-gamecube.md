@@ -10,8 +10,7 @@ Wii and GameCube games run on the bundled **Dolphin** core.
 | [File types](index.md) | `wbfs` `wia` `rvz`, and `iso` `ciso` `gcz` `wad` `elf` `dol` `m3u` in the Wii folder | `gcm` `gcz` `tgc` `ciso`, and `iso` `elf` `dol` `m3u` in the GameCube folder |
 
 - A GameCube disc in the Wii folder plays as GameCube.
-- Saves sit with your other [saves inside the app](../library.md#saves). Save states are
-  large, about 100 MB each.
+- Save states are large, about 100 MB each.
 - **Graphics API** can switch a game to Vulkan. See
   [Graphics API](index.md#graphics-api).
 

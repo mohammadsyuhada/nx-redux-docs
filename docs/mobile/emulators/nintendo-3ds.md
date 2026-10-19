@@ -6,7 +6,7 @@ screens.
 | | Azahar |
 | --- | --- |
 | Folder | `Roms/Nintendo 3DS (3DS)/` |
-| Saves | `Saves/3DS/Azahar/` (the 3DS's own storage: its SD card and system memory), with your other [saves inside the app](../library.md#saves) |
+| Saves | `Saves/3DS/Azahar/` (the 3DS's own storage: its SD card and system memory) |
 | BIOS | Not needed |
 | [File types](index.md) | Decrypted `3ds` `cci` `cxi` `3dsx`, and their compressed versions `zcci` `zcxi` `z3dsx` |
 
