@@ -6,6 +6,7 @@ the two screens.
 | | melonDS DS |
 | --- | --- |
 | Folder | `Roms/Nintendo DS (NDS)/` |
+| Saves | `Saves/NDS/`, with your other [saves inside the app](../library.md#saves). Saves from other DS emulators carry over (see [below](#saves-from-other-ds-emulators)). |
 | BIOS | Not needed: free BIOS and firmware are built in. Real ones in `Bios/NDS/` are used when present. |
 | [File types](index.md) | `nds` (also inside a zip or 7z) |
 

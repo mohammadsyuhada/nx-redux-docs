@@ -5,10 +5,13 @@ Wii and GameCube games run on the bundled **Dolphin** core.
 | | Wii | GameCube |
 | --- | --- | --- |
 | Folder | `Roms/Nintendo Wii (WII)/` | `Roms/Nintendo GameCube (GC)/` |
+| Saves | Game saves in `Saves/WII/` | Memory cards in `Saves/GC/` |
 | BIOS | Not needed | Not needed |
 | [File types](index.md) | `wbfs` `wia` `rvz`, and `iso` `ciso` `gcz` `wad` `elf` `dol` `m3u` in the Wii folder | `gcm` `gcz` `tgc` `ciso`, and `iso` `elf` `dol` `m3u` in the GameCube folder |
 
 - A GameCube disc in the Wii folder plays as GameCube.
+- Saves sit with your other [saves inside the app](../library.md#saves). Save states are
+  large, about 100 MB each.
 - **Graphics API** can switch a game to Vulkan. See
   [Graphics API](index.md#graphics-api).
 
@@ -202,12 +205,6 @@ only at the next launch.
 
 **Wii Menu** in a game's HOME menu closes the game and goes back to the game
 list. Resuming later starts from the point saved when you pressed `HOME`.
-
-## Saves
-
-- Wii game saves are in `Saves/WII/`, and GameCube memory cards in
-  `Saves/GC/`, with your other [saves inside the app](../library.md#saves).
-- Save states work as on other consoles. They are large, about 100 MB each.
 
 ## Multiplayer
 
