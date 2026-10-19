@@ -251,9 +251,12 @@
 .md-typeset .nx-layouts img { width: 10rem; max-width: none; height: auto; }
 .md-typeset .nx-layouts td:first-child { min-width: 9rem; }
 
-/* A landscape screenshot that reads better at the full column width than the half every screenshot gets on a wide
-   screen (the black border is outside the box, so it is taken off). */
-.md-typeset img.nx-wide { max-width: calc(100% - 10px); }
+/* A landscape screenshot: 60% of the column on a wide screen (where the others get half), the whole column below it
+   (the black border is outside the box, so it is taken off). */
+.md-typeset img.nx-wide { width: calc(100% - 10px); max-width: none; }
+@media screen and (min-width: 60em) {
+  .md-typeset img.nx-wide { width: 60%; }
+}
 
 /* Two framed phone shots side by side, each with a short caption under it (the 3DS's regular and New 3DS pads); they
    stack on a narrow screen. The caption sits outside the figure, whose height the screen's position depends on. */

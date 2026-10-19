@@ -38,7 +38,7 @@ In landscape the pad splits into two clusters over the game:
 - The shoulders, the d-pad and the face buttons sit at the bottom.
 - Both clusters keep clear of the camera cutout, on whichever side it is.
 
-![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp)
+![The landscape pad over a Sega Genesis game, system buttons at the top](../assets/screenshots/mobile/pad-landscape.webp){ .nx-wide }
 
 **Pad Opacity (landscape)** sets how opaque the clusters are (40% by
 default). It is in the in-game menu under **Options →

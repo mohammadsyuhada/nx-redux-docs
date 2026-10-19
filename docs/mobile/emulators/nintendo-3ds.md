@@ -173,7 +173,7 @@ Games that use the 3DS's gyroscope and tilt read your phone's: turn or tip
 the phone the way you would turn or tip a 3DS. In Mario Kart 7's first-person
 view, for example, you steer by turning the phone.
 
-![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp)
+![Mario Kart 7's first-person view, steered by turning the phone](../../assets/screenshots/mobile/3ds-motion.webp){ .nx-wide }
 
 Motion is always on, like on a 3DS. Hold the phone the way the game expects,
 as you would a 3DS.

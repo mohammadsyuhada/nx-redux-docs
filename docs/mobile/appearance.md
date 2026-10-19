@@ -9,7 +9,7 @@ pad, the text size and the colours. The menu styles have their own category,
 - With touch alone, a tap on **Accent** or **Secondary accent** opens a
   dropdown of the colours (see [Settings](settings.md)).
 
-![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp)
+![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
 
 | Setting | What it does | Values | Default |
 | --- | --- | --- | --- |

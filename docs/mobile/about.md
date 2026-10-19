@@ -3,7 +3,7 @@
 **Tools → Settings → About** shows the app's version and your device's
 details. The rows are read-only.
 
-![Settings, with About open beside the sections](../assets/screenshots/mobile/settings-about.webp)
+![Settings, with About open beside the sections](../assets/screenshots/mobile/settings-about.webp){ .nx-wide }
 
 | Row | What it shows |
 | --- | --- |

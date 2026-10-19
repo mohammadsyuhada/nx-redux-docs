@@ -3,7 +3,7 @@
 **Tools → Game Tracker** shows how long you have played each game. The app
 records every play session on its own, with nothing to set up.
 
-![Game Tracker: 1m 52s in the title, then each game with its box art, total, average session and play count, from Kirby - Nightmare in Dream Land down](../assets/screenshots/mobile/game-tracker.webp)
+![Game Tracker: 1m 52s in the title, then each game with its box art, total, average session and play count, from Kirby - Nightmare in Dream Land down](../assets/screenshots/mobile/game-tracker.webp){ .nx-wide }
 
 - The title shows your total play time, such as **Game Tracker: 41m 10s**.
 - Games are listed by play time, most played first.
@@ -29,7 +29,7 @@ game's name when they open beside the list on a wide screen): the
 game's total time, play count and when you last played it, then every session
 with its date, time and length, newest first.
 
-![Game Tracker in two panes: the games on the left, and Kirby - Nightmare in Dream Land's 2m 4s total, 3 plays, when it was last played and its three sessions on the right](../assets/screenshots/mobile/game-tracker-sessions.webp)
+![Game Tracker in two panes: the games on the left, and Kirby - Nightmare in Dream Land's 2m 4s total, 3 plays, when it was last played and its three sessions on the right](../assets/screenshots/mobile/game-tracker-sessions.webp){ .nx-wide }
 
 `B` goes back to the list. The page also has the game's play-time actions,
 the same as [Options](#options):

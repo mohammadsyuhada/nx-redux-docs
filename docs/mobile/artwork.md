@@ -4,7 +4,7 @@
 through your whole library in the background, and you can keep playing while
 it runs.
 
-![Tools → Artwork: 27 games · 26 with art · 1 missing, the source line, then Fetch missing art, Fetch by console and Settings](../assets/screenshots/mobile/artwork.webp)
+![Tools → Artwork: 27 games · 26 with art · 1 missing, the source line, then Fetch missing art, Fetch by console and Settings](../assets/screenshots/mobile/artwork.webp){ .nx-wide }
 
 The page opens with your counts, such as **217 games · 148 with art · 69
 missing**, and these rows:
@@ -63,7 +63,7 @@ Choose **Fetch missing art** for everything, or **Fetch by console** to pick
 one. Fetch by console lists each console with how many of its games lack
 art, such as **Dreamcast 6 missing**. Press `A` **Fetch** on one.
 
-![Artwork → Fetch by console beside the Artwork page, listing each console with its missing count, such as Game Boy 1 missing](../assets/screenshots/mobile/artwork-fetch-by-console.webp)
+![Artwork → Fetch by console beside the Artwork page, listing each console with its missing count, such as Game Boy 1 missing](../assets/screenshots/mobile/artwork-fetch-by-console.webp){ .nx-wide }
 
 First-run setup can start the same fetch for you. See
 [Getting Started](getting-started.md).
@@ -82,7 +82,7 @@ Starting a fetch opens **Progress**. It shows how far it is and the time
 left, such as **1 / 2 · ~1 min left**, and each game's status, such as
 **Done**, **Partial** or **Not found**.
 
-![Artwork → Progress during a one-game fetch: 0 / 1 · ~1 min left, Pause and Cancel, and Zelda Links Awakening Searching](../assets/screenshots/mobile/artwork-progress.webp)
+![Artwork → Progress during a one-game fetch: 0 / 1 · ~1 min left, Pause and Cancel, and Zelda Links Awakening Searching](../assets/screenshots/mobile/artwork-progress.webp){ .nx-wide }
 
 | Button | What it does |
 | --- | --- |
@@ -161,7 +161,7 @@ art**. The app fetches that game straight away. `B` cancels. See
 **Artwork → Settings** holds what to fetch, your accounts and keys, and
 Reset artwork, on one page.
 
-![Artwork → Settings beside the Artwork page: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork…](../assets/screenshots/mobile/artwork-settings.webp)
+![Artwork → Settings beside the Artwork page: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork…](../assets/screenshots/mobile/artwork-settings.webp){ .nx-wide }
 
 | Row | Default | What it does |
 | --- | --- | --- |

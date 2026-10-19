@@ -4,7 +4,7 @@
 sets each emulator's options for a whole console, without starting a game
 first.
 
-![Settings, with Emulators open beside the sections: Default emulators, Settings and Saves](../assets/screenshots/mobile/settings-emulators.webp)
+![Settings, with Emulators open beside the sections: Default emulators, Settings and Saves](../assets/screenshots/mobile/settings-emulators.webp){ .nx-wide }
 
 For one game, use **Game Settings** in the game's context menu instead. See
 [Game Settings](#game-settings).
@@ -15,7 +15,7 @@ The page lists each emulator that runs one of your consoles, with the tags it
 covers, such as **Gambatte GB · GBC**. Press `A` on an emulator. When it
 covers more than one tag, the app asks for the console first.
 
-![Emulator Settings beside the Settings sections, listing each emulator with its tag, such as Gambatte GB](../assets/screenshots/mobile/emulator-settings.webp)
+![Emulator Settings beside the Settings sections, listing each emulator with its tag, such as Gambatte GB](../assets/screenshots/mobile/emulator-settings.webp){ .nx-wide }
 
 ??? info "More detail"
 
@@ -31,7 +31,7 @@ The page is titled with the emulator, the console and the tag, such as
 | **Console settings** | The app's own settings for the console, such as **Controller Layout**. The same rows as the in-game [Console Settings](in-game-menu.md#console-settings) page, plus the ones read only when a game starts, such as **Graphics API**. |
 | **Core settings** | The emulator's own options. Rows with `›` open a group of options, such as **Video** or **Audio**. |
 
-![PicoDrive for Sega Genesis (MD): Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp)
+![PicoDrive for Sega Genesis (MD): Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp){ .nx-wide }
 
 - `LEFT` and `RIGHT` change a value. `A` steps it forward too.
 - Each change is saved straight away. There is no **Save** row.
@@ -91,7 +91,7 @@ Some consoles can run on more than one emulator. **Tools → Settings →
 Emulators → Default emulators** picks the emulator for a game with
 no emulator of its own.
 
-![Default emulators beside the Settings sections: one row per console, with the consoles that have only one emulator, such as Game Boy, dimmed](../assets/screenshots/mobile/default-emulators.webp)
+![Default emulators beside the Settings sections: one row per console, with the consoles that have only one emulator, such as Game Boy, dimmed](../assets/screenshots/mobile/default-emulators.webp){ .nx-wide }
 
 Each console you have games for has a row, showing its emulator and tag,
 such as **gpSP (GBA)**. On a console with more than one emulator, `A`,
