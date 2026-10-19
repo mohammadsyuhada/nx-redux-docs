@@ -83,8 +83,9 @@ match, and Player 2 gets the same pad.
 
 ## Multiplayer
 
-- Two players can play, each on their own controller; see
-  [Local Multiplayer](../multiplayer.md).
+- Two players can play on the Genesis, Sega CD, 32X, Master System and
+  SG-1000, each on their own controller; see
+  [Local Multiplayer](../multiplayer.md). The Game Gear is one player.
 - Every Sega console here also plays over [Netplay](../netplay.md).
 
 ## Cheats and achievements
