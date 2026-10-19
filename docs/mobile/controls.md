@@ -104,18 +104,21 @@ the portrait pad:
 
 The landscape clusters always stay Charcoal.
 
-<div class="grid" markdown>
-
+<div class="nx-phones" markdown>
+<div markdown>
 <figure class="nx-phone" markdown>
-![The portrait pad in Charcoal](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
+![Settings → Appearance with Pad theme set to Charcoal: the dark pad below](../assets/screenshots/mobile/pad-charcoal.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
-
+<p class="nx-phones__caption">Charcoal</p>
+</div>
+<div markdown>
 <figure class="nx-phone" markdown>
-![The portrait pad in Retro](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
+![Settings → Appearance with Pad theme set to Retro: a light grey pad with magenta face buttons](../assets/screenshots/mobile/pad-retro.webp){ .nx-phone__screen }
 ![](../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
-
+<p class="nx-phones__caption">Retro</p>
+</div>
 </div>
 
 ## Controller buttons
