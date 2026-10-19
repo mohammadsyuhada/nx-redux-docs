@@ -15,10 +15,22 @@ screens.
 
 ## Controls
 
+<div class="nx-phones" markdown>
+<div markdown>
 <figure class="nx-phone" markdown>
 ![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
+<p class="nx-phones__caption">The 3DS pad</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Mario Kart 7 on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">With <a href="#new-3ds-controls">New 3DS controls</a></p>
+</div>
+</div>
 
 The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
 the d-pad and the Circle Pad. Games that use the New 3DS buttons also get
@@ -149,11 +161,6 @@ as you would a 3DS.
       turning the phone does nothing.
 
 ## New 3DS controls
-
-<figure class="nx-phone" markdown>
-![Mario Kart 7 on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
-![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
-</figure>
 
 **New 3DS Controls** adds `ZL` and `ZR` and the C-stick to the on-screen pad.
 Set it for the console in [Emulator Settings](../emulator-settings.md), or
