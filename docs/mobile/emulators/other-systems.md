@@ -1,8 +1,6 @@
 # Other Systems
 
-The other bundled systems play as you would expect. The
-[Sega consoles](sega.md) and the [Game Boys](game-boy.md) have their own
-pages. This page lists only
+The other bundled systems play as you would expect. This page lists only
 what is special about each one. `MENU`, or `SELECT` + `START`, opens the
 [in-game menu](../in-game-menu.md) on every system.
 
