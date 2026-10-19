@@ -210,13 +210,19 @@ Stylus mode is off each time a game starts, and is not saved.
 ## Portrait pad
 
 In portrait, long-press the arrow in the pad's bottom-right corner to hide
-the pad band: the screens get its room and the see-through landscape buttons
-sit over the lower half of the game. Long-press the arrow again to bring the
-band back. It's **Portrait Pad** in **Options → Console Settings**, and the
-long-press saves it for the console.
+the pad band. The two screens get its room, and the see-through landscape
+buttons sit over the lower half of the game instead. The arrow stays in the
+corner: long-press it again to bring the band back. A plain tap does
+nothing.
 
-![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
+![Mario Kart 7 in portrait with the pad hidden: the two screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
 
-Touch follows the [touch rule](#touch): swap the bottom screen up with
-**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
-controller connected the buttons hide.
+The choice is **Portrait Pad** (Shown or Hidden) in **Options → Console
+Settings**, and the long-press saves it for the console.
+
+??? info "More detail"
+    - Touch follows the [touch rule](#touch): swap the bottom screen up with
+      **SWAP** to touch it, or use [stylus mode](#stylus-mode).
+    - With a controller connected the see-through buttons hide too, as in
+      landscape.
+    - Landscape is not affected.

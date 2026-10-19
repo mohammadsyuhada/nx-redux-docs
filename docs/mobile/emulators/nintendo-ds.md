@@ -183,8 +183,8 @@ The choice is **Portrait Pad** (Shown or Hidden) in **Options → Console
 Settings**, and the long-press saves it for the console.
 
 ??? info "More detail"
-    - Only the screen above the buttons takes touches. Swap the bottom screen
-      up with **SWAP**, or use [stylus mode](#stylus-mode).
+    - Touch follows the [touch rule](#touch): swap the bottom screen up with
+      **SWAP** to touch it, or use [stylus mode](#stylus-mode).
     - With a controller connected the see-through buttons hide too, as in
       landscape.
     - Landscape is not affected.
