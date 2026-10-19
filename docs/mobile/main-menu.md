@@ -4,7 +4,7 @@ The main menu is split into four tabs: **Home**, **Consoles**,
 **Collections** and **Tools**. The app opens on Home, or on the first tab you
 have not hidden.
 
-![Home in Grid, with Dragon Ball Z - The Legacy of Goku II on the Continue card under the This month and Most played strip](../assets/screenshots/mobile/home.webp)
+![Home in Grid: the Home, Consoles and Tools tabs at the top, the This month and Most played strip, Streets of Rage 2 on the Continue card beside the pinned tools, and the button hints along the bottom](../assets/screenshots/mobile/home.webp)
 
 Each tab and the game lists can be drawn in different styles, picked in
 [Menu Layouts](layouts.md): see [Home](#home), [Consoles](#consoles),
