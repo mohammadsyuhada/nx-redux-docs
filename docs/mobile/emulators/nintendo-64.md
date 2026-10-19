@@ -39,29 +39,11 @@ Nintendo console: the button printed `A` is the N64's `A`.
 - `MENU`, or `SELECT` + `START`, still opens the
   [in-game menu](../in-game-menu.md).
 
-## Console Settings
-
-The in-game menu's **Options → Console Settings** has one row for the
-Nintendo 64, also set for the console in
-[Emulator Settings](../emulator-settings.md). `LEFT` / `RIGHT` change it;
-keep it for the game or the console with
-[Save Changes](../in-game-menu.md#save-changes).
-
-![Super Mario 64's in-game Console Settings in landscape: Controller Layout](../../assets/screenshots/mobile/n64-console-settings.webp){ .nx-wide }
-
-| Row | Values | Default | See |
-| --- | --- | --- | --- |
-| **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
-
-It takes effect straight away. **Graphics API** is read only when a game
-starts, so it's not here: set it in
-[Game Settings](../emulator-settings.md#game-settings) or Emulator Settings
-(see [Graphics API](index.md#graphics-api)).
-
 ??? info "More detail"
-    **Controller Layout** names your controller's letters if it is read
-    wrongly. Set it to the layout that isn't your controller's to swap
-    `A`/`B` and `X`/`Y`.
+    **Controller Layout** in **Options → Console Settings** names your
+    controller's letters if it is read wrongly. Set it to the layout that
+    isn't your controller's to swap `A`/`B` and `X`/`Y`; see
+    [Controls](../controls.md#controller-buttons).
 
 ## Rumble
 
