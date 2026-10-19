@@ -98,11 +98,11 @@ the on-screen pad labels `L1` and `R1` as **L** and **R**. The DS has no
 | `R2` | Swap the big screen. |
 | `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen and Large screen. |
 | `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
-| `L2` | Turn stylus mode on or off, or start touch mode (see below). |
+| `L2` | Turn stylus mode on or off. |
 | `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
 
 The layout hotkeys (`R2` and `SELECT` + a direction) are saved straight
-away, without Save Changes. Stylus mode and touch mode are not saved.
+away, without Save Changes. Stylus mode is not saved.
 
 ??? info "More detail"
     - A short label shows the new setting.
@@ -132,23 +132,18 @@ controller.
 While the on-screen buttons are over the game (landscape without a
 controller, or portrait with the [pad hidden](#portrait-pad)), only the big
 screen takes touches: in picture in picture, large screen and single screen
-the big one, in stacked and side by side the first one. Make the bottom
-screen the big one with `R2`, or in landscape use touch mode.
+the big one, in stacked and side by side the first one.
 
-**Touch mode:** in landscape, `L2` hides the on-screen buttons and shows the
-bottom screen big, so you can touch it. The **Controls** button in a free
-corner brings the buttons back.
+**For games that need buttons and touch together**, press `R2` to make the
+bottom screen the big one. Then touch it anywhere between the buttons while
+you play with them. Single screen, large screen or picture in picture give
+the bottom screen the most room.
 
 ??? info "More detail"
-    - Touch mode starts with the on-screen buttons shown and stylus mode off.
-      With stylus mode on, `L2` turns stylus mode off first.
-    - In single screen and picture in picture, the bottom screen becomes the
-      big one. Side by side already shows it full size.
-    - Rotating the phone, or connecting or disconnecting a controller, also
-      ends touch mode.
-    - `R2` does nothing in touch mode, and touch mode is not saved.
-
-![Touch mode in landscape: the bottom screen big, the pad hidden and a Controls button in the top-right corner](../../assets/screenshots/mobile/ds-touch-mode.webp)
+    - The see-through buttons still take the touches that land on them. To
+      reach something under a button, such as a menu item in a corner of the
+      bottom screen, use [stylus mode](#stylus-mode) or turn the phone to
+      portrait.
 
 ## Portrait pad
 

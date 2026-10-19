@@ -342,7 +342,7 @@ console's page:
 | Console | Its own buttons |
 | --- | --- |
 | [Nintendo 3DS](emulators/nintendo-3ds.md#controls) | `SELECT` + `R1` swaps screens, `SELECT` + `L1` turns stylus mode on, `SELECT` + `LEFT` / `RIGHT` changes the layout, `L2` / `R2` are `ZL` / `ZR`, the right stick is the C-stick |
-| [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode or touch mode on |
+| [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode on |
 | [Sega Dreamcast, NAOMI, Atomiswave](emulators/dreamcast.md#controls) | Analog `L2` / `R2`, and on the arcade boards `SELECT` for a coin, `L3` for Test and `R3` for Service |
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
 | [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by letter, `Z` on `L2`, the C buttons on the right stick |
