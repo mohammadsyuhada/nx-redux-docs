@@ -9,102 +9,42 @@ the two screens.
 | BIOS | Not needed: free BIOS and firmware are built in. Real ones in `Bios/NDS/` are used when present. |
 | [File types](index.md) | `nds` (also inside a zip or 7z) |
 
-## Screen layouts
-
-The layout options are in the in-game menu under **Options → Console
-Settings**. Keep them for the game or console with
-[Save Changes](../in-game-menu.md#save-changes).
-
-### Portrait layouts
-
-**Layout (portrait)** sets how the two screens share a portrait screen:
-
-| Layout | What you see |
-| --- | --- |
-| **Auto** (default) | **Stacked** when both screens fit the width, else **Picture in picture**. |
-| **Picture in picture** | One screen big, the other small in a corner. |
-| **Stacked** | One screen above the other. |
-| **Single screen** | Only the big screen. |
-
-<div class="grid" markdown>
-
-![A DS game in portrait, Stacked: the top screen above the bottom screen](../../assets/screenshots/mobile/ds-portrait-stacked.webp)
-
-![A DS game in portrait, Picture in picture: the bottom screen small in the bottom-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)
-
-![A DS game in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/ds-portrait-single.webp)
-
-</div>
-
-With a controller connected, the on-screen pad goes away and the screens get
-the full height. **Layout (portrait, controller)** is used then: same
-choices, **Stacked** by default.
-
-??? info "More detail"
-    - A clip-on controller that holds the phone keeps the pad band and the
-      normal portrait layout. The GameSir Pocket Taco is recognised as one.
-      The 8BitDo FlipPad is expected to be recognised too.
-    - Screen Scaling and the screen offsets don't apply to the DS screens.
-
-### Landscape layouts
-
-**Layout (landscape)** sets how the two screens share a landscape screen:
-
-| Layout | What you see |
-| --- | --- |
-| **Side by side** (default) | Each screen takes half the width. |
-| **Single screen** | The big screen only, centred. |
-| **Picture in picture** | The big screen centred, the other small in a corner. |
-
-![A DS game in landscape, Side by side: the two screens next to each other, with the on-screen pad over them](../../assets/screenshots/mobile/ds-landscape-side-by-side.webp)
-
-![A DS game in landscape, Single screen: the top screen centred](../../assets/screenshots/mobile/ds-landscape-single.webp)
-
-![A DS game in landscape, Picture in picture: the bottom screen small in the bottom-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)
-
-Without a controller, the on-screen buttons sit over the game in landscape.
-**Pad Opacity (landscape)** in **Options → Frontend** sets how opaque
-they are: 100%, 60%, 40% or 25% (40% by default).
-
-![A DS title screen in landscape with the on-screen pad at 40% opacity over it](../../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
-
-### Big screen and inset
-
-These apply in both orientations:
-
-| Option | Values | Default | What it does |
-| --- | --- | --- | --- |
-| **Big Screen** | Top screen, Bottom screen | Top screen | The screen shown big in picture in picture and single screen, and first in stacked and side by side. |
-| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Bottom right | Where the small screen sits in picture in picture. |
-| **Inset Size** | Small, Medium, Large | Medium | The small screen's width: 25%, 33% or 40% of the big screen's width. |
-| **Inset Opacity** | 100%, 75%, 50% | 100% | How opaque the small screen is. Below 100%, the big screen shows through it. |
-
-??? info "More detail"
-    - The small screen in picture in picture never takes touches.
-    - Overlays are off while the DS screens are drawn apart. The **Overlay**
-      row shows **Unavailable**.
-    - Shader presets apply to the big screen, and to both screens in stacked
-      and side by side.
-
 ## Controls
 
-The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own.
-On top of that, with a controller or the on-screen pad:
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack on the Fold's cover screen, with the DS pad: L and R, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
+The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own:
+the on-screen pad labels `L1` and `R1` as **L** and **R**. Two more buttons
+on the pad are the app's:
+
+- **STYLUS** turns [stylus mode](#stylus-mode) on or off. It stays pressed in
+  while stylus mode is on.
+- **SWAP** swaps the big screen.
+
+In portrait they sit either side of `MENU` and `STICK`. Over the game
+(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
+under `MENU` and **SWAP** under `START`.
+
+With a controller or the on-screen pad:
 
 | Buttons | What they do |
 | --- | --- |
-| `R2` | Swap the big screen. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked and Single screen. |
+| `R2` on a controller, or **SWAP** | Swap the big screen. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen, Large screen and Side by side. |
 | `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
-| `L2` | Turn stylus mode on or off, or start touch mode (see below). |
+| `L2` on a controller, or **STYLUS** | Turn stylus mode on or off. |
 | `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
 
-The layout hotkeys (`R2` and `SELECT` + a direction) are saved straight
-away, without Save Changes. Stylus mode and touch mode are not saved.
+The layout hotkeys (swap and `SELECT` + a direction) are saved straight
+away, without Save Changes. Stylus mode is not saved.
 
 ??? info "More detail"
     - A short label shows the new setting.
-    - `L2` and `R2` never reach the game: the DS has no such buttons.
+    - A controller's `L2` and `R2` never reach the game: the DS has no such
+      buttons.
     - `SELECT` on its own still reaches the game. Only `SELECT` + a direction
       is kept by the app.
     - A controller's left stick works as the d-pad, except in stylus mode,
@@ -115,34 +55,160 @@ away, without Save Changes. Stylus mode and touch mode are not saved.
     settings. Later **Save for console** changes don't reach it until you use
     **Restore defaults** in that game.
 
+## Console Settings
+
+The DS's own options are in the in-game menu under **Options → Console
+Settings**, and for the console in
+[Emulator Settings](../emulator-settings.md). `LEFT` / `RIGHT` change a
+value; keep it for the game or the console with
+[Save Changes](../in-game-menu.md#save-changes).
+
+![Console Settings of a DS game in landscape: the three Layout rows, Big Screen, the three Inset rows, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/ds-console-settings.webp){ .nx-wide }
+
+| Row | Values | Default | See |
+| --- | --- | --- | --- |
+| **Layout (portrait)** | Auto, Picture in picture, Stacked, Single screen, Large screen, Side by side | Auto | [Screen layouts](#screen-layouts) |
+| **Layout (portrait, controller)** | The same | Stacked | [Screen layouts](#screen-layouts) |
+| **Layout (landscape)** | Side by side, Single screen, Picture in picture, Large screen, Stacked | Stacked | [Screen layouts](#screen-layouts) |
+| **Big Screen** | Top screen, Bottom screen | Top screen | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Top right | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Size** | Small, Medium, Large | Medium | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Opacity** | 100%, 75%, 50% | 100% | [Big screen and inset](#big-screen-and-inset) |
+| **Portrait Pad** | Shown, Hidden | Shown | [Portrait pad](#portrait-pad) |
+| **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
+
+Every row takes effect straight away; none needs the game restarted. Only
+**Render Mode** in **Core Options** waits for the next start (see
+[3D rendering](#3d-rendering)).
+
+## Screen layouts
+
+The DS has two screens, and there's more than one way to fit them on a
+phone. Pick a layout for each orientation to suit the game and how you
+like to play: both screens the same size, one big with the other small, or
+just one. The pictures are in portrait; landscape draws the same layouts
+across the wider screen. Portrait and landscape keep their own layout, so turning the
+phone switches between them, and `SELECT` + `LEFT` / `RIGHT` changes the
+one you're in without opening the menu.
+
+<div class="nx-layouts" markdown>
+
+| Layout | Picture |
+| --- | --- |
+| **Stacked**<br>One screen above the other. In landscape the first takes three quarters of the height and the other is a third of its size. | [![A DS game, Stacked: the top screen above the bottom screen](../../assets/screenshots/mobile/ds-portrait-stacked.webp)](../../assets/screenshots/mobile/ds-portrait-stacked.webp) |
+| **Picture in picture**<br>One screen big, the other small in a corner over it. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)](../../assets/screenshots/mobile/ds-portrait-pip.webp) |
+| **Large screen**<br>One screen big, the other small next to it: above or below it in portrait, beside it in landscape. `SELECT` + `UP` / `DOWN` moves the small screen to another [corner](#controls). | [![A DS game, Large screen: the bottom screen small above the top screen, at the right](../../assets/screenshots/mobile/ds-portrait-large.webp)](../../assets/screenshots/mobile/ds-portrait-large.webp) |
+| **Single screen**<br>Only the big screen. | [![A DS game, Single screen: only the top screen](../../assets/screenshots/mobile/ds-portrait-single.webp)](../../assets/screenshots/mobile/ds-portrait-single.webp) |
+| **Side by side**<br>Each screen takes half the width. | [![A DS game, Side by side: the two screens next to each other](../../assets/screenshots/mobile/ds-portrait-side-by-side.webp)](../../assets/screenshots/mobile/ds-portrait-side-by-side.webp) |
+| **Auto**<br>**Stacked** when both screens fit the width, else **Picture in picture**. Portrait only. |  |
+
+</div>
+
+**Layout (portrait)** and **Layout (landscape)** in
+[Console Settings](#console-settings) pick the layout for each orientation:
+**Auto** in portrait and **Stacked** in landscape by default.
+
+With a controller connected, the on-screen pad goes away in portrait and the
+screens get the full height. **Layout (portrait, controller)** is used then:
+same choices, **Stacked** by default.
+
+Without a controller, the on-screen buttons sit over the game in landscape.
+**Pad Opacity (landscape)** in **Options → Frontend** sets how opaque
+they are: 100%, 60%, 40% or 25% (40% by default).
+
+??? info "More detail"
+    - A clip-on controller that holds the phone keeps the pad band and the
+      normal portrait layout. The GameSir Pocket Taco is recognised as one.
+      The 8BitDo FlipPad is expected to be recognised too.
+    - Screen Scaling and the screen offsets don't apply to the DS screens.
+
+### Big screen and inset
+
+These apply in both orientations, straight away: no restart needed.
+
+| Option | Values | Default | What it does |
+| --- | --- | --- | --- |
+| **Big Screen** | Top screen, Bottom screen | Top screen | The screen shown big in picture in picture, large screen and single screen, and first in stacked and side by side. |
+| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Top right | Where the small screen sits in picture in picture and large screen. |
+| **Inset Size** | Small, Medium, Large | Medium | The small screen's width in picture in picture and large screen: 25%, 33% or 40% of the big screen's width. |
+| **Inset Opacity** | 100%, 75%, 50% | 100% | How opaque the small screen is. Below 100%, the big screen shows through it. |
+
+??? info "More detail"
+    - Overlays are off while the DS screens are drawn apart. The **Overlay**
+      row shows **Unavailable**.
+    - Shader presets apply to the big screen, and to both screens in portrait
+      stacked and side by side. The small screen of picture in picture, large
+      screen and landscape stacked is drawn without them.
+
 ## Stylus mode
 
-In stylus mode, the d-pad or left stick moves a pen on the bottom screen,
-faster the longer you hold it, and `A` touches at the pen. Stylus mode is off
-each time a game starts.
+In stylus mode a dot on the bottom screen is the pen, for touching it without
+your finger.
+
+| Control | What it does |
+| --- | --- |
+| D-pad or left stick | Move the dot. The d-pad speeds up the longer you hold it. |
+| `A` | Touch at the dot. |
+| **STYLUS**, or `L2` on a controller | Turn stylus mode on or off. |
+
+Stylus mode is off each time a game starts, and is not saved.
 
 ## Touch
 
-Touch the bottom screen when it is drawn full size (not as the small inset).
+Touch the bottom screen wherever it is drawn, as long as the on-screen
+buttons aren't over the game: in portrait with the pad band, or with a
+controller.
 
-- In portrait, touch always works.
-- In landscape, it works with a controller. Without one, the on-screen
-  buttons cover the game, so use touch mode.
+While the on-screen buttons are over the game (landscape without a
+controller, or portrait with the [pad hidden](#portrait-pad)), only the main
+screen takes touches: the big one, or the first (top or left) when both are
+the same size.
 
-**Touch mode:** in landscape, `L2` hides the on-screen buttons and shows the
-bottom screen big, so you can touch it. The **Controls** button in a free
-corner brings the buttons back.
+**For games that need buttons and touch together**, press **SWAP** to make
+the bottom screen the main one. Then touch it anywhere between the buttons
+while you play with them. A layout with one big screen gives it the most
+room.
 
 ??? info "More detail"
-    - Touch mode starts with the on-screen buttons shown and stylus mode off.
-      With stylus mode on, `L2` turns stylus mode off first.
-    - In single screen and picture in picture, the bottom screen becomes the
-      big one. Side by side already shows it full size.
-    - Rotating the phone, or connecting or disconnecting a controller, also
-      ends touch mode.
-    - `R2` does nothing in touch mode, and touch mode is not saved.
+    - The see-through buttons still take the touches that land on them. To
+      reach something under a button, such as a menu item in a corner of the
+      bottom screen, use [stylus mode](#stylus-mode), whose pen reaches the
+      bottom screen either way, or turn the phone to portrait.
 
-![Touch mode in landscape: the bottom screen big, the pad hidden and a Controls button in the top-right corner](../../assets/screenshots/mobile/ds-touch-mode.webp)
+## Portrait pad
+
+In portrait, long-press the arrow in the pad's bottom-right corner to hide
+the pad band. The two screens get its room, and the see-through landscape
+buttons sit over the lower half of the game instead. The arrow stays in the
+corner: long-press it again to bring the band back. A plain tap does
+nothing.
+
+<div class="nx-phones" markdown>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack in portrait with the pad band shown, the arrow in its bottom-right corner ringed](../../assets/screenshots/mobile/ds-portrait-pad-shown-arrow.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Pad shown</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack in portrait with the pad hidden: the two screens fill the height, the see-through buttons over the lower half, the arrow ringed](../../assets/screenshots/mobile/ds-portrait-pad-hidden-arrow.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Pad hidden</p>
+</div>
+</div>
+
+The choice is **Portrait Pad** (Shown or Hidden) in **Options → Console
+Settings**, and the long-press saves it for the console.
+
+??? info "More detail"
+    - Touch follows the [touch rule](#touch): swap the bottom screen up with
+      **SWAP** to touch it, or use [stylus mode](#stylus-mode).
+    - With a controller connected the see-through buttons hide too, as in
+      landscape.
+    - Landscape is not affected.
 
 ## 3D rendering
 

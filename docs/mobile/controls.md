@@ -10,6 +10,9 @@ four people can play one game; see [Local Multiplayer](multiplayer.md).
   main menu, the game lists and the Game Switcher.
     - In a game, the band goes away while a controller is connected, so the
       game gets the full height.
+    - Nintendo DS and 3DS games can hide the band for see-through buttons:
+      long-press the arrow in its bottom-right corner. See
+      [Nintendo DS](emulators/nintendo-ds.md#portrait-pad).
     - On the main menu the band stays with a controller. Turn it off with
       [**Menu pad**](controls-settings.md#menu-pad).
 - **Landscape:** the buttons sit in two clusters over the game. See
@@ -338,8 +341,8 @@ console's page:
 
 | Console | Its own buttons |
 | --- | --- |
-| [Nintendo 3DS](emulators/nintendo-3ds.md#controls) | `SELECT` + `R1` swaps screens, `SELECT` + `L1` turns stylus mode on, `SELECT` + `LEFT` / `RIGHT` changes the layout, `L2` / `R2` are `ZL` / `ZR`, the right stick is the C-stick |
-| [Nintendo DS](emulators/nintendo-ds.md#controls) | `R2` swaps screens, `SELECT` + a direction changes the layout or inset, `L2` turns stylus mode or touch mode on |
+| [Nintendo 3DS](emulators/nintendo-3ds.md#controls) | **SWAP** or `SELECT` + `R1` swaps screens, **STYLUS** or `SELECT` + `L1` turns stylus mode on, `SELECT` + `LEFT` / `RIGHT` changes the layout, `L2` / `R2` are `ZL` / `ZR`, the right stick is the C-stick |
+| [Nintendo DS](emulators/nintendo-ds.md#controls) | **SWAP** or `R2` swaps screens, `SELECT` + a direction changes the layout or inset, **STYLUS** or `L2` turns stylus mode on |
 | [Sega Dreamcast, NAOMI, Atomiswave](emulators/dreamcast.md#controls) | Analog `L2` / `R2`, and on the arcade boards `SELECT` for a coin, `L3` for Test and `R3` for Service |
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
 | [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by letter, `Z` on `L2`, the C buttons on the right stick |

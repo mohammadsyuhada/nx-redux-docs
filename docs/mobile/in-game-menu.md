@@ -138,7 +138,7 @@ To set these before a game starts, for a whole emulator or one game, use
       highlighted, the description lines show your progress, such as
       `12 / 40 unlocked`, or **Not recognised**.
     - **Console Settings** holds the controller rows, the Nintendo DS screen
-      layouts and the Nintendo 3DS New 3DS Controls.
+      layouts, the Nintendo 3DS New 3DS Controls and Portrait Pad for both.
     - The line under the list says which settings the game uses right now:
       **Using defaults.**, **Using console config.** or **Using game config.**
     - Two things are saved straight away instead: the Nintendo DS layout
@@ -155,13 +155,16 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | --- | --- | --- | --- |
 | **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
 | **Controller Layout** | Every console | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect |
-| **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
+| **Layout (portrait)** and the other screen rows | Nintendo DS, Nintendo 3DS | See [Nintendo DS](emulators/nintendo-ds.md) and [Nintendo 3DS](emulators/nintendo-3ds.md) | |
 | **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
+| **Portrait Pad** | Nintendo DS, Nintendo 3DS | Shown, Hidden | Shown |
 | **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) | Auto |
 
 - **Controller Type** is the Sega pad the game sees.
 - **Controller Layout** names the letters printed on your controller. See
   [Controls](controls.md#controller-buttons).
+- **Portrait Pad** hides the portrait pad band for the see-through buttons.
+  See [Nintendo DS](emulators/nintendo-ds.md#portrait-pad).
 
 Settings the game reads only when it starts, such as **Graphics API**, aren't
 here. Set them in [Game Settings](emulator-settings.md#game-settings) or
