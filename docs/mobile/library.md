@@ -234,12 +234,9 @@ Use **Add to Collection** in the game-list context menu.
 Battery saves and save states are kept inside the app, not in the home
 folder.
 
-- **Tools → Settings → Emulators → Saves → Export saves** writes one zip of
-  your saves, states and slot pictures, which unzips onto a handheld card as it
-  is.
-- **Import saves**, on the same page, reads from the home folder, a zip file
-  or another folder. A newer file replaces the app's copy, which is kept as a
-  `.bak`.
+**Tools → Settings → Emulators → Saves → Export saves** writes one zip of
+your saves, states and slot pictures, which unzips onto a handheld card as it
+is.
 
 !!! warning "Export before uninstalling"
     Saves are stored inside the app, so export them before you uninstall the
@@ -247,7 +244,68 @@ folder.
 
 Nothing in the app deletes a ROM.
 
+### Import saves
+
+**Tools → Settings → Emulators → Saves → Import saves** copies saves into the
+app. First-run setup offers the same choices on its **Bring your saves** step.
+
+| Option | Reads |
+|--------|-------|
+| **From a folder** | Any folder you pick. |
+| **From a zip file** | Any zip you pick, such as one from **Export saves**. |
+| **From RetroArch** | RetroArch's own `saves/` and `states/` folders. |
+
+- **Copy only.** The files you import from are never moved, changed or
+  deleted.
+- **Any layout.** A folder or zip can follow the handheld's card layout, or
+  hold all your save files in one place. Saves are matched to your games by
+  name, so `Pokemon Emerald.srm` goes with `Pokemon Emerald.gba`.
+- **`.srm` and `.sav`** both work, and so do RetroArch's compressed saves.
+  Each one is saved in your **Save format**.
+- **Newer wins.** When the app already has a save for that game, the newer
+  one is kept. The older copy is kept as a `.bak`.
+- **Save states never overwrite.** An imported state goes into its own slot
+  when it's free, otherwise into the first free slot.
+
+When the import is done, a results page lists what came in, what was already
+there, and each file it skipped, with the reason.
+
+| Reason | What it means |
+|--------|---------------|
+| **no matching game** | No game in your library has that name. |
+| **matches** *two consoles* | Games on two consoles have that name, and the folder doesn't say which. |
+| **phone copy is newer** | The app's save for that game is newer. |
+| **no free slot** | All 8 state slots for that game are taken. |
+| **can't tell the core** | A save state whose emulator can't be told from where it was. |
+| **could not be read** | The file couldn't be read, or is damaged. |
+
+!!! warning "Imported save states may not load"
+    A save state loads only in the emulator that made it, with the same BIOS
+    setting. A state from RetroArch's mGBA, for example, needs mGBA, and
+    **Use BIOS File if Found** set the way RetroArch had it. If a state won't
+    load, use the battery save: it works in any emulator for that console.
+
 ??? info "More detail"
+    - **From RetroArch** reads `Android/media/com.retroarch/RetroArch/`, and
+      RetroArch Plus and 32-bit's folders when they're there. Without
+      **All files access** it asks you to pick RetroArch's folder.
+    - RetroArch's folder names, such as `saves/mGBA/`, tell the import which
+      console and emulator a file is for. A save in one folder for all
+      consoles is matched by name alone.
+    - A state is only taken when its emulator can be told: from RetroArch's
+      folder for that emulator, from the handheld's card layout, or when its
+      console has a single emulator. Loose states in a folder or zip of your
+      own are skipped.
+    - A game in your home folder and an extra folder counts once.
+    - Files that aren't saves or states, such as ROMs and configs, are only
+      counted, as **other files ignored**.
+    - Running the same import again shows the files as **already here**.
+    - A folder or zip in the handheld's card layout is copied as it is laid
+      out, saves for games you haven't added yet included. A save from
+      `Saves/GPGX/` goes with the console whose games hold its game. With
+      none or several, it goes to Sega Genesis.
+
+??? info "More detail: where saves are kept"
     - Saves are kept in the handheld's card layout. The home folder holds
       only `Roms/`, `Bios/` and `Collections/`.
     - Saves and BIOS are kept per console, in `Saves/<TAG>/` and
@@ -263,8 +321,6 @@ Nothing in the app deletes a ROM.
       GX. When two consoles' saves would meet under one name there, both keep
       their console folders (`Saves/MD/`, `Saves/SMS/`), so neither is
       dropped.
-    - An import puts a save from `Saves/GPGX/` with the console whose games
-      hold its game. With none or several, it goes to Sega Genesis.
 
 ## Unpacked games cache
 
