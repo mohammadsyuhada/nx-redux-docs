@@ -33,7 +33,12 @@ value; keep it for the game or the console with
 
 ## Screen layouts
 
-The layout rows are in [Console Settings](#console-settings).
+The DS has two screens, and there's more than one way to fit them on a
+phone. Pick a layout for each orientation to suit the game and how you
+like to play: both screens the same size, one big with the other small, or
+just one. Portrait and landscape keep their own layout, so turning the
+phone switches between them, and `SELECT` + `LEFT` / `RIGHT` changes the
+one you're in without opening the menu.
 
 ### Portrait layouts
 
