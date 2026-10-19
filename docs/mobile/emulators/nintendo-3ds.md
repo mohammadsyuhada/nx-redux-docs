@@ -11,7 +11,6 @@ screens.
 
 - **Encrypted games don't load.** Decrypt them first.
 - `.cia` install files are not supported.
-- 3DS games are not on RetroAchievements in the app, and have no cheats.
 - **Graphics API** can switch a game to Vulkan. See
   [Graphics API](index.md#graphics-api).
 
@@ -256,3 +255,9 @@ Settings**, and the long-press saves it for the console.
     - With a controller connected the see-through buttons hide too, as in
       landscape.
     - Landscape is not affected.
+
+## Cheats and achievements
+
+- Cheats: not available. Azahar's libretro core doesn't support them, so the
+  in-game menu has no **Cheats** page for 3DS games.
+- RetroAchievements: not available for 3DS games in the app.

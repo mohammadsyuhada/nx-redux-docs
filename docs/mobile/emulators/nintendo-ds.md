@@ -225,6 +225,12 @@ by default. Some games slow down at 4× or higher.
       shows **GPU renderer unavailable — using software** once. The next
       launch tries the GPU again.
 
+## Cheats and achievements
+
+- [Cheats](../cheats.md): the cheat download has codes for Nintendo DS
+  games, or add your own `.cht` files.
+- [RetroAchievements](../retroachievements.md) works for Nintendo DS games.
+
 ## Saves from other DS emulators
 
 Battery saves from the older melonDS core and from DraStic carry over. Save
