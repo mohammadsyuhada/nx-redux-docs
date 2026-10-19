@@ -10,6 +10,9 @@ four people can play one game; see [Local Multiplayer](multiplayer.md).
   main menu, the game lists and the Game Switcher.
     - In a game, the band goes away while a controller is connected, so the
       game gets the full height.
+    - Nintendo DS and 3DS games can hide the band for see-through buttons:
+      long-press the arrow in its bottom-right corner. See
+      [Nintendo DS](emulators/nintendo-ds.md#portrait-pad).
     - On the main menu the band stays with a controller. Turn it off with
       [**Menu pad**](controls-settings.md#menu-pad).
 - **Landscape:** the buttons sit in two clusters over the game. See

@@ -25,14 +25,17 @@ Settings**. Keep them for the game or console with
 | **Picture in picture** | One screen big, the other small in a corner. |
 | **Stacked** | One screen above the other. |
 | **Single screen** | Only the big screen. |
+| **Large screen** | One screen big, the other small above or below it, at the inset corner's side. |
 
 <div class="grid" markdown>
 
 ![A DS game in portrait, Stacked: the top screen above the bottom screen](../../assets/screenshots/mobile/ds-portrait-stacked.webp)
 
-![A DS game in portrait, Picture in picture: the bottom screen small in the bottom-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)
+![A DS game in portrait, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-portrait-pip.webp)
 
 ![A DS game in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/ds-portrait-single.webp)
+
+![A DS game in portrait, Large screen: the bottom screen small above the top screen, at the right](../../assets/screenshots/mobile/ds-portrait-large.webp)
 
 </div>
 
@@ -55,18 +58,24 @@ choices, **Stacked** by default.
 | **Side by side** (default) | Each screen takes half the width. |
 | **Single screen** | The big screen only, centred. |
 | **Picture in picture** | The big screen centred, the other small in a corner. |
+| **Large screen** | The big screen, the other small beside it, level with its top or bottom edge. |
+| **Stacked** | The big screen above, taking three quarters of the height; the other below it, a third of its size. |
 
 ![A DS game in landscape, Side by side: the two screens next to each other, with the on-screen pad over them](../../assets/screenshots/mobile/ds-landscape-side-by-side.webp)
 
 ![A DS game in landscape, Single screen: the top screen centred](../../assets/screenshots/mobile/ds-landscape-single.webp)
 
-![A DS game in landscape, Picture in picture: the bottom screen small in the bottom-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)
+![A DS game in landscape, Picture in picture: the bottom screen small in the top-right corner](../../assets/screenshots/mobile/ds-landscape-pip.webp)
+
+![A DS game in landscape, Large screen: the bottom screen small beside the top screen, at its top right](../../assets/screenshots/mobile/ds-landscape-large.webp)
+
+![A DS game in landscape, Stacked: the top screen big, the bottom screen small below it](../../assets/screenshots/mobile/ds-landscape-stacked.webp)
 
 Without a controller, the on-screen buttons sit over the game in landscape.
 **Pad Opacity (landscape)** in **Options → Frontend** sets how opaque
 they are: 100%, 60%, 40% or 25% (40% by default).
 
-![A DS title screen in landscape with the on-screen pad at 40% opacity over it](../../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
+![A DS game in landscape with the on-screen pad at 40% opacity over it](../../assets/screenshots/mobile/ds-landscape-pad-opacity.webp)
 
 ### Big screen and inset
 
@@ -74,27 +83,34 @@ These apply in both orientations:
 
 | Option | Values | Default | What it does |
 | --- | --- | --- | --- |
-| **Big Screen** | Top screen, Bottom screen | Top screen | The screen shown big in picture in picture and single screen, and first in stacked and side by side. |
-| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Bottom right | Where the small screen sits in picture in picture. |
-| **Inset Size** | Small, Medium, Large | Medium | The small screen's width: 25%, 33% or 40% of the big screen's width. |
+| **Big Screen** | Top screen, Bottom screen | Top screen | The screen shown big in picture in picture, large screen and single screen, and first in stacked and side by side. |
+| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Top right | Where the small screen sits in picture in picture and large screen. |
+| **Inset Size** | Small, Medium, Large | Medium | The small screen's width in picture in picture and large screen: 25%, 33% or 40% of the big screen's width. |
 | **Inset Opacity** | 100%, 75%, 50% | 100% | How opaque the small screen is. Below 100%, the big screen shows through it. |
 
 ??? info "More detail"
-    - The small screen in picture in picture never takes touches.
     - Overlays are off while the DS screens are drawn apart. The **Overlay**
       row shows **Unavailable**.
-    - Shader presets apply to the big screen, and to both screens in stacked
-      and side by side.
+    - Shader presets apply to the big screen, and to both screens in portrait
+      stacked and side by side. The small screen of picture in picture, large
+      screen and landscape stacked is drawn without them.
 
 ## Controls
 
-The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own.
-On top of that, with a controller or the on-screen pad:
+<figure class="nx-phone" markdown>
+![Kirby Mass Attack on the Fold's cover screen, with the DS pad: L and R on the outside, Stylus and Swap inside them](../../assets/screenshots/mobile/pad-ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
+The face buttons, d-pad, `L1`, `R1`, `START` and `SELECT` are the DS's own:
+the on-screen pad labels `L1` and `R1` as **L** and **R**. The DS has no
+`L2` or `R2`, so the pad labels them by what they do here: **Stylus** and
+**Swap**. With a controller or the on-screen pad:
 
 | Buttons | What they do |
 | --- | --- |
 | `R2` | Swap the big screen. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked and Single screen. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen and Large screen. |
 | `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
 | `L2` | Turn stylus mode on or off, or start touch mode (see below). |
 | `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
@@ -123,11 +139,15 @@ each time a game starts.
 
 ## Touch
 
-Touch the bottom screen when it is drawn full size (not as the small inset).
+Touch the bottom screen wherever it is drawn, as long as the on-screen
+buttons aren't over the game: in portrait with the pad band, or with a
+controller.
 
-- In portrait, touch always works.
-- In landscape, it works with a controller. Without one, the on-screen
-  buttons cover the game, so use touch mode.
+While the on-screen buttons are over the game (landscape without a
+controller, or portrait with the [pad hidden](#portrait-pad)), only the big
+screen takes touches: in picture in picture, large screen and single screen
+the big one, in stacked and side by side the first one. Make the bottom
+screen the big one with `R2`, or in landscape use touch mode.
 
 **Touch mode:** in landscape, `L2` hides the on-screen buttons and shows the
 bottom screen big, so you can touch it. The **Controls** button in a free
@@ -143,6 +163,26 @@ corner brings the buttons back.
     - `R2` does nothing in touch mode, and touch mode is not saved.
 
 ![Touch mode in landscape: the bottom screen big, the pad hidden and a Controls button in the top-right corner](../../assets/screenshots/mobile/ds-touch-mode.webp)
+
+## Portrait pad
+
+In portrait, long-press the arrow in the pad's bottom-right corner to hide
+the pad band. The two screens get its room, and the see-through landscape
+buttons sit over the lower half of the game instead. The arrow stays in the
+corner: long-press it again to bring the band back. A plain tap does
+nothing.
+
+![Kirby Mass Attack in portrait with the pad hidden: the two screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/ds-portrait-pad-hidden.webp)
+
+The choice is **Portrait Pad** (Shown or Hidden) in **Options → Console
+Settings**, and the long-press saves it for the console.
+
+??? info "More detail"
+    - Only the screen above the buttons takes touches. Swap the bottom screen
+      up with `R2`, or use [stylus mode](#stylus-mode).
+    - With a controller connected the see-through buttons hide too, as in
+      landscape.
+    - Landscape is not affected.
 
 ## 3D rendering
 

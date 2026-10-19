@@ -16,12 +16,13 @@ screens.
 ## Controls
 
 <figure class="nx-phone" markdown>
-![Majora's Mask 3D on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
+![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
 The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
-the d-pad and the Circle Pad.
+the d-pad and the Circle Pad. Games that use the New 3DS buttons also get
+`ZL`, `ZR` and the C-stick: see [New 3DS controls](#new-3ds-controls).
 
 The 3DS shortcuts are all `SELECT` combos, because `L2` and `R2` are the
 3DS's own `ZL` and `ZR`:
@@ -83,6 +84,11 @@ as you would a 3DS.
 
 ## New 3DS controls
 
+<figure class="nx-phone" markdown>
+![Majora's Mask 3D on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+
 **New 3DS Controls** adds `ZL` and `ZR` and the C-stick to the on-screen pad.
 Set it for the console in [Emulator Settings](../emulator-settings.md), or
 in the in-game menu under **Options → Console Settings**, where
@@ -126,8 +132,54 @@ Stylus mode is off each time a game starts, and is not saved.
 
 ## Screen layout
 
+| Layout | What you see |
+| --- | --- |
+| **Top over bottom** (default) | The top screen above the bottom screen. In landscape the top screen takes three quarters of the height and the bottom screen is a third of its size. |
+| **Large screen** | The top screen big, the bottom screen small at its top right. |
+| **Side by side** | The two screens next to each other. |
+| **Single screen** | Only the top screen. |
+
+`SELECT` + `R1` swaps which screen is the big or upper one, in every layout.
 `SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
 without Save Changes.
+
+### Portrait
+
+<div class="grid" markdown>
+
+![Mario Kart 7 in portrait, Top over bottom: the top screen above the bottom screen](../../assets/screenshots/mobile/3ds-portrait-top-over-bottom.webp)
+
+![Mario Kart 7 in portrait, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-portrait-large.webp)
+
+![Mario Kart 7 in portrait, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-portrait-side-by-side.webp)
+
+![Mario Kart 7 in portrait, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-portrait-single.webp)
+
+</div>
+
+### Landscape
+
+![Mario Kart 7 in landscape, Top over bottom: the top screen big, the bottom screen a third of its size below it](../../assets/screenshots/mobile/3ds-landscape-top-over-bottom.webp)
+
+![Mario Kart 7 in landscape, Large screen: the top screen big, the bottom screen small at its top right](../../assets/screenshots/mobile/3ds-landscape-large.webp)
+
+![Mario Kart 7 in landscape, Side by side: the two screens next to each other](../../assets/screenshots/mobile/3ds-landscape-side-by-side.webp)
+
+![Mario Kart 7 in landscape, Single screen: only the top screen](../../assets/screenshots/mobile/3ds-landscape-single.webp)
+
+### Portrait pad
+
+In portrait, long-press the arrow in the pad's bottom-right corner to hide
+the pad band: the screens get its room and the see-through landscape buttons
+sit over the lower half of the game. Long-press the arrow again to bring the
+band back. It's **Portrait Pad** in **Options → Console Settings**, and the
+long-press saves it for the console.
+
+![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
+
+Touches under the see-through buttons don't reach the game, so swap the
+bottom screen up with `SELECT` + `R1` to touch it, or use
+[stylus mode](#stylus-mode). With a controller connected the buttons hide.
 
 ??? info "More detail"
     - The layout is Azahar's **Screen Layout** option, so you can also set it
