@@ -80,6 +80,37 @@ use the 3DS's positions on an Xbox pad (`A` on the right), set
     - After a combo (`SELECT` + `R1`, `L1`, `LEFT`, `RIGHT` or `START`) the
       game gets nothing.
 
+### New 3DS controls
+
+**New 3DS Controls** adds `ZL` and `ZR` and the C-stick to the on-screen pad.
+Set it for the console in [Emulator Settings](../emulator-settings.md), or
+in the in-game menu under **Options → Console Settings**, where
+[Save Changes](../in-game-menu.md#save-changes) keeps it for the game or the
+console:
+
+| Value | What the pad shows |
+| --- | --- |
+| **Auto** (default) | The extra controls for games known to use them, such as Majora's Mask 3D (camera). |
+| **On** | The extra controls for every game. |
+| **Off** | No extra controls. |
+
+A controller's right stick, `L2` and `R2` always reach the game, whatever
+the setting. Azahar runs as a New 3DS, so Circle Pad Pro games work without
+extra setup.
+
+??? info "More detail"
+    - **Auto** covers games that use the C-stick, `ZL` / `ZR` or the Circle
+      Pad Pro, such as Majora's Mask 3D, Monster Hunter 4 Ultimate and
+      Xenoblade Chronicles 3D.
+    - `ZL` and `ZR` sit where `L2` and `R2` are on other consoles. The
+      C-stick is centred under `SELECT` and `START` in portrait, and at the
+      top left of the face buttons in landscape.
+    - A change in the in-game menu updates the pad straight away.
+
+    **Auto** finds the game by the title ID in `.3ds`, `.cci` and `.cxi`
+    files. It can't read the compressed `zcci`, `zcxi` and `z3dsx` files or
+    `3dsx` files, so for those set **On** yourself.
+
 ## Console Settings
 
 The 3DS's own options are in the in-game menu under **Options → Console
@@ -153,37 +184,6 @@ as you would a 3DS.
       paused, in the in-game menu, or in the background.
     - On a phone without a gyroscope, tilting still works, but aiming by
       turning the phone does nothing.
-
-## New 3DS controls
-
-**New 3DS Controls** adds `ZL` and `ZR` and the C-stick to the on-screen pad.
-Set it for the console in [Emulator Settings](../emulator-settings.md), or
-in the in-game menu under **Options → Console Settings**, where
-[Save Changes](../in-game-menu.md#save-changes) keeps it for the game or the
-console:
-
-| Value | What the pad shows |
-| --- | --- |
-| **Auto** (default) | The extra controls for games known to use them, such as Majora's Mask 3D (camera). |
-| **On** | The extra controls for every game. |
-| **Off** | No extra controls. |
-
-A controller's right stick, `L2` and `R2` always reach the game, whatever
-the setting. Azahar runs as a New 3DS, so Circle Pad Pro games work without
-extra setup.
-
-??? info "More detail"
-    - **Auto** covers games that use the C-stick, `ZL` / `ZR` or the Circle
-      Pad Pro, such as Majora's Mask 3D, Monster Hunter 4 Ultimate and
-      Xenoblade Chronicles 3D.
-    - `ZL` and `ZR` sit where `L2` and `R2` are on other consoles. The
-      C-stick is centred under `SELECT` and `START` in portrait, and at the
-      top left of the face buttons in landscape.
-    - A change in the in-game menu updates the pad straight away.
-
-    **Auto** finds the game by the title ID in `.3ds`, `.cci` and `.cxi`
-    files. It can't read the compressed `zcci`, `zcxi` and `z3dsx` files or
-    `3dsx` files, so for those set **On** yourself.
 
 ## Stylus mode
 
