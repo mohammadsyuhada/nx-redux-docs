@@ -9,13 +9,31 @@ the two screens.
 | BIOS | Not needed: free BIOS and firmware are built in. Real ones in `Bios/NDS/` are used when present. |
 | [File types](index.md) | `nds` (also inside a zip or 7z) |
 
-## Screen layouts
+## Console Settings
 
-The layout options are in the in-game menu under **Options → Console
-Settings**. Keep them for the game or console with
+The DS's own options are in the in-game menu under **Options → Console
+Settings**, and for the console in
+[Emulator Settings](../emulator-settings.md). `LEFT` / `RIGHT` change a
+value; keep it for the game or the console with
 [Save Changes](../in-game-menu.md#save-changes).
 
-![Console Settings of a DS game: the three Layout rows, Big Screen, the three Inset rows, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/ds-console-settings.webp)
+![Console Settings of a DS game in landscape: the three Layout rows, Big Screen, the three Inset rows, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/ds-console-settings.webp)
+
+| Row | Values | Default | See |
+| --- | --- | --- | --- |
+| **Layout (portrait)** | Auto, Picture in picture, Stacked, Single screen, Large screen | Auto | [Portrait layouts](#portrait-layouts) |
+| **Layout (portrait, controller)** | The same | Stacked | [Portrait layouts](#portrait-layouts) |
+| **Layout (landscape)** | Side by side, Single screen, Picture in picture, Large screen, Stacked | Stacked | [Landscape layouts](#landscape-layouts) |
+| **Big Screen** | Top screen, Bottom screen | Top screen | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Corner** | Top left, Top right, Bottom left, Bottom right | Top right | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Size** | Small, Medium, Large | Medium | [Big screen and inset](#big-screen-and-inset) |
+| **Inset Opacity** | 100%, 75%, 50% | 100% | [Big screen and inset](#big-screen-and-inset) |
+| **Portrait Pad** | Shown, Hidden | Shown | [Portrait pad](#portrait-pad) |
+| **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
+
+## Screen layouts
+
+The layout rows are in [Console Settings](#console-settings).
 
 ### Portrait layouts
 
