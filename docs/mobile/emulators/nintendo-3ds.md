@@ -12,6 +12,8 @@ screens.
 - **Encrypted games don't load.** Decrypt them first.
 - `.cia` install files are not supported.
 - 3DS games are not on RetroAchievements in the app, and have no cheats.
+- **Graphics API** can switch a game to Vulkan. See
+  [Graphics API](index.md#graphics-api).
 
 ## Controls
 

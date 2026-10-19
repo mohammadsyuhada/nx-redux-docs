@@ -16,12 +16,36 @@ Wii and GameCube games run on the bundled **Dolphin** core.
     The first launch copies Dolphin's system files, which takes a second or
     two.
 
-## GameCube controls
+## Controls
 
+<div class="nx-phones nx-phones--three" markdown>
+<div markdown>
 <figure class="nx-phone" markdown>
 ![Mario Kart: Double Dash with the GameCube pad: L, R and Z on top, the C-stick, a green A and a red B](../../assets/screenshots/mobile/pad-gc.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
+<p class="nx-phones__caption">GameCube</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![New Super Mario Bros. Wii with the sideways Wiimote pad: −, HOME, +, Shake, A, B, 1 and 2](../../assets/screenshots/mobile/pad-wii.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Sideways Wiimote</p>
+</div>
+<div markdown>
+<figure class="nx-phone" markdown>
+![Super Mario Galaxy 2 with the Wiimote + Nunchuk pad: the Nunchuk stick, C, Z, A, B, Shake and Shake N](../../assets/screenshots/mobile/pad-wii-nunchuk.webp){ .nx-phone__screen }
+![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
+</figure>
+<p class="nx-phones__caption">Wiimote + Nunchuk</p>
+</div>
+</div>
+
+The on-screen pad follows the console: the GameCube pad for GameCube games,
+and for Wii games the controller **Wii Controller** picks (see [Wii](#wii)).
+
+### GameCube
 
 The on-screen pad is the GameCube's. `STICK` switches the d-pad to the
 control stick.
@@ -48,7 +72,7 @@ A controller adds:
 | Left stick | The control stick |
 | Right stick | The C-stick |
 
-## Wii controls
+### Wii
 
 A Wii game needs a Wiimote, held one way or another, or another Wii
 controller. **Wii Controller** picks it:
@@ -61,23 +85,8 @@ controller. **Wii Controller** picks it:
 | **Wiimote + Nunchuk** | A Wiimote with the Nunchuk |
 | **Classic Controller** | The Classic Controller Pro |
 
-Change it in the in-game menu under **Options → Console Settings**. It
-applies straight away, and [Save Changes](../in-game-menu.md#save-changes)
-keeps it for the game or the console.
-
-<div class="grid" markdown>
-
-<figure class="nx-phone" markdown>
-![New Super Mario Bros. Wii with the sideways Wiimote pad: −, HOME, +, Shake, A, B, 1 and 2](../../assets/screenshots/mobile/pad-wii.webp){ .nx-phone__screen }
-![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
-</figure>
-
-<figure class="nx-phone" markdown>
-![Super Mario Galaxy 2 with the Wiimote + Nunchuk pad: the Nunchuk stick, C, Z, A, B, Shake and Shake N](../../assets/screenshots/mobile/pad-wii-nunchuk.webp){ .nx-phone__screen }
-![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
-</figure>
-
-</div>
+It's a row in [Console Settings](#console-settings) and applies straight
+away.
 
 The on-screen pad follows the controller you picked. Its extra buttons:
 
@@ -116,7 +125,34 @@ recentres motion. With a Wiimote, the right stick moves the pointer.
     The sideways Wiimote works like the NES pad: printed `A` is `2` and
     printed `B` is `1`.
 
-### Pointing
+## Console Settings
+
+The rows that apply while you play are in the in-game menu under **Options →
+Console Settings**, and for the console in
+[Emulator Settings](../emulator-settings.md). `LEFT` / `RIGHT` change a
+value; keep it for the game or the console with
+[Save Changes](../in-game-menu.md#save-changes).
+
+![Super Mario Galaxy 2's in-game Console Settings in landscape: Wii Controller, Motion Controls and Controller Layout](../../assets/screenshots/mobile/wii-console-settings.webp){ .nx-wide }
+
+| Row | Values | Default | See |
+| --- | --- | --- | --- |
+| **Wii Controller** (Wii) | Auto, Sideways Wiimote, Wiimote, Wiimote + Nunchuk, Classic Controller | Auto | [Wii](#wii) |
+| **Motion Controls** (Wii) | Auto, On, Off | Auto | [Motion controls](#motion-controls) |
+| **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
+
+These take effect straight away. A few more are read only when the game
+starts, so they're not in the in-game menu: set them in
+[Game Settings](../emulator-settings.md#game-settings) for one game, or in
+Emulator Settings for the console. They apply at the next start.
+
+| Row | Values | Default | See |
+| --- | --- | --- | --- |
+| **Wii Screen** (Wii) | Auto, 4:3, 16:9 | Auto | [Wii Screen](#wii-screen) |
+| **Pointer Width**, **Pointer Height**, **Pointer Offset** (Wii) | 50% to 150%, 50% to 150%, −20 to +20 | 100%, 100%, 0 | [Pointing](#pointing) |
+| **Graphics API** | Auto, OpenGL ES, Vulkan | Auto | [Graphics API](index.md#graphics-api) |
+
+## Pointing
 
 With a Wiimote, touch the picture to aim. The cursor jumps to your finger
 and stays where you lift it. A controller's right stick moves it too.
@@ -133,7 +169,7 @@ that game in [Game Settings](../emulator-settings.md#game-settings).
     | **Pointer Height** | 50% to 150% | The same, up and down. |
     | **Pointer Offset** | −20 to +20 | Moves the cursor up (+) or down (−) against your finger. |
 
-### Motion controls
+## Motion controls
 
 Tilt and turn the phone to move the Wiimote. **Motion Controls** sets when
 the phone's motion is used:
@@ -153,7 +189,7 @@ the phone's motion is used:
     - The sensors only run while you play.
     - The Classic Controller has no motion, whatever the setting.
 
-### Wii Screen
+## Wii Screen
 
 **Wii Screen** is the shape the Wii draws: **Auto** (default), **4:3** or
 **16:9**. **Auto** picks 4:3 when the game starts in portrait and 16:9 in
@@ -162,23 +198,10 @@ landscape. Set it in [Game Settings](../emulator-settings.md#game-settings).
 The shape is read when the game starts, so rotating the phone changes it
 only at the next launch.
 
-### The Wii Menu
+## The Wii Menu
 
 **Wii Menu** in a game's HOME menu closes the game and goes back to the game
 list. Resuming later starts from the point saved when you pressed `HOME`.
-
-## Console Settings
-
-![Super Mario Galaxy 2's in-game Console Settings: Wii Controller, Motion Controls and Controller Layout](../../assets/screenshots/mobile/wii-console-settings.webp)
-
-The in-game **Options → Console Settings** page has the rows that apply
-while you play: **Wii Controller**, **Motion Controls** and **Controller
-Layout**.
-
-**Wii Screen**, the **Pointer** rows and **Graphics API** are read when the
-game starts. They are set in
-[Game Settings](../emulator-settings.md#game-settings) for one game, or in
-[Emulator Settings](../emulator-settings.md) for the console.
 
 ## Saves
 
