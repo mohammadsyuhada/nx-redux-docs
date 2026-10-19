@@ -49,7 +49,7 @@ the 3DS's own `ZL` and `ZR`:
 | --- | --- |
 | `SELECT` + `R1`, or **SWAP** | Swap the screens. |
 | `SELECT` + `L1`, or **STYLUS** | Turn stylus mode on or off. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout: **Top over bottom**, **Large screen**, **Side by side**, **Single screen**, and round again. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in: **Top over bottom**, **Large screen**, **Side by side**, **Single screen**, and round again. |
 | `SELECT` + `START`, or `MENU` | Open the [in-game menu](../in-game-menu.md). |
 
 A controller adds:
@@ -88,10 +88,13 @@ Settings**, and for the console in
 value; keep it for the game or the console with
 [Save Changes](../in-game-menu.md#save-changes).
 
-![Console Settings of a 3DS game in landscape: New 3DS Controls, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/3ds-console-settings.webp){ .nx-wide }
+![Console Settings of a 3DS game in landscape: the three Layout rows, New 3DS Controls, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/3ds-console-settings.webp){ .nx-wide }
 
 | Row | Values | Default | See |
 | --- | --- | --- | --- |
+| **Layout (portrait)** | Top over bottom, Large screen, Side by side, Single screen | Top over bottom | [Screen layouts](#screen-layouts) |
+| **Layout (portrait, controller)** | The same | Top over bottom | [Screen layouts](#screen-layouts) |
+| **Layout (landscape)** | The same | Top over bottom | [Screen layouts](#screen-layouts) |
 | **New 3DS Controls** | Auto, On, Off | Auto | [New 3DS controls](#new-3ds-controls) |
 | **Portrait Pad** | Shown, Hidden | Shown | [Portrait pad](#portrait-pad) |
 | **Controller Layout** | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect | [Controls](../controls.md#controller-buttons) |
@@ -117,8 +120,13 @@ Settings (see [Graphics API](index.md#graphics-api)).
 The pictures are in portrait; landscape draws the same layouts across the
 wider screen. **SWAP** (or `SELECT` + `R1`) swaps which screen is the big
 or upper one, in every layout.
-`SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
-without Save Changes.
+
+As on the DS, each orientation keeps its own layout: **Layout (portrait)**
+and **Layout (landscape)** in [Console Settings](#console-settings), all
+**Top over bottom** by default. With a controller connected the on-screen
+pad goes away in portrait and **Layout (portrait, controller)** is used.
+`SELECT` + `LEFT` / `RIGHT` changes the one you're in and saves it for the
+game straight away, without Save Changes.
 
 ### Portrait pad
 
@@ -135,9 +143,8 @@ Touch follows the [touch rule](#touch): swap the bottom screen up with
 controller connected the buttons hide.
 
 ??? info "More detail"
-    - The layout is Azahar's **Screen Layout** option, so you can also set it
-      in **Core Options**, or for the console in
-      [Emulator Settings](../emulator-settings.md).
+    - The app sets Azahar's own **Screen Layout** option from the layout rows,
+      so in **Core Options** it shows locked.
     - **Screen Swap Mode** in **Core Options** sets whether the swap toggles
       (the default) or lasts only while you hold the buttons.
 

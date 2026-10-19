@@ -155,7 +155,7 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | --- | --- | --- | --- |
 | **Controller Type** | Sega Genesis, Sega CD, 32X | Auto, 3 buttons, 6 buttons | Auto |
 | **Controller Layout** | Every console | Auto-detect, Xbox (A at the bottom), Nintendo (A on the right) | Auto-detect |
-| **Layout (portrait)** and the other screen rows | Nintendo DS | See [Nintendo DS](emulators/nintendo-ds.md) | |
+| **Layout (portrait)** and the other screen rows | Nintendo DS, Nintendo 3DS | See [Nintendo DS](emulators/nintendo-ds.md) and [Nintendo 3DS](emulators/nintendo-3ds.md) | |
 | **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
 | **Portrait Pad** | Nintendo DS, Nintendo 3DS | Shown, Hidden | Shown |
 | **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) | Auto |

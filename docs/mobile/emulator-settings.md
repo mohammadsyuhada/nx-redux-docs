@@ -46,8 +46,8 @@ What you set here is the console's setting, the same as the in-game menu's
 
     - **Console settings** holds **Controller Layout** for every console,
       **Controller Type** for Sega Genesis, Sega CD and Sega 32X, the
-      **Layout** and **Big Screen** rows for Nintendo DS, **New 3DS Controls**
-      for Nintendo 3DS, **Portrait Pad** for both, and the Wii's rows
+      **Layout** and **Big Screen** rows for Nintendo DS, the **Layout** rows and
+      **New 3DS Controls** for Nintendo 3DS, **Portrait Pad** for both, and the Wii's rows
       ([Nintendo Wii & GameCube](emulators/wii-gamecube.md#console-settings)).
       The start-only rows are **Graphics API**
       ([Graphics API](emulators/index.md#graphics-api)), and the Wii's **Wii
