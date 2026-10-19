@@ -185,14 +185,6 @@ extra setup.
     files. It can't read the compressed `zcci`, `zcxi` and `z3dsx` files or
     `3dsx` files, so for those set **On** yourself.
 
-## Touch
-
-Touch the bottom screen directly. While the on-screen buttons are over the
-game (landscape without a controller, or portrait with the
-[pad hidden](#portrait-pad)), it takes finger touches only when it is the
-main screen: swap it there with **SWAP**, then touch it between the
-buttons. Stylus mode's cursor reaches it either way.
-
 ## Stylus mode
 
 In stylus mode a dot on the bottom screen is the stylus, the same pen dot
@@ -206,6 +198,14 @@ it:
 | **STYLUS**, or `SELECT` + `L1` | Turn stylus mode off again. |
 
 Stylus mode is off each time a game starts, and is not saved.
+
+## Touch
+
+Touch the bottom screen directly. While the on-screen buttons are over the
+game (landscape without a controller, or portrait with the
+[pad hidden](#portrait-pad)), it takes finger touches only when it is the
+main screen: swap it there with **SWAP**, then touch it between the
+buttons. Stylus mode's cursor reaches it either way.
 
 ## Portrait pad
 
