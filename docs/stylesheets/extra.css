@@ -243,6 +243,11 @@
   border: 5px solid #000;
   box-sizing: content-box;
 }
+/* On a wide screen they may take 80% of the column, not the half other pictures get (a portrait shot stays at its own
+   width up to that). */
+@media screen and (min-width: 60em) {
+  .md-typeset img[src*="screenshots/mobile/"]:not(.nx-phone__screen) { max-width: 80%; }
+}
 
 /* A layout table with a picture per row (DS and 3DS screen layouts): the thumbnails keep their width instead of
    shrinking to the column, and the table scrolls sideways on a narrow screen. */
