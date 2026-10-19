@@ -267,9 +267,9 @@ The tools have their own pages: [RetroAchievements](retroachievements.md),
 [Settings](settings.md).
 
 ??? info "More detail"
-    In the Carousel style the selected console's controller shows too. In the
-    List style it does as well, unless you set **Consoles controller** to
-    **Background** or **None** in [Layouts](layouts.md#consoles-controller).
+    In the List and Carousel styles the selected console's controller shows
+    too, unless you set **Consoles background** to **Background** or **None**
+    in [Layouts](layouts.md#consoles-background).
 
 ## Game lists
 
@@ -368,7 +368,7 @@ Home and Tools use **Grid**.
 ### List style
 
 A plain list. On the Consoles tab the selected console's controller sits
-beside the list (see [Consoles controller](layouts.md#consoles-controller)). In a game
+beside the list (see [Consoles background](layouts.md#consoles-background)). In a game
 list the selected game's picture fills the background or sits in a box (see
 [List art](layouts.md#list-art)).
 
@@ -418,7 +418,8 @@ last-played time and achievement count.
 ### Carousel style
 
 A single row with the selected item large in the middle and its neighbours
-to the sides. Consoles show their logo over their controller, collections
+to the sides. Consoles show their logo over their controller (see
+[Consoles background](layouts.md#consoles-background)), collections
 their name, tools their icon. In a game list the selected game's name sits
 below its picture, and its play time, achievement count and next achievement
 sit at the bottom of the picture.

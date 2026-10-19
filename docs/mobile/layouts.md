@@ -74,22 +74,24 @@ achievements; [Extra info](#extra-info) hides those.
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
 | **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
 | [**Consoles orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |
-| [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
+| [**Consoles background**](#consoles-background) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List or Carousel |
 
-### Consoles controller
+### Consoles background
 
-What shows behind the Consoles tab in the List style. The row shows only
-while **Consoles layout** is **List**.
+What shows with the consoles in the List and Carousel styles. The row hides
+while **Consoles layout** is **Grid**.
 
-- **Controller** (default): each console's controller beside the list.
+- **Controller** (default): each console's controller, beside the list or
+  behind its logo in the Carousel.
 - **Background**: no controller. The selected console's own background
-  picture fills the screen, as a game list's screenshot does.
-- **None**: no controller and no background: a plain list on black.
+  picture fills the screen: as a game list's screenshot in the List style,
+  dimmed as a Backdrop game list's picture in the Carousel.
+- **None**: no controller and no background: plain black.
 
 ??? info "More detail"
     - The Background picture is `Roms/<console>/.media/bg.png`. A console
       without one shows plain black.
-    - The Carousel style always shows each console's controller.
+    - The Grid style shows each console's logo only.
 
 ## Collections
 
@@ -310,7 +312,7 @@ default. It does not ask first.
 ??? info "More detail: what it resets"
     Every tab shown, each tab's layout and orientation, the shelves and
     **Home stats**, the game lists' layout, orientation and alignment,
-    **Consoles controller**, **List art**, **Backdrop art**, **Layout
+    **Consoles background**, **List art**, **Backdrop art**, **Layout
     options**, **Achievements panel**, **Page title**, **Button hints** and
     the single hints, **Game Switcher layout** and **Extra info**.
 
