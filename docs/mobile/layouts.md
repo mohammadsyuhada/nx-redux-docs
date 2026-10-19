@@ -66,6 +66,12 @@ sideways). The picture changes as you change a row.
 
 #### Consoles, Collections and Tools
 
+![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
+
+![Layouts → Collections: Collections tab Show, Collections layout Carousel, Collections orientation Horizontal, with a picture of the collections carousel](../assets/screenshots/mobile/settings-layouts-collections.webp){ .nx-wide }
+
+![Layouts → Tools: Tools tab Show, Tools layout Grid, with a picture of the Tools grid](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
+
 Each of the three tabs has its own page with the same rows, named after the
 tab. **Consoles controller** is on the Consoles page only.
 
@@ -77,6 +83,8 @@ tab. **Consoles controller** is on the Consoles page only.
 | [**Consoles controller**](#consoles-controller) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List |
 
 #### Game lists
+
+![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel Show, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -90,6 +98,8 @@ tab. **Consoles controller** is on the Consoles page only.
 
 #### Title and hints
 
+![Layouts → Title and hints: Page title, Button hints, Recent hint, Search hint and Netplay hint Show, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
+
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Page title**](#page-title-and-button-hints) | Show, Hide | Show | Always |
@@ -99,6 +109,8 @@ tab. **Consoles controller** is on the Consoles page only.
 | [**Netplay hint**](#single-hints) | Show, Hide | Show | When Button hints is Show, on a phone with netplay |
 
 #### Game Switcher
+
+![Layouts → Game Switcher: Game Switcher layout Full screen, with a picture of the full-screen Game Switcher](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
 
 | Row | Values | Default |
 | --- | --- | --- |
