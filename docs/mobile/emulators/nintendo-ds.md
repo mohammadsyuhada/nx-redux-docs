@@ -15,6 +15,8 @@ The layout options are in the in-game menu under **Options → Console
 Settings**. Keep them for the game or console with
 [Save Changes](../in-game-menu.md#save-changes).
 
+![Console Settings of a DS game: the three Layout rows, Big Screen, the three Inset rows, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/ds-console-settings.webp)
+
 ### Portrait layouts
 
 **Layout (portrait)** sets how the two screens share a portrait screen:
