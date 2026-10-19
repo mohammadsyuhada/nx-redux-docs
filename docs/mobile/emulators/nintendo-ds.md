@@ -33,7 +33,7 @@ With a controller or the on-screen pad:
 | Buttons | What they do |
 | --- | --- |
 | `R2` on a controller, or **SWAP** | Swap the big screen. |
-| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen and Large screen. |
+| `SELECT` + `LEFT` / `RIGHT` | Change the layout of the orientation you're in. In portrait this steps through Picture in picture, Stacked, Single screen, Large screen and Side by side. |
 | `SELECT` + `UP` / `DOWN` | Move the inset to the previous or next corner, clockwise. |
 | `L2` on a controller, or **STYLUS** | Turn stylus mode on or off. |
 | `MENU`, or `SELECT` + `START` | Open the [in-game menu](../in-game-menu.md). |
@@ -67,7 +67,7 @@ value; keep it for the game or the console with
 
 | Row | Values | Default | See |
 | --- | --- | --- | --- |
-| **Layout (portrait)** | Auto, Picture in picture, Stacked, Single screen, Large screen | Auto | [Screen layouts](#screen-layouts) |
+| **Layout (portrait)** | Auto, Picture in picture, Stacked, Single screen, Large screen, Side by side | Auto | [Screen layouts](#screen-layouts) |
 | **Layout (portrait, controller)** | The same | Stacked | [Screen layouts](#screen-layouts) |
 | **Layout (landscape)** | Side by side, Single screen, Picture in picture, Large screen, Stacked | Stacked | [Screen layouts](#screen-layouts) |
 | **Big Screen** | Top screen, Bottom screen | Top screen | [Big screen and inset](#big-screen-and-inset) |
