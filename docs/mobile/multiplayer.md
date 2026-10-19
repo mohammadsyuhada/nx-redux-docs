@@ -128,7 +128,7 @@ everyone.
 | --- | --- |
 | [Sega Dreamcast](emulators/dreamcast.md#multiplayer) | Players 2 to 4 have the Vibration Pack but no memory card. Games save to Player 1's card. |
 | [PlayStation](emulators/playstation.md#controls) | Player 2 gets the same DualShock pad as Player 1. |
-| [Sega Genesis, Sega CD, 32X](emulators/other-systems.md#controller-type) | **Controller Type** applies to Player 2 too. |
+| [Sega Genesis, Sega CD, 32X](emulators/sega.md#controller-type) | **Controller Type** applies to Player 2 too. |
 | [Nintendo 64](emulators/nintendo-64.md#rumble) | Each player's Rumble Pak is set in Core Options, from **Player 1 Pak** to **Player 4 Pak**. |
 | [Nintendo Wii, GameCube](emulators/wii-gamecube.md#multiplayer) | Every player gets Player 1's controller. On Wii, each player shakes with `R2`, and only Player 1 can point or use the phone's motion. |
 

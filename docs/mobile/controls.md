@@ -64,7 +64,7 @@ doesn't have:
 | GameCube | A green `A`, a red `B`, `X`, `Y`, `Z`, `L` and `R` triggers, and a C-stick |
 | Wii | The game's Wii controller, with `HOME`, `Shake` and `MOTION`; see [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii-controls) |
 
-The Sega pad follows the game's [Controller Type](emulators/other-systems.md#controller-type).
+The Sega pad follows the game's [Controller Type](emulators/sega.md#controller-type).
 On the 6-button pad, `Y` and `Z` are on the shoulder buttons, and `Mode` is
 in place of `SELECT`.
 
@@ -183,7 +183,7 @@ open the in-game menu. In a multiplayer game only Player 1's `SELECT` +
     mode.
 
 Each console's own mapping, such as the [Nintendo 64](emulators/nintendo-64.md#controls)
-or the Sega [Controller Type](emulators/other-systems.md#controller-type)
+or the Sega [Controller Type](emulators/sega.md#controller-type)
 (3 or 6 buttons), is on its [emulator page](emulators/index.md).
 
 ## Vibration
@@ -347,4 +347,6 @@ console's page:
 | [Arcade (FBNeo)](emulators/arcade.md#controls) | `SELECT` inserts a coin |
 | [Nintendo 64](emulators/nintendo-64.md#controls) | Buttons by letter, `Z` on `L2`, the C buttons on the right stick |
 | [PlayStation](emulators/playstation.md#controls), [PSP](emulators/psp.md#controls) | `×` `○` `△` `□` by position |
-| [Other systems](emulators/other-systems.md) | Sega `Mode`, NES disk and coin buttons, Game Boy turbo, Neo Geo Pocket `Option` and more |
+| [Sega consoles](emulators/sega.md) | The Sega pad, `Mode` and **Controller Type** |
+| [Game Boy & Game Boy Advance](emulators/game-boy.md) | Turbo buttons and the link cable |
+| [Other systems](emulators/other-systems.md) | NES disk and coin buttons, Neo Geo Pocket `Option` and more |

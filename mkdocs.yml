@@ -222,6 +222,8 @@ nav:
           - Nintendo DS: mobile/emulators/nintendo-ds.md
           - Nintendo 3DS: mobile/emulators/nintendo-3ds.md
           - Nintendo Wii & GameCube: mobile/emulators/wii-gamecube.md
+          - Sega Consoles: mobile/emulators/sega.md
+          - Game Boy & Game Boy Advance: mobile/emulators/game-boy.md
           - Other Systems: mobile/emulators/other-systems.md
       - Settings:
           - Overview: mobile/settings.md
