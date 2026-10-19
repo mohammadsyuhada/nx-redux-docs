@@ -16,7 +16,7 @@ screens.
 ## Controls
 
 <figure class="nx-phone" markdown>
-![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
+![Mario Kart 7 on the Fold's cover screen, with the 3DS pad: L and R, no ZL, ZR or C-stick, and STYLUS and SWAP beside MENU and STICK](../../assets/screenshots/mobile/pad-3ds-regular.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
@@ -24,13 +24,19 @@ The on-screen pad is laid out like a 3DS. `STICK` / `D-PAD` switches between
 the d-pad and the Circle Pad. Games that use the New 3DS buttons also get
 `ZL`, `ZR` and the C-stick: see [New 3DS controls](#new-3ds-controls).
 
-The 3DS shortcuts are all `SELECT` combos, because `L2` and `R2` are the
-3DS's own `ZL` and `ZR`:
+The pad also has **STYLUS**, which turns [stylus mode](#stylus-mode) on or
+off (pressed in while it's on), and **SWAP**, which swaps the screens. In
+portrait they sit either side of `MENU` and `STICK`; over the game
+(landscape, or portrait with the [pad hidden](#portrait-pad)) **STYLUS** is
+under `MENU` and **SWAP** under `START`.
+
+On a controller the shortcuts are `SELECT` combos, because `L2` and `R2` are
+the 3DS's own `ZL` and `ZR`:
 
 | Buttons | What they do |
 | --- | --- |
-| `SELECT` + `R1` | Swap the screens. |
-| `SELECT` + `L1` | Turn stylus mode on or off. |
+| `SELECT` + `R1`, or **SWAP** | Swap the screens. |
+| `SELECT` + `L1`, or **STYLUS** | Turn stylus mode on or off. |
 | `SELECT` + `LEFT` / `RIGHT` | Change the layout: **Top over bottom**, **Large screen**, **Side by side**, **Single screen**, and round again. |
 | `SELECT` + `START`, or `MENU` | Open the [in-game menu](../in-game-menu.md). |
 
@@ -85,7 +91,7 @@ as you would a 3DS.
 ## New 3DS controls
 
 <figure class="nx-phone" markdown>
-![Majora's Mask 3D on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
+![Mario Kart 7 on the Fold's cover screen, with the 3DS pad and the New 3DS controls: ZL, ZR and the C-stick](../../assets/screenshots/mobile/pad-3ds.webp){ .nx-phone__screen }
 ![](../../assets/landing/mobile/zfold8.webp){ .nx-phone__frame }
 </figure>
 
@@ -123,18 +129,20 @@ extra setup.
 Touch the bottom screen directly. While the on-screen buttons are over the
 game (landscape without a controller, or portrait with the
 [pad hidden](#portrait-pad)), it takes finger touches only when it is the
-main screen: swap it there with `SELECT` + `R1`, then touch it between the
+main screen: swap it there with **SWAP**, then touch it between the
 buttons. Stylus mode's cursor reaches it either way.
 
 ## Stylus mode
 
-Azahar draws its own touch cursor on the bottom screen. In stylus mode:
+In stylus mode a dot on the bottom screen is the stylus, the same pen dot
+as on the [Nintendo DS](nintendo-ds.md#stylus-mode). It shows once you move
+it:
 
 | Control | What it does |
 | --- | --- |
-| D-pad or left stick | Move the cursor. The d-pad speeds up the longer you hold it. |
-| `A` | Tap at the cursor. |
-| `SELECT` + `L1` | Turn stylus mode off again. |
+| D-pad or left stick | Move the dot. The d-pad speeds up the longer you hold it. |
+| `A` | Tap at the dot. |
+| **STYLUS**, or `SELECT` + `L1` | Turn stylus mode off again. |
 
 Stylus mode is off each time a game starts, and is not saved.
 
@@ -151,7 +159,8 @@ Stylus mode is off each time a game starts, and is not saved.
 
 </div>
 
-`SELECT` + `R1` swaps which screen is the big or upper one, in every layout.
+**SWAP** (or `SELECT` + `R1`) swaps which screen is the big or upper one, in
+every layout.
 `SELECT` + `LEFT` / `RIGHT` saves the layout for the game straight away,
 without Save Changes.
 
@@ -166,7 +175,7 @@ long-press saves it for the console.
 ![Mario Kart 7 in portrait with the pad hidden: the screens fill the height, the see-through buttons over the lower half](../../assets/screenshots/mobile/3ds-portrait-pad-hidden.webp)
 
 Touch follows the [touch rule](#touch): swap the bottom screen up with
-`SELECT` + `R1` to touch it, or use [stylus mode](#stylus-mode). With a
+**SWAP** to touch it, or use [stylus mode](#stylus-mode). With a
 controller connected the buttons hide.
 
 ??? info "More detail"
