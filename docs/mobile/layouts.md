@@ -21,7 +21,7 @@ Home and Tools use **Grid**.
 The Layouts page lists its groups, each with what it is set to now. Press `A`
 on a group to open its page, and `B` to come back.
 
-![Settings, with the Layouts page open beside the sections](../assets/screenshots/mobile/settings-layouts.webp)
+![Settings, with the Layouts page open beside the sections](../assets/screenshots/mobile/settings-layouts.webp){ .nx-wide }
 
 | Row | Shows |
 | --- | --- |
@@ -41,7 +41,7 @@ A group's page has its rows at the top and a picture of how they look below
 (beside the rows on a wide landscape screen, such as a phone turned
 sideways). The picture changes as you change a row.
 
-![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp)
+![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
 
 - `Right` and `A` step the highlighted row to its next value, `Left` to the
   previous one.
