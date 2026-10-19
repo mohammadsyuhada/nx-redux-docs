@@ -67,7 +67,7 @@ achievements; [Extra info](#extra-info) hides those.
 
 ## Consoles
 
-![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
+![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, Consoles background Controller, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
