@@ -132,7 +132,7 @@ nav:
   - Handheld:
       - Getting Started: handheld/getting-started.md
       - User Guide:
-          - Main Menu & Game Lists: handheld/guide/main-menu.md
+          - Main Menu & Home: handheld/guide/main-menu.md
           - Menu Layouts: handheld/guide/layouts.md
           - Game Switcher: handheld/guide/game-switcher.md
           - Game Context Menu: handheld/guide/context-menu.md

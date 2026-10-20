@@ -1,4 +1,4 @@
-# Main Menu & Game Lists
+# Main Menu & Home
 
 The main menu is split into four tabs: **Home**, **Consoles**,
 **Collections** and **Tools**. The device powers on to Home, or to the first
@@ -7,8 +7,9 @@ tab that shows when Home is turned off in
 
 ![Home tab](../../assets/screenshots/main-menu.png)
 
-Every tab can be drawn as a List, Grid or Carousel, and game lists have a
-fourth style, Backdrop. [Menu Layouts](layouts.md) shows them all.
+Every tab can be drawn as a List, Grid, Carousel or Minimal (just the names),
+and game lists have one more style, Backdrop. [Menu Layouts](layouts.md) shows
+them all.
 
 ## Tabs
 
@@ -59,8 +60,8 @@ focus.
 ## Home
 
 Home is the starting point: your most recent game, this month's play time,
-and everything you pinned. It comes in three layouts, **List**, **Grid** (the
-default) and **Carousel**. Pick one in
+and everything you pinned. It comes in four layouts, **List**, **Grid** (the
+default), **Carousel** and **Minimal**. Pick one in
 [Settings → Layouts → Home layout](../settings/layouts.md#home-layout).
 With [Extra info](../settings/layouts.md#extra-info) hidden, every layout
 leaves out the stats and the play time and achievements under each game.
@@ -165,6 +166,39 @@ The same games and tools in one row, centred on the screen.
 | `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
 | `START` | Open [Search](#search) |
 
+### Minimal
+
+Just the names, big, on plain black: no art and no cards.
+
+![Home in the Minimal layout](../../assets/screenshots/home-minimal.png)
+
+- **The list** holds the same items as [List](#list): Continue, your pinned
+  games and your pinned tools.
+- **The selected name** is solid in your accent colour, one row under the
+  stats. The other names are its outline, fading the further they are from
+  it.
+- **Its tag** (**Continue**, **New**, **Not started**, **Pick up again**,
+  **Tool**) sits at the end of the selected name, as a pill in your accent.
+
+| Button | What it does |
+| --- | --- |
+| `Up` / `Down` | Move through the names. A press wraps around at either end; held, the names glide faster and settle on the next name when you let go |
+| `Left` / `Right` | Switch tab |
+| `Y` **Netplay** | Start the selected game with [netplay](../netplay.md), when it supports it |
+| `A` **Play** / **Resume** / **Open** | Start the game (resuming its auto-save when it has one), or open the tool |
+| `MENU` **Options** | The [context menu](context-menu.md) for the selected game or tool, plus **Refresh Roms** |
+| `SELECT` **Recent** | Open the [Game Switcher](game-switcher.md) |
+| `START` | Open [Search](#search) |
+
+??? info "More detail"
+    - A long name wraps at its words. A tag that doesn't fit after the last
+      word takes that word down to the next line with it.
+    - With [Page title](../settings/layouts.md#page-title) or
+      [Button hints](../settings/layouts.md#button-hints) hidden, the names
+      run on to the screen's edge under a fade.
+    - Opening a game fades the other names, then a dark band in your accent
+      grows from the name over the screen as the game loads.
+
 ## Pinning games and tools
 
 - **Pin a game:** press `MENU` on it in a game list (or on Home's Continue
@@ -258,10 +292,23 @@ Press `START` on any tab to search your entire library.
 
 ![Search keyboard](../../assets/screenshots/search.png)
 
-1. Type your search with the [on-screen keyboard](keyboard.md).
-2. Confirm to see matching games from every system.
-3. Tap `START` again, from the keyboard or the results list, to close the
-   search and return to the menu.
+1. Type part of a name with the [on-screen keyboard](keyboard.md).
+2. Confirm, and the matches open as a game list titled **Search:** and your
+   words, such as **Search: mario**.
+
+`START` on the keyboard closes it without searching.
+
+![Search results for mario as a game list](../../assets/screenshots/search-results.png)
+
+The results list games from every console, drawn in your
+[Game lists layout](../settings/layouts.md#game-lists-layout), and work like
+any other [game list](#game-lists): the same buttons and the same context
+menu. They read **No results** when nothing matches. `B` or `START` returns to
+the tab you searched from.
+
+??? info "More detail"
+    The search looks in each game's name and its file name. Case doesn't
+    matter, and the words have to appear as typed.
 
 ## Reordering systems
 

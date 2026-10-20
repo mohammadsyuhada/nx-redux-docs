@@ -15,12 +15,13 @@ The pictures on this page are taken with
 | [**Grid**](#grid) | ✓ | ✓ | Two rows of tiles |
 | [**Carousel**](#carousel) | ✓ | ✓ | One large item at a time, across or down the screen |
 | [**Backdrop**](#backdrop) | | ✓ | Box art over the game's screenshot |
+| [**Minimal**](#minimal) | ✓ | ✓ | Just the names, big, with no art |
 
 Out of the box, Consoles, Collections and game lists use **Carousel**, and
 Tools uses **Grid**.
 
-Home has its own three layouts, **List**, **Grid** and **Carousel**: see
-[Home](main-menu.md#home).
+Home has its own four layouts, **List**, **Grid**, **Carousel** and
+**Minimal**: see [Home](main-menu.md#home).
 
 ## List
 
@@ -102,6 +103,32 @@ gets a placeholder box. [Backdrop art](../settings/layouts.md#backdrop-art)
 can swap the boxes for the 2D box art or the game's logo (wheel).
 
 ![Game list in Backdrop style](../../assets/screenshots/game-list-backdrop.png)
+
+## Minimal
+
+Just the names, big, on plain black: no logos, art or game info. The selected
+name is solid in your accent colour, one row under the top, and the others are
+its outline, fading the further they are from it. `Up` / `Down` wrap around at
+the ends as in [List](#list); held, the names glide faster and settle on the
+next name when you let go.
+
+*Consoles tab*
+
+![Consoles tab in Minimal style](../../assets/screenshots/consoles-minimal.png)
+
+*Game list*
+
+![Game list in Minimal style](../../assets/screenshots/game-list-minimal.png)
+
+??? info "More detail"
+    - A long name wraps at its words.
+    - `A` on a console or collection fades the other names, and when game
+      lists are Minimal too, its name flies up into the game list's title as
+      the games rise in. `B` drops the title back into its row.
+    - `A` on a game fades the other names, then a dark band in your accent
+      grows from the name over the screen as the game loads.
+    - With the page title or the button hints hidden, the names run on to the
+      screen's edge under a fade.
 
 ## Your own console backgrounds
 

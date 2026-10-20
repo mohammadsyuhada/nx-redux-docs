@@ -27,6 +27,8 @@ How Home draws:
   games in rows below.
 - `Carousel`: one row that starts on the Continue card, your pinned games
   after it, and your pinned tools in a row of small squares underneath.
+- `Minimal`: the List's items as big names only, the selected one solid in
+  your accent.
 
 See [Home](../guide/main-menu.md#home) for each.
 
@@ -47,7 +49,7 @@ the tab row is replaced by an **NX Redux** title.
 
 ### Layout
 
-How the tab draws: `List`, `Grid` or `Carousel`.
+How the tab draws: `List`, `Grid`, `Carousel` or `Minimal`.
 
 | Tab | Default |
 | --- | --- |
@@ -76,8 +78,9 @@ Consoles tab is shown.
 
 ### Game lists layout
 
-How a console's or collection's games draw: `List`, `Grid`, `Carousel` or
-`Backdrop`. Default `Carousel`.
+How a console's or collection's games draw: `List`, `Grid`, `Carousel`,
+`Backdrop` or `Minimal`. Default `Carousel`. [Search](../guide/main-menu.md#search)
+results use it too.
 
 ### Game lists orientation
 
