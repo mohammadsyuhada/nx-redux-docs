@@ -9,6 +9,61 @@ for every device from the
 [releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.3.0
+
+*21 October 2026*
+
+A new Minimal layout shows your games as big names only, and search results
+open as a regular game list. The in-game Shortcuts menu is back for setting a
+console's or a game's own shortcuts. Fast-forward up to 4x is smooth again,
+and over-the-air updates no longer fail as "corrupt" on the Smart Pro S.
+
+### New features
+
+- **Minimal layout.** **Settings → Layouts** offers **Minimal** for Home,
+  the Consoles, Collections and Tools tabs and the game lists: big names
+  only, no art, with the selected name in your accent color. Long names wrap,
+  Home shows each game's tag (Continue, New…) next to the selected name, and
+  opening a console whose list is also Minimal carries its name up into the
+  title. See [Minimal](../../handheld/guide/layouts.md#minimal) and
+  [Minimal Home](../../handheld/guide/main-menu.md#minimal).
+- **Search results as a game list.** [Search](../../handheld/guide/main-menu.md#search)
+  results now open as a game list in your **Layouts → Game list layout**
+  (List, Grid, Carousel, Backdrop or Minimal), with the same menu and launch
+  options as any other list.
+- **Shortcuts for one console or game.** The in-game **Options → Shortcuts**
+  page is back. A shortcut you set there replaces the
+  [Settings → Emulator Shortcuts](../../handheld/settings/emulator-shortcuts.md)
+  one for that console or game (keep it with **Save Changes**); the others
+  keep following Settings. Shortcuts you saved for a console or game before
+  v2.2.0 work again, unless you have saved its options since. See
+  [In-game Options](../../handheld/guide/in-game-options.md#shortcuts).
+
+### Fixes
+
+- **Fast-forward:** at a Max FF Speed of 2x to 4x, fast-forward shows a new
+  frame on every screen refresh again (about 60 fps instead of an uneven 20
+  to 30). Since v2.1.2 it looked jumpy, most of all on PlayStation at 2x.
+  None and 5x to 8x keep the faster mode.
+- **Updates (Smart Pro S):** an over-the-air update could fail with
+  "MinUI.zip is corrupt or the card is full", then retry and fail on every
+  boot. Files the card's driver had left hidden from earlier boots blocked
+  the update; they are now cleared before it runs.
+
+## v2.2.1
+
+*19 October 2026*
+
+A fix for PortMaster.
+
+### Fixes
+
+- **PortMaster:** after PortMaster updated itself to 2026.10.18, every port
+  install failed and was rolled back. Ports install again; ports you
+  installed earlier were not affected.
+- **Moonlight New:** pairing failed with a missing `libavcodec.so.58`; it
+  now finds the library PortMaster ships.
+
 ## v2.2.0
 
 *18 October 2026*
@@ -368,7 +423,7 @@ tags, cover art and lyrics inside your files.
 - **New main menu.** The menu opens on **Home** with **Consoles**,
   **Collections** and **Tools** tabs beside it. Switch tabs with `L1`/`R1`,
   or press `Up` from the top of a tab to reach the tab row. See
-  [Main Menu & Game Lists](../../handheld/guide/main-menu.md).
+  [Main Menu & Home](../../handheld/guide/main-menu.md).
 - **Home.** A **Continue** card for your last game (with its save-state
   picture), this month's play time, achievements and most played game, and
   your pinned games and tools. On a fresh install a **Pick a game** card
