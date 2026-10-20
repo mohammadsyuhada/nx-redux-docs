@@ -4,14 +4,17 @@ Hotkeys for actions during play: save states, fast-forward, rewind, turbo
 and more. All are unbound (`NONE`) by default.
 
 Shortcuts are global. One set applies to every console and every game on the
-device, so fast-forward bound once works everywhere. The page is hidden in
-[Simple Mode](simple-mode.md).
+device, so fast-forward bound once works everywhere. A console or game can
+still use a different button for any of them: set it in the game's
+[Options → Shortcuts](../guide/in-game-options.md#shortcuts). The page is
+hidden in [Simple Mode](simple-mode.md).
 
 ![Emulator Shortcuts settings](../../assets/screenshots/set-emulator-shortcuts.png)
 
 !!! warning "Upgrading from an older version?"
-    Shortcuts set before this version (in the in-game menu, per emulator or
-    per game) are not carried over. Set them again here.
+    Shortcuts you saved for a console or game in the in-game menu before
+    v2.2.0 work again as that console's or game's own shortcuts, unless you
+    have saved its options since. Set the ones you want everywhere here.
 
 ## Binding a shortcut
 

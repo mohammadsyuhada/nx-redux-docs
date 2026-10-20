@@ -15,6 +15,7 @@ The Options menu contains:
 | [Shaders](#shaders) | The video shader pipeline and shader presets. |
 | [Cheats](#cheats) | Turn the game's cheats on and off. |
 | [Controls](#controls) | Remap the emulated controller's buttons. |
+| [Shortcuts](#shortcuts) | Give this console or game its own emulator shortcuts. |
 | [Achievements](#achievements) | Browse the game's RetroAchievements — shown only when achievements are enabled. |
 | [Save Changes](#save-changes) | Keep your changes for this system or this game, or restore defaults. |
 
@@ -108,9 +109,31 @@ the buttons the running core uses are listed.
 
 ## Shortcuts
 
-In-game hotkeys (save/load state, fast-forward, rewind, turbo…) aren't set in
-this menu. They are global, one set for every console, and you bind them in
-[Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md).
+In-game hotkeys (save/load state, fast-forward, rewind, turbo…) are set once
+for every console in
+[Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md). This page
+lists the same shortcuts and lets you change any of them for the console or
+game you're playing. A shortcut you set here wins over the Settings one;
+the rest keep following Settings.
+
+- Each row shows the button in use. The line below the list says whether it
+  comes from Settings or was set here.
+- Press `A` on a shortcut, then press a button, or hold `MENU` and press a
+  button for a `MENU` + button combination.
+- Press `X` to clear a shortcut you set here. It goes back to the Settings
+  button.
+- Keep them with [Save Changes](#save-changes), for the console or for the
+  game.
+
+??? info "More detail"
+    - If you give a shortcut a button that Settings uses for a different
+      shortcut, that Settings shortcut is off in this console or game, so one
+      press never does two things.
+    - Clearing a shortcut here can't turn it off for one game: it always goes
+      back to the Settings button. To have no shortcut on that button, clear
+      it in Settings.
+    - `MENU` + `SELECT` can't be bound. It always opens the
+      [Game Switcher](game-switcher.md).
 
 ## Achievements
 
@@ -128,9 +151,8 @@ If the game isn't recognized or has no achievements, a message tells you so.
 
 ## Save Changes
 
-Keeps what you've changed in Options: Frontend, Core Options, Shaders and
-Controls. [Shortcuts](#shortcuts) aren't part of it; they're the same for
-every console. The entry's description tells you which settings the
+Keeps what you've changed in Options: Frontend, Core Options, Shaders,
+Controls and the [Shortcuts](#shortcuts) you set here. The entry's description tells you which settings the
 game is using right now: *Using defaults*, *Using console config* or *Using
 game config*.
 

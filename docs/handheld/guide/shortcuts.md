@@ -60,4 +60,5 @@ the switch.
 Save states, fast-forward, rewind, turbo and the D-pad joystick get their own
 configurable shortcuts (optionally `MENU`-modified). Set them once in
 [Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md); they apply
-to every console.
+to every console, unless a console or game has its own in
+[Options → Shortcuts](in-game-options.md#shortcuts).
