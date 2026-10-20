@@ -247,9 +247,9 @@ Roms/Game Boy Advance (GBA)/.media/boxart/Golden Sun.png
 Roms/Game Boy Advance (GBA)/.media/screenshot/Golden Sun.png
 ```
 
-- **Your own art:** put images in the same folders by hand. After adding
-  them, use **Rescan library** in **Tools → Settings → Library** so the app
-  picks them up.
+- **Your own art:** put images in the same folders by hand. The app picks
+  them up when you come back to it or open **Artwork**, and notices art you
+  delete the same way.
 - **Art from the handheld:** the `.media/` folders made by the handheld's
   [Artwork Manager](../handheld/apps/artwork-manager.md) work here too.
 

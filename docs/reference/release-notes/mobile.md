@@ -8,6 +8,31 @@ What changed in each release of NX Redux for Android phones, tablets and
 Android handhelds. Download the APK from the
 [releases page](https://github.com/mohammadsyuhada/nx-mobile/releases).
 
+## v0.3.0
+
+*21 October 2026*
+
+A new Minimal layout: just big names, no art, on Home, every tab and the game
+lists. Art you delete or add outside the app now shows without a rescan.
+
+### New features
+
+- **Minimal layout.** Pick **Minimal** for Home, Consoles, Collections, Tools
+  or any game list in **Tools → Settings → Layouts**. Only the names show, big:
+  the selected one solid in your accent, the others outlined and fading away
+  from it. Opening a console or a collection flies its name into the game
+  list's title, and **Back** drops it into the list again. The Layouts page
+  has pictures of it. See [Minimal Home](../../mobile/main-menu.md#minimal),
+  [Minimal Consoles](../../mobile/main-menu.md#consoles-minimal) and
+  [Minimal game lists](../../mobile/main-menu.md#games-minimal).
+
+### Improvements
+
+- **Art changed outside the app** shows when you come back to the app or open
+  **Artwork**, without a rescan. Art you deleted is counted as missing again,
+  so **Fetch art** is offered for it in the game menu.
+- **The selection ring** on Home, the Grid and the Carousels is thinner.
+
 ## v0.2.0
 
 *20 October 2026*
