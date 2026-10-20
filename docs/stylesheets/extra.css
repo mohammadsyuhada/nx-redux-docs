@@ -5,10 +5,10 @@
   font-display: swap;
 }
 
-/* Screenshots: full width on mobile, half width on larger screens */
+/* Screenshots: full width on mobile, up to 80% of the column on larger screens (as the mobile app's) */
 @media screen and (min-width: 60em) {
   .md-typeset img {
-    max-width: 50%;
+    max-width: 80%;
   }
 }
 
@@ -223,11 +223,11 @@
   margin: 0 auto;
   --divider-width: 2px;
 }
-/* The slider follows the screenshot rule above (half width on larger
+/* The slider follows the screenshot rule above (80% on larger
    screens); the images fill it instead. */
 @media screen and (min-width: 60em) {
   .md-typeset figure.compare img-comparison-slider {
-    max-width: 50%;
+    max-width: 80%;
   }
 }
 .md-typeset figure.compare img-comparison-slider img {
@@ -243,11 +243,6 @@
   border: 5px solid #000;
   box-sizing: content-box;
 }
-/* On a wide screen they may take 80% of the column, not the half other pictures get (a portrait shot stays at its own
-   width up to that). */
-@media screen and (min-width: 60em) {
-  .md-typeset img[src*="screenshots/mobile/"]:not(.nx-phone__screen) { max-width: 80%; }
-}
 
 /* A layout table with a picture per row (DS and 3DS screen layouts): the thumbnails keep their width instead of
    shrinking to the column, and the table scrolls sideways on a narrow screen. */
@@ -256,7 +251,7 @@
 .md-typeset .nx-layouts img { width: 10rem; max-width: none; height: auto; }
 .md-typeset .nx-layouts td:first-child { min-width: 9rem; }
 
-/* A landscape screenshot: 80% of the column on a wide screen (where the others get half), the whole column below it
+/* A landscape screenshot: 80% of the column on a wide screen (at that width even when narrower), the whole column below it
    (the black border is outside the box, so it is taken off). */
 .md-typeset img.nx-wide { width: calc(100% - 10px); max-width: none; }
 @media screen and (min-width: 60em) {
