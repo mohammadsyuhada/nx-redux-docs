@@ -54,10 +54,10 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .device.wland .fit { aspect-ratio: 840 / 336; }
 #screen { --hb: 44px; position: absolute; left: 0; top: 0; width: 960px; height: 432px; --tile-w: 140px; --tile-h: 154px; transform-origin: 0 0; background: var(--ground); color: var(--ink); overflow: hidden; font-family: var(--ui); }
 /* the mockup's own pad, outside the device: a tinted panel so it doesn't read as part of the screen */
-.pad { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; width: fit-content; max-width: 100%; box-sizing: border-box; margin: 14px auto 0; padding: 10px 14px; background: #121a26; border: 1px solid #24344a; border-radius: 16px; }
-.pad .padlabel { color: #7f9cc4; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-right: 6px; }
-.pad button { font: inherit; font-size: 13px; color: #dce8f8; background: #1f2d42; border: 0; border-bottom: 2px solid #0b111a; border-radius: 10px; padding: 8px 12px; min-width: 44px; cursor: pointer; }
-.pad button:hover { background: #2a3d59; }
+.pad { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; width: fit-content; max-width: 100%; box-sizing: border-box; margin: 14px auto 0; padding: 10px 14px; background: #141414; border: 1px solid #2c2c2c; border-radius: 16px; }   /* neutral greys, white labels (2026-10-20) */
+.pad .padlabel { color: #9a9a9a; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-right: 6px; }
+.pad button { font: inherit; font-size: 13px; color: #f2f2f2; background: #2a2a2a; border: 0; border-bottom: 2px solid #0a0a0a; border-radius: 10px; padding: 8px 12px; min-width: 44px; cursor: pointer; }
+.pad button:hover { background: #3a3a3a; }
 .pad button:active { transform: translateY(1px); border-bottom-width: 1px; }
 
 /* header (NxHeader): grey title, left */
@@ -490,6 +490,26 @@ header.top p { margin: 0; color: var(--dim); font-size: 15px; max-width: 64ch; l
 .hl .hss { padding: 0 24px; }
 .portrait .hl .hss { padding: 0 16px; }
 #screen.notitle .hl .hss .ln { justify-content: flex-start; }   /* Page title hidden: no centred tabs to sit under, so the lines start at the list's inset, as its rows */
+/* ---------- Minimal (2026-10-20, the app's MinimalList.kt): big names in the accent, the selected one solid, the rest its outline
+   fading away from it (below: half under it down to nothing at the bottom); on Home, every tab and the game lists. A fades
+   the other names, then a launch grows a dark tint of the accent from the name over the screen as it goes black ---------- */
+.mview { position: absolute; left: 0; right: 0; bottom: var(--hb); overflow: hidden; transition: opacity .18s;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%); mask-image: linear-gradient(to bottom, transparent 0, #000 16%); }
+.mlist { position: absolute; left: 0; top: 0; transition: transform .34s cubic-bezier(.2,.8,.2,1); }
+.mrow { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; letter-spacing: -.02em; cursor: pointer;
+  color: transparent; -webkit-text-stroke: 1px rgba(var(--accent-rgb),.6); transform-origin: 0 50%;
+  transition: opacity .34s cubic-bezier(.2,.8,.2,1), color .22s, -webkit-text-stroke-color .22s, transform .34s cubic-bezier(.2,.8,.2,1); }
+.mrow.focus { color: var(--accent); -webkit-text-stroke-color: transparent; transform: scale(1.04); }
+.mview.leaving .mrow:not(.focus) { opacity: 0 !important; transition: opacity .12s linear; }   /* A: the other names fade first */
+.mrow small { margin-left: 12px; font-size: 13px; font-weight: 600; letter-spacing: 0; color: transparent; -webkit-text-stroke: 0; }
+.mrow.focus small { color: var(--dim); }
+.mrow.marquee { text-overflow: clip; }
+.mrow.marquee > span { display: inline-block; width: max-content; vertical-align: top; }
+.mopen { position: absolute; left: 0; right: 0; z-index: 30; background: color-mix(in srgb, var(--accent) 28%, #000); pointer-events: none;
+  transition: top .35s cubic-bezier(.65,0,.35,1), height .35s cubic-bezier(.65,0,.35,1); }   /* a dark tint, not the accent: a White accent would flash */
+.mname { position: absolute; z-index: 31; color: var(--accent); font-weight: 700; letter-spacing: -.02em; white-space: nowrap; transform: scale(1.04); transform-origin: 0 50%; pointer-events: none; }
+.mdark { position: absolute; inset: 0; z-index: 32; background: #000; opacity: 0; pointer-events: none; transition: opacity .21s .14s; }
+.tabfocus .mview { opacity: .4; }
 .prow .ptag { flex: none; font-size: 12px; line-height: 16px; padding: 2px 8px; margin-right: 10px; border-radius: 999px; background: rgba(var(--ink-rgb),.14); color: var(--ink); }
 .prow.focus .ptag { background: rgba(0,0,0,.14); color: var(--on-accent); }
 /* an empty Game Switcher */
@@ -886,6 +906,7 @@ const toTabs = () => { if (oneTab() || S.title === false) return; S.tabFocus = t
 /* UP on the tab row wraps to the bottom of the content: Grid's last row in the same column (else the last item), List's last row,
    Home's last pin row (from Continue its first pin, from the large game or a tool square its last), Carousel/Backdrop stay */
 function tabsToBottom() {
+  if (isHome() && homeMin()) { S.sel[S.cat] = Math.max(0, homeListItems().length - 1); return; }   /* Minimal: as List, UP on the tab row goes to the last name */
   if (isHome() && homeList()) { const n = homeListItems().length; S.sel[S.cat] = Math.max(0, n - 1); return; }   /* List: UP on the tab row goes to the last row */
   if (isHome() && homeCar()) { if (S.hcg && S.hcg.tools.length) S.hc.dock = true; return; }   /* Carousel: UP on the tab row goes to the dock */
   if (isHome()) {
@@ -894,7 +915,7 @@ function tabsToBottom() {
     const n = G.rows.length; H.sec = 1; H.idx[1] = H.idx[0] === 0 ? Math.floor((n - 1) / G.k) * G.k : n - 1; return;
   }
   const n = items().length, cur = selKey();
-  if (sty() === "list" || sty() === "vert") return setSel(n - 1);   /* Vertical: its last item, as List */
+  if (sty() === "list" || sty() === "vert" || sty() === "min") return setSel(n - 1);   /* Vertical: its last item, as List */
   if (sty() !== "grid") return;
   if (rowMajor()) { const c = fitCols(), rows = Math.ceil(n / c); return setSel(Math.min((rows - 1) * c + cur % c, n - 1)); }
   const R = gridRows(), st = cur - cur % R; setSel(Math.min(st + R - 1, n - 1));
@@ -915,8 +936,9 @@ const tapTile = i => { if (S.justDragged) return; if (selKey() === i) press("A")
 function buildStyle() {
   S.row = null;
   if (!S.inConsole) S.cat = onCat(S.cat);   /* the tab asked for is off (Home off, B back to Consoles off, a layout row's tab): the next one on */
-  if (isHome()) return homeList() ? buildHomeList() : homeCar() ? buildHomeCar() : buildHome();
+  if (isHome()) return homeMin() ? buildHomeMin() : homeList() ? buildHomeList() : homeCar() ? buildHomeCar() : buildHome();
   const st = sty();
+  if (st === "min") return buildMin();
   if (st === "list") return buildList();
   if (st === "car") return buildCar();
   if (st === "bd") return buildBd();
@@ -954,8 +976,9 @@ function gridShade(tx) {
 
 function updateStyle() {
   syncScreen(); syncStyle();
-  if (isHome()) return homeList() ? updateHomeList() : homeCar() ? updateHomeCar() : updateHome();
+  if (isHome()) return homeMin() ? updateHomeMin() : homeList() ? updateHomeList() : homeCar() ? updateHomeCar() : updateHome();
   const st = sty();
+  if (st === "min") return updateMin();
   if (st === "list") return updateList();
   if (st === "car") return updateCar();
   if (st === "bd") return updateBd();
@@ -986,8 +1009,9 @@ function updateStyle() {
 }
 
 function pressStyle(k, repeat) {
-  if (isHome()) return homeList() ? pressHomeList(k) : homeCar() ? pressHomeCar(k, repeat) : pressHome(k, repeat);
+  if (isHome()) return homeMin() ? pressHomeMin(k, repeat) : homeList() ? pressHomeList(k) : homeCar() ? pressHomeCar(k, repeat) : pressHome(k, repeat);
   const st = sty();
+  if (st === "min") return pressMin(k, repeat);
   if (st === "list") return pressList(k);
   if (st === "car" || st === "bd") return pressCar(k, repeat);
   if (st === "vert" || st === "cvert") return pressVert(k, repeat);
@@ -1378,18 +1402,18 @@ const syncStyle = () => {
 /* the Layouts block: List / Grid / Carousel per main-menu tab, plus Backdrop for game lists; then, while the row is on
    Carousel (or Backdrop), its orientation Horizontal / Vertical. Both kept in localStorage like the accent */
 document.getElementById("layouts").insertAdjacentHTML("beforeend", LAYOUTS.map(([k, n]) =>
-  `<div class="switch" role="group" aria-label="${n} layout"><span class="lbl">${n}</span>${(k === "home" ? [["list", "List"], ["grid", "Grid"], ["car", "Carousel"]] : [["list", "List"], ["grid", "Grid"], ["car", "Carousel"], ...(k === "games" ? [["bd", "Backdrop"]] : [])])
+  `<div class="switch" role="group" aria-label="${n} layout"><span class="lbl">${n}</span>${(k === "home" ? [["list", "List"], ["grid", "Grid"], ["car", "Carousel"], ["min", "Minimal"]] : [["list", "List"], ["grid", "Grid"], ["car", "Carousel"], ...(k === "games" ? [["bd", "Backdrop"]] : []), ["min", "Minimal"]])
     .map(([s, t]) => `<button data-l="${k}" data-s="${s}" aria-pressed="false">${t}</button>`).join("")}<span class="osw" data-k="${k}" role="group" aria-label="${n} orientation"><span class="lbl">Orientation</span>${[["h", "Horizontal"], ["v", "Vertical"]]
     .map(([o, t]) => `<button data-k="${k}" data-o="${o}" aria-pressed="false">${t}</button>`).join("")}</span>${k === "games" ? `<span class="osw vasw" role="group" aria-label="Game lists vertical alignment"><span class="lbl">Vertical alignment</span>${[["left", "Left"], ["right", "Right"]]
     .map(([v, t]) => `<button data-valign="${v}" aria-pressed="false">${t}</button>`).join("")}</span>` : ""}</div>`).join(""));
 { let saved = null, so = null; try { saved = JSON.parse(localStorage.getItem("nx-layouts") || "null"); so = JSON.parse(localStorage.getItem("nx-orient") || "null"); } catch (e) {}
-  const ok = ["list", "grid", "car", "bd"];
+  const ok = ["list", "grid", "car", "bd", "min"];
   if (so) LAYOUTS.forEach(([k]) => { if (so[k] === "h" || so[k] === "v") S.ori[k] = so[k]; });
   /* a main-menu tab stored as Backdrop (the old fourth style) reads as Carousel, which now draws that row;
      a stored "vert" (the earlier separate Vertical layout) reads as Carousel (main menu) or Backdrop (game lists) + Vertical */
   if (saved) LAYOUTS.forEach(([k]) => { const v = saved[k];
     if (v === "vert") { S.lay[k] = k === "games" ? "bd" : "car"; S.ori[k] = "v"; }
-    else if (k === "home") { if (v === "list" || v === "grid" || v === "car") S.lay.home = v; }   /* Home: List, Grid (the dashboard) or Carousel */
+    else if (k === "home") { if (v === "list" || v === "grid" || v === "car" || v === "min") S.lay.home = v; }   /* Home: List, Grid (the dashboard) or Carousel */
     else if (ok.includes(v)) S.lay[k] = k !== "games" && v === "bd" ? "car" : v; });
   if (saved && Object.values(saved).includes("vert")) try { localStorage.setItem("nx-layouts", JSON.stringify(S.lay)); localStorage.setItem("nx-orient", JSON.stringify(S.ori)); } catch (e) {} }
 /* the Game Switcher's own row, last: Full screen (default) or List; picking one opens the switcher */
@@ -2140,6 +2164,141 @@ function updateHomeList() {
 }
 function homeListOpen() {
   if (S.hl[selKey()].r.pick) { S.cat = CATS.findIndex(c => c.items === CONSOLES); build(); return update(); }   /* fresh install: pick a game from Consoles */
+}
+/* ---------- Home Minimal: Home's List items (Continue, the pinned games, the pinned tools) as big names under the strip ---------- */
+const homeMin = () => S.lay.home === "min";
+const minSize = () => { const d = DIM[S.orient]; return PORT(S.orient) ? { f: Math.round(d.w / 11), gap: 2 } : { f: Math.round(Math.min(d.h / 8.6, d.w / 16)), gap: 2 }; };
+function buildHomeMin() {
+  const list = S.hl = homeListItems(), p = PORT(S.orient), g = p ? 16 : 24, { f, gap } = minSize();
+  S.sel[S.cat] = Math.max(0, Math.min(S.sel[S.cat] || 0, list.length - 1));
+  const n0 = stripLines(), n = n0 && S.hst !== "none" ? 2 : n0, lh = p ? 17 : 18, stripH = n ? n * lh + (n - 1) * 2 : 0, top = n ? 44 + 8 + stripH + 4 : 44;
+  screen.innerHTML = `${tabsHTML()}
+    <div class="home hl" style="--h-pt:44px;--h-so:10px">${n ? `<div class="hpage">${stripHTML(n)}</div>` : ""}</div>
+    <div class="mview" style="top:${top}px"><div class="mlist" id="mlist" style="left:${g}px;right:${g}px">${list.map((t, i) =>
+      `<div class="mrow" data-i="${i}" style="font-size:${f}px;line-height:${f + gap}px;height:${f + gap}px"><span>${t.r.n}</span>${t.kind === "cont" && !t.r.pick ? "<small>Continue</small>" : ""}</div>`).join("")}</div></div>
+    <div class="hints scrim" id="hints"></div>`;
+  screen.querySelectorAll(".mrow").forEach(el => el.onclick = () => { const i = +el.dataset.i; if (selKey() === i) return homeMinOpen(); setSel(i); update(); });
+  screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
+}
+function updateHomeMin() {
+  const list = S.hl, idx = selKey(), t = list[idx], it = t.r, rows = screen.querySelectorAll(".mrow");
+  screen.querySelectorAll(".tab").forEach(e => e.classList.toggle("on", +e.dataset.c === S.cat));
+  minPlace(rows, idx);
+  const cont = t.kind === "cont";
+  document.getElementById("hints").innerHTML = it.game ? hint("nav_button_menu", "Options") + hint("nav_button_a", cont && S.hsSave ? "Resume" : "Play")
+    : hint("nav_button_a", it.pick ? "Open" : it.n);
+}
+/* a selected name too long for the row scrolls: 1.2 s still, then left at 70 dp/s until its end shows, 1 s still, back to the
+   start; the other names keep their ellipsis */
+function minMarquee(row) {
+  if (S.mq) { S.mq.anim.cancel(); S.mq.row.classList.remove("marquee"); S.mq = null; }
+  const span = row && row.firstElementChild;
+  if (!span) return;
+  row.classList.add("marquee");   /* the name at its full width, to measure */
+  const over = span.offsetWidth - row.clientWidth;   /* layout sizes, in dp: the screen's scale is a transform */
+  if (over <= 2) return row.classList.remove("marquee");
+  const run = over / 70 * 1000, hold = 1200, end = 1000, total = hold + run + end;
+  const anim = span.animate([
+    { transform: "translateX(0)", offset: 0 },
+    { transform: "translateX(0)", offset: hold / total, easing: "linear" },
+    { transform: `translateX(${-over}px)`, offset: (hold + run) / total },
+    { transform: `translateX(${-over}px)`, offset: 1 },
+  ], { duration: total, iterations: Infinity });
+  S.mq = { anim, row };
+}
+/* the selection a third of the way down the area; the names fade with their distance from it as the app's minimalAlpha:
+   below, half under the selection down to nothing at the view's bottom; above, 0.3, 0.22, then 0.2 */
+const minAlpha = (k, y, y1, h) => k === 0 ? 1 : k < 0 ? [.3, .22, .2][Math.min(-k, 3) - 1] : .5 * (1 - Math.max(0, Math.min(1, (y - y1) / Math.max(1, h - y1))));
+function minPlace(rows, idx) {
+  const { f, gap } = minSize(), pitch = f + gap, vh = screen.querySelector(".mview").clientHeight, anchor = Math.max(0, Math.round(vh * .34 - pitch / 2));
+  document.getElementById("mlist").style.transform = `translateY(${anchor - idx * pitch}px)`;
+  rows.forEach((r, j) => { const k = j - idx; r.classList.toggle("focus", k === 0); r.style.opacity = minAlpha(k, anchor + k * pitch, anchor + pitch, vh); });
+  minMarquee(rows[idx]);
+}
+/* A on a game or a tool: the other names fade (120 ms), then a dark tint of the accent grows from the name's row over the screen
+   (350 ms) as it goes black, the name staying where it was; then [done] (the demo has no game to run) */
+function minOpen(row, done) {
+  if (S.mopen || !row) return;
+  const d = DIM[S.orient], sr = screen.getBoundingClientRect(), rr = row.getBoundingClientRect(), k = d.w / sr.width;
+  const y = (rr.top - sr.top) * k, h = rr.height * k, x = (rr.left - sr.left) * k, f = parseFloat(row.style.fontSize), lh = parseFloat(row.style.lineHeight);
+  S.mopen = true; minMarquee(null);
+  screen.querySelector(".mview").classList.add("leaving");
+  const band = document.createElement("div"); band.className = "mopen";
+  Object.assign(band.style, { top: `${y - 6}px`, height: `${h + 12}px`, opacity: 0 });
+  const name = document.createElement("div"); name.className = "mname";
+  Object.assign(name.style, { left: `${x}px`, top: `${y + (h - lh) / 2}px`, fontSize: `${f}px`, lineHeight: `${lh}px`, opacity: 0 });
+  name.textContent = row.firstElementChild.textContent;
+  const dark = document.createElement("div"); dark.className = "mdark";
+  screen.append(band, name, dark);
+  setTimeout(() => {
+    band.style.opacity = name.style.opacity = 1;
+    requestAnimationFrame(() => { Object.assign(band.style, { top: "0px", height: `${d.h}px` }); dark.style.opacity = 1; });
+  }, 120);
+  setTimeout(() => { S.mopen = false; done(); }, 120 + 350 + 150);
+}
+/* A on a console or a collection: the other names fade (120 ms), then its list opens; a Minimal list's names rise in */
+function minLeave(done) {
+  if (S.mopen) return;
+  S.mopen = true; minMarquee(null);
+  screen.querySelector(".mview").classList.add("leaving");
+  setTimeout(() => { S.mopen = false; done(); }, 120);
+}
+function minRise() {
+  const rows = [...screen.querySelectorAll(".mrow")], idx = selKey();
+  rows.forEach((r, j) => r.animate([{ translate: "0 24px", opacity: 0 }, { translate: "0 0" }],
+    { duration: 220, delay: 80 + 30 * Math.max(0, Math.min(8, j - idx + 2)), easing: "cubic-bezier(.2,.8,.2,1)", fill: "backwards" }));
+}
+/* B back to a Minimal tab: the other names fade in around the selection */
+function minFadeIn() { screen.querySelectorAll(".mrow:not(.focus)").forEach(r => r.animate([{ opacity: 0 }, {}], { duration: 280, easing: "ease-out" })); }
+function homeMinOpen() {
+  const t = S.hl[selKey()];
+  minOpen(screen.querySelector(".mrow.focus"), () => {
+    if (t.r.pick) { S.cat = CATS.findIndex(c => c.items === CONSOLES); build(); return update(); }   /* fresh install: pick a game from Consoles */
+    build(); update();   /* the demo has no game to run: back to Home */
+  });
+}
+/* UP / DOWN wrap on a fresh press and stop on a held key, as every Minimal list */
+function minStep(k, repeat, n, cur) {
+  if (!n) return false;
+  if (k === "up") { if (cur > 0) setSel(cur - 1); else if (!repeat) setSel(n - 1); update(); return true; }
+  if (k === "down") { if (cur < n - 1) setSel(cur + 1); else if (!repeat) setSel(0); update(); return true; }
+  return false;
+}
+function pressHomeMin(k, repeat) {
+  if (S.mopen) return;
+  if (k === "L1" || k === "R1" || k === "left" || k === "right") return switchTab(k === "R1" || k === "right" ? 1 : -1);
+  if (k === "A") return homeMinOpen();
+  minStep(k, repeat, S.hl.length, selKey());
+}
+/* ---------- Minimal on Consoles, Collections, Tools and the game lists: the names alone, under the tab row or the list's title ---------- */
+function buildMin() {
+  const p = PORT(S.orient), g = p ? 16 : 24, { f, gap } = minSize(), list = items();
+  if (!S.inConsole) S.sel[S.cat] = Math.max(0, Math.min(S.sel[S.cat] || 0, list.length - 1));
+  screen.innerHTML = `${S.inConsole ? headHTML() : tabsHTML()}
+    <div class="mview" style="top:44px"><div class="mlist" id="mlist" style="left:${g}px;right:${g}px">${list.map((r, i) =>
+      `<div class="mrow" data-i="${i}" style="font-size:${f}px;line-height:${f + gap}px;height:${f + gap}px"><span>${r.n}</span></div>`).join("")}</div></div>
+    <div class="hints" id="hints"></div>`;
+  screen.querySelectorAll(".mrow").forEach(el => el.onclick = () => { const i = +el.dataset.i; if (selKey() === i) return press("A"); setSel(i); update(); });
+  screen.querySelectorAll(".tab").forEach(el => el.onclick = () => { S.cat = +el.dataset.c; build(); update(); });
+  if (S.minIn) { const how = S.minIn; S.minIn = null; requestAnimationFrame(() => how === "rise" ? minRise() : minFadeIn()); }
+}
+function updateMin() {
+  const idx = selKey(), rows = screen.querySelectorAll(".mrow");
+  screen.querySelectorAll(".tab").forEach(e => e.classList.toggle("on", +e.dataset.c === S.cat));
+  minPlace(rows, idx);
+  document.getElementById("hints").innerHTML = hintsFor(items()[idx]);
+}
+function pressMin(k, repeat) {
+  if (S.mopen) return;
+  if ((k === "L1" || k === "R1" || k === "left" || k === "right") && !S.inConsole) return switchTab(k === "R1" || k === "right" ? 1 : -1);
+  const n = items().length, cur = selKey();
+  if (minStep(k, repeat, n, cur)) return;
+  if (k === "A" && n) {
+    const r = items()[cur];
+    if (!S.inConsole && r.open) return minLeave(() => { S.inConsole = true; S.sub = null; S.game = 0; S.minIn = S.lay.games === "min" ? "rise" : null; build(); update(); });
+    return minOpen(screen.querySelector(".mrow.focus"), () => { build(); update(); });   /* a game or a tool: the band; the demo has nothing to run */
+  }
+  if (k === "B" && S.inConsole) { S.inConsole = false; S.minIn = sty() === "min" ? "fade" : null; build(); update(); }
 }
 function pressHomeList(k) {
   if (k === "L1" || k === "R1" || k === "left" || k === "right") return switchTab(k === "R1" || k === "right" ? 1 : -1);

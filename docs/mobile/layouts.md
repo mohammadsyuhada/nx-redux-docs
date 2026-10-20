@@ -49,7 +49,7 @@ sideways). The picture changes as you change a row.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Home tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Home layout** | List, Grid, Carousel | Grid | When Home tab is Show |
+| **Home layout** | List, Grid, Carousel, Minimal | Grid | When Home tab is Show |
 | [**New shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
 | [**Not started shelf**](foldables.md#shelves) | Show, Hide | Show | When Home tab is Show |
 | [**Home stats**](#home-stats) | Show, Hide | Show | When Home tab is Show |
@@ -72,7 +72,7 @@ achievements; [Extra info](#extra-info) hides those.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Consoles tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Consoles layout** | List, Grid, Carousel | Carousel | When Consoles tab is Show |
+| **Consoles layout** | List, Grid, Carousel, Minimal | Carousel | When Consoles tab is Show |
 | [**Consoles orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Consoles tab is Show and Consoles layout is Carousel |
 | [**Consoles background**](#consoles-background) | Controller, Background, None | Controller | When Consoles tab is Show and Consoles layout is List or Carousel |
 
@@ -100,7 +100,7 @@ while **Consoles layout** is **Grid**.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Collections tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Collections layout** | List, Grid, Carousel | Carousel | When Collections tab is Show |
+| **Collections layout** | List, Grid, Carousel, Minimal | Carousel | When Collections tab is Show |
 | [**Collections orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Collections tab is Show and Collections layout is Carousel |
 
 ## Tools
@@ -110,7 +110,7 @@ while **Consoles layout** is **Grid**.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Tools tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Tools layout** | List, Grid, Carousel | Grid | When Tools tab is Show |
+| **Tools layout** | List, Grid, Carousel, Minimal | Grid | When Tools tab is Show |
 | [**Tools orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Tools tab is Show and Tools layout is Carousel |
 
 ## Game lists
@@ -119,7 +119,7 @@ while **Consoles layout** is **Grid**.
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
-| **Game lists layout** | List, Grid, Carousel, Backdrop | Carousel | Always |
+| **Game lists layout** | List, Grid, Carousel, Backdrop, Minimal | Carousel | Always |
 | [**Game lists orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Game lists layout is Carousel or Backdrop |
 | [**Game lists alignment**](main-menu.md#game-lists-alignment) | Left, Right | Left | When Game lists orientation is Vertical |
 | [**List art**](#list-art) | Screenshot, Mix, 3D box art, 2D box art, Wheel, None | Screenshot | When Game lists layout is List |
@@ -172,7 +172,7 @@ the last two.
 
 ??? info "More detail"
     - The Layout dropdown lists List, Grid, Carousel, Carousel vertical left
-      and right, Backdrop, and Backdrop vertical left and right.
+      and right, Backdrop, Backdrop vertical left and right, and Minimal.
     - The trophy icon, the hint and the **Achievements** item show only while
       you are signed in to [RetroAchievements](retroachievements.md).
 

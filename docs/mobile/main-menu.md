@@ -15,7 +15,8 @@ See [Controls](controls.md).
 
 ??? info "More detail"
     - Consoles, Collections, Tools and the game lists can each be a list, a
-      grid or a carousel, and game lists have a fourth style, Backdrop.
+      grid, a carousel or Minimal (just the names), and game lists have one
+      more style, Backdrop.
     - With touch only (no controller, and no pad on screen) there is no hint
       bar: tap the items, and use the icons at the top right.
 
@@ -74,8 +75,8 @@ Press `Up` from the top of the content to move onto the tab row.
 ## Home
 
 Home is the starting point: your most recent game, this month's play time,
-and everything you pinned. It comes in three layouts, **List**, **Grid** (the
-default) and **Carousel**. Pick one in
+and everything you pinned. It comes in four layouts, **List**, **Grid** (the
+default), **Carousel** and **Minimal**. Pick one in
 [Settings → Layouts → Home → Home layout](layouts.md#the-layouts-page).
 
 Every layout starts with a two-line stats strip:
@@ -223,6 +224,34 @@ tools in a row of squares underneath. Swipe the carousel to scroll it.
       on the screen as one group. When the tools don't all fit, the last
       square is **+N**, which opens the Tools tab.
 
+### Minimal
+
+Just the names, big, on plain black: no art, no cards.
+
+![Home in Minimal: the stats strip at the top, Streets of Rage 2 solid in the accent, the other games as outlined names fading towards the bottom](../assets/screenshots/mobile/home-layout-minimal.webp)
+
+- **The list** holds the same items as [List](#list): Continue, your pinned
+  games, the shelf games and your pinned tools.
+- **The selected name** is solid in your accent colour, one row under the
+  stats strip. The other names are its outline, fading the further they are
+  from it: below it from half strength down to nothing at the bottom of the
+  screen, above it fainter still.
+- **Its tag** (**Continue**, **New**, **Not started**, **Pick up again**,
+  **Tool**) sits at the end of the selected name, as a pill in your
+  Secondary accent.
+
+| Button | What it does |
+| --- | --- |
+| `Up` / `Down` | Move through the names. It wraps around at either end; a held button stops at the end |
+| `Left` / `Right` | Switch tab |
+
+??? info "More detail"
+    - A long name wraps at its words onto up to three lines.
+    - With touch, drag the names up and down; let go and they settle on the
+      name you threw them to.
+    - Opening a game fades the other names, then a dark band in your accent
+      grows from the name over the screen as the game loads.
+
 ## Pinning games and tools
 
 - **Pin a game:** press `MENU` on it in a game list and choose **Pin Item**.
@@ -237,8 +266,8 @@ tools in a row of squares underneath. Swipe the carousel to scroll it.
 
 One entry per system that has games in it, each with its logo and how many
 games it holds. The tab is drawn in its style from
-[Layouts](layouts.md#consoles): **List**, **Grid** or **Carousel** (the
-default).
+[Layouts](layouts.md#consoles): **List**, **Grid**, **Carousel** (the
+default) or **Minimal**.
 
 | Button | What it does |
 | --- | --- |
@@ -316,6 +345,20 @@ in [Layouts](layouts.md) to **Vertical**.
 
 </div>
 
+### Minimal { #consoles-minimal }
+
+The consoles' names alone, big, as on [Minimal Home](#minimal): the selected
+one solid in your accent, the others outlined and fading away from it. `Up`
+and `Down` wrap as a [List](#consoles-list) does.
+
+![Consoles tab in Minimal, Sega Genesis selected, the other console names outlined and fading](../assets/screenshots/mobile/consoles-minimal.webp)
+
+??? info "More detail"
+    - `A` fades the other names, then the console's name flies up into the
+      game list's title as its games rise in, when the game lists are
+      Minimal too. `B` drops the title back into its place.
+    - Collections and Tools in Minimal work the same way.
+
 ## Collections
 
 Your own lists of games, each with its name and game count. The tab appears
@@ -324,7 +367,23 @@ once you have a collection, and `A` **Open** opens its
 [Layouts](layouts.md#collections). The styles work as on
 [Consoles](#consoles).
 
+<div class="grid" markdown>
+
+<figure markdown>
+
 ![Collections tab in Carousel, with Pokemon World (9 games) in the middle](../assets/screenshots/mobile/tab-collections.webp)
+
+<figcaption>Carousel</figcaption>
+</figure>
+
+<figure markdown>
+
+![Collections tab in Minimal, Couch Multiplayer selected among the collection names](../assets/screenshots/mobile/collections-minimal.webp)
+
+<figcaption>Minimal</figcaption>
+</figure>
+
+</div>
 
 To build one from a game list:
 
@@ -354,7 +413,23 @@ The built-in tools, each with its icon: **RetroAchievements**,
 its style in [Layouts](layouts.md#tools). The styles work as on
 [Consoles](#consoles).
 
+<div class="grid" markdown>
+
+<figure markdown>
+
 ![Tools tab in Grid: RetroAchievements, Game Tracker, Artwork, Cheat Database, Device Sync and Settings](../assets/screenshots/mobile/tab-tools.webp)
+
+<figcaption>Grid</figcaption>
+</figure>
+
+<figure markdown>
+
+![Tools tab in Minimal, Game Tracker selected among the tool names](../assets/screenshots/mobile/tools-minimal.webp)
+
+<figcaption>Minimal</figcaption>
+</figure>
+
+</div>
 
 `A` **Open** opens the tool. `MENU` on a tool, or a long press, offers **Pin**
 or **Unpin**, which puts it on [Home](#pinning-games-and-tools).
@@ -375,7 +450,7 @@ The tools have their own pages: [RetroAchievements](retroachievements.md),
 Opening a console or a collection shows its games. The page title names the
 console or collection, e.g. **Sega Genesis**. The list is drawn in the game
 lists' style from [Layouts](layouts.md#game-lists): **List**, **Grid**,
-**Carousel** (the default) or **Backdrop**. It is the same for every game
+**Carousel** (the default), **Backdrop** or **Minimal**. It is the same for every game
 list.
 
 The selected game shows when you last played it and your total play time
@@ -441,6 +516,18 @@ time and achievement count, then the next achievement on its own line.
 
 ![Game Boy Advance list in Backdrop style, Advance Wars 2 - Black Hole Rising's box over its screenshot](../assets/screenshots/mobile/game-list-backdrop.webp)
 
+### Minimal { #games-minimal }
+
+The games' names alone, big, as on [Minimal Home](#minimal), under the page
+title: no art and no game info. `Up` and `Down` wrap as a
+[List](#games-list) does.
+
+![Sega Genesis list in Minimal, Streets of Rage 2 selected, the other game names outlined and fading](../assets/screenshots/mobile/game-list-minimal.webp)
+
+??? info "More detail"
+    `A` fades the other names, then a dark band in your accent grows from the
+    game's name over the screen as the game loads.
+
 ### Vertical game lists { #game-lists-alignment }
 
 A Carousel or Backdrop game list can run down the screen (see
@@ -481,8 +568,8 @@ On a phone or tablet, icons sit at the right of a game list's title:
 
 ??? info "More detail"
     - The **Layout** dropdown offers **List**, **Grid**, **Carousel**,
-      **Carousel, vertical left** / **right**, **Backdrop** and **Backdrop,
-      vertical left** / **right**.
+      **Carousel, vertical left** / **right**, **Backdrop**, **Backdrop,
+      vertical left** / **right** and **Minimal**.
     - **Layout options** and **Achievements panel** in Layouts → Game lists
       hide the Layout and trophy icons. See
       [Layouts](layouts.md#layout-options-and-achievements-panel).
