@@ -73,27 +73,61 @@ looked for.
     under the list starts with its source (for example `(GameShark)`) so you
     can tell them apart.
 
+!!! tip "Keep the region in your ROM names"
+    Cheats often differ between the USA, Europe and Japan releases of a game.
+    NX Redux picks the cheat file for your ROM's region, read from its name:
+    `Tekken 6 (USA).iso` gets the USA cheats. A name without a region, like
+    `Tekken 6.iso`, gets whichever region it finds first, which may not match
+    your copy.
+
+### Two kinds of cheats
+
+Most cheat files hold **codes** (Game Genie, GameShark, Action Replay,
+CWCheat on PSP) that the emulator core decodes. Others are **RAM cheats**: a
+value NX Redux writes into the game's memory on every frame, such as "keep
+player 1's energy full". RAM cheats come from RetroArch's cheat search, and
+the database has about a thousand of them, mostly for systems without
+cheat devices: arcade (FBN), Dreamcast, ColecoVision, Atari 7800, Lynx and
+MSX, plus some SNES and PC Engine games. Both kinds appear in the same
+**Cheats** list and turn on and off the same way.
+
+RAM cheats pause while you play over [netplay](../netplay.md) or a
+link cable, since the other player's game would not have the same change.
+
+!!! warning "Turn RAM cheats on once the game is running"
+    A RAM cheat changes memory from the moment it's on. Turned on in a cheat
+    file before the game starts, it can upset the game's own start-up checks
+    (a Neo Geo game, for example, reports a *WORK RAM ERROR*). Turning it on
+    from the **Cheats** menu during play is safe.
+
 ### Cheats and RetroAchievements
 
 [RetroAchievements](retroachievements.md) on NX Redux is **softcore only**,
 so there is no hardcore mode to block cheats. You can turn cheats on with
 achievements enabled.
 
-## Nintendo DS { #ds-n64-and-dreamcast }
+## Systems without cheats { #ds-n64-and-dreamcast }
 
-!!! warning "Built-in cores only, for now"
-    Cheats take effect on the **built-in libretro cores** (Game Boy, GBA, NES,
-    SNES, Mega Drive, PlayStation, Nintendo 64, Dreamcast, and the like). They
-    **don't take effect yet** on Nintendo DS.
+!!! warning "A few systems can't use the downloaded cheats yet"
+    Cheats work on the **built-in emulator cores** (Game Boy, GBA, NES, SNES,
+    Mega Drive, PlayStation, PSP, Nintendo 64, Dreamcast, arcade and the
+    like). They **don't take effect** on:
 
-The Cheat Database still **delivers** files for it. You'll find them under
-`Cheats/NDS/`. They are shipped for future use.
+    | System | Why |
+    | --- | --- |
+    | Nintendo DS | It runs on a standalone emulator (DraStic) with its own cheat format |
+    | Atari 5200 | Its core doesn't give NX Redux access to the game's memory, which its RAM cheats need |
+    | Neo Geo Pocket (Color), Virtual Boy | Their cores have no cheat support |
 
-??? info "More detail: why they don't work yet"
-    **Nintendo DS** runs on a **standalone emulator** (DraStic), which uses its
-    own native cheat format and doesn't read these libretro `.cht` files.
-    Nintendo 64 moved to the built-in Mupen64Plus-Next core, so its cheats in
-    `Cheats/N64/` now work like any other system's.
+The Cheat Database still **delivers** files for these systems (for example
+under `Cheats/NDS/`). They are shipped for future use.
+
+!!! note "MSX cheats if you downloaded the database earlier"
+    Up to NX Redux v2.3.0, the download skipped the MSX cheats. If you
+    downloaded the cheat database on v2.3.0 or earlier, `Cheats/MSX/` is
+    empty: open **Tools → Cheat Database**, choose **Remove cheat database**,
+    then **Download** again. **Check for updates** only downloads again
+    when libretro publishes new cheats.
 
 ## Where the files go
 

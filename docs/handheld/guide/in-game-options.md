@@ -91,9 +91,10 @@ Lists every cheat found for the game. Toggle a cheat `On` / `Off` with
 full description.
 
 If no cheat file is loaded, the menu lists the file names it looked for and
-points you at **Xtras → Cheat Database**. Cheats can't be enabled while
-RetroAchievements **hardcore mode** is active. See [Cheats](../apps/cheats.md)
-for where cheat files go.
+points you at **Xtras → Cheat Database**. RetroAchievements on NX Redux is
+softcore only, so cheats work with achievements on. See
+[Cheats](../apps/cheats.md) for where cheat files go and which systems' cheats
+work.
 
 ## Controls
 
