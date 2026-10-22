@@ -2,7 +2,9 @@
 
 NX Redux fits itself to the screen it's on. A half-folded foldable
 gets Flex mode, a wide or large screen gets a fuller Home, and Settings and
-the in-game menu split into two panes when there is room.
+the in-game menu split into two panes when there is room. For handhelds with
+a second screen, and displays on USB-C, see
+[Dual Screens & External Displays](dual-screen.md).
 
 ## Flex mode
 
@@ -120,10 +122,12 @@ Artwork page. Tap a row in the dimmed left pane to open it instead.
 
 The [in-game menu](in-game-menu.md) splits too:
 
-- On the first page, the right pane previews the highlighted row: the save
-  slot on **Save** and **Load**, or the page a row opens.
+- On the first page, the right pane shows the save slot on **Save** and
+  **Load**, and the [game panel](in-game-menu.md#the-game-panel) on the
+  other rows.
 - Deeper in, the open page is on the right and the page it came from on the
   left, dimmed.
-- `RIGHT` on a row that opens a page opens it, as `A` does. Value rows still
-  change with `LEFT` / `RIGHT`.
+- Deeper in, `RIGHT` on a row that opens a page opens it, as `A` does. On
+  the first page, `RIGHT` moves into the game panel. Value rows still change
+  with `LEFT` / `RIGHT`.
 - Tap a row in the dimmed pane to go back to it.

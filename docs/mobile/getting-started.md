@@ -65,22 +65,25 @@ The first time you open the app, a short setup walks you through it. Use
 1. **Welcome.** Press **Get started**.
 2. **Text size.** **Large** or **Small**. Every page after it, setup's own
    included, reads at the size you pick. See [Text size](appearance.md#text-size).
-3. **Permissions.** **All files access** and **Notifications**, where your
+3. **Bottom screen.** Only on a handheld with a built-in second screen: tap
+   **This is the bottom screen** on the lower screen. See
+   [Dual Screens & External Displays](dual-screen.md#first-run-setup).
+4. **Permissions.** **All files access** and **Notifications**, where your
    phone has them. See [Allow All files access](#allow-all-files-access).
-4. **Your folders.** The home folder, an extra ROMs folder, and the Android
+5. **Your folders.** The home folder, an extra ROMs folder, and the Android
    games on your phone. See [Choose a home folder](#choose-a-home-folder).
-5. **Your handheld.** If you also play on an NX Redux handheld, setup matches
+6. **Your handheld.** If you also play on an NX Redux handheld, setup matches
    its save formats and offers a [Device Sync](device-sync.md).
-6. **Bring your saves.** Copy battery saves and save states from a folder, a
+7. **Bring your saves.** Copy battery saves and save states from a folder, a
    zip file or RetroArch. See [Import saves](library.md#import-saves).
-7. **Artwork.** Fetch box art and screenshots in the background. See
+8. **Artwork.** Fetch box art and screenshots in the background. See
    [Artwork](artwork.md).
-8. **RetroAchievements.** Sign in, then download the achievement data in the
+9. **RetroAchievements.** Sign in, then download the achievement data in the
    background. See [RetroAchievements](retroachievements.md).
-9. **Customise the layout?** Pick the menu's look page by page, each with a
+10. **Customise the layout?** Pick the menu's look page by page, each with a
    picture, or keep the defaults. See [Menu Layouts](layouts.md).
-10. **Accents.** Pick your **Accent** and **Secondary accent**.
-11. **Ready, player one.** Press **Press Start** to open the main menu.
+11. **Accents.** Pick your **Accent** and **Secondary accent**.
+12. **Ready, player one.** Press **Press Start** to open the main menu.
 
 Everything setup asks can be changed later in **Tools → Settings**.
 
