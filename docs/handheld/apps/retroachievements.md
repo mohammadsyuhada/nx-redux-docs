@@ -8,8 +8,8 @@ setting here.
 ![RetroAchievements tool](../../assets/screenshots/retroachievements.png)
 
 The home screen shows your account at a glance: points, unlocks waiting to
-be synced, and when the last sync happened. Below that are three entries:
-**Achievements**, **Sync now** and **Settings**.
+be synced, and when the last sync happened. Below that are four entries:
+**Achievements**, **Sync now**, **Library** and **Settings**.
 
 ??? info "More detail"
     The integration is powered by
@@ -88,7 +88,7 @@ Everything is built to work without a connection:
 | **Connection drops** | An unlock earned while the connection is down, for example right after waking from sleep, is journaled too, so it isn't lost if you quit before WiFi comes back. The popup reads *RetroAchievements: offline, unlocks will sync later* |
 | **Slow WiFi at launch** | If WiFi isn't ready when a game starts (such as a game resumed after the device powered off in sleep), the login keeps retrying for a few seconds, then the game continues offline from the cache |
 | **Cached game data** | Achievement definitions, unlock state and badges are cached as you play, so a game you've launched once keeps working offline |
-| **Pre-download** | **Download all game data** caches achievement data for every game in your library, with a live progress bar. Even games you have *never* launched online then work offline |
+| **Pre-download** | **Download all game data** caches achievement data for every game in your library, with a live progress bar. Even games you have *never* launched online then work offline. **Library** does the same one console at a time (see below). Zipped (`.zip`/`.7z`) ROMs are unpacked for a moment to identify the game inside |
 
 ??? info "More detail: where the cache lives"
     - Each console folder keeps a `.retroachievements` folder: `hashes.json`
@@ -106,6 +106,20 @@ Everything is built to work without a connection:
     - Multi-disc games (PlayStation, Dreamcast) are covered too. Every disc is
       cached so any disc is recognised offline, and the game shows up once in
       the browser.
+
+## Library
+
+**Library** lists every console you have games for that RetroAchievements
+supports, for example *Game Boy (GB)*. The count next to each one shows how
+many of its games are done: their achievement data is cached, or they turned
+out not to be in RetroAchievements.
+
+- `A` downloads the achievement data for the selected console only. This is
+  the quick way through a large library.
+- `Y` downloads it for every console, the same as **Download all game data**.
+
+Each download shows a progress bar and can be cancelled with `B`. Games
+already cached are skipped, so running it again only fetches what's missing.
 
 ## Browsing your achievements
 
