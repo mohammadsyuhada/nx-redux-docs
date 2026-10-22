@@ -67,32 +67,37 @@ never joins. Players are kept until you quit the game.
 
 ## The Players page
 
-In a game with more than one player, the in-game menu has a **Players** row
-under **Load**. Its page lists:
+In a game with more than one player, the [game panel](in-game-menu.md#the-game-panel)
+has a **Players** tab. It's beside the in-game menu's first page, or on a
+handheld's [second screen](dual-screen.md#the-game-panel) while you play.
+With a controller, `A` on the tab's name opens it as a full page.
 
-| Row | Value | `LEFT` / `RIGHT` |
+<!-- screenshot: the game panel's Players tab in the in-game menu, Player 1 and Player 2 with controller names -->
+
+| Row | Value | `LEFT` / `RIGHT`, or a tap |
 | --- | --- | --- |
-| **Player 1** to **Player 4** | The controller's name, **Empty**, or the name with **(disconnected)** | Pick another controller, or **Empty**. Picking a controller another player has swaps the two players. |
-| One row per connected controller | **Playing** or **Not playing** | Switches between them. |
+| **Player 1** to **Player 4** | The controller's name, **Empty**, or the name with **(disconnected)** | Pick another connected controller, or **Empty**. Picking a controller another player has swaps the two players. |
 
 ??? info "More detail"
 
-    - The **Player** rows step through the connected controllers that are
-      playing, and **Empty**.
-    - The footer reads **Close the menu, then press a button on a new
+    - A tap on a row in the panel steps it to the next choice, as `RIGHT`
+      does.
+    - The page's footer reads **Close the menu, then press a button on a new
       controller to join.**
     - Two controllers with the same name are numbered, such as **Xbox
       Wireless Controller (2)**.
 
-### Not playing
+### Benching a controller
 
-A controller set to **Not playing** is ignored in multiplayer games until
-you set it back to **Playing**. It is remembered for that controller, across
-games, and it doesn't affect one-player games.
+Set a player to **Empty** and the controller that was there sits out: its
+presses no longer join the game. To bring it back, pick it for a player
+again; benched controllers are in the list too. A bench lasts until you quit
+the game.
 
 !!! tip "Bench a handheld's built-in controls"
-    Playing on an Android handheld with an external pad? Set the handheld's
-    built-in controls to **Not playing**, and your pad stays Player 1.
+    Playing on an Android handheld with an external pad? Set the built-in
+    controls' player to **Empty**, then press a button on your pad: it takes
+    that player.
 
 ## When a controller disconnects
 

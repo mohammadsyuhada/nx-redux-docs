@@ -363,7 +363,7 @@ and `Down` wrap as a [List](#consoles-list) does.
 
 Your own lists of games, each with its name and game count. The tab appears
 once you have a collection, and `A` **Open** opens its
-[game list](#game-lists). By default it is a Carousel; pick its style in
+[game list](#game-lists). By default it is Minimal; pick its style in
 [Layouts](layouts.md#collections). The styles work as on
 [Consoles](#consoles).
 

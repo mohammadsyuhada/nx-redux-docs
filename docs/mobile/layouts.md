@@ -100,7 +100,7 @@ while **Consoles layout** is **Grid**.
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
 | [**Collections tab**](#showing-and-hiding-tabs) | Show, Hide | Show | Always |
-| **Collections layout** | List, Grid, Carousel, Minimal | Carousel | When Collections tab is Show |
+| **Collections layout** | List, Grid, Carousel, Minimal | Minimal | When Collections tab is Show |
 | [**Collections orientation**](main-menu.md#orientation) | Horizontal, Vertical | Horizontal | When Collections tab is Show and Collections layout is Carousel |
 
 ## Tools

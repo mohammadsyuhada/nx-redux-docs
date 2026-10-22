@@ -257,6 +257,18 @@ Settings**, and the long-press saves it for the console.
       landscape.
     - Landscape is not affected.
 
+## Second screen
+
+On a handheld with a second screen, or with a display on USB-C, the game
+starts split: the top screen on one screen and the bottom screen on the
+other, which takes the touches. **SWAP** (or `SELECT` + `R1`) swaps them over
+for this session. The **Panel** pill at the bottom right shows the game panel
+instead, with both 3DS screens side by side on the other screen. See
+[Dual Screens & External Displays](../dual-screen.md#nintendo-ds-and-3ds).
+
+??? info "More detail"
+    The **Layout** rows aren't used while split or with the panel up.
+
 ## Cheats and achievements
 
 - Cheats: not available. Azahar's libretro core doesn't support them, so the

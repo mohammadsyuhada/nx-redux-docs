@@ -279,18 +279,20 @@ Your own save is never overwritten by the other player's.
 
 ## During a match
 
-![The in-game menu during a match with the Brick Pro: Leave netplay? with Continue and Leave](../assets/screenshots/mobile/netplay-in-game.webp)
+![The in-game menu during a match with the Brick Pro: Continue and Leave](../assets/screenshots/mobile/netplay-in-game.webp)
 
 A match has no save states, cheats, achievements, core options or disc
-changes. Each device is one player: every controller on the phone, and the
+changes. A **GB Link** or **GBA Link** session does earn
+[achievements](retroachievements.md), as each player plays their own game. Each device is one player: every controller on the phone, and the
 on-screen pad, play as that player.
 
-The in-game menu shows only **Leave netplay?**:
+The in-game menu shows only two rows, under the game's header, with no game
+panel beside them:
 
 | Row | What it does |
 | --- | --- |
 | **Continue** | Back to the game. |
-| **Leave** | Ends the match for both, and returns you to the game list. |
+| **Leave** | Ends the match for both, and returns you to the game list. In a **GB Link** or **GBA Link** session it ends the link and you keep playing (see below). |
 
 !!! warning "Come back within 30 seconds"
     While your menu is open, or the app is in the background, the other
@@ -306,15 +308,30 @@ The in-game menu shows only **Leave netplay?**:
 ??? info "More detail"
 
     - The features are off to keep both devices in step.
-    - The menu's line reads **Leaving ends the netplay session.** While it is
-      open, your input stops.
+    - The menu's line reads **Leaving ends the netplay session.** In a link
+      session it reads **Leaving ends the link. You keep playing on your
+      own save.** While the menu is open, your input stops.
     - Notices show at the top of the screen.
-    - After **Netplay ended** the menu is **Continue** / **Quit**. On a copy
-      the notice reads **Netplay ended - progress here won't be saved.**
+    - After **Netplay ended** in a match (not a link session) the menu is
+      **Continue** / **Quit**. On a copy the notice reads **Netplay ended -
+      progress here won't be saved.**
     - If the match can't start or breaks, a **Netplay failed** dialog says
       why, such as **Could not reach the other device.** or
       **Netplay failed - the other device's emulator doesn't match.**, and
       you go back to the game list.
+
+### When a link session ends
+
+In a **GB Link** or **GBA Link** session each player plays their own game
+on their own save, so nothing is lost when the link ends. Once it ends,
+the game becomes a normal game: the full in-game menu comes back, with
+save states, cheats, options and the game panel. Leave the game with
+**Quit** as usual.
+
+A link session ends when you choose **Leave**, or, for a Game Boy Advance
+link, when the other player leaves or the connection drops. A Game Boy
+link can't tell when the other player has gone, so choose **Leave** when
+you're done trading or battling.
 
 ## Not supported
 

@@ -12,10 +12,14 @@ The game pauses while the menu is open.
 - `B` goes back one page.
 - `B` on the first page, or `MENU` on any page, returns to the game.
 
+The game's header runs across the top of every page: its box art, name, play
+time and achievement count, with the time and battery level. On the first
+page, the [game panel](#the-game-panel) sits on the right.
+
 ![The in-game menu's first page on Comix Zone, with Load selected and the save slot preview](../assets/screenshots/mobile/in-game-menu-root.webp)
 
-During a [netplay](netplay.md) match the menu shows only **Leave netplay?**.
-See [Netplay → During a match](netplay.md#during-a-match).
+During a [netplay](netplay.md) match the menu shows only **Continue** and
+**Leave**. See [Netplay → During a match](netplay.md#during-a-match).
 
 ??? info "More detail"
 
@@ -27,12 +31,17 @@ See [Netplay → During a match](netplay.md#during-a-match).
       [Appearance](appearance.md): the highlighted row sits on the accent, and
       the value bar on the secondary accent. Its rows, the save slot's text and
       its dialogs follow [**Text size**](appearance.md#text-size) there too.
-    - During a netplay match the menu has **Continue** and **Leave**. Once the
-      match has ended and you play on alone, it shows **Continue** and
-      **Quit**.
+    - During a netplay match the menu has **Continue** and **Leave**, with no
+      game panel. Once the match has ended and you play on alone, it shows
+      **Continue** and **Quit**.
     - On a wide landscape screen, such as an unfolded foldable held sideways
       or a phone in landscape, the menu shows two pages side by side. See
       [Foldables & Large Screens](foldables.md#two-pane-screens).
+    - In portrait, a page opened from the first page takes the whole width,
+      with its name above its rows.
+    - With a [second screen](dual-screen.md) in use, the menu opens on the
+      main screen. When the touch screen is showing the game panel, the menu
+      list slides in beside it.
 
 ## The first page
 
@@ -42,13 +51,13 @@ See [Netplay → During a match](netplay.md#during-a-match).
 | **Disc** | Games with more than one disc only. `LEFT` / `RIGHT` change the disc, such as `1/2`. |
 | **Save** | Save a state to the chosen slot. |
 | **Load** | Load the state in the chosen slot. |
-| **Players** | Games with more than one player only. See [Players](#players). |
 | **Options** | Open the options pages below. |
 | **Quit** | Leave the game. See [Quitting](#quitting). |
 
 There are 8 save state slots. On **Save** and **Load**, `LEFT` / `RIGHT` (or
-a sideways swipe) choose the slot, and `A` saves or loads. The preview shows
-the slot's screenshot and date, or **Empty Slot**.
+a sideways swipe) choose the slot, and `A` saves or loads. The preview on the
+right shows the slot's screenshot and date, or **Empty Slot**. On the other
+rows, the right side shows the [game panel](#the-game-panel).
 
 ??? info "More detail: Disc"
 
@@ -91,23 +100,37 @@ You can use the whole menu by touch:
     - The second tap on **Save** or **Load** can be on the row or on the slot
       preview.
     - Off the first page, a tap on the hint bar's empty space goes back.
-    - Tap a description page, or an achievement's details, to close it.
+    - Tap a description page to close it.
 
-## Players
+## The game panel
 
-In a game with more than one player, the **Players** page shows which
-controller is which player. To add a player, close the menu and press a
-button on the new controller. See [Local Multiplayer](multiplayer.md).
+On the first page, the right side holds the game panel: the tabs
+**Shortcuts**, **Achievements** (with a RetroAchievements set) and
+**Players** (in a game with more than one player). It's the same panel a
+[second screen](dual-screen.md#the-game-panel) shows; see there for what
+each tab holds.
+
+<!-- screenshot: the in-game menu on one screen: the game header across the top, the menu list on the left, the game panel's Shortcuts tab on the right -->
+
+With a controller:
+
+- `RIGHT` on a row moves into the panel, onto its tabs. On **Disc**,
+  `RIGHT` changes the disc instead.
+- `L1` / `R1` switch tabs, in the panel or on the list.
+- `UP` / `DOWN` move between the tabs and the tab's buttons or rows, and `A`
+  presses the highlighted one.
+- `A` on the **Achievements** or **Players** tab name opens its full page:
+  [Achievements](#achievements) or
+  [Players](multiplayer.md#the-players-page).
+- `B`, or `LEFT` from the panel's left edge, goes back to the list.
+
+By touch, tap a tab, a shortcut or a player row.
 
 ??? info "More detail"
 
-    - **Player 1** to **Player 4** show the controller's name, **Empty**, or
-      the name with **(disconnected)**. `LEFT` / `RIGHT` give the player
-      another controller, or **Empty**. Picking a controller another player
-      has swaps the two.
-    - Each connected controller has a row set to **Playing** or **Not
-      playing**. A controller that is **Not playing** is ignored in
-      multiplayer games until it plays again.
+    - While **Save** or **Load** is highlighted, the slot preview takes the
+      panel's place.
+    - The panel's controls show along the bottom while you are in it.
 
 ## Options
 
@@ -120,7 +143,6 @@ button on the new controller. See [Local Multiplayer](multiplayer.md).
 | [Shaders](#shaders) | Shader presets and their parameters. |
 | [Core Options](#core-options) | The emulator core's own settings. |
 | [Cheats](#cheats) | Turn the game's cheats on and off. |
-| [Achievements](#achievements) | The game's achievements. |
 | [Save Changes](#save-changes) | Keep your changes for this console or this game, or restore defaults. |
 
 !!! important "Changes aren't saved until you use Save Changes"
@@ -133,17 +155,14 @@ To set these before a game starts, for a whole emulator or one game, use
 
 ??? info "More detail"
 
-    - **Cheats** shows only when the core takes cheats. **Achievements** shows
-      only when the game's RetroAchievements session has started; with it
-      highlighted, the description lines show your progress, such as
-      `12 / 40 unlocked`, or **Not recognised**.
+    - **Cheats** shows only when the core takes cheats.
     - **Console Settings** holds the controller rows, the Nintendo DS screen
       layouts, the Nintendo 3DS New 3DS Controls and Portrait Pad for both.
     - The line under the list says which settings the game uses right now:
       **Using defaults.**, **Using console config.** or **Using game config.**
     - Two things are saved straight away instead: the Nintendo DS layout
       hotkeys (see [Nintendo DS](emulators/nintendo-ds.md#controls)) and
-      achievement mutes (`X` on the Achievements page).
+      achievement mutes (`X` on the [Achievements](#achievements) page).
 
 ## Console Settings
 
@@ -159,12 +178,15 @@ The console's own rows. `LEFT` / `RIGHT` change a value.
 | **New 3DS Controls** | Nintendo 3DS | Auto, On, Off | Auto |
 | **Portrait Pad** | Nintendo DS, Nintendo 3DS | Shown, Hidden | Shown |
 | **Wii Controller**, **Motion Controls** | Nintendo Wii | See [Nintendo Wii & GameCube](emulators/wii-gamecube.md#wii) | Auto |
+| **Bottom screen** | Every console, while a second screen is connected | System default, Main screen, Second screen | System default |
 
 - **Controller Type** is the Sega pad the game sees.
 - **Controller Layout** names the letters printed on your controller. See
   [Controls](controls.md#controller-buttons).
 - **Portrait Pad** hides the portrait pad band for the see-through buttons.
   See [Nintendo DS](emulators/nintendo-ds.md#portrait-pad).
+- **Bottom screen** picks the touch screen for this console. See
+  [Dual Screens & External Displays](dual-screen.md#for-one-console).
 
 Settings the game reads only when it starts, such as **Graphics API**, aren't
 here. Set them in [Game Settings](emulator-settings.md#game-settings) or
@@ -301,22 +323,22 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
 
 ## Achievements
 
-Shows the game's [RetroAchievements](retroachievements.md), each marked
-**Unlocked**, **Pending sync** or **Locked · N pts**. `A` opens an
-achievement's details.
+The game's [RetroAchievements](retroachievements.md) are on the game panel's
+**Achievements** tab. With a controller on that tab's name, `A` opens them
+as a full page, where you can filter and mute them.
+
+Each row shows the badge, in colour once unlocked or greyed while locked,
+the name with its points in a small pill, and the description. Rows have no
+details page for now.
 
 ??? info "More detail"
 
-    - The row shows once the game's session has started: RetroAchievements is
-      on, you are signed in, and the game is on a system RetroAchievements
-      covers. If the game isn't recognised or has no achievements, a message
-      says so.
+    - The tab shows once the game's session has started: RetroAchievements is
+      on, you are signed in, and the game has a set on RetroAchievements.
     - The order follows **Achievement sort order**.
-    - In an achievement's details, `LEFT` / `RIGHT` step to the previous or
-      next one.
-    - `Y` switches between all achievements and only the locked ones. With
-      every achievement unlocked, the locked list reads **Everything
-      unlocked.**
+    - On the page, `Y` switches between all achievements and only the locked
+      ones. With every achievement unlocked, the locked list reads
+      **Everything unlocked.**
     - `X` mutes or unmutes the achievement's notifications. A muted
       achievement shows `[M]` before its name.
 

@@ -49,6 +49,9 @@ What you set here is the console's setting, the same as the in-game menu's
       **Layout** and **Big Screen** rows for Nintendo DS, the **Layout** rows and
       **New 3DS Controls** for Nintendo 3DS, **Portrait Pad** for both, and the Wii's rows
       ([Nintendo Wii & GameCube](emulators/wii-gamecube.md#console-settings)).
+    - While a second screen is connected, every console also has **Bottom
+      screen**: **System default**, **Main screen** or **Second screen**. See
+      [Dual Screens & External Displays](dual-screen.md#for-one-console).
       The start-only rows are **Graphics API**
       ([Graphics API](emulators/index.md#graphics-api)), and the Wii's **Wii
       Screen** and **Pointer** rows.
@@ -84,6 +87,13 @@ the game, and choose **Game Settings**. The same page opens over the list, for t
       settings. `A` on it deletes them, so the game follows the console's
       again.
     - `B` returns to the game list on the same game.
+
+## Second screen
+
+While a second screen is connected, such as a dual-screen handheld's or a
+display on USB-C, **Tools → Settings → Emulators** has a **Second screen**
+row. It opens **Enable** and **Bottom screen**. See
+[Dual Screens & External Displays](dual-screen.md#settings).
 
 ## Default emulators
 

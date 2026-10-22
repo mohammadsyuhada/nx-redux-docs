@@ -8,7 +8,7 @@ sections.
 | Section | What it holds |
 | --- | --- |
 | [**Library**](library.md) | Rescan library, your ROM folders, and the Unassigned and Hidden games |
-| [**Emulators**](emulator-settings.md) | **Default emulators**, **Settings** for each emulator's options, and **Saves** |
+| [**Emulators**](emulator-settings.md) | **Default emulators**, **Settings** for each emulator's options, **Saves**, and **Second screen** while one is connected |
 | [**Appearance**](appearance.md) | Pad theme, Accent, Secondary accent and Text size |
 | [**Layouts**](layouts.md) | The style of each main menu tab and of the game lists, the page title and hints, and the Game Switcher |
 | [**Controls**](controls-settings.md) | Pad vibration, Game rumble, Menu pad and Pad layout |

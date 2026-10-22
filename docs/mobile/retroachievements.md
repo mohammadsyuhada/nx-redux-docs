@@ -88,15 +88,20 @@ Start a recognised game and unlocks are tracked as you play.
 - When the game loads, a notice shows its name and how many achievements you
   have, or **No achievements for this game**.
 - An **Achievement Unlocked** notice with the badge pops up when you earn one.
-- The [in-game menu](in-game-menu.md#achievements)'s **Options** gains an
-  **Achievements** row to browse the game's achievements.
+- The [game panel](in-game-menu.md#the-game-panel), in the in-game menu or
+  on a [second screen](dual-screen.md#the-game-panel), gains an
+  **Achievements** tab with the game's achievements, and its header shows
+  your count, such as **Achievements 3 / 40**.
 
 ??? info "More detail"
 
     - Progress notices, such as collectible counters, show for the **Progress
       duration**.
-    - In the in-game menu's list, press `Y` to show only locked achievements,
-      and `X` to mute one achievement's notices.
+    - On the in-game [Achievements](in-game-menu.md#achievements) page,
+      press `Y` to show only locked achievements, and `X` to mute one
+      achievement's notices.
+    - In the in-game menu and on a second screen, achievements have no
+      details page for now.
     - With **Show notifications** off, unlock and progress notices, **Game
       Mastered!**, server errors and the connection lost and reconnected
       notices are hidden. These still show: the game loading, no achievements
@@ -167,8 +172,8 @@ shows **Downloading this game's achievements…** until they arrive.
 
 ## Offline play
 
-- **Earn offline.** With no connection, unlocks are saved on the phone. They
-  show as **Pending sync** until they reach RetroAchievements.
+- **Earn offline.** With no connection, unlocks are saved on the phone until
+  they reach RetroAchievements. The games list shows how many are waiting.
 - **Automatic sending.** The next time you start a game with a connection,
   waiting unlocks are sent, and a notice says how many were synced.
 - **Cached game data.** A game you have played online once keeps working
@@ -241,21 +246,22 @@ games. A notice then says how many unlocks were synced, **Up to date**, or
 progress, such as `12/40 unlocked`. It works offline.
 
 
-Open a game to see its achievements. Each shows **Unlocked**, **Pending sync**
-or **Locked**, with its points. `Y` (on touch, the filter icon) shows only
-locked ones, or all again. `A` opens an achievement's details.
+Open a game to see its achievements. Each row shows the badge, in colour
+once unlocked or greyed while locked, the name with its points in a small
+pill, and the description. `Y` (on touch, the filter icon) shows only locked
+ones, or all again. `A` opens an achievement's details.
 
-![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge, Locked and its points](../assets/screenshots/mobile/ra-game.webp){ .nx-wide }
+![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge and its points](../assets/screenshots/mobile/ra-game.webp){ .nx-wide }
 
-![An achievement's details beside 1942's achievements: Midway, Clear Stages 32-29., 5 points, Locked, 20.61% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp)
+![An achievement's details beside 1942's achievements: Midway, Clear Stages 32-29., 5 points, 20.61% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp)
 
 ??? info "More detail"
 
     - The games list also shows how many unlocks are pending sync. With
       nothing cached yet it shows **No cached games** and **Play online once
       or download game data in Settings**.
-    - **Unlocked**, **Pending sync** and **Locked** show in green, amber and
-      grey.
+    - An unlock waiting to sync shows its badge in colour, as an unlocked one
+      does.
     - `Y` switches between **Locked only** and **Show all**, and a notice says
       which: **Showing locked achievements only** or **Showing all
       achievements**.
