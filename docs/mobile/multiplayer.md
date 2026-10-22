@@ -72,7 +72,7 @@ has a **Players** tab. It's beside the in-game menu's first page, or on a
 handheld's [second screen](dual-screen.md#the-game-panel) while you play.
 With a controller, `A` on the tab's name opens it as a full page.
 
-<!-- screenshot: the game panel's Players tab in the in-game menu, Player 1 and Player 2 with controller names -->
+![The game panel's Players tab in the in-game menu: Player 1 on an 8BitDo Ultimate 2 Wireless, Player 2 Empty](../assets/screenshots/mobile/in-game-players.webp){ .nx-wide }
 
 | Row | Value | `LEFT` / `RIGHT`, or a tap |
 | --- | --- | --- |

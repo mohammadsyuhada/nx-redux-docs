@@ -81,7 +81,7 @@ Arcade (`FBN`), Dreamcast and Nintendo 3DS.
    away. `A` shows its full description.
 4. To keep your cheats for next time, use **Save Changes → Save for game**.
 
-![The in-game Cheats page on Mega Man X4, with Infinite Lives turned On](../assets/screenshots/mobile/in-game-cheats.webp)
+![The in-game Cheats page on Alleyway, with Infinite time in bonus room turned On](../assets/screenshots/mobile/in-game-cheats.webp){ .nx-wide }
 
 If no cheat file matches the game, the page says **No cheats for this game.**
 

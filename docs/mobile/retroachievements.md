@@ -251,9 +251,9 @@ once unlocked or greyed while locked, the name with its points in a small
 pill, and the description. `Y` (on touch, the filter icon) shows only locked
 ones, or all again. `A` opens an achievement's details.
 
-![Achievements in two panes: the cached games on the left with 1942 selected, and 1942's achievements (0/27) on the right, each with its badge and its points](../assets/screenshots/mobile/ra-game.webp){ .nx-wide }
+![Achievements in two panes: the cached games on the left with Advance Wars selected, and its achievements (0/92) on the right, each with its badge, its points and its description](../assets/screenshots/mobile/ra-game.webp){ .nx-wide }
 
-![An achievement's details beside 1942's achievements: Midway, Clear Stages 32-29., 5 points, 20.61% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp)
+![An achievement's details beside Advance Wars' achievements: Class Dismissed!, Complete Field Training, 2 points, 91.25% unlock rate and [Progression]](../assets/screenshots/mobile/ra-achievement.webp){ .nx-wide }
 
 ??? info "More detail"
 

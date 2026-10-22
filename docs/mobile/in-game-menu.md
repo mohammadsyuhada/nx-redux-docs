@@ -16,7 +16,7 @@ The game's header runs across the top of every page: its box art, name, play
 time and achievement count, with the time and battery level. On the first
 page, the [game panel](#the-game-panel) sits on the right.
 
-![The in-game menu's first page on Comix Zone, with Load selected and the save slot preview](../assets/screenshots/mobile/in-game-menu-root.webp)
+![The in-game menu's first page on Alleyway: the game's header across the top, Load selected and the save slot preview](../assets/screenshots/mobile/in-game-menu-root.webp){ .nx-wide }
 
 During a [netplay](netplay.md) match the menu shows only **Continue** and
 **Leave**. See [Netplay → During a match](netplay.md#during-a-match).
@@ -76,7 +76,7 @@ On **Quit**:
 Both keep the game's battery save. Leaving the app with the game open also
 saves your place.
 
-![The Quit Game dialog over the first page: Save & Quit and Quit](../assets/screenshots/mobile/in-game-quit-dialog.webp)
+![The Quit Game dialog over the first page: Save & Quit and Quit](../assets/screenshots/mobile/in-game-quit-dialog.webp){ .nx-wide }
 
 ??? info "More detail"
 
@@ -110,7 +110,7 @@ On the first page, the right side holds the game panel: the tabs
 [second screen](dual-screen.md#the-game-panel) shows; see there for what
 each tab holds.
 
-<!-- screenshot: the in-game menu on one screen: the game header across the top, the menu list on the left, the game panel's Shortcuts tab on the right -->
+![The in-game menu on one screen: the game's header across the top, the first page on the left and the game panel's Shortcuts tab on the right](../assets/screenshots/mobile/in-game-menu-panel.webp){ .nx-wide }
 
 With a controller:
 
@@ -134,7 +134,7 @@ By touch, tap a tab, a shortcut or a player row.
 
 ## Options
 
-![The Options page of a Sega Genesis game, Comix Zone](../assets/screenshots/mobile/in-game-options.webp)
+![The Options page beside the first page, on a Sega Genesis game, Sonic The Hedgehog](../assets/screenshots/mobile/in-game-options.webp){ .nx-wide }
 
 | Row | What it's for |
 | --- | --- |
@@ -168,7 +168,7 @@ To set these before a game starts, for a whole emulator or one game, use
 
 The console's own rows. `LEFT` / `RIGHT` change a value.
 
-![Console Settings of a Sega Genesis game: Controller Type and Controller Layout](../assets/screenshots/mobile/in-game-console-settings.webp)
+![Console Settings of a Sega Genesis game: Controller Type and Controller Layout](../assets/screenshots/mobile/in-game-console-settings.webp){ .nx-wide }
 
 | Row | Consoles | Values | Default |
 | --- | --- | --- | --- |
@@ -210,7 +210,7 @@ here. Set them in [Game Settings](emulator-settings.md#game-settings) or
 Settings handled by NX Redux rather than the core, the same for every
 console. `LEFT` / `RIGHT` change a value.
 
-![The Frontend page](../assets/screenshots/mobile/in-game-frontend.webp)
+![The Frontend page beside Options](../assets/screenshots/mobile/in-game-frontend.webp){ .nx-wide }
 
 | Option | Values | Default | What it does |
 | --- | --- | --- | --- |
@@ -262,7 +262,7 @@ own.
 On a row that changes the picture, press `A` to see each change on the game
 as you make it.
 
-![Adjust mode: Screen Scaling in a strip over the paused game](../assets/screenshots/mobile/in-game-menu-adjust.webp)
+![Adjust mode: Screen Scaling in a strip over the paused game](../assets/screenshots/mobile/in-game-menu-adjust.webp){ .nx-wide }
 
 ??? info "More detail"
 
@@ -307,7 +307,7 @@ Lists the cheats found for the game. `LEFT` or `RIGHT` turns the highlighted
 cheat **On** or **Off**, and it applies straight away. `A` shows a cheat's full
 description.
 
-![The in-game Cheats page with one cheat On](../assets/screenshots/mobile/in-game-cheats.webp)
+![The in-game Cheats page on Alleyway with one cheat On](../assets/screenshots/mobile/in-game-cheats.webp){ .nx-wide }
 
 To keep the cheats you turned on, use **Save Changes → Save for game**. See
 [Cheats](cheats.md) for where the cheat files come from.
@@ -347,7 +347,7 @@ details page for now.
 Keeps what you changed in Console Settings, Frontend, Shaders and Core
 Options.
 
-![The Save Changes page](../assets/screenshots/mobile/in-game-save-changes.webp)
+![The Save Changes page](../assets/screenshots/mobile/in-game-save-changes.webp){ .nx-wide }
 
 | Choice | What it does |
 | --- | --- |

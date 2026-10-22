@@ -5,7 +5,7 @@ games get one screen each, like the real console. Other games show the game
 on one screen and a [game panel](#the-game-panel) on the other, with your play
 time, achievements and a few shortcuts.
 
-<!-- screenshot: a dual-screen handheld running a DS game, the DS top screen on the upper screen and the bottom screen on the lower one, with the SWAP and Panel pills -->
+![Mario Kart DS on two screens: the DS top screen on a wired display, the bottom screen on the phone with the Panel pill](../assets/screenshots/mobile/dual-screen-ds-split.webp)
 
 Two kinds of second screen count:
 
@@ -56,8 +56,6 @@ screen** button: tap the one on the screen below. **Skip** leaves it on
 
 A wired display never gets this question. Change the answer any time in
 [Settings](#settings).
-
-<!-- screenshot: setup's "Which is the bottom screen?" page on the main screen, with the second screen's big "This is the bottom screen" button -->
 
 ## Settings
 
@@ -113,7 +111,7 @@ screen there.
 On the panel, the **Game** pill, in the same corner, brings the bottom screen
 back to the touch screen.
 
-<!-- screenshot: a DS game with the panel up: both DS screens side by side on the picture screen, the game panel with the Game pill on the touch screen -->
+![Mario Kart DS with the panel up: both DS screens side by side on the wired display, the game panel with the Game pill on the phone](../assets/screenshots/mobile/dual-screen-ds-panel.webp)
 
 ??? info "More detail"
     - On the DS, **SWAP** while split changes the **Big Screen** setting, the
@@ -131,14 +129,14 @@ buttons keep playing the game.
 Opening the [in-game menu](in-game-menu.md) pauses the game and adds the menu
 list to the left of the panel. Closing it takes the list away again.
 
-<!-- screenshot: a regular game on a dual-screen handheld: the game on the picture screen, the game panel's Shortcuts tab on the touch screen -->
+![Sonic The Hedgehog on the wired display, the game panel's Shortcuts tab on the phone](../assets/screenshots/mobile/dual-screen-regular.webp)
 
 ## The game panel
 
 The same panel shows on the touch screen and, on a phone with one screen,
 on the right of the [in-game menu](in-game-menu.md#the-game-panel).
 
-<!-- screenshot: the game panel on its own: header with box art, title, Total play time, Achievements count, clock and battery; the Shortcuts tab -->
+![The game panel: box art, Sonic The Hedgehog, Total, Achievements 1 / 35, the clock and battery; the Shortcuts, Achievements and Players tabs, with Shortcuts open](../assets/screenshots/mobile/game-panel.webp){ .nx-wide }
 
 Across the top, the game's header shows:
 
@@ -183,7 +181,7 @@ Each row shows the achievement's badge, its name with its points in a small
 pill, and its description. The badge says where you are: in colour once
 unlocked, greyed while locked. Rows open nothing.
 
-<!-- screenshot: the game panel's Achievements tab: coloured and greyed badges, names with points pills, descriptions -->
+![The game panel's Achievements tab: Newbie Collector unlocked in colour, the rest greyed, each with its points and description](../assets/screenshots/mobile/game-panel-achievements.webp){ .nx-wide }
 
 ### Players
 
