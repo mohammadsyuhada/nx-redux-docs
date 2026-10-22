@@ -1,9 +1,11 @@
 # Dual Screens & External Displays
 
-On a handheld with a second screen, NX Redux uses both. Nintendo DS and 3DS
-games get one screen each, like the real console. Other games show the game
-on one screen and a [game panel](#the-game-panel) on the other, with your play
-time, achievements and a few shortcuts.
+On a handheld with a second screen, NX Redux uses both. In the
+[main menu](#the-main-menu), the games of the console or collection you're on
+show on one screen while you browse on the other. Nintendo DS and 3DS games
+get one screen each, like the real console. Other games show the game on one
+screen and a [game panel](#the-game-panel) on the other, with your play time,
+achievements and a few shortcuts.
 
 ![Mario Kart DS on two screens: the DS top screen on a wired display, the bottom screen on the phone with the Panel pill](../assets/screenshots/mobile/dual-screen-ds-split.webp)
 
@@ -20,9 +22,6 @@ shows in the [in-game menu](in-game-menu.md#the-game-panel) instead.
 ??? info "More detail"
     - Plug a display in or unplug it during a game and the game carries on: the
       layout switches straight away.
-    - The app's own pages, such as Home, Settings and the in-game menu, stay on
-      the phone's main screen. The second screen only ever shows part of a
-      running game.
     - Android doesn't tell an add-on screen from a monitor or a TV, so a
       wired monitor counts as a second screen too.
 
@@ -30,8 +29,10 @@ shows in the [in-game menu](in-game-menu.md#the-game-panel) instead.
 
 One screen is the **picture screen** and the other the **touch screen**:
 
-- The **picture screen** shows the game, or the DS or 3DS top screen.
+- The **picture screen** shows the game, or the DS or 3DS top screen. In the
+  main menu it shows a game list.
 - The **touch screen** shows the DS or 3DS bottom screen, or the game panel.
+  In the main menu it shows the menu.
 
 By default the wider screen is the picture screen. When both have the same
 shape, the second screen gets the picture. To choose yourself, set
@@ -57,11 +58,56 @@ screen** button: tap the one on the screen below. **Skip** leaves it on
 A wired display never gets this question. Change the answer any time in
 [Settings](#settings).
 
+## The main menu
+
+With a second screen in use, the main menu stays on the touch screen and the
+picture screen helps you browse.
+
+- On **Consoles** and **Collections**, the picture screen shows the games of
+  the highlighted console or collection. It follows as you move.
+- Press `A` on a console or collection, or tap it, to move to its game list on
+  the picture screen. Move through the games there, and press `A` to play.
+- While you're in the game list, the touch screen shows the highlighted
+  game's details: its art, name and play time and, with a
+  [RetroAchievements](retroachievements.md) set, its achievements.
+- `B`, Android's Back gesture or the **Back** button on the details goes
+  back to the menu.
+- On **Home**, **Tools** and **Settings**, the picture screen shows the
+  backdrop with the NX logo.
+
+![The main menu on two screens: Game Boy Advance highlighted in Consoles on the phone, its games on the wired display](../assets/screenshots/mobile/dual-screen-menu.webp)
+
+Your buttons work on the screen you're on, and its button hints show there
+only. In the game list they do what they do in any
+[game list](main-menu.md#game-lists), such as `MENU` for the game's context menu or
+`START` to search. Menus and prompts open on the same screen.
+
+The game list uses your game list style from
+[**Settings → Layouts**](layouts.md), not the Consoles or Collections style.
+
+![Kirby & the Amazing Mirror highlighted in the game list on the wired display, its details and achievements on the phone](../assets/screenshots/mobile/dual-screen-menu-details.webp)
+
+??? info "More detail"
+    - You can scroll or swipe either screen at any time without leaving the
+      one you're on. Only a tap that picks something moves you: a tap on a
+      game highlights it, and a tap on the highlighted game plays it.
+    - Back from a game, you return to the game list on the same game.
+    - Signed out of RetroAchievements, the details show the game's info only.
+    - With [**Enable**](#settings) off, the main menu uses one screen.
+
+### Apps on the picture screen
+
+With a second screen in use, apps you open from NX Redux open on the picture
+screen, and the menu stays where it is. This covers apps in **Tools**, tools
+pinned to Home, and [Android games](launcher.md).
+
+To have the picture screen back, close the app.
+
 ## Settings
 
-**Tools → Settings → Emulators → Second screen** has the system-wide
-settings. The **Second screen** row shows only while a second screen is
-connected.
+**Tools → Settings → Second screen** has the system-wide settings. The
+**Second screen** section, between **Controls** and **Launcher**, shows only
+while a second screen is connected.
 
 | Row | Values | Default | What it does |
 | --- | --- | --- | --- |
@@ -171,8 +217,7 @@ Below it are up to three tabs. A tab shows only when it applies.
 ??? info "More detail"
     - **Swap disc** works as the in-game menu's **Disc** row does, while the
       game keeps running.
-    - **Second screen** changes **Settings → Emulators → Second screen →
-      Enable**.
+    - **Second screen** changes **Settings → Second screen → Enable**.
     - In a [netplay](netplay.md) match, **Swap disc** is hidden.
 
 ### Achievements
@@ -192,6 +237,10 @@ controller, or **Empty**. It works as the
 
 ## Limits
 
+- To type on the second screen, such as in a search or a rename, tap the text
+  field first.
+- While an app covers the main screen, the menu on the second screen hides
+  until you come back.
 - The panel can't be driven with buttons on the touch screen. In the in-game
   menu on one screen it can: see [The game panel](in-game-menu.md#the-game-panel).
 - Achievements in the panel have no details page for now.

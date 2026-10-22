@@ -4,7 +4,7 @@
 sets each emulator's options for a whole console, without starting a game
 first.
 
-![Settings, with Emulators open beside the sections: Default emulators, Settings and Saves](../assets/screenshots/mobile/settings-emulators.webp){ .nx-wide }
+![Settings, with Emulators open beside the sections: Default emulators, Settings, Saves and Pause when unfocused On](../assets/screenshots/mobile/settings-emulators.webp){ .nx-wide }
 
 For one game, use **Game Settings** in the game's context menu instead. See
 [Game Settings](#game-settings).
@@ -88,11 +88,28 @@ the game, and choose **Game Settings**. The same page opens over the list, for t
       again.
     - `B` returns to the game list on the same game.
 
-## Second screen
+## Pause when unfocused
 
-While a second screen is connected, such as a dual-screen handheld's or a
-display on USB-C, **Tools → Settings → Emulators** has a **Second screen**
-row. It opens **Enable** and **Bottom screen**. See
+**Tools → Settings → Emulators → Pause when unfocused** (On by default)
+pauses a game when another app takes over while the game is still on screen:
+in split screen, in a desktop window such as Samsung DeX, or with an app open
+on a second screen. Go back to the game, by tapping or clicking it, and it
+plays on by itself.
+
+Turn it off to keep a game running while you use another app beside it.
+
+??? info "More detail"
+    - The game's sound and rumble stop with it.
+    - If you open the in-game menu before going back, the game stays paused
+      until you choose **Continue**.
+    - Your own screens don't count: the game panel, the DS or 3DS bottom
+      screen and the in-game menu never pause it.
+    - In a [netplay](netplay.md) match, the other player sees you paused, as
+      when you leave the app.
+    - Leaving the app, such as to Home, always pauses the game, whatever this
+      setting says.
+
+The second screen has its own section in Settings: see
 [Dual Screens & External Displays](dual-screen.md#settings).
 
 ## Default emulators
