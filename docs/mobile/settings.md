@@ -1,17 +1,18 @@
 # Settings
 
 Open **Tools → Settings** for the app's settings. They are split into eight
-sections.
+sections, or nine while a second screen is connected.
 
 ![Settings: the eight sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp){ .nx-wide }
 
 | Section | What it holds |
 | --- | --- |
 | [**Library**](library.md) | Rescan library, your ROM folders, and the Unassigned and Hidden games |
-| [**Emulators**](emulator-settings.md) | **Default emulators**, **Settings** for each emulator's options, **Saves**, and **Second screen** while one is connected |
+| [**Emulators**](emulator-settings.md) | **Default emulators**, **Settings** for each emulator's options, **Saves**, and **Pause when unfocused** |
 | [**Appearance**](appearance.md) | Pad theme, Accent, Secondary accent and Text size |
 | [**Layouts**](layouts.md) | The style of each main menu tab and of the game lists, the page title and hints, and the Game Switcher |
 | [**Controls**](controls-settings.md) | Pad vibration, Game rumble, Menu pad and Pad layout |
+| [**Second screen**](dual-screen.md#settings) | **Enable** and **Bottom screen**. Shows only while a second screen is connected |
 | [**Launcher**](launcher.md) | Use the app as your home screen, and pick Android apps and games |
 | [**Developer**](#developer) | Debug log |
 | [**About**](about.md) | The app's version and your device's details |
