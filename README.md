@@ -1,6 +1,6 @@
 # NX Redux Docs
 
-User documentation website for [NX Redux](https://github.com/mohammadsyuhada/nx-redux),
+User documentation website for [NX Redux](https://github.com/nx-redux/nx-handheld),
 custom firmware for TrimUI retro handheld devices.
 
 Built with [MkDocs](https://www.mkdocs.org/) and
@@ -21,4 +21,4 @@ Then open http://127.0.0.1:8000.
 
 Pushing to `main` triggers the GitHub Actions workflow in
 `.github/workflows/deploy.yml`, which builds the site and publishes it to
-GitHub Pages at https://mohammadsyuhada.github.io/nx-redux-docs/.
+GitHub Pages at https://nxredux.com/.

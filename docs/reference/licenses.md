@@ -15,8 +15,8 @@ the handheld and on mobile. You can use, study, change and share it, and any
 copy you share, changed or not, must stay under the same license with its
 source available.
 
-- Handheld: [source and LICENSE](https://github.com/mohammadsyuhada/nx-redux)
-- Mobile: [source and LICENSE](https://github.com/mohammadsyuhada/nx-mobile)
+- Handheld: [source and LICENSE](https://github.com/nx-redux/nx-handheld)
+- Mobile: [source and LICENSE](https://github.com/nx-redux/nx-mobile)
 
 On mobile, NX Redux's emulator runner is a fork of
 [LibretroDroid](https://github.com/Swordfish90/LibretroDroid) by Filippo
@@ -123,7 +123,7 @@ Console names, logos and hardware designs are trademarks of their owners.
 
 - **Mobile**: every license text ships inside the app, under
   `assets/licenses/` in the APK. The
-  [repository](https://github.com/mohammadsyuhada/nx-mobile) has them in
+  [repository](https://github.com/nx-redux/nx-mobile) has them in
   `LICENSES/`, with the art notes in `THIRD_PARTY_ART.md`; each emulator's
   license is copied from its source at build time.
 - **Handheld**: each emulator's license text ships next to it in its `.pak`

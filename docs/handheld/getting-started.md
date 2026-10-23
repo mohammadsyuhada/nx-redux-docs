@@ -40,7 +40,7 @@ You will also need:
 
 - A reputable-brand microSD card, freshly formatted as **exFAT** (preferred).
 - The release zip for **your exact device model** from the
-  [releases page](https://github.com/mohammadsyuhada/nx-redux/releases).
+  [releases page](https://github.com/nx-redux/nx-handheld/releases).
 
 ??? info "More detail"
     - NX Redux relies on system libraries the stock firmware ships, which is

@@ -54,6 +54,6 @@ and the rest of the app is written for NX Redux.
 NX Redux is licensed under **GNU GPL v3.0**, the same license as the
 original project. All original copyrights are retained; modifications are
 also distributed under GPL-3.0. See the
-[LICENSE](https://github.com/mohammadsyuhada/nx-redux/blob/main/LICENSE)
+[LICENSE](https://github.com/nx-redux/nx-handheld/blob/main/LICENSE)
 file for details. The licenses of the emulators, libraries, fonts and art
 NX Redux includes are on [Licenses](licenses.md).

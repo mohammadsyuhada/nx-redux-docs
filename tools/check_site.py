@@ -189,7 +189,7 @@ def check_faqs():
 
 def check_download_page():
     html = (SITE / "reference" / "download" / "index.html").read_text()
-    check(html.count("https://github.com/mohammadsyuhada/nx-redux/releases") >= 1, "download page lacks the GitHub link")
+    check(html.count("https://github.com/nx-redux/nx-handheld/releases") >= 1, "download page lacks the GitHub link")
     check(html.count('aria-disabled="true"') == 2 and "Google Play" in html, "mobile GitHub and Google Play badges are not shown as disabled")
     landing = (SITE / "index.html").read_text()
     check('href="reference/download/"' in landing, "landing Download does not open the download page")
