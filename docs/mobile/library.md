@@ -325,8 +325,8 @@ there, and each file it skipped, with the reason.
       `.userdata/shared/`. Hidden games are kept in
       `.userdata/android/hidden.txt`, so they stay on this phone and don't
       sync. Hidden games can be shown again from **Tools → Settings → Library → Hidden games**.
-    - Cores play from a private working copy of each battery save. The copy
-      in `Saves/<TAG>/` is updated after each save write and when you quit.
+    - Cores keep the battery save in memory while you play. The file in
+      `Saves/<TAG>/` is updated after each save write and when you quit.
       Save states are kept per emulator, in `.userdata/shared/<TAG>-<core>/`.
     - An export writes each console's saves under its default emulator's
       handheld tag, such as `Saves/GPGX/` for a Sega console on Genesis Plus
