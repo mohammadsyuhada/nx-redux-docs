@@ -124,6 +124,7 @@ The app creates the NX Redux layout inside the folder you pick:
 | `Roms/<Display Name (TAG)>/` | Games, one folder per system |
 | `Bios/<TAG>/` | BIOS files for systems that need them |
 | `Collections/` | Your game collections, once you make one |
+| `Cheats/<TAG>/` | The [cheat download](cheats.md), with All files access |
 
 The folders show in file managers, so you can copy games in from a
 computer. The home folder can sit on an SD card. A games folder from an NX Redux handheld works

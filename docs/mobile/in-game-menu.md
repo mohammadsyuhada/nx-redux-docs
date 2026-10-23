@@ -317,7 +317,7 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
     - With no cheats for the game, the page says **No cheats for this game.**
       and names the file it looked for.
     - The row is hidden for consoles whose cores don't take cheats, such as
-      Arcade (`FBN`) and Dreamcast. See
+      Nintendo 3DS and Atari 2600. See
       [Cheats → Where the files go](cheats.md#where-the-files-go) for the
       list.
 

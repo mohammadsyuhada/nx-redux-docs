@@ -38,7 +38,7 @@ With the cheats installed, the page offers **Check for updates** and
 **Remove**.
 
 - **Check for updates** downloads libretro's latest copy only when it has
-  changed.
+  changed, or when the app now has cheats for systems your copy doesn't.
 - **Remove** deletes the downloaded files, after asking. Your own cheat files
   stay.
 
@@ -51,21 +51,38 @@ With the cheats installed, the page offers **Check for updates** and
 
 ## Where the files go
 
-The cheats live inside the app's own storage. Unlike the handheld, they are
-not on your card or in your home folder.
+With [All files access](library.md#all-files-access) on, the cheats go in
+your home folder, in `Cheats/<TAG>/`, one folder per system, as on the
+handheld. They stay there if you uninstall the app, so a reinstall finds them
+already installed.
+
+Without All files access, they live inside the app's own storage instead.
 
 Some systems have no cheats, because their emulators don't take them, such as
-Arcade (`FBN`), Dreamcast and Nintendo 3DS.
+Nintendo 3DS and Atari 2600.
 
 ??? info "More detail"
 
-    - The systems with no cheats: Arcade (`FBN`), ColecoVision, Dreamcast
-      (with NAOMI and Atomiswave), Neo Geo Pocket, Virtual Boy, Atari Lynx,
-      Atari 2600, 5200 and 7800, Pokémon mini, PICO-8 and Nintendo 3DS.
-    - The cheats are libretro `.cht` files, kept in one `Cheats/<TAG>/` folder
-      per system inside the app's own storage. The app reads cheats only from
-      there.
+    - The systems with no cheats: Neo Geo Pocket, Virtual Boy, Atari 2600 and
+      5200, Pokémon mini, PICO-8 and Nintendo 3DS.
+    - The cheats are libretro `.cht` files. To add your own, put them in the
+      system's `Cheats/<TAG>/` folder, such as `Cheats/GBA/`.
+    - There is one folder per console, as in `Roms`, whichever emulator runs
+      the game: Game Boy Advance on mGBA reads `Cheats/GBA/`, Super Nintendo
+      on Supafaust reads `Cheats/SFC/`, PlayStation on SwanStation reads
+      `Cheats/PS/`, and Genesis Plus GX reads `Cheats/MD/`. Super Game Boy
+      has its own `Cheats/SGB/`.
+    - Cheats an earlier version kept inside the app move to the home folder by
+      themselves the first time you open the app with All files access on.
+      A file already in the home folder is never replaced.
+    - The download's list of what it installed is kept in
+      `.userdata/shared/xtras/cheatdb.manifest`, next to the cheats.
+    - With All files access off, or a home folder the app can't reach, the
+      app reads and installs cheats in its own storage.
     - The download installs folders only for systems whose core takes cheats.
+    - Arcade (`FBN`), Dreamcast, ColecoVision, Atari 7800 and Atari Lynx
+      cheats change the game's memory directly, every frame, instead of going
+      through the emulator. You turn them on and off the same way.
     - A game reads its own system's folder, even when it sits in another
       system's `Roms` folder: a Sega CD disc in `Sega Genesis (MD)` reads
       `Cheats/SEGACD/`, a `.fds` disk in `Nintendo ES (FC)` reads
@@ -98,7 +115,14 @@ If no cheat file matches the game, the page says **No cheats for this game.**
       by the game's name, then by the first file whose name starts with the
       game's name.
     - PSP games are matched by their game ID, such as `ULUS10041`, from the
-      disc itself.
+      disc itself. When the ID can't be read, such as for a `.chd`, the
+      region in the file name picks the file.
+    - A ROM named without a region, such as `Contra III - The Alien Wars.sfc`,
+      takes the USA cheats, then World, then Europe. Packs named only after
+      their source, such as `(Rumbles)`, come after those.
+    - Names that differ only in spaces or punctuation still match:
+      `Soulcalibur` finds `Soul Calibur.cht`, and `Marvel vs Capcom 2` finds
+      `Marvel Vs. Capcom 2.cht`.
     - With no match, the page also names the file it looked for, such as
       `Looked for Cheats/GBA/...`.
     - For merged cheats, the app loads every cheat file for the game's name

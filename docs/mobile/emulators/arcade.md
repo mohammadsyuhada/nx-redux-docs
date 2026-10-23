@@ -54,7 +54,8 @@ Arcade games run on the bundled **FinalBurn Neo** core.
 
 ## Cheats and achievements
 
-- Cheats: not available for arcade games. The in-game menu has no **Cheats**
-  page for them.
+- [Cheats](../cheats.md): the cheat download has codes for arcade games.
+  They change the game's memory directly. They don't work over
+  [Netplay](../netplay.md).
 - [RetroAchievements](../retroachievements.md) works for arcade games it
   recognises.
