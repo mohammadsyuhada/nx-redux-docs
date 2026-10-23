@@ -321,8 +321,10 @@ there, and each file it skipped, with the reason.
     - Saves and BIOS are kept per console, in `Saves/<TAG>/` and
       `Bios/<TAG>/` with the console's tag, such as `GBA` for both gpSP and
       mGBA. BIOS files are read from `Bios/<TAG>/` before each launch.
-    - Pinned and hidden games are stored inside the app. Hidden games can be
-      shown again from **Tools → Settings → Library → Hidden games**.
+    - Pinned games, recents and play time are kept in the home folder's
+      `.userdata/shared/`. Hidden games are kept in
+      `.userdata/android/hidden.txt`, so they stay on this phone and don't
+      sync. Hidden games can be shown again from **Tools → Settings → Library → Hidden games**.
     - Cores play from a private working copy of each battery save. The copy
       in `Saves/<TAG>/` is updated after each save write and when you quit.
       Save states are kept per emulator, in `.userdata/shared/<TAG>-<core>/`.
