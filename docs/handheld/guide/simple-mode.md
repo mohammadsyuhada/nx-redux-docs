@@ -15,6 +15,9 @@ When Simple Mode is on:
 - Games and tools can't be pinned or unpinned, and collections can't be
   renamed or deleted, so a curated [Home](main-menu.md#home) stays as you set
   it up.
+- A game's **MENU** has no **Delete Rom**, **Rename Rom**, **Add to
+  Collection**, **Emulator Options**, **Launch Options** or **Fetch
+  Artwork**, so games and their settings stay as you left them.
 - In-game, **Options** is replaced with **Reset**, so there are no settings to
   wander into mid-game.
 - The F1 / F2 tool keys do nothing, and **Settings** hides
