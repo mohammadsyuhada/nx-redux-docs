@@ -64,7 +64,7 @@ reads.
 
 | Row | What it does |
 | --- | --- |
-| **Home folder** | Shows the home folder's name. `A` picks a different one. |
+| **Home folder** | Shows the home folder's name. `A` picks a different one, then offers to copy your saves to it: **Copy** or **Keep separate**. Nothing is deleted from the old folder. Without All files access, `A` opens the access page instead. |
 | **All files access** | Android 11 and later. Shows **On** or **Off**. `A` opens Android's page for the app. |
 | One row per extra folder | Shows the folder's name and its state. `A` offers to remove it. |
 | **Add ROM folder** | Pick another extra folder to scan. |
@@ -92,8 +92,11 @@ With **All files access** on, the app reads your folders directly, which is
 faster on large libraries, and uses its own [folder picker](#the-folder-picker).
 
 - Folders you picked earlier switch over by themselves. Nothing is lost.
-- If you turn the access off, your folders are kept. Turn it back on and your
-  games come back, with no rescan needed.
+- If you turn the access off, your folders are kept, and the app switches to
+  its own `Android/media/com.nxredux.mobile/` folder. Turn it back on and your
+  home folder and games come back, with no rescan needed. Saves made in the
+  meantime stay in `Android/media`; see
+  [Getting Started](getting-started.md#without-all-files-access).
 
 ??? info "More detail"
     - Without it, the app reads through Android's storage picker. With it,
@@ -231,16 +234,20 @@ Use **Add to Collection** in the game-list context menu.
 
 ## Saves
 
-Battery saves and save states are kept inside the app, not in the home
-folder.
+Battery saves, save states and per-game settings are kept in your home
+folder, laid out as on the handheld's card: `Saves/<TAG>/` for battery saves
+and `.userdata/` for the rest. Without All files access, they are in
+`Android/media/com.nxredux.mobile/`. See
+[Getting Started](getting-started.md#choose-a-home-folder).
 
 **Tools → Settings → Emulators → Saves → Export saves** writes one zip of
 your saves, states and slot pictures, which unzips onto a handheld card as it
 is.
 
-!!! warning "Export before uninstalling"
-    Saves are stored inside the app, so export them before you uninstall the
-    app or clear its data.
+!!! warning "Uninstalling without a home folder"
+    In your own home folder, saves survive an uninstall. In
+    `Android/media/com.nxredux.mobile/` (All files access off), Android removes
+    them with the app, so export them or copy the folder first.
 
 Nothing in the app deletes a ROM.
 
@@ -307,13 +314,16 @@ there, and each file it skipped, with the reason.
 
 ??? info "More detail: where saves are kept"
     - Saves are kept in the handheld's card layout. The home folder holds
-      only `Roms/`, `Bios/` and `Collections/`.
+      `Roms/`, `Bios/`, `Collections/`, `Cheats/`, `Saves/` and `.userdata/`.
+    - Saves, states and settings made in `Android/media` while All files
+      access was off stay there. They are not merged with the saves in your
+      home folder.
     - Saves and BIOS are kept per console, in `Saves/<TAG>/` and
       `Bios/<TAG>/` with the console's tag, such as `GBA` for both gpSP and
       mGBA. BIOS files are read from `Bios/<TAG>/` before each launch.
     - Pinned and hidden games are stored inside the app. Hidden games can be
       shown again from **Tools → Settings → Library → Hidden games**.
-    - Cores play from a private working copy of each battery save. The mirror
+    - Cores play from a private working copy of each battery save. The copy
       in `Saves/<TAG>/` is updated after each save write and when you quit.
       Save states are kept per emulator, in `.userdata/shared/<TAG>-<core>/`.
     - An export writes each console's saves under its default emulator's
