@@ -56,7 +56,9 @@ your home folder, in `Cheats/<TAG>/`, one folder per system, as on the
 handheld. They stay there if you uninstall the app, so a reinstall finds them
 already installed.
 
-Without All files access, they live inside the app's own storage instead.
+Without All files access, they go in `Cheats/<TAG>/` inside
+`Android/media/com.nxredux.mobile/` instead, which Android removes if you
+uninstall the app.
 
 Some systems have no cheats, because their emulators don't take them, such as
 Nintendo 3DS and Atari 2600.
@@ -78,7 +80,7 @@ Nintendo 3DS and Atari 2600.
     - The download's list of what it installed is kept in
       `.userdata/shared/xtras/cheatdb.manifest`, next to the cheats.
     - With All files access off, or a home folder the app can't reach, the
-      app reads and installs cheats in its own storage.
+      app reads and installs cheats in `Android/media/com.nxredux.mobile/`.
     - The download installs folders only for systems whose core takes cheats.
     - Arcade (`FBN`), Dreamcast, ColecoVision, Atari 7800 and Atari Lynx
       cheats change the game's memory directly, every frame, instead of going
