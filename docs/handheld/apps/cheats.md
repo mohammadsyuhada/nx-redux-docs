@@ -77,8 +77,29 @@ looked for.
     Cheats often differ between the USA, Europe and Japan releases of a game.
     NX Redux picks the cheat file for your ROM's region, read from its name:
     `Tekken 6 (USA).iso` gets the USA cheats. A name without a region, like
-    `Tekken 6.iso`, gets whichever region it finds first, which may not match
-    your copy.
+    `Tekken 6.iso`, gets the USA cheats if there are any, then World, then
+    Europe, which may not match your copy.
+
+### Where cheats live
+
+Cheats are kept in one folder per system under `Cheats/`, named like the
+system's `Roms/` folder tag: `Cheats/GBA/`, `Cheats/SFC/`, `Cheats/MD/`. Every
+core for a system reads that folder, so Game Boy Advance on mGBA reads
+`Cheats/GBA/`, Super Nintendo on Supafaust reads `Cheats/SFC/`, PlayStation
+on SwanStation reads `Cheats/PS/`, and Dreamcast Lite reads `Cheats/DC/`.
+Genesis Plus GX picks by the game: Game Gear, Master System, SG-1000 and Sega
+CD games read `Cheats/GG/`, `Cheats/SMS/`, `Cheats/SG1000/` and
+`Cheats/SEGACD/`, everything else `Cheats/MD/`. Super Game Boy has its own
+`Cheats/SGB/`, and Game Boy and Game Boy Color games also look in each
+other's folder, for carts that run on both.
+
+A name in the cheat database that's spelled a little differently from your
+ROM still matches: `Soulcalibur.chd` finds `Soul Calibur.cht`.
+
+!!! note "Older MGBA, SUPA and PSX folders"
+    Earlier versions of the Cheat Database installed extra copies in
+    `Cheats/MGBA/`, `Cheats/SUPA/` and `Cheats/PSX/`. Nothing reads them any
+    more, so you can delete them to free up space.
 
 ### Two kinds of cheats
 
