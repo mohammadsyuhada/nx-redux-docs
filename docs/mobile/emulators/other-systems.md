@@ -102,7 +102,7 @@ out of the box.
 ## Cheats and achievements
 
 - [Cheats](../cheats.md): the NES, Famicom Disk System, Super Nintendo,
-  TurboGrafx-16, WonderSwan and Doom take cheats. The others have no
-  **Cheats** page.
+  TurboGrafx-16, WonderSwan, Atari 7800, Atari Lynx, ColecoVision and Doom
+  take cheats. The others have no **Cheats** page.
 - [RetroAchievements](../retroachievements.md) works for every system here
   except PICO-8 and Doom.

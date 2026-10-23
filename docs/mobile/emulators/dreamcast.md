@@ -196,8 +196,9 @@ Player 1's memory card.
 
 ## Cheats and achievements
 
-- Cheats: not available. Flycast's libretro core doesn't take them, so the
-  in-game menu has no **Cheats** page for Dreamcast games.
+- [Cheats](../cheats.md): the cheat download has codes for Dreamcast games.
+  They change the game's memory directly. They don't work over
+  [Netplay](../netplay.md).
 - [RetroAchievements](../retroachievements.md) works for Dreamcast discs in
   `.chd`, `.gdi`, `.cue` and `.m3u`, and zipped discs once unpacked. `.cdi`
   games are not recognised, and NAOMI and Atomiswave games are not on
