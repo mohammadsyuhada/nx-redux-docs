@@ -93,7 +93,9 @@ In the game list:
 Queued downloads run in the background. The **Progress** page lists each
 queued game with its status and a running count (`12 / 40 complete, 2 failed`).
 Art is placed alongside the ROMs, so it shows up in the game lists
-immediately. Press `X` **Clear Done** to drop finished rows (Done, Not Found, Error).
+immediately. Finished games leave the list on their own and stay in the count.
+Games that come back **Not Found** or **Error** stay listed; queue one again
+from the game list to retry it.
 
 !!! tip "Single game instead?"
     For one game, use **Fetch Artwork** in the game's
