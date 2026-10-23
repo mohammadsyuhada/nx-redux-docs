@@ -233,7 +233,7 @@ card, NX Redux makes a bind mount instead while the game launches.
     **reinstall it from PortMaster**: your saves stay where they are.
 
 Found a port that still won't start? Open an issue on
-[GitHub](https://github.com/mohammadsyuhada/nx-redux/issues) with the port's
+[GitHub](https://github.com/nx-redux/nx-handheld/issues) with the port's
 name and the error you see.
 
 ??? info "More detail"

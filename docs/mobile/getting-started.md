@@ -45,7 +45,7 @@ The same as on the handheld: [Artwork](artwork.md),
 ## Install
 
 1. Download the latest `NXReduxMobile-vX.Y.Z.apk` from the
-   [releases page](https://github.com/mohammadsyuhada/nx-mobile/releases),
+   [releases page](https://github.com/nx-redux/nx-mobile/releases),
    on the phone itself. See also [Download](../reference/download.md).
 2. Open it. Android asks to allow installs from your browser or file manager
    the first time; allow it, then **Install**.
@@ -55,7 +55,7 @@ It needs Android 8.0 or later on a 64-bit ARM (arm64) device. A newer release
 installs over the old one and keeps your settings and saves.
 
 Found a problem? Report it on
-[GitHub](https://github.com/mohammadsyuhada/nx-mobile/issues).
+[GitHub](https://github.com/nx-redux/nx-mobile/issues).
 
 ## First-run setup
 

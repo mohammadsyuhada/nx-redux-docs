@@ -6,7 +6,7 @@ title: Mobile Release Notes
 
 What changed in each release of NX Redux for Android phones, tablets and
 Android handhelds. Download the APK from the
-[releases page](https://github.com/mohammadsyuhada/nx-mobile/releases).
+[releases page](https://github.com/nx-redux/nx-mobile/releases).
 
 ## v0.3.0
 
@@ -165,6 +165,6 @@ Features many retro frontends have that this preview doesn't yet:
 This preview is for finding what to fix and improve before v1.0. Tell us
 what goes wrong, which games don't run well on your phone, and what you'd
 like to see. Open an issue on
-[GitHub](https://github.com/mohammadsyuhada/nx-mobile/issues), with your phone's
+[GitHub](https://github.com/nx-redux/nx-mobile/issues), with your phone's
 model and Android version (**Tools → Settings → About → Copy device info** copies them
 for you).

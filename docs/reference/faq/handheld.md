@@ -114,6 +114,6 @@ The usual suspects, in order:
 
 ## Where do I report bugs or ask questions?
 
-On the [NX Redux GitHub repository](https://github.com/mohammadsyuhada/nx-redux)
+On the [NX Redux GitHub repository](https://github.com/nx-redux/nx-handheld)
 via Issues. For emulator problems, attach the matching log file from
 `.userdata/<platform>/logs/` — it makes issues much faster to diagnose.

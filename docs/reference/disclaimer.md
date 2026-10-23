@@ -32,4 +32,4 @@ or whatever wrote it, is reviewed before release, distributed under the same
 [GNU GPL v3.0](credits.md#license) license, and comes with the same warranty
 terms as any other open-source project. If you find a bug, or a mistake in
 these docs, open an issue on
-[GitHub](https://github.com/mohammadsyuhada/nx-redux/issues) as usual.
+[GitHub](https://github.com/nx-redux/nx-handheld/issues) as usual.

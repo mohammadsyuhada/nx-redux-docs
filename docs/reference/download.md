@@ -16,7 +16,7 @@ and Smart Pro. Releases are packaged per device, so download the zip for
 [Getting Started](../handheld/getting-started.md) to install it.
 
 <div class="nx-badges" markdown>
-[:fontawesome-brands-github: Download on GitHub](https://github.com/mohammadsyuhada/nx-redux/releases){ .nx-badge-link }
+[:fontawesome-brands-github: Download on GitHub](https://github.com/nx-redux/nx-handheld/releases){ .nx-badge-link }
 </div>
 
 ## Mobile
@@ -27,6 +27,6 @@ later, arm64). Download the APK, then follow
 it. Google Play is coming later.
 
 <div class="nx-badges" markdown>
-[:fontawesome-brands-github: Download on GitHub](https://github.com/mohammadsyuhada/nx-mobile/releases){ .nx-badge-link }
+[:fontawesome-brands-github: Download on GitHub](https://github.com/nx-redux/nx-mobile/releases){ .nx-badge-link }
 <span class="nx-badge-link is-disabled" role="link" aria-disabled="true" markdown>:fontawesome-brands-google-play: Get it on Google Play <span class="nx-badge-link__note">Coming soon</span></span>
 </div>

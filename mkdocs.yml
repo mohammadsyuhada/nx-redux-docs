@@ -1,8 +1,8 @@
 site_name: NX Redux
 site_description: User documentation for NX Redux — custom firmware for TrimUI retro handhelds
 site_url: https://nxredux.com/
-repo_url: https://github.com/mohammadsyuhada/nx-redux
-repo_name: mohammadsyuhada/nx-redux
+repo_url: https://github.com/nx-redux/nx-handheld
+repo_name: nx-redux/nx-handheld
 edit_uri: ""
 
 theme:

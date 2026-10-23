@@ -6,7 +6,7 @@ title: Handheld Release Notes
 
 What changed in each NX Redux release for TrimUI handhelds. Download packages
 for every device from the
-[releases page](https://github.com/mohammadsyuhada/nx-redux/releases), or
+[releases page](https://github.com/nx-redux/nx-handheld/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
 ## v2.3.0
@@ -822,4 +822,4 @@ Wi-Fi connection errors and Device Sync on FAT32 cards.
 ## Earlier releases
 
 Notes for v1.9.0 and older are on the
-[GitHub releases page](https://github.com/mohammadsyuhada/nx-redux/releases).
+[GitHub releases page](https://github.com/nx-redux/nx-handheld/releases).
