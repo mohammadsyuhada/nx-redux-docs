@@ -67,6 +67,11 @@ Nintendo 3DS and Atari 2600.
       5200, Pokémon mini, PICO-8 and Nintendo 3DS.
     - The cheats are libretro `.cht` files. To add your own, put them in the
       system's `Cheats/<TAG>/` folder, such as `Cheats/GBA/`.
+    - There is one folder per console, as in `Roms`, whichever emulator runs
+      the game: Game Boy Advance on mGBA reads `Cheats/GBA/`, Super Nintendo
+      on Supafaust reads `Cheats/SFC/`, PlayStation on SwanStation reads
+      `Cheats/PS/`, and Genesis Plus GX reads `Cheats/MD/`. Super Game Boy
+      has its own `Cheats/SGB/`.
     - Cheats an earlier version kept inside the app move to the home folder by
       themselves the first time you open the app with All files access on.
       A file already in the home folder is never replaced.
