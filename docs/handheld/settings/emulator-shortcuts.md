@@ -50,19 +50,36 @@ button in the game.
 | **Game Switcher** | Open the [Game Switcher](../guide/game-switcher.md). |
 | **Screenshot** | Take a screenshot. |
 | **Toggle Turbo A / B / X / Y / L / L2 / R / R2** | Turn turbo (rapid fire) on or off for that button. |
-| **Toggle D-pad Joystick** | Make the D-pad drive the left analog stick, until you press it again. |
+| **Toggle D-pad Joystick** | Make the D-pad drive the left analog stick, until you press it again. Brick only. |
 
 ## Toggle D-pad Joystick
 
 ![Emulator Shortcuts, Toggle D-pad Joystick and Reset to defaults](../../assets/screenshots/set-emulator-shortcuts-2.png)
 
-For games that expect an analog stick on a device without one, such as
+For games that expect an analog stick, such as
 [Nintendo 64](../emulators/nintendo-64.md) or [PSP](../emulators/psp.md)
-games on the Brick. While it's on, the D-pad moves the left stick instead of
-pressing the D-pad. A notification shows **D-pad: Joystick** or **D-pad:
-D-pad** each time you press it.
+games. While it's on, the D-pad moves the left stick instead of pressing the
+D-pad. A notification shows **D-pad: Joystick** or **D-pad: D-pad** each
+time you press it.
 
-It is off every time a game starts.
+It works in [PortMaster](../apps/portmaster.md) ports too, with the same
+button. Ports can't show the notification, so the device vibrates instead:
+one buzz for **Joystick**, two for **D-pad**.
+
+It is off every time a game or port starts.
+
+This shortcut is only on the **Brick**. The Brick Pro and Smart Pro S have
+real analog sticks, so they don't show it.
+
+??? info "More detail"
+    - In ports, the firmware's input service makes the switch, so every
+      port sees the D-pad as the left stick, whatever controls it reads.
+    - The D-pad always pushes the stick all the way, so steering is no
+      finer than with the D-pad. It helps in ports that only read the stick
+      and ignore the D-pad.
+    - The button you bind still reaches the port, as it does in games. Use
+      a `MENU` + button combination so it doesn't also press something in
+      the port.
 
 ## Reset to defaults
 
