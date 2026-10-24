@@ -115,7 +115,7 @@ RetroArch `.cht` file to the game's `Cheats/<TAG>/` folder.
     Replay. They all show in one list, and each cheat names its source under
     its name, such as **GameShark**.
 
-![A merged cheat highlighted: the line under the list reads (GameShark) Joker Command](../assets/screenshots/mobile/in-game-cheats-merged.webp)
+![Contra - Hard Corps (USA, Korea) in the game panel's Cheats tab: the Action Replay file's cheats, each with Action Replay under its name](../assets/screenshots/mobile/in-game-cheats-merged.webp){ .nx-wide }
 
 ??? info "More detail: how a game's cheats are found"
 
