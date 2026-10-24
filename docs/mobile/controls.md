@@ -305,8 +305,9 @@ Off), there is no hint bar:
 - **Recent** and **Search** are icons at the right of the tab row, and a
   page's own actions are icons by its title or buttons on the page.
 - Dialogs have real buttons.
-- A Settings value with three or more choices opens a dropdown of them. See
-  [Settings](settings.md).
+- A Settings switch flips on a tap, a row of choices takes a tap on one, and
+  a value with `›` opens a list to pick from. See
+  [Settings](settings.md#touch).
 
 ## Game-list context menu
 

@@ -137,8 +137,8 @@ Everything on Home in one list, with the selected game's picture behind it.
       show in List on any screen size.
     - Behind the Continue game you see where you left off. A selected tool
       shows its icon, large and dim, on the right.
-    - The scroll arrows sit on the picture just above the button hints, with
-      no shade behind them.
+    - Where more rows scroll in, the list fades out at that edge, with no
+      scroll arrows.
     - Game info also needs [Extra info](layouts.md#extra-info) on, and shows
       in the row where the hints were.
     - On a fresh install, with only **Pick a game** in the list, its card
@@ -186,11 +186,18 @@ This is the default layout.
       and a long press opens the hidden-tab menu. **+N** works the same way
       while Tools is hidden.
     - Home scrolls when there are more pinned games than fit.
+    - The tool squares stand five to a column beside the Continue card.
+      With the stats strip or the tab row hidden, the squares grow instead
+      of adding a row.
+    - In landscape, the first one or two pinned games sit beside the
+      Continue card, and the screen holds just that top section: the other
+      pinned games start below it, a scroll away.
     - The shelves show on every screen size, portrait and landscape alike,
-      at most 3 games each, each under its own label. Their cards are the
-      pinned games' size, in the same grid: two to a row in portrait, four
-      on a tablet. A **New** or **Not started** game shows its console under
-      its name.
+      each under its own label. Their cards are the pinned games' size, in
+      the same grid: two to a row in portrait, four on a tablet. A shelf
+      holds up to 4 games in portrait and on a row of four, and 3 on a
+      narrower landscape row. A **New** or **Not started** game shows its
+      console under its name.
 
 ### Carousel
 
@@ -293,7 +300,8 @@ the first.
 
 ??? info "More detail"
     - Only a fresh press wraps: holding the button stops at the end.
-    - The scroll arrows sit at the bottom, above the button hints.
+    - Where more rows scroll in, the list fades out at that edge, with no
+      scroll arrows. The highlight stays a row clear of the fade.
     - Collections and Tools lists work the same way.
 
 ### Grid { #consoles-grid }
@@ -408,8 +416,9 @@ library.
 
 The built-in tools, each with its icon: **RetroAchievements**,
 **Game Tracker**, **Artwork**, **Cheat Database**, **Device Sync** and
-**Settings**, plus any Android apps you choose to show there (see
-[Launcher Mode & Android Games](launcher.md)). By default it is a Grid; pick
+**Settings**, and **Apps** with every Android app on the phone, plus any
+apps you add to Tools from there (see
+[Android apps](launcher.md#android-apps)). By default it is a Grid; pick
 its style in [Layouts](layouts.md#tools). The styles work as on
 [Consoles](#consoles).
 
@@ -464,15 +473,17 @@ names leave out the region and version text in brackets.
 | `START` | [Search](#searching-a-game-list) this list |
 | `X` **Achievements** | Open the [achievements panel](#achievements-panel) |
 | `Y` **Netplay** | Play the game with another device. Shown for games that have [netplay](netplay.md) |
-| `B` **Back** | Return to the tab |
+| `B` | Return to the tab |
 | `A` **Resume** / **Open** | Launch the game. **Resume** continues from its auto-save; **Open** shows when it has none |
 
 A long press on a game opens the context menu too. To start a game with an
 auto-save from the beginning, choose **Play from start** in its menu.
 
 ??? info "More detail"
-    For games with achievements, the info line adds your progress and the
-    next achievement to go for.
+    - For games with achievements, the info line adds your progress and the
+      next achievement to go for.
+    - The hint bar has no `B` **Back**, to leave room for the game's own
+      actions. `B` still returns to the tab.
 
 ### List { #games-list }
 
@@ -488,6 +499,9 @@ or in a box (see [List art](layouts.md#list-art)).
     show only where the hints would be: with
     [Button hints](layouts.md#page-title-and-button-hints) hidden, or with
     touch alone. While the hint bar shows, they are left out.
+
+    The list fades out at the edge where more games scroll in, with no scroll
+    arrows.
 
 ### Grid { #games-grid }
 
@@ -645,7 +659,8 @@ where the game is listed.
       [Layouts](layouts.md#page-title-and-button-hints)), **Netplay** moves
       up, right after **Play from start**. On Home too.
     - A menu with 9 to 16 items shows as two columns when the screen is wide
-      enough. `Left` / `Right` move between the columns. `Up` / `Down` loop
+      enough, split evenly (5 and 4 for nine items). `Left` / `Right` move
+      between the columns. `Up` / `Down` loop
       round the items.
     - The Android console holds the Android games you added. See
       [Launcher Mode & Android Games](launcher.md).
@@ -689,7 +704,7 @@ as `GBA`. It reads **No results** when nothing matches.
 | `MENU` **Options** | The game's context menu |
 | `X` **Achievements** | Open the [achievements panel](#achievements-panel) |
 | `Y` **Netplay** | Play the game with another device, for games that have [netplay](netplay.md) |
-| `B` **Back** | Return to the tab and the item you searched from |
+| `B` | Return to the tab and the item you searched from |
 | `A` **Resume** / **Open** | Launch the game, from its auto-save when it has one |
 
 ??? info "More detail"

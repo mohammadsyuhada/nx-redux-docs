@@ -35,27 +35,26 @@ you open it flat. It works in games and in the main menu alike.
 Home lays itself out for the screen's shape. In portrait and on most
 screens it looks as in [Main Menu](main-menu.md#home). On a wide or large
 landscape screen, such as a Galaxy Z Flip sideways or an unfolded Galaxy Z
-Fold, the tool squares, and one or two pinned games, sit beside the
-Continue card.
+Fold, the tool squares, and the first one or two pinned games, sit beside
+the Continue card.
 
 ??? info "More detail"
     **Wide face:** a phone in landscape with a 20:9 or wider screen, such as
     a Galaxy Z Flip.
 
-    - One or two pinned games sit beside the Continue card, in the top
-      section. With three or more, they go in rows below it instead.
-    - The pinned tools are smaller squares, up to six. With more, the last
-      square is **+N**, which opens Tools.
+    - The first one or two pinned games sit beside the Continue card, in the
+      top section. The rest go in rows below it, a scroll away.
+    - The pinned tools are smaller squares, five to a column, up to three
+      columns. With more, the last square is **+N**, which opens Tools.
 
     **Large face:** a landscape screen at least 840 × 480 dp, such as an
     unfolded Galaxy Z Fold or a tablet.
 
-    - The top section is as on the wide face: Continue, one or two pinned
-      games and the tool squares.
-    - With three or more pinned games, they fill the rows below, four to a
-      row.
-    - Under them come the [shelves](#shelves), four to a row at the pinned
-      games' size.
+    - The top section is as on the wide face: Continue, the first one or two
+      pinned games and the tool squares, five to a column, up to two columns.
+    - The other pinned games fill the rows below, four to a row.
+    - Under them come the [shelves](#shelves), up to four games each in one
+      row, at the pinned games' size.
 
 ### Shelves
 
@@ -75,7 +74,8 @@ it has games.
 
 ??? info "More detail"
     - Shelves show in portrait and landscape alike. Each shelf shows only
-      when it has games, holds at most 3, and a game is never on two shelves.
+      when it has games, and a game is never on two shelves. A shelf holds
+      at most 3 games, or 4 on Grid Home in portrait and on a row of four.
     - Each shelf has its name as a label above it; on Carousel and List Home
       each game wears it as a badge or tag instead.
     - The game on the Continue card, your pinned games, Unassigned games and

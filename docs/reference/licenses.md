@@ -94,7 +94,8 @@ On the handheld, NX Redux inherits its libraries from NextUI and MinUI; see
   [Xiaomi's MiSans terms](https://hyperos.mi.com/font/en/download/). Software
   may embed the font as long as it notes that MiSans is used
   ([MiSans FAQ](https://hyperos.mi.com/font/en/faq/)), which NX Redux does in
-  **Settings → About**. The font files may not be distributed on their own, so
+  **Settings → About** on the handheld and **Tools → Settings → System** on
+  mobile. The font files may not be distributed on their own, so
   the mobile build downloads MiSans from Xiaomi rather than keeping it in the
   repository.
 - **Rounded M+ 1c** (handheld), by the M+ FONTS Project and Jikasei Font

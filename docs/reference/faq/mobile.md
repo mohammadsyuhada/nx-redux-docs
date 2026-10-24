@@ -154,9 +154,9 @@ Set them in **Tools → Artwork → Settings**. See
 
 ## Can I use the app as my home screen?
 
-Yes. Turn on **Use as home screen** in **Tools → Settings → Launcher**. The
+Yes. Turn on **Use as home screen** in **Tools → Settings → System**. The
 phone's Home key then brings you back to the app's **Home** tab. You can also
-show Android apps in **Tools**. See
+open any Android app from **Tools → Apps**, and add apps to **Tools**. See
 [Launcher Mode & Android Games](../../mobile/launcher.md).
 
 ## Why do Android games have no play time?
@@ -181,8 +181,7 @@ as an unfolded Fold held sideways, some pages split into two panes. See
 ## I removed my SD card and some games disappeared
 
 Games from a folder on a card that is not mounted are left out until the card
-is back. **Tools → Settings → Library → ROM folders** marks the folder
-**Not available**. Nothing is lost. See
+is back. **Tools → Settings → Library** marks the folder **Not available**. Nothing is lost. See
 [Library & ROM folders](../../mobile/library.md).
 
 ## Is there an iOS version?

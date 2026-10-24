@@ -1,20 +1,20 @@
 # Launcher Mode & Android Games
 
 NX Redux can be your phone's home screen, show your Android apps in
-Tools, and list your Android games as a console. All three are in **Tools →
-Settings → Launcher**.
+Tools, and list your Android games as a console:
+
+| Where | What it does |
+| --- | --- |
+| **Tools → Settings → System → Use as home screen** | Make the app your Android home screen. See [Use as home screen](#use-as-home-screen). |
+| **Tools → Apps** | Every app on the phone. Open one, or add it to Tools. See [Android apps](#android-apps). |
+| **Tools → Settings → Library → Android games** | Pick the apps in the Android console. See [Android games](#android-games). |
 
 ![Settings, with Launcher open beside the sections: Use as home screen, Android apps and Android games](../assets/screenshots/mobile/settings-launcher.webp){ .nx-wide }
 
-| Row | Values | What it does |
-| --- | --- | --- |
-| **Use as home screen** | On, Off | Make the app your Android home screen. See [Use as home screen](#use-as-home-screen). |
-| **Android apps** | None, 1 app, N apps | Pick the apps shown in Tools. See [Android apps](#android-apps). |
-| **Android games** | None, 1 game, N games | Pick the apps in the Android console. See [Android games](#android-games). |
-
 ## Use as home screen
 
-Turn **Use as home screen** On and Android asks whether to make NX Redux your
+Turn **Use as home screen** On, in the **Launcher** group of
+[System](about.md), and Android asks whether to make NX Redux your
 home app. Say yes, and the phone opens to the main menu.
 
 While the app is the home screen, **Home** (the button or the gesture)
@@ -33,21 +33,28 @@ pick your old launcher again.
 
 ## Android apps
 
-**Android apps** opens a grid of your installed apps. Press `A`, or tap, to
-tick an app: ticked apps show in the Tools tab, after the built-in tools.
+**Tools → Apps** opens a grid of your installed apps. Press `A`, or tap the
+selected app, to open it.
 
 ![The Android apps picker, YouTube and YT Music ticked](../assets/screenshots/mobile/android-apps-picker.webp)
 
-An app in Tools opens like any other tool. Pin it to Home with `MENU` →
-**Pin**, as with the other tools.
+Press `MENU`, or long-press an app, for its menu:
+
+- **Add to Tools** puts the app in the Tools tab, after the built-in tools.
+  **Remove from Tools** takes it out again; it stays in **Apps**.
+- **Pin to Home** pins it to Home, as with the other tools. **Unpin from
+  Home** takes it off.
+
+An app in Tools opens like any other tool, and its own `MENU` offers **Pin**
+or **Unpin** and **Remove from Tools**.
 
 ??? info "More detail"
-    - Apps you put in the Android console aren't offered here.
-    - With no other app to show, the picker reads **No apps to show**.
+    - Apps you put in the Android console aren't listed here.
+    - Apps that are in Tools carry a mark in the grid.
 
 ## Android games
 
-**Android games** opens the same kind of grid. Apps Android marks as games
+**Tools → Settings → Library → Android games** opens the same kind of grid. Apps Android marks as games
 come first, then every other app, so you can add any of them.
 
 Ticked apps leave Tools and join the **Android** console on the Consoles tab.
@@ -79,7 +86,7 @@ consoles:
     - A pinned Android game sits on Home with your other pinned games.
 
 To take a game out of the console, untick it in **Tools → Settings →
-Launcher → Android games**.
+Library → Android games**.
 
 ## Back to a running game
 

@@ -31,10 +31,10 @@ A group's page has its rows at the top and a picture of how they look below
 (beside the rows on a wide landscape screen, such as a phone turned
 sideways). The picture changes as you change a row.
 
-- `Right` and `A` step the highlighted row to its next value, `Left` to the
-  previous one.
-- With touch alone, a row with three or more values opens a dropdown of them
-  (see [Settings](settings.md)).
+- `Left` / `Right` step the highlighted row's value. `A` flips a switch,
+  steps a row of choices, or opens the list of values on a row with `›`.
+- By touch, tap a switch row to flip it, tap a choice, or tap a row with `›`
+  to pick from its list. See [Settings](settings.md#touch).
 - Some rows only show when they apply.
 
 ??? info "More detail"
@@ -62,8 +62,7 @@ achievements; [Extra info](#extra-info) hides those.
 
 ??? info "More detail"
     The strip's space goes to the top section: the Continue card and the tool
-    squares grow, and a column of squares gains one more only when a whole
-    square fits. The group's picture shows Home without the strip.
+    squares grow. A column keeps its five squares. The group's picture shows Home without the strip.
 
 ## Consoles
 
@@ -208,7 +207,7 @@ Other screens, such as Settings and the in-game menu, keep both. The
 ??? info "More detail: where the space goes"
     - With the title hidden, its space goes to the page. A List shows more
       rows. Home moves its stats strip up into the tab row's place, and a
-      Grid Home's columns of tool squares gain one more. Grid, Carousel and
+      Grid Home's tool squares grow. Grid, Carousel and
       Backdrop keep their size and centre in the full height. A game list's
       icons stay at the top right.
     - With the hints hidden, their space stays empty, Home included. In a

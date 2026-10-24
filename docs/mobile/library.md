@@ -36,55 +36,39 @@ The app never deletes a game. It moves games only while **Move them into
 
 ## Settings → Library
 
-**Tools → Settings → Library** shows what the library holds (home folder,
-game and console count, last scan), then its rows.
+**Tools → Settings → Library** shows what the library holds and every folder
+it reads, in one list.
 
 ![Settings, with Library open beside the sections: the home folder, the counts, Rescan library, ROM folders and Unassigned games](../assets/screenshots/mobile/settings-library.webp){ .nx-wide }
 
 | Row | What it does |
 | --- | --- |
-| **Rescan library** | Scan every folder again. A notice then says how many games the library has. |
-| **ROM folders** | Open the [ROM folders](#rom-folders) page. |
-| **Unassigned games** | Only when some games have no console. Shows how many, and opens their list. See [Unassigned games](#unassigned-games). |
-| **Hidden games** | Only when some games are hidden. Shows how many. `A` on a game shows it again. |
-
-??? info "More detail: the lines at the top"
-    - the home folder's path,
-    - how many games and consoles the library has, such as **212 games · 20
-      consoles**,
-    - how many ROM folders it reads, the home folder included,
-    - **Last scan:** with the date and time of the last full scan.
-
-## ROM folders
-
-**Tools → Settings → Library → ROM folders** lists every folder the library
-reads.
-
-![Library → ROM folders beside the Settings sections: Home folder, All files access, a ROM folder and Add ROM folder](../assets/screenshots/mobile/rom-folders.webp){ .nx-wide }
-
-| Row | What it does |
-| --- | --- |
-| **Home folder** | Shows the home folder's name. `A` picks a different one, then offers to copy your saves to it: **Copy** or **Keep separate**. Nothing is deleted from the old folder. Without All files access, `A` opens the access page instead. |
-| **All files access** | Android 11 and later. Shows **On** or **Off**. `A` opens Android's page for the app. |
-| One row per extra folder | Shows the folder's name and its state. `A` offers to remove it. |
+| The counts, such as **212 games · 20 consoles** | With **Last scan:** and its date under it. Its **Rescan** button scans every folder again; a notice then says how many games the library has. |
+| **Home folder** | Shows the home folder's path. `A` picks a different one, then offers to copy your saves to it: **Copy** or **Keep separate**. Nothing is deleted from the old folder. Without All files access, `A` opens the access page instead. |
+| **ROM Folder:** and its name | One row per extra folder, with its path or its state under it. `A` offers to remove it. |
 | **Add ROM folder** | Pick another extra folder to scan. |
+| **All files access** | Android 11 and later. A switch: a tap, or `A`, opens Android's page for the app. See [All files access](#all-files-access). |
+| **Saves** | Save formats, and export or import your saves. See [Saves](#saves). |
+| **Android games** | How many apps are in the Android console. Opens the picker. See [Launcher Mode & Android Games](launcher.md#android-games). |
+| **Unassigned games** | Only when some games have no console. Shows how many, and opens their list. See [Unassigned games](#unassigned-games). |
+| **Hidden games** | Only when some games are hidden. Shows how many, and opens their list: `A` on a game shows it again. |
 
 Removing an extra folder only stops scanning it: the **Remove folder**
 dialog asks **Stop scanning this folder? Its ROMs stay where they are.**
 Choose **Remove**. Nothing in the folder is deleted.
 
 ??? info "More detail: folder states"
-    An extra folder's row reads:
+    An extra folder's row reads its path while it was found at the last scan.
+    Otherwise it shows its state, in the warning colour:
 
     | State | Meaning |
     | --- | --- |
-    | **ROM folder** | The folder was found at the last scan. |
     | **Not available** | Its storage was missing, such as an SD card taken out. |
-    | **Not ready yet** | Its storage is in, but Android didn't list it in time. Use **Rescan library** in a moment. |
+    | **Not ready yet** | Its storage is in, but Android didn't list it in time. Use **Rescan** in a moment. |
     | **All files access off** | The folder was picked with All files access, which is now off. |
 
-    While the home folder's storage is missing, its row reads
-    **"<name> · not available"**.
+    While the home folder's storage is missing, its row reads **Not
+    available**.
 
 ## All files access
 
@@ -93,7 +77,8 @@ faster on large libraries, and uses its own [folder picker](#the-folder-picker).
 
 - Folders you picked earlier switch over by themselves. Nothing is lost.
 - If you turn the access off, your folders are kept, and the app switches to
-  its own `Android/media/com.nxredux.mobile/` folder. Turn it back on and your
+  its own `Android/media/com.nxredux.mobile/` folder. The **All files
+  access** row then says so under its name, in the warning colour. Turn it back on and your
   home folder and games come back, with no rescan needed. Saves made in the
   meantime stay in `Android/media`; see
   [Getting Started](getting-started.md#without-all-files-access).
@@ -104,9 +89,10 @@ faster on large libraries, and uses its own [folder picker](#the-folder-picker).
     - A home folder or extra folder picked through Android's picker, on the
       phone's storage or an SD card, switches over with its games, hidden
       games and names as they are.
-    - While the access is off, the library keeps its last scan and says
-      **All files access is off. Turn it on in Settings → All files access,
-      or pick the home folder again.**
+    - While the access is off and something needs it, the row's line says
+      what: **Off: your home folder can't be read, so** and the folder used
+      instead, or **Off: some ROM folders can't be read**. The app no longer
+      says it with a notice each time it starts.
 
 ## The folder picker
 
@@ -189,12 +175,12 @@ Roms/Dreamcast (DC)/
 ## Android games as a console
 
 Android games you add show as an **Android** console on the Consoles tab.
-Add them on first setup, or later in **Tools → Settings → Launcher →
+Add them on first setup, or later in **Tools → Settings → Library →
 Android games**. See [Launcher Mode & Android Games](launcher.md).
 
 ## Rescanning
 
-After adding or removing games outside the app, use **Rescan library** in
+After adding or removing games outside the app, use **Rescan** in
 **Tools → Settings → Library**.
 
 If you take out an SD card, the games from extra folders on it are left out
@@ -206,8 +192,8 @@ until the card is back. Nothing is lost.
     - An extra folder that was deleted, or whose access was revoked, is
       dropped with a notice.
     - A home folder that is lost returns you to the folder picker.
-    - A home on a removed SD card keeps the last index on screen, and **ROM
-      folders** shows **"<name> · not available"**.
+    - A home on a removed SD card keeps the last index on screen, and the
+      **Home folder** row reads **Not available**.
 
 ## Game names
 
@@ -240,7 +226,20 @@ and `.userdata/` for the rest. Without All files access, they are in
 `Android/media/com.nxredux.mobile/`. See
 [Getting Started](getting-started.md#choose-a-home-folder).
 
-**Tools → Settings → Emulators → Saves → Export saves** writes one zip of
+**Tools → Settings → Library → Saves** sets how saves are named, and copies
+them out and back in:
+
+| Row | Values | Default | What it does |
+| --- | --- | --- | --- |
+| **Save format** | MinUI, Retroarch (compressed), Retroarch (uncompressed), Generic | Retroarch (uncompressed) | How battery saves in `Saves/<TAG>/` are named. The default works with RetroArch on other devices. |
+| **Save state format** | MinUI, Retroarch-ish or Retroarch, each compressed or uncompressed | Retroarch (uncompressed) | How save states are named. |
+| **Use extracted file name** | On, Off | Off | For zipped games, saves and states take the unzipped file's name instead of the zip's. This changes which saves a game finds. |
+| **Export saves** | | | See below. |
+| **Import saves** | | | See [Import saves](#import-saves). |
+
+A line under the page's title says where your saves are kept.
+
+**Tools → Settings → Library → Saves → Export saves** writes one zip of
 your saves, states and slot pictures, which unzips onto a handheld card as it
 is.
 
@@ -253,7 +252,7 @@ Nothing in the app deletes a ROM.
 
 ### Import saves
 
-**Tools → Settings → Emulators → Saves → Import saves** copies saves into the
+**Tools → Settings → Library → Saves → Import saves** copies saves into the
 app. First-run setup offers the same choices on its **Bring your saves** step.
 
 | Option | Reads |

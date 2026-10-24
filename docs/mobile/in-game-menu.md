@@ -37,8 +37,7 @@ During a [netplay](netplay.md) match the menu shows only **Continue** and
     - On a wide landscape screen, such as an unfolded foldable held sideways
       or a phone in landscape, the menu shows two pages side by side. See
       [Foldables & Large Screens](foldables.md#two-pane-screens).
-    - In portrait, a page opened from the first page takes the whole width,
-      with its name above its rows.
+    - In portrait, a page opened from the first page takes the whole width.
     - With a [second screen](dual-screen.md) in use, the menu opens on the
       main screen. When the touch screen is showing the game panel, the menu
       list slides in beside it.
@@ -51,13 +50,15 @@ During a [netplay](netplay.md) match the menu shows only **Continue** and
 | **Disc** | Games with more than one disc only. `LEFT` / `RIGHT` change the disc, such as `1/2`. |
 | **Save** | Save a state to the chosen slot. |
 | **Load** | Load the state in the chosen slot. |
-| **Options** | Open the options pages below. |
+| **Options** | Open the [options pages](#options). While it is highlighted, its categories show on the right. |
 | **Quit** | Leave the game. See [Quitting](#quitting). |
 
 There are 8 save state slots. On **Save** and **Load**, `LEFT` / `RIGHT` (or
 a sideways swipe) choose the slot, and `A` saves or loads. The preview on the
-right shows the slot's screenshot and date, or **Empty Slot**. On the other
-rows, the right side shows the [game panel](#the-game-panel).
+right shows the slot's screenshot and date, or **Empty Slot**. On
+**Options**, the right side shows its categories, and `A`, `RIGHT` or a tap
+on one moves into them. On the other rows, the right side shows the
+[game panel](#the-game-panel).
 
 ??? info "More detail: Disc"
 
@@ -92,7 +93,9 @@ You can use the whole menu by touch:
 
 - Tap a row to act on it, as `A` does. **Save** and **Load** take two taps:
   one to highlight the row, then another to save or load.
-- Tap the highlighted row's value to step it forward, as `RIGHT` does.
+- On the options pages, the rows work as in [Settings](settings.md#touch):
+  tap a switch row to flip it, tap one of a row's choices, or tap a value
+  with `›` to open the list of its values.
 - Each hint along the bottom is a button.
 
 ??? info "More detail"
@@ -100,13 +103,17 @@ You can use the whole menu by touch:
     - The second tap on **Save** or **Load** can be on the row or on the slot
       preview.
     - Off the first page, a tap on the hint bar's empty space goes back.
-    - Tap a description page to close it.
+    - A tap on a row that changes the picture opens
+      [adjust mode](#adjust-mode), as `A` does. Its switch or choices still
+      take their own taps.
+    - Tap a description to close it.
 
 ## The game panel
 
 On the first page, the right side holds the game panel: the tabs
-**Shortcuts**, **Achievements** (with a RetroAchievements set) and
-**Players** (in a game with more than one player). It's the same panel a
+**Shortcuts**, **Achievements** (with a RetroAchievements set), **Cheats**
+(when the emulator takes cheats) and **Players** (in a game with more than
+one player). It's the same panel a
 [second screen](dual-screen.md#the-game-panel) shows; see there for what
 each tab holds.
 
@@ -119,17 +126,19 @@ With a controller:
 - `L1` / `R1` switch tabs, in the panel or on the list.
 - `UP` / `DOWN` move between the tabs and the tab's buttons or rows, and `A`
   presses the highlighted one.
+- On the **Cheats** tab, `A` turns the highlighted cheat on or off. See
+  [Cheats](#cheats).
 - `A` on the **Achievements** or **Players** tab name opens its full page:
   [Achievements](#achievements) or
   [Players](multiplayer.md#the-players-page).
 - `B`, or `LEFT` from the panel's left edge, goes back to the list.
 
-By touch, tap a tab, a shortcut or a player row.
+By touch, tap a tab, a shortcut, a cheat or a player row.
 
 ??? info "More detail"
 
     - While **Save** or **Load** is highlighted, the slot preview takes the
-      panel's place.
+      panel's place, and while **Options** is, its categories do.
     - The panel's controls show along the bottom while you are in it.
 
 ## Options
@@ -142,7 +151,6 @@ By touch, tap a tab, a shortcut or a player row.
 | [Frontend](#frontend) | Scaling, sharpness, overlay, screen offset, pad opacity and the debug HUD. |
 | [Shaders](#shaders) | Shader presets and their parameters. |
 | [Core Options](#core-options) | The emulator core's own settings. |
-| [Cheats](#cheats) | Turn the game's cheats on and off. |
 | [Save Changes](#save-changes) | Keep your changes for this console or this game, or restore defaults. |
 
 !!! important "Changes aren't saved until you use Save Changes"
@@ -155,18 +163,17 @@ To set these before a game starts, for a whole emulator or one game, use
 
 ??? info "More detail"
 
-    - **Cheats** shows only when the core takes cheats.
+    - The game's cheats are on the game panel's [Cheats](#cheats) tab.
     - **Console Settings** holds the controller rows, the Nintendo DS screen
       layouts, the Nintendo 3DS New 3DS Controls and Portrait Pad for both.
-    - The line under the list says which settings the game uses right now:
-      **Using defaults.**, **Using console config.** or **Using game config.**
     - Two things are saved straight away instead: the Nintendo DS layout
       hotkeys (see [Nintendo DS](emulators/nintendo-ds.md#controls)) and
       achievement mutes (`X` on the [Achievements](#achievements) page).
 
 ## Console Settings
 
-The console's own rows. `LEFT` / `RIGHT` change a value.
+The console's own rows. `LEFT` / `RIGHT` change a value, or use the row's
+switch, choices or list as described in [Options rows](#options-rows).
 
 ![Console Settings of a Sega Genesis game: Controller Type and Controller Layout](../assets/screenshots/mobile/in-game-console-settings.webp){ .nx-wide }
 
@@ -277,16 +284,28 @@ as you make it.
     **Overlay**, **Offset screen X** and **Y**, **Shader**, each shader
     parameter, and the Nintendo DS screen rows in **Console Settings**.
 
-## Descriptions
+## Options rows
 
-The three lines under the list describe the highlighted row. When a
-description is cut off, `X` opens it in full.
+The rows on the options pages work as the [Settings](settings.md#buttons)
+rows do. Each shows its name, a short line under it where that helps, and
+its value on the right: a switch, a row of choices, or the value with `›`.
+The pages scroll smoothly as you move.
+
+| Button | What it does |
+| --- | --- |
+| `LEFT` / `RIGHT` **Change** | Step the value to the previous or next choice |
+| `A` **Toggle** | On a switch: turn it on or off |
+| `A` **Choose** | On a value with `›`: open the list of its values. `UP` / `DOWN` move, `A` picks, `B` closes |
+| `A` **Adjust** | On a row that changes the picture: open [adjust mode](#adjust-mode) |
+| `X` **Info** | Show the row's full description |
 
 ??? info "More detail"
-
-    - `UP` / `DOWN` scroll a long description.
-    - On a row that doesn't change the picture, `A` also opens its
-      description.
+    - The **?** icon beside a name, and `X` **Info**, show only when the
+      row's line is cut off or there is more to read. Tap the icon to open
+      the description.
+    - `UP` / `DOWN` scroll a long description. `A`, `B` or `X` close it.
+    - On a row of choices, `A` steps to the next one.
+    - On the first page, `A` on **Disc** shows what the row does.
 
 ## Core Options
 
@@ -303,9 +322,9 @@ runs are listed.
 
 ## Cheats
 
-Lists the cheats found for the game. `LEFT` or `RIGHT` turns the highlighted
-cheat **On** or **Off**, and it applies straight away. `A` shows a cheat's full
-description.
+The game's cheats are on the game panel's **Cheats** tab, beside the first
+page. Each cheat has a switch: tap the row, or press `A` on it with a
+controller, to turn it **On** or **Off**. It applies straight away.
 
 ![The in-game Cheats page on Alleyway with one cheat On](../assets/screenshots/mobile/in-game-cheats.webp){ .nx-wide }
 
@@ -314,10 +333,14 @@ To keep the cheats you turned on, use **Save Changes → Save for game**. See
 
 ??? info "More detail"
 
-    - With no cheats for the game, the page says **No cheats for this game.**
-      and names the file it looked for.
-    - The row is hidden for consoles whose cores don't take cheats, such as
-      Nintendo 3DS and Atari 2600. See
+    - With no cheats for the game, the tab says **No cheats for this game.**
+      and how to add some: download them with **Tools → Cheat Database**, or
+      add a RetroArch `.cht` file, named as the file it looked for, in
+      `Cheats/<TAG>/`.
+    - When a game's cheats come from several files, each row names its
+      source under the cheat, such as **GameShark**.
+    - The tab is hidden for consoles whose cores don't take cheats, such as
+      Nintendo 3DS and Atari 2600, and during a netplay match. See
       [Cheats → Where the files go](cheats.md#where-the-files-go) for the
       list.
 

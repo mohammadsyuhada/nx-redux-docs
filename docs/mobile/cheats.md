@@ -2,7 +2,8 @@
 
 NX Redux uses [libretro](https://www.libretro.com/)'s cheat
 collection. Download it once from **Tools → Cheat Database**, then turn
-cheats on and off from a game's [in-game menu](in-game-menu.md#cheats).
+cheats on and off on the **Cheats** tab of a game's
+[in-game menu](in-game-menu.md#cheats).
 
 Unlike the handheld, there is no separate tool to install first: Cheat
 Database is part of the app.
@@ -94,20 +95,25 @@ Nintendo 3DS and Atari 2600.
 
 ## Using cheats in a game
 
-1. Open the [in-game menu](in-game-menu.md) and choose **Options**.
-2. Choose **Cheats**.
-3. Turn a cheat **On** or **Off** with `LEFT` or `RIGHT`. It applies straight
-   away. `A` shows its full description.
-4. To keep your cheats for next time, use **Save Changes → Save for game**.
+1. Open the [in-game menu](in-game-menu.md). The game panel sits beside the
+   first page.
+2. Open its **Cheats** tab: tap it, or press `RIGHT` to move into the panel
+   and `L1` / `R1` to reach the tab.
+3. Tap a cheat to turn it **On** or **Off**, or move `DOWN` onto it and
+   press `A`. It applies straight away.
+4. To keep your cheats for next time, use **Options → Save Changes → Save
+   for game**.
 
 ![The in-game Cheats page on Alleyway, with Infinite time in bonus room turned On](../assets/screenshots/mobile/in-game-cheats.webp){ .nx-wide }
 
-If no cheat file matches the game, the page says **No cheats for this game.**
+If no cheat file matches the game, the tab says **No cheats for this game.**
+and how to add some: download them with **Tools → Cheat Database**, or add a
+RetroArch `.cht` file to the game's `Cheats/<TAG>/` folder.
 
 !!! tip "Variants are merged"
     Some games have cheats from several sources, such as GameShark or Action
-    Replay. They all show in one list, and a highlighted cheat's description
-    starts with its source, such as `(GameShark)`.
+    Replay. They all show in one list, and each cheat names its source under
+    its name, such as **GameShark**.
 
 ![A merged cheat highlighted: the line under the list reads (GameShark) Joker Command](../assets/screenshots/mobile/in-game-cheats-merged.webp)
 
@@ -125,8 +131,8 @@ If no cheat file matches the game, the page says **No cheats for this game.**
     - Names that differ only in spaces or punctuation still match:
       `Soulcalibur` finds `Soul Calibur.cht`, and `Marvel vs Capcom 2` finds
       `Marvel Vs. Capcom 2.cht`.
-    - With no match, the page also names the file it looked for, such as
-      `Looked for Cheats/GBA/...`.
+    - With no match, the tab also names the file it looked for, such as
+      `Cheats/GBA/` and the file name.
     - For merged cheats, the app loads every cheat file for the game's name
       and region into one list.
 
