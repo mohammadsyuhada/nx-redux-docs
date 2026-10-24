@@ -40,7 +40,7 @@ First-run setup asks you to sign in too, and can start
 [Download all game data](#downloading-all-game-data) for you. See
 [Getting Started](getting-started.md).
 
-![RetroAchievements → Settings, signed out: Sign in with Not signed in under it, and Enable achievements and Download all game data dimmed with Needs a sign-in](../assets/screenshots/mobile/ra-settings.webp){ .nx-wide }
+![RetroAchievements → Settings beside the RetroAchievements page: the Account group with Sign out and Signed in as kotaksempit under it, Enable achievements on, Download all game data with 137 games cached, then the Notifications group](../assets/screenshots/mobile/ra-settings.webp){ .nx-wide }
 
 The page's rows sit in groups: **Account**, **Notifications**,
 **Achievements** and **Reset**. They work like

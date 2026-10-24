@@ -164,7 +164,7 @@ Reset artwork, on one page, in groups: **Art to fetch**, **Accounts**, then
 On/Off rows are switches, and the ? icon or `X` **Info** shows a row's full
 description.
 
-![Artwork → Settings beside the Artwork page: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork](../assets/screenshots/mobile/artwork-settings.webp){ .nx-wide }
+![Artwork → Settings beside the Artwork page: the Art to fetch group with Replace existing art, 2D box art, Wheel and Generate mix as switches, then the Accounts group with ScreenScraper login and the SteamGridDB API key](../assets/screenshots/mobile/artwork-settings.webp){ .nx-wide }
 
 | Row | Default | What it does |
 | --- | --- | --- |
