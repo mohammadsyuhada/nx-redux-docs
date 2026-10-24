@@ -9,6 +9,94 @@ for every device from the
 [releases page](https://github.com/nx-redux/nx-handheld/releases), or
 update on the device from [Settings → About](../../handheld/settings/about.md).
 
+## v2.4.0
+
+*24 October 2026*
+
+Games start and quit faster, and resuming goes straight from the menu to your
+game without a black screen. RetroAchievements can download achievement data
+one console at a time, and about a thousand more cheats work, including MSX.
+Home, the Grid and Settings get a round of layout fixes, and Save & Quit from
+the in-game menu no longer crashes.
+
+### New features
+
+- **Faster launch and quit.** On the Brick a Game Boy game resumes in about
+  0.9 s instead of 1.4 s, and **Save & Quit** gets you back to the menu in
+  0.8 s instead of 2 s. Resuming shows the save state's picture until the
+  game's first frame, and quitting keeps the last frame on screen until the
+  menu appears, so neither passes through black.
+- **RetroAchievements Library.** The RetroAchievements tool's new
+  [Library](../../handheld/apps/retroachievements.md#library) lists each
+  console with how many of its games have their achievement data downloaded.
+  `A` downloads one console, `Y` all of them. Zipped (`.zip`/`.7z`) games
+  are now identified (they came back as "not in RetroAchievements" before),
+  and libraries over 4,096 games are no longer cut short.
+- **RAM cheats.** About a thousand cheat files in the database hold
+  [RAM cheats](../../handheld/apps/cheats.md#two-kinds-of-cheats), which
+  showed in **Options → Cheats** but did nothing. They now apply: arcade,
+  Dreamcast, ColecoVision, Atari, Lynx and MSX, plus some SNES and PC Engine
+  games. MSX cheats were never downloaded; download the cheat database again
+  to get them.
+
+### Changes
+
+- **Grid (Brick and Brick Pro):** game lists, Consoles and Collections show
+  two tiles across, all at one size, and the selected column stays in the
+  middle as you scroll. Tools tiles are a little wider on every device, and
+  game list tiles are 50% wider on the Smart Pro S.
+- **Home, pinned games:** two rows of pinned games fill the screen when you
+  scroll down to them, centred between the top and bottom bars. On the Smart
+  Pro S the first two pinned games stand beside the Continue card, the rest
+  follow below in rows of three, and the pinned tools always stand in columns
+  of five.
+- **Settings and options pages** (Settings, in-game Options, Launch Options,
+  the Music Player's settings and Artwork Manager) start at the top of the
+  screen instead of being centred.
+- **Button hints hidden:** with **Extra info** hidden too, the Game Switcher
+  and List game lists no longer keep an empty black bar at the bottom. With
+  the page title hidden, Home no longer fades its top edge while scrolled.
+- **Game Switcher:** the console name and position under the game's name are
+  larger.
+- **Simple Mode:** a game's `MENU` no longer offers Delete, Rename, Pin,
+  Add to Collection, Emulator Options, Launch Options or Fetch Artwork. See
+  [Simple Mode](../../handheld/guide/simple-mode.md).
+- **Artwork Manager:** finished downloads clear themselves, and the
+  **Clear Done** button is gone.
+
+### Fixes
+
+- **Save & Quit:** quitting from the in-game menu crashed on the way out
+  every time. The save and its picture were already written, but the
+  in-game clock, RetroAchievements and the emulator itself (on PSP, its
+  shader cache) weren't shut down properly.
+- **Brick Pro:** it could reboot by itself a few seconds after waking from
+  sleep, when Bluetooth came back on.
+- **Updates:** **Check for updates** failed after the project moved to the
+  [nx-redux](https://github.com/nx-redux/nx-handheld) organisation. It now
+  checks the new address and follows a moved project's redirect.
+- **PSP cheats:** cheats from the cheat database load and apply, and a game
+  with a cheat already turned on no longer crashes at launch.
+- **Cheats:**
+    - Long cheat codes load. They had shown with no code, and some crashed
+      the SNES, Mega Drive, N64, PC Engine and Supafaust emulators.
+    - **Options → Cheats** no longer crashes on a cheat without a name. Names
+      show `&` and accented letters instead of codes such as `&amp;`.
+    - A game without a region in its name gets the full cheat set, and names
+      spelled differently in the database (*Soulcalibur*, *Marvel vs Capcom
+      2*) are found.
+- **Saves and settings** are written safely, so a crash or power loss while
+  saving no longer leaves a broken file.
+- **Screenshots and save-state pictures** no longer include a message that
+  was on screen, such as "State Saved".
+- **Game names with a dot** (*Super Mario Bros. 3*, *Ys Vol. 2*) show in
+  full.
+- **Large zipped games:** a game too big to unzip into memory shows "Game
+  too big to unzip" instead of filling it.
+- **Streams:** radio, podcast and lyrics connections now check the server's
+  certificate. A device whose clock is badly wrong can't open them until the
+  clock is set.
+
 ## v2.3.0
 
 *21 October 2026*
