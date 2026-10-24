@@ -130,12 +130,11 @@ Everything on Home in one list, in the style of the other tabs' List layout.
 ??? info "More detail: Grid on each device"
     - **Brick and Brick Pro:** the Continue card and the tool tiles (in
       columns of four on the Brick, five on the Brick Pro) fill the screen,
-      and the pinned games sit below, two per row.
-    - **Smart Pro S:** the tools stand in columns of three and a row of three
-      pinned games shares the screen; Home scrolls when there are more. With
-      no pinned games the top section fills the screen and the tool tiles
-      grow, in columns of four, and one or two pinned games stand in a column
-      beside the Continue card instead of a row.
+      and the pinned games sit below, two per row, two rows to a screen.
+    - **Smart Pro S:** the Continue card, the first two pinned games (in a
+      column beside it) and the tool tiles (in columns of five) fill the
+      screen. The other pinned games sit below, three per row, two rows to a
+      screen.
     - Home looks the same size on every device.
 
 ### Carousel
