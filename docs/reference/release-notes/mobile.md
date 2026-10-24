@@ -8,6 +8,139 @@ What changed in each release of NX Redux for Android phones, tablets and
 Android handhelds. Download the APK from the
 [releases page](https://github.com/nx-redux/nx-mobile/releases).
 
+## v0.4.0
+
+*25 October 2026*
+
+Play on two screens: DS and 3DS games put the bottom screen on a second
+display, other games get a game panel there, and the main menu spreads across
+both. Fast forward, rewind and reset arrive with shortcuts you set yourself,
+saves move into your home folder so an uninstall keeps them, and the GitHub
+build now updates itself.
+
+### New features
+
+- **Dual screen.** With a second display, a dual-screen handheld's built-in
+  screen or a wired monitor, DS and 3DS games get one screen each: the top
+  screen on the picture screen and the bottom screen on the touch screen.
+  The **Panel** pill puts both on the picture screen
+  and the game panel on the touch screen; **Game** brings them back. Setup
+  asks which screen is the bottom one on handhelds with a built-in second
+  screen, and **Tools → Settings → Second screen** holds **Enable** and
+  **Bottom screen**. See [Dual Screens & External
+  Displays](../../mobile/dual-screen.md) and
+  [Nintendo DS and 3DS](../../mobile/dual-screen.md#nintendo-ds-and-3ds).
+- **The game panel.** Other games show a panel on the touch screen: box art,
+  title, play time, achievements, the clock and battery, with the tabs
+  **Shortcuts**, **Achievements**, **Cheats** and **Players**. Cheats now live
+  in the panel's **Cheats** tab, and setting a player slot to **Empty**
+  benches a pad for this game only. See
+  [The game panel](../../mobile/dual-screen.md#the-game-panel).
+- **The main menu on two screens.** On **Consoles** and **Collections**, the
+  picture screen previews the highlighted row's games; `A` or a tap opens
+  that list there, while the touch screen shows the highlighted game's
+  details and achievements. Your buttons, hints and menus follow the screen
+  you're on. See [The main menu](../../mobile/dual-screen.md#the-main-menu).
+- **Apps and tools on the picture screen.** Apps you open from **Tools**,
+  Home or the Android console open on the picture screen while the menu
+  stays put, and the built-in tools (Settings, RetroAchievements, Artwork and
+  the rest) open there too. See
+  [Apps on the picture screen](../../mobile/dual-screen.md#apps-on-the-picture-screen).
+- **Fast forward.** Toggle it, or hold it while a button is down. A
+  per-console **Max FF Speed**, 2x to 8x (4x by default), caps it, and
+  **FF Audio** plays the sound along.
+- **Rewind.** Toggle or hold, turned on per console in **Console Settings**.
+  It's off by default, and isn't offered on the 3DS, Dreamcast, PSP, Doom,
+  GameCube or Wii.
+- **Reset** restarts the game, and always asks first.
+- **Shortcuts.** **Tools → Settings → Controls → Shortcuts** binds fast
+  forward, rewind and reset to your controller: press the button you want.
+  `MENU` plus a button makes a combo; a tap on `MENU` still opens the menu,
+  a held one doesn't. `SELECT` and `START` can't be used. The in-game
+  **Options → Shortcuts** changes them for one console or one game.
+- **Touch buttons.** Two optional on-screen buttons, each **FF**, **RW**,
+  **Hold FF**, **Hold RW** or **Reset**, show once you assign them. Move them
+  in [Pad layout](../../mobile/controls-settings.md#pad-layout).
+- **Fast forward, Rewind and Reset in the game panel.** The panel's
+  **Shortcuts** tab has working tiles for them, and **Screenshot** is gone.
+  A ►► or ◄◄ mark at the top right of the game shows while either runs.
+- **In-app update** for the build from GitHub. On the main menu, at most once
+  a day, **Update available** shows the new version and what's in it:
+  **Update** downloads and installs it, **Not now** keeps that version quiet.
+  The install waits until no game, sync or download is running.
+  **Tools → Settings → System → About → Check for updates** checks at any
+  time. See [Check for updates](../../mobile/about.md#check-for-updates).
+- **Saves in your home folder.** Battery saves, save states and per-game
+  settings now live in the home folder, laid out as on the handheld's card
+  (`Saves/<TAG>/` and `.userdata/`), so uninstalling the app no longer loses
+  them. Without All files access, the home is
+  `Android/media/com.nxredux.mobile/`, which a file manager can reach. Your
+  saves from v0.3.0 and earlier move the first time you open this version.
+  See [Saves](../../mobile/library.md#saves),
+  [Without All files access](../../mobile/getting-started.md#without-all-files-access)
+  and [Upgrading from an earlier version](../../mobile/getting-started.md#upgrading-from-an-earlier-version).
+- **The Apps drawer.** **Tools → Apps** is a grid of every installed app:
+  open one, add it to Tools or pin it to Home. It replaces
+  **Settings → Launcher → Android apps**. See
+  [Android apps](../../mobile/launcher.md#android-apps).
+- **Cheats for more systems.** Dreamcast, Arcade (FBNeo), ColecoVision,
+  Atari 7800 and Lynx games now show and use cheats, and RAM-patch cheats
+  work. With All files access, the cheat database goes in your home folder's
+  `Cheats/<TAG>/`, one folder per console, so a reinstall finds it. See
+  [Where the files go](../../mobile/cheats.md#where-the-files-go).
+
+### Improvements
+
+- **Settings, reorganised.** **Library** holds your games, folders, All files
+  access and **Saves**; the new **System** section, last, holds Pause when
+  unfocused, Use as home screen, Debug log, About and the licenses.
+  **Emulators** is now **Emulation**, and its **Settings** row is
+  **Default settings**. See [Settings](../../mobile/settings.md).
+- **Touch-friendly settings rows** in Settings, Emulator and Game Settings,
+  RetroAchievements and Artwork settings, and the in-game options: a switch,
+  a row of choices, or the value with `›` that opens a picker. The full
+  description is behind the ⓘ icon or `X`. See
+  [Touch](../../mobile/settings.md#touch).
+- **The in-game menu** puts the game's header across the top of every page,
+  with the panel beside the list. See
+  [In-game Menu](../../mobile/in-game-menu.md).
+- **Fades in place of scroll arrows** on lists, the settings and the in-game
+  menu, and Consoles, Collections and Tools fill the page with taller rows.
+- **List text** is the same size in portrait and landscape.
+- **Grid Home** shows five tool squares a column and up to four games a
+  shelf, with the first two pinned games beside the squares in landscape.
+- **App icons in Tools** are white like the built-in tools, and built-in and
+  app tools sort A–Z together, with Settings last.
+- **Better cheat matching.** PSP cheat files match by region when the disc's
+  serial isn't read, a ROM named without a region gets its region's files
+  over a source-only pack such as `(Rumbles)`, same-ROM files and alternate
+  titles that share codes merge, and names match across spacing and
+  punctuation (`Soulcalibur` finds `Soul Calibur.cht`). Long codes load
+  whole.
+- **Pad layout.** On the portrait pad, DS and 3DS **STYLUS** and **SWAP** and
+  the Wii's **MOTION** move to the top row. The GameCube pad keeps its logo,
+  with `START` in the middle.
+- **Shader Parameters** show only once a shader is chosen.
+- **GB, GBC and GBA link sessions** carry on as a normal game when the link
+  ends, with the full menu, save states and cheats.
+- **Collections** opens in the Minimal layout by default.
+- **Popups** follow **Appearance → Text size**, and context menus split their
+  rows evenly between their two columns.
+- **A stuck game** is closed after 20 seconds, and the menu says it stopped
+  responding, instead of the app freezing.
+
+### Fixes
+
+- **Wii games** no longer sometimes freeze the app on quit.
+- **Quitting a game resumed from the Game Switcher** returns to the
+  [Game Switcher](../../mobile/game-switcher.md), not the page under it.
+- **PSP cheats:** every cheat you turn on runs, not only the last one. Long
+  codes no longer crash the SNES, Mega Drive, N64 and PC Engine emulators.
+- **Moving a display in DeX** no longer reloads the game or ends netplay.
+- **An extra ROM folder** emptied of games but left with subfolders no longer
+  makes every rescan fail.
+- **Layouts → Reset to defaults** now updates Home straight away.
+
 ## v0.3.0
 
 *21 October 2026*
