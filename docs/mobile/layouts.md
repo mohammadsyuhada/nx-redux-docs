@@ -11,7 +11,7 @@ game stats. For what each style looks like, see
 The Layouts page lists its groups, each with what it is set to now. Press `A`
 on a group to open its page, and `B` to come back.
 
-![Settings, with the Layouts page open beside the sections](../assets/screenshots/mobile/settings-layouts.webp){ .nx-wide }
+![Settings, with Layouts open beside the sections: Home, Consoles, Collections, Tools, Game lists, Title and hints, Game Switcher and Extra info](../assets/screenshots/mobile/settings-layouts.webp){ .nx-wide }
 
 | Row | Shows |
 | --- | --- |
@@ -31,10 +31,10 @@ A group's page has its rows at the top and a picture of how they look below
 (beside the rows on a wide landscape screen, such as a phone turned
 sideways). The picture changes as you change a row.
 
-- `Right` and `A` step the highlighted row to its next value, `Left` to the
-  previous one.
-- With touch alone, a row with three or more values opens a dropdown of them
-  (see [Settings](settings.md)).
+- `Left` / `Right` step the highlighted row's value. `A` flips a switch,
+  steps a row of choices, or opens the list of values on a row with `›`.
+- By touch, tap a switch row to flip it, tap a choice, or tap a row with `›`
+  to pick from its list. See [Settings](settings.md#touch).
 - Some rows only show when they apply.
 
 ??? info "More detail"
@@ -44,7 +44,7 @@ sideways). The picture changes as you change a row.
 
 ## Home
 
-![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
+![Layouts → Home beside the Settings sections: Home tab on, Home layout List and New shelf, with a picture of List Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -62,12 +62,11 @@ achievements; [Extra info](#extra-info) hides those.
 
 ??? info "More detail"
     The strip's space goes to the top section: the Continue card and the tool
-    squares grow, and a column of squares gains one more only when a whole
-    square fits. The group's picture shows Home without the strip.
+    squares grow. A column keeps its five squares. The group's picture shows Home without the strip.
 
 ## Consoles
 
-![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, Consoles background Controller, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
+![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, Consoles background, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -105,7 +104,7 @@ while **Consoles layout** is **Grid**.
 
 ## Tools
 
-![Layouts → Tools: Tools tab Show, Tools layout Grid, with a picture of the Tools grid](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
+![Layouts → Tools: Tools tab on, Tools layout Carousel, with a picture of the Tools carousel](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -115,7 +114,7 @@ while **Consoles layout** is **Grid**.
 
 ## Game lists
 
-![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel Show, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
+![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel on, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -178,7 +177,7 @@ the last two.
 
 ## Title and hints
 
-![Layouts → Title and hints: Page title, Button hints, Recent hint, Search hint and Netplay hint Show, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
+![Layouts → Title and hints: Page title, Button hints, Recent hint and Search hint on, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -208,7 +207,7 @@ Other screens, such as Settings and the in-game menu, keep both. The
 ??? info "More detail: where the space goes"
     - With the title hidden, its space goes to the page. A List shows more
       rows. Home moves its stats strip up into the tab row's place, and a
-      Grid Home's columns of tool squares gain one more. Grid, Carousel and
+      Grid Home's tool squares grow. Grid, Carousel and
       Backdrop keep their size and centre in the full height. A game list's
       icons stay at the top right.
     - With the hints hidden, their space stays empty, Home included. In a
@@ -232,7 +231,7 @@ With **Button hints** hidden, all three are handled this way.
 
 ## Game Switcher
 
-![Layouts → Game Switcher: Game Switcher layout Full screen, with a picture of the full-screen Game Switcher](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
+![Layouts → Game Switcher: Game Switcher layout List, with a picture of the Game Switcher list](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
 
 | Row | Values | Default |
 | --- | --- | --- |

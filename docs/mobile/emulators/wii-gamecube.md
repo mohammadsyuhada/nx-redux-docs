@@ -135,7 +135,7 @@ Console Settings**, and for the console in
 value; keep it for the game or the console with
 [Save Changes](../in-game-menu.md#save-changes).
 
-![Super Mario Galaxy 2's in-game Console Settings in landscape: Wii Controller, Motion Controls and Controller Layout](../../assets/screenshots/mobile/wii-console-settings.webp){ .nx-wide }
+![New Super Mario Bros. Wii's in-game Console Settings in landscape: Wii Controller, Motion Controls and Controller Layout](../../assets/screenshots/mobile/wii-console-settings.webp){ .nx-wide }
 
 | Row | Values | Default | See |
 | --- | --- | --- | --- |

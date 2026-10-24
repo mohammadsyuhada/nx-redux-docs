@@ -106,7 +106,7 @@ To have the picture screen back, close the app.
 ## Settings
 
 **Tools → Settings → Second screen** has the system-wide settings. The
-**Second screen** section, between **Controls** and **Launcher**, shows only
+**Second screen** section, between **Controls** and **System**, shows only
 while a second screen is connected.
 
 | Row | Values | Default | What it does |
@@ -182,7 +182,7 @@ list to the left of the panel. Closing it takes the list away again.
 The same panel shows on the touch screen and, on a phone with one screen,
 on the right of the [in-game menu](in-game-menu.md#the-game-panel).
 
-![The game panel: box art, Sonic The Hedgehog, Total, Achievements 1 / 35, the clock and battery; the Shortcuts, Achievements and Players tabs, with Shortcuts open](../assets/screenshots/mobile/game-panel.webp){ .nx-wide }
+![The game panel: box art, Sonic The Hedgehog, Total, Achievements 1 / 35, the clock and battery; the Shortcuts, Achievements, Cheats and Players tabs, with Shortcuts open (Second screen, Fast forward, Rewind, Screenshot, Reset)](../assets/screenshots/mobile/game-panel.webp){ .nx-wide }
 
 Across the top, the game's header shows:
 
@@ -193,12 +193,13 @@ Across the top, the game's header shows:
   **Achievements 3 / 40**;
 - the time and the battery level, since the game hides Android's status bar.
 
-Below it are up to three tabs. A tab shows only when it applies.
+Below it are up to four tabs. A tab shows only when it applies.
 
 | Tab | Shows when | What it holds |
 | --- | --- | --- |
 | **Shortcuts** | Always | One-tap buttons. See [below](#shortcuts). |
 | **Achievements** | The game has a RetroAchievements set | The game's achievements, in your **Achievement sort order**. |
+| **Cheats** | The game's emulator takes cheats | The game's cheats, each with a switch. See [below](#cheats). |
 | **Players** | The game has more than one player | Which controller is which player. See [Local Multiplayer](multiplayer.md#the-players-page). |
 
 ??? info "More detail"
@@ -227,6 +228,20 @@ pill, and its description. The badge says where you are: in colour once
 unlocked, greyed while locked. Rows open nothing.
 
 ![The game panel's Achievements tab: Newbie Collector unlocked in colour, the rest greyed, each with its points and description](../assets/screenshots/mobile/game-panel-achievements.webp){ .nx-wide }
+
+### Cheats
+
+Each row shows a cheat's name and its switch. Tap a row to turn the cheat
+**On** or **Off**; it applies straight away. To keep them for next time,
+use [Save Changes → Save for game](in-game-menu.md#save-changes).
+
+With no cheats for the game, the tab says **No cheats for this game.** and
+how to add some. See [Cheats](cheats.md).
+
+??? info "More detail"
+    - When a game's cheats come from several files, each row names its
+      source under the cheat, such as **GameShark**.
+    - In a [netplay](netplay.md) match, the tab is hidden.
 
 ### Players
 

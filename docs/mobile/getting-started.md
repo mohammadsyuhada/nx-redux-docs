@@ -104,8 +104,7 @@ access**, which makes the library faster:
 - Select the row, turn the switch on in Android's page, then come back.
 - Choose **Continue** to go on, with or without it.
 
-Change it later in **Tools → Settings → Library → ROM folders → All files
-access**.
+Change it later in **Tools → Settings → Library → All files access**.
 
 ??? info "More detail: what All files access is for"
     The app uses it to read your library faster, to show its own folder
@@ -180,8 +179,9 @@ still add extra ROM folders.
     app, saves included. Copy it somewhere safe first, or give the app All
     files access and a home folder of your own.
 
-Turn All files access off later and the app switches to this folder. It shows
-a note, and the games and saves in your own home folder are out of reach until
+Turn All files access off later and the app switches to this folder. The
+**All files access** row in **Tools → Settings → Library** says so, and the
+games and saves in your own home folder are out of reach until
 you turn the access back on. Then the app goes back to your home folder by
 itself.
 
@@ -240,8 +240,8 @@ Right after the home folder, the app asks **Add a ROMs folder?**
   moved.
 - Choose **Skip** to go on without one.
 
-You can add more folders later in **Tools → Settings → Library → ROM folders
-→ Add ROM folder**. See [Library & ROM folders](library.md).
+You can add more folders later in **Tools → Settings → Library → Add ROM
+folder**. See [Library & ROM folders](library.md).
 
 ## Android games
 
@@ -253,7 +253,7 @@ When the app finds games installed on your phone, the last folder step asks
 - Choose **Not now** to leave them out.
 
 The question is asked once. Change the list any time in **Tools → Settings
-→ Launcher → Android games**. See
+→ Library → Android games**. See
 [Launcher Mode & Android Games](launcher.md).
 
 ??? info "More detail"

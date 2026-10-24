@@ -1,46 +1,63 @@
 # Settings
 
-Open **Tools → Settings** for the app's settings. They are split into eight
-sections, or nine while a second screen is connected.
+Open **Tools → Settings** for the app's settings. They are split into six
+sections, or seven while a second screen is connected.
 
-![Settings: the eight sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp){ .nx-wide }
+![Settings: the sections on the left, with Library previewed on the right](../assets/screenshots/mobile/settings.webp){ .nx-wide }
 
 | Section | What it holds |
 | --- | --- |
-| [**Library**](library.md) | Rescan library, your ROM folders, and the Unassigned and Hidden games |
-| [**Emulators**](emulator-settings.md) | **Default emulators**, **Settings** for each emulator's options, **Saves**, and **Pause when unfocused** |
+| [**Library**](library.md#settings-library) | Your games and consoles with **Rescan**, the home folder, your ROM folders, All files access, **Saves**, Android games, and the Unassigned and Hidden games |
+| [**Emulators**](emulator-settings.md) | **Default emulators**, and **Settings** for each emulator's options |
 | [**Appearance**](appearance.md) | Pad theme, Accent, Secondary accent and Text size |
 | [**Layouts**](layouts.md) | The style of each main menu tab and of the game lists, the page title and hints, and the Game Switcher |
 | [**Controls**](controls-settings.md) | Pad vibration, Game rumble, Menu pad and Pad layout |
 | [**Second screen**](dual-screen.md#settings) | **Enable** and **Bottom screen**. Shows only while a second screen is connected |
-| [**Launcher**](launcher.md) | Use the app as your home screen, and pick Android apps and games |
-| [**Developer**](#developer) | Debug log |
-| [**About**](about.md) | The app's version and your device's details |
+| [**System**](about.md) | Pause when unfocused, Use as home screen, Debug log, the app's version and your device's details, and the licenses |
 
 - Press `A` **Open** to open a section, and `B` **Back** to leave it.
-- On a page, `A` **Select** runs the highlighted row or steps it to its next
-  value. `Left` and `Right` step a value too.
-- With touch alone, tap a row to run it, and use Android's Back gesture to
-  leave. A tap on a value with two choices flips it; a value with three or
-  more opens a dropdown: tap one to pick it.
+- Each row shows its name, with a short line under it where that helps,
+  such as a warning or what a change does. A setting shows its value on the
+  right: a switch, a row of choices, or the value with `›`.
+- With touch alone, tap a row to use it, and use Android's Back gesture to
+  leave. See [Touch](#touch).
 - On a wide landscape screen, Settings shows the sections and the open page
   side by side. See [Foldables & Large Screens](foldables.md#two-pane-screens).
+
+## Buttons
+
+| Button | What it does |
+| --- | --- |
+| `A` **Toggle** | On a switch: turn it on or off |
+| `A` **Choose** | On a value with `›`: open the list of its values. `Up` / `Down` move, `A` picks, `B` closes |
+| `A` | On a row of choices: step to the next one |
+| `A` **Select** | On any other row: open its page or run it |
+| `Left` / `Right` **Change** | Step a value to the previous or next choice, on every kind of setting |
+| `X` **Info** | Show the row's full description, when it has more to say |
+
+## Touch
+
+- **A switch:** tap anywhere on the row to flip it.
+- **A row of choices:** tap the one you want.
+- **A value with `›`:** tap the row to open the list of its values, then tap
+  one to pick it. Tap outside the list to close it.
+- **The ? icon** beside a name opens the full description. Tap outside it to
+  close it.
 
 ??? info "More detail"
     - "Touch alone" means no controller and no on-screen pad below the
       screen. There is no hint bar then.
-    - The dropdown opens at the value and lists every choice, the current one
-      highlighted. Tap outside it to close it.
-    - The rows on [About](about.md) only show information.
+    - The ? icon, and `X` **Info**, show only where the row's line is cut
+      off or there is more to read. Rows whose name says it all have no line.
+    - The list of values opens with the current value highlighted and marked
+      with a dot. A long list scrolls.
+    - The full description scrolls with `Up` / `Down`. `A`, `B` or `X` close
+      it.
+    - The rows in the **About** group of [System](about.md#about) only show
+      information.
     - In portrait, the on-screen pad shows on the **Appearance** and
       **Controls** pages only (while
       [Menu pad](controls-settings.md#menu-pad) is On), so you can see the
       pad you are changing. The other Settings pages use the full height.
     - The side-by-side view shows on screens such as an unfolded Fold held
       sideways or most phones turned sideways.
-
-## Developer
-
-**Debug log** (Off by default) writes the app's and the emulators' detailed
-logs to Android's system log, for a bug report. With it off, only errors are
-logged. It takes effect at once.

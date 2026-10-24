@@ -4,12 +4,13 @@
 pad, the text size and the colours. The menu styles have their own category,
 [Layouts](layouts.md).
 
-- `Right` and `A` step the highlighted row to its next value, and `Left` to
-  the previous one.
-- With touch alone, a tap on **Accent** or **Secondary accent** opens a
-  dropdown of the colours (see [Settings](settings.md)).
+- `Left` / `Right` step the highlighted row's value.
+- `A`, or a tap, on **Accent** or **Secondary accent** opens the list of
+  colours. **Pad theme** and **Text size** show their choices on the row:
+  tap one, or press `A` to step to the next. See
+  [Settings](settings.md#touch).
 
-![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
+![Settings, with Appearance open beside the sections: Pad theme Charcoal, Accent White, Secondary accent Teal and Text size Large](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
 
 | Setting | What it does | Values | Default |
 | --- | --- | --- | --- |
@@ -92,7 +93,7 @@ else.
       with the page titles, the tab names and the hint bar. It also sizes the
       game names and stats in the game lists' Carousel, Backdrop and Grid,
       Home's cards and stats strip, the RetroAchievements lists and the
-      achievements panel, the dropdowns and the dialogs. The on-screen pad's
+      achievements panel, the value lists and the dialogs. The on-screen pad's
       labels keep their size.
     - Android's font size is held between 85% and 130%, so a very small or
       very large system font does not crowd the screens. Text on fixed

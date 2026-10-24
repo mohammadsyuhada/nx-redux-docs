@@ -231,7 +231,7 @@ nav:
           - Appearance: mobile/appearance.md
           - Layouts: mobile/layouts.md
           - Controls: mobile/controls-settings.md
-          - About: mobile/about.md
+          - System: mobile/about.md
   - Reference:
       - Download: reference/download.md
       - Release Notes:

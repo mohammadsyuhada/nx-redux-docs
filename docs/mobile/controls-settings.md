@@ -1,9 +1,9 @@
 # Controls settings
 
 **Tools → Settings → Controls** sets how strong the vibration is, whether the
-main menu has the on-screen pad, and where the pad's buttons sit. `Right`
-and `A` step the highlighted row to its next value, and `Left` to the
-previous one.
+main menu has the on-screen pad, and where the pad's buttons sit. The rows
+work as on every [Settings](settings.md#buttons) page: `Left` / `Right` step
+a value, and `A` or a tap flips a switch or picks a choice.
 
 | Setting | What it does | Values | Default |
 | --- | --- | --- | --- |

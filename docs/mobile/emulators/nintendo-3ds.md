@@ -121,7 +121,7 @@ Settings**, and for the console in
 value; keep it for the game or the console with
 [Save Changes](../in-game-menu.md#save-changes).
 
-![Console Settings of a 3DS game in landscape: the three Layout rows, New 3DS Controls, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/3ds-console-settings.webp){ .nx-wide }
+![Console Settings of a 3DS game in landscape: the three Layout rows, New 3DS Controls and Portrait Pad, with Controller Layout below](../../assets/screenshots/mobile/3ds-console-settings.webp){ .nx-wide }
 
 | Row | Values | Default | See |
 | --- | --- | --- | --- |
