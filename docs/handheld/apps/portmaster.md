@@ -280,6 +280,11 @@ name and the error you see.
 
 - **Sleep works in PortMaster games.** Press the power button like anywhere
   else.
+- **Stick-only ports on the Brick.** The Brick has no analog sticks. Bind
+  [Toggle D-pad Joystick](../settings/emulator-shortcuts.md#toggle-d-pad-joystick)
+  in Settings → Emulator Shortcuts, then press it in a port to make the
+  D-pad act as the left stick. The device buzzes once for joystick, twice
+  for D-pad.
 - **Bluetooth and USB-C audio work in ports**, along with the game volume
   setting, including ports that keep their settings in their own folder.
 - PortMaster keeps itself up to date (it checks for updates when it starts).

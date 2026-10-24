@@ -5,7 +5,7 @@ profile: a quiet, dim setup for late-night play, or just LEDs off. Flipping
 the switch on applies everything you pick here at once; flipping it back
 reverts it. Any row left at `Unchanged` is not touched.
 
-For turbo fire or a joystick-style D-pad, use
+For turbo fire or a joystick-style D-pad (Brick, in games and ports), use
 [Emulator Shortcuts](emulator-shortcuts.md).
 
 ![FN switch settings](../../assets/screenshots/set-fn.png)

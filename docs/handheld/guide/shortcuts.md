@@ -57,7 +57,7 @@ the switch.
 | `MENU` | Pause the game and open the [in-game menu](playing-games.md#the-in-game-menu) |
 | `MENU` + `SELECT` | Save, grab a fresh screenshot, and quit straight back to the [Game Switcher](game-switcher.md). The fastest way to hop between games. |
 
-Save states, fast-forward, rewind, turbo and the D-pad joystick get their own
+Save states, fast-forward, rewind, turbo and the D-pad joystick (Brick) get their own
 configurable shortcuts (optionally `MENU`-modified). Set them once in
 [Settings → Emulator Shortcuts](../settings/emulator-shortcuts.md); they apply
 to every console, unless a console or game has its own in
