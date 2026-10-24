@@ -33,16 +33,19 @@ account.
 1. Open **Tools → RetroAchievements → Settings**.
 2. Choose **Sign in**, enter your **Username** and **Password**, and choose
    **Sign in**.
-3. **Status** shows **Signed in as** your username, and **Enable
-   achievements** turns **On**.
+3. The line under **Sign out** shows **Signed in as** your username, and
+   **Enable achievements** turns **On**.
 
 First-run setup asks you to sign in too, and can start
 [Download all game data](#downloading-all-game-data) for you. See
 [Getting Started](getting-started.md).
 
-![RetroAchievements → Settings, signed out: Sign in at the top, Status Not signed in, and Enable achievements and Download all game data dimmed](../assets/screenshots/mobile/ra-settings.webp){ .nx-wide }
+![RetroAchievements → Settings, signed out: Sign in with Not signed in under it, and Enable achievements and Download all game data dimmed with Needs a sign-in](../assets/screenshots/mobile/ra-settings.webp){ .nx-wide }
 
-The settings page also has:
+The page's rows sit in groups: **Account**, **Notifications**,
+**Achievements** and **Reset**. They work like
+[Settings](settings.md#buttons): switches, values with `›`, and the ? icon
+or `X` **Info** for a row's full description. The page also has:
 
 | Row | Default | What it does |
 | --- | --- | --- |
@@ -66,13 +69,17 @@ The settings page also has:
     - The app keeps only the sign-in token RetroAchievements returns, not your
       password.
     - Signed out, **Enable achievements** and **Download all game data** are
-      dimmed.
-    - **Download all game data** shows how many games are cached, such as
-      `48 games cached`.
-    - `A` changes a value. On **Notification duration**, **Progress duration**
-      and **Achievement sort order**, `LEFT` / `RIGHT` work too. On touch,
-      with no controller and no on-screen pad, a tap on one of these three
-      opens a list of its values to pick from.
+      dimmed and read **Needs a sign-in**.
+    - If a sign-in fails, the line under **Sign in** shows the error.
+    - **Download all game data** shows how many games are cached under its
+      name, such as `48 games cached`.
+    - **Enable achievements** and **Show notifications** are switches: `A` or
+      a tap flips them.
+    - On **Notification duration**, **Progress duration** and **Achievement
+      sort order**, `A` or a tap opens a list of the values to pick from, and
+      `LEFT` / `RIGHT` step the value. The durations stop at their ends.
+    - The page never opens with **Sign out** highlighted, so a stray `A`
+      can't sign you out.
     - **Sign out** asks to confirm too. Signing out turns achievements off,
       and signing in again needs your password. Your unsynced unlocks, game
       data and badges stay.

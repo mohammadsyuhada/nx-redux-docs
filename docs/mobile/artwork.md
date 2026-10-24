@@ -15,7 +15,7 @@ missing**, and these rows:
 | **Fetch missing art** | Fetches art for every game that has none. Reads **Fetch all art** when **Replace existing art** is on. |
 | **Fetch by console** | Fetches art for one console. |
 | **Progress** | Shows the current or last fetch. Only shown once a fetch has run, until you choose **Done** there. |
-| **Settings** | What to fetch, your ScreenScraper login, the SteamGridDB and TheGamesDB keys, and **Reset artwork…**. See [Settings](#settings). |
+| **Settings** | What to fetch, your ScreenScraper login, the SteamGridDB and TheGamesDB keys, and **Reset artwork**. See [Settings](#settings). |
 
 ??? info "More detail"
 
@@ -159,9 +159,12 @@ art**. The app fetches that game straight away. `B` cancels. See
 ## Settings
 
 **Artwork → Settings** holds what to fetch, your accounts and keys, and
-Reset artwork, on one page.
+Reset artwork, on one page, in groups: **Art to fetch**, **Accounts**, then
+**Reset artwork**. Its rows work like [Settings](settings.md#buttons): the
+On/Off rows are switches, and the ? icon or `X` **Info** shows a row's full
+description.
 
-![Artwork → Settings beside the Artwork page: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork…](../assets/screenshots/mobile/artwork-settings.webp){ .nx-wide }
+![Artwork → Settings beside the Artwork page: Replace existing art, 2D box art, Wheel and Generate mix, the ScreenScraper login row, the SteamGridDB and TheGamesDB keys, and Reset artwork](../assets/screenshots/mobile/artwork-settings.webp){ .nx-wide }
 
 | Row | Default | What it does |
 | --- | --- | --- |
@@ -172,17 +175,19 @@ Reset artwork, on one page.
 | **ScreenScraper login** / **ScreenScraper logout** | — | Log in to ScreenScraper, or log out. |
 | **SteamGridDB API key** | Not set | `A` asks for the key. |
 | **TheGamesDB API key** | Not set | `A` asks for the key. |
-| **Reset artwork…** | — | Delete art the app fetched. See [Reset artwork](#reset-artwork). |
+| **Reset artwork** | — | Delete art the app fetched. See [Reset artwork](#reset-artwork). |
 
 ??? info "More detail"
 
-    - `LEFT` / `RIGHT` or `A` switch the On/Off rows.
-    - Once logged in, the ScreenScraper row shows today's requests, such as
-      `312 / 20,000 today`.
+    - `A`, `LEFT` / `RIGHT` or a tap on the row switch the On/Off rows.
+    - While **Generate mix** is on, **Wheel** is dimmed and reads **Needed by
+      Generate mix**.
+    - Once logged in, the ScreenScraper row shows today's requests under its
+      name, such as `312 / 20,000 today`.
     - The key rows read **Set** or **Not set**. **Remove SteamGridDB key** and
       **Remove TheGamesDB key** show once a key is set.
     - Once your TheGamesDB key is set, a **TheGamesDB** row shows the requests
-      left, such as `896 left this month`.
+      left under its name, such as `896 left this month`.
 
 ### Accounts and keys
 
@@ -206,7 +211,7 @@ Choose **ScreenScraper login** to sign in, or a key row to enter a key.
 
 ### Reset artwork
 
-**Reset artwork…** opens a list: **All**, then each console. Pick one, and
+**Reset artwork** opens a list: **All**, then each console. Pick one, and
 the app asks **Delete fetched art for *console*? Art you added yourself is
 kept.** **Delete** removes it and says how many files went.
 
