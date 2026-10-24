@@ -7,7 +7,7 @@ first.
 The **Emulators** section holds two rows: **Default emulators** (see
 [below](#default-emulators)) and **Settings**.
 
-![Settings, with Emulators open beside the sections: Default emulators, Settings, Saves and Pause when unfocused On](../assets/screenshots/mobile/settings-emulators.webp){ .nx-wide }
+![Settings, with Emulators open beside the sections: Default emulators and Settings](../assets/screenshots/mobile/settings-emulators.webp){ .nx-wide }
 
 For one game, use **Game Settings** in the game's context menu instead. See
 [Game Settings](#game-settings).
@@ -18,7 +18,7 @@ The page lists each emulator that runs one of your consoles, with the tags it
 covers, such as **Gambatte GB · GBC**. Press `A` on an emulator. When it
 covers more than one tag, the app asks for the console first.
 
-![Emulator Settings beside the Settings sections, listing each emulator with its tag, such as Gambatte GB](../assets/screenshots/mobile/emulator-settings.webp){ .nx-wide }
+![mGBA for Game Boy Advance (MGBA) beside the Settings sections: Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings.webp){ .nx-wide }
 
 ??? info "More detail"
 
@@ -34,7 +34,7 @@ The page is titled with the emulator, the console and the tag, such as
 | **Console settings** | The app's own settings for the console, such as **Controller Layout**. The same rows as the in-game [Console Settings](in-game-menu.md#console-settings) page, plus the ones read only when a game starts, such as **Graphics API**. |
 | **Core settings** | The emulator's own options. Rows with `›` open a group of options, such as **Video** or **Audio**. |
 
-![PicoDrive for Sega Genesis (MD): Console settings, then Core settings with its groups](../assets/screenshots/mobile/emulator-settings-core.webp){ .nx-wide }
+![mGBA for Game Boy Advance (MGBA), System group: Game Boy Model, Use BIOS File if Found and Skip BIOS Intro](../assets/screenshots/mobile/emulator-settings-core.webp){ .nx-wide }
 
 - The rows work as on the [Settings](settings.md#buttons) pages: a switch,
   a row of choices, or a value with `›` that opens the list of its values.
@@ -75,7 +75,7 @@ What you set here is the console's setting, the same as the in-game menu's
 Open a game's context menu with `MENU` in a game list, or a long press on
 the game, and choose **Game Settings**. The same page opens over the list, for that one game.
 
-![Game Settings for Comix Zone, over the search results](../assets/screenshots/mobile/game-settings.webp)
+![Game Settings for Astro Boy - Omega Factor, over the Game Boy Advance list](../assets/screenshots/mobile/game-settings.webp)
 
 - The first change gives the game its own settings, starting from the
   console's.
@@ -109,7 +109,7 @@ Some consoles can run on more than one emulator. **Tools → Settings →
 Emulators → Default emulators** picks the emulator for a game with
 no emulator of its own.
 
-![Default emulators beside the Settings sections: one row per console, with the consoles that have only one emulator, such as Game Boy, dimmed](../assets/screenshots/mobile/default-emulators.webp){ .nx-wide }
+![Default emulators beside the Settings sections: one row per console with its emulator and tag, such as Game Boy Advance with gpSP (GBA)](../assets/screenshots/mobile/default-emulators.webp){ .nx-wide }
 
 The consoles with more than one emulator come first, then the consoles you
 have games for that have only one, each group A to Z. Each row shows the

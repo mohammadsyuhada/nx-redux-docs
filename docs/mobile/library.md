@@ -39,7 +39,7 @@ The app never deletes a game. It moves games only while **Move them into
 **Tools → Settings → Library** shows what the library holds and every folder
 it reads, in one list.
 
-![Settings, with Library open beside the sections: the home folder, the counts, Rescan library, ROM folders and Unassigned games](../assets/screenshots/mobile/settings-library.webp){ .nx-wide }
+![Settings, with Library open beside the sections: the counts with Rescan, Home folder, Add ROM folder, All files access, Saves and Android games](../assets/screenshots/mobile/settings-library.webp){ .nx-wide }
 
 | Row | What it does |
 | --- | --- |

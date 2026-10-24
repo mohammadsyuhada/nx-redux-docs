@@ -12,7 +12,7 @@ licenses, in five groups:
 | [**About**](#about) | The version and device rows, **Copy device info**, and **Check for updates** in the build from GitHub |
 | [**Licenses**](#licenses) | What the app is made of and its licenses, and **Full list of licenses** |
 
-![Settings, with About open beside the sections](../assets/screenshots/mobile/settings-about.webp){ .nx-wide }
+![Settings, with System open beside the sections: General, Launcher, Developer and About](../assets/screenshots/mobile/settings-about.webp){ .nx-wide }
 
 ## Pause when unfocused
 

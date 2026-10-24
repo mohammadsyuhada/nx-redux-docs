@@ -9,7 +9,7 @@ Tools, and list your Android games as a console:
 | **Tools → Apps** | Every app on the phone. Open one, or add it to Tools. See [Android apps](#android-apps). |
 | **Tools → Settings → Library → Android games** | Pick the apps in the Android console. See [Android games](#android-games). |
 
-![Settings, with Launcher open beside the sections: Use as home screen, Android apps and Android games](../assets/screenshots/mobile/settings-launcher.webp){ .nx-wide }
+![Settings, with System open beside the sections: the Launcher group with Use as home screen, between General and Developer](../assets/screenshots/mobile/settings-launcher.webp){ .nx-wide }
 
 ## Use as home screen
 

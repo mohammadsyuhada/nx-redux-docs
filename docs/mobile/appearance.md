@@ -10,7 +10,7 @@ pad, the text size and the colours. The menu styles have their own category,
   tap one, or press `A` to step to the next. See
   [Settings](settings.md#touch).
 
-![Settings, with Appearance open beside the sections](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
+![Settings, with Appearance open beside the sections: Pad theme Charcoal, Accent White, Secondary accent Teal and Text size Large](../assets/screenshots/mobile/settings-appearance.webp){ .nx-wide }
 
 | Setting | What it does | Values | Default |
 | --- | --- | --- | --- |

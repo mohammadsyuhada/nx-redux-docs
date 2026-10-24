@@ -11,7 +11,7 @@ game stats. For what each style looks like, see
 The Layouts page lists its groups, each with what it is set to now. Press `A`
 on a group to open its page, and `B` to come back.
 
-![Settings, with the Layouts page open beside the sections](../assets/screenshots/mobile/settings-layouts.webp){ .nx-wide }
+![Settings, with Layouts open beside the sections: Home, Consoles, Collections, Tools, Game lists, Title and hints, Game Switcher and Extra info](../assets/screenshots/mobile/settings-layouts.webp){ .nx-wide }
 
 | Row | Shows |
 | --- | --- |
@@ -44,7 +44,7 @@ sideways). The picture changes as you change a row.
 
 ## Home
 
-![Layouts → Home beside the Settings sections: Home tab Show, Home layout Grid, New shelf, Not started shelf and Home stats, with a picture of Grid Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
+![Layouts → Home beside the Settings sections: Home tab on, Home layout List and New shelf, with a picture of List Home below](../assets/screenshots/mobile/settings-layouts-home.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ achievements; [Extra info](#extra-info) hides those.
 
 ## Consoles
 
-![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, Consoles background Controller, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
+![Layouts → Consoles beside the Settings sections: Consoles tab Show, Consoles layout Carousel, Consoles orientation Horizontal, Consoles background, with a picture of the Carousel below](../assets/screenshots/mobile/settings-layouts-consoles.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ while **Consoles layout** is **Grid**.
 
 ## Tools
 
-![Layouts → Tools: Tools tab Show, Tools layout Grid, with a picture of the Tools grid](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
+![Layouts → Tools: Tools tab on, Tools layout Carousel, with a picture of the Tools carousel](../assets/screenshots/mobile/settings-layouts-tools.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -114,7 +114,7 @@ while **Consoles layout** is **Grid**.
 
 ## Game lists
 
-![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel Show, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
+![Layouts → Game lists: Game lists layout Carousel, Game lists orientation Horizontal, Layout options and Achievements panel on, with a picture of a game list carousel](../assets/screenshots/mobile/settings-layouts-game-lists.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -177,7 +177,7 @@ the last two.
 
 ## Title and hints
 
-![Layouts → Title and hints: Page title, Button hints, Recent hint, Search hint and Netplay hint Show, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
+![Layouts → Title and hints: Page title, Button hints, Recent hint and Search hint on, with a picture of Home with its title and hints](../assets/screenshots/mobile/settings-layouts-title-hints.webp){ .nx-wide }
 
 | Row | Values | Default | Shows |
 | --- | --- | --- | --- |
@@ -231,7 +231,7 @@ With **Button hints** hidden, all three are handled this way.
 
 ## Game Switcher
 
-![Layouts → Game Switcher: Game Switcher layout Full screen, with a picture of the full-screen Game Switcher](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
+![Layouts → Game Switcher: Game Switcher layout List, with a picture of the Game Switcher list](../assets/screenshots/mobile/settings-layouts-game-switcher.webp){ .nx-wide }
 
 | Row | Values | Default |
 | --- | --- | --- |

@@ -115,7 +115,7 @@ long-press for the menu.
 
 Everything on Home in one list, with the selected game's picture behind it.
 
-![Home in List: Continue first, then the pinned games as rows over the selected game's picture](../assets/screenshots/mobile/home-layout-list.webp)
+![Home in List: the play time line on top, Continue first, then more games as rows, some tagged New or Not started](../assets/screenshots/mobile/home-layout-list.webp)
 
 - **The list** starts with your most recent game, tagged **Continue** (or
   **Pick a game** on a fresh install). Then come your pinned games, games
@@ -293,7 +293,7 @@ Collections and Tools take the same buttons, and `MENU` adds their options.
 
 A plain list, with the selected console's controller beside it.
 
-![Consoles tab in List style, Dreamcast selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
+![Consoles tab in List style, Arcade selected with its controller beside the list](../assets/screenshots/mobile/consoles-list.webp)
 
 `Up` on the first row wraps to the last, and `Down` on the last row wraps to
 the first.
@@ -490,7 +490,7 @@ auto-save from the beginning, choose **Play from start** in its menu.
 The games as rows, with the selected game's picture filling the background
 or in a box (see [List art](layouts.md#list-art)).
 
-![Game Boy Advance list in List style, Astro Boy - Omega Factor selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
+![Game Boy Advance list in List style, Advance Wars selected, its picture behind the list](../assets/screenshots/mobile/game-list-list.webp)
 
 `Up` and `Down` wrap at the ends, as on a [tab](#consoles-list).
 
@@ -618,7 +618,7 @@ for its buttons.
 Press `MENU` on a game to see what you can do with it. The menu depends on
 where the game is listed.
 
-![Advance Wars 2 - Black Hole Rising's context menu in the Game Boy Advance list, with Netplay first](../assets/screenshots/mobile/context-menu.webp)
+![Astro Boy - Omega Factor's context menu in the Game Boy Advance list, with Play from start first](../assets/screenshots/mobile/context-menu.webp)
 
 | Item | What it does |
 | --- | --- |
@@ -697,7 +697,7 @@ list: see [Searching a game list](#searching-a-game-list).
 The results list games from every console, each with its console's tag, such
 as `GBA`. It reads **No results** when nothing matches.
 
-![Search results for castlevania in Carousel, with Castlevania - Aria of Sorrow selected: 0 of 66, Next: Old Bones](../assets/screenshots/mobile/search-results.webp)
+![Search results in List style, Mega Man & Bass selected, then Mega Man Zero 1 to 4 and other games, each with its GBA tag](../assets/screenshots/mobile/search-results.webp)
 
 | Button | What it does |
 | --- | --- |

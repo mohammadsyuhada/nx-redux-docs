@@ -64,7 +64,7 @@ Settings**, and for the console in
 value; keep it for the game or the console with
 [Save Changes](../in-game-menu.md#save-changes).
 
-![Console Settings of a DS game in landscape: the three Layout rows, Big Screen, the three Inset rows, Portrait Pad and Controller Layout](../../assets/screenshots/mobile/ds-console-settings.webp){ .nx-wide }
+![Console Settings of Super Princess Peach on DS: the three Layout rows, Big Screen, Inset Corner and Inset Size](../../assets/screenshots/mobile/ds-console-settings.webp){ .nx-wide }
 
 | Row | Values | Default | See |
 | --- | --- | --- | --- |

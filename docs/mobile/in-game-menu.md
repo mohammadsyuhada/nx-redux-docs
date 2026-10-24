@@ -143,7 +143,7 @@ By touch, tap a tab, a shortcut, a cheat or a player row.
 
 ## Options
 
-![The Options page beside the first page, on a Sega Genesis game, Sonic The Hedgehog](../assets/screenshots/mobile/in-game-options.webp){ .nx-wide }
+![The Options page beside the first page, on a Game Boy game, Alleyway](../assets/screenshots/mobile/in-game-options.webp){ .nx-wide }
 
 | Row | What it's for |
 | --- | --- |
@@ -175,7 +175,7 @@ To set these before a game starts, for a whole emulator or one game, use
 The console's own rows. `LEFT` / `RIGHT` change a value, or use the row's
 switch, choices or list as described in [Options rows](#options-rows).
 
-![Console Settings of a Sega Genesis game: Controller Type and Controller Layout](../assets/screenshots/mobile/in-game-console-settings.webp){ .nx-wide }
+![Console Settings of a Game Boy game, Alleyway: Controller Layout](../assets/screenshots/mobile/in-game-console-settings.webp){ .nx-wide }
 
 | Row | Consoles | Values | Default |
 | --- | --- | --- | --- |
@@ -217,7 +217,7 @@ here. Set them in [Game Settings](emulator-settings.md#game-settings) or
 Settings handled by NX Redux rather than the core, the same for every
 console. `LEFT` / `RIGHT` change a value.
 
-![The Frontend page beside Options](../assets/screenshots/mobile/in-game-frontend.webp){ .nx-wide }
+![The Frontend page beside Options, on Alleyway: Screen Scaling, Screen Sharpness, Overlay and Offset rows](../assets/screenshots/mobile/in-game-frontend.webp){ .nx-wide }
 
 | Option | Values | Default | What it does |
 | --- | --- | --- | --- |
