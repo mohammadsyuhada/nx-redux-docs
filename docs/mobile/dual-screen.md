@@ -182,7 +182,7 @@ list to the left of the panel. Closing it takes the list away again.
 The same panel shows on the touch screen and, on a phone with one screen,
 on the right of the [in-game menu](in-game-menu.md#the-game-panel).
 
-![The game panel: box art, Sonic The Hedgehog, Total, Achievements 1 / 35, the clock and battery; the Shortcuts, Achievements and Players tabs, with Shortcuts open](../assets/screenshots/mobile/game-panel.webp){ .nx-wide }
+![The game panel: box art, Sonic The Hedgehog, Total, Achievements 1 / 35, the clock and battery; the Shortcuts, Achievements, Cheats and Players tabs, with Shortcuts open (Second screen, Fast forward, Rewind, Screenshot, Reset)](../assets/screenshots/mobile/game-panel.webp){ .nx-wide }
 
 Across the top, the game's header shows:
 
